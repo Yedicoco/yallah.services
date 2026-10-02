@@ -1,0 +1,96 @@
+/* Affiche Yallah Services : bleu nuit, or satiné, blanc et vert profond.
+   Montserrat / Barlow Condensed : équivalents visuels, non polices sources certifiées. */
+:root {
+  --brand-night: #030f20;
+  --brand-panel: #0b2035;
+  --brand-white: #faf9f5;
+  --brand-muted: #c0c8d1;
+  --brand-gold: #d8b361;
+  --brand-line: rgba(216,179,97,.38);
+  --brand-gold-gradient: linear-gradient(115deg,#b68b39,#f2db9b 48%,#d8b361 76%,#b68b39);
+  --brand-green-gradient: linear-gradient(135deg,#08733d,#004c2b);
+}
+body { background:var(--brand-night); color:var(--brand-white); }
+button,input,select,textarea { font-family:'Montserrat',Arial,sans-serif; }
+::selection { background:var(--brand-gold); color:var(--brand-night); }
+:focus-visible { outline:3px solid var(--brand-gold); outline-offset:4px; }
+nav,nav.scrolled,.mob-menu { background:rgba(3,15,32,.97); border-bottom:1px solid var(--brand-line); }
+.nav-links { gap:18px; }
+.nav-links a { font-size:12px; }
+.nav-links a:hover,.mob-menu a:hover { color:var(--brand-gold); }
+#hero { border-bottom:1px solid var(--brand-line); }
+.hero-img-wrap { max-width:1400px; margin:auto; border:1px solid var(--brand-line); border-top:0; }
+.hero-img-wrap img { max-height:580px; object-fit:cover; object-position:center 35%; }
+.hero-inner { max-width:800px; padding-top:32px; }
+h1.ht,.st,.ct-title,.mini-form-title,.thanks-title,.popup-title {
+  font-family:'Montserrat',Arial,sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-.035em;
+}
+h1.ht { font-size:clamp(29px,5vw,58px); line-height:1.12; }
+h1.ht em { font-style:normal; background-image:var(--brand-gold-gradient); }
+.st,.ct-title,.mini-form-title { font-size:clamp(23px,3.4vw,38px); }
+.sh.c::after { content:''; display:block; width:100px; height:2px; margin:20px auto 0; background:var(--brand-gold-gradient); }
+.hero-sub,.hero-hint,.sd,.sd.w,.how-desc,.mini-form-sub,.ct-desc,.ct-direct,.thanks-sub { color:var(--brand-muted); }
+#how,#temo,#packs,#faq,.mini-form-sec,#frais,#contact,.trust-section,.tbar,footer {
+  background:var(--brand-night); border-bottom:1px solid var(--brand-line);
+}
+#temo,#faq,.trust-section { background:linear-gradient(135deg,#0b2035,#030f20); }
+.sec { padding:64px 0; }
+.trust-badge,.ti { border-color:var(--brand-line); color:var(--brand-white); }
+.ti-ico,.how-num,.snm { background:var(--brand-gold-gradient); color:var(--brand-night); }
+.ti-txt span,.tcity,.pfr,.pu,.ptbl,.ptbd,.mf-hint,.fhint,.popup-hint,.required-note,.mf-required { color:var(--brand-muted); }
+.st,.how-title,.tname,.pn,.tab-hint,.faq-q,.faq-a strong,.fcard h3,.popup-title,.mf-ok p,.okmsg h4,.flyer-cap strong { color:var(--brand-white); }
+.pc,.ptc,.tc,.faq-item,.temo-wa-wrap,.fcard,.mini-form-card,.popup-box,.sp-notif,.facture {
+  background:var(--brand-panel); border:1px solid var(--brand-line); box-shadow:0 12px 30px rgba(0,0,0,.16);
+}
+.pc:hover,.ptc:hover,.tc:hover,.fc:hover { border-color:var(--brand-gold); }
+.tc::before { color:var(--brand-gold); opacity:.3; }
+.ttxt,.pf li,.faq-a,.flyer-cap,.popup-sub,.okmsg p,.sp-txt { color:var(--brand-muted); }
+.temo-wa-wrap .temo-wa-title,.sp-txt strong { color:var(--brand-white); }
+.pf,.pf li,.faq-a,.fsec-title,.frow,.steps-list li { border-color:var(--brand-line); }
+.tabs { background:var(--brand-panel); border:1px solid var(--brand-line); }
+.tb { color:var(--brand-muted); }
+.tb.on,.htag,.popup-pack,.gr-price { background:var(--brand-gold-gradient); color:var(--brand-night); }
+.ptyp,.ptb,.matnote,.svc-box,.facture-foot { background:var(--brand-night); color:var(--brand-white); }
+.pf li::before,.frais-note strong,.sp-time,.grille-head .gh-l,.grille-head .gh-r { color:var(--brand-gold); }
+.pp,.fprice,.ptbn,.sn { font-family:'Barlow Condensed','Arial Narrow',sans-serif; font-weight:700; color:var(--brand-gold); }
+.pp { font-size:38px; }.fprice { font-size:48px; }
+.nav-wa,.mob-wa,.hero-cta,.mf-btn,.pwb,.popup-btn,.cta-submit,.btn-thanks-wa,.wa-fab,.thanks-check,.facture-status {
+  background:var(--brand-green-gradient); color:var(--brand-white); border:1px solid var(--brand-gold);
+  box-shadow:0 5px 18px rgba(0,0,0,.24); animation:none;
+}
+.hero-cta,.mf-btn,.cta-submit,.btn-thanks-wa { text-transform:uppercase; letter-spacing:.3px; }
+.hero-cta:hover,.mf-btn:hover,.pwb:hover,.popup-btn:hover,.cta-submit:hover,.nav-wa:hover { filter:brightness(1.15); box-shadow:0 6px 22px rgba(216,179,97,.15); }
+.hero-cta .wg,.mf-btn .wg,.popup-btn .wg,.cta-submit .wg { color:#f2db9b; }
+.live-counter,.frais-badge,.clients-badge,.frais-note,.gi-box { background:#073524; border-color:#36734f; color:#dbefdf; }
+.live-dot,.clients-dot { background:#76d89b; }
+.ct-inner::before { background:var(--brand-gold-gradient); animation:none; }
+.fl,.popup-fl,.frow .fv,.svc-box .sn2,.gi-box .gt,.facture-foot .fc { color:var(--brand-white); }
+.frow .fk,.svc-box .sd2,.gi-box .gd,.steps-list li,.facture-foot p { color:var(--brand-muted); }
+.fi,.fs,.ft,.mf-input,.mf-select,.popup-fi,.popup-fs {
+  background:#f8f5ed; color:#142237; border-color:#bca777; min-height:44px; color-scheme:light;
+}
+.fi::placeholder,.ft::placeholder,.mf-input::placeholder,.popup-fi::placeholder { color:#657080; opacity:1; }
+.fi:focus,.fs:focus,.ft:focus,.mf-input:focus,.mf-select:focus,.popup-fi:focus,.popup-fs:focus { border-color:var(--brand-gold); box-shadow:0 0 0 3px rgba(216,179,97,.2); }
+.popup-close { color:var(--brand-muted); }.popup-close:hover { color:var(--brand-gold); }
+.grille-wrap,.grille-head,.gr-row,.gr-row:nth-child(even) { background:var(--brand-panel); border-color:var(--brand-line); }
+.gr-row:hover { background:#153047; }
+.grille-sign,.fn { font-style:normal; font-family:'Montserrat',Arial,sans-serif; font-weight:700; letter-spacing:1px; }
+/* Le rouge est réservé aux erreurs de saisie ; les avertissements utilisent l'or. */
+.hero-warn,.urgency,.urgency-timer,.sticky-warn,.thanks-bottom-warn,.grille-note,.fwarn,.popup-warn {
+  background:#1b211f; border-color:var(--brand-line); color:#f2db9b;
+}
+.hero-warn strong,.urgency-timer .timer-val,.sticky-warn p,.sticky-warn .red,.sticky-warn .ul,.thanks-bottom-warn p,.grille-note p { color:#f2db9b; }
+.grille-note .ic { background:var(--brand-gold); color:var(--brand-night); }
+footer,footer a { color:var(--brand-muted); }
+.fn { color:var(--brand-gold); }
+@media(max-width:768px) {
+  .hero-img-wrap img { max-height:380px; }
+  .sec { padding:44px 0; }
+  .hero-inner { padding-top:24px; }
+  .popup-box { max-height:calc(100dvh - 40px); overflow-y:auto; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*::before,*::after { animation:none !important; transition:none !important; }
+  .reveal { opacity:1; transform:none; }
+}
