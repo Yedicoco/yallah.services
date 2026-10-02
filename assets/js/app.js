@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════
-   YALLA SERVICES — Interactions du site
+   YALLAH SERVICES — Interactions du site
    WhatsApp : 212691733585 · servicesyallah@gmail.com
 ══════════════════════════════════════════════════════ */
 (function () {
@@ -208,7 +208,7 @@
     $('#factType').textContent = or(data.type, '—');
     $('#factDelay').textContent = or(data.delay, '—');
 
-    var msg = 'Bonjour Yalla Services ! Je confirme ma demande ' + num + '%0A' +
+    var msg = 'Bonjour Yallah Services ! Je confirme ma demande ' + num + '%0A' +
       'Service : ' + or(data.service, 'À préciser') + '%0A' +
       'Nom : ' + or(data.name, '—') + '%0A' +
       'Ville : ' + or(data.city, '—') + '%0A' +

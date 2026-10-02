@@ -1,4 +1,4 @@
-# Yalla Services — Aides à domicile au Maroc
+# Yallah Services — Aides à domicile au Maroc
 
 Reproduction du site **https://yalla-services.netlify.app/** — agence de placement de personnel
 subsaharien qualifié (femme de ménage, nounou, cuisinière) au Maroc.
