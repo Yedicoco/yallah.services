@@ -1,0 +1,39 @@
+{
+  "nom": "Yallah Services",
+  "url": "https://yallahservices-one.vercel.app",
+  "urlSouhaitee": "https://yallah.services",
+  "couverture": "Agence basée à Casablanca (Hay Hassani 20220) — service assuré dans toutes les grandes villes du Maroc listées ci-dessous.",
+  "adresse": {
+    "quartier": "Hay Hassani",
+    "ville": "Casablanca",
+    "codePostal": "20220",
+    "pays": "MA",
+    "region": "Casablanca-Settat"
+  },
+  "villes": [
+    { "slug": "casablanca", "nom": "Casablanca" },
+    { "slug": "rabat", "nom": "Rabat" },
+    { "slug": "marrakech", "nom": "Marrakech" },
+    { "slug": "fes", "nom": "Fès" },
+    { "slug": "tanger", "nom": "Tanger" },
+    { "slug": "agadir", "nom": "Agadir" },
+    { "slug": "meknes", "nom": "Meknès" },
+    { "slug": "oujda", "nom": "Oujda" },
+    { "slug": "kenitra", "nom": "Kénitra" },
+    { "slug": "sale", "nom": "Salé" },
+    { "slug": "tetouan", "nom": "Tétouan" }
+  ],
+  "services": [
+    { "slug": "femme-menage", "nom": "Femme de ménage" },
+    { "slug": "nounou", "nom": "Nounou" },
+    { "slug": "cuisiniere", "nom": "Cuisinière" },
+    { "slug": "garde-malade", "nom": "Garde-malade" },
+    { "slug": "chauffeur", "nom": "Chauffeur" },
+    { "slug": "vigile", "nom": "Vigile / gardien" }
+  ],
+  "pagesHorsSitemap": [
+    "admin.html",
+    "candidature-confirmation.html",
+    "plan-placement-du-formulaire.html"
+  ]
+}

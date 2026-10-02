@@ -77,7 +77,8 @@ node build-site.js           # régénère le dossier
 # puis déposez son contenu chez n'importe quel hébergeur (FTP, Netlify, OVH…)
 ```
 
-- Contient : `index.html`, `candidature.html`, `candidature-confirmation.html`, `assets/`, `LISEZ-MOI.txt`.
+- Contient : toutes les pages publiques (`index.html`, `candidature.html`, `candidature-confirmation.html`,
+  pages « service × ville »…), `assets/`, `sitemap.xml` (régénéré à chaque build), `robots.txt`, `LISEZ-MOI.txt`.
 - Le numéro de dossier est généré **par le navigateur du candidat** (`YS-2026-0001`, `0002`…), puis la
   fiche part sur WhatsApp et les références par e-mail. **Aucune donnée n'est stockée** : rien à sauvegarder.
 - Test local : ouvrir `site-a-mettre-en-ligne/index.html` dans un navigateur, ou
@@ -274,6 +275,11 @@ Contrôles déjà effectués sur cette version :
       ne permet pas de le télécharger
 
 ## 🔍 SEO local (en cours)
+
+**Couverture :** Yallah Services est basé à Casablanca (Hay Hassani, 20220) et **dessert les 11 grandes
+villes du Maroc** — la matrice de pages couvre donc les 11 villes, par vagues de production.
+Seul le pack local (la carte Google) reste centré sur Casablanca : les autres villes passent par
+le référencement organique, les citations et les demandes WhatsApp.
 
 Le dépôt contient les premières briques du référencement local :
 

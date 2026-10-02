@@ -27,7 +27,15 @@ const fs = require('fs');
 const path = require('path');
 
 const RACINE = path.resolve(__dirname, '..');
-const PAGES = ['index.html', 'candidature.html', 'candidature-confirmation.html', 'admin.html'];
+
+/* Toutes les pages publiques sont contrôlées, y compris les pages
+   « service × ville » : plus rien à tenir à jour ici quand on en ajoute une. */
+const PAGES_IGNOREES = new Set(['plan-placement-du-formulaire.html']);
+const PAGES = fs.readdirSync(RACINE)
+  .filter((f) => f.endsWith('.html'))
+  .filter((f) => !/^google.*\.html$/i.test(f))
+  .filter((f) => !PAGES_IGNOREES.has(f))
+  .sort();
 const SCRIPTS_PAR_PAGE = {
   'index.html': ['assets/js/app.js'],
   'candidature.html': ['assets/js/fiche.js', 'assets/js/candidature.js'],
@@ -98,7 +106,15 @@ PAGES.forEach((page) => {
   liens.forEach((lien) => {
     if (/^(https?:|mailto:|tel:|#|data:)/.test(lien) === false && !existe(lien.split('#')[0].split('?')[0])) casses.push(lien);
     if (lien.indexOf('#') === 0 && lien.length > 1 && pages.has(page) && !ancres.has(lien.slice(1))) casses.push(lien);
-    if (lien.indexOf('.html#') !== -1 && !ancres.has(lien.split('#')[1])) casses.push(lien);
+    /* Ancre vers une autre page : on vérifie l'ancre dans la page cible */
+    if (lien.indexOf('.html#') !== -1) {
+      const cible = lien.split('#')[0];
+      const ancre = lien.split('#')[1];
+      if (ancre && existe(cible)) {
+        const idsCible = new Set((lire(cible).match(/id="([^"]+)"/g) || []).map((v) => v.slice(4, -1)));
+        if (!idsCible.has(ancre)) casses.push(lien);
+      }
+    }
   });
   if (casses.length) erreur(page + ' → liens cassés : ' + Array.from(new Set(casses)).join(', '));
   else ok(page + ' → ' + liens.length + ' liens vérifiés');

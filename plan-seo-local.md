@@ -2,6 +2,7 @@
 
 **Périmètre :** visibilité sur les requêtes « service × ville » au Maroc (ménage, nounou, cuisinière, chauffeur, vigile, garde-malade × 11 villes).
 **Point de départ :** état du dépôt au 2 octobre 2026 (branche `arena/01a0fc7a-yallah-services`).
+**Couverture de service (acquis, non négociable) :** Yallah Services est **basé à Casablanca (Hay Hassani 20220)** et **dessert l'ensemble des grandes villes du Maroc**. La matrice de pages couvre donc les 11 villes ; seule la production de contenu fixe le rythme (vagues de 6 à 8 pages).
 **Règle de survie :** aucune page publiée sans contenu réellement original et vérifiable.
 
 ---
@@ -18,7 +19,7 @@ Google impose **un seul profil par établissement réellement exploité**. Un pr
 - l'adresse réelle reste en base pour la vérification, **jamais** de boîte postale ni de bureau virtuel ;
 - un second profil uniquement là où existe une adresse réellement exploitée et staffée (si vous ouvrez un point d'ancrage à Rabat ou Marrakech, là oui).
 
-Conséquence directe : **le pack local ne se gagnera pas à Agadir ou Oujda** depuis Casablanca (Google calcule la distance depuis l'adresse cachée, pas depuis la zone déclarée). Pour ces villes, l'objectif réaliste est le **classement organique** + les citations locales, pas la carte. Il faut le dire clairement plutôt que de promettre 11 packs locaux.
+Conséquence directe : **le pack local (la carte) se gagnera à Casablanca**, et plus difficilement dans les villes éloignées, puisque Google calcule la distance depuis l'adresse cachée. Cela ne remet **pas** en cause la couverture commerciale — Yallah Services dessert bien les 11 villes — c'est le **canal d'acquisition** qui change selon la ville : pack local + pages pour Casablanca, **pages + citations + demandes WhatsApp** pour les autres. Il faut piloter les deux, sans promettre 11 packs locaux.
 
 ### 0.2 « FAQPage → FAQ dépliée dans Google » → la FAQ dépliée n'existe plus
 
@@ -155,19 +156,18 @@ Ce qui change : **le contenu des sections** (§6) et **le maillage** (§3.4).
 | **3 — Citations & NAP** | NAP canonique figé, 10–12 citations marocaines, reprise des profils sociaux, contrôle de cohérence | 2–3 j | S3–S5 | 10 citations en ligne, NAP identique caractère pour caractère |
 | **4 — Matrice (Lot A)** | 10 pages : Casablanca + Rabat × 6 services (dont 2 réécrites en lot 0) | 12–15 j | S4–S8 | 10 pages vertes, publiées en 2 vagues, indexées |
 | **5 — Matrice (Lot B)** | 24 pages : Marrakech, Tanger, Agadir, Fès × 6 services | 25–30 j | S8–S18 | idem + 1 bilan de position par page à J+30 |
-| **6 — Matrice (Lot C)** | 30 pages : Meknès, Oujda, Kénitra, Salé, Tétouan × 6 services — **uniquement si** placements réels et capacité de service | 30–35 j | S18–S30 | idem |
+| **6 — Matrice (Lot C)** | 30 pages : Meknès, Oujda, Kénitra, Salé, Tétouan × 6 services — le rythme dépend de la production de contenu (fiches locales), pas de la couverture : ces villes sont desservies | 30–35 j | S18–S30 | idem |
 | **7 — Mesure continue** | Search Console, suivi par page, seuils de décision, arbitrages | 0,5 j/semaine | dès S1 | Tableau de bord à jour chaque lundi |
 
 **Charge totale : ~80–95 jours-homme de contenu**, soit 4 à 5 mois à 2 h/jour pour une personne, ou 2 mois à temps plein. C'est le vrai coût d'un travail qui ne se fait pas sanctionner.
-**Alternative assumée :** s'arrêter au lot 5 (28 pages, toutes dans des villes où vous avez une activité réelle) et y consacrer 100 % de la qualité. C'est presque toujours plus rentable que 66 pages moyennes.
 
-> ⚠️ Ne pas créer de page pour une ville où vous n'avez jamais rien placé. Vous ne pourrez pas la remplir avec du vrai, Google n'aura aucune raison de la préférer à un acteur local, et vous ajouterez une page-porte au risque collectif du domaine.
+> ⚠️ La contrainte n'est **pas** la ville (toutes sont desservies) mais **la matière locale disponible** pour la remplir : une page pour Tétouan ou Oujda est légitime dès lors qu'elle contient de vraies informations de terrain (quartiers, délais observés, questions des familles de cette ville). La fiche locale de l'annexe B reste donc **obligatoire avant rédaction**. Sans elle, on tombe dans la page-porte — et c'est la qualité du contenu, pas le nombre de placements passés, qui décide.
 
 ---
 
 ## 5. Matrice des lots
 
-Légende : **A** = lot A (S1–S8) · **B** = lot B · **C** = lot C (sous conditions) · **—** = page non créée
+Légende : **A** = lot A (S1–S8) · **B** = lot B · **C** = lot C (rythme de production, villes desservies)
 
 | Service \ Ville | Casa | Rabat | Marrakech | Tanger | Agadir | Fès | Kénitra | Salé | Meknès | Oujda | Tétouan |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -175,12 +175,12 @@ Légende : **A** = lot A (S1–S8) · **B** = lot B · **C** = lot C (sous condi
 | Nounou | A | A | B | B | B | B | C | C | C | C | C |
 | Cuisinière | A | A | B | B | B | B | C | C | C | C | C |
 | Garde-malade | A | A | B | B | B | B | C | C | C | C | C |
-| Chauffeur | A | A | B | B | B | B | — | — | — | — | — |
-| Vigile / gardien | A | A | B | B | B | B | — | — | — | — | — |
+| Chauffeur | A | A | B | B | B | B | C | C | C | C | C |
+| Vigile / gardien | A | A | B | B | B | B | C | C | C | C | C |
 
-Deux remarques de capacité, à trancher avant le lot 4 :
+Deux remarques de capacité, à trancher avant le lot 4 — elles ne concernent pas la couverture géographique (les 11 villes sont desservies), mais la **qualification des profils** :
 
-- **Chauffeur et vigile** sont des métiers à exigences documentaires (permis, expérience vérifiable, références) et souvent une demande d'entreprise plutôt que de foyer. Si vous ne pouvez pas qualifier ces profils, ne créez pas ces pages : une page qui ne convertit pas coûte en crédibilité.
+- **Chauffeur et vigile** sont des métiers à exigences documentaires (permis, expérience vérifiable, références) et souvent une demande d'entreprise plutôt que de foyer. Les pages se font — les villes sont desservies — mais à condition de pouvoir présenter des profils qualifiés derrière : une page qui ne convertit pas coûte en crédibilité.
 - **La prestation à la journée n'existe qu'à Casablanca et Rabat** (grille officielle). Aucune page d'une autre ville ne doit la promettre. C'est exactement le genre d'incohérence entre une page et la réalité qui tue la confiance — et qui se retourne en avis négatifs.
 
 ### Lot A — les 10 URL à produire en premier
@@ -289,7 +289,7 @@ Trois incohérences existantes à corriger au passage : Instagram `yallahservice
    - 0 impression à J+90 → fusionner avec la page pilier ou supprimer (et 301 vers le hub) ;
    - position 11–20 avec impressions → la page mérite 300 mots de plus et 2 liens internes ;
    - position 1–3 sans clic → l'extrait (title/description) est à réécrire ;
-   - ville sans aucune impression sur 6 services → vous n'avez pas d'activité là-bas : n'insistez pas.
+   - ville sans aucune impression sur 6 services à J+90 → pas de demande captable pour l'instant : garder la page (la ville reste desservie) mais arrêter d'y investir du contenu supplémentaire.
 4. **Ce qui se mesure vraiment ici :** appels et messages WhatsApp. Les positions servent à décider, pas à communiquer.
 
 **Objectifs à 90 jours (mesurables, non extrapolés) :** 28 pages conformes en ligne · profil Google vérifié · 15 avis · 10 citations · 30 requêtes en top 50 · 5 requêtes en top 10 · trafic WhatsApp tracé depuis les pages villes. Les volumes de recherche ne seront repris que des chiffres réels de Search Console après 30 jours — jamais d'estimations inventées dans un rapport.

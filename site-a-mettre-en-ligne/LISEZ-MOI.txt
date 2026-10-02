@@ -8,6 +8,8 @@ Pages :
   index.html                        → accueil foyers
   candidature.html                  → fiche de candidature (FR / AR)
   candidature-confirmation.html     → numéro de dossier + WhatsApp + e-mail
+  <service>-<ville>.html            → pages locales (ménage, nounou… par ville)
+  sitemap.xml                       → régénéré automatiquement à chaque build
 
 Coordonnées configurées :
   WhatsApp foyers    : +212 691 733 585

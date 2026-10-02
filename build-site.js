@@ -15,10 +15,15 @@
        WHATSAPP_CANDIDATS=212710359446 CONTACT_EMAIL=servicesyallah@gmail.com node build-site.js
        node build-site.js --sortie site-a-mettre-en-ligne
 
+   Copie toutes les pages publiques (accueil, candidature, confirmation et
+   pages « service × ville »), puis régénère sitemap.xml à partir du domaine
+   défini dans site.config.json.
+
    Variables d'environnement :
        WHATSAPP_FOYERS      (défaut 212691733585)
        WHATSAPP_CANDIDATS   (défaut 212710359446, repli : WHATSAPP_NUMBER)
        CONTACT_EMAIL        (défaut servicesyallah@gmail.com)
+       SITE_URL             (défaut : url de site.config.json)
 ══════════════════════════════════════════════════════════════════ */
 'use strict';
 
@@ -37,11 +42,24 @@ const WHATSAPP_FOYERS = process.env.WHATSAPP_FOYERS || '212691733585';
 const WHATSAPP_CANDIDATS = process.env.WHATSAPP_CANDIDATS || process.env.WHATSAPP_NUMBER || '212710359446';
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'servicesyallah@gmail.com';
 
-/* Fichiers/pages copiés dans la version statique */
-const PAGES = ['index.html', 'candidature.html', 'candidature-confirmation.html'];
+/* Fichiers/pages copiés dans la version statique.
+   Toutes les pages publiques sont copiées automatiquement, y compris les
+   pages « service × ville » : ajouter un fichier suffit, rien à modifier ici.
+   Le sitemap.xml n'est plus recopié, il est régénéré depuis le site publié. */
+const PAGES_IGNOREES = new Set(['admin.html', 'plan-placement-du-formulaire.html']);
+/* Le fichier de vérification Search Console (google….html) est copié aussi :
+   il doit rester accessible sur le domaine publié. Il est seulement exclu du sitemap. */
+const PAGES = fs.readdirSync(RACINE)
+  .filter((f) => f.endsWith('.html'))
+  .filter((f) => !PAGES_IGNOREES.has(f))
+  .sort();
 const DOSSIERS = ['assets'];
-const FICHIERS = ['robots.txt', 'sitemap.xml', 'netlify.toml'];
+const FICHIERS = ['robots.txt', 'netlify.toml'];
 const EXCLUS = new Set(['admin.html', 'admin.js']);
+
+/* Adresse publique : variable d'environnement > site.config.json */
+const CONFIG = JSON.parse(fs.readFileSync(path.join(RACINE, 'site.config.json'), 'utf8'));
+const SITE_URL = (process.env.SITE_URL || CONFIG.url || '').replace(/\/+$/, '');
 
 /* Numéros par défaut présents dans le HTML, remplacés si l'on change de numéro */
 const NUMERO_FOYERS_DEFAUT = '212691733585';
@@ -133,6 +151,8 @@ function ecrireLisezMoi() {
     '  index.html                        → accueil foyers',
     '  candidature.html                  → fiche de candidature (FR / AR)',
     '  candidature-confirmation.html     → numéro de dossier + WhatsApp + e-mail',
+    '  <service>-<ville>.html            → pages locales (ménage, nounou… par ville)',
+    '  sitemap.xml                       → régénéré automatiquement à chaque build',
     '',
     'Coordonnées configurées :',
     '  WhatsApp foyers    : ' + afficherNumero(WHATSAPP_FOYERS),
@@ -177,9 +197,14 @@ ecrireConfigStatique();
 const remplacements = adapterHtml();
 ecrireLisezMoi();
 
+/* Sitemap régénéré depuis les pages réellement publiées (lastmod = git) */
+const sitemap = require('./outils/generer-sitemap');
+const entrees = sitemap.ecrire(SITE_URL, SORTIE);
+console.log('  Sitemap                : ' + entrees.length + ' page(s) → sitemap.xml');
+
 /* Vérifications rapides */
 const attendus = ['index.html', 'candidature.html', 'candidature-confirmation.html',
-  'assets/js/config.js', 'assets/js/fiche.js', 'assets/js/candidature.js',
+  'sitemap.xml', 'assets/js/config.js', 'assets/js/fiche.js', 'assets/js/candidature.js',
   'assets/js/candidature-confirmation.js', 'assets/css/recrutement.css'];
 const manquants = attendus.filter((f) => !fs.existsSync(path.join(SORTIE, f)));
 
