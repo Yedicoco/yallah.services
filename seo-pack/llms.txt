@@ -1,0 +1,13 @@
+# Yallah Services
+> Agence de mise en relation entre familles et personnel de maison au Maroc (femme de ménage, nounou, cuisinière, garde-malade). Villes : Casablanca, Rabat, Marrakech, Tanger, Agadir, Fès, Meknès.
+
+## Pages clés
+- [Accueil, services et tarifs](https://yallahservices-one.vercel.app/)
+- [Femme de ménage à Casablanca](https://yallahservices-one.vercel.app/femme-menage-casablanca.html)
+- [Nounou à Casablanca](https://yallahservices-one.vercel.app/nounou-casablanca.html)
+- [Espace candidats](https://yallahservices-one.vercel.app/candidature.html)
+
+## Faits
+- Frais de mise en relation : 500 MAD (Sérénité, remplacement 2 mois) ou 1 000 MAD (Premium, 6 mois), payés après validation du profil.
+- Salaire mensuel versé directement par le foyer à l'employée (grille sur la page d'accueil).
+- Contact : WhatsApp +212 691 733 585 · servicesyallah@gmail.com
