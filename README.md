@@ -28,7 +28,7 @@ Le site répond à **trois publics**, avec trois parcours distincts :
 | **WhatsApp foyers** (clients) | **+212 691 733 585** → [wa.me/212691733585](https://wa.me/212691733585) |
 | **WhatsApp candidats** (personnel) | **+212 710 359 446** → [wa.me/212710359446](https://wa.me/212710359446) |
 | **E-mail** (références, dossiers) | **servicesyallah@gmail.com** |
-| Villes | Casablanca · Bouskoura · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé |
+| Villes | Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé |
 
 > Les liens WhatsApp et l'e-mail sont centralisés dans **`assets/js/config.js`** (site statique) et par
 > variables d'environnement `WHATSAPP_FOYERS`, `WHATSAPP_CANDIDATS`, `CONTACT_EMAIL` (version serveur).

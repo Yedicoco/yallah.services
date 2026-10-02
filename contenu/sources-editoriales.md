@@ -23,10 +23,10 @@ données de références personnelles, chiffres non mesurés.
 
 | Cliente | Nom + ville | Texte de l'avis | Consentement écrit | Note /5 |
 |---|---|---|---|---|
-| Fatima Zahra (Bouskoura) | ✅ confirmé | ⬜ **en attente des mots exacts** | ⬜ à archiver (capture WhatsApp) | ⬜ |
-| Mme Wafae (Tamaris) | ✅ confirmé | ⬜ **en attente** | ⬜ | ⬜ |
-| Basma H. (Rabat) | ✅ confirmé | ⬜ **en attente** | ⬜ | ⬜ |
-| Mme Najiba (Bouznika) | ✅ confirmé | ⬜ **en attente** | ⬜ | ⬜ |
+| Fatima Zahra (Bouskoura) | ✅ confirmé | Synthèse agence **à valider** (`contenu/valider-avis.md`) | ⬜ à archiver | ⬜ |
+| Mme Wafae (Tamaris, Dar Bouazza) | ✅ confirmé | Synthèse agence **à valider** | ⬜ à archiver | ⬜ |
+| Basma H. (Rabat) | ✅ confirmé | Synthèse agence **à valider** | ⬜ à archiver | ⬜ |
+| Mme Najiba (Bouznika) | ✅ confirmé | Synthèse agence **à valider** | ⬜ à archiver | ⬜ |
 
 > Les avis sont publiés **uniquement** dans les mots de la cliente, jamais dans une reformulation
 > présentée entre guillemets. Kit de collecte : `contenu/recueillir-avis.md`.

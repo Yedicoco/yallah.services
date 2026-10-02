@@ -22,7 +22,7 @@ Pour Yallah Services (base unique à Hay Hassani, interventions chez le client) 
 - un second profil uniquement là où existerait une adresse réellement exploitée et staffée.
 
 Conséquence : **le pack local (la carte) se gagne à Casablanca**. Dans les autres villes, Google calcule
-la distance depuis l'adresse cachée — la couverture commerciale reste entière (les 11 villes sont
+la distance depuis l'adresse cachée — la couverture commerciale reste entière (les 13 zones sont
 desservies), mais le **canal d'acquisition** change : organique + citations + WhatsApp. Les deux canaux
 se pilotent, on ne promet pas 11 cartes.
 
@@ -91,7 +91,7 @@ le cadre de la grille, types de logements dominants, difficultés locales (trans
 5. **Publication par vagues de 6 à 8 pages**, jamais 60 d'un coup.
 
 **Charge : 3 à 4 heures par page** une fois les fiches remplies (2 h de rédaction, 1 h de contrôle et
-d'intégration), soit **900 à 1 100 heures** pour les 92 pages du plan complet. À 2 h/jour : un an.
+d'intégration), soit **1 000 à 1 200 heures** pour les 104 pages du plan complet (78 B2C + 21 B2B + hubs). À 2 h/jour : un an.
 À temps plein : 6 à 7 mois. Le plan est donc conçu pour **s'arrêter à tout moment sur un socle cohérent**
 (voir §4 : la phase 1 est déjà une unité rentable).
 
@@ -103,17 +103,23 @@ d'intégration), soit **900 à 1 100 heures** pour les 92 pages du plan complet.
 
 | Niveau | Fichier | Contenu | Volume |
 |---|---|---|---|
-| **N1 — service × ville (B2C)** | `<service>-<ville>.html` | ménage, nounou, cuisinière, garde-malade, chauffeur, vigile | 6 × 11 = 66 |
+| **N1 — service × ville (B2C)** | `<service>-<ville>.html` | ménage, nounou, cuisinière, garde-malade, chauffeur, vigile | 6 × 13 = 78 |
 | **N2 — B2B** | `personnel-<secteur>.html` et `personnel-<secteur>-<ville>.html` | hôtellerie/riads · restauration · main-d'œuvre chantiers · nettoyage · événementiel | 5 hubs + ville selon phase |
 | **N3 — quartier** | `<service>-<quartier>.html` | voir règle §3.6 | après mesure uniquement |
 | **Hubs** | `services-par-ville.html` · `personnel-entreprises.html` | distribution du maillage interne | 2 |
 
 ### 3.2 Villes et phases (fiche entreprise)
 
-**Phase 1** — Casablanca, **Bouskoura** (pôle résidentiel à part entière), Rabat, Marrakech
+**Phase 1** — Casablanca, **Bouskoura** (pôle résidentiel à part entière), **Dar Bouazza** (Tamaris),
+Rabat, Marrakech
 **Phase 2** — Tanger, Agadir, Mohammedia, Kénitra
-**Phase 3** — Fès, Témara, Salé — puis **El Jadida** (candidate) uniquement après confirmation
+**Phase 3** — Fès, Témara, Salé, **Bouznika** — puis **El Jadida** (candidate) uniquement après confirmation
+
+> **Dar Bouazza et Bouznika** sont entrées dans la couverture parce que **des clientes réelles y sont établies**
+> (avis clients, 2 octobre 2026) : c'est la preuve de service la plus solide. À l'inverse, une ville sans
+> aucun client, aucune demande et aucune référence ne doit pas être affichée comme desservie.
 **Jamais** : Meknès, Oujda, Tétouan (retirées du site), sauf confirmation écrite de la direction
+**Ajout de zone** : possible uniquement avec une preuve de service (client, mission, demande qualifiée)
 
 URLs à plat (`/femme-menage-casablanca.html`) : hébergement statique sans réécriture, zéro redirection.
 Passage en dossiers à envisager seulement au-delà de ~150 pages.
@@ -129,7 +135,7 @@ sans tout casser. **Lot 1 :** acheter le domaine, brancher, rediriger en 301, ce
 
 - Chaque page ville-service lie : le hub, la page du **même service à Casablanca** (pilier),
   **3 pages voisines**, l'accueil, l'espace candidats.
-- Le hub `services-par-ville.html` lie les 66 pages (groupées par métier puis par ville).
+- Le hub `services-par-ville.html` lie les 78 pages (groupées par métier puis par ville).
 - Le hub `personnel-entreprises.html` lie les 5 secteurs et les déclinaisons ville.
 - Accueil : remplacer les liens perdus dans le bandeau candidats par un lien de pied de page
   « Nos services par ville » + une section courte pointant les deux hubs.
@@ -162,7 +168,7 @@ commercial, pas une liste de quartiers desservis**. Donc :
 | **1 — Socle technique** | Domaine + 301 + `site.config.json` ; hub `services-par-ville.html` ; sitemap auto ✅ ; maillage accueil ↔ hub ↔ pages | 3–4 j | S1–S3 | 1 page test complète, 100 % des URL sur le domaine, hub en ligne |
 | **2 — Google Business Profile** | Profil « zone de service », catégories, 6 services, 20+ photos réelles, Q&R, posts, avis | 2–3 j | S2–S4 | Profil **vérifié**, 15 avis réels, 0 adresse inventée |
 | **3 — Citations & NAP** | NAP figé, 10–12 citations marocaines, reprise des profils sociaux | 2–3 j | S3–S5 | 10 citations en ligne, NAP identique à l'octet près |
-| **4 — B2C phase 1** | 24 pages : Casablanca + Bouskoura + Rabat + Marrakech × 6 services | 30–35 j | S4–S12 | 24 pages vertes, publiées en 4 vagues, indexées |
+| **4 — B2C phase 1** | 30 pages : Casablanca + Bouskoura + Dar Bouazza + Rabat + Marrakech × 6 services | 35–40 j | S4–S14 | 30 pages vertes, publiées en 5 vagues, indexées |
 | **5 — B2B** | Hub `personnel-entreprises.html` + 5 secteurs + 15 déclinaisons ville (Marrakech, Casablanca, Agadir, Tanger, Rabat) | 25–30 j | S10–S20 | 21 pages, ≥ 5 demandes B2B entrantes tracées |
 | **6 — B2C phases 2 et 3** | 36 pages : Tanger, Agadir, Mohammedia, Kénitra, Fès, Témara, Salé | 45–50 j | S16–S34 | idem + bilan de position par page à J+30 |
 | **7 — Mesure continue** | Search Console, suivi par page, seuils de décision | 0,5 j/semaine | dès S1 | Tableau de bord à jour chaque lundi |
@@ -176,18 +182,18 @@ Le B2B est **moins concurrentiel** et plus rentable par demande : « personnel p
 
 ## 5. Matrices
 
-### 5.1 B2C — 6 services × 11 points de couverture
+### 5.1 B2C — 6 services × 13 points de couverture
 
 Légende : **1** = phase 1 · **2** = phase 2 · **3** = phase 3
 
-| Service \ Ville | Casa | Bouskoura | Rabat | Marrakech | Tanger | Agadir | Mohammedia | Kénitra | Fès | Témara | Salé |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Femme de ménage | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 |
-| Nounou | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 |
-| Cuisinière | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 |
-| Garde-malade | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 |
-| Chauffeur | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 |
-| Vigile / gardien | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 |
+| Service \ Zone | Casa | Bouskoura | Dar Bouazza | Rabat | Marrakech | Tanger | Agadir | Mohammedia | Kénitra | Fès | Témara | Salé | Bouznika |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Femme de ménage | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 | 3 |
+| Nounou | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 | 3 |
+| Cuisinière | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 | 3 |
+| Garde-malade | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 | 3 |
+| Chauffeur | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 | 3 |
+| Vigile / gardien | 1 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 3 | 3 | 3 | 3 |
 
 ### 5.2 B2B — 5 secteurs, hubs nationaux + villes
 
@@ -272,7 +278,7 @@ zone couvrant tout le Maroc · avis achetés ou échangés.
 |---|---|---|
 | Nom | `Yallah Services` | identique partout, sans « SARL », sans slogan |
 | Adresse publique | aucune (mode zone de service) | ne jamais inventer une adresse pour remplir un annuaire |
-| Villes | Casablanca · Bouskoura · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé | **même ordre** partout |
+| Villes | Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé | **même ordre** partout |
 | Téléphone public | `+212 691 733 585` | le `+212 710 359 446` **uniquement** côté candidats |
 | E-mail | à passer sur `contact@<domaine>` | le Gmail est un signal faible |
 | Site | `https://<domaine>/` | jamais `*.vercel.app` dans une citation |

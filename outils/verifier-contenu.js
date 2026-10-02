@@ -348,7 +348,8 @@ locales.forEach((p) => {
 /* ═══ 6. Contenus inachevés ═══ */
 section('6. Contenus inachevés (rien de brouillon ne doit être publié)');
 const MARQUEURS = [
-  [/\[\[[^\]]{3,}\]\]/g, 'emplacement à compléter'],
+  [/\[\[AVIS EN ATTENTE DE VALIDATION[^\]]*\]\]/g, 'avis en attente de validation cliente'],
+  [/\[\[(?!AVIS EN ATTENTE)[^\]]{3,}\]\]/g, 'emplacement à compléter'],
   [/\bTODO\b|\bFIXME\b/g, 'marqueur de travail'],
   [/à compl[ée]ter/gi, 'contenu annoncé comme à compléter'],
   [/lorem ipsum/i, 'texte de remplissage']

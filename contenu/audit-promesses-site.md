@@ -16,7 +16,7 @@ corrigé, ce qui reste à confirmer par la direction, et ce qui manque au site.
 | 4 | « **Réponse sous 24h** », « profil en 24h », « Profil reçu dans les 24h », « en moins de 24h » | hero, formulaire, section « comment ça marche », `og:description`, page de confirmation, pages villes | La fiche interdit d'affirmer un **délai de recrutement ou de mise en relation** non confirmé. | Retiré → « Réponse sur WhatsApp », « Nous revenons vers vous sur WhatsApp » |
 | 5 | « **500+ familles accompagnées** » | statistique du hero | Chiffre non fourni par la direction : invérifiable et potentiellement contestable. | Remplacé par « **2 ans d'activité au Maroc** » (donnée confirmée) et « **10 villes desservies** » |
 | 6 | « **Remplacement garanti** » (15 occurrences) | cartes des packs | Garantie de remplacement = affirmation interdite sans confirmation écrite. La fiche tarifaire lie le remplacement aux formules **Premium (6 mois)** et **Sérénité (2 mois)**. | « **Remplacement selon la formule** » |
-| 7 | Villes **Meknès, Oujda, Tétouan** | pied de page, 3 listes déroulantes clients, liste candidats | Hors de la liste d'intervention confirmée. Afficher une ville non desservie = promesse non tenue. | Remplacées par **Mohammedia, Témara, Bouskoura** |
+| 7 | Villes **Meknès, Oujda, Tétouan** | pied de page, 3 listes déroulantes clients, liste candidats | Hors de la liste d'intervention confirmée. Afficher une ville non desservie = promesse non tenue. | Remplacées par **Mohammedia, Témara, Bouskoura**, puis **Dar Bouazza** et **Bouznika** (zones servies confirmées par des clientes réelles) |
 | 8 | « Réservé aux **foyers** … » | bandeau permanent, hero, popup, README | Le site s'adressait uniquement aux particuliers alors que la fiche décrit **deux marchés** (B2C **et** B2B). | « Réservé aux **particuliers et aux entreprises** qui recrutent » |
 | 9 | « **Agence N°1** » | `README.md` uniquement (pas sur le site) | Affirmation de supériorité non étayée. | Corrigée dans le README |
 | 10 | « remplacements **jusqu'à ce que vous soyez pleinement satisfait(e)** », « remplacement **dans les meilleurs délais** », « vous n'êtes **jamais** laissé(e) sans solution », « Suivi & **garantie** » | FAQ, section garanties | Promesses absolues de résultat et de délai = interdites par la fiche. | Reformulé sur le périmètre réel des formules : « remplacements prévus par la formule choisie, pendant la période indiquée » |
@@ -45,6 +45,7 @@ corrigé, ce qui reste à confirmer par la direction, et ce qui manque au site.
 | 5 | Villes confirmées absentes : **Mohammedia, Témara** | Demandes perdues, aucune page pour les capter. |
 | 6 | Aucune **page « quartiers »** | La cartographie de ciblage (Anfa, Souissi, Palmeraie, Malabata, Founty…) n'est exploitée nulle part — voir la règle du plan (§3.6). |
 | 7 | Aucun **suivi de conversion WhatsApp** | Impossible de mesurer ce que rapportent les pages (§9 du plan). |
+| 8 | **Dar Bouazza et Bouznika** n'apparaissaient dans aucune liste | Deux clientes réelles y sont établies : zones servies mais non affichées. | Ajoutées à la couverture, aux listes du site et au plan |
 
 ## 4. Ce qui est conforme et ne change pas
 
