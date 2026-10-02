@@ -37,10 +37,15 @@ const WHATSAPP_FOYERS = process.env.WHATSAPP_FOYERS || '212691733585';
 const WHATSAPP_CANDIDATS = process.env.WHATSAPP_CANDIDATS || process.env.WHATSAPP_NUMBER || '212710359446';
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'servicesyallah@gmail.com';
 
-/* Fichiers/pages copiés dans la version statique */
-const PAGES = ['index.html', 'candidature.html', 'candidature-confirmation.html'];
+/* Fichiers/pages copiés dans la version statique.
+   Les pages HTML présentes à la racine sont toutes copiées, sauf les
+   pages internes listées ci-dessous : ainsi la matrice service × ville
+   générée par outils/generer-pages-villes.js suit automatiquement. */
+const PAGES_INTERNES = new Set(['admin.html', 'plan-placement-du-formulaire.html']);
+const PAGES = fs.readdirSync(RACINE)
+  .filter((f) => f.endsWith('.html') && !PAGES_INTERNES.has(f));
 const DOSSIERS = ['assets'];
-const FICHIERS = ['robots.txt', 'sitemap.xml', 'netlify.toml'];
+const FICHIERS = ['robots.txt', 'sitemap.xml', 'netlify.toml', 'googlee184c103eb04f93a.html'];
 const EXCLUS = new Set(['admin.html', 'admin.js']);
 
 /* Numéros par défaut présents dans le HTML, remplacés si l'on change de numéro */

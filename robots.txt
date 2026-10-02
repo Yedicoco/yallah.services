@@ -6,4 +6,15 @@ Disallow: /admin
 Disallow: /admin.html
 Disallow: /api/
 
+# Copie interne du site destinée au dépôt FTP : même contenu que la racine,
+# ne doit JAMAIS être indexé (contenu dupliqué sur le même domaine).
+Disallow: /site-a-mettre-en-ligne/
+
+# Pages internes / outils, sans valeur pour la recherche
+Disallow: /apercus/
+Disallow: /outils/
+Disallow: /plan-placement-du-formulaire.html
+Disallow: /modeles-messages.md
+Disallow: /plan-presence-locale.md
+
 Sitemap: https://yallahservices-one.vercel.app/sitemap.xml

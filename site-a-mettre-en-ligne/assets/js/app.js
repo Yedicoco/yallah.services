@@ -78,110 +78,6 @@
     });
   });
 
-  /* ─────────── COMPTEUR LIVE ─────────── */
-  var liveEl = $('#liveCount');
-  if (liveEl) {
-    var live = 19 + Math.floor(Math.random() * 15);
-    liveEl.textContent = live;
-    setInterval(function () {
-      live += Math.random() > 0.5 ? 1 : -1;
-      if (live < 14) live = 14 + Math.floor(Math.random() * 4);
-      if (live > 47) live = 40 - Math.floor(Math.random() * 3);
-      liveEl.textContent = live;
-    }, 6000);
-  }
-
-  /* ─────────── COMPTEUR D'URGENCE ─────────── */
-  var tDay = $('#tDay'), tHour = $('#tHour'), tMin = $('#tMin'), tSec = $('#tSec');
-  if (tDay) {
-    var KEY = 'ys_deadline';
-    var deadline = parseInt(localStorage.getItem(KEY) || '0', 10);
-    if (!deadline || deadline < Date.now() || deadline > Date.now() + 3 * 864e5) {
-      deadline = Date.now() + (2 * 864e5) + (14 * 36e5) + (32 * 6e4) + 5e3;
-      try { localStorage.setItem(KEY, String(deadline)); } catch (e) {}
-    }
-    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
-    (function tick() {
-      var d = Math.max(0, deadline - Date.now());
-      tDay.textContent = pad(Math.floor(d / 864e5));
-      tHour.textContent = pad(Math.floor(d % 864e5 / 36e5));
-      tMin.textContent = pad(Math.floor(d % 36e5 / 6e4));
-      tSec.textContent = pad(Math.floor(d % 6e4 / 1000));
-      setTimeout(tick, 1000);
-    })();
-  }
-
-  /* ─────────── NOTIFICATIONS "PREUVE SOCIALE" ─────────── */
-  var PROOFS = [
-    {
-        "ico": "🏡",
-        "name": "Fatima — Casablanca",
-        "txt": "vient de réserver un <strong>ménage simple dans villa</strong> (4 500 DH)"
-    },
-    {
-        "ico": "👶",
-        "name": "Karim — Rabat",
-        "txt": "a reçu un profil de <strong>nounou d'un enfant</strong> (3 500 DH)"
-    },
-    {
-        "ico": "🥘",
-        "name": "Nadia — Marrakech",
-        "txt": "a validé un <strong>cuisine / ménage</strong> (5 000 DH)"
-    },
-    {
-        "ico": "🏢",
-        "name": "Salima — Tanger",
-        "txt": "vient de réserver un <strong>ménage dans appartement</strong>"
-    },
-    {
-        "ico": "👨‍👩‍👧‍👦",
-        "name": "Hicham — Casablanca",
-        "txt": "a réservé une <strong>nounou de 3 enfants</strong>"
-    },
-    {
-        "ico": "🩺",
-        "name": "Amina — Rabat",
-        "txt": "vient de réserver une <strong>garde malade simple</strong>"
-    },
-    {
-        "ico": "🍲",
-        "name": "Yasmine — Fès",
-        "txt": "a validé une <strong>cuisine simple</strong> (4 000 DH)"
-    },
-    {
-        "ico": "🧺",
-        "name": "Loubna — Agadir",
-        "txt": "vient de réserver <strong>nounou + ménage</strong>"
-    },
-    {
-        "ico": "🔪",
-        "name": "Sanaa — Kénitra",
-        "txt": "a demandé une <strong>aide cuisine</strong>"
-    },
-    {
-        "ico": "💬",
-        "name": "Meryem — Casablanca",
-        "txt": "vient de demander un <strong>profil en urgence</strong>"
-    }
-];
-  var spIdx = Math.floor(Math.random() * PROOFS.length);
-  function showProof() {
-    var p = PROOFS[spIdx++ % PROOFS.length];
-    var el = document.createElement('div');
-    el.className = 'sp-notif';
-    el.innerHTML = '<span class="sp-ico">' + p.ico + '</span><span class="sp-txt"><strong>' + p.name +
-      '</strong>' + p.txt + '<span class="sp-time">il y a ' + (1 + Math.floor(Math.random() * 9)) + ' min · via WhatsApp</span></span>';
-    document.body.appendChild(el);
-    setTimeout(function () {
-      el.classList.add('hide');
-      setTimeout(function () { el.remove(); }, 600);
-    }, 6500);
-  }
-  setTimeout(function () {
-    showProof();
-    setInterval(showProof, 22000);
-  }, 9000);
-
   /* ─────────── OUTILS ─────────── */
   function digits(v) { return (v || '').replace(/[^\d+]/g, ''); }
   function waLink(phone) {
@@ -255,7 +151,6 @@
     $('#factName').textContent = or(data.name, '—');
     $('#factPhone').textContent = or(data.phone, '—');
     $('#factCity').textContent = or(data.city, '—');
-    $('#factNat').textContent = or(data.nat, '—');
     $('#factType').textContent = or(data.type, '—');
     $('#factDelay').textContent = or(data.delay, '—');
 
@@ -294,7 +189,7 @@
       }
       var data = {
         service: val('#mfService'), name: name.value.trim(), phone: phone.value.trim(),
-        city: val('#mfCity'), nat: val('#mfNat'), type: val('#mfType'), delay: val('#mfDelay')
+        city: val('#mfCity'), type: val('#mfType'), delay: val('#mfDelay')
       };
       miniForm.style.display = 'none';
       $('#mfOk').style.display = 'block';
@@ -317,7 +212,7 @@
       }
       var data = {
         service: val('#ctService'), name: name.value.trim(), phone: phone.value.trim(),
-        city: val('#ctCity'), nat: val('#ctNat'), type: val('#ctType'), delay: val('#ctDelay'),
+        city: val('#ctCity'), type: val('#ctType'), delay: val('#ctDelay'),
         msg: val('#ctMsg')
       };
       ctForm.style.display = 'none';
