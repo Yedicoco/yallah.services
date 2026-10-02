@@ -1,17 +1,22 @@
 # YALLAH SERVICES — Aides à domicile au Maroc
 
-Site de **Yallah Services** (Casablanca) : sélection et mise à disposition de personnel de maison
-qualifié au Maroc. **Slogan : Simplifiez-vous la vie !**
+Site de **Yallah Services** : recherche et mise en relation de personnel pour les **particuliers**
+et les **entreprises** au Maroc. Base : Casablanca (Hay Hassani, 20220), 2 ans d'activité.
 
-Le site répond à **deux publics opposés**, avec deux parcours distincts :
+> 📄 **Document de référence obligatoire : [`contenu/fiche-entreprise.md`](contenu/fiche-entreprise.md)**
+> (positionnement, services B2C et B2B, villes confirmées, ton, et la liste de ce qu'il est
+> **interdit d'inventer**). En cas de contradiction avec un autre fichier, c'est cette fiche qui prime.
+
+Le site répond à **trois publics**, avec trois parcours distincts :
 
 | Public | Parcours | Page | WhatsApp |
 |---|---|---|---|
-| 🏠 **Foyers** (clients) | Services, garanties, packs, réservation | `index.html` | **+212 691 733 585** |
+| 🏠 **Particuliers** (clients) | Services, packs, tarifs, réservation | `index.html` | **+212 691 733 585** |
+| 🏢 **Entreprises** (B2B) | Personnel pour hôtels, riads, restauration, chantiers, événements | *à créer — voir le plan* | **+212 691 733 585** |
 | 🧑‍🍳 **Candidats** (personnel) | Fiche de candidature → numéro de dossier → références | `candidature.html` | **+212 710 359 446** |
 
-> ⚠️ **Règle commerciale** — l'accueil foyers conserve sa mention « **Demandes d'emploi non acceptées** —
-> Ce site est réservé aux foyers souhaitant recruter », désormais complétée par une orientation claire :
+> ⚠️ **Règle commerciale** — l'accueil conserve sa mention « **Demandes d'emploi non acceptées** —
+> Ce site est réservé aux particuliers et aux entreprises qui recrutent », complétée par une orientation claire :
 > *« Vous cherchez un emploi ? Envoyez vos références à **servicesyallah@gmail.com** ou écrivez-nous sur
 > **WhatsApp +212 710 359 446** → Espace candidats »*. Les quatre variantes de cette mention (dont la
 > version stricte d'origine) sont dans **`modeles-messages.md`**.
@@ -23,7 +28,7 @@ Le site répond à **deux publics opposés**, avec deux parcours distincts :
 | **WhatsApp foyers** (clients) | **+212 691 733 585** → [wa.me/212691733585](https://wa.me/212691733585) |
 | **WhatsApp candidats** (personnel) | **+212 710 359 446** → [wa.me/212710359446](https://wa.me/212710359446) |
 | **E-mail** (références, dossiers) | **servicesyallah@gmail.com** |
-| Villes | Casablanca · Rabat · Marrakech · Fès · Tanger · Agadir · Meknès · Oujda · Kénitra · Salé · Tétouan |
+| Villes | Casablanca · Bouskoura · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé |
 
 > Les liens WhatsApp et l'e-mail sont centralisés dans **`assets/js/config.js`** (site statique) et par
 > variables d'environnement `WHATSAPP_FOYERS`, `WHATSAPP_CANDIDATS`, `CONTACT_EMAIL` (version serveur).
@@ -213,7 +218,7 @@ Grand ménage : villa 700 DH · appartement 500 DH
 ## 🧭 Sections de l'accueil foyers (dans l'ordre)
 
 1. **Navigation fixe** — logo officiel, liens d'ancrage, bouton WhatsApp, menu mobile, **lien « Espace candidats »**.
-2. **Hero** — visuel plein largeur, badge « Agence N°1 », *Votre maison, entre de bonnes mains*,
+2. **Hero** — visuel plein largeur, *Votre maison, entre de bonnes mains*,
    slogan « Simplifiez-vous la vie ! », compteur de visiteurs, compte à rebours, statistiques
    et **mention d'orientation candidats**.
 3. **Bandeau de confiance** — ✅ Profils vérifiés · ⭐ Expérience et professionnalisme · 🤝 Accompagnement personnalisé.
@@ -276,23 +281,32 @@ Contrôles déjà effectués sur cette version :
 
 ## 🔍 SEO local (en cours)
 
-**Couverture :** Yallah Services est basé à Casablanca (Hay Hassani, 20220) et **dessert les 11 grandes
-villes du Maroc** — la matrice de pages couvre donc les 11 villes, par vagues de production.
-Seul le pack local (la carte Google) reste centré sur Casablanca : les autres villes passent par
-le référencement organique, les citations et les demandes WhatsApp.
+**Villes d'intervention confirmées :** Casablanca (base : Hay Hassani 20220) · **Bouskoura** (pôle
+résidentiel à part entière) · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia ·
+Témara · Salé — et d'autres villes **selon les demandes** (jamais affichées comme desservies).
+**Meknès, Oujda et Tétouan ont été retirées** du site : elles ne figurent pas dans la liste confirmée.
+
+**Deux marchés à couvrir :** particuliers (ménage, nounou, cuisine, garde-malade, chauffeurs,
+gardiennage) **et** entreprises — hôtels, riads, maisons d'hôtes, restauration, chantiers
+(main-d'œuvre et manœuvres), sociétés de nettoyage, événementiel. La partie B2B n'a pas encore
+de page : c'est le prochain chantier du plan.
 
 Le dépôt contient les premières briques du référencement local :
 
 - **Pages service × ville** : `femme-menage-casablanca.html`, `nounou-casablanca.html`
   (balisage `Service`, fil d'Ariane structuré, FAQ, CTA WhatsApp).
-- **Plan complet** : `plan-seo-local.md` — matrice 6 services × 11 villes, gabarit de page,
-  Google Business Profile en mode « zone de service », citations locales et NAP canonique,
-  procédure de production du contenu original, pilotage Search Console.
+- **Plan complet** : `plan-seo-local.md` — matrice services × villes par phases, gabarit de page,
+  ligne B2B, Google Business Profile en mode « zone de service », citations locales et NAP
+  canonique, procédure de production du contenu original, pilotage Search Console.
+- **Fiche entreprise** : `contenu/fiche-entreprise.md` — référence unique de tout contenu produit.
+- **Audit de conformité** : `contenu/audit-promesses-site.md` — affirmations corrigées et points
+  en attente de confirmation (tarifs, avis clients, formules de remplacement).
 - **Garde-fou** : `outils/verifier-contenu.js` bloque la publication tant qu'une page est
   trop courte ou trop proche d'une autre (protection contre les pages-portes).
 
 Règles à ne pas contourner : un seul profil Google par établissement réellement exploité,
 aucune adresse inventée, aucune promesse de service à la journée hors Casablanca/Rabat,
+aucun délai, prix, garantie ou vérification affirmé sans confirmation,
 aucun texte repris d'un concurrent.
 
 ## 🔒 Conformité (loi marocaine 09-08)
