@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr" data-titre-fr="Dossier envoyé — Yallah Services" data-titre-ar="تمّ إرسال الملفّ — Yallah Services">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d2136">
+<title>Dossier envoyé — Yallah Services</title>
+<meta name="description" content="Votre fiche de candidature est enregistrée : numéro de dossier, envoi WhatsApp de la fiche et des références par e-mail.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yallah Services">
+<meta property="og:image" content="assets/img/logo-og-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/recrutement.css">
+</head>
+<body class="ys-page ys-fr" id="haut">
+
+<div class="ys-topbar">
+  <div class="ys-ctr">
+    <span data-lang="fr">🧑‍🍳 <strong>Espace candidats</strong> — dossier enregistré</span>
+    <span data-lang="ar">🧑‍🍳 <strong>فضاء الترشّح</strong> — تمّ تسجيل الملفّ</span>
+    <span><a href="candidature.html" data-lang="fr">Nouvelle candidature</a><a href="candidature.html" data-lang="ar">ترشّح جديد</a></span>
+  </div>
+</div>
+
+<header class="ys-header">
+  <div class="ys-ctr">
+    <a class="ys-marque" href="index.html">
+      <img src="assets/img/logo-256.png" alt="Logo Yallah Services — Maroc">
+      <span class="ys-marque-txt">
+        <span class="ys-marque-nom">YALLAH SERVICES</span>
+        <span class="ys-marque-sous" data-lang="fr">Confirmation de candidature</span>
+        <span class="ys-marque-sous" data-lang="ar">تأكيد الترشّح</span>
+      </span>
+    </a>
+    <div class="ys-header-actions">
+      <div class="ys-langues" role="group" aria-label="Langue / اللغة">
+        <button type="button" id="btnFr" class="on" lang="fr">Français</button>
+        <button type="button" id="btnAr" lang="ar" dir="rtl">العربية</button>
+      </div>
+      <button type="button" class="ys-btn ys-btn-ghost" id="btnImprimer">
+        <span data-lang="fr">🖨️ Imprimer</span><span data-lang="ar">🖨️ طباعة</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="ys-sec">
+  <div class="ys-ctr ys-narrow">
+
+    <!-- Aucune fiche en mémoire -->
+    <div class="ys-alerte ys-alerte-rouge" id="sansFiche" hidden>
+      <p data-lang="fr">⚠️ Nous n'avons pas retrouvé votre fiche sur cet appareil (elle a peut-être été envoyée depuis un autre téléphone ou le stockage a été vidé). <a href="candidature.html">Remplissez la fiche de candidature</a> ou écrivez-nous sur <a href="https://wa.me/212710359446" target="_blank" rel="noopener">WhatsApp +212 710 359 446</a>.</p>
+      <p data-lang="ar">⚠️ لم نجد استمارتك على هذا الجهاز (ربما أُرسلت من هاتف آخر أو تمّ تفريغ الذاكرة). <a href="candidature.html">املئي استمارة الترشّح</a> أو راسلينا على <a href="https://wa.me/212710359446" target="_blank" rel="noopener">واتساب ‎+212 710 359 446</a>.</p>
+    </div>
+
+    <!-- Dossier -->
+    <section class="ys-dossier" id="blocDossier" hidden>
+      <div class="ys-dossier-lbl" data-lang="fr">Numéro de dossier</div>
+      <div class="ys-dossier-lbl" data-lang="ar">رقم الملفّ</div>
+      <div class="ys-dossier-num" id="numeroDossier">YS-2026-0000</div>
+      <p class="ys-muted" style="font-size:12.5px;margin-top:6px">
+        <span data-lang="fr">Reçu le <span id="dateDossier">—</span> · Gardez ce numéro : il identifie votre dossier dans tous nos échanges.</span>
+        <span data-lang="ar">بتاريخ <span id="dateDossierAr">—</span> · احتفظي بهذا الرقم: فهو يعرّف بملفّك في كلّ مراسلاتنا.</span>
+      </p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+        <button type="button" class="ys-btn ys-btn-ghost" id="btnCopier">
+          <span data-lang="fr">📋 Copier mon numéro</span><span data-lang="ar">📋 نسخ رقم الملفّ</span>
+        </button>
+      </div>
+      <p class="ys-indice" id="copieOk" hidden style="margin-top:10px;color:var(--ys-or-clair)">
+        <span data-lang="fr">✅ Numéro copié.</span><span data-lang="ar">✅ تمّ نسخ الرقم.</span>
+      </p>
+    </section>
+
+    <!-- Avertissement principal -->
+    <div class="ys-alerte ys-alerte-rouge" style="margin:22px 0">
+      <p data-lang="fr">📌 <strong>Votre candidature n'est pas encore complète.</strong> Il vous reste <strong>deux actions obligatoires</strong> ci-dessous : envoyer la fiche sur WhatsApp <em>et</em> envoyer vos références par e-mail. Sans les deux références, la candidature <strong>n'est ni validée ni présentée à un foyer</strong>.</p>
+      <p data-lang="ar">📌 <strong>ترشّحك لم يكتمل بعد.</strong> تبقّى لك <strong>إجراءان إلزاميان</strong> أسفله: إرسال الاستمارة عبر واتساب <em>و</em> إرسال المراجع عبر البريد الإلكتروني. بدون المرجعين، لا <strong>يُصادق على الترشّح ولا يُعرض على أيّ أسرة</strong>.</p>
+    </div>
+
+    <!-- Actions obligatoires -->
+    <section class="ys-bloc">
+      <div class="ys-bloc-head">
+        <div class="ys-bloc-num">1</div>
+        <div>
+          <div class="ys-bloc-titre" data-lang="fr">Envoyer ma fiche sur WhatsApp (obligatoire)</div>
+          <div class="ys-bloc-titre" data-lang="ar">إرسال الاستمارة عبر واتساب (إلزامي)</div>
+        </div>
+      </div>
+      <p class="ys-bloc-aide" data-lang="fr">Le message est déjà rédigé : appuyez simplement sur « Envoyer » dans WhatsApp. Le numéro est <strong>+212 710 359 446</strong>.</p>
+      <p class="ys-bloc-aide" data-lang="ar">الرسالة مكتوبة مسبقًا: اضغطي فقط على «إرسال» داخل واتساب. الرقم هو <strong>‎+212 710 359 446</strong>.</p>
+      <a class="ys-btn ys-btn-wa ys-btn-large" id="lienWhatsApp" href="https://wa.me/212710359446" target="_blank" rel="noopener">
+        💬 <span data-lang="fr">Envoyer ma fiche sur WhatsApp</span><span data-lang="ar">إرسال استمارتي عبر واتساب</span>
+      </a>
+    </section>
+
+    <section class="ys-bloc">
+      <div class="ys-bloc-head">
+        <div class="ys-bloc-num">2</div>
+        <div>
+          <div class="ys-bloc-titre" data-lang="fr">Envoyer mes références par e-mail (obligatoire)</div>
+          <div class="ys-bloc-titre" data-lang="ar">إرسال المراجع بالبريد الإلكتروني (إلزامي)</div>
+        </div>
+      </div>
+      <p class="ys-bloc-aide" data-lang="fr">Le message contient déjà les deux références de votre fiche. Destinataire : <strong>servicesyallah@gmail.com</strong>. Si le bouton n'ouvre pas votre messagerie, envoyez simplement un e-mail avec votre numéro de dossier <strong>en sujet</strong> et les coordonnées des deux références.</p>
+      <p class="ys-bloc-aide" data-lang="ar">الرسالة تتضمّن المرجعين المذكورين في استمارتك. العنوان: <strong>servicesyallah@gmail.com</strong>. إذا لم يفتح الزرّ تطبيق البريد، أرسلي ببساطة رسالة وضعي <strong>رقم الملفّ في الموضوع</strong> مع معطيات المرجعين.</p>
+      <a class="ys-btn ys-btn-mail ys-btn-large" id="lienEmail" href="mailto:servicesyallah@gmail.com">
+        ✉️ <span data-lang="fr">Envoyer mes références par e-mail</span><span data-lang="ar">إرسال مراجعي بالبريد الإلكتروني</span>
+      </a>
+      <p class="ys-indice" style="margin-top:12px">
+        <span data-lang="fr">Sujet prévu : <span id="sujetEmail" class="ys-strong">—</span></span>
+        <span data-lang="ar">الموضوع: <span id="sujetEmailAr" class="ys-strong">—</span></span>
+      </p>
+    </section>
+
+    <!-- Récapitulatif -->
+    <section class="ys-bloc">
+      <div class="ys-bloc-head">
+        <div class="ys-bloc-num">📄</div>
+        <div>
+          <div class="ys-bloc-titre" data-lang="fr">Récapitulatif de ma fiche</div>
+          <div class="ys-bloc-titre" data-lang="ar">ملخّص استمارتي</div>
+        </div>
+      </div>
+      <table class="ys-tableau" id="tableRecap">
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Suite du parcours -->
+    <section class="ys-bloc">
+      <div class="ys-bloc-head">
+        <div class="ys-bloc-num">🔎</div>
+        <div>
+          <div class="ys-bloc-titre" data-lang="fr">Ce qui se passe ensuite</div>
+          <div class="ys-bloc-titre" data-lang="ar">ما سيحدث بعد ذلك</div>
+        </div>
+      </div>
+      <div class="ys-etape">
+        <div class="ys-etape-num">1</div>
+        <div>
+          <div class="ys-etape-titre" data-lang="fr">Vérification de vos références</div>
+          <div class="ys-etape-titre" data-lang="ar">التحقّق من المراجع</div>
+          <div class="ys-etape-txt" data-lang="fr">Notre équipe contacte les deux personnes que vous avez indiquées. Elles sont appelées avec courtoisie et discrétion.</div>
+          <div class="ys-etape-txt" data-lang="ar">تتّصل فرقنا بالشخصين الذين ذكرتِهما، بكلّ أدب وسرّية.</div>
+        </div>
+      </div>
+      <div class="ys-etape">
+        <div class="ys-etape-num">2</div>
+        <div>
+          <div class="ys-etape-titre" data-lang="fr">Entretien (téléphone ou en personne)</div>
+          <div class="ys-etape-titre" data-lang="ar">مقابلة (هاتفية أو حضورية)</div>
+          <div class="ys-etape-txt" data-lang="fr">Nous vérifions votre expérience, vos disponibilités et vos préférences de travail.</div>
+          <div class="ys-etape-txt" data-lang="ar">نتحقّق من خبرتك وتوفّرك وتفضيلاتك في العمل.</div>
+        </div>
+      </div>
+      <div class="ys-etape">
+        <div class="ys-etape-num">3</div>
+        <div>
+          <div class="ys-etape-titre" data-lang="fr">Présentation à un foyer</div>
+          <div class="ys-etape-titre" data-lang="ar">العرض على أسرة</div>
+          <div class="ys-etape-txt" data-lang="fr">Une fois vos références validées, votre profil est présenté aux familles qui recherchent votre métier.</div>
+          <div class="ys-etape-txt" data-lang="ar">بعد التحقّق من مراجعك، يُعرض ملفّك على الأسر التي تبحث عن مهنتك.</div>
+        </div>
+      </div>
+      <div class="ys-etape">
+        <div class="ys-etape-num">4</div>
+        <div>
+          <div class="ys-etape-titre" data-lang="fr">Accompagnement Yallah Services</div>
+          <div class="ys-etape-titre" data-lang="ar">مواكبة Yallah Services</div>
+          <div class="ys-etape-txt" data-lang="fr">Nous restons votre interlocuteur pendant le placement. <strong>Gratuit pour les candidats : nous ne demandons jamais d'argent.</strong></div>
+          <div class="ys-etape-txt" data-lang="ar">نبقى وسيطك خلال التوظيف. <strong>مجّاني للمترشّحين: لا نطلب أيّ مبلغ مالي أبدًا.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protection des données -->
+    <div class="ys-alerte" style="margin-bottom:20px">
+      <p data-lang="fr">🔐 <strong>Vos données :</strong> conservées <strong>12 mois maximum</strong> si vous n'êtes pas retenue, puis supprimées. Vous pouvez demander leur suppression à tout moment à <a href="mailto:servicesyallah@gmail.com">servicesyallah@gmail.com</a> (loi marocaine 09-08).</p>
+      <p data-lang="ar">🔐 <strong>معطياتك:</strong> تُحفَظ <strong>12 شهرًا كحدّ أقصى</strong> إن لم يتمّ اختيارك، ثم تُحذف. ويمكنك طلب حذفها في أيّ وقت عبر <a href="mailto:servicesyallah@gmail.com">servicesyallah@gmail.com</a> (القانون المغربي 09-08).</p>
+    </div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <a class="ys-btn ys-btn-ghost" href="candidature.html">
+        ✏️ <span data-lang="fr">Corriger ma fiche</span><span data-lang="ar">تصحيح استمارتي</span>
+      </a>
+      <a class="ys-btn ys-btn-ghost" href="index.html">
+        🏠 <span data-lang="fr">Retour à l'accueil foyers</span><span data-lang="ar">العودة إلى صفحة الأسر</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="ys-footer">
+  <div class="ys-ctr ys-footer-lignes">
+    <span>© <span id="annee">2026</span> Yallah Services</span>
+    <span>
+      <a href="https://wa.me/212710359446" target="_blank" rel="noopener">WhatsApp candidats +212 710 359 446</a> ·
+      <a href="mailto:servicesyallah@gmail.com">servicesyallah@gmail.com</a>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/fiche.js"></script>
+<script src="assets/js/candidature-confirmation.js"></script>
+</body>
+</html>
