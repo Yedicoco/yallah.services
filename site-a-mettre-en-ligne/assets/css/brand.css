@@ -137,3 +137,10 @@ footer,footer a { color:var(--brand-muted); }
   .hero-img-wrap img { min-height:0; }
   .hero-img-overlay { height:30%; }
 }
+
+/* Visuel hero agrandi : la photo prend davantage de présence sans perdre son format complet. */
+@media(min-width:900px){
+  #hero { grid-template-columns:minmax(0, .78fr) minmax(0, 1.22fr); gap:clamp(18px, 3vw, 42px); padding-left:3%; padding-right:3%; }
+  .hero-img-wrap { max-width:none; width:100%; }
+  .hero-inner { max-width:560px; }
+}
