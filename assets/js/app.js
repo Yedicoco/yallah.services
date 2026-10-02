@@ -110,17 +110,57 @@
 
   /* ─────────── NOTIFICATIONS "PREUVE SOCIALE" ─────────── */
   var PROOFS = [
-    { ico: '🧹', name: 'Fatima — Casablanca', txt: 'vient de réserver le <strong>Pack Ménage Logée</strong>' },
-    { ico: '🧸', name: 'Karim — Rabat', txt: 'vient de recevoir un profil de <strong>nounou</strong> en 22h' },
-    { ico: '👩‍🍳', name: 'Nadia — Marrakech', txt: 'a validé le <strong>Pack Cuisine Logée</strong>' },
-    { ico: '🏡', name: 'Salima — Tanger', txt: 'vient de réserver <strong>Ménage + Nounou</strong>' },
-    { ico: '🧼', name: 'Hicham — Casablanca', txt: 'a réservé un <strong>Grand Ménage</strong> ce matin' },
-    { ico: '🍼', name: 'Amina — Rabat', txt: 'vient de réserver <strong>Ménage + Nounou</strong> (non logée)' },
-    { ico: '⭐', name: 'Yasmine — Casablanca', txt: 'a laissé un avis <strong>5 étoiles</strong>' },
-    { ico: '🌟', name: 'Loubna — Fès', txt: 'vient de réserver le <strong>Pack Nouvelle Fille</strong>' },
-    { ico: '🥘', name: 'Sanaa — Rabat', txt: 'a validé un profil <strong>Ménage + Cuisine</strong>' },
-    { ico: '💬', name: 'Meryem — Casablanca', txt: 'vient de demander un <strong>profil en urgence</strong>' }
-  ];
+    {
+        "ico": "🏡",
+        "name": "Fatima — Casablanca",
+        "txt": "vient de réserver un <strong>ménage simple dans villa</strong> (4 500 DH)"
+    },
+    {
+        "ico": "👶",
+        "name": "Karim — Rabat",
+        "txt": "a reçu un profil de <strong>nounou d'un enfant</strong> (3 500 DH)"
+    },
+    {
+        "ico": "🥘",
+        "name": "Nadia — Marrakech",
+        "txt": "a validé un <strong>cuisine / ménage</strong> (5 000 DH)"
+    },
+    {
+        "ico": "🏢",
+        "name": "Salima — Tanger",
+        "txt": "vient de réserver un <strong>ménage dans appartement</strong>"
+    },
+    {
+        "ico": "👨‍👩‍👧‍👦",
+        "name": "Hicham — Casablanca",
+        "txt": "a réservé une <strong>nounou de 3 enfants</strong>"
+    },
+    {
+        "ico": "🩺",
+        "name": "Amina — Rabat",
+        "txt": "vient de réserver une <strong>garde malade simple</strong>"
+    },
+    {
+        "ico": "🍲",
+        "name": "Yasmine — Fès",
+        "txt": "a validé une <strong>cuisine simple</strong> (4 000 DH)"
+    },
+    {
+        "ico": "🧺",
+        "name": "Loubna — Agadir",
+        "txt": "vient de réserver <strong>nounou + ménage</strong>"
+    },
+    {
+        "ico": "🔪",
+        "name": "Sanaa — Kénitra",
+        "txt": "a demandé une <strong>aide cuisine</strong>"
+    },
+    {
+        "ico": "💬",
+        "name": "Meryem — Casablanca",
+        "txt": "vient de demander un <strong>profil en urgence</strong>"
+    }
+];
   var spIdx = Math.floor(Math.random() * PROOFS.length);
   function showProof() {
     var p = PROOFS[spIdx++ % PROOFS.length];
@@ -177,9 +217,17 @@
     document.body.style.overflow = '';
   }
 
-  $$('.pwb').forEach(function (b) {
-    b.addEventListener('click', function () {
-      openPopup(b.getAttribute('data-pack'), b.getAttribute('data-price'), b);
+  function bindPack(el) {
+    el.addEventListener('click', function () {
+      openPopup(el.getAttribute('data-pack'), el.getAttribute('data-price'), el);
+    });
+  }
+  $$('.pwb').forEach(bindPack);
+  // Lignes de la grille tarifaire officielle
+  $$('.gr-row').forEach(function (r) {
+    bindPack(r);
+    r.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); r.click(); }
     });
   });
   var pc = $('#popupClose');
