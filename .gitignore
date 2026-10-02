@@ -1,0 +1,20 @@
+# Systèmes
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dépendances éventuelles
+node_modules/
+
+# Divers
+*.zip
+*.bak
