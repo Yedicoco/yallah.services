@@ -16,10 +16,12 @@
   var formulaire = document.getElementById('formCandidature');
   if (!F || !formulaire) return;
 
-  var langue = 'fr';
+  /* Langue d'affichage : la fiche bilingue la connaît déjà (fr · dar ·
+     dar-latn · en), on la reprend pour rester synchronisé. */
+  var langue = (F.bilingue.langue ? F.bilingue.langue() : 'fr');
   try {
     var enregistree = window.localStorage.getItem('ys_langue');
-    if (enregistree === 'ar' || enregistree === 'fr') langue = enregistree;
+    if (!langue) langue = enregistree === 'ar' ? 'dar' : (enregistree || 'fr');
   } catch (e) { /* ignore */ }
 
   /* ─────────── MESSAGES D'ERREUR BILINGUES ─────────── */
@@ -54,7 +56,7 @@
     referencesManquantes: ['Les deux références complètes sont obligatoires.', 'المرجعان كاملان إلزاميان.']
   };
 
-  function t(paire) { return paire[langue === 'ar' ? 1 : 0]; }
+  function t(paire) { return paire[F.bilingue.estArabe(langue) ? 1 : 0]; }
 
   /* ─────────── BASCULE DE LANGUE (moteur partagé) ─────────── */
   function apresChangementLangue(nouvelle) {

@@ -46,7 +46,10 @@ Le site répond à **trois publics**, avec trois parcours distincts :
 ├── server.js                         # Serveur Node sans aucune dépendance (site + API + admin)
 ├── build-site.js                     # Génère le site statique prêt à publier
 ├── generer-images-logo.py            # Produit les 12 déclinaisons du logo (Pillow)
-├── outils/verifier-site.js           # Vérifications avant mise en ligne (liens, ids, images…)
+├── outils/verifier-site.js           # Vérifications avant mise en ligne (liens, ids, images…, langues)
+├── outils/extraire-i18n.js           # Liste les chaînes à traduire + contrôle la couverture
+├── outils/generer-i18n.js            # Compile contenu/i18n/traductions/*.json → assets/i18n/
+├── outils/tester-i18n.js             # Teste les 4 affichages dans un DOM headless (jsdom)
 ├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage)
 ├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
 ├── outils/generer-sitemap.js         # Sitemap automatique (lastmod = git) + synchronisation de robots.txt
@@ -60,13 +63,17 @@ Le site répond à **trois publics**, avec trois parcours distincts :
 │   ├── fiche-locale-casablanca.md    # Questions terrain par ville (30 min par ville)
 │   ├── valider-avis.md · recueillir-avis.md
 │   ├── sources-editoriales.md        # Traçabilité de chaque fait publié
-│   └── pages/*.json                  # Contenu rédigé, page par page
+│   ├── pages/*.json                  # Contenu rédigé, page par page
+│   └── i18n/                         # Multilingue : cles.json + traductions/<page>.<langue>.json
 ├── plan-seo-local.md                 # Plan SEO local : état, matrice, GBP, citations, mesure
 ├── apercus/generer-apercus.js        # Captures d'écran (Playwright) + contrôle de débordement
 ├── assets/
 │   ├── css/style.css                 # Thème or/noir + grille + navy + vert WhatsApp
 │   ├── css/brand.css                 # Déclinaison « affiche » (bleu nuit, or satiné, vert profond)
 │   ├── css/recrutement.css           # Charte des pages candidat et de l'espace recruteur
+│   ├── css/i18n.css                  # Sélecteur de langue + corrections arabe (droite/gauche)
+│   ├── js/i18n.js                    # Moteur multilingue (fr · darija arabe · darija latine · en)
+│   ├── i18n/<langue>/<page>.js       # Dictionnaires publiés (générés, ne pas éditer à la main)
 │   ├── js/config.js                  # Coordonnées centralisées (foyers, candidats, e-mail)
 │   ├── js/app.js                     # Interactions de l'accueil foyers (onglets, FAQ, facture…)
 │   ├── js/fiche.js                   # Moteur bilingue FR/AR + messages WhatsApp/e-mail
@@ -148,6 +155,69 @@ ADMIN_KEY='CleSecrete2026' node server.js
 La clé peut être envoyée par l'en-tête `X-Admin-Key` ou par `?cle=…`.
 
 ---
+
+## 🌍 Affichage en trois langues (+ darija en lettres latines)
+
+Le site s'affiche en **quatre affichages** à partir du même HTML :
+
+| Code | Affichage | Sens | Base affichée |
+|---|---|---|---|
+| `fr` | Français (langue source) | gauche → droite | textes français |
+| `dar` | **الدارجة المغربية** (darija en lettres arabes) | droite → gauche | contenus arabes |
+| `dar-latn` | **Darija** en lettres latines (Arabizi) | gauche → droite | contenus arabes |
+| `en` | **English** | gauche → droite | textes français |
+
+Le visiteur choisit dans le sélecteur de langue de la barre de navigation
+(`FR · الدارجة · Darija · EN`) ; son choix est **mémorisé** (`localStorage`)
+et s'applique à toutes les pages. Sans choix enregistré, la langue du
+navigateur décide (`ar…` → darija, `en…` → anglais, sinon français).
+On peut aussi forcer une langue par l'adresse : `?langue=en`, `?langue=dar`,
+`?langue=fr` (l'ancien paramètre `ar` est accepté et donne la darija).
+
+**Pages couvertes aujourd'hui** : accueil, fiche de candidature, confirmation de
+candidature, hub entreprises, services par ville. Les six pages
+« service × ville » (Casablanca) restent en français pour l'instant : le
+moteur les laisse dans leur langue de base et n'y affiche pas le sélecteur.
+Pour les ajouter, voir « Ajouter des traductions » ci-dessous.
+
+### Comment ça marche
+
+* Le HTML reste écrit en **français** (et en **arabe** sur les pages candidat).
+  Un dictionnaire associe chaque texte d'origine à sa traduction ; le moteur
+  (`assets/js/i18n.js`, aucune dépendance) remplace le texte affiché, traduit
+  aussi les `placeholder`, `title`, `aria-label`, `alt`, les libellés de packs
+  (`data-pack`), les liens WhatsApp pré-remplis, le `<title>` et les balises
+  meta (description, Open Graph, Twitter).
+* Un dictionnaire absent n'est jamais une erreur : la page reste dans sa langue
+  de base, sans sélecteur. Rien ne peut donc « casser ».
+* Le balisage interne est conservé (`<strong>`, `<em>`, liens, champs remplis
+  par le JavaScript comme le numéro de dossier), il fait partie de la traduction.
+* Les textes écrits par le JavaScript (messages d'erreur du formulaire,
+  récapitulatif de la fiche, notifications) sont retraduits automatiquement.
+
+### Ajouter des traductions (ou traduire une nouvelle page)
+
+```bash
+node outils/extraire-i18n.js --json     # 1. relève les chaînes et leurs clés
+#    → écrire les traductions dans contenu/i18n/traductions/<page>.<langue>.json
+node outils/generer-i18n.js             # 2. compile les dictionnaires publiés
+node outils/extraire-i18n.js --verifier # 3. contrôle la couverture (0 = tout est traduit)
+node outils/tester-i18n.js              # 4. teste les 4 affichages (nécessite : npm i jsdom)
+```
+
+Les traductions s'écrivent par **numéro de ligne** de la liste produite à
+l'étape 1 (`{"12": "Our services, city by city"}`), avec un bloc `_extra` pour
+les textes écrits par le JavaScript. Le générateur refuse d'écrire un
+dictionnaire si le HTML de la page a changé depuis les traductions
+(empreinte enregistrée dans le fichier de traduction) : aucune traduction ne
+peut être décalée en silence.
+
+À la main, pour une page de plus : ajouter son nom (sans `.html`) dans
+`PAGES_TRADUITES` (`assets/js/i18n.js`), puis vérifier :
+
+```bash
+node outils/verifier-site.js            # section 8 : contrôle le branchement multilingue
+```
 
 ## 🧑‍🍳 Parcours candidat
 
@@ -260,6 +330,14 @@ Grand ménage : villa 700 DH · appartement 500 DH
 ---
 
 ## ✅ Vérifications avant mise en ligne
+
+```bash
+node outils/verifier-site.js      # ressources, liens, ids, structure, multilingue
+node outils/verifier-contenu.js   # volume et conformité du contenu SEO local
+node outils/extraire-i18n.js --verifier   # toutes les chaînes sont-elles traduites ?
+node outils/tester-i18n.js        # les 4 affichages (jsdom) — npm i jsdom
+```
+
 
 ```bash
 node outils/verifier-site.js        # liens, ressources, identifiants JS, formulaires, CSS, coordonnées

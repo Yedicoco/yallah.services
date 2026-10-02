@@ -71,6 +71,8 @@
 
   /* ── Récapitulatif ── */
   var corps = document.querySelector('#tableRecap tbody');
+  function estArabe(langue) { return F.bilingue.estArabe ? F.bilingue.estArabe(langue) : langue === 'ar'; }
+
   function remplirTableau(langue) {
     var lignes = F.resume(fiche, langue);
     corps.innerHTML = '';
@@ -90,12 +92,12 @@
     var trRef = document.createElement('tr');
     var thRef = document.createElement('th');
     thRef.setAttribute('scope', 'row');
-    thRef.textContent = langue === 'ar' ? 'حالة المراجع' : 'Références';
+    thRef.textContent = estArabe(langue) ? 'حالة المراجع' : 'Références';
     var tdRef = document.createElement('td');
     var completes = F.numTel(fiche.ref1Tel) && F.numTel(fiche.ref2Tel) && fiche.ref1Nom && fiche.ref2Nom;
     tdRef.textContent = completes
-      ? (langue === 'ar' ? 'مُدرَجة في هذه الاستمارة — تُرسَل عبر البريد الإلكتروني' : 'Complètes — à envoyer par e-mail (action 2)')
-      : (langue === 'ar' ? 'ناقصة' : 'Incomplètes');
+      ? (estArabe(langue) ? 'مُدرَجة في هذه الاستمارة — تُرسَل عبر البريد الإلكتروني' : 'Complètes — à envoyer par e-mail (action 2)')
+      : (estArabe(langue) ? 'ناقصة' : 'Incomplètes');
     trRef.appendChild(thRef);
     trRef.appendChild(tdRef);
     corps.appendChild(trRef);
