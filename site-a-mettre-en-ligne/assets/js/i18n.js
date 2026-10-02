@@ -78,6 +78,7 @@
   var ecouteurs = [];
   var pret = false;
   var enCours = false;
+  var chargementsTardifs = {}; /* un chargement indépendant par langue */
 
   /* ─────────── Utilitaires ─────────── */
   function normaliser(texte) {
@@ -123,7 +124,9 @@
     return texteDirect;
   }
 
-  function dico() { return (TRAD[langue] && TRAD[langue][page]) || {}; }
+  function dicoPour(code) { return (TRAD[code] && TRAD[code][page]) || {}; }
+  function dico() { return dicoPour(langue); }
+  function dictionnaireDisponible(code) { return Object.keys(dicoPour(code)).length > 0; }
 
   /* ─────────── Application / restauration ─────────── */
   function noter(el, genre, nom, avant, apres) {
@@ -278,6 +281,13 @@
     traduire(document.body);
     majSelecteur();
     try { global.localStorage.setItem(CLE_STOCKAGE, langue); } catch (e) { /* stockage refusé */ }
+
+    /* En navigation depuis le français, aucun dictionnaire n'a été chargé
+       au démarrage. On le récupère à chaque sélection, sans bloquer le clic. */
+    if (langue !== 'fr' && !dictionnaireDisponible(langue)) {
+      chargerDictionnaireTardif(langue);
+    }
+
     if (!silencieux) {
       for (var i = 0; i < ecouteurs.length; i += 1) {
         try { ecouteurs[i](langue, precedente); } catch (e) { /* un écouteur ne bloque pas la page */ }
@@ -396,18 +406,24 @@
     chargerDictionnaireTardif(code);
   }
 
-  var chargementTardif = false;
   function chargerDictionnaireTardif(code) {
-    if (chargementTardif || code === 'fr' || PAGES_TRADUITES.indexOf(page) === -1) return;
-    if (Object.keys(dico()).length !== 0) return;
-    chargementTardif = true;
+    if (!LANGUES[code] || code === 'fr' || PAGES_TRADUITES.indexOf(page) === -1) return;
+    if (dictionnaireDisponible(code) || chargementsTardifs[code]) return;
+
     var tag = document.createElement('script');
+    chargementsTardifs[code] = tag;
+    tag.async = true;
     tag.src = 'assets/i18n/' + code + '/' + page + '.js';
     tag.onload = function () {
-      majSelecteur();
-      if (langue === code) appliquer(code, true);
+      delete chargementsTardifs[code];
+      /* Le visiteur peut avoir choisi une autre langue pendant le chargement.
+         On ne remplace les textes que si ce dictionnaire est toujours actif. */
+      if (langue === code && dictionnaireDisponible(code)) appliquer(code, true);
     };
-    tag.onerror = function () { chargementTardif = false; };  /* dictionnaire absent : la page reste dans sa langue de base */
+    tag.onerror = function () {
+      delete chargementsTardifs[code];
+      /* Dictionnaire absent ou réseau indisponible : le prochain clic réessaiera. */
+    };
     document.head.appendChild(tag);
   }
 
@@ -441,7 +457,6 @@
     pret = true;
     injecterSelecteurs();
     appliquer(langue, true);
-    if (langue !== 'fr' && Object.keys(dico()).length === 0) chargerDictionnaireTardif(langue);
     /* La fiche candidat prévient quand elle a fini de réécrire ses textes
        (bascule française / arabe, messages d'erreur, récapitulatif).
        On resynchronise alors la langue du moteur et on applique les
