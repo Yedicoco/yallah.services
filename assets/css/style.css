@@ -392,6 +392,8 @@ footer{background:#030b22;padding:18px 5%;color:rgba(255,255,255,0.32);text-alig
 .fn{color:#fff;font-weight:700;font-family:'Barlow Condensed','Arial Narrow',sans-serif}
 footer a{color:rgba(255,255,255,0.5);text-decoration:none}
 footer a:hover{color:#d8b361}
+.social-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 14px;margin-top:10px;color:rgba(255,255,255,0.42)}
+.social-links a{font-weight:600}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){.tbar-inner{grid-template-columns:1fr 1fr}.ti:nth-child(2){border-right:none}.ti:nth-child(3){border-right:1px solid #f3f4f6}}
