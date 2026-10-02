@@ -128,3 +128,12 @@ footer,footer a { color:var(--brand-muted); }
   .nav-links { gap: 12px; }
   .nav-links a { font-size: 12.5px; }
 }
+
+/* Photo hero complète : aucun recadrage, tous les métiers restent visibles d’un seul coup d’œil. */
+.hero-img-wrap { background:var(--brand-night); }
+.hero-img-wrap img { width:100%; height:auto; max-height:none; aspect-ratio:auto; object-fit:contain; object-position:center; display:block; }
+@media(min-width:900px){
+  .hero-img-wrap { align-self:center; }
+  .hero-img-wrap img { min-height:0; }
+  .hero-img-overlay { height:30%; }
+}
