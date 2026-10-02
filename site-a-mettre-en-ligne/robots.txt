@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Espace recruteur (version serveur) : hors index et hors navigation
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /api/
+
+Sitemap: /sitemap.xml

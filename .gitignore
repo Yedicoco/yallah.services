@@ -18,3 +18,17 @@ node_modules/
 # Divers
 *.zip
 *.bak
+
+# ── Données des candidats — loi 09-08 (ne jamais committer) ──
+data/
+*.corrompu-*
+
+# Sauvegardes locales de la base de candidatures
+data-*/
+
+# Captures d'écran (régénérables : node apercus/generer-apercus.js)
+apercus/*.png
+
+# Python
+__pycache__/
+*.pyc

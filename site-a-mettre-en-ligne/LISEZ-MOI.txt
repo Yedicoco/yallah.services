@@ -1,0 +1,28 @@
+YALLAH SERVICES — SITE PRÊT À METTRE EN LIGNE
+=============================================
+
+Cette version fonctionne SANS serveur : déposez tout le contenu de ce
+dossier à la racine de votre hébergement (ou par FTP), et le site est en ligne.
+
+Pages :
+  index.html                        → accueil foyers
+  candidature.html                  → fiche de candidature (FR / AR)
+  candidature-confirmation.html     → numéro de dossier + WhatsApp + e-mail
+
+Coordonnées configurées :
+  WhatsApp foyers    : +212 691 733 585
+  WhatsApp candidats : +212 710 359 446
+  E-mail références  : servicesyallah@gmail.com
+
+Dans cette version, le numéro de dossier est généré par le navigateur du
+candidat (YS-AAAA-0001, 0002…) puis la fiche est transmise sur WhatsApp.
+Aucune donnée n'est stockée sur le serveur : rien à sauvegarder, rien à
+protéger côté hébergement. Pour disposer d'une base de dossiers et de
+l'espace recruteur, utilisez la version serveur (node server.js).
+
+Pour changer un numéro : modifiez assets/js/config.js (ou régénérez avec
+WHATSAPP_CANDIDATS=… CONTACT_EMAIL=… node build-site.js).
+
+Rappel loi 09-08 : sans deux références, la candidature n'est ni validée
+ni présentée à un foyer. Les données des candidats reçues par e-mail ou
+WhatsApp doivent être conservées 12 mois maximum.

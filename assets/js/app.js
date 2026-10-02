@@ -1,13 +1,16 @@
 /* ══════════════════════════════════════════════════════
-   YALLAH SERVICES — Interactions du site
-   WhatsApp : 212691733585 · servicesyallah@gmail.com
+   YALLAH SERVICES — Interactions du site (accueil foyers)
+   WhatsApp foyers : 212691733585 · servicesyallah@gmail.com
+   Les coordonnées viennent de assets/js/config.js quand il est chargé
+   (une seule source pour tout le site), sinon de ces valeurs de repli.
 ══════════════════════════════════════════════════════ */
 (function () {
   'use strict';
 
-  var WA_NUMBER = '212691733585';
-  var WA_DISPLAY = '+212 691 733 585';
-  var EMAIL = 'servicesyallah@gmail.com';
+  var CONFIG = window.YS_CONFIG || {};
+  var WA_NUMBER = CONFIG.whatsappFoyers || '212691733585';
+  var WA_DISPLAY = CONFIG.whatsappFoyersAffiche || '+212 691 733 585';
+  var EMAIL = CONFIG.email || 'servicesyallah@gmail.com';
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 

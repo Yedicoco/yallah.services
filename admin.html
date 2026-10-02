@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d2136">
+<title>Espace recruteur — Yallah Services</title>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/recrutement.css">
+</head>
+<body class="ys-page" id="haut">
+
+<header class="ys-header">
+  <div class="ys-ctr">
+    <a class="ys-marque" href="/">
+      <img src="assets/img/logo-256.png" alt="Logo Yallah Services">
+      <span class="ys-marque-txt">
+        <span class="ys-marque-nom">YALLAH SERVICES</span>
+        <span class="ys-marque-sous">Espace recruteur — dossiers candidats</span>
+      </span>
+    </a>
+    <div class="ys-header-actions">
+      <button type="button" class="ys-btn ys-btn-ghost" id="btnExport">⬇️ Export Excel (CSV)</button>
+      <button type="button" class="ys-btn ys-btn-ghost" id="btnRafraichir">🔄 Rafraîchir</button>
+      <button type="button" class="ys-btn ys-btn-ghost" id="btnQuitter">🚪 Quitter</button>
+    </div>
+  </div>
+</header>
+
+<main class="ys-sec">
+  <div class="ys-ctr">
+
+    <!-- ── Écran de clé ── -->
+    <section id="ecranCle" hidden>
+      <div class="ys-bloc" style="max-width:520px;margin:40px auto">
+        <div class="ys-bloc-head">
+          <div class="ys-bloc-num">🔐</div>
+          <div><div class="ys-bloc-titre">Accès réservé à l'agence</div></div>
+        </div>
+        <p class="ys-bloc-aide" style="margin-left:0">Saisissez la clé <strong>ADMIN_KEY</strong> définie au lancement du serveur.</p>
+        <div class="ys-champ">
+          <label class="ys-label" for="champCle">Clé d'accès</label>
+          <input class="ys-input" type="password" id="champCle" autocomplete="current-password" dir="ltr">
+        </div>
+        <div class="ys-alerte ys-alerte-rouge" id="erreurCle" hidden style="margin:14px 0"></div>
+        <button type="button" class="ys-btn ys-btn-or ys-btn-large" id="btnValiderCle" style="margin-top:14px">Ouvrir l'espace recruteur</button>
+      </div>
+    </section>
+
+    <!-- ── Espace recruteur ── -->
+    <section id="ecranAdmin" hidden>
+      <div class="ys-alerte" style="margin-bottom:18px">
+        <p>⚠️ Cet espace contient des <strong>données personnelles</strong> (loi marocaine 09-08). Conservation <strong>12 mois maximum</strong> pour les candidats non retenus, suppression sur simple demande. Ne partagez jamais cette page ni son adresse.</p>
+      </div>
+
+      <div class="ys-admin-barre">
+        <h1 class="ys-titre-sec" style="margin:0">Dossiers candidats</h1>
+        <div class="ys-champ" style="min-width:280px;flex:1;max-width:420px">
+          <label class="ys-label" for="champRecherche">Recherche instantanée</label>
+          <input class="ys-input" type="search" id="champRecherche" placeholder="Nom, numéro de dossier, ville, métier, téléphone…">
+        </div>
+      </div>
+
+      <div class="ys-stats" id="stats"></div>
+
+      <div class="ys-alerte" id="messageAdmin" hidden style="margin-bottom:18px"></div>
+
+      <div class="ys-liste" id="liste"></div>
+      <div class="ys-vide" id="vide" hidden>Aucun dossier pour le moment.</div>
+    </section>
+  </div>
+</main>
+
+<footer class="ys-footer">
+  <div class="ys-ctr ys-footer-lignes">
+    <span>© <span id="annee">2026</span> Yallah Services — Espace recruteur</span>
+    <span id="piedContacts">—</span>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/fiche.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
