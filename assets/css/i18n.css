@@ -1,0 +1,144 @@
+/* ══════════════════════════════════════════════════════════════════
+   YALLAH SERVICES — Affichage multilingue
+   · Sélecteur de langue (français · darija arabe · darija latine · anglais)
+   · Bascule droite / gauche selon la langue
+   · Corrections de mise en page pour l'arabe (RTL) sur les pages
+     foyers, entreprises et villes
+   Chargée après style.css / brand.css / local.css / recrutement.css.
+══════════════════════════════════════════════════════════════════ */
+
+/* ─────────── Base linguistique affichée ───────────
+   Le HTML porte les deux versions (française et arabe d'origine) sur les
+   pages candidat : seule la base active est visible. */
+html[data-ys-base="ar"] [data-lang="fr"],
+html[data-ys-base="fr"] [data-lang="ar"] { display: none !important; }
+
+/* ─────────── Sélecteur de langue ─────────── */
+.ys-i18n {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid rgba(216, 179, 97, .45);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .05);
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+.ys-i18n-btn {
+  border: 0;
+  background: transparent;
+  color: #e7ebf1;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 7px 11px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .18s, color .18s;
+}
+.ys-i18n-btn:hover { color: #f2db9b; }
+.ys-i18n-btn.on {
+  background-image: linear-gradient(115deg, #b68b39, #f2db9b 48%, #d8b361 76%, #b68b39);
+  color: #0d2136;
+}
+.ys-i18n-btn[dir="rtl"] { letter-spacing: 0; }
+
+/* Barre de langues des pages candidat : le conteneur d'origine ne sert
+   plus que de support, la pastille porte le cadre. */
+.ys-langues:has(.ys-i18n),
+.ys-langues[data-ys-notrad] {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+  padding: 0;
+}
+
+/* Ligne du menu mobile (accueil) */
+.ys-i18n-ligne {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+.ys-i18n-ligne .ys-i18n { flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 900px) {
+  .ys-i18n-nav .ys-i18n-btn { font-size: 10.5px; padding: 6px 8px; }
+}
+@media (max-width: 420px) {
+  .ys-i18n-nav .ys-i18n-btn { font-size: 10px; padding: 5px 7px; }
+}
+@media print {
+  .ys-i18n, .ys-i18n-ligne { display: none !important; }
+}
+
+/* ─────────── Police arabe ─────────── */
+html[data-ys-lang="dar"] body,
+html[data-ys-lang="dar"] button,
+html[data-ys-lang="dar"] input,
+html[data-ys-lang="dar"] select,
+html[data-ys-lang="dar"] textarea,
+html[data-ys-lang="dar"] h1,
+html[data-ys-lang="dar"] h2,
+html[data-ys-lang="dar"] h3,
+html[data-ys-lang="dar"] .st,
+html[data-ys-lang="dar"] .ct-title,
+html[data-ys-lang="dar"] .local-title {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, 'Noto Naskh Arabic', Arial, sans-serif;
+}
+html[data-ys-lang="dar"] h1,
+html[data-ys-lang="dar"] h2,
+html[data-ys-lang="dar"] h3,
+html[data-ys-lang="dar"] .st,
+html[data-ys-lang="dar"] .local-title { letter-spacing: 0; }
+
+/* ─────────── Darija en lettres latines : mêmes contenus que l'arabe,
+   mais lecture de gauche à droite ─────────── */
+html[data-ys-lang="dar-latn"] body.ys-ar { direction: ltr; text-align: left; }
+html[data-ys-lang="dar-latn"] body.ys-ar .ys-alerte {
+  border-right: 1px solid var(--ys-ligne);
+  border-left: 5px solid var(--ys-or);
+}
+html[data-ys-lang="dar-latn"] body.ys-ar .ys-alerte-rouge { border-left-color: var(--ys-rouge); }
+html[data-ys-lang="dar-latn"] body.ys-ar .ys-bloc-aide { margin: 2px 0 16px 50px; }
+html[data-ys-lang="dar-latn"] body.ys-ar .ys-tableau th,
+html[data-ys-lang="dar-latn"] body.ys-ar .ys-tableau td { text-align: left; }
+html[data-ys-lang="dar-latn"] body.ys-ar .ys-puce-liste li { padding-left: 22px; padding-right: 0; }
+html[data-ys-lang="dar-latn"] body.ys-ar .ys-puce-liste li::before { left: 0; right: auto; }
+
+/* ─────────── Corrections droite / gauche pour l'arabe ───────────
+   Les pages foyers, entreprises et villes sont écrites en français :
+   on rétablit ici les bordures, marges et alignements symétriques. */
+html[data-ys-dir="rtl"] .stat { border-right: 0; border-left: 1px solid rgba(255, 255, 255, .1); }
+html[data-ys-dir="rtl"] .stat:last-child { border-left: none; }
+html[data-ys-dir="rtl"] .ti { border-right: 0; border-left: 1px solid #f3f4f6; }
+html[data-ys-dir="rtl"] .ti:last-child { border-left: none; }
+html[data-ys-dir="rtl"] .how-step::after { right: auto; left: -12px; content: '←'; }
+html[data-ys-dir="rtl"] .faq-q { text-align: right; }
+html[data-ys-dir="rtl"] .faq-a .faq-list-in { padding-left: 0; padding-right: 16px; }
+html[data-ys-dir="rtl"] .fcard { text-align: right; }
+html[data-ys-dir="rtl"] .svc-box { border-left: 0; border-right: 4px solid #d8b361; }
+html[data-ys-dir="rtl"] .htag { right: auto; left: 12px; }
+html[data-ys-dir="rtl"] .tc::before { right: auto; left: 16px; }
+html[data-ys-dir="rtl"] .popup-close { right: auto; left: 16px; }
+html[data-ys-dir="rtl"] .req { margin-left: 0; margin-right: 2px; }
+html[data-ys-dir="rtl"] .local-card ul { padding-left: 0; padding-right: 18px; }
+html[data-ys-dir="rtl"] .local-tarifs caption,
+html[data-ys-dir="rtl"] .local-tarifs th,
+html[data-ys-dir="rtl"] .local-tarifs td { text-align: right; }
+html[data-ys-dir="rtl"] .local-badge { margin-left: 0; margin-right: auto; }
+html[data-ys-dir="rtl"] .local-title,
+html[data-ys-dir="rtl"] .local-section h2 { letter-spacing: 0; }
+html[data-ys-dir="rtl"] .local-kicker,
+html[data-ys-dir="rtl"] .local-note { letter-spacing: 0; }
+
+/* Le compteur d'urgence, les horloges et les prix restent lisibles
+   de gauche à droite même en arabe. */
+html[data-ys-dir="rtl"] .timer-val,
+html[data-ys-dir="rtl"] .pp,
+html[data-ys-dir="rtl"] .ptb,
+html[data-ys-dir="rtl"] #factNum { direction: ltr; unicode-bidi: embed; }

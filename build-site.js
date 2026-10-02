@@ -124,9 +124,21 @@ function adapterHtml() {
   }
   if (remplacements.length === 0) return 0;
 
+  /* Fichiers à adapter : les pages, puis les dictionnaires de traduction
+     (les numéros y figurent aussi, en français comme en darija). */
+  const fichiers = PAGES.slice();
+  const dossierTrad = path.join(SORTIE, 'assets', 'i18n');
+  if (fs.existsSync(dossierTrad)) {
+    fs.readdirSync(dossierTrad).forEach((langue) => {
+      const dossier = path.join(dossierTrad, langue);
+      if (!fs.statSync(dossier).isDirectory()) return;
+      fs.readdirSync(dossier).forEach((fichier) => fichiers.push(path.join('assets', 'i18n', langue, fichier)));
+    });
+  }
+
   let total = 0;
-  PAGES.forEach((page) => {
-    const chemin = path.join(SORTIE, page);
+  fichiers.forEach((fichier) => {
+    const chemin = path.join(SORTIE, fichier);
     if (!fs.existsSync(chemin)) return;
     let contenu = fs.readFileSync(chemin, 'utf8');
     remplacements.forEach(([motif, valeur]) => {

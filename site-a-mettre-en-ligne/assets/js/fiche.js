@@ -15,6 +15,12 @@
   var MOIS_AR = ['يناير', 'فبراير', 'مارس', 'أبريل', 'ماي', 'يونيو', 'يوليوز', 'غشت', 'شتنبر', 'أكتوبر', 'نونبر', 'دجنبر'];
 
   /* ── Utilitaires ── */
+  /* Les deux affichages darija (lettres arabes et lettres latines)
+     utilisent les contenus arabes comme base : dates, salaires et
+     libellés suivent donc l'arabe. */
+  function estArabe(code) {
+    return code === 'ar' || code === 'dar' || code === 'dar-latn';
+  }
   function texte(v) { return (v === undefined || v === null) ? '' : String(v).trim(); }
   function liste(v) { return Array.isArray(v) ? v.filter(function (x) { return texte(x) !== ''; }) : (texte(v) ? [texte(v)] : []); }
   function oui(v) { return texte(v) !== '' ? texte(v) : '—'; }
@@ -55,7 +61,7 @@
   }
 
   function messageWhatsApp(fiche, numero, langue) {
-    var ar = langue === 'ar';
+    var ar = estArabe(langue);
     var L = [];
     L.push(ar ? '🍀 ترشّح جديد — Yallah Services' : '🍀 NOUVELLE CANDIDATURE — Yallah Services');
     L.push((ar ? 'رقم الملفّ' : 'Dossier') + ' : ' + numero);
@@ -195,9 +201,9 @@
     if (Array.isArray(valeur)) return valeur.join(' · ');
     var v = texte(valeur);
     if (!v) return '—';
-    if (champ === 'disponible') return langue === 'ar' ? dateLisibleAr(v) : dateLisible(v);
-    if (champ === 'salaire') return v + (langue === 'ar' ? ' درهم/شهر' : ' DH/mois');
-    if (champ === 'age') return v + (langue === 'ar' ? ' سنة' : ' ans');
+    if (champ === 'disponible') return estArabe(langue) ? dateLisibleAr(v) : dateLisible(v);
+    if (champ === 'salaire') return v + (estArabe(langue) ? ' درهم/شهر' : ' DH/mois');
+    if (champ === 'age') return v + (estArabe(langue) ? ' سنة' : ' ans');
     if (champ === 'telephone' || champ === 'ref1Tel' || champ === 'ref2Tel') return numTel(v);
     return v;
   }
@@ -207,7 +213,7 @@
     Object.keys(COURTS).forEach(function (champ) {
       var paire = COURTS[champ];
       var v = valeurAffichee(champ, fiche[champ], langue);
-      out.push({ champ: champ, libelle: paire[langue === 'ar' ? 1 : 0], valeur: v });
+      out.push({ champ: champ, libelle: paire[estArabe(langue) ? 1 : 0], valeur: v });
     });
     return out;
   }
@@ -237,64 +243,102 @@
     return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : '';
   }
 
-  /* ─────────── AFFICHAGE BILINGUE FR / AR ───────────
+  /* ─────────── AFFICHAGE MULTILINGUE ───────────
+     Quatre affichages : fr · dar (darija en lettres arabes, RTL) ·
+     dar-latn (darija en lettres latines) · en. Les deux affichages
+     darija s'appuient sur la version arabe déjà présente dans la page,
+     que le moteur multilingue (assets/js/i18n.js) traduit ensuite si un
+     dictionnaire existe.
+
      Convention dans le HTML :
-       data-fr / data-ar        → contenu texte de l'élément
+       data-lang="fr|ar"        → nœuds des deux bases linguistiques
+       data-fr / data-ar        → contenu texte d'un même élément
        data-fr-ph / data-ar-ph  → placeholder (sur l'input ou son conteneur)
        data-err-fr / data-err-ar→ message d'erreur d'un champ
-       data-titre-fr/-ar sur <html> → titre du document
+       data-titre-fr / -ar sur <html> → titre du document
      Les éléments marqués data-lang="fr|ar" sont masqués par le CSS selon
-     la classe du <body> (.ys-fr / .ys-ar). */
+     la base active (body.ys-fr / body.ys-ar). */
   var bilingue = (function () {
+    var ALIAS = { ar: 'dar' };
+    var VALIDES = { fr: 1, dar: 1, 'dar-latn': 1, en: 1 };
+    var INFOS = {
+      fr: { dir: 'ltr', htmlLang: 'fr-MA', base: 'fr' },
+      dar: { dir: 'rtl', htmlLang: 'ar-MA', base: 'ar' },
+      'dar-latn': { dir: 'ltr', htmlLang: 'ar-Latn-MA', base: 'ar' },
+      en: { dir: 'ltr', htmlLang: 'en', base: 'fr' }
+    };
     var langue = 'fr';
     var initialise = false;
-    try {
-      var garde = global.localStorage.getItem('ys_langue');
-      if (garde === 'ar' || garde === 'fr') langue = garde;
-    } catch (e) { /* ignore */ }
     var ecouteurs = [];
 
-    function elements(selecteur) { return Array.prototype.slice.call(document.querySelectorAll(selecteur)); }
+    /* Renvoie le code valide, ou null si la valeur n'est pas une langue. */
+    function normaliserCode(code) {
+      var c = ALIAS[code] || code;
+      return VALIDES[c] ? c : null;
+    }
+
+    try {
+      var garde = normaliserCode(global.localStorage.getItem('ys_langue'));
+      if (garde) langue = garde;
+    } catch (e) { /* stockage refusé */ }
+
+    function elements(selecteur) {
+      return Array.prototype.slice.call(document.querySelectorAll(selecteur));
+    }
+    function infos() { return INFOS[normaliserCode(langue) || 'fr']; }
+    function base() { return infos().base; }
 
     function appliquer(nouvelle) {
-      if (nouvelle === 'fr' || nouvelle === 'ar') langue = nouvelle;
+      var demandee = normaliserCode(nouvelle);
+      if (demandee) langue = demandee;
+      var i = infos();
       try { global.localStorage.setItem('ys_langue', langue); } catch (e) { /* ignore */ }
 
-      document.documentElement.lang = langue;
-      document.documentElement.dir = langue === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.lang = i.htmlLang;
+      document.documentElement.dir = i.dir;
+      document.documentElement.setAttribute('data-ys-lang', langue);
+      document.documentElement.setAttribute('data-ys-dir', i.dir);
+      document.documentElement.setAttribute('data-ys-base', i.base);
       if (document.body) {
-        document.body.classList.toggle('ys-fr', langue === 'fr');
-        document.body.classList.toggle('ys-ar', langue === 'ar');
+        document.body.classList.toggle('ys-fr', i.base === 'fr');
+        document.body.classList.toggle('ys-ar', i.base === 'ar');
+        document.body.setAttribute('data-ys-lang', langue);
       }
 
       elements('[data-fr][data-ar]').forEach(function (el) {
-        el.textContent = el.getAttribute(langue === 'ar' ? 'data-ar' : 'data-fr');
+        el.textContent = el.getAttribute(i.base === 'ar' ? 'data-ar' : 'data-fr');
       });
       elements('[data-fr-ph]').forEach(function (el) {
-        var v = el.getAttribute(langue === 'ar' ? 'data-ar-ph' : 'data-fr-ph') || '';
-        var cible = (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT') ? el : el.querySelector('input, textarea, select');
+        var v = el.getAttribute(i.base === 'ar' ? 'data-ar-ph' : 'data-fr-ph') || '';
+        var cible = (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT')
+          ? el : el.querySelector('input, textarea, select');
         if (cible) cible.setAttribute('placeholder', v);
       });
       elements('[data-err-fr]').forEach(function (el) {
-        if (el.textContent) el.textContent = el.getAttribute(langue === 'ar' ? 'data-err-ar' : 'data-err-fr') || '';
+        if (el.textContent) el.textContent = el.getAttribute(i.base === 'ar' ? 'data-err-ar' : 'data-err-fr') || '';
       });
 
-      var racine = document.documentElement;
-      var titre = racine.getAttribute(langue === 'ar' ? 'data-titre-ar' : 'data-titre-fr');
+      var titre = document.documentElement.getAttribute(i.base === 'ar' ? 'data-titre-ar' : 'data-titre-fr');
       if (titre) document.title = titre;
 
       var bf = document.getElementById('btnFr');
       var ba = document.getElementById('btnAr');
       if (bf) bf.classList.toggle('on', langue === 'fr');
-      if (ba) ba.classList.toggle('on', langue === 'ar');
+      if (ba) ba.classList.toggle('on', langue === 'dar' || langue === 'dar-latn');
 
       ecouteurs.forEach(function (f) { try { f(langue); } catch (e) { /* ignore */ } });
     }
 
     return {
       langue: function () { return langue; },
+      base: base,
+      estArabe: estArabe,
       definir: appliquer,
-      /* surChangement est appelé après chaque application de langue */
+      /* vrai sur les pages qui portent deux bases linguistiques
+         (fiche candidat, confirmation) */
+      pageBilingue: function () { return !!document.querySelector('[data-lang]'); },
+      /* surChangement / surApplication : appelé après chaque application */
+      surApplication: function (fn) { if (typeof fn === 'function') ecouteurs.push(fn); },
       initialiser: function (surChangement) {
         if (typeof surChangement === 'function') ecouteurs.push(surChangement);
         if (initialise) { appliquer(langue); return; }
@@ -302,14 +346,13 @@
         var bf = document.getElementById('btnFr');
         var ba = document.getElementById('btnAr');
         if (bf) bf.addEventListener('click', function () { appliquer('fr'); });
-        if (ba) ba.addEventListener('click', function () { appliquer('ar'); });
-        var demadee = parametre('langue');
-        appliquer(demadee === 'ar' || demadee === 'fr' ? demadee : langue);
+        if (ba) ba.addEventListener('click', function () { appliquer('dar'); });
+        var code = normaliserCode(parametre('langue'));
+        appliquer(code || langue);
       },
       /* Utilitaire : message d'erreur bilingue d'un champ */
       erreur: function (champ, messageFr, messageAr) {
-        var paire = [messageFr, messageAr];
-        return paire[langue === 'ar' ? 1 : 0];
+        return (base() === 'ar') ? messageAr : messageFr;
       }
     };
   })();

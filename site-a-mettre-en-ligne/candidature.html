@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-titre-fr="Espace candidats — Fiche de candidature | Yallah Services" data-titre-ar="فضاء الترشّح — استمارة الترشّح | Yallah Services">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,8 +23,11 @@
 <meta name="twitter:image" content="https://yallahservices-one.vercel.app/assets/img/logo-og-1200x630.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/recrutement.css">
+<link rel="stylesheet" href="assets/css/i18n.css">
+<!-- Multilingue : français · darija (arabe et latin) · anglais -->
+<script src="assets/js/i18n.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,10 +77,7 @@
       </span>
     </a>
     <div class="ys-header-actions">
-      <div class="ys-langues" role="group" aria-label="Langue / اللغة">
-        <button type="button" id="btnFr" class="on" lang="fr">Français</button>
-        <button type="button" id="btnAr" lang="ar" dir="rtl">العربية</button>
-      </div>
+      <div class="ys-langues" role="group" aria-label="Langue / اللغة / Language" data-ys-notrad></div>
       <a class="ys-btn ys-btn-wa" id="lienWaHaut" href="https://wa.me/212710359446" target="_blank" rel="noopener">
         <span data-lang="fr">💬 WhatsApp</span><span data-lang="ar">💬 واتساب</span>
       </a>
@@ -357,7 +357,7 @@
         <div class="ys-champ" data-champ="langues" style="margin-bottom:16px">
           <span class="ys-label">
             <span data-lang="fr">Langues parlées</span>
-            <span data-lang="ar">اللغات التي تتحدّثين بها"></span>
+            <span data-lang="ar">اللغات التي تتحدّثين بها</span>
           </span>
           <div class="ys-cases">
             <label class="ys-case"><input type="checkbox" name="langues" value="Darija marocaine"><span data-lang="fr">Darija marocaine</span><span data-lang="ar">الدارجة المغربية</span></label>

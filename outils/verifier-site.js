@@ -130,7 +130,7 @@ Object.keys(SCRIPTS_PAR_PAGE).forEach((page) => {
   const partages = ['assets/js/fiche.js'];
   SCRIPTS_PAR_PAGE[page].forEach((script) => {
     if (!existe(script)) { erreur('Script manquant : ' + script); return; }
-    if (partages.indexOf(script) !== -1) return; // bibliothèque commune : ids optionnels (btnFr, btnAr…)
+    if (partages.indexOf(script) !== -1) return; // bibliothèque commune : ids optionnels d'une page à l'autre
     const js = lire(script);
     let resultat;
     const motifs = [/getElementById\('([^']+)'\)/g, /getElementById\("([^"]+)"\)/g];
@@ -181,7 +181,7 @@ if (existe('candidature.html')) {
   else ok(placeholdersFr + ' textes d\'aide bilingues');
 
   ['name="travail"', 'name="langues"', 'name="competences"', 'name="documents"',
-   'id="consentement"', 'name="site_web"', 'id="btnFr"', 'id="btnAr"']
+   'id="consentement"', 'name="site_web"', 'class="ys-langues"', 'data-ys-notrad']
     .forEach((motif) => {
       if (contenu.indexOf(motif) === -1) erreur('Élément attendu absent : ' + motif);
     });
@@ -219,6 +219,66 @@ if (existe('assets/js/config.js')) {
   else ok('WhatsApp foyers ' + foyers + ' · candidats ' + candidats + ' · ' + email);
 } else {
   erreur('assets/js/config.js manquant');
+}
+
+/* ── 8. Affichage multilingue (français · darija · darija latine · anglais) ── */
+section('8. Affichage multilingue');
+{
+  const PAGES_I18N = ['index.html', 'candidature.html', 'candidature-confirmation.html',
+    'personnel-entreprises.html', 'services-par-ville.html'];
+  const LANGUES = ['dar', 'dar-latn', 'en'];
+
+  if (!existe('assets/js/i18n.js')) erreur('Moteur multilingue manquant : assets/js/i18n.js');
+  else if (!existe('assets/css/i18n.css')) erreur('Feuille de style manquante : assets/css/i18n.css');
+  else {
+    const moteur = lire('assets/js/i18n.js');
+    const declarees = (moteur.match(/PAGES_TRADUITES = \[([\s\S]*?)\]/) || [])[1] || '';
+    const connues = (declarees.match(/'([^']+)'/g) || []).map((x) => x.replace(/'/g, ''));
+    const attendues = PAGES_I18N.map((p) => p.replace(/\.html$/, ''));
+    const oubliees = attendues.filter((p) => connues.indexOf(p) === -1);
+    if (oubliees.length) erreur('Pages absentes de PAGES_TRADUITES (i18n.js) : ' + oubliees.join(', '));
+    LANGUES.forEach((langue) => {
+      if (moteur.indexOf("'" + langue + "'") === -1) erreur('Langue absente du moteur : ' + langue);
+    });
+    if (!oubliees.length) ok('Moteur multilingue : ' + connues.length + ' pages, ' +
+      LANGUES.length + ' langues de traduction (+ français)');
+  }
+
+  let pagesBranchees = 0;
+  PAGES_I18N.forEach((page) => {
+    if (!existe(page)) { erreur('Page multilingue manquante : ' + page); return; }
+    const contenu = lire(page);
+    const manques = [];
+    if (contenu.indexOf('assets/js/i18n.js') === -1) manques.push('script i18n.js');
+    if (contenu.indexOf('assets/css/i18n.css') === -1) manques.push('feuille i18n.css');
+    if (manques.length) erreur(page + ' → ' + manques.join(' et ') + ' non chargé(s)');
+    else pagesBranchees += 1;
+  });
+
+  let dictionnaires = 0;
+  let vides = [];
+  PAGES_I18N.forEach((page) => {
+    LANGUES.forEach((langue) => {
+      const fichier = 'assets/i18n/' + langue + '/' + page.replace(/\.html$/, '.js');
+      if (!existe(fichier)) { vides.push(fichier); return; }
+      const contenu = lire(fichier);
+      const cles = (contenu.match(/^\s*"/gm) || []).length;
+      if (cles < 10) vides.push(fichier + ' (' + cles + ' clé(s))');
+      else dictionnaires += 1;
+    });
+  });
+  if (vides.length) erreur('Dictionnaires manquants ou vides : ' + vides.slice(0, 4).join(', ') +
+    (vides.length > 4 ? ' …' : ''));
+  else ok(dictionnaires + ' dictionnaires publiés (' + PAGES_I18N.length + ' pages × ' + LANGUES.length + ' langues)');
+  if (pagesBranchees === PAGES_I18N.length && !vides.length) {
+    ok('Sélecteur à quatre affichages présent sur les ' + PAGES_I18N.length + ' pages');
+  }
+
+  const autres = PAGES.filter((page) => PAGES_I18N.indexOf(page) === -1 && page !== 'admin.html');
+  if (autres.length) {
+    console.log('  ℹ️  Pages pas encore traduites (' + autres.length + ') : ' + autres.join(', '));
+    console.log('      → écrire le dictionnaire puis les ajouter à PAGES_TRADUITES (assets/js/i18n.js)');
+  }
 }
 
 /* ── Résultat ── */
