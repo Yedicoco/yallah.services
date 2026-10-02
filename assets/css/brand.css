@@ -94,3 +94,25 @@ footer,footer a { color:var(--brand-muted); }
   *,*::before,*::after { animation:none !important; transition:none !important; }
   .reveal { opacity:1; transform:none; }
 }
+
+/* Hero commerciale : la promesse précède la galerie de profils. */
+.hero-inner { padding-bottom: 34px; }
+.hero-sub-secondary { margin-top: -12px; color: rgba(255,255,255,0.52); }
+.hero-actions { display:flex; flex-direction:column; align-items:center; gap:5px; }
+.hero-secondary { color:#d8b361; font-size:12px; font-weight:700; text-decoration:none; padding:5px 12px; transition:color .2s ease; }
+.hero-secondary:hover { color:#f2db9b; }
+.hero-image-caption { position:absolute; z-index:2; bottom:14px; left:5%; right:5%; text-align:center; color:rgba(255,255,255,.78); font-size:11px; line-height:1.4; letter-spacing:.1px; }
+.hero-warn a { color:#f2db9b; text-decoration:underline; text-underline-offset:2px; }
+@media(min-width:900px){
+  #hero { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); align-items:center; min-height:650px; padding:76px 5% 0; gap:clamp(24px,5vw,72px); }
+  .hero-inner { max-width:590px; padding:48px 0 58px; text-align:left; margin:0; }
+  .hero-sub { margin-left:0; margin-right:0; }
+  .hero-actions { align-items:flex-start; }
+  .hero-img-wrap { border:1px solid var(--brand-line); border-bottom:0; border-radius:18px 18px 0 0; overflow:hidden; max-width:670px; width:100%; justify-self:end; }
+  .hero-img-wrap img { max-height:580px; min-height:480px; object-fit:cover; object-position:center 35%; }
+  .hero-img-overlay { height:36%; }
+  .hero-image-caption { text-align:left; left:20px; right:20px; }
+  .divider { margin-left:0; }
+  .stats { justify-content:flex-start; }
+  .stat:first-child { padding-left:0; }
+}
