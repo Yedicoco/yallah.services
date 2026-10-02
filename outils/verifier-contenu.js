@@ -345,6 +345,26 @@ locales.forEach((p) => {
   }
 });
 
+/* ═══ 6. Contenus inachevés ═══ */
+section('6. Contenus inachevés (rien de brouillon ne doit être publié)');
+const MARQUEURS = [
+  [/\[\[[^\]]{3,}\]\]/g, 'emplacement à compléter'],
+  [/\bTODO\b|\bFIXME\b/g, 'marqueur de travail'],
+  [/à compl[ée]ter/gi, 'contenu annoncé comme à compléter'],
+  [/lorem ipsum/i, 'texte de remplissage']
+];
+let brouillons = 0;
+pages.forEach((p) => {
+  MARQUEURS.forEach(([motif, libelle]) => {
+    const trouves = p.html.match(motif);
+    if (trouves) {
+      brouillons += 1;
+      erreur(p.fichier + ' : ' + libelle + ' → ' + trouves.slice(0, 3).join(' · '));
+    }
+  });
+});
+if (!brouillons) ok('Aucun contenu inachevé détecté.');
+
 /* ═══ Synthèse ═══ */
 console.log('\n' + '─'.repeat(66));
 console.log(erreurs === 0

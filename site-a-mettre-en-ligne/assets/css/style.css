@@ -252,6 +252,8 @@ h1.ht em{font-style:italic;background:linear-gradient(135deg,#d8b361,#f2db9b);-w
 .tc::before{content:'"';position:absolute;top:12px;right:16px;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:52px;color:#f0f2f8;line-height:1;font-weight:900}
 .temo-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .tav{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2.5px solid #d8b361}
+/* Avatar d'avis client : initiales, jamais la photo d'une personne qui n'est pas la cliente */
+.tav-initials{width:52px;height:52px;border-radius:50%;flex-shrink:0;border:2.5px solid #d8b361;display:grid;place-items:center;background:linear-gradient(145deg,#0b2035,#16375c);color:#e9d493;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:800;font-size:21px;letter-spacing:.5px;line-height:1}
 .tname{font-size:13px;font-weight:800;color:#0b2035;margin-bottom:1px}
 .tcity{font-size:10px;color:#9ca3af}
 .tstars{color:#d8b361;font-size:12px;margin-top:2px}
