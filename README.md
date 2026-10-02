@@ -42,6 +42,8 @@ Le site répond à **deux publics opposés**, avec deux parcours distincts :
 ├── build-site.js                     # Génère le site statique prêt à publier
 ├── generer-images-logo.py            # Produit les 12 déclinaisons du logo (Pillow)
 ├── outils/verifier-site.js           # Vérifications avant mise en ligne (liens, ids, images…)
+├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage)
+├── plan-seo-local.md                 # Plan SEO local : matrice service × ville, GBP, citations, mesure
 ├── apercus/generer-apercus.js        # Captures d'écran (Playwright) + contrôle de débordement
 ├── assets/
 │   ├── css/style.css                 # Thème or/noir + grille + navy + vert WhatsApp
@@ -242,8 +244,15 @@ Grand ménage : villa 700 DH · appartement 500 DH
 
 ```bash
 node outils/verifier-site.js        # liens, ressources, identifiants JS, formulaires, CSS, coordonnées
+node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie entre pages, titles, balisage, maillage
 node --check assets/js/*.js server.js build-site.js
 ```
+
+> ⚠️ `verifier-contenu.js` sort en **erreur (code 1)** tant que les pages service × ville
+> n'ont pas un contenu original suffisant (≥ 600 mots, < 40 % de recopie entre pages).
+> C'est volontaire : c'est le garde-fou qui empêche la publication de pages-portes.
+> Les seuils sont réglables (`--mots 800 --dup 30`) ; le plan complet est dans
+> **`plan-seo-local.md`**.
 
 Le vérificateur contrôle notamment que **chaque image/script/feuille de style existe**, que chaque
 identifiant utilisé par le JavaScript est bien présent dans la page, que les **messages d'erreur sont
@@ -263,6 +272,22 @@ Contrôles déjà effectués sur cette version :
 - [ ] Captures navigateur (ordinateur et mobile) : script prêt dans `apercus/`,
       à lancer quand un Chromium est disponible — l'environnement de développement actuel
       ne permet pas de le télécharger
+
+## 🔍 SEO local (en cours)
+
+Le dépôt contient les premières briques du référencement local :
+
+- **Pages service × ville** : `femme-menage-casablanca.html`, `nounou-casablanca.html`
+  (balisage `Service`, fil d'Ariane structuré, FAQ, CTA WhatsApp).
+- **Plan complet** : `plan-seo-local.md` — matrice 6 services × 11 villes, gabarit de page,
+  Google Business Profile en mode « zone de service », citations locales et NAP canonique,
+  procédure de production du contenu original, pilotage Search Console.
+- **Garde-fou** : `outils/verifier-contenu.js` bloque la publication tant qu'une page est
+  trop courte ou trop proche d'une autre (protection contre les pages-portes).
+
+Règles à ne pas contourner : un seul profil Google par établissement réellement exploité,
+aucune adresse inventée, aucune promesse de service à la journée hors Casablanca/Rabat,
+aucun texte repris d'un concurrent.
 
 ## 🔒 Conformité (loi marocaine 09-08)
 
