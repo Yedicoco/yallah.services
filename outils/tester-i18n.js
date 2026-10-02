@@ -10,7 +10,9 @@
      3. titre, meta description et textes sont bien remplacés ;
      4. aucune chaîne du dictionnaire n'est restée dans la langue source ;
      5. le sélecteur compte quatre boutons et marque la langue active ;
-     6. le retour au français restitue la page (aucun résidu).
+     6. le retour au français restitue la page (aucun résidu) ;
+     7. un visiteur arrivant en français peut cliquer vers chaque langue,
+        charger son dictionnaire et revenir au français.
 
    Prérequis (outil de développement, absent du site publié) :
        npm i jsdom
@@ -34,15 +36,26 @@ try {
 }
 const { JSDOM } = jsdom;
 
-/* Aucune requête vers l'extérieur pendant le test (polices, images). */
-const OPTIONS_RESEAU = {};
+/* Les scripts locaux doivent se charger ; les polices et autres ressources
+   distantes sont neutralisées pour que le test fonctionne hors réseau. */
+let OPTIONS_RESEAU = 'usable';
 if (typeof jsdom.requestInterceptor === 'function') {
-  OPTIONS_RESEAU.interceptors = [jsdom.requestInterceptor((requete) => {
-    if (!/^file:/.test(requete.url)) {
-      return new Response('', { status: 200, headers: { 'Content-Type': 'text/plain' } });
+  OPTIONS_RESEAU = {
+    interceptors: [jsdom.requestInterceptor((requete) => {
+      if (!/^file:/.test(requete.url)) {
+        return new Response('', { status: 200, headers: { 'Content-Type': 'text/plain' } });
+      }
+      return undefined;
+    })]
+  };
+} else if (typeof jsdom.ResourceLoader === 'function') {
+  class ChargeurLocal extends jsdom.ResourceLoader {
+    fetch(url, options) {
+      if (!/^file:/.test(url)) return Promise.resolve(Buffer.alloc(0));
+      return super.fetch(url, options);
     }
-    return undefined;
-  })];
+  }
+  OPTIONS_RESEAU = new ChargeurLocal();
 }
 
 const PAGES = ['index.html', 'services-par-ville.html', 'personnel-entreprises.html',
@@ -86,8 +99,16 @@ function ouvrir(page, langue) {
         fenetre.addEventListener('unhandledrejection', (e) => erreursJs.push('promesse rejetée : ' + e.reason));
       }
     });
-    dom.window.addEventListener('load', () => setTimeout(() => resoudre({ dom, erreursJs }), 150));
-    setTimeout(() => resoudre({ dom, erreursJs }), 8000);
+    let resolue = false;
+    let garde;
+    function terminer() {
+      if (resolue) return;
+      resolue = true;
+      clearTimeout(garde);
+      resoudre({ dom, erreursJs });
+    }
+    dom.window.addEventListener('load', () => setTimeout(terminer, 150), { once: true });
+    garde = setTimeout(terminer, 8000);
   });
 }
 
@@ -116,6 +137,58 @@ function texteAffiche(doc) {
     for (let i = 0; i < enfants.length; i += 1) parcourir(enfants[i]);
   })(doc.body);
   return morceaux.join(' ').replace(/\s+/g, ' ').trim();
+}
+
+function attendreCondition(condition, delaiMax) {
+  const delai = delaiMax || 5000;
+  const echeance = Date.now() + delai;
+  return new Promise((resoudre, rejeter) => {
+    function verifier() {
+      if (condition()) { resoudre(); return; }
+      if (Date.now() >= echeance) { rejeter(new Error('délai dépassé (' + delai + ' ms)')); return; }
+      setTimeout(verifier, 25);
+    }
+    verifier();
+  });
+}
+
+/* Contrôle réutilisé pour le chargement direct et pour le vrai clic. */
+function verifierTraductionAppliquee(page, langue, doc, dico, contexte) {
+  const prefixe = (contexte ? page + ' · ' + contexte : page) + ' — ';
+  const infos = ATTENDU[langue];
+
+  if (dico['@title'] && doc.title !== dico['@title']) {
+    erreur(prefixe + 'titre non traduit : « ' + doc.title + ' »');
+  }
+  if (dico['@meta:description']) {
+    const meta = doc.querySelector('meta[name="description"]');
+    if (meta && meta.getAttribute('content') !== dico['@meta:description']) erreur(prefixe + 'meta description non traduite');
+    else if (meta) ok(prefixe + 'titre et meta description traduits');
+  }
+
+  /* Aucune chaîne connue du dictionnaire ne doit rester affichée. */
+  const restes = [];
+  const elements = doc.body.querySelectorAll('*');
+  for (let i = 0; i < elements.length; i += 1) {
+    const el = elements[i];
+    if (el.children.length > 4) continue;
+    if (el.closest('[data-ys-notrad]')) continue;
+    if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE') continue;
+    const texte = texteNormalise(el);
+    if (!texte || texte.length > 200) continue;
+    if (el.closest('[data-lang]:not([data-lang="' + infos[2] + '"])')) continue;
+    /* Une traduction identique à la source (FAQ, WhatsApp, e-mail, noms de
+       villes…) n'est pas un oubli : on ne signale que les vraies absences. */
+    if (Object.prototype.hasOwnProperty.call(dico, texte) && texteDeTraduction(dico[texte]) !== texte) {
+      restes.push(el.tagName + ' : « ' + texte + ' »');
+    }
+  }
+  if (restes.length) {
+    restes.slice(0, 5).forEach((r) => erreur(prefixe + 'texte non traduit — ' + r));
+    if (restes.length > 5) erreur(prefixe + '… et ' + (restes.length - 5) + ' autre(s) texte(s) non traduit(s)');
+  } else {
+    ok(prefixe + 'les ' + Object.keys(dico).length + ' clés du dictionnaire sont appliquées');
+  }
 }
 
 async function tester(page, langue) {
@@ -155,36 +228,7 @@ async function tester(page, langue) {
   if (dico.erreur) { erreur('dictionnaire illisible : ' + dico.erreur); dom.window.close(); return; }
   if (langue === 'fr') { dom.window.close(); return; }
 
-  if (dico['@title'] && doc.title !== dico['@title']) erreur('titre non traduit : « ' + doc.title + ' »');
-  if (dico['@meta:description']) {
-    const meta = doc.querySelector('meta[name="description"]');
-    if (meta && meta.getAttribute('content') !== dico['@meta:description']) erreur('meta description non traduite');
-    else if (meta) ok('titre et meta description traduits');
-  }
-
-  /* Aucune chaîne connue du dictionnaire ne doit rester affichée. */
-  const restes = [];
-  const elements = doc.body.querySelectorAll('*');
-  for (let i = 0; i < elements.length; i += 1) {
-    const el = elements[i];
-    if (el.children.length > 4) continue;
-    if (el.closest('[data-ys-notrad]')) continue;
-    if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE') continue;
-    const texte = texteNormalise(el);
-    if (!texte || texte.length > 200) continue;
-    if (el.closest('[data-lang]:not([data-lang="' + infos[2] + '"])')) continue;
-    /* Une traduction identique à la source (FAQ, WhatsApp, e-mail, noms de
-       villes…) n'est pas un oubli : on ne signale que les vraies absences. */
-    if (Object.prototype.hasOwnProperty.call(dico, texte) && texteDeTraduction(dico[texte]) !== texte) {
-      restes.push(el.tagName + ' : « ' + texte + ' »');
-    }
-  }
-  if (restes.length) {
-    restes.slice(0, 5).forEach((r) => erreur('texte non traduit — ' + r));
-    if (restes.length > 5) erreur('… et ' + (restes.length - 5) + ' autre(s) texte(s) non traduit(s)');
-  } else {
-    ok('les ' + Object.keys(dico).length + ' clés du dictionnaire sont appliquées');
-  }
+  verifierTraductionAppliquee(page, langue, doc, dico, 'chargement direct');
 
   /* Retour au français : la page doit retrouver ses textes d'origine. */
   const avant = texteAffiche(doc);
@@ -209,14 +253,91 @@ async function tester(page, langue) {
   dom.window.close();
 }
 
+/* Reproduit le parcours de production : arrivée en français, puis sélection
+   successive des trois langues non françaises depuis les boutons réels. */
+async function testerBasculeParClic(page) {
+  const { dom, erreursJs } = await ouvrir(page, 'fr');
+  const doc = dom.window.document;
+  const racine = doc.documentElement;
+  const moteur = dom.window.YSI18N;
+  const nomPage = page.replace(/\.html$/, '');
+  console.log('\n' + page + ' · parcours réel par clic (départ fr)');
+
+  if (!moteur) {
+    erreur('moteur YSI18N absent dans le parcours par clic');
+    dom.window.close();
+    return;
+  }
+  if (moteur.langue() !== 'fr') erreur('le parcours par clic ne démarre pas en français');
+  const texteFrancais = texteAffiche(doc);
+
+  for (const langue of LANGUES) {
+    if (langue === 'fr') continue;
+    verifies += 1;
+    console.log('   ↪ clic vers ' + langue);
+
+    const bouton = doc.querySelector('.ys-i18n button[data-langue="' + langue + '"]');
+    if (!bouton) {
+      erreur('bouton de langue absent pour le clic vers ' + langue);
+      continue;
+    }
+    bouton.click();
+
+    try {
+      await attendreCondition(() => {
+        const dicoActif = moteur.dictionnaire(langue, nomPage);
+        const meta = doc.querySelector('meta[name="description"]');
+        return moteur.langue() === langue && Object.keys(dicoActif).length > 0 &&
+          (!dicoActif['@meta:description'] ||
+            (meta && meta.getAttribute('content') === dicoActif['@meta:description']));
+      }, 5000);
+    } catch (e) {
+      erreur('clic vers ' + langue + ' : dictionnaire non chargé (' + e.message + ')');
+      continue;
+    }
+
+    const infos = ATTENDU[langue];
+    if (racine.getAttribute('lang') !== infos[0]) erreur('clic ' + langue + ' : lang = ' + racine.getAttribute('lang') + ' (attendu ' + infos[0] + ')');
+    if (racine.getAttribute('dir') !== infos[1]) erreur('clic ' + langue + ' : dir = ' + racine.getAttribute('dir') + ' (attendu ' + infos[1] + ')');
+    if (racine.getAttribute('data-ys-base') !== infos[2]) erreur('clic ' + langue + ' : base = ' + racine.getAttribute('data-ys-base') + ' (attendu ' + infos[2] + ')');
+
+    const groupes = doc.querySelectorAll('.ys-i18n');
+    const actifs = doc.querySelectorAll('.ys-i18n button.on');
+    const bons = Array.prototype.filter.call(actifs, (b) => b.getAttribute('data-langue') === langue);
+    if (!groupes.length || bons.length !== groupes.length) erreur('clic ' + langue + ' : bouton actif mal marqué');
+    else ok('clic ' + langue + ' : bouton actif et dictionnaire chargé');
+
+    verifierTraductionAppliquee(page, langue, doc, moteur.dictionnaire(langue, nomPage), 'clic ' + langue);
+  }
+
+  const boutonFr = doc.querySelector('.ys-i18n button[data-langue="fr"]');
+  if (boutonFr) {
+    boutonFr.click();
+    if (moteur.langue() !== 'fr') erreur('le clic de retour ne rétablit pas le français');
+    if (racine.getAttribute('lang') !== 'fr-MA' && racine.getAttribute('lang') !== 'fr') {
+      erreur('retour par clic : lang = ' + racine.getAttribute('lang'));
+    }
+    const texteRestitue = texteAffiche(doc);
+    if (texteRestitue !== texteFrancais) erreur('retour par clic : les textes français ne sont pas entièrement restitués');
+    else ok('retour par clic au français complet');
+  } else {
+    erreur('bouton français absent pour le retour par clic');
+  }
+
+  const serieux = erreursJs.filter((e) => !/Could not load|Not implemented|stylesheet|css\b/i.test(e));
+  if (serieux.length) serieux.slice(0, 3).forEach((e) => erreur('JavaScript pendant les clics : ' + e));
+  dom.window.close();
+}
+
 (async () => {
   const position = process.argv.indexOf('--page');
   const pages = position !== -1 && process.argv[position + 1] ? [process.argv[position + 1]] : PAGES;
   for (const page of pages) {
     for (const langue of LANGUES) await tester(page, langue);
+    await testerBasculeParClic(page);
   }
   console.log('\n' + (erreurs === 0
-    ? '✅ Test multilingue : ' + verifies + ' combinaisons page × langue sans problème.'
-    : '❌ ' + erreurs + ' problème(s) sur ' + verifies + ' combinaisons.'));
+    ? '✅ Test multilingue : ' + verifies + ' vérifications page × langue et par clic sans problème.'
+    : '❌ ' + erreurs + ' problème(s) sur ' + verifies + ' vérifications.'));
   process.exit(erreurs === 0 ? 0 : 1);
 })();
