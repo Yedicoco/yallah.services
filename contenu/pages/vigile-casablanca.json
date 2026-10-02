@@ -1,0 +1,97 @@
+{
+  "fichier": "vigile-casablanca.html",
+  "ville": "Casablanca",
+  "serviceType": "Gardiennage et surveillance",
+  "title": "Vigile et gardien à Casablanca | Yallah Services",
+  "description": "Gardien ou vigile à Casablanca : nous recherchons une personne pour la présence et la surveillance d'une maison, d'une résidence ou d'un local selon vos horaires.",
+  "h1": "Vigile et gardien à <em>Casablanca</em>",
+  "h1Texte": "Vigile et gardien à Casablanca",
+  "crumb": "Vigile et gardien à Casablanca",
+  "kicker": "Yallah Services · Casablanca",
+  "ogDescription": "Recherche d'un gardien ou vigile à Casablanca : présence de jour ou de nuit, surveillance d'une villa, d'une résidence ou d'un local professionnel.",
+  "lead": "Un gardien, c'est d'abord une présence régulière et fiable. Avant de chercher, nous définissons avec vous ce qui est attendu : horaires, missions précises, accès, consignes en cas d'anomalie. Un poste de surveillance mal défini devient vite un poste où personne ne sait quoi faire.",
+  "ctaPrincipal": "Décrire le poste sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche un gardien ou vigile à Casablanca. Lieu, horaires et missions : ",
+  "noteHero": "Particuliers et entreprises · Présence de jour ou de nuit · Conditions expliquées avant la mise en relation.",
+  "image": "assets/img/hero-services-branded.png",
+  "imageAlt": "Vigile assurant la surveillance d'une résidence à Casablanca",
+  "legendeImage": "Le gardiennage repose sur la régularité : être là, tous les jours, aux mêmes heures.",
+  "sections": [
+    {
+      "titre": "Trois contextes, trois postes différents",
+      "intro": "Le gardiennage d'une villa isolée et la surveillance d'un local commercial n'ont ni la même charge, ni les mêmes horaires. Nous distinguons les situations.",
+      "cartes": [
+        { "t": "Maison ou villa", "p": "Présence sur place, ouverture et fermeture du portail, contrôle des entrées, réception des livraisons et des interventions techniques, alerte en cas d'anomalie. Souvent en lien direct avec la famille ou le personnel de maison." },
+        { "t": "Résidence ou immeuble", "p": "Surveillance des entrées, gestion des accès, stationnement, contrôle des allées et venues, information des résidents ou du syndic. Le poste demande du tact : on côtoie les mêmes personnes tous les jours." },
+        { "t": "Local professionnel, commerce ou chantier", "p": "Présence pendant ou hors les heures d'activité, contrôle des accès, surveillance du matériel. Ce sont les cas où le périmètre écrit est le plus important, notamment sur les chantiers." }
+      ]
+    },
+    {
+      "titre": "Ce qu'il faut définir avant la recherche",
+      "intro": "Ces cinq points évitent les malentendus qui font échouer un poste de gardiennage.",
+      "cartes": [
+        { "t": "Les horaires et le rythme", "p": "Présence de jour, de nuit, journée complète, gardiennage avec logement sur place. Précisez aussi les jours de repos : un poste sans repos clair ne tient pas dans le temps." },
+        { "t": "Les missions autorisées", "p": "Ouvrir et fermer, contrôler les accès, tenir un registre, appeler en cas de problème. Ce qui n'est pas autorisé doit être dit aussi : pas d'intervention physique, pas de responsabilité de sécurité des personnes." },
+        { "t": "Les moyens mis à disposition", "p": "Local ou guérite, électricité, sanitaires, téléphone, éclairage, éventuel accès à un véhicule. Un poste sans conditions de travail décentes ne se maintient pas, surtout de nuit." },
+        { "t": "La chaîne d'alerte", "p": "Qui appeler, à quelle heure, dans quel cas, avec quels numéros. Écrivez-le et affichez-le : c'est la première chose que nous demandons aux personnes placées." },
+        { "t": "Le cadre administratif", "p": "Que vous soyez un particulier, un syndic ou une entreprise, le statut de la personne et les modalités de la mission doivent être clairs. Nous mettons en relation, nous n'employons pas à votre place." }
+      ]
+    },
+    {
+      "titre": "Gardiennage et sécurité : ce que nous ne promettons pas",
+      "intro": "Il faut être clair sur le périmètre, pour éviter les attentes qui ne peuvent pas être tenues.",
+      "cartes": [
+        { "t": "Ce n'est pas une société de sécurité", "p": "Yallah Services recherche une personne pour la présence et la surveillance. Nous ne fournissons ni agents de sécurité privée certifiés, ni rondes organisées, ni intervention armée, ni télésurveillance." },
+        { "t": "Aucune garantie de résultat", "p": "Personne ne peut garantir l'absence de vol ou d'intrusion. Un gardien réduit l'exposition et apporte une présence ; il ne remplace ni les assurances, ni les moyens techniques de protection." },
+        { "t": "La question des documents", "p": "Selon le contexte (syndic, entreprise, chantier), votre organisation peut demander certaines pièces. Nous vous invitons à préciser dès le départ les documents exigés afin que nous les demandions aux candidates." }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Zones de Casablanca concernées",
+    "intro": "Nous recevons des demandes pour des villas, des résidences fermées et des locaux professionnels, dans les secteurs suivants.",
+    "liste": ["Anfa", "Aïn Diab", "Californie", "Racine", "Gauthier", "CIL et Longchamps", "Casa Finance City", "Bouskoura", "Dar Bouazza et Tamaris", "Oasis", "Palmier", "Bourgogne Ouest", "Hay Hassani"],
+    "note": "Secteurs prioritaires : la desserte dépend des profils disponibles et des conditions convenues. Écrivez-nous l'adresse approximative, les horaires et les missions : nous vous répondrons précisément."
+  },
+  "tarifs": {
+    "titre": "Comment se fixe le tarif d'un gardiennage",
+    "legende": "Ce qui fait varier le montant",
+    "intro": "Le gardiennage dépend fortement du rythme : une présence de nuit n'est pas une présence d'appoint. Nous cadrons ces éléments avec vous avant de chercher.",
+    "lignes": [
+      ["Horaires (jour, nuit, 24 h avec logement)", "Premier facteur de variation"],
+      ["Nombre de jours et jours de repos", "Temps plein ou présence partielle"],
+      ["Nature du lieu (villa, résidence, local, chantier)", "Charge et responsabilités"],
+      ["Conditions sur place (guérite, sanitaires, éclairage)", "Viabilité du poste"]
+    ],
+    "note": "Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil et séparément du salaire. Nous ne publions pas de montant que nous ne pouvons pas confirmer."
+  },
+  "titreEtapes": "Mettre en place un gardiennage",
+  "introEtapes": "Un poste de surveillance se construit sur des consignes écrites. Voici comment nous procédons.",
+  "etapes": [
+    { "t": "Vous décrivez le lieu", "p": "Type de lieu, accès, environnement, ce qui vous préoccupe concrètement : intrusions, livraisons, stationnement, matériel." },
+    { "t": "Nous définissons le poste", "p": "Horaires, missions autorisées, moyens sur place, chaîne d'alerte et jours de repos." },
+    { "t": "Nous recherchons et présentons", "p": "Des personnes dont l'expérience déclarée correspond à une présence de surveillance, de jour ou de nuit." },
+    { "t": "Vous rencontrez, puis nous suivons", "p": "Vous validez le profil et les consignes, et nous restons joignables pendant les premières semaines." }
+  ],
+  "faq": [
+    { "q": "Quelle est la différence entre un gardien et un vigile ?", "r": "Dans notre usage, « gardien » désigne une personne présente sur un lieu pour le surveiller et gérer les accès, souvent pour une maison ou une résidence. « Vigile » renvoie davantage à un poste de surveillance dans un contexte professionnel ou commercial. Dans les deux cas, nous recherchons une personne pour la présence et la surveillance, sans mission de sécurité des personnes." },
+    { "q": "Proposez-vous des gardiens de nuit ?", "r": "Oui, lorsque le poste est correctement organisé : lieu de présence, accès aux sanitaires, éclairage, consignes claires et jours de repos. Un poste de nuit sans conditions de travail décentes ne tient pas dans la durée, et nous préférons le dire avant plutôt que de placer quelqu'un qui partira au bout de deux semaines." },
+    { "q": "Combien coûte un gardien à Casablanca ?", "r": "Le montant dépend du rythme (jour, nuit, présence continue avec logement), du nombre de jours, de la nature du lieu et des conditions sur place. Nous en discutons avec vous avant la recherche, puis nous vérifions ce qui est réaliste selon les profils disponibles." },
+    { "q": "Le gardien est-il en mesure d'intervenir physiquement en cas d'intrusion ?", "r": "Non. Nous ne fournissons pas d'agents de sécurité formés à l'intervention. Le rôle que nous confions est celui de la présence, de la surveillance, du contrôle des accès et de l'alerte. Toute attente d'intervention doit être confiée à une société de sécurité spécialisée." },
+    { "q": "Peut-il assurer d'autres tâches en plus de la surveillance ?", "r": "Cela arrive fréquemment : petit entretien, réception de livraisons, ouverture et fermeture, arrosage. Précisez-le dès votre demande : ces tâches changent la charge de travail et parfois le profil recherché. Nous vous aiderons à voir si le cumul reste réaliste." },
+    { "q": "Que se passe-t-il en cas d'absence du gardien ?", "r": "Les formules Sérénité et Premium prévoient des remplacements pendant respectivement 2 et 6 mois, selon les conditions annoncées avant la mise en relation. Nous vous invitons également à prévoir un contact de secours et des consignes écrites en cas d'absence." }
+  ],
+  "titreLiens": "Autres services à Casablanca",
+  "introLiens": "Une surveillance ne couvre pas tout : voici les autres profils que nous recherchons pour les foyers et les entreprises de Casablanca.",
+  "liens": [
+    { "fichier": "femme-menage-casablanca.html", "titre": "Femme de ménage à Casablanca", "texte": "Entretien, repassage et grand ménage." },
+    { "fichier": "nounou-casablanca.html", "titre": "Nounou à Casablanca", "texte": "Garde d'enfants et accompagnement du quotidien." },
+    { "fichier": "cuisiniere-casablanca.html", "titre": "Cuisinière à Casablanca", "texte": "Repas du quotidien et aide en cuisine." },
+    { "fichier": "garde-malade-casablanca.html", "titre": "Garde-malade à Casablanca", "texte": "Accompagnement d'une personne âgée au quotidien." },
+    { "fichier": "personnel-entreprises.html", "titre": "Personnel pour entreprises", "texte": "Hôtellerie, restauration, chantiers, nettoyage et événements." },
+    { "fichier": "services-par-ville.html", "titre": "Tous nos services par ville", "texte": "Les zones où nous intervenons et les services disponibles." }
+  ],
+  "titreCta": "Besoin d'un gardien à Casablanca ?",
+  "texteCta": "Envoyez-nous le type de lieu, les horaires souhaités et les missions attendues. Nous vous dirons ce que nous pouvons proposer, et ce qui doit être confié à une société de sécurité.",
+  "ctaSecondaire": "Échanger avec Yallah Services"
+}

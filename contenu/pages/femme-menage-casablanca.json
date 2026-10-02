@@ -1,0 +1,220 @@
+{
+  "fichier": "femme-menage-casablanca.html",
+  "ville": "Casablanca",
+  "serviceType": "Ménage et entretien du domicile",
+  "title": "Femme de ménage à Casablanca | Yallah Services",
+  "description": "Ménage, repassage et grand ménage à Casablanca : nous recherchons le profil adapté à votre logement et à vos horaires, puis nous assurons le suivi.",
+  "h1": "Femme de ménage à <em>Casablanca</em>",
+  "h1Texte": "Femme de ménage à Casablanca",
+  "crumb": "Femme de ménage à Casablanca",
+  "kicker": "Yallah Services · Casablanca",
+  "ogDescription": "Recherche d'un profil de ménage à Casablanca : villa, appartement, repassage, grand ménage. Particuliers et entreprises.",
+  "lead": "Vous cherchez une personne sérieuse pour entretenir votre appartement, votre villa ou votre résidence à Casablanca ? Nous clarifions votre besoin, puis nous recherchons et vous présentons des profils correspondant à votre logement, à vos horaires et à vos priorités.",
+  "ctaPrincipal": "Décrire mon besoin sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche une femme de ménage à Casablanca. Voici mon besoin : ",
+  "noteHero": "Particuliers et entreprises · Zones listées ci-dessous · Conditions et frais expliqués avant la mise en relation.",
+  "image": "assets/img/pack-menage.jpg",
+  "imageAlt": "Service de ménage à domicile à Casablanca avec Yallah Services",
+  "legendeImage": "Notre base est à Hay Hassani : c'est de là que part chaque recherche de profil pour Casablanca.",
+  "sections": [
+    {
+      "titre": "Casablanca n'est pas une seule ville",
+      "intro": "Entre une villa d'Anfa, un appartement de Gauthier et une résidence de Bouskoura, le poste de ménage n'a rien à voir. C'est la première chose que nous clarifions avec vous.",
+      "cartes": [
+        {
+          "t": "Villas et résidences",
+          "p": "À Anfa, Aïn Diab ou Californie, un même poste couvre souvent plusieurs niveaux, un extérieur et du linge de maison. Le temps de travail change : nous vous aidons à définir si le besoin relève d'un temps plein, d'une présence logée ou de passages réguliers."
+        },
+        {
+          "t": "Appartements et standing",
+          "p": "À Racine, Gauthier, CIL ou au Triangle d'Or, la demande porte surtout sur l'entretien régulier et le repassage soigné, avec des horaires calés sur ceux de la famille. Nous en tenons compte avant de chercher un profil."
+        },
+        {
+          "t": "Grands ménages et cas particuliers",
+          "p": "Après un déménagement, avant une réception ou pour un grand nettoyage de printemps, votre besoin n'est pas un poste fixe mais une intervention ponctuelle. Nous vous orientons vers la formule correspondante, y compris la prestation à la journée."
+        }
+      ]
+    },
+    {
+      "titre": "Ce que couvre le poste — et ce qu'il ne couvre pas",
+      "intro": "Un bon profil se choisit sur un périmètre écrit, pas sur une impression. Nous vous aidons à le poser avant la mise en relation.",
+      "cartes": [
+        {
+          "t": "Inclus dans le poste de ménage",
+          "liste": [
+            "Entretien courant : sols, chambres, cuisine, salles de bains, sanitaires",
+            "Rangement et organisation des espaces de vie",
+            "Repassage et entretien du linge de maison",
+            "Selon l'accord : courses simples et aide légère au quotidien"
+          ]
+        },
+        {
+          "t": "Souvent hors périmètre",
+          "liste": [
+            "Travaux de rénovation, peinture, bricolage",
+            "Déménagement et port de charges lourdes",
+            "Jardinage et entretien de piscine",
+            "Soins médicaux : ce sont les métiers de garde-malade"
+          ]
+        },
+        {
+          "t": "Ce qui facilite la recherche",
+          "p": "Précisez la surface, le nombre de personnes au foyer, la présence ou non d'animaux, le matériel disponible et les jours souhaités. Ces cinq informations font gagner beaucoup de temps à tout le monde, y compris au profil que nous vous présentons."
+        }
+      ]
+    },
+    {
+      "titre": "Logée ou non logée : deux réalités différentes",
+      "intro": "C'est la question qui revient le plus souvent, et celle qui change le plus la nature du poste.",
+      "cartes": [
+        {
+          "t": "Formule logée",
+          "p": "La personne vit à votre domicile et dispose d'un jour de repos selon l'accord. Elle convient aux foyers qui ont une chambre disponible et qui souhaitent une présence continue. Nous vous aidons à préciser les horaires réels, les tâches attendues et les moments de repos, car c'est ce qui évite les malentendus."
+        },
+        {
+          "t": "Formule non logée",
+          "p": "La personne travaille sur une plage horaire définie et rentre chez elle. C'est la formule la plus demandée dans les quartiers bien desservis par les transports, et la plus simple à mettre en place quand il n'y a pas de chambre à disposition."
+        },
+        {
+          "t": "Ce que nous vous demandons",
+          "p": "Une fourchette d'horaires, un ou deux jours de repos par semaine, et l'accord du foyer sur les tâches prioritaires. Rien de plus : nous ne publions ni votre adresse, ni vos informations personnelles."
+        }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Secteurs de Casablanca que nous ciblons en priorité",
+    "intro": "Notre base est à Hay Hassani, à Casablanca. Les recherches de profil se concentrent sur les secteurs résidentiels suivants, où se trouvent la majorité de nos demandes.",
+    "liste": [
+      "Anfa",
+      "Aïn Diab et Corniche",
+      "Californie",
+      "Racine et Triangle d'Or",
+      "Gauthier et boulevard d'Anfa",
+      "CIL et Longchamps",
+      "Casa Finance City",
+      "Bouskoura",
+      "Dar Bouazza et Tamaris",
+      "Oasis",
+      "Palmier",
+      "Bourgogne Ouest",
+      "Maârif Extension"
+    ],
+    "note": "Ces secteurs sont des zones de travail prioritaires, pas une garantie de desserte quartier par quartier : chaque mission dépend du profil disponible, du logement et des conditions convenues. Dites-nous votre quartier, nous vous répondrons précisément."
+  },
+  "tarifs": {
+    "titre": "Repères tarifaires du ménage",
+    "legende": "Salaires mensuels versés à la personne (grille officielle Yallah Services)",
+    "intro": "Les montants ci-dessous sont les repères de notre grille, en dh par mois. Le montant final dépend des tâches confiées, de la surface, des horaires et de la formule choisie.",
+    "lignes": [
+      [
+        "Ménage simple dans une villa",
+        "4 500 DH"
+      ],
+      [
+        "Ménage simple dans une mini villa",
+        "4 000 DH"
+      ],
+      [
+        "Ménage dans un appartement",
+        "3 500 DH"
+      ]
+    ],
+    "note": "Prestation à la journée — Casablanca et Rabat uniquement : ménage normal, villa 400 DH / appartement 300 DH ; grand ménage, villa 700 DH / appartement 500 DH (8 h maximum). Paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire."
+  },
+  "titreEtapes": "Comment se passe une demande à Casablanca",
+  "introEtapes": "Quatre étapes, sans engagement, avec un échange écrit sur WhatsApp que vous gardez.",
+  "etapes": [
+    {
+      "t": "Vous décrivez le besoin",
+      "p": "Logement, surface, tâches prioritaires, horaires souhaités, formule logée ou non logée, date de démarrage."
+    },
+    {
+      "t": "Nous clarifions",
+      "p": "Nous vous posons les questions utiles, y compris celles auxquelles vous n'aviez pas pensé, et nous vous indiquons ce qui relève du poste de ménage."
+    },
+    {
+      "t": "Nous recherchons et présentons",
+      "p": "Nous cherchons parmi les profils disponibles ceux qui correspondent réellement à votre besoin, pas au besoin moyen."
+    },
+    {
+      "t": "Vous décidez et nous suivons",
+      "p": "Vous échangez, vous décidez librement. Ensuite, nous restons joignables : c'est aussi là que se joue la suite."
+    }
+  ],
+  "missions": [
+    {
+      "nom": "Fatima Zahra",
+      "lieu": "Bouskoura",
+      "texte": "Famille accompagnée à Bouskoura. Recherche du profil correspondant au besoin exprimé, présentation de la sélection puis suivi après le placement. Ville ou quartier confirmé par la cliente."
+    },
+    {
+      "nom": "Mme Wafae",
+      "lieu": "Tamaris, Dar Bouazza",
+      "texte": "Cliente accompagnée à Tamaris. Le besoin a été clarifié avant toute présentation de profil, puis nous avons assuré le suivi après la mise en relation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Combien coûte une femme de ménage à Casablanca ?",
+      "r": "Notre grille donne un repère : 3 500 DH par mois pour un appartement, 4 000 DH pour une mini villa et 4 500 DH pour une villa, pour un ménage simple. Le montant final dépend des tâches, de la surface, des horaires et du fait que la formule soit logée ou non. Les frais de mise en relation (500 ou 1 000 DH selon la formule) sont distincts du salaire et réglés après validation du profil."
+    },
+    {
+      "q": "Proposez-vous le ménage à la journée ?",
+      "r": "Oui, à Casablanca et à Rabat uniquement : ménage normal à 400 DH pour une villa et 300 DH pour un appartement ; grand ménage à 700 DH pour une villa et 500 DH pour un appartement, dans la limite de 8 heures. Le paiement se fait après le service, le matériel est fourni par le client et la réservation se fait 1 jour à l'avance."
+    },
+    {
+      "q": "Puis-je demander une personne logée ?",
+      "r": "Oui. La formule logée suppose une chambre disponible et un jour de repos défini avec vous. Nous précisons les horaires réels et les tâches attendues avant la mise en relation, pour que les deux parties sachent exactement à quoi s'en tenir."
+    },
+    {
+      "q": "Intervenez-vous dans mon quartier ?",
+      "r": "Nous concentrons nos recherches sur les secteurs résidentiels de Casablanca : Anfa, Aïn Diab, Californie, Racine, Gauthier, CIL, CFC, Bouskoura, Dar Bouazza, et d'autres secteurs selon la demande. Une ville ou un secteur listé ne garantit pas une desserte quartier par quartier pour une mission donnée : indiquez-nous votre adresse approximative et nous vous répondrons précisément."
+    },
+    {
+      "q": "Que vérifiez-vous avant de nous présenter un profil ?",
+      "r": "Nous ne communiquons pas de garantie sur des vérifications que nous ne pouvons pas prouver. Ce que nous faisons : nous recueillons les références des candidates par notre fiche de candidature, nous clarifions avec elles l'expérience déclarée et les attentes, et nous vous transmettons les informations utiles pour que vous posiez vos propres questions lors de l'entretien."
+    },
+    {
+      "q": "Que se passe-t-il si la personne ne convient pas ?",
+      "r": "Les formules Sérénité et Premium prévoient des remplacements pendant respectivement 2 et 6 mois ; les conditions exactes vous sont expliquées avant la mise en relation. Nous restons joignables après le placement et suivons la situation avec vous."
+    }
+  ],
+  "titreLiens": "Autres services à Casablanca",
+  "introLiens": "Le ménage n'est pas le seul besoin d'un foyer. Voici les autres métiers que nous recherchons à Casablanca, et la vue d'ensemble par ville.",
+  "liens": [
+    {
+      "fichier": "nounou-casablanca.html",
+      "titre": "Nounou à Casablanca",
+      "texte": "Garde d'enfants, horaires, sorties d'école et présence logée ou non."
+    },
+    {
+      "fichier": "cuisiniere-casablanca.html",
+      "titre": "Cuisinière à Casablanca",
+      "texte": "Cuisine du quotidien, aide en cuisine et repas de famille."
+    },
+    {
+      "fichier": "garde-malade-casablanca.html",
+      "titre": "Garde-malade à Casablanca",
+      "texte": "Accompagnement d'une personne âgée ou dépendante au quotidien."
+    },
+    {
+      "fichier": "chauffeur-casablanca.html",
+      "titre": "Chauffeur à Casablanca",
+      "texte": "Trajets familiaux, école, courses et déplacements réguliers."
+    },
+    {
+      "fichier": "vigile-casablanca.html",
+      "titre": "Vigile et gardien à Casablanca",
+      "texte": "Présence et surveillance pour une maison, une résidence ou un local."
+    },
+    {
+      "fichier": "services-par-ville.html",
+      "titre": "Tous nos services par ville",
+      "texte": "Casablanca, Bouskoura, Rabat, Marrakech et les autres zones desservies."
+    }
+  ],
+  "titreCta": "Un besoin de ménage à Casablanca ?",
+  "texteCta": "Écrivez-nous votre quartier, votre type de logement et vos horaires : nous vous répondons sur WhatsApp et vous indiquons ce que nous pouvons faire, et ce que nous ne pouvons pas faire.",
+  "ctaSecondaire": "Échanger avec Yallah Services"
+}

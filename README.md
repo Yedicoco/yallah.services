@@ -48,7 +48,20 @@ Le site répond à **trois publics**, avec trois parcours distincts :
 ├── generer-images-logo.py            # Produit les 12 déclinaisons du logo (Pillow)
 ├── outils/verifier-site.js           # Vérifications avant mise en ligne (liens, ids, images…)
 ├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage)
-├── plan-seo-local.md                 # Plan SEO local : matrice service × ville, GBP, citations, mesure
+├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
+├── outils/generer-sitemap.js         # Sitemap automatique (lastmod = git) + synchronisation de robots.txt
+├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
+├── services-par-ville.html           # Hub : tous les services, ville par ville
+├── personnel-entreprises.html        # Hub B2B : hôtels, riads, chantiers, nettoyage, événements
+├── <service>-<ville>.html            # Pages locales générées (6 pages Casablanca en ligne)
+├── contenu/                          # Fiches de référence et contenu par page
+│   ├── fiche-entreprise.md           # ★ Référence obligatoire de tout contenu publié
+│   ├── audit-promesses-site.md       # Conformité des affirmations du site
+│   ├── fiche-locale-casablanca.md    # Questions terrain par ville (30 min par ville)
+│   ├── valider-avis.md · recueillir-avis.md
+│   ├── sources-editoriales.md        # Traçabilité de chaque fait publié
+│   └── pages/*.json                  # Contenu rédigé, page par page
+├── plan-seo-local.md                 # Plan SEO local : état, matrice, GBP, citations, mesure
 ├── apercus/generer-apercus.js        # Captures d'écran (Playwright) + contrôle de débordement
 ├── assets/
 │   ├── css/style.css                 # Thème or/noir + grille + navy + vert WhatsApp
@@ -250,7 +263,11 @@ Grand ménage : villa 700 DH · appartement 500 DH
 
 ```bash
 node outils/verifier-site.js        # liens, ressources, identifiants JS, formulaires, CSS, coordonnées
-node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie entre pages, titles, balisage, maillage
+node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie, titles, balisage, maillage
+node outils/generer-pages-villes.js --verifier   # valide les fiches de contenu sans rien écrire
+node outils/generer-pages-villes.js              # régénère les pages service × zone
+node outils/generer-sitemap.js                   # régénère sitemap.xml (lastmod = git)
+node build-site.js                               # site statique complet + sitemap
 node --check assets/js/*.js server.js build-site.js
 ```
 
@@ -293,8 +310,10 @@ de page : c'est le prochain chantier du plan.
 
 Le dépôt contient les premières briques du référencement local :
 
-- **Pages service × ville** : `femme-menage-casablanca.html`, `nounou-casablanca.html`
-  (balisage `Service`, fil d'Ariane structuré, FAQ, CTA WhatsApp).
+- **Pages service × zone** : 6 pages Casablanca en ligne (ménage, nounou, cuisinière, garde-malade,
+  chauffeur, gardiennage), générées depuis `contenu/pages/*.json` — 869 à 1 514 mots, balisage
+  `Service` + fil d'Ariane + `FAQPage`, 4 à 5 liens internes chacune.
+- **Hubs** : `services-par-ville.html` (13 zones, 6 métiers) et `personnel-entreprises.html` (B2B).
 - **Plan complet** : `plan-seo-local.md` — matrice services × villes par phases, gabarit de page,
   ligne B2B, Google Business Profile en mode « zone de service », citations locales et NAP
   canonique, procédure de production du contenu original, pilotage Search Console.

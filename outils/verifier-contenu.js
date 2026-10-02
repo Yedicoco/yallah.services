@@ -56,6 +56,8 @@ const PAGES_IGNOREES = new Set([
 ]);
 
 /* ── Référentiel services / villes ── */
+const CONFIG = JSON.parse(fs.readFileSync(path.join(RACINE, 'site.config.json'), 'utf8'));
+
 const SERVICES = [
   { slug: 'femme-menage', libelle: 'Femme de ménage', alias: ['femme-menage', 'femme-de-menage', 'menage', 'aide-menagere'] },
   { slug: 'nounou', libelle: 'Nounou', alias: ['nounou', 'nourrice', 'garde-enfants'] },
@@ -65,10 +67,10 @@ const SERVICES = [
   { slug: 'garde-malade', libelle: 'Garde-malade', alias: ['garde-malade', 'garde-malade-a-domicile'] }
 ];
 
-const VILLES = [
-  'casablanca', 'rabat', 'marrakech', 'fes', 'tanger', 'agadir',
-  'meknes', 'oujda', 'kenitra', 'sale', 'tetouan'
-];
+/* Zones servies : lues dans site.config.json (source unique de vérité) */
+const VILLES = CONFIG.villes
+  .filter((v) => v.statut !== 'candidate')
+  .map((v) => v.slug);
 
 /* ── Compteurs ── */
 let erreurs = 0;
@@ -365,6 +367,21 @@ pages.forEach((p) => {
   });
 });
 if (!brouillons) ok('Aucun contenu inachevé détecté.');
+
+/* ═══ Rappels de conformité (informatifs, hors décompte) ═══ */
+section('Rappels de conformité (ne bloquent pas la publication)');
+const suivi = path.join(RACINE, 'contenu', 'valider-avis.md');
+if (fs.existsSync(suivi)) {
+  const restant = (lire('contenu/valider-avis.md').match(/⬜/g) || []).length;
+  if (restant) console.log('  ℹ️  Avis clients : ' + restant + ' case(s) à cocher dans contenu/valider-avis.md' +
+    ' (consentement écrit à archiver).');
+  else ok('Avis clients : consentements archivés.');
+}
+if (CONFIG.url && /vercel\.app$/.test(new URL(CONFIG.url).hostname)) {
+  console.log('  ℹ️  Domaine : le site tourne encore sur ' + new URL(CONFIG.url).hostname +
+    ' — migrer vers le domaine propre (plan SEO local, lot 1).');
+}
+console.log('  ℹ️  Tarifs et remplacements publiés : issus de la grille officielle (flyer). À revalider avant toute campagne.');
 
 /* ═══ Synthèse ═══ */
 console.log('\n' + '─'.repeat(66));

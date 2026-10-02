@@ -1,0 +1,206 @@
+{
+  "fichier": "chauffeur-casablanca.html",
+  "ville": "Casablanca",
+  "serviceType": "Chauffeur à domicile",
+  "title": "Chauffeur à Casablanca | Yallah Services",
+  "description": "Chauffeur à Casablanca pour une famille ou une entreprise : nous recherchons un profil selon vos trajets, vos horaires et le véhicule utilisé.",
+  "h1": "Chauffeur à <em>Casablanca</em>",
+  "h1Texte": "Chauffeur à Casablanca",
+  "crumb": "Chauffeur à Casablanca",
+  "kicker": "Yallah Services · Casablanca",
+  "ogDescription": "Recherche d'un chauffeur à Casablanca : trajets familiaux, école, courses, déplacements professionnels. Particuliers et entreprises.",
+  "lead": "Un chauffeur se choisit sur trois éléments : les trajets réels, les horaires réels et le véhicule utilisé. Nous cadrons ces trois points avec vous avant de commencer la recherche, parce que c'est ce qui distingue un bon profil d'un profil inadapté.",
+  "ctaPrincipal": "Décrire mes trajets sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche un chauffeur à Casablanca. Trajets et horaires : ",
+  "noteHero": "Particuliers et entreprises · Temps plein ou besoins ponctuels · Conditions expliquées avant la mise en relation.",
+  "image": "assets/img/hero-services-branded.png",
+  "imageAlt": "Chauffeur au service d'une famille à Casablanca avec Yallah Services",
+  "legendeImage": "Casablanca se pratique beaucoup en voiture : la ponctualité est le premier critère.",
+  "sections": [
+    {
+      "titre": "Les besoins que nous rencontrons le plus souvent",
+      "intro": "Derrière « chauffeur », il y a des journées très différentes. Voici les cas que nous traitons habituellement à Casablanca.",
+      "cartes": [
+        {
+          "t": "Chauffeur familial",
+          "p": "Conduire les enfants à l'école, accompagner les activités, gérer les courses et les rendez-vous. Le poste demande de la ponctualité, de la patience avec les enfants et une bonne connaissance des embouteillages selon les heures."
+        },
+        {
+          "t": "Chauffeur d'un adulte",
+          "p": "Accompagner une personne âgée ou un adulte qui ne conduit plus vers ses rendez-vous, avec parfois une présence pendant l'attente. C'est un poste qui demande de la disponibilité et de la discrétion."
+        },
+        {
+          "t": "Chauffeur d'entreprise ou de direction",
+          "p": "Déplacements professionnels, récupération de clients ou de partenaires, mise à disposition pendant des réunions. Les exigences portent sur la présentation, la ponctualité et la confidentialité."
+        }
+      ]
+    },
+    {
+      "titre": "Ce que nous devons savoir avant de chercher",
+      "intro": "Quatre informations conditionnent la recherche. Sans elles, on présente au hasard.",
+      "cartes": [
+        {
+          "t": "Le permis et l'expérience",
+          "p": "Le type de permis exigé et l'expérience de conduite attendue doivent être clairs dès le départ. Nous transmettons ces critères aux candidates et vous indiquons ce qu'elles déclarent ; vous pourrez vérifier les documents originaux lors de la rencontre."
+        },
+        {
+          "t": "Le véhicule",
+          "p": "Précisez s'il s'agit de votre véhicule personnel, d'un véhicule de société, d'une boîte manuelle ou automatique. Conduire une berline automatique en ville n'a rien à voir avec un utilitaire."
+        },
+        {
+          "t": "Les horaires et l'amplitude",
+          "p": "Heures de début et de fin, coupure éventuelle en journée, jours travaillés, déplacements hors Casablanca. Un chauffeur qui termine à 23 h n'a pas le même profil qu'un chauffeur de matinée."
+        },
+        {
+          "t": "Les attentes annexes",
+          "p": "Certaines familles attendent aussi de l'aide pour les courses ou pour porter des affaires. Dites-le : c'est une charge de travail supplémentaire, et il vaut mieux qu'elle soit annoncée que découverte."
+        }
+      ]
+    },
+    {
+      "t": "Ce qui se discute à l'entretien",
+      "intro": "Nous vous conseillons d'aborder ces points directement avec la personne, lors de la rencontre.",
+      "cartes": [
+        {
+          "t": "La vérification des documents",
+          "p": "C'est vous qui vérifiez le permis, l'ancienneté de conduite et, si vous le souhaitez, les références des précédents employeurs. Nous ne promettons pas de contrôle que nous ne pouvons pas prouver ; en revanche nous faisons remonter les informations déclarées."
+        },
+        {
+          "t": "Le code de conduite",
+          "p": "Vitesse, téléphone au volant, confidentialité des conversations, usage du véhicule, consommation de carburant et entretien courant. Mettre ces règles par écrit dès le départ évite les tensions."
+        },
+        {
+          "t": "La période d'essai",
+          "p": "Prévoyez quelques jours sur les trajets habituels, quand vous êtes présent. C'est la meilleure façon de vérifier le style de conduite et la ponctualité avant de confirmer le poste."
+        }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Zones de Casablanca concernées",
+    "intro": "Les demandes de chauffeur concernent surtout des foyers situés en périphérie des zones d'activité, où les trajets sont longs.",
+    "liste": [
+      "Anfa",
+      "Aïn Diab",
+      "Californie",
+      "Racine et Triangle d'Or",
+      "Gauthier",
+      "Casa Finance City",
+      "CIL et Longchamps",
+      "Bouskoura",
+      "Dar Bouazza",
+      "Oasis",
+      "Palmier",
+      "Hay Hassani",
+      "Bourgogne Ouest"
+    ],
+    "note": "Secteurs prioritaires, sans garantie de desserte quartier par quartier pour une mission donnée. Indiquez-nous vos trajets types et vos horaires : nous vous répondrons précisément."
+  },
+  "tarifs": {
+    "titre": "Comment se fixe le tarif d'un chauffeur",
+    "legende": "Ce qui fait varier le montant",
+    "intro": "Le poste de chauffeur ne figure pas dans la grille des métiers de maison : le montant se fixe selon quatre éléments. Nous en parlons franchement avant de chercher, pour éviter les malentendus.",
+    "lignes": [
+      [
+        "Amplitude horaire quotidienne",
+        "Détermine le volume de travail"
+      ],
+      [
+        "Nombre de jours par semaine",
+        "Temps plein ou présence partielle"
+      ],
+      [
+        "Trajets hors Casablanca",
+        "Déplacements et disponibilité"
+      ],
+      [
+        "Profil recherché (expérience, langues, présentation)",
+        "Selon le type de poste"
+      ]
+    ],
+    "note": "Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil et séparément du salaire. Nous ne publions pas de montant de salaire que nous ne pouvons pas confirmer."
+  },
+  "titreEtapes": "De la demande à la mise en relation",
+  "introEtapes": "Le poste de chauffeur suppose un échange précis sur les trajets : nous prenons le temps de le faire.",
+  "etapes": [
+    {
+      "t": "Vous décrivez les trajets",
+      "p": "Destinations habituelles, fréquence, heures de pointe concernées, déplacements hors Casablanca."
+    },
+    {
+      "t": "Nous cadrons le profil",
+      "p": "Permis exigé, expérience attendue, présentation, discrétion, éventuelles tâches annexes."
+    },
+    {
+      "t": "Nous recherchons et présentons",
+      "p": "Nous vous présentons les personnes dont l'expérience déclarée correspond aux trajets et aux horaires décrits."
+    },
+    {
+      "t": "Vous rencontrez et testez",
+      "p": "Quelques trajets en votre présence, puis vous décidez. Nous restons joignables après la mise en relation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Combien coûte un chauffeur à Casablanca ?",
+      "r": "Le salaire ne se fixe pas sur une grille unique : il dépend de l'amplitude horaire, du nombre de jours, des trajets (notamment hors Casablanca) et du profil recherché. Nous en parlons avec vous avant de commencer la recherche, puis nous vérifions ce qui est réaliste avec les profils disponibles."
+    },
+    {
+      "q": "Vérifiez-vous le permis et l'expérience du chauffeur ?",
+      "r": "Nous ne promettons aucune vérification que nous ne pouvons pas prouver. Ce que nous faisons : recueillir les informations déclarées par la candidate (permis, années de conduite, expérience) et vous les transmettre. Nous vous recommandons de contrôler les documents originaux lors de la rencontre, avant toute décision."
+    },
+    {
+      "q": "Le chauffeur peut-il utiliser ma voiture ?",
+      "r": "Oui, la plupart de nos demandes concernent le véhicule de la famille ou de l'entreprise. Précisez le type de véhicule et la boîte de vitesses : c'est un critère que nous transmettons pour éviter les mauvaises surprises lors du premier trajet."
+    },
+    {
+      "q": "Proposez-vous des chauffeurs pour un besoin ponctuel ?",
+      "r": "Oui, selon les profils disponibles : mise à disposition pour une période définie, un événement familial ou un remplacement temporaire. Indiquez-nous les dates et les trajets prévus, nous vous dirons ce qui est possible au moment de votre demande."
+    },
+    {
+      "q": "Intervient-il aussi pour porter des courses ou des affaires ?",
+      "r": "Cela doit être précisé dès le départ : ce n'est pas automatique, et cela change la charge de travail. Si vous attendez une aide au-delà de la conduite (courses, manutention légère), indiquez-le dans votre message."
+    },
+    {
+      "q": "Et si le chauffeur ne convient pas ?",
+      "r": "Les formules Sérénité et Premium prévoient des remplacements pendant respectivement 2 et 6 mois, selon les conditions expliquées avant la mise en relation. Nous suivons la situation avec vous et reprenons la recherche si nécessaire."
+    }
+  ],
+  "titreLiens": "Autres services à Casablanca",
+  "introLiens": "Vous cherchez peut-être aussi un autre profil pour votre foyer ou votre entreprise : voici ce que nous recherchons à Casablanca.",
+  "liens": [
+    {
+      "fichier": "femme-menage-casablanca.html",
+      "titre": "Femme de ménage à Casablanca",
+      "texte": "Entretien, repassage et grand ménage."
+    },
+    {
+      "fichier": "nounou-casablanca.html",
+      "titre": "Nounou à Casablanca",
+      "texte": "Garde d'enfants et accompagnement du quotidien."
+    },
+    {
+      "fichier": "cuisiniere-casablanca.html",
+      "titre": "Cuisinière à Casablanca",
+      "texte": "Repas du quotidien et aide en cuisine."
+    },
+    {
+      "fichier": "vigile-casablanca.html",
+      "titre": "Vigile et gardien à Casablanca",
+      "texte": "Présence et surveillance d'un domicile ou d'un local."
+    },
+    {
+      "fichier": "personnel-entreprises.html",
+      "titre": "Personnel pour entreprises",
+      "texte": "Hôtellerie, restauration, chantiers, nettoyage et événements."
+    },
+    {
+      "fichier": "services-par-ville.html",
+      "titre": "Tous nos services par ville",
+      "texte": "Les zones où nous intervenons et les services disponibles."
+    }
+  ],
+  "titreCta": "Besoin d'un chauffeur à Casablanca ?",
+  "texteCta": "Envoyez-nous vos trajets types, vos horaires et le type de véhicule. Nous vous répondrons sur WhatsApp avec ce que nous pouvons proposer, et sous quelles conditions.",
+  "ctaSecondaire": "Échanger avec Yallah Services"
+}

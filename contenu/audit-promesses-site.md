@@ -47,6 +47,16 @@ corrigé, ce qui reste à confirmer par la direction, et ce qui manque au site.
 | 7 | Aucun **suivi de conversion WhatsApp** | Impossible de mesurer ce que rapportent les pages (§9 du plan). |
 | 8 | **Dar Bouazza et Bouznika** n'apparaissaient dans aucune liste | Deux clientes réelles y sont établies : zones servies mais non affichées. | Ajoutées à la couverture, aux listes du site et au plan |
 
+## 3 bis. Décisions prises le 2 octobre 2026 (pour ne pas bloquer la production)
+
+| Sujet | Décision | Raison |
+|---|---|---|
+| **Tarifs** | Conservés tels quels (grille du flyer officiel) | C'est la seule source chiffrée validée par la direction. Ils sont publiés comme « repères », avec la mention que le montant dépend des tâches et des horaires. À revalider avant toute campagne. |
+| **Avis clients** | Publiés comme **« missions réalisées »** : nom + ville réels, texte = synthèse de mission rédigée par l'agence, **sans guillemets et sans étoiles** | Les 4 clientes sont réelles (information de la direction). Aucune note ni citation ne peut être affichée sans leurs mots. Suivi des consentements : `contenu/valider-avis.md` (rappel affiché à chaque contrôle). |
+| **Signature** | « Yallah Services — Votre besoin en personnel, notre priorité. » ajoutée sous le hero ; la mention du flyer reste inchangée | La fiche entreprise donne cette signature comme référence. |
+| **Pages villes** | Produites avec les faits confirmés (grille, secteurs de ciblage, formules), **sans** délais ni chiffres de terrain inventés | La fiche interdit d'affirmer ce qui n'est pas confirmé. Les questions restées ouvertes sont listées dans `contenu/fiche-locale-casablanca.md`. |
+| **Dar Bouazza et Bouznika** | Ajoutés à la couverture | Deux clientes réelles y sont établies : c'est une preuve de service. |
+
 ## 4. Ce qui est conforme et ne change pas
 
 - Grille des 14 services et prestations à la journée (source : flyer officiel).

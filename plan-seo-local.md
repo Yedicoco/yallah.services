@@ -8,6 +8,26 @@ villes confirmées, ton, et la liste de ce qu'il est interdit d'inventer.
 **Règle de survie :** aucune page publiée sans contenu réellement original et vérifiable.
 
 ---
+## Où on en est — 2 octobre 2026
+
+| Élément | Statut |
+|---|---|
+| Lot 0 — déblocage contenu | ✅ **Fait pour Casablanca.** 6 pages rédigées (869 à 1 514 mots), contrôle `verifier-contenu.js` **vert : 0 erreur, 0 avertissement**, aucune recopie au-dessus du seuil |
+| Générateur de pages | ✅ `outils/generer-pages-villes.js` + contenu par page dans `contenu/pages/*.json` — refuse de générer si une fiche est incomplète |
+| Pages en ligne | ✅ 6 pages Casablanca + hub `services-par-ville.html` + hub B2B `personnel-entreprises.html` |
+| Sitemap | ✅ 10 pages, généré automatiquement (`outils/generer-sitemap.js`) |
+| Maillage interne | ✅ 4 à 5 liens locaux par page, hubs liés depuis l'accueil et les pieds de page |
+| Conformité des affirmations | ✅ origine ethnique retirée, promesses non confirmées retirées, villes corrigées, faux avis supprimés (voir `contenu/audit-promesses-site.md`) |
+| Lot 1 — domaine propre | ⬜ à faire (achat + bascule, une ligne à changer dans `site.config.json`) |
+| Lot 2 — Google Business Profile | ⬜ à faire (profil « zone de service », 20 photos, 15 avis) |
+| Lot 3 — citations | ⬜ à faire (NAP figé, 10 annuaires) |
+| Lots 4-6 — autres villes et B2B détaillé | ⏳ fiches locales par ville à remplir (30 min par ville) — le générateur est prêt |
+
+**Ce qui bloque la suite :** uniquement la **matière locale par ville** (annexe B) et les **visuels**
+(7 images référencées par l'accueil mais absentes du dépôt). Tout le reste est outillé.
+
+---
+
 
 ## 0. Trois corrections, avant tout le reste
 
@@ -168,7 +188,7 @@ commercial, pas une liste de quartiers desservis**. Donc :
 | **1 — Socle technique** | Domaine + 301 + `site.config.json` ; hub `services-par-ville.html` ; sitemap auto ✅ ; maillage accueil ↔ hub ↔ pages | 3–4 j | S1–S3 | 1 page test complète, 100 % des URL sur le domaine, hub en ligne |
 | **2 — Google Business Profile** | Profil « zone de service », catégories, 6 services, 20+ photos réelles, Q&R, posts, avis | 2–3 j | S2–S4 | Profil **vérifié**, 15 avis réels, 0 adresse inventée |
 | **3 — Citations & NAP** | NAP figé, 10–12 citations marocaines, reprise des profils sociaux | 2–3 j | S3–S5 | 10 citations en ligne, NAP identique à l'octet près |
-| **4 — B2C phase 1** | 30 pages : Casablanca + Bouskoura + Dar Bouazza + Rabat + Marrakech × 6 services | 35–40 j | S4–S14 | 30 pages vertes, publiées en 5 vagues, indexées |
+| **4 — B2C phase 1** | 30 pages : Casablanca ✅ (6 pages en ligne) + Bouskoura + Dar Bouazza + Rabat + Marrakech × 6 services | 30–35 j | S4–S14 | 30 pages vertes, publiées en 5 vagues, indexées |
 | **5 — B2B** | Hub `personnel-entreprises.html` + 5 secteurs + 15 déclinaisons ville (Marrakech, Casablanca, Agadir, Tanger, Rabat) | 25–30 j | S10–S20 | 21 pages, ≥ 5 demandes B2B entrantes tracées |
 | **6 — B2C phases 2 et 3** | 36 pages : Tanger, Agadir, Mohammedia, Kénitra, Fès, Témara, Salé | 45–50 j | S16–S34 | idem + bilan de position par page à J+30 |
 | **7 — Mesure continue** | Search Console, suivi par page, seuils de décision | 0,5 j/semaine | dès S1 | Tableau de bord à jour chaque lundi |
