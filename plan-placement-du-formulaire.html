@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de placement — fiche de candidature et mention d'orientation | Yallah Services</title>
+<style>
+  :root{
+    --marine:#0d2136;--marine2:#14304c;--or:#c9a227;--orclair:#e9d493;--ivoire:#fdf5dd;
+    --texte:#cdd7e2;--vert:#08733d;--ligne:rgba(201,162,39,.38);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0b1c2e;color:var(--ivoire);font-family:'Segoe UI',Arial,sans-serif;line-height:1.6;padding:26px 16px 70px}
+  .page{max-width:1080px;margin:0 auto}
+  header.entete{border-bottom:1px solid var(--ligne);padding-bottom:18px;margin-bottom:26px}
+  .marque{font-family:'Arial Narrow',Arial,sans-serif;letter-spacing:2px;font-size:26px;font-weight:800;
+    background:linear-gradient(115deg,#a8842a,#e9d493 48%,#c9a227 76%,#a8842a);-webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-size:clamp(22px,3.4vw,34px);margin:10px 0 6px;text-transform:uppercase;letter-spacing:-.02em}
+  h2{font-size:20px;margin:34px 0 12px;color:#fff;border-left:4px solid var(--or);padding-left:12px;text-transform:uppercase;letter-spacing:.5px}
+  h3{font-size:15px;margin:18px 0 8px;color:var(--orclair)}
+  p,li{color:var(--texte);font-size:14px}
+  ul{padding-left:20px}li{margin-bottom:5px}
+  .sous{color:var(--texte);font-size:14px}
+  code{background:#08182a;border:1px solid var(--ligne);border-radius:5px;padding:1px 6px;font-size:12.5px;color:var(--orclair)}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{border:1px solid var(--ligne);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:rgba(20,48,76,.9);color:var(--orclair);font-size:12.5px;text-transform:uppercase;letter-spacing:.5px}
+  td{color:var(--texte)}
+  tr:nth-child(even) td{background:rgba(20,48,76,.35)}
+  .carte{background:var(--marine2);border:1px solid var(--ligne);border-radius:12px;padding:16px 18px;margin:12px 0}
+  .deux{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .trois{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .mention{background:#1b211f;border:1px solid var(--ligne);border-left:5px solid var(--or);border-radius:8px;padding:12px 14px;color:var(--orclair);font-size:13.5px}
+  .mention.stricte{border-left-color:#c1121f;color:#f6dcdd}
+  .vert{background:linear-gradient(135deg,#08733d,#004c2b);border:1px solid var(--or);border-radius:8px;padding:10px 12px;color:#fff;font-size:13.5px}
+  .puces-mini{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .puce{border:1px solid var(--ligne);border-radius:20px;padding:3px 10px;font-size:11.5px;color:var(--ivoire)}
+  /* Maquette navigateur */
+  .maquette{border:1px solid var(--ligne);border-radius:12px;overflow:hidden;background:var(--marine)}
+  .maquette-barre{display:flex;gap:6px;align-items:center;background:#08182a;border-bottom:1px solid var(--ligne);padding:8px 12px}
+  .rond{width:10px;height:10px;border-radius:50%;background:#3b5673}
+  .url{font-size:11.5px;color:var(--texte);background:#0d2136;border:1px solid var(--ligne);border-radius:20px;padding:2px 10px;margin-left:8px;flex:1}
+  .zone{padding:12px;display:grid;gap:8px}
+  .bloc{border:1px dashed var(--ligne);border-radius:8px;padding:9px 11px;font-size:12.5px;color:var(--texte);background:rgba(8,24,42,.5)}
+  .bloc b{color:var(--ivoire)}
+  .bloc.or{border-color:var(--or);color:var(--orclair)}
+  .bloc.vert{background:linear-gradient(135deg,#08733d,#004c2b);border-style:solid;color:#fff}
+  .bloc.alerte{background:#1b211f;border-left:4px solid var(--or);color:var(--orclair)}
+  .numero{display:inline-flex;width:20px;height:20px;border-radius:50%;background:var(--or);color:var(--marine);
+    align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-right:6px}
+  .statut-ok{color:#7fd7a1;font-weight:700}
+  .pied{margin-top:36px;border-top:1px solid var(--ligne);padding-top:14px;font-size:12.5px;color:var(--texte)}
+  @media print{body{background:#fff;color:#000}.maquette,{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="entete">
+    <div class="marque">YALLAH SERVICES</div>
+    <h1>Plan de placement — fiche de candidature &amp; mention d'orientation</h1>
+    <p class="sous">Où se trouve quoi dans le site : le site des foyers reste inchangé, on ajoute un parcours candidat complet
+    (« une pierre, deux coups ») avec le WhatsApp <strong>+212 710 359 446</strong> et l'e-mail <strong>servicesyallah@gmail.com</strong>.</p>
+  </header>
+
+  <h2>1. Plan du site</h2>
+  <table>
+    <thead><tr><th>Page</th><th>Public</th><th>Rôle</th><th>WhatsApp</th></tr></thead>
+    <tbody>
+      <tr><td><code>index.html</code></td><td>🏠 Foyers (clients)</td><td>Accueil inchangé : services, packs, garanties, réservation. La mention oriente les candidats.</td><td>+212 691 733 585</td></tr>
+      <tr><td><code>candidature.html</code></td><td>🧑‍🍳 Candidats (personnel)</td><td>Fiche de candidature en 5 blocs, français / arabe.</td><td>+212 710 359 446</td></tr>
+      <tr><td><code>candidature-confirmation.html</code></td><td>🧑‍🍳 Candidats</td><td>Numéro de dossier + 2 actions obligatoires (WhatsApp + e-mail des références).</td><td>+212 710 359 446</td></tr>
+      <tr><td><code>/admin</code> (serveur)</td><td>🔐 Agence</td><td>Espace recruteur : statistiques, recherche, export CSV, suppression. Hors navigation, <code>noindex</code>.</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. Les 5 emplacements de la mention (site foyers)</h2>
+  <div class="deux">
+    <div class="carte">
+      <h3>① Bandeau permanent (bas de page)</h3>
+      <p>Visible en permanence, quel que soit le défilement. Variante A.</p>
+      <div class="mention" style="margin-top:10px">
+        🚫 Demandes d'emploi non acceptées — Ce site est réservé aux foyers souhaitant recruter.
+        <strong>Vous cherchez un emploi ?</strong> Envoyez vos références à servicesyallah@gmail.com
+        ou écrivez-nous sur WhatsApp <strong>+212 710 359 446</strong> · <u>Espace candidats →</u>
+      </div>
+    </div>
+    <div class="carte">
+      <h3>② Hero (haut de page)</h3>
+      <div class="mention" style="margin-top:10px">
+        🚫 Demandes d'emploi non acceptées — Réservé aux foyers souhaitant recruter.<br>
+        🧑‍🍳 Vous cherchez un emploi ? Espace candidats : WhatsApp +212 710 359 446 ·
+        références à servicesyallah@gmail.com
+      </div>
+    </div>
+    <div class="carte">
+      <h3>③ Formulaire de réservation + ④ Fenêtre « Réserver un pack »</h3>
+      <div class="mention" style="margin-top:10px">
+        🚫 Réservé aux foyers uniquement — Demandes d'emploi non acceptées.<br>
+        🧑‍🍳 Vous cherchez un emploi ? <u>Remplissez la fiche candidat</u> · références à servicesyallah@gmail.com
+      </div>
+    </div>
+    <div class="carte">
+      <h3>⑤ Section « Vous cherchez un travail ? »</h3>
+      <p>Nouvelle section autonome (Juste avant le contact), avec 3 étapes candidats et 2 boutons :</p>
+      <div class="vert" style="margin-top:10px">🧑‍🍳 Remplir la fiche de candidature &nbsp;·&nbsp; 💬 WhatsApp candidats — +212 710 359 446</div>
+    </div>
+  </div>
+  <div class="carte">
+    <h3>La version stricte reste disponible</h3>
+    <p>Elle est documentée dans <code>modeles-messages.md</code> (variante B) pour être remise en un clic si vous changez d'avis :</p>
+    <div class="mention stricte" style="margin-top:10px">
+      🚫 Demandes d'emploi non acceptées — Ce site est réservé aux foyers souhaitant recruter.
+      Quittez si vous cherchez un emploi.
+    </div>
+  </div>
+
+  <h2>3. Maquette — fiche de candidature (<code>candidature.html</code>)</h2>
+  <div class="maquette">
+    <div class="maquette-barre"><span class="rond"></span><span class="rond"></span><span class="rond"></span>
+      <span class="url">yallah-services.ma/candidature.html</span></div>
+    <div class="zone">
+      <div class="bloc or"><b>En-tête</b> — logo officiel · sélecteur <b>Français / العربية</b> · bouton WhatsApp candidats</div>
+      <div class="bloc"><b>Introduction</b> — « Vous cherchez du travail ? » + rappel : sans références, pas de validation</div>
+      <div class="bloc"><span class="numero">1</span><b>Votre identité</b> — nom · WhatsApp · ville · quartier · âge · pays d'origine</div>
+      <div class="bloc"><span class="numero">2</span><b>Le poste souhaité</b> — métier · expérience · prétention salariale · logement (logée / non logée)</div>
+      <div class="bloc"><span class="numero">3</span><b>Votre disponibilité</b> — temps plein, partiel, journée, nuit, week-end, garde de nuit · date · jours/semaine · villes acceptées</div>
+      <div class="bloc"><span class="numero">4</span><b>Langues, compétences &amp; documents</b> — darija, arabe, français, anglais, amazigh · ménage, repassage, cuisine, enfants, personnes âgées, permis · CIN, séjour, certificat médical…</div>
+      <div class="bloc"><span class="numero">5</span><b>Vos deux références (obligatoires)</b> — nom + lien + téléphone, pour chacune</div>
+      <div class="bloc"><b>Message libre</b> + <b>consentement loi 09-08</b> (obligatoire) + champ anti-robots invisible</div>
+      <div class="bloc vert"><b>Envoyer ma fiche et obtenir mon numéro de dossier</b> (le bouton principal)</div>
+    </div>
+  </div>
+
+  <h2>4. Maquette — page de confirmation (<code>candidature-confirmation.html</code>)</h2>
+  <div class="maquette">
+    <div class="maquette-barre"><span class="rond"></span><span class="rond"></span><span class="rond"></span>
+      <span class="url">yallah-services.ma/candidature-confirmation.html</span></div>
+    <div class="zone">
+      <div class="bloc or" style="text-align:center;font-size:18px;letter-spacing:1px">
+        <b>Numéro de dossier</b><br><b style="font-size:24px;color:#e9d493">YS-2026-0001</b><br>
+        <span style="font-size:11.5px">📋 Copier mon numéro · 🖨️ Imprimer</span>
+      </div>
+      <div class="bloc alerte"><b>⚠️ Candidature incomplète</b> — deux actions obligatoires restent à faire</div>
+      <div class="bloc vert"><b>Action 1 — WhatsApp</b> : la fiche complète est déjà rédigée, un clic l'envoie au +212 710 359 446</div>
+      <div class="bloc vert"><b>Action 2 — E-mail</b> : les deux références, dossier en objet, vers servicesyallah@gmail.com</div>
+      <div class="bloc"><b>Récapitulatif</b> de la fiche + état des références</div>
+      <div class="bloc"><b>Et ensuite</b> : vérification des références → entretien → présentation à un foyer → accompagnement (gratuit pour les candidats)</div>
+      <div class="bloc">🔐 <b>Loi 09-08</b> : conservation 12 mois maximum, suppression sur demande</div>
+    </div>
+  </div>
+
+  <h2>5. Parcours candidat — ce que voit la personne</h2>
+  <div class="trois">
+    <div class="carte"><h3>① Elle cherche du travail</h3><p>Elle arrive sur l'accueil foyers (ou directement sur la fiche) et lit la mention d'orientation → lien « Espace candidats ».</p></div>
+    <div class="carte"><h3>② Elle remplit la fiche</h3><p>5 blocs, en français ou en arabe, avec ses deux références. Validation immédiate des champs obligatoires.</p></div>
+    <div class="carte"><h3>③ Elle reçoit son dossier</h3><p><code>YS-2026-0001</code> — puis un clic sur WhatsApp (fiche rédigée) et un clic sur e-mail (références).</p></div>
+    <div class="carte"><h3>④ L'agence vérifie</h3><p>Les références sont appelées, un entretien est proposé, puis le profil est présenté à un foyer. Aucun frais candidat.</p></div>
+  </div>
+
+  <h2>6. Où se règlent les coordonnées</h2>
+  <table>
+    <thead><tr><th>Élément</th><th>Fichier / variable</th><th>Valeur par défaut</th></tr></thead>
+    <tbody>
+      <tr><td>WhatsApp foyers</td><td><code>index.html</code> + <code>assets/js/config.js</code> · <code>WHATSAPP_FOYERS</code></td><td>+212 691 733 585</td></tr>
+      <tr><td>WhatsApp candidats</td><td><code>assets/js/config.js</code> · <code>WHATSAPP_CANDIDATS</code></td><td>+212 710 359 446</td></tr>
+      <tr><td>E-mail (références)</td><td><code>assets/js/config.js</code> · <code>CONTACT_EMAIL</code></td><td>servicesyallah@gmail.com</td></tr>
+      <tr><td>Clé de l'espace recruteur</td><td><code>ADMIN_KEY</code> (serveur)</td><td><code>yallah2026</code> — <strong>à changer</strong></td></tr>
+      <tr><td>Liste des métiers</td><td><code>candidature.html</code> (<code>&lt;select id="poste"&gt;</code>) + section services de <code>index.html</code></td><td>10 métiers + « Autre »</td></tr>
+    </tbody>
+  </table>
+
+  <h2>7. Messages types (4 variantes de la mention)</h2>
+  <p>Tous les textes prêts à copier — mention d'avertissement (4 variantes), réponses WhatsApp Business (5 cas),
+  e-mails types (4) — sont réunis dans <code>modeles-messages.md</code>, en français et en arabe.</p>
+
+  <h2>8. Contrôles effectués</h2>
+  <table>
+    <thead><tr><th>Contrôle</th><th>Résultat</th></tr></thead>
+    <tbody>
+      <tr><td>Pages servies en <code>200</code> (accueil, fiche, confirmation, admin, assets)</td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>Envoi réel → dossier <code>YS-2026-0001</code> enregistré</td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>Validation serveur (champs manquants → <code>422</code> + messages)</td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>Clé d'admin invalide → <code>403</code>, suppression sans clé → <code>403</code></td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>Anti-robots (champ piège) : rien n'est enregistré</td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>Limite de 12 envois/heure par IP → <code>429</code></td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>Export CSV : en-tête, séparateur <code>;</code>, BOM UTF-8 (accents Excel)</td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>Traversée de chemin (<code>/assets/../server.js</code>) et <code>/data/</code> → <code>404</code></td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>JavaScript validé (<code>node --check</code>) sur les 7 fichiers</td><td class="statut-ok">✔ vérifié</td></tr>
+      <tr><td>Captures navigateur (vérification visuelle)</td><td>Script fourni dans <code>apercus/</code> — non exécuté ici (téléchargement du navigateur bloqué dans l'environnement)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pied">
+    Yallah Services — Casablanca · Simplifiez-vous la vie !<br>
+    WhatsApp foyers +212 691 733 585 · WhatsApp candidats +212 710 359 446 · servicesyallah@gmail.com
+  </div>
+</div>
+</body>
+</html>

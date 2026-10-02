@@ -1,33 +1,182 @@
 # YALLAH SERVICES — Aides à domicile au Maroc
 
-Reproduction du site **https://yalla-services.netlify.app/** — agence de placement de personnel
-subsaharien qualifié (ménage, nounou, cuisine, garde malade) au Maroc.
-**Slogan : Simplifiez-vous la vie !**
+Site de **Yallah Services** (Casablanca) : sélection et mise à disposition de personnel de maison
+qualifié au Maroc. **Slogan : Simplifiez-vous la vie !**
+
+Le site répond à **deux publics opposés**, avec deux parcours distincts :
+
+| Public | Parcours | Page | WhatsApp |
+|---|---|---|---|
+| 🏠 **Foyers** (clients) | Services, garanties, packs, réservation | `index.html` | **+212 691 733 585** |
+| 🧑‍🍳 **Candidats** (personnel) | Fiche de candidature → numéro de dossier → références | `candidature.html` | **+212 710 359 446** |
+
+> ⚠️ **Règle commerciale** — l'accueil foyers conserve sa mention « **Demandes d'emploi non acceptées** —
+> Ce site est réservé aux foyers souhaitant recruter », désormais complétée par une orientation claire :
+> *« Vous cherchez un emploi ? Envoyez vos références à **servicesyallah@gmail.com** ou écrivez-nous sur
+> **WhatsApp +212 710 359 446** → Espace candidats »*. Les quatre variantes de cette mention (dont la
+> version stricte d'origine) sont dans **`modeles-messages.md`**.
 
 ## 📞 Contacts officiels
 
 | Canal | Coordonnées |
 |---|---|
-| **WhatsApp** | **+212 691 733 585** → [wa.me/212691733585](https://wa.me/212691733585) |
-| **E-mail** | **servicesyallah@gmail.com** |
+| **WhatsApp foyers** (clients) | **+212 691 733 585** → [wa.me/212691733585](https://wa.me/212691733585) |
+| **WhatsApp candidats** (personnel) | **+212 710 359 446** → [wa.me/212710359446](https://wa.me/212710359446) |
+| **E-mail** (références, dossiers) | **servicesyallah@gmail.com** |
 | Villes | Casablanca · Rabat · Marrakech · Fès · Tanger · Agadir · Meknès · Oujda · Kénitra · Salé · Tétouan |
 
-> Les liens WhatsApp sont générés à partir de la constante `WA_NUMBER` dans `assets/js/app.js`.
-> Pour changer de numéro, modifiez-la **et** remplacez les liens `https://wa.me/212691733585` dans `index.html`.
+> Les liens WhatsApp et l'e-mail sont centralisés dans **`assets/js/config.js`** (site statique) et par
+> variables d'environnement `WHATSAPP_FOYERS`, `WHATSAPP_CANDIDATS`, `CONTACT_EMAIL` (version serveur).
+> `index.html` conserve toutefois ses liens en dur pour les foyers : `build-site.js` les met à jour
+> automatiquement si vous changez les variables et régénérez.
 
 ## 🗂️ Structure du dépôt
 
 ```
 .
-├── index.html              # Page unique complète (toutes les sections)
+├── index.html                        # Accueil foyers (page unique, toutes les sections)
+├── candidature.html                  # Fiche de candidature bilingue FR/AR (5 blocs + références)
+├── candidature-confirmation.html     # Numéro de dossier + WhatsApp + e-mail des références
+├── admin.html                        # Espace recruteur (version serveur, protégé par ADMIN_KEY)
+├── server.js                         # Serveur Node sans aucune dépendance (site + API + admin)
+├── build-site.js                     # Génère le site statique prêt à publier
+├── generer-images-logo.py            # Produit les 12 déclinaisons du logo (Pillow)
+├── outils/verifier-site.js           # Vérifications avant mise en ligne (liens, ids, images…)
+├── apercus/generer-apercus.js        # Captures d'écran (Playwright) + contrôle de débordement
 ├── assets/
-│   ├── css/style.css       # Thème or/noir (grille) + navy #0a1946 + vert WhatsApp
-│   ├── js/app.js           # Onglets, FAQ, popup, facture, compteur live, clics grille
-│   └── img/                # Logo officiel, photo hero, visuels des services, flyer, avatars
-├── netlify.toml            # Configuration de déploiement Netlify
-├── robots.txt · sitemap.xml
+│   ├── css/style.css                 # Thème or/noir + grille + navy + vert WhatsApp
+│   ├── css/brand.css                 # Déclinaison « affiche » (bleu nuit, or satiné, vert profond)
+│   ├── css/recrutement.css           # Charte des pages candidat et de l'espace recruteur
+│   ├── js/config.js                  # Coordonnées centralisées (foyers, candidats, e-mail)
+│   ├── js/app.js                     # Interactions de l'accueil foyers (onglets, FAQ, facture…)
+│   ├── js/fiche.js                   # Moteur bilingue FR/AR + messages WhatsApp/e-mail
+│   ├── js/candidature.js             # Formulaire : validation, envoi, numéro de dossier
+│   ├── js/candidature-confirmation.js# Page de confirmation (récapitulatif, liens préparés)
+│   ├── js/admin.js                   # Espace recruteur (statistiques, recherche, export, suppression)
+│   ├── logo-source.png               # Logo officiel d'origine (source des déclinaisons)
+│   └── img/                          # Logos, favicons, visuels des services, avatars…
+├── site-a-mettre-en-ligne/           # ★ Version statique générée, prête à déposer chez l'hébergeur
+├── modeles-messages.md               # Textes FR/AR : mention, réponses WhatsApp, e-mails
+├── plan-placement-du-formulaire.html # Plan de placement + maquettes (page de revue)
+├── apercus/                          # Captures d'écran (générées) + mode d'emploi
+├── data/                             # Base des candidatures (version serveur) — JAMAIS versionnée
+├── netlify.toml · robots.txt · sitemap.xml
 └── README.md
 ```
+
+---
+
+## 🚀 Les deux versions du site
+
+### 1. Version statique — `site-a-mettre-en-ligne/` (aucune installation)
+
+```bash
+node build-site.js           # régénère le dossier
+# puis déposez son contenu chez n'importe quel hébergeur (FTP, Netlify, OVH…)
+```
+
+- Contient : `index.html`, `candidature.html`, `candidature-confirmation.html`, `assets/`, `LISEZ-MOI.txt`.
+- Le numéro de dossier est généré **par le navigateur du candidat** (`YS-2026-0001`, `0002`…), puis la
+  fiche part sur WhatsApp et les références par e-mail. **Aucune donnée n'est stockée** : rien à sauvegarder.
+- Test local : ouvrir `site-a-mettre-en-ligne/index.html` dans un navigateur, ou
+  `cd site-a-mettre-en-ligne && python3 -m http.server 8000`.
+
+Options du générateur :
+
+```bash
+WHATSAPP_CANDIDATS=212710359446 CONTACT_EMAIL=servicesyallah@gmail.com node build-site.js
+node build-site.js --sortie /tmp/site            # autre dossier de sortie
+```
+
+### 2. Version serveur — `server.js` (Node, aucune dépendance à installer)
+
+```bash
+ADMIN_KEY='CleSecrete2026' node server.js
+# http://localhost:3000             accueil foyers
+# http://localhost:3000/candidature.html     fiche de candidature
+# http://localhost:3000/admin       espace recruteur (clé : CleSecrete2026)
+```
+
+- Enregistre chaque candidature dans **`data/candidatures.json`** (dossier ignoré par Git — loi 09-08).
+- Sert le site, l'API et l'espace recruteur ; `assets/js/config.js` est **injecté** avec vos variables.
+- Le serveur écoute sur `0.0.0.0` (utilisable derrière Nginx/Caddy avec HTTPS).
+
+### Variables d'environnement
+
+| Variable | Défaut | Rôle |
+|---|---|---|
+| `PORT` | `3000` | Port d'écoute |
+| `ADMIN_KEY` | `yallah2026` | Clé de l'espace recruteur — **à changer** |
+| `WHATSAPP_FOYERS` | `212691733585` | WhatsApp affiché aux foyers |
+| `WHATSAPP_CANDIDATS` | `212710359446` | WhatsApp dédié au recrutement (repli : `WHATSAPP_NUMBER`) |
+| `CONTACT_EMAIL` | `servicesyallah@gmail.com` | Réception des références |
+| `DATA_DIR` | `./data` | Emplacement de la base des candidatures |
+| `IP_SALT` | interne | Sel du hachage des IP (limitation de débit) |
+| `TRUST_PROXY` | — | `1` si le serveur est derrière un reverse proxy |
+
+### API
+
+| Méthode | Route | Description |
+|---|---|---|
+| `GET` | `/api/sante` | Vérification de disponibilité (le site détecte le mode serveur) |
+| `POST` | `/api/candidature` | Dépôt d'une candidature → `201` + `numero` · `422` + `erreurs` · `429` si trop d'envois |
+| `GET` | `/api/admin/candidatures` | Liste + statistiques (clé requise) |
+| `GET` | `/api/admin/export.csv` | Export Excel/CSV (clé requise, séparateur `;`, BOM UTF-8) |
+| `DELETE` | `/api/admin/candidature/:numero` | Suppression d'un dossier (droit à l'effacement) |
+
+La clé peut être envoyée par l'en-tête `X-Admin-Key` ou par `?cle=…`.
+
+---
+
+## 🧑‍🍳 Parcours candidat
+
+1. **Fiche de candidature** (`/candidature.html`) — 5 blocs, en **français ou en arabe** (RTL) :
+   1. Identité — nom, WhatsApp, ville, quartier, âge, pays d'origine
+   2. Poste souhaité — métier, expérience, prétention salariale, logée / non logée
+   3. Disponibilité — temps plein, partiel, journée, nuit, week-end, garde de nuit · date · jours/semaine · villes acceptées
+   4. Langues, compétences et documents
+   5. **Deux références obligatoires** — nom, lien, téléphone
+   + message libre, **consentement explicite (loi 09-08)** et champ anti-robots invisible.
+2. **Validation** côté client *et* côté serveur · **12 envois/heure par IP** maximum.
+3. **Numéro de dossier** `YS-2026-0001`, puis deux actions obligatoires :
+   - 💬 **WhatsApp +212 710 359 446** — la fiche complète est déjà rédigée, un clic suffit ;
+   - ✉️ **servicesyallah@gmail.com** — les deux références, numéro de dossier en objet.
+4. Règle affichée au candidat : *sans références, la candidature n'est ni validée ni présentée à un foyer*.
+5. **Gratuit pour les candidats** : aucun frais n'est demandé, ni avant ni après le placement.
+
+## 🔐 Espace recruteur (`/admin`, version serveur)
+
+- **Statistiques** : candidatures reçues, poste le plus demandé, ville principale, contacts WhatsApp
+  disponibles, dossiers avec les deux références complètes.
+- **Recherche instantanée** (nom, dossier, ville, métier, téléphone, références…).
+- **Contact en un clic** : WhatsApp du candidat, e-mail, appel des références.
+- **Export Excel/CSV** et **suppression d'un dossier** (droit à l'effacement — loi 09-08).
+- Hors navigation, en `noindex`, et protégé par la clé `ADMIN_KEY`.
+
+---
+
+## 🎨 Logo & charte graphique
+
+`assets/logo-source.png` (logo officiel) → **12 déclinaisons** générées par `generer-images-logo.py` :
+
+```bash
+python3 generer-images-logo.py          # nécessite Pillow : pip install pillow
+```
+
+| Déclinaison | Usage |
+|---|---|
+| `logo.png`, `logo-256.png`, `logo-128.png` | Navigation, en-têtes, facture |
+| `logo-transparent-512.png` | Fond transparent (le cercle garde son bleu marine) |
+| `logo-blanc-512.png` / `logo-marine-512.png` | Monochromes pour fonds sombres / clairs |
+| `favicon-32.png`, `favicon-16.png`, `apple-touch-icon-180.png` | Favicons et icône iOS |
+| `logo-og-1200x630.jpg` | Image de partage (Open Graph / réseaux sociaux) |
+| `logo-bandeau-1600x400.png`, `logo-avatar-400.png` | Bannière et avatar WhatsApp Business |
+
+**Charte** — marine `#0d2136`, or `#c9a227` (dégradé `#a8842a → #e9d493 → #c9a227`), ivoire `#fdf5dd`,
+texte secondaire `#cdd7e2`. Le **vert** (`#08733d → #004c2b`) est réservé aux boutons WhatsApp et e-mail ;
+le rouge (`#c1121f`) aux erreurs de saisie. Titres : Montserrat + Barlow Condensed.
+
+---
 
 ## 💰 Grille tarifaire officielle (source : flyer YALLAH SERVICES)
 
@@ -58,87 +207,98 @@ Grand ménage : villa 700 DH · appartement 500 DH
 **Frais de Mise en relation** (payés **après validation du profil**, séparés du salaire) :
 💎 Premium **1 000 DH** (remplacements gratuits 6 mois) · 🛡️ Sérénité **500 DH** (remplacements gratuits 2 mois).
 
-## 🧭 Sections de la page (dans l'ordre)
+## 🧭 Sections de l'accueil foyers (dans l'ordre)
 
-1. **Navigation fixe** — logo officiel, liens d'ancrage, bouton WhatsApp, menu mobile.
+1. **Navigation fixe** — logo officiel, liens d'ancrage, bouton WhatsApp, menu mobile, **lien « Espace candidats »**.
 2. **Hero** — visuel plein largeur, badge « Agence N°1 », *Votre maison, entre de bonnes mains*,
-   slogan « Simplifiez-vous la vie ! », compteur de visiteurs, compte à rebours, statistiques.
-3. **Bandeau de confiance** — ✅ Profils vérifiés et sélectionnés · ⭐ Expérience et professionnalisme ·
-   🤝 Accompagnement personnalisé *(garanties du flyer officiel)*.
+   slogan « Simplifiez-vous la vie ! », compteur de visiteurs, compte à rebours, statistiques
+   et **mention d'orientation candidats**.
+3. **Bandeau de confiance** — ✅ Profils vérifiés · ⭐ Expérience et professionnalisme · 🤝 Accompagnement personnalisé.
 4. **Comment ça marche** — 4 étapes : formulaire → profil en 24h → rencontre & placement → suivi.
-5. **Mini-formulaire** — nom, téléphone + service (19 options de la grille), ville (11 villes), préférence, délai.
-6. **Avis clients** — 3 témoignages 5 étoiles + **flyer de la grille tarifaire officielle**.
-7. **Nos Pack & Tarifs** — 5 onglets : 🧹 Ménage · 🧸 Nounou · 🍳 Cuisine · ❤️ Garde malade · ⏰ À la journée
-   (17 cartes de service avec visuels et bouton « Réserver »).
-8. **Grille tarifaire des services** — tableau complet des 14 services en version web cliquable.
+5. **Mini-formulaire** — nom, téléphone + service, ville, préférence, délai.
+6. **Avis clients** — 3 témoignages 5 étoiles + flyer de la grille tarifaire.
+7. **Nos Pack & Tarifs** — 5 onglets : 🧹 Ménage · 🧸 Nounou · 🍳 Cuisine · ❤️ Garde malade · ⏰ À la journée.
+8. **Grille tarifaire des services** — tableau complet des 14 services, cliquable.
 9. **Frais de Mise en relation** — 💎 Premium 1 000 DH · 🛡️ Sérénité 500 DH.
-10. **FAQ** — 12 questions/réponses, salaires issus de la grille officielle.
-11. **Formulaire de réservation** — confirmation + **facture YS-XXXXXX**.
-12. **Éléments persistants** — bouton WhatsApp flottant, bandeau « Demandes d'emploi non acceptées », footer.
+10. **FAQ** — 12 questions/réponses.
+11. **🧑‍🍳 Vous cherchez un travail ?** *(nouveau)* — les 3 étapes candidats, le bouton
+    « Remplir la fiche de candidature » et le **WhatsApp candidats +212 710 359 446**.
+12. **Formulaire de réservation** — confirmation + facture `YS-XXXXXX`.
+13. **Éléments persistants** — bouton WhatsApp flottant, **bandeau d'orientation candidats**, footer.
 
 ## ⚙️ Comportements JavaScript (`assets/js/app.js`)
 
 - Compteur de visiteurs, compte à rebours d'offre (mémorisé en `localStorage`).
-- Notifications de preuve sociale alignées sur la grille officielle (toutes les 22 s).
+- Notifications de preuve sociale alignées sur la grille officielle.
 - Onglets des packs, accordéon FAQ, animations au scroll.
-- **Clic sur une ligne de la grille** (ou sur une carte) → popup « Réserver ce pack » pré-rempli.
-- Validation des formulaires (nom + téléphone obligatoires, surlignage + secousse).
-- Génération de la **facture de confirmation** (n° `YS-######`, date, service, garanties, étapes)
+- Clic sur une ligne de la grille ou une carte → popup « Réserver ce pack » pré-rempli.
+- Validation des formulaires, génération de la **facture de confirmation** (`YS-######`)
   et lien « Confirmer sur WhatsApp » pré-rempli.
 - Normalisation automatique des numéros : `06…` → `+212 6…`.
 
-## 🚀 Lancer en local
+---
+
+## ✅ Vérifications avant mise en ligne
 
 ```bash
-python3 -m http.server 8000
-# puis ouvrir http://localhost:8000
+node outils/verifier-site.js        # liens, ressources, identifiants JS, formulaires, CSS, coordonnées
+node --check assets/js/*.js server.js build-site.js
 ```
 
-## 🎨 Charte
+Le vérificateur contrôle notamment que **chaque image/script/feuille de style existe**, que chaque
+identifiant utilisé par le JavaScript est bien présent dans la page, que les **messages d'erreur sont
+bilingues**, et qu'aucune largeur fixe ne peut provoquer un défilement horizontal.
 
-| Élément | Valeur |
-|---|---|
-| Or (grille, accents) | `#d8b361` / `#f2db9b` / `#b68b39` |
-| Noir / navy | `#030f20` · `#0b2035` |
-| Rouge (flyer) | `#c1121f` |
-| Vert WhatsApp | `#08733d` / `#004c2b` |
-| Titres | Playfair Display · Textes : Inter |
+Contrôles déjà effectués sur cette version :
+
+- [x] Accueil, fiche, confirmation, admin et assets répondent `200`
+- [x] Envoi réel testé → dossier `YS-2026-0001` enregistré, puis base nettoyée
+- [x] Validation serveur (champs manquants → `422` avec messages FR/AR)
+- [x] Clé d'admin invalide → `403` · suppression sans clé → `403`
+- [x] Anti-robots (champ piège) : aucun enregistrement, réponse neutre
+- [x] Limite de débit : 12 envois/heure puis `429`
+- [x] Export CSV : en-tête, séparateur `;`, BOM UTF-8 (accents corrects dans Excel)
+- [x] Traversée de chemin (`/assets/../server.js`) et `/data/` → `404`
+- [x] JavaScript validé (`node --check`) sur tous les fichiers
+- [ ] Captures navigateur (ordinateur et mobile) : script prêt dans `apercus/`,
+      à lancer quand un Chromium est disponible — l'environnement de développement actuel
+      ne permet pas de le télécharger
+
+## 🔒 Conformité (loi marocaine 09-08)
+
+- **Consentement explicite** obligatoire avant l'envoi d'une candidature.
+- **Conservation 12 mois maximum** pour les candidats non retenus, suppression sur demande —
+  bouton « Supprimer le dossier » dans l'espace recruteur.
+- Les références ne sont **jamais publiées** : elles servent uniquement à la vérification par l'agence.
+- **Aucun frais candidat**, à aucun moment. Aucune donnée n'est vendue ni transmise à des tiers.
+- Le dossier `data/` (base des candidatures) est **exclu de Git** et doit être sauvegardé régulièrement.
+- Activer **HTTPS** avant mise en production : les fiches contiennent des données personnelles.
 
 ## ✏️ À personnaliser
 
+- **Changer `ADMIN_KEY`** (valeur par défaut `yallah2026`) avant toute mise en ligne.
 - **Photos réelles** de l'agence dans `assets/img/` (garder les mêmes noms de fichiers).
-- **Logo** : `assets/img/logo.png` (également utilisé comme favicon).
-- **Flyer** : `assets/img/grille-tarifaire.jpg` — pour utiliser la version originale, remplacez
-  simplement ce fichier par votre image (mêmes nom et extension).
+- **Logo** : remplacer `assets/logo-source.png` puis relancer `python3 generer-images-logo.py`.
+- **Métiers proposés** aux candidats : `candidature.html` (liste `<select id="poste">`).
+- **Villes** : listes `<select id="ville">` (candidature) et `#ctCity` (réservation foyers).
 - **Pixel Facebook / Google Analytics** : à ajouter avant toute campagne publicitaire.
 
-### Images binaires à fournir
+### Images binaires encore à fournir
 
-Le diff fourni ne contient pas les données binaires. Le logo existant est conservé ;
-sa nouvelle version reste à fournir, ainsi que les fichiers suivants dans `assets/img/` :
+Les fichiers suivants sont référencés par `index.html` mais ne sont pas encore dans le dépôt
+(leur référencement HTML est conservé, ils ne s'afficheront qu'après ajout) :
 
-- `garde-malade-menage.jpg`
-- `garde-malade.jpg`
-- `grille-tarifaire.jpg`
-- `pack-aide-cuisine.jpg`
-- `pack-cuisine-simple.jpg`
-- `pack-menage-villa.jpg`
-- `pack-nounou-multi.jpg`
+- `assets/img/grille-tarifaire.jpg`
+- `assets/img/pack-menage-villa.jpg`
+- `assets/img/pack-nounou-multi.jpg`
+- `assets/img/pack-cuisine-simple.jpg`
+- `assets/img/pack-aide-cuisine.jpg`
+- `assets/img/garde-malade.jpg`
+- `assets/img/garde-malade-menage.jpg`
 
-Les références HTML du diff sont conservées : ces sept images ne s'afficheront pas
-avant l'ajout des fichiers originaux.
+### Visuel d'accueil
 
-### Visuel d’accueil
-
-`assets/img/hero-services.jpg` est une illustration photoréaliste générée par IA,
-inspirée de la présentation de Yallah Services (personnel pour particuliers et
-entreprises au Maroc). Elle ne représente pas l’équipe réelle ni des candidats
-disponibles. Elle sert également de visuel de partage Open Graph.
-
-### Thème inspiré de l’affiche publicitaire
-
-`assets/css/brand.css`, chargé après les styles de structure, décline le bleu nuit,
-l’or satiné, le blanc et le vert profond sur les sections, cartes, formulaires,
-fenêtres de réservation et confirmation. Montserrat et Barlow Condensed sont
-des équivalents visuels des lettres de l’affiche, dont les polices sources ne
-sont pas connues. Le rouge reste réservé aux erreurs de saisie.
+`assets/img/hero-services.jpg` est une illustration photoréaliste générée par IA, inspirée de la
+présentation de Yallah Services. Elle ne représente pas l'équipe réelle ni des candidats disponibles.
+L'image de partage (Open Graph) est désormais `assets/img/logo-og-1200x630.jpg`, générée à partir du
+logo officiel.
