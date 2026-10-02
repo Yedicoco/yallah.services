@@ -412,3 +412,30 @@ footer a:hover{color:#f0a500}
   .guarantees{grid-template-columns:1fr}
   .facture-body{padding:18px}
 }
+
+/* ══════════════════════════════════════
+   GRILLE TARIFAIRE OFFICIELLE (flyer)
+══════════════════════════════════════ */
+.grille-wrap{max-width:660px;margin:0 auto;background:#0d0d10;border:2px solid #c9962c;border-radius:18px;padding:18px;box-shadow:0 14px 44px rgba(0,0,0,0.18)}
+.grille-head{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1.5px solid #c9962c;border-radius:10px;margin-bottom:12px;background:#111114}
+.grille-head .gh-l,.grille-head .gh-r{font-size:12px;font-weight:800;color:#e8c76a;letter-spacing:0.8px;text-transform:uppercase}
+.gr-row{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1.5px solid rgba(201,150,44,0.55);border-radius:9px;margin-bottom:7px;background:#17171b;transition:transform 0.18s,background 0.18s,border-color 0.18s;cursor:pointer}
+.gr-row:nth-child(even){background:#101014}
+.gr-row:hover{transform:translateX(3px);border-color:#e8c76a}
+.gr-ico{font-size:17px;flex-shrink:0;width:26px;text-align:center}
+.gr-name{flex:1;font-size:13px;font-weight:600;color:#f4efe6;line-height:1.3}
+.gr-price{flex-shrink:0;background:linear-gradient(180deg,#f7e3a8,#d9ae4a);color:#1a1206;font-family:'Playfair Display',serif;font-size:15px;font-weight:900;padding:6px 16px;border-radius:16px;min-width:96px;text-align:center;white-space:nowrap}
+.grille-note{display:flex;align-items:flex-start;gap:12px;background:#1a0406;border:1.5px solid #c1121f;border-radius:11px;padding:13px 15px;margin:14px 0 10px}
+.grille-note .ic{width:30px;height:30px;border-radius:50%;background:#c1121f;color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+.grille-note p{font-size:12px;color:#f0d6d6;line-height:1.55;margin:0}
+.grille-note em{color:#e8c76a;font-family:'Playfair Display',serif;font-size:13px;display:block;margin-top:2px}
+.grille-sign{text-align:right;font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:#e8c76a;margin:2px 6px 0 0}
+.temo-flyer{width:100%;height:auto;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,0.22);display:block;max-width:560px;margin:0 auto}
+.flyer-cap{text-align:center;color:#6b7280;font-size:12px;margin-top:12px}
+.flyer-cap strong{color:#0a1946}
+@media(max-width:520px){
+  .grille-wrap{padding:12px;border-radius:14px}
+  .gr-name{font-size:12px}
+  .gr-price{font-size:13px;padding:5px 11px;min-width:82px}
+  .gr-row{padding:9px 10px;gap:8px}
+}
