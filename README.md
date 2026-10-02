@@ -55,7 +55,7 @@ Ménage normal : villa 400 DH · appartement 300 DH —
 Grand ménage : villa 700 DH · appartement 500 DH
 *(💰 paiement après service · 🧴 matériel fourni par le client · 📅 réservez 1 jour à l'avance)*
 
-**Frais d'agence** (payés **après validation du profil**, séparés du salaire) :
+**Frais de Mise en relation** (payés **après validation du profil**, séparés du salaire) :
 💎 Premium **1 000 DH** (remplacements gratuits 6 mois) · 🛡️ Sérénité **500 DH** (remplacements gratuits 2 mois).
 
 ## 🧭 Sections de la page (dans l'ordre)
@@ -71,7 +71,7 @@ Grand ménage : villa 700 DH · appartement 500 DH
 7. **Nos Pack & Tarifs** — 5 onglets : 🧹 Ménage · 🧸 Nounou · 🍳 Cuisine · ❤️ Garde malade · ⏰ À la journée
    (17 cartes de service avec visuels et bouton « Réserver »).
 8. **Grille tarifaire des services** — tableau complet des 14 services en version web cliquable.
-9. **Frais d'agence** — 💎 Premium 1 000 DH · 🛡️ Sérénité 500 DH.
+9. **Frais de Mise en relation** — 💎 Premium 1 000 DH · 🛡️ Sérénité 500 DH.
 10. **FAQ** — 12 questions/réponses, salaires issus de la grille officielle.
 11. **Formulaire de réservation** — confirmation + **facture YS-XXXXXX**.
 12. **Éléments persistants** — bouton WhatsApp flottant, bandeau « Demandes d'emploi non acceptées », footer.
@@ -98,10 +98,10 @@ python3 -m http.server 8000
 
 | Élément | Valeur |
 |---|---|
-| Or (grille, accents) | `#f0a500` / `#e8c76a` / `#f6d67a` |
-| Noir / navy | `#0d0d10` · `#0a1946` · `#050c28` |
+| Or (grille, accents) | `#d8b361` / `#f2db9b` / `#b68b39` |
+| Noir / navy | `#030f20` · `#0b2035` |
 | Rouge (flyer) | `#c1121f` |
-| Vert WhatsApp | `#25D366` / `#1aab55` |
+| Vert WhatsApp | `#08733d` / `#004c2b` |
 | Titres | Playfair Display · Textes : Inter |
 
 ## ✏️ À personnaliser
@@ -127,3 +127,18 @@ sa nouvelle version reste à fournir, ainsi que les fichiers suivants dans `asse
 
 Les références HTML du diff sont conservées : ces sept images ne s'afficheront pas
 avant l'ajout des fichiers originaux.
+
+### Visuel d’accueil
+
+`assets/img/hero-services.jpg` est une illustration photoréaliste générée par IA,
+inspirée de la présentation de Yallah Services (personnel pour particuliers et
+entreprises au Maroc). Elle ne représente pas l’équipe réelle ni des candidats
+disponibles. Elle sert également de visuel de partage Open Graph.
+
+### Thème inspiré de l’affiche publicitaire
+
+`assets/css/brand.css`, chargé après les styles de structure, décline le bleu nuit,
+l’or satiné, le blanc et le vert profond sur les sections, cartes, formulaires,
+fenêtres de réservation et confirmation. Montserrat et Barlow Condensed sont
+des équivalents visuels des lettres de l’affiche, dont les polices sources ne
+sont pas connues. Le rouge reste réservé aux erreurs de saisie.
