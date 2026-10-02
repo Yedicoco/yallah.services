@@ -1,0 +1,103 @@
+{
+  "fichier": "cuisiniere-casablanca.html",
+  "ville": "Casablanca",
+  "serviceType": "Cuisine à domicile",
+  "title": "Cuisinière à Casablanca | Yallah Services",
+  "description": "Cuisinière ou aide en cuisine à Casablanca : nous recherchons un profil adapté à votre façon de manger, à vos horaires et au nombre de personnes à table.",
+  "h1": "Cuisinière à <em>Casablanca</em>",
+  "h1Texte": "Cuisinière à Casablanca",
+  "crumb": "Cuisinière à Casablanca",
+  "kicker": "Yallah Services · Casablanca",
+  "ogDescription": "Recherche d'une cuisinière ou d'une aide en cuisine à Casablanca : repas du quotidien, cuisine marocaine ou européenne, réceptions de famille.",
+  "lead": "Bien manger chez soi sans y passer ses soirées : voilà ce que cherchent la plupart des familles. Nous clarifions d'abord votre façon de manger — cuisine marocaine, européenne, repas simples ou réceptions — puis nous cherchons un profil qui correspond.",
+  "ctaPrincipal": "Décrire mon besoin sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche une cuisinière à Casablanca. Nombre de personnes, type de cuisine : ",
+  "noteHero": "Particuliers et entreprises · Cuisine seule ou cuisine avec ménage · Conditions expliquées avant la mise en relation.",
+  "image": "assets/img/pack-cuisine.jpg",
+  "imageAlt": "Cuisinière à domicile préparant les repas d'une famille à Casablanca",
+  "legendeImage": "Le plus important n'est pas la carte : c'est la régularité du quotidien.",
+  "sections": [
+    {
+      "titre": "Trois besoins très différents derrière le mot « cuisinière »",
+      "intro": "Une famille qui dîne à 21 h n'a pas le même besoin qu'un foyer qui reçoit vingt personnes le week-end. Nous trions d'abord de quel besoin vous parlez.",
+      "cartes": [
+        { "t": "La cuisine du quotidien", "p": "Préparer les repas de la famille, gérer les courses et la cuisine, tenir la propreté du plan de travail et du réfrigérateur. C'est un poste régulier, souvent à temps plein, qui demande de la constance plus que de l'invention." },
+        { "t": "L'aide en cuisine", "p": "Épauler une personne déjà en charge de la cuisine : préparation, épluchage, vaisselle, rangement. C'est le poste adapté aux foyers qui ont déjà quelqu'un, ou à ceux qui cherchent une présence partielle en journée." },
+        { "t": "Les repas de famille et réceptions", "p": "À Anfa, Californie ou Bouskoura, certaines familles reçoivent régulièrement. Le besoin n'est pas permanent mais intense : nous vous orientons alors vers une formule ponctuelle, à préciser à l'avance." }
+      ]
+    },
+    {
+      "titre": "Ce que nous vous demandons de préciser",
+      "intro": "Cuisine ne veut pas dire la même chose dans tous les foyers. Quatre précisions changent complètement le profil recherché.",
+      "cartes": [
+        { "t": "Le style de cuisine", "p": "Cuisine marocaine du quotidien, plats européens, cuisine légère ou régime particulier : dites-le clairement. Une personne excellente sur la cuisine marocaine traditionnelle ne sera pas forcément à l'aise avec une cuisine sans sel ni sucre." },
+        { "t": "Le nombre de personnes et les horaires", "p": "Nombre de couverts par repas, heures des repas, jours sans cuisine (week-end, sorties). Ces éléments déterminent s'il s'agit d'un temps plein ou d'une présence partielle." },
+        { "t": "Les contraintes alimentaires", "p": "Allergies, intolérances, produits interdits, préférences religieuses : tout doit être écrit et transmis avant la mise en relation. C'est un point de sécurité, pas une préférence." },
+        { "t": "Qui achète et qui décide des menus", "p": "Certaines familles veulent valider les menus chaque semaine, d'autres préfèrent laisser l'initiative. Précisez votre fonctionnement : cela évite les tensions dès la première semaine." }
+      ]
+    },
+    {
+      "t": "Cuisine seule ou cuisine avec ménage",
+      "intro": "C'est l'arbitrage le plus fréquent, et il a un impact direct sur le temps de travail.",
+      "cartes": [
+        { "t": "Cuisine seule", "p": "La personne se concentre sur les repas et la tenue de la cuisine. C'est le choix des foyers qui ont déjà une aide pour l'entretien, ou dont le logement est de taille raisonnable." },
+        { "t": "Cuisine et ménage", "p": "La personne partage son temps entre les repas et l'entretien courant. C'est la formule la plus répandue dans les appartements, avec un repère mensuel plus élevé que la cuisine seule. Nous vous aiderons à vérifier que la charge reste réaliste." },
+        { "t": "Ce à quoi il faut penser", "p": "Une cuisine quotidienne pour cinq personnes occupe déjà une bonne partie de la journée. Si vous ajoutez l'entretien complet d'une villa, le poste devient trop lourd pour une seule personne : mieux vaut le dire avant qu'après." }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Secteurs de Casablanca où nous recherchons des cuisinières",
+    "intro": "Les demandes se concentrent dans les quartiers résidentiels, où les repas familiaux et les réceptions sont plus fréquents.",
+    "liste": ["Anfa", "Aïn Diab", "Californie", "Racine et Triangle d'Or", "Gauthier", "CIL et Longchamps", "Casa Finance City", "Bouskoura", "Dar Bouazza et Tamaris", "Oasis", "Palmier", "Hay Hassani", "Maârif Extension"],
+    "note": "Secteurs prioritaires, sans garantie de desserte quartier par quartier pour une mission donnée. Écrivez-nous votre quartier et votre besoin : nous vous répondrons précisément."
+  },
+  "tarifs": {
+    "titre": "Repères tarifaires de la cuisine",
+    "legende": "Salaires mensuels versés à la personne (grille officielle Yallah Services)",
+    "intro": "Les repères distinguent la cuisine seule, la cuisine avec ménage et l'aide en cuisine. Le montant final dépend du nombre de couverts, des horaires et du périmètre confié.",
+    "lignes": [
+      ["Cuisine simple", "4 000 DH"],
+      ["Cuisine avec ménage", "5 000 DH"],
+      ["Aide en cuisine", "3 500 DH"],
+      ["Aide en cuisine avec ménage", "4 000 DH"]
+    ],
+    "note": "Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), après validation du profil, séparément du salaire. Les formules prévoient des remplacements pendant 2 ou 6 mois selon le cas. Aucun frais pour les candidates."
+  },
+  "titreEtapes": "Comment nous cherchons pour vous",
+  "introEtapes": "La cuisine est un poste où les habitudes comptent : nous prenons le temps de les écrire avant de chercher.",
+  "etapes": [
+    { "t": "Vous décrivez votre table", "p": "Style de cuisine, nombre de couverts, horaires des repas, contraintes alimentaires, réceptions éventuelles." },
+    { "t": "Nous cadrons le poste", "p": "Cuisine seule, cuisine avec ménage ou aide en cuisine : nous vérifions avec vous que la charge de travail est réaliste." },
+    { "t": "Nous présentons des profils", "p": "Nous vous présentons les personnes dont l'expérience déclarée correspond à votre style de cuisine et à votre rythme." },
+    { "t": "Vous goûtez, puis vous décidez", "p": "Les premiers repas sont le vrai test. Vous décidez librement, et nous restons joignables ensuite." }
+  ],
+  "missions": [
+    {
+      "nom": "Mme Najiba",
+      "lieu": "Bouznika",
+      "texte": "Famille accompagnée à Bouznika par notre équipe, de la formulation du besoin jusqu'au suivi après la mise en relation. Prénom et ville publiés avec son accord."
+    }
+  ],
+  "faq": [
+    { "q": "Combien coûte une cuisinière à Casablanca ?", "r": "Notre grille indique 4 000 DH par mois pour la cuisine simple, 5 000 DH pour la cuisine avec ménage, 3 500 DH pour l'aide en cuisine et 4 000 DH pour l'aide en cuisine avec ménage. Ces montants sont des repères : le nombre de couverts, les horaires et les réceptions changent la charge de travail, donc le montant." },
+    { "q": "Votre cuisinière peut-elle cuisiner marocain et européen ?", "r": "Cela dépend des profils disponibles au moment de votre demande. Dites-nous précisément vos plats habituels et vos exigences : nous vous indiquerons franchement ce que nous pouvons trouver. Il est plus utile de vérifier les plats que la famille mange vraiment que de parler de « cuisine internationale »." },
+    { "q": "Est-elle aussi chargée du ménage ?", "r": "Cela dépend de la formule choisie : « cuisine simple » et « cuisine avec ménage » sont deux postes différents, avec des repères distincts. Nous vous conseillons de mesurer la charge : repas quotidiens pour une famille nombreuse plus entretien d'une villa, c'est généralement trop pour une seule personne." },
+    { "q": "Peut-on l'employer seulement pour des réceptions ?", "r": "Oui, pour des besoins ponctuels. Il faut alors nous prévenir suffisamment à l'avance : une réception de famille demande de préparer les quantités, les courses et le service, ce qui ne s'improvise pas la veille. Parlez-nous du nombre d'invités et de la date." },
+    { "q": "Comment sont gérées les allergies et les régimes ?", "r": "Tout ce qui touche à la santé doit être écrit et transmis avant la mise en relation : allergies, intolérances, produits interdits. Nous le reportons dans les informations données à la personne, et nous vous recommandons de le réexpliquer vous-même lors de la rencontre." },
+    { "q": "Et si personne ne convient ?", "r": "Les formules Sérénité et Premium prévoient des remplacements pendant respectivement 2 et 6 mois, selon les conditions expliquées avant la mise en relation. Nous suivons la situation avec vous et reprenons la recherche si nécessaire." }
+  ],
+  "titreLiens": "Autres services à Casablanca",
+  "introLiens": "Voici les autres métiers que nous recherchons pour les familles de Casablanca, et la vue d'ensemble par ville.",
+  "liens": [
+    { "fichier": "femme-menage-casablanca.html", "titre": "Femme de ménage à Casablanca", "texte": "Entretien, repassage, grand ménage et prestation à la journée." },
+    { "fichier": "nounou-casablanca.html", "titre": "Nounou à Casablanca", "texte": "Garde d'enfants, sorties d'école et accompagnement du quotidien." },
+    { "fichier": "garde-malade-casablanca.html", "titre": "Garde-malade à Casablanca", "texte": "Accompagnement d'une personne âgée, avec ou sans ménage." },
+    { "fichier": "chauffeur-casablanca.html", "titre": "Chauffeur à Casablanca", "texte": "Déplacements réguliers, école et courses de la famille." },
+    { "fichier": "vigile-casablanca.html", "titre": "Vigile et gardien à Casablanca", "texte": "Présence et surveillance pour une maison ou un local." },
+    { "fichier": "services-par-ville.html", "titre": "Tous nos services par ville", "texte": "Les zones où nous intervenons, service par service." }
+  ],
+  "titreCta": "Besoin d'une cuisinière à Casablanca ?",
+  "texteCta": "Dites-nous combien de personnes vous êtes à table, à quelles heures et quel type de cuisine vous souhaitez. Nous vous répondons sur WhatsApp avec ce qui est réellement possible.",
+  "ctaSecondaire": "Échanger avec Yallah Services"
+}

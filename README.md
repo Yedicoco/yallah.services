@@ -1,17 +1,22 @@
 # YALLAH SERVICES — Aides à domicile au Maroc
 
-Site de **Yallah Services** (Casablanca) : sélection et mise à disposition de personnel de maison
-qualifié au Maroc. **Slogan : Simplifiez-vous la vie !**
+Site de **Yallah Services** : recherche et mise en relation de personnel pour les **particuliers**
+et les **entreprises** au Maroc. Base : Casablanca (Hay Hassani, 20220), 2 ans d'activité.
 
-Le site répond à **deux publics opposés**, avec deux parcours distincts :
+> 📄 **Document de référence obligatoire : [`contenu/fiche-entreprise.md`](contenu/fiche-entreprise.md)**
+> (positionnement, services B2C et B2B, villes confirmées, ton, et la liste de ce qu'il est
+> **interdit d'inventer**). En cas de contradiction avec un autre fichier, c'est cette fiche qui prime.
+
+Le site répond à **trois publics**, avec trois parcours distincts :
 
 | Public | Parcours | Page | WhatsApp |
 |---|---|---|---|
-| 🏠 **Foyers** (clients) | Services, garanties, packs, réservation | `index.html` | **+212 691 733 585** |
+| 🏠 **Particuliers** (clients) | Services, packs, tarifs, réservation | `index.html` | **+212 691 733 585** |
+| 🏢 **Entreprises** (B2B) | Personnel pour hôtels, riads, restauration, chantiers, événements | *à créer — voir le plan* | **+212 691 733 585** |
 | 🧑‍🍳 **Candidats** (personnel) | Fiche de candidature → numéro de dossier → références | `candidature.html` | **+212 710 359 446** |
 
-> ⚠️ **Règle commerciale** — l'accueil foyers conserve sa mention « **Demandes d'emploi non acceptées** —
-> Ce site est réservé aux foyers souhaitant recruter », désormais complétée par une orientation claire :
+> ⚠️ **Règle commerciale** — l'accueil conserve sa mention « **Demandes d'emploi non acceptées** —
+> Ce site est réservé aux particuliers et aux entreprises qui recrutent », complétée par une orientation claire :
 > *« Vous cherchez un emploi ? Envoyez vos références à **servicesyallah@gmail.com** ou écrivez-nous sur
 > **WhatsApp +212 710 359 446** → Espace candidats »*. Les quatre variantes de cette mention (dont la
 > version stricte d'origine) sont dans **`modeles-messages.md`**.
@@ -23,7 +28,7 @@ Le site répond à **deux publics opposés**, avec deux parcours distincts :
 | **WhatsApp foyers** (clients) | **+212 691 733 585** → [wa.me/212691733585](https://wa.me/212691733585) |
 | **WhatsApp candidats** (personnel) | **+212 710 359 446** → [wa.me/212710359446](https://wa.me/212710359446) |
 | **E-mail** (références, dossiers) | **servicesyallah@gmail.com** |
-| Villes | Casablanca · Rabat · Marrakech · Fès · Tanger · Agadir · Meknès · Oujda · Kénitra · Salé · Tétouan |
+| Villes | Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé |
 
 > Les liens WhatsApp et l'e-mail sont centralisés dans **`assets/js/config.js`** (site statique) et par
 > variables d'environnement `WHATSAPP_FOYERS`, `WHATSAPP_CANDIDATS`, `CONTACT_EMAIL` (version serveur).
@@ -42,6 +47,21 @@ Le site répond à **deux publics opposés**, avec deux parcours distincts :
 ├── build-site.js                     # Génère le site statique prêt à publier
 ├── generer-images-logo.py            # Produit les 12 déclinaisons du logo (Pillow)
 ├── outils/verifier-site.js           # Vérifications avant mise en ligne (liens, ids, images…)
+├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage)
+├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
+├── outils/generer-sitemap.js         # Sitemap automatique (lastmod = git) + synchronisation de robots.txt
+├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
+├── services-par-ville.html           # Hub : tous les services, ville par ville
+├── personnel-entreprises.html        # Hub B2B : hôtels, riads, chantiers, nettoyage, événements
+├── <service>-<ville>.html            # Pages locales générées (6 pages Casablanca en ligne)
+├── contenu/                          # Fiches de référence et contenu par page
+│   ├── fiche-entreprise.md           # ★ Référence obligatoire de tout contenu publié
+│   ├── audit-promesses-site.md       # Conformité des affirmations du site
+│   ├── fiche-locale-casablanca.md    # Questions terrain par ville (30 min par ville)
+│   ├── valider-avis.md · recueillir-avis.md
+│   ├── sources-editoriales.md        # Traçabilité de chaque fait publié
+│   └── pages/*.json                  # Contenu rédigé, page par page
+├── plan-seo-local.md                 # Plan SEO local : état, matrice, GBP, citations, mesure
 ├── apercus/generer-apercus.js        # Captures d'écran (Playwright) + contrôle de débordement
 ├── assets/
 │   ├── css/style.css                 # Thème or/noir + grille + navy + vert WhatsApp
@@ -75,7 +95,8 @@ node build-site.js           # régénère le dossier
 # puis déposez son contenu chez n'importe quel hébergeur (FTP, Netlify, OVH…)
 ```
 
-- Contient : `index.html`, `candidature.html`, `candidature-confirmation.html`, `assets/`, `LISEZ-MOI.txt`.
+- Contient : toutes les pages publiques (`index.html`, `candidature.html`, `candidature-confirmation.html`,
+  pages « service × ville »…), `assets/`, `sitemap.xml` (régénéré à chaque build), `robots.txt`, `LISEZ-MOI.txt`.
 - Le numéro de dossier est généré **par le navigateur du candidat** (`YS-2026-0001`, `0002`…), puis la
   fiche part sur WhatsApp et les références par e-mail. **Aucune donnée n'est stockée** : rien à sauvegarder.
 - Test local : ouvrir `site-a-mettre-en-ligne/index.html` dans un navigateur, ou
@@ -210,7 +231,7 @@ Grand ménage : villa 700 DH · appartement 500 DH
 ## 🧭 Sections de l'accueil foyers (dans l'ordre)
 
 1. **Navigation fixe** — logo officiel, liens d'ancrage, bouton WhatsApp, menu mobile, **lien « Espace candidats »**.
-2. **Hero** — visuel plein largeur, badge « Agence N°1 », *Votre maison, entre de bonnes mains*,
+2. **Hero** — visuel plein largeur, *Votre maison, entre de bonnes mains*,
    slogan « Simplifiez-vous la vie ! », compteur de visiteurs, compte à rebours, statistiques
    et **mention d'orientation candidats**.
 3. **Bandeau de confiance** — ✅ Profils vérifiés · ⭐ Expérience et professionnalisme · 🤝 Accompagnement personnalisé.
@@ -242,8 +263,19 @@ Grand ménage : villa 700 DH · appartement 500 DH
 
 ```bash
 node outils/verifier-site.js        # liens, ressources, identifiants JS, formulaires, CSS, coordonnées
+node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie, titles, balisage, maillage
+node outils/generer-pages-villes.js --verifier   # valide les fiches de contenu sans rien écrire
+node outils/generer-pages-villes.js              # régénère les pages service × zone
+node outils/generer-sitemap.js                   # régénère sitemap.xml (lastmod = git)
+node build-site.js                               # site statique complet + sitemap
 node --check assets/js/*.js server.js build-site.js
 ```
+
+> ⚠️ `verifier-contenu.js` sort en **erreur (code 1)** tant que les pages service × ville
+> n'ont pas un contenu original suffisant (≥ 600 mots, < 40 % de recopie entre pages).
+> C'est volontaire : c'est le garde-fou qui empêche la publication de pages-portes.
+> Les seuils sont réglables (`--mots 800 --dup 30`) ; le plan complet est dans
+> **`plan-seo-local.md`**.
 
 Le vérificateur contrôle notamment que **chaque image/script/feuille de style existe**, que chaque
 identifiant utilisé par le JavaScript est bien présent dans la page, que les **messages d'erreur sont
@@ -263,6 +295,38 @@ Contrôles déjà effectués sur cette version :
 - [ ] Captures navigateur (ordinateur et mobile) : script prêt dans `apercus/`,
       à lancer quand un Chromium est disponible — l'environnement de développement actuel
       ne permet pas de le télécharger
+
+## 🔍 SEO local (en cours)
+
+**Villes d'intervention confirmées :** Casablanca (base : Hay Hassani 20220) · **Bouskoura** (pôle
+résidentiel à part entière) · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia ·
+Témara · Salé — et d'autres villes **selon les demandes** (jamais affichées comme desservies).
+**Meknès, Oujda et Tétouan ont été retirées** du site : elles ne figurent pas dans la liste confirmée.
+
+**Deux marchés à couvrir :** particuliers (ménage, nounou, cuisine, garde-malade, chauffeurs,
+gardiennage) **et** entreprises — hôtels, riads, maisons d'hôtes, restauration, chantiers
+(main-d'œuvre et manœuvres), sociétés de nettoyage, événementiel. La partie B2B n'a pas encore
+de page : c'est le prochain chantier du plan.
+
+Le dépôt contient les premières briques du référencement local :
+
+- **Pages service × zone** : 6 pages Casablanca en ligne (ménage, nounou, cuisinière, garde-malade,
+  chauffeur, gardiennage), générées depuis `contenu/pages/*.json` — 869 à 1 514 mots, balisage
+  `Service` + fil d'Ariane + `FAQPage`, 4 à 5 liens internes chacune.
+- **Hubs** : `services-par-ville.html` (13 zones, 6 métiers) et `personnel-entreprises.html` (B2B).
+- **Plan complet** : `plan-seo-local.md` — matrice services × villes par phases, gabarit de page,
+  ligne B2B, Google Business Profile en mode « zone de service », citations locales et NAP
+  canonique, procédure de production du contenu original, pilotage Search Console.
+- **Fiche entreprise** : `contenu/fiche-entreprise.md` — référence unique de tout contenu produit.
+- **Audit de conformité** : `contenu/audit-promesses-site.md` — affirmations corrigées et points
+  en attente de confirmation (tarifs, avis clients, formules de remplacement).
+- **Garde-fou** : `outils/verifier-contenu.js` bloque la publication tant qu'une page est
+  trop courte ou trop proche d'une autre (protection contre les pages-portes).
+
+Règles à ne pas contourner : un seul profil Google par établissement réellement exploité,
+aucune adresse inventée, aucune promesse de service à la journée hors Casablanca/Rabat,
+aucun délai, prix, garantie ou vérification affirmé sans confirmation,
+aucun texte repris d'un concurrent.
 
 ## 🔒 Conformité (loi marocaine 09-08)
 

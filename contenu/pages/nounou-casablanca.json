@@ -1,0 +1,104 @@
+{
+  "fichier": "nounou-casablanca.html",
+  "ville": "Casablanca",
+  "serviceType": "Garde d'enfants à domicile",
+  "title": "Nounou à Casablanca | Yallah Services",
+  "description": "Nounou à Casablanca : nous recherchons le profil adapté à l'âge de vos enfants, à vos horaires et à votre organisation familiale, puis nous assurons le suivi.",
+  "h1": "Nounou à <em>Casablanca</em>",
+  "h1Texte": "Nounou à Casablanca",
+  "crumb": "Nounou à Casablanca",
+  "kicker": "Yallah Services · Casablanca",
+  "ogDescription": "Recherche d'une nounou à Casablanca : garde à domicile, sorties d'école, repas et routines. Formule logée ou non logée.",
+  "lead": "Confier ses enfants demande plus qu'un curriculum : il faut une personne dont les horaires, la patience et la façon de faire correspondent à votre famille. Nous clarifions d'abord votre organisation, puis nous recherchons des profils qui lui ressemblent.",
+  "ctaPrincipal": "Parler de mon besoin sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche une nounou à Casablanca. Nombre et âge des enfants, horaires : ",
+  "noteHero": "Particuliers · Formule logée ou non logée · Conditions expliquées avant la mise en relation.",
+  "image": "assets/img/pack-nounou.jpg",
+  "imageAlt": "Nounou à domicile pour une famille à Casablanca avec Yallah Services",
+  "legendeImage": "Chaque famille a ses habitudes : notre travail commence par les écouter.",
+  "sections": [
+    {
+      "titre": "Ce que « nounou » veut dire selon votre famille",
+      "intro": "Une nounou d'un enfant de 18 mois et une nounou de trois enfants scolarisés ne font pas le même métier. Nous partons de votre journée réelle, pas d'une fiche de poste standard.",
+      "cartes": [
+        { "t": "Garde à domicile", "p": "La personne vient chez vous aux heures convenues et repart chez elle le soir. C'est la formule la plus fréquente à Casablanca, dans les quartiers bien desservis comme Racine, Gauthier, CIL ou Maârif." },
+        { "t": "Formule logée", "p": "La personne vit à votre domicile, avec un jour de repos selon l'accord. Elle convient aux foyers qui ont besoin d'une présence tôt le matin et tard le soir, ou qui disposent d'une chambre pour elle." },
+        { "t": "Accompagnement des enfants plus grands", "p": "Sorties d'école, goûter, devoirs surveillés sans être un soutien scolaire, activités : le poste se rapproche d'un accompagnement du quotidien, et demande surtout de la ponctualité et de la régularité." }
+      ]
+    },
+    {
+      "titre": "Ce qui compte avant de chercher un profil",
+      "intro": "Quatre informations nous évitent de vous présenter des profils qui n'iront pas. Elles tiennent en cinq minutes d'échange.",
+      "cartes": [
+        { "t": "L'âge des enfants", "p": "Un nourrisson demande de l'expérience du très jeune enfant et une attention constante ; un enfant de 8 ans demande plutôt de la disponibilité en fin de journée et de l'autorité bienveillante. C'est le premier critère de recherche." },
+        { "t": "Les horaires réels", "p": "Heure réelle de départ de la maison, heure de retour, mercredi, vacances scolaires, éventuelles gardes en soirée. Les écarts entre l'annonce et la réalité sont la première cause de changement de profil." },
+        { "t": "Les langues parlées", "p": "Indiquez si vous souhaitez que la personne parle français, arabe ou darija avec les enfants. Nous vous dirons franchement ce que nous pouvons trouver selon le profil recherché." },
+        { "t": "Les tâches liées aux enfants", "p": "Repas, bain, rangement de la chambre, accompagnement aux activités. Si le poste inclut aussi du ménage ou de la cuisine, nous le surlignons : c'est ce qui distingue les formules et les montants." }
+      ]
+    },
+    {
+      "t": "Les premières semaines",
+      "intro": "Le démarrage se joue souvent dans les détails. Voici comment nous vous conseillons de l'organiser.",
+      "cartes": [
+        { "t": "Une période d'observation", "p": "Prévoyez des premiers jours où vous êtes présente, au moins en partie. Cela permet à l'enfant, à la personne et à vous de vous ajuster, et de détecter tôt un malentendu sur les horaires ou les habitudes." },
+        { "t": "Des consignes écrites", "p": "Numéros à joindre, allergies, habitudes de sieste, ce que l'enfant a le droit de manger, qui récupère à l'école. Un message WhatsApp suffit, mais l'écrit évite les interprétations." },
+        { "t": "Un point de contact", "p": "Gardez un échange régulier avec nous pendant le premier mois : si la formule doit être ajustée, il vaut mieux le faire tôt que d'attendre que la situation se dégrade." }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Secteurs où nous recherchons des nounous à Casablanca",
+    "intro": "Les demandes de garde d'enfants viennent surtout des quartiers résidentiels et des familles actives. Nous couvrons les secteurs suivants en priorité.",
+    "liste": ["Anfa", "Aïn Diab", "Californie", "Racine et Triangle d'Or", "Gauthier", "CIL et Longchamps", "Casa Finance City", "Bouskoura", "Dar Bouazza et Tamaris", "Oasis", "Palmier", "Maârif Extension", "Hay Hassani"],
+    "note": "Ces secteurs sont prioritaires, cela ne garantit pas une desserte quartier par quartier pour une mission donnée. Indiquez-nous votre quartier et vos horaires : nous vous répondrons sur ce qui est réellement possible."
+  },
+  "tarifs": {
+    "titre": "Repères tarifaires de la garde d'enfants",
+    "legende": "Salaires mensuels versés à la personne (grille officielle Yallah Services)",
+    "intro": "Ces repères distinguent la garde seule et la garde avec ménage. Le montant final dépend du nombre d'enfants, des horaires, des tâches annexes et de la formule.",
+    "lignes": [
+      ["Nounou d'un enfant", "3 500 DH"],
+      ["Nounou d'un enfant + ménage", "4 000 DH"],
+      ["Nounou de 2 enfants avec ménage", "4 500 à 5 000 DH"],
+      ["Nounou de 3 enfants (garde seule)", "4 500 DH"],
+      ["Nounou de 3 enfants + ménage", "5 000 DH"]
+    ],
+    "note": "Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil et séparément du salaire. Les formules prévoient des remplacements pendant respectivement 2 et 6 mois. Yallah Services ne demande aucun frais aux candidates."
+  },
+  "titreEtapes": "De votre message à la rencontre",
+  "introEtapes": "Nous n'envoyons personne chez vous sans que vous ayez compris qui vous rencontrez et pourquoi.",
+  "etapes": [
+    { "t": "Vous nous décrivez la famille", "p": "Nombre d'enfants, âges, horaires réels, langues souhaitées, tâches liées aux enfants, formule logée ou non." },
+    { "t": "Nous précisons le poste", "p": "Nous vous aidons à distinguer ce qui relève de la garde et ce qui relève du ménage ou de la cuisine, avec les conséquences sur le repère tarifaire." },
+    { "t": "Nous recherchons et présentons", "p": "Nous vous présentons les profils correspondants aux critères définis ensemble, avec l'expérience déclarée et les références recueillies." },
+    { "t": "Vous rencontrez, puis nous suivons", "p": "Vous échangez avec la personne, vous décidez. Nous restons joignables après la mise en relation." }
+  ],
+  "missions": [
+    {
+      "nom": "Basma H.",
+      "lieu": "Rabat",
+      "texte": "Cliente accompagnée à Rabat, de l'écoute du besoin familial jusqu'au suivi après le placement. Prénom et ville publiés avec son accord."
+    }
+  ],
+  "faq": [
+    { "q": "Combien coûte une nounou à Casablanca ?", "r": "Notre grille donne des repères mensuels : 3 500 DH pour un enfant, 4 000 DH pour un enfant avec ménage, 4 500 à 5 000 DH pour deux enfants avec ménage, 4 500 DH pour trois enfants en garde seule et 5 000 DH pour trois enfants avec ménage. Le montant réel dépend des horaires, des tâches et de la formule choisie." },
+    { "q": "Une nounou peut-elle être logée ?", "r": "Oui, si votre logement dispose d'une chambre. La formule logée implique un jour de repos défini avec vous et une organisation claire des horaires : nous en parlons avant la mise en relation pour éviter les malentendus. Sinon, la formule non logée couvre une plage horaire définie." },
+    { "q": "Peut-elle aussi faire le ménage ?", "r": "Oui, c'est une formule à part entière, avec un repère tarifaire distinct : « nounou + ménage ». Nous vous aidons à décider si c'est pertinent : avec un bébé, l'accumulation des deux tâches peut être contre-productive, et il vaut parfois mieux séparer les deux postes." },
+    { "q": "Que faire si le profil ne convient pas ?", "r": "Les formules Sérénité et Premium prévoient des remplacements pendant 2 mois (Sérénité) et 6 mois (Premium), selon les conditions expliquées avant la mise en relation. Nous suivons la situation avec vous et cherchons une solution plutôt que de vous laisser sans réponse." },
+    { "q": "Faut-il des références ?", "r": "Nous demandons deux références à chaque candidate sur notre fiche de candidature, et nous indiquons lors de la mise en relation l'expérience qu'elle déclare. Les références ne sont jamais publiées : elles servent à la vérification et à l'échange que vous aurez directement avec la personne." },
+    { "q": "Recrutez-vous des nounous pour d'autres villes ?", "r": "Nous intervenons notamment à Casablanca, Bouskoura, Dar Bouazza, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara, Salé et Bouznika, et dans d'autres villes selon les demandes. Consultez la page « tous nos services par ville » ou écrivez-nous : nous vous dirons ce qui est possible chez vous." }
+  ],
+  "titreLiens": "Autres services à Casablanca",
+  "introLiens": "Une nounou ne règle pas tout. Voici les autres profils que nous recherchons pour les familles de Casablanca.",
+  "liens": [
+    { "fichier": "femme-menage-casablanca.html", "titre": "Femme de ménage à Casablanca", "texte": "Entretien de la maison, repassage, grand ménage et prestation à la journée." },
+    { "fichier": "cuisiniere-casablanca.html", "titre": "Cuisinière à Casablanca", "texte": "Repas du quotidien, cuisine marocaine ou européenne, aide en cuisine." },
+    { "fichier": "garde-malade-casablanca.html", "titre": "Garde-malade à Casablanca", "texte": "Accompagnement d'un parent âgé, seul ou avec le ménage." },
+    { "fichier": "chauffeur-casablanca.html", "titre": "Chauffeur à Casablanca", "texte": "École, activités, courses et trajets réguliers de la famille." },
+    { "fichier": "vigile-casablanca.html", "titre": "Vigile et gardien à Casablanca", "texte": "Surveillance d'une maison, d'une résidence ou d'un local." },
+    { "fichier": "services-par-ville.html", "titre": "Tous nos services par ville", "texte": "La liste des zones où nous intervenons et les services disponibles." }
+  ],
+  "titreCta": "Vous cherchez une nounou à Casablanca ?",
+  "texteCta": "Donnez-nous l'âge des enfants, vos horaires réels et la formule souhaitée. Nous vous répondrons sur WhatsApp pour vous dire précisément ce que nous pouvons faire pour votre famille.",
+  "ctaSecondaire": "Décrire mon besoin"
+}

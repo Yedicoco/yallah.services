@@ -1,0 +1,249 @@
+{
+  "nom": "Yallah Services",
+  "url": "https://yallahservices-one.vercel.app",
+  "urlSouhaitee": "https://yallah.services",
+  "base": "Casablanca — Hay Hassani 20220",
+  "anciennete": "2 ans",
+  "couverture": "Agence basée à Casablanca (Hay Hassani 20220). Zones d'intervention confirmées : Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara, Salé. Autres villes selon les demandes, jamais affichées comme desservies.",
+  "marches": [
+    "particuliers",
+    "entreprises",
+    "candidats"
+  ],
+  "adresse": {
+    "quartier": "Hay Hassani",
+    "ville": "Casablanca",
+    "codePostal": "20220",
+    "region": "Casablanca-Settat",
+    "pays": "MA"
+  },
+  "villes": [
+    {
+      "slug": "casablanca",
+      "nom": "Casablanca",
+      "statut": "confirmee",
+      "phase": 1
+    },
+    {
+      "slug": "bouskoura",
+      "nom": "Bouskoura",
+      "statut": "pole",
+      "phase": 1
+    },
+    {
+      "slug": "dar-bouazza",
+      "nom": "Dar Bouazza",
+      "statut": "confirmee",
+      "phase": 1
+    },
+    {
+      "slug": "rabat",
+      "nom": "Rabat",
+      "statut": "confirmee",
+      "phase": 1
+    },
+    {
+      "slug": "marrakech",
+      "nom": "Marrakech",
+      "statut": "confirmee",
+      "phase": 1
+    },
+    {
+      "slug": "tanger",
+      "nom": "Tanger",
+      "statut": "confirmee",
+      "phase": 2
+    },
+    {
+      "slug": "agadir",
+      "nom": "Agadir",
+      "statut": "confirmee",
+      "phase": 2
+    },
+    {
+      "slug": "mohammedia",
+      "nom": "Mohammedia",
+      "statut": "confirmee",
+      "phase": 2
+    },
+    {
+      "slug": "kenitra",
+      "nom": "Kénitra",
+      "statut": "confirmee",
+      "phase": 2
+    },
+    {
+      "slug": "fes",
+      "nom": "Fès",
+      "statut": "confirmee",
+      "phase": 3
+    },
+    {
+      "slug": "temara",
+      "nom": "Témara",
+      "statut": "confirmee",
+      "phase": 3
+    },
+    {
+      "slug": "bouznika",
+      "nom": "Bouznika",
+      "statut": "confirmee",
+      "phase": 3
+    },
+    {
+      "slug": "sale",
+      "nom": "Salé",
+      "statut": "confirmee",
+      "phase": 3
+    },
+    {
+      "slug": "el-jadida",
+      "nom": "El Jadida",
+      "statut": "candidate",
+      "phase": 3
+    }
+  ],
+  "villesRetirees": [
+    "Meknès",
+    "Oujda",
+    "Tétouan"
+  ],
+  "services": [
+    {
+      "slug": "femme-menage",
+      "nom": "Femme de ménage",
+      "marche": "particuliers"
+    },
+    {
+      "slug": "nounou",
+      "nom": "Nounou",
+      "marche": "particuliers"
+    },
+    {
+      "slug": "cuisiniere",
+      "nom": "Cuisinière",
+      "marche": "particuliers"
+    },
+    {
+      "slug": "garde-malade",
+      "nom": "Garde-malade",
+      "marche": "particuliers"
+    },
+    {
+      "slug": "chauffeur",
+      "nom": "Chauffeur",
+      "marche": "particuliers"
+    },
+    {
+      "slug": "vigile",
+      "nom": "Vigile / gardien",
+      "marche": "particuliers"
+    },
+    {
+      "slug": "personnel-hotellerie",
+      "nom": "Personnel pour hôtels, riads et maisons d'hôtes",
+      "marche": "entreprises"
+    },
+    {
+      "slug": "personnel-restauration",
+      "nom": "Personnel pour restaurants et cafés",
+      "marche": "entreprises"
+    },
+    {
+      "slug": "mains-doeuvre-chantiers",
+      "nom": "Main-d'œuvre et manœuvres pour chantiers",
+      "marche": "entreprises"
+    },
+    {
+      "slug": "personnel-nettoyage",
+      "nom": "Personnel pour sociétés de nettoyage",
+      "marche": "entreprises"
+    },
+    {
+      "slug": "renfort-evenementiel",
+      "nom": "Renfort pour événements",
+      "marche": "entreprises"
+    }
+  ],
+  "zonesCiblage": {
+    "casablanca": [
+      "Anfa",
+      "Aïn Diab",
+      "Californie",
+      "Racine",
+      "Gauthier",
+      "CIL",
+      "CFC",
+      "Bouskoura",
+      "Dar Bouazza"
+    ],
+    "rabat": [
+      "Souissi",
+      "Hay Riad",
+      "Les Ambassadeurs",
+      "Agdal",
+      "Haut Agdal"
+    ],
+    "marrakech": [
+      "Hivernage",
+      "Palmeraie",
+      "Agdal",
+      "Targa",
+      "Amelkis",
+      "Guéliz"
+    ],
+    "tanger": [
+      "Malabata",
+      "Cap Spartel",
+      "Jbel Kbir",
+      "Iberia",
+      "Achakar"
+    ],
+    "agadir": [
+      "Founty",
+      "Haut-Founty",
+      "Quartier Suisse",
+      "Sonaba",
+      "Marina"
+    ],
+    "fes": [
+      "Route d'Imouzzer",
+      "Champs de Course",
+      "Narjiss",
+      "Ville Nouvelle"
+    ],
+    "kenitra": [
+      "Mimosas",
+      "Maamora",
+      "Bir Rami",
+      "Centre-ville"
+    ],
+    "mohammedia": [
+      "Parc",
+      "Monica",
+      "Manesmann",
+      "Fedala"
+    ],
+    "temara": [
+      "Harhoura",
+      "Guich Loudaya",
+      "Wifaq",
+      "Témara Centre"
+    ],
+    "el-jadida": [
+      "Centre-ville résidentiel",
+      "Haouzia",
+      "Sidi Bouzid"
+    ],
+    "bouznika": [
+      "Centre",
+      "Front de mer",
+      "Secteurs résidentiels"
+    ]
+  },
+  "pagesHorsSitemap": [
+    "admin.html",
+    "candidature-confirmation.html",
+    "plan-placement-du-formulaire.html"
+  ]
+}

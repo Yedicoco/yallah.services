@@ -101,6 +101,7 @@ h1.ht em{font-style:italic;background:linear-gradient(135deg,#d8b361,#f2db9b);-w
 .hero-sub{color:rgba(255,255,255,0.65);font-size:14px;line-height:1.65;margin-bottom:22px;max-width:440px;margin-left:auto;margin-right:auto}
 .hero-sub strong{color:rgba(255,255,255,0.9);font-weight:600}
 .wa-grn{color:#a7f3d0;font-weight:900}
+.hero-signature{margin:14px 0 0;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:19px;letter-spacing:.4px;color:#e9d493;text-transform:uppercase}
 .hero-hint{color:rgba(255,255,255,0.5);font-size:11px;margin-bottom:16px}
 .hero-hint strong{color:#d8b361}
 .urgency{display:inline-flex;align-items:center;gap:6px;background:rgba(240,130,0,0.16);border:1px solid rgba(216,179,97,0.3);color:#fbbf24;font-size:11px;font-weight:700;padding:5px 13px;border-radius:30px;animation:waPulse 2.5s infinite;margin-bottom:18px}
@@ -252,10 +253,16 @@ h1.ht em{font-style:italic;background:linear-gradient(135deg,#d8b361,#f2db9b);-w
 .tc::before{content:'"';position:absolute;top:12px;right:16px;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:52px;color:#f0f2f8;line-height:1;font-weight:900}
 .temo-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .tav{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2.5px solid #d8b361}
+/* Avatar d'avis client : initiales, jamais la photo d'une personne qui n'est pas la cliente */
+.tav-initials{width:52px;height:52px;border-radius:50%;flex-shrink:0;border:2.5px solid #d8b361;display:grid;place-items:center;background:linear-gradient(145deg,#0b2035,#16375c);color:#e9d493;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:800;font-size:21px;letter-spacing:.5px;line-height:1}
 .tname{font-size:13px;font-weight:800;color:#0b2035;margin-bottom:1px}
 .tcity{font-size:10px;color:#9ca3af}
 .tstars{color:#d8b361;font-size:12px;margin-top:2px}
 .ttxt{color:#4b5563;font-size:12px;line-height:1.7;font-style:italic;position:relative;z-index:1}
+/* Synthèse rédigée par l'agence (en attente de validation cliente) :
+   ni guillemet décoratif, ni italique — ce n'est pas une citation */
+.tc.resume::before{content:none}
+.tc.resume .ttxt{font-style:normal}
 .temo-wa-wrap{margin-top:36px;background:#fff;border-radius:20px;padding:24px;box-shadow:0 8px 32px rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.06)}
 .temo-wa-wrap .temo-wa-title{font-size:15px;font-weight:800;color:#0b2035;margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .temo-wa-wrap .temo-wa-title span{background:#25D366;color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:0.5px}
