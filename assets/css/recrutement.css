@@ -251,9 +251,10 @@ body.ys-page h1, body.ys-page h2, body.ys-page h3 { font-weight: 800; letter-spa
 }
 .ys-footer a { color: var(--ys-texte-clair); text-decoration: none; }
 .ys-footer a:hover { color: var(--ys-or-clair); }
-.ys-footer .social-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 14px; margin-top: 12px; }
-.ys-footer .social-links a { font-weight: 600; display: inline-block; padding: 4px 2px; }
-.ys-footer .social-links span { flex-basis: 100%; }
+.ys-footer .social-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 8px; margin-top: 12px; }
+.ys-footer .social-links a { font-weight: 600; display: inline-flex; align-items: center; gap: 4px; padding: 3px 1px; }
+.ys-footer .social-links > span { flex-basis: 100%; }
+.ys-footer .social-icon { width: 14px; height: 14px; flex: none; }
 .ys-footer-lignes { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; align-items: center; }
 
 /* ── VERSION ARABE (RTL) ── */
