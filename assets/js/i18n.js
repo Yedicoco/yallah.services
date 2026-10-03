@@ -49,7 +49,13 @@
     'candidature',
     'candidature-confirmation',
     'personnel-entreprises',
-    'services-par-ville'
+    'services-par-ville',
+    'nounou-casablanca',
+    'femme-menage-casablanca',
+    'cuisiniere-casablanca',
+    'garde-malade-casablanca',
+    'chauffeur-casablanca',
+    'vigile-casablanca'
   ];
 
   /* ─────────── Règles de parcours (identiques à outils/extraire-i18n.js) ─────────── */

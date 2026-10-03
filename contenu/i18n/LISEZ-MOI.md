@@ -29,13 +29,27 @@ mémorisé : il le retrouve sur la page suivante.
 | `candidature-confirmation.html` | 48 en anglais · 32 en darija |
 | `personnel-entreprises.html` (hub entreprises) | 93 |
 | `services-par-ville.html` (hub ville) | 89 |
+| `nounou-casablanca.html` | 134 |
+| `femme-menage-casablanca.html` | 137 |
+| `cuisiniere-casablanca.html` | 131 |
+| `garde-malade-casablanca.html` | 126 |
+| `chauffeur-casablanca.html` | 126 |
+| `vigile-casablanca.html` | 129 |
 
-**Total : 2 281 traductions.** Les dix pages « service × ville »
-(`nounou-casablanca.html`, `femme-menage-marrakech.html`, `nounou-rabat.html`…)
-restent en français : le site ne peut pas « casser », elles s'affichent simplement
-dans leur langue de base et sans sélecteur. Elles viendront avec le même outil
-(les six pages de Casablanca sont générées par `outils/generer-pages-villes.js`,
-la traduction doit donc y passer par `contenu/pages/*.json`).
+**Total : 4 630 traductions publiées sur 11 pages (33 dictionnaires).** Les
+quatre pages « service × ville » restantes (`femme-menage-rabat.html`,
+`femme-menage-marrakech.html`, `femme-menage-tanger.html`, `nounou-rabat.html`)
+restent en français : le site ne peut pas « casser », elles s'affichent
+simplement dans leur langue de base et sans sélecteur. Elles viendront avec le
+même outil.
+
+⚠️ Les six pages de Casablanca sont **générées** par
+`outils/generer-pages-villes.js` : ne jamais corriger leur HTML à la main.
+Après une modification de `contenu/pages/*.json`, relancer la génération, puis
+`node outils/extraire-i18n.js --json` et `node outils/reindexer-i18n.js --ecrire`
+avant de retoucher les traductions : les fichiers
+`contenu/i18n/traductions/*.json` sont indexés par position et portent une
+empreinte qui prévient tout décalage silencieux.
 
 ## Ce qui est traduit automatiquement
 
@@ -99,5 +113,10 @@ de `assets/js/i18n.js`.
 * **Empreinte des clés** : si le HTML change, le générateur refuse d'écrire les
   dictionnaires (aucun risque de traduction décalée en silence).
 * **Test automatique** (`node outils/tester-i18n.js`, avec `npm i jsdom`) :
-  vérifie les 4 affichages sur les 5 pages — langue, sens d'écriture,
-  application des 2 281 clés, retour au français sans résidu.
+  vérifie les 4 affichages sur **toutes les pages déclarées dans
+  `PAGES_TRADUITES`** (11 aujourd'hui, lues dans le moteur : aucune liste à
+  tenir à jour ici) — langue, sens d'écriture, application des 4 630
+  traductions publiées, retour au français sans résidu.
+* **Contrôle du site** (`node outils/verifier-site.js`) : compte les
+  dictionnaires réellement publiés à partir de la même liste, et signale les
+  pages du site qui n'ont pas encore de traduction.

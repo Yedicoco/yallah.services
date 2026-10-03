@@ -58,8 +58,22 @@ if (typeof jsdom.requestInterceptor === 'function') {
   OPTIONS_RESEAU = new ChargeurLocal();
 }
 
-const PAGES = ['index.html', 'services-par-ville.html', 'personnel-entreprises.html',
-  'candidature.html', 'candidature-confirmation.html'];
+/* Pages testées : celles déclarées dans le moteur (assets/js/i18n.js), pour
+   qu'une page nouvellement branchée soit contrôlée sans rien changer ici.
+   Repli sur la liste de base si le moteur est illisible. */
+const PAGES = (() => {
+  const base = ['index.html', 'services-par-ville.html', 'personnel-entreprises.html',
+    'candidature.html', 'candidature-confirmation.html'];
+  try {
+    const moteur = fs.readFileSync(path.join(RACINE, 'assets', 'js', 'i18n.js'), 'utf8');
+    const declarees = (moteur.match(/PAGES_TRADUITES = \[([\s\S]*?)\]/) || [])[1] || '';
+    const noms = (declarees.match(/'([^']+)'/g) || []).map((x) => x.replace(/'/g, '') + '.html')
+      .filter((page) => fs.existsSync(path.join(RACINE, page)));
+    return noms.length ? noms : base;
+  } catch (e) {
+    return base;
+  }
+})();
 const LANGUES = ['fr', 'dar', 'dar-latn', 'en'];
 const ATTENDU = {
   fr: ['fr-MA', 'ltr', 'fr'],

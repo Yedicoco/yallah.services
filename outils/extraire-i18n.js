@@ -45,7 +45,16 @@ const PAGES = [
   'candidature.html',
   'candidature-confirmation.html',
   'personnel-entreprises.html',
-  'services-par-ville.html'
+  'services-par-ville.html',
+  /* Pages « service × ville » de Casablanca : générées par
+     outils/generer-pages-villes.js. Toute régénération décale les chaînes :
+     relancer extraire-i18n.js --json puis reindexer-i18n.js. */
+  'nounou-casablanca.html',
+  'femme-menage-casablanca.html',
+  'cuisiniere-casablanca.html',
+  'garde-malade-casablanca.html',
+  'chauffeur-casablanca.html',
+  'vigile-casablanca.html'
 ];
 
 const DOSSIER_I18N = path.join(RACINE, 'contenu', 'i18n');

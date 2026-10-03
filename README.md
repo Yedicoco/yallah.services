@@ -175,14 +175,22 @@ navigateur décide (`ar…` → darija, `en…` → anglais, sinon français).
 On peut aussi forcer une langue par l'adresse : `?langue=en`, `?langue=dar`,
 `?langue=fr` (l'ancien paramètre `ar` est accepté et donne la darija).
 
-**Pages couvertes aujourd'hui** : accueil, fiche de candidature, confirmation de
-candidature, hub entreprises, services par ville. Les dix pages
-« service × ville » (Casablanca, Rabat, Marrakech, Tanger) restent en français
-pour l'instant : le moteur les laisse dans leur langue de base et n'y affiche pas
-le sélecteur. Les six pages de Casablanca sont en plus **générées** par
-`outils/generer-pages-villes.js` : les traduire demande de passer par
-`contenu/pages/*.json`, sinon la prochaine génération effacerait le travail.
-Pour les autres, voir « Ajouter des traductions » ci-dessous.
+**Pages couvertes aujourd'hui (11)** : accueil, fiche de candidature,
+confirmation de candidature, hub entreprises, services par ville, et les six
+pages « service × ville » de Casablanca (ménage, nounou, cuisinière,
+garde-malade, chauffeur, vigile). Les quatre pages
+« service × ville » restantes (femme de ménage à Rabat, Marrakech et Tanger,
+nounou à Rabat) restent en français pour l'instant : le moteur les laisse dans
+leur langue de base et n'y affiche pas le sélecteur. Pour les traduire, voir
+« Ajouter des traductions » ci-dessous.
+
+⚠️ Les six pages de Casablanca sont **générées** par
+`outils/generer-pages-villes.js` à partir de `contenu/pages/*.json` : ne
+jamais corriger leur HTML à la main. Le cycle est donc : modifier le JSON →
+`node outils/generer-pages-villes.js` → `node outils/extraire-i18n.js --json`
+→ `node outils/reindexer-i18n.js --ecrire` (si le HTML a changé) → traduire →
+`node outils/generer-i18n.js`. Les fichiers
+`contenu/i18n/traductions/<page>.<langue>.json` survivent à une régénération.
 
 ### Comment ça marche
 
