@@ -224,8 +224,22 @@ if (existe('assets/js/config.js')) {
 /* ── 8. Affichage multilingue (français · darija · darija latine · anglais) ── */
 section('8. Affichage multilingue');
 {
-  const PAGES_I18N = ['index.html', 'candidature.html', 'candidature-confirmation.html',
-    'personnel-entreprises.html', 'services-par-ville.html'];
+  /* Pages multilingues : la liste est lue dans le moteur (PAGES_TRADUITES),
+     pour qu'une page nouvellement branchée soit contrôlée automatiquement.
+     Repli sur la liste de base si le moteur est illisible. */
+  const PAGES_I18N = (() => {
+    const base = ["index.html", "candidature.html", "candidature-confirmation.html",
+      "personnel-entreprises.html", "services-par-ville.html"];
+    try {
+      const moteur = lire('assets/js/i18n.js');
+      const declarees = (moteur.match(/PAGES_TRADUITES = \[([\s\S]*?)\]/) || [])[1] || '';
+      const noms = (declarees.match(/'([^']+)'/g) || []).map((x) => x.replace(/'/g, '') + '.html')
+        .filter((page) => existe(page));
+      return noms.length ? noms : base;
+    } catch (e) {
+      return base;
+    }
+  })();
   const LANGUES = ['dar', 'dar-latn', 'en'];
 
   if (!existe('assets/js/i18n.js')) erreur('Moteur multilingue manquant : assets/js/i18n.js');

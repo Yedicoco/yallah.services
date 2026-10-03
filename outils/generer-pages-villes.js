@@ -29,7 +29,11 @@ const EMAIL = 'servicesyallah@gmail.com';
 const VERIFIER_SEULEMENT = process.argv.includes('--verifier');
 
 /* ── Utilitaires ── */
-const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const esc = (t) => {
+  /* un champ absent ne doit jamais s'afficher « undefined » dans la page */
+  if (t === undefined || t === null) return '';
+  return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+};
 const escAttr = (t) => esc(t).replace(/"/g, '&quot;');
 const waLien = (texte) => WA + '?text=' + encodeURIComponent(texte);
 const mots = (t) => (String(t).match(/[\p{L}\p{N}][\p{L}\p{N}'’-]*/gu) || []).length;
@@ -206,6 +210,9 @@ function rendrePage(page) {
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/brand.css">
   <link rel="stylesheet" href="assets/css/local.css">
+  <link rel="stylesheet" href="assets/css/i18n.css">
+  <!-- Multilingue : français · darija (arabe et latin) · anglais -->
+  <script src="assets/js/i18n.js"></script>
 
 ${rendreSchema(page)}
 </head>

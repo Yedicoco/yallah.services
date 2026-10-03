@@ -45,7 +45,16 @@ const PAGES = [
   'candidature.html',
   'candidature-confirmation.html',
   'personnel-entreprises.html',
-  'services-par-ville.html'
+  'services-par-ville.html',
+  /* Pages « service × ville » de Casablanca : générées par
+     outils/generer-pages-villes.js. Toute régénération décale les chaînes :
+     relancer extraire-i18n.js --json puis reindexer-i18n.js. */
+  'nounou-casablanca.html',
+  'femme-menage-casablanca.html',
+  'cuisiniere-casablanca.html',
+  'garde-malade-casablanca.html',
+  'chauffeur-casablanca.html',
+  'vigile-casablanca.html'
 ];
 
 const DOSSIER_I18N = path.join(RACINE, 'contenu', 'i18n');
@@ -432,7 +441,20 @@ function main() {
         clesArabe: [...res.clesAr.values()]
       };
     });
-    fs.writeFileSync(path.join(DOSSIER_I18N, 'cles.json'), JSON.stringify(exportJson, null, 2), 'utf8');
+    const fichierCles = path.join(DOSSIER_I18N, 'cles.json');
+    const nouveau = JSON.stringify(exportJson, null, 2);
+    /* Les traductions sont numérotées par position dans cette liste : si le
+       HTML a changé, on conserve la liste précédente, qui permet à
+       outils/reindexer-i18n.js de retrouver les traductions déjà écrites. */
+    if (fs.existsSync(fichierCles)) {
+      const ancien = fs.readFileSync(fichierCles, 'utf8');
+      if (ancien !== nouveau) {
+        fs.writeFileSync(path.join(DOSSIER_I18N, 'cles.prec.json'), ancien, 'utf8');
+        console.log('🗂️  contenu/i18n/cles.prec.json conservé (liste précédente — ' +
+          'outils/reindexer-i18n.js s\'en sert).');
+      }
+    }
+    fs.writeFileSync(fichierCles, nouveau, 'utf8');
     console.log('📄 contenu/i18n/cles.json écrit.');
   }
 
