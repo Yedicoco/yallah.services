@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   468 chaînes, clés = textes d'origine de la page.
+   476 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -14,6 +14,7 @@ YS_TRAD("en", "index", {
   "Packs": "Packages",
   "Frais": "Fees",
   "FAQ": "FAQ",
+  "Entreprises": "Businesses",
   "Contact": "Contact",
   "Espace candidats": "Job seekers",
   "@wa:Bonjour Yallah Services !": "Hello Yallah Services!",
@@ -22,6 +23,7 @@ YS_TRAD("en", "index", {
   "Avis clients": "Customer reviews",
   "Packs & Tarifs": "Packages & prices",
   "Frais de Mise en relation": "Placement fees",
+  "Entreprises — vidéo B2B": "Businesses — B2B video",
   "🧑‍🍳 Espace candidats — je cherche un emploi": "🧑‍🍳 Job seekers — I am looking for work",
   "💬 WhatsApp — +212 691 733 585": "💬 WhatsApp — +212 691 733 585",
   "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "Yallah Services team: housekeeper, cook, nanny, caregiver and driver serving households in Morocco",
@@ -147,6 +149,12 @@ YS_TRAD("en", "index", {
   "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Yallah Service ». Je souhaite échanger sur une aide à domicile. Ma ville et mon besoin :": "Hello Yallah Services, I have just watched the “Yallah Service” video. I would like to discuss home help. My city and needs: ",
   "Les services à domicile": "Home services",
   "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :": "Hello Yallah Services, I have just watched the “Home services” video. I would like to describe my household needs. My city and the service I need: ",
+  "@aria-label:Voir la vidéo dédiée aux entreprises": "Watch the video for businesses",
+  "@alt:Aperçu de la vidéo Yallah Services pour les entreprises": "Preview of the Yallah Services video for businesses",
+  "Vous recrutez pour une entreprise ?": "Hiring for your business?",
+  "Notre vidéo dédiée aux entreprises": "Our video for businesses",
+  "Hôtels, riads, restaurants, chantiers, nettoyage et événements : découvrez notre service de recherche et de mise en relation de personnel.": "Hotels, riads, restaurants, building sites, cleaning and events: discover our staff search and placement service.",
+  "Voir la vidéo B2B →": "Watch the B2B video →",
   "Grille tarifaire des services": "Service price list",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "Housekeeper, nanny and cook rates in Morocco (2026)",
   "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "Monthly rates depending on the service and the tasks — indicative salaries that may vary with conditions and responsibilities.",

@@ -14,8 +14,8 @@
        --url <adresse>   domaine public (défaut : site.config.json)
        --dossier <chemin>  où écrire le sitemap (défaut : racine)
 
-   Le script met aussi à jour la ligne « Sitemap: … » de robots.txt
-   lorsque le sitemap est écrit à la racine.
+   Le script génère aussi video-sitemap.xml et synchronise les deux lignes
+   « Sitemap: … » dans le robots.txt du dossier de sortie, s'il existe.
 
    Utilisé comme module par build-site.js (fonction construire + écrire).
 ══════════════════════════════════════════════════════════════════ */
@@ -27,6 +27,7 @@ const { execFileSync } = require('child_process');
 
 const RACINE = path.resolve(__dirname, '..');
 const CONFIG = JSON.parse(fs.readFileSync(path.join(RACINE, 'site.config.json'), 'utf8'));
+const VIDEOS = JSON.parse(fs.readFileSync(path.join(RACINE, 'contenu/videos-seo.json'), 'utf8'));
 
 function argument(nom, defaut) {
   const index = process.argv.indexOf(nom);
@@ -89,12 +90,17 @@ function construire(url, dossier) {
     });
 }
 
+function echapperXml(valeur) {
+  return String(valeur).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+}
+
 function enXml(entrees) {
   const lignes = ['<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
   entrees.forEach((e) => {
     lignes.push('  <url>');
-    lignes.push('    <loc>' + e.loc + '</loc>');
+    lignes.push('    <loc>' + echapperXml(e.loc) + '</loc>');
     lignes.push('    <lastmod>' + e.lastmod + '</lastmod>');
     lignes.push('    <changefreq>' + e.changefreq + '</changefreq>');
     lignes.push('    <priority>' + e.priority + '</priority>');
@@ -104,18 +110,52 @@ function enXml(entrees) {
   return lignes.join('\n') + '\n';
 }
 
-/* robots.txt : la ligne « Sitemap: … » suit toujours le domaine configuré */
+/* Un video-sitemap.xml référence chaque MP4 et sa vignette sous sa page visible. */
+function enVideoXml(url, dossier) {
+  const adresse = String(url).replace(/\/+$/, '');
+  const pages = new Map();
+  VIDEOS.videos.forEach((video) => {
+    const page = path.join(dossier || RACINE, video.page);
+    const miniature = path.join(dossier || RACINE, video.thumbnail);
+    const contenu = path.join(dossier || RACINE, video.content);
+    if (!fs.existsSync(page) || !fs.existsSync(miniature) || !fs.existsSync(contenu)) {
+      throw new Error('Ressource vidéo manquante pour le sitemap : ' + video.page + ' / ' + video.content);
+    }
+    const loc = adresse + '/' + (video.page === 'index.html' ? '' : video.page);
+    if (!pages.has(loc)) pages.set(loc, []);
+    pages.get(loc).push(video);
+  });
+
+  const lignes = ['<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+    '        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">'];
+  pages.forEach((videos, loc) => {
+    lignes.push('  <url>');
+    lignes.push('    <loc>' + echapperXml(loc) + '</loc>');
+    videos.forEach((video) => {
+      lignes.push('    <video:video>');
+      lignes.push('      <video:thumbnail_loc>' + echapperXml(adresse + '/' + video.thumbnail) + '</video:thumbnail_loc>');
+      lignes.push('      <video:title>' + echapperXml(video.name) + '</video:title>');
+      lignes.push('      <video:description>' + echapperXml(video.description) + '</video:description>');
+      lignes.push('      <video:content_loc>' + echapperXml(adresse + '/' + video.content) + '</video:content_loc>');
+      lignes.push('      <video:publication_date>' + VIDEOS.publicationDate + '</video:publication_date>');
+      lignes.push('    </video:video>');
+    });
+    lignes.push('  </url>');
+  });
+  lignes.push('</urlset>');
+  return lignes.join('\n') + '\n';
+}
+
+/* robots.txt : publier les deux sitemaps, sous le domaine configuré. */
 function synchroniserRobots(dossier, adresse) {
   const chemin = path.join(dossier, 'robots.txt');
   if (!fs.existsSync(chemin)) return false;
-  let contenu = fs.readFileSync(chemin, 'utf8');
-  const ligne = 'Sitemap: ' + adresse.replace(/\/+$/, '') + '/sitemap.xml';
-  if (/^Sitemap:.*$/m.test(contenu)) {
-    contenu = contenu.replace(/^Sitemap:.*$/m, ligne);
-  } else {
-    contenu = contenu.replace(/\s*$/, '\n\n' + ligne + '\n');
-  }
-  fs.writeFileSync(chemin, contenu, 'utf8');
+  const contenu = fs.readFileSync(chemin, 'utf8');
+  const sansSitemaps = contenu.replace(/^Sitemap:.*(?:\r?\n|$)/gm, '').replace(/\n{3,}/g, '\n\n').trimEnd();
+  const base = adresse.replace(/\/+$/, '');
+  const lignes = [base + '/sitemap.xml', base + '/video-sitemap.xml'].map((s) => 'Sitemap: ' + s);
+  fs.writeFileSync(chemin, (sansSitemaps ? sansSitemaps + '\n\n' : '') + lignes.join('\n') + '\n', 'utf8');
   return true;
 }
 
@@ -124,11 +164,12 @@ function ecrire(url, dossier) {
   const adresse = String(url).replace(/\/+$/, '');
   const entrees = construire(adresse, cible);
   fs.writeFileSync(path.join(cible, 'sitemap.xml'), enXml(entrees), 'utf8');
-  if (path.resolve(cible) === RACINE) synchroniserRobots(cible, adresse);
+  fs.writeFileSync(path.join(cible, 'video-sitemap.xml'), enVideoXml(adresse, cible), 'utf8');
+  synchroniserRobots(cible, adresse);
   return entrees;
 }
 
-module.exports = { construire, enXml, ecrire, priorite };
+module.exports = { construire, enXml, enVideoXml, ecrire, priorite, synchroniserRobots };
 
 /* ── Exécution directe ── */
 if (require.main === module) {

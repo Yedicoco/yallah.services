@@ -48,8 +48,43 @@ for (const [page, noms] of [['index.html', attendus.slice(0, 3)], ['personnel-en
     assert.ok(html.indexOf('id="temo"') < html.indexOf('id="videos"'));
     assert.ok(html.indexOf('id="videos"') < html.indexOf('id="packs"'));
     assert.ok(!html.includes('prospection-b2b.mp4'));
+    assert.ok(html.includes('href="personnel-entreprises.html#video-entreprises"'));
+    assert.ok(html.includes('src="assets/img/videos/prospection-b2b.jpg"'));
+    assert.ok(html.includes('id="video-business-promo-title"'));
   } else {
+    assert.ok(html.includes('href="#video-entreprises">Vidéo B2B</a>'));
     attendus.slice(0, 3).forEach(nom => assert.ok(!html.includes(nom)));
   }
 }
-console.log('✅ Quatre MP4 identiques aux sources ; chemins, vignettes, placement, commandes natives et WhatsApp valides (' + path.relative(racine, dossier) + ').');
+
+// Contrôle que sitemap vidéo et VideoObject décrivent exactement les mêmes MP4 que la galerie.
+const seo = JSON.parse(fs.readFileSync(path.join(racine, 'contenu/videos-seo.json'), 'utf8'));
+const config = JSON.parse(fs.readFileSync(path.join(racine, 'site.config.json'), 'utf8'));
+const base = config.url.replace(/\/+$/, '');
+assert.equal(seo.videos.length, attendus.length);
+const sitemapVideo = fs.readFileSync(path.join(dossier, 'video-sitemap.xml'), 'utf8');
+assert.match(sitemapVideo, /xmlns:video="http:\/\/www\.google\.com\/schemas\/sitemap-video\/1\.1"/);
+assert.equal((sitemapVideo.match(/<video:video>/g) || []).length, attendus.length);
+assert.equal((sitemapVideo.match(/<video:content_loc>/g) || []).length, attendus.length);
+for (const video of seo.videos) {
+  assert.ok(sitemapVideo.includes('<video:title>' + video.name + '</video:title>'));
+  assert.ok(sitemapVideo.includes(base + '/' + video.content));
+  const html = fs.readFileSync(path.join(dossier, video.page), 'utf8');
+  const scripts = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  const graph = scripts.flatMap(([, body]) => {
+    const json = JSON.parse(body);
+    return json['@graph'] || [json];
+  });
+  const entity = graph.find(item => item['@type'] === 'VideoObject' && item['@id'] === base + '/' + (video.page === 'index.html' ? '' : video.page) + '#' + video.id);
+  assert.ok(entity, 'VideoObject manquant : ' + video.id);
+  assert.equal(entity.name, video.name);
+  assert.equal(entity.description, video.description);
+  assert.equal(entity.contentUrl, base + '/' + video.content);
+  assert.deepEqual(entity.thumbnailUrl, [base + '/' + video.thumbnail]);
+  assert.equal(entity.uploadDate, seo.publicationDate);
+  assert.match(html, /max-video-preview:-1/);
+}
+const robots = fs.readFileSync(path.join(dossier, 'robots.txt'), 'utf8');
+assert.ok(robots.includes(base + '/sitemap.xml'));
+assert.ok(robots.includes(base + '/video-sitemap.xml'));
+console.log('✅ Quatre MP4, VideoObject, video-sitemap.xml, robots.txt, vignettes et contrôles de lecture validés (' + path.relative(racine, dossier) + ').');

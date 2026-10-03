@@ -55,9 +55,52 @@
 }
 .video-grid--single .video-card-body { justify-content: center; padding: 28px; }
 .video-grid--single .video-contact { margin-top: 0; }
+.business-video-promo-card {
+  display: grid;
+  grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 42px);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(18px, 4vw, 34px);
+  overflow: hidden;
+  border: 1px solid var(--brand-line);
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--brand-panel), var(--brand-night));
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .16);
+}
+.business-video-promo-poster {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+  border-radius: 14px;
+  background: #000;
+}
+.business-video-promo-poster img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.business-video-play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  padding-left: 4px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: rgba(5, 20, 34, .76);
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, .35);
+}
+.business-video-promo-copy .st { margin: 8px 0 12px; }
+.business-video-promo-copy .sd { margin: 0 0 22px; }
 @media (max-width: 760px) {
   .video-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .video-card { width: 100%; max-width: 400px; margin-inline: auto; }
   .video-grid--single .video-card { display: flex; max-width: 400px; }
   .video-grid--single .video-card-body { padding: 20px; }
+  .business-video-promo-card { grid-template-columns: minmax(0, 112px) minmax(0, 1fr); gap: 16px; padding: 16px; }
+  .business-video-play { width: 46px; height: 46px; font-size: 20px; }
 }

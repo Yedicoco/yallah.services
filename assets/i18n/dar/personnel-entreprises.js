@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · personnel-entreprises.html
-   99 chaînes, clés = textes d'origine de la page.
+   100 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/personnel-entreprises.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -10,6 +10,7 @@ YS_TRAD("dar", "personnel-entreprises", {
   "@aria-label:Navigation principale": "التنقّل الرئيسي",
   "@aria-label:Yallah Services, accueil": "Yallah Services، الصفحة الرئيسية",
   "@alt:Yallah Services": "Yallah Services",
+  "Vidéo B2B": "فيديو B2B",
   "Services par ville": "الخدمات حسب المدينة",
   "Packs & tarifs": "الباكات والأثمنة",
   "FAQ": "أسئلة مكررة",

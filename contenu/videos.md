@@ -21,8 +21,9 @@ les médias sont donc publiés dans `assets/videos/`, automatiquement repris par
 | `prospection-b2b.mp4` | `personnel-entreprises.html#video-entreprises` uniquement |
 
 La galerie de l'accueil suit `#temo` et précède `#packs`. La vidéo entreprises
-est présentée après l'introduction et avant les secteurs. Aucun tarif ni offre
-n'a été modifié. Les titres restent sobres, sans témoignage ou promesse ajouté.
+est présentée après l'introduction et avant les secteurs. L'accueil affiche aussi
+une vignette-teaser et un lien direct vers ce lecteur (le MP4 n'est pas dupliqué
+sur l'accueil). Aucun tarif ni offre n'a été modifié. Les titres restent sobres, sans témoignage ou promesse ajouté.
 
 ## Affichage et lecture
 
@@ -84,3 +85,20 @@ Résultats de l'intégration :
 Les captures `apercus/videos-*.png` sont régénérables et ignorées par Git.
 Les vérifications navigateur sont locales ; elles ne constituent pas un contrôle
 sur appareil physique ni une vérification du déploiement Vercel en production.
+
+## Référencement vidéo
+
+Les pages contenant les vidéos incluent chacune leurs entités Schema.org `VideoObject`.
+Le fichier `contenu/videos-seo.json` centralise les titres, descriptions, vignettes,
+URL MP4 et date de mise en ligne initiale des galeries (3 octobre 2026). `node outils/generer-sitemap.js`
+produit également `video-sitemap.xml` et déclare les deux sitemaps dans `robots.txt`.
+Le build statique les régénère dans `site-a-mettre-en-ligne/`.
+
+Après publication, soumettre `https://<domaine-canonique>/video-sitemap.xml` dans
+Google Search Console (Sitemaps), puis contrôler les URL de page concernées et le
+rapport d'indexation des vidéos. L'indexation reste à la décision de Google : une
+soumission ou un balisage valide ne garantit pas l'apparition d'un résultat vidéo.
+Vérifier aussi que les URL canoniques, le sitemap, les MP4 et les vignettes utilisent
+le même domaine public. À la date de ce build, le domaine configuré est
+`https://yallahservices-one.vercel.app` ; basculer vers `https://yallah.services`
+uniquement lorsque ce domaine est réellement publié et choisi comme canonique.

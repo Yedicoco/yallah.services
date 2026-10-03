@@ -59,7 +59,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── outils/tester-i18n.js             # Teste les 4 affichages dans un DOM headless (jsdom)
 ├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage)
 ├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
-├── outils/generer-sitemap.js         # Sitemap automatique (lastmod = git) + synchronisation de robots.txt
+├── outils/generer-sitemap.js         # Sitemaps pages + vidéos (lastmod = git), synchronisés dans robots.txt
 ├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
 ├── services-par-ville.html           # Hub : tous les services, ville par ville
 ├── personnel-entreprises.html        # Hub B2B : hôtels, riads, chantiers, nettoyage, événements
@@ -94,7 +94,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── plan-placement-du-formulaire.html # Plan de placement + maquettes (page de revue)
 ├── apercus/                          # Captures d'écran (générées) + mode d'emploi
 ├── data/                             # Base des candidatures (version serveur) — JAMAIS versionnée
-├── netlify.toml · robots.txt · sitemap.xml
+├── netlify.toml · robots.txt · sitemap.xml · video-sitemap.xml
 └── README.md
 ```
 
@@ -110,7 +110,7 @@ node build-site.js           # régénère le dossier
 ```
 
 - Contient : toutes les pages publiques (`index.html`, `candidature.html`, `candidature-confirmation.html`,
-  pages « service × ville »…), `assets/`, `sitemap.xml` (régénéré à chaque build), `robots.txt`, `LISEZ-MOI.txt`.
+  pages « service × ville »…), `assets/`, `sitemap.xml` et `video-sitemap.xml` (régénérés à chaque build), `robots.txt`, `LISEZ-MOI.txt`. Le sitemap vidéo décrit les quatre MP4 avec leur page, titre, description et vignette ; les pages portent aussi leur balisage `VideoObject`.
 - Le numéro de dossier est généré **par le navigateur du candidat** (`YS-2026-0001`, `0002`…), puis la
   fiche part sur WhatsApp et les références par e-mail. **Aucune donnée n'est stockée** : rien à sauvegarder.
 - Test local : ouvrir `site-a-mettre-en-ligne/index.html` dans un navigateur, ou
@@ -377,8 +377,8 @@ node outils/verifier-site.js        # liens, ressources, identifiants JS, formul
 node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie, titles, balisage, maillage
 node outils/generer-pages-villes.js --verifier   # valide les fiches de contenu sans rien écrire
 node outils/generer-pages-villes.js              # régénère les pages service × zone
-node outils/generer-sitemap.js                   # régénère sitemap.xml (lastmod = git)
-node build-site.js                               # site statique complet + sitemap
+node outils/generer-sitemap.js                   # régénère sitemap.xml + video-sitemap.xml
+node build-site.js                               # site statique complet + les deux sitemaps
 node --check assets/js/*.js server.js build-site.js
 ```
 

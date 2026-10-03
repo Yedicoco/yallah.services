@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   468 chaînes, clés = textes d'origine de la page.
+   476 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -14,6 +14,7 @@ YS_TRAD("dar-latn", "index", {
   "Packs": "Packs",
   "Frais": "Maṣarif",
   "FAQ": "As2ila mkerra",
+  "Entreprises": "Ch-charikat",
   "Contact": "Tawasul",
   "Espace candidats": "Fada2 l metrache7in",
   "@wa:Bonjour Yallah Services !": "Salam Yallah Services!",
@@ -22,6 +23,7 @@ YS_TRAD("dar-latn", "index", {
   "Avis clients": "Ara2 l klian",
   "Packs & Tarifs": "Packs w atmana",
   "Frais de Mise en relation": "Maṣarif l matching",
+  "Entreprises — vidéo B2B": "Ch-charikat — video B2B",
   "🧑‍🍳 Espace candidats — je cherche un emploi": "🧑‍🍳 Fada2 l metrache7in — kanqleb 3la khedma",
   "💬 WhatsApp — +212 691 733 585": "💬 WhatsApp — +212 691 733 585",
   "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "Ferqa Yallah Services: kheddama dar, tayyaba, 7adana, ri3ayat l mriḍ w chauffeur f khedmat l osar f Maghrib",
@@ -147,6 +149,12 @@ YS_TRAD("dar-latn", "index", {
   "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Yallah Service ». Je souhaite échanger sur une aide à domicile. Ma ville et mon besoin :": "Ssalam 3likom Yallah Services, cheft lvideo « Yallah Service ». Bghit nehder m3akom 3la mosa3ada f ddar. Lmdina dyali w chno me7taj: ",
   "Les services à domicile": "Lkhadamat f ddar",
   "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :": "Ssalam 3likom Yallah Services, cheft lvideo « Lkhadamat f ddar ». Bghit nwede7 chno me7taj l darna. Lmdina dyali w lkhedma lli kanqelleb 3liha: ",
+  "@aria-label:Voir la vidéo dédiée aux entreprises": "Tferrej f lvideo dyal ch-charikat",
+  "@alt:Aperçu de la vidéo Yallah Services pour les entreprises": "Nadra 3la video dyal Yallah Services l ch-charikat",
+  "Vous recrutez pour une entreprise ?": "Katqelleb 3la mostakhdamin l charika dyalek?",
+  "Notre vidéo dédiée aux entreprises": "Lvideo dyalna l ch-charikat",
+  "Hôtels, riads, restaurants, chantiers, nettoyage et événements : découvrez notre service de recherche et de mise en relation de personnel.": "Lhotels, riyadat, mt3amat, lwerchat, tnqiya w lmonasabat: katchouf khidmat lba7t 3la lmostakhdamin w ljma3 binathom w bin ch-charikat.",
+  "Voir la vidéo B2B →": "Chouf video B2B →",
   "Grille tarifaire des services": "Jadwal atmanat l khadamat",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "Atmanat kheddama dar, 7adana w teyyaba f l Maghrib (2026)",
   "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "Atmana chahriya 7sab l khedma w l miham — ojra ichariya ymken ttebdel 7sab ch-chorot w l mas2uliyat.",

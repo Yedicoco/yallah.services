@@ -7,3 +7,4 @@ Disallow: /admin.html
 Disallow: /api/
 
 Sitemap: https://yallahservices-one.vercel.app/sitemap.xml
+Sitemap: https://yallahservices-one.vercel.app/video-sitemap.xml
