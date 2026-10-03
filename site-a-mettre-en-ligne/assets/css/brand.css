@@ -95,26 +95,26 @@ footer,footer a { color:var(--brand-muted); }
   .reveal { opacity:1; transform:none; }
 }
 
-/* Hero commerciale : la promesse précède la galerie de profils. */
-.hero-inner { padding-bottom: 34px; }
-.hero-sub-secondary { margin-top: -12px; color: rgba(255,255,255,0.52); }
+/* Hero : l'image d'équipe est affichée en grand tout en haut dès la première page, sur ordinateur comme sur mobile. */
+#hero { display:flex; flex-direction:column; align-items:center; padding-top:76px; }
+.hero-img-wrap { width:100%; max-width:1360px; margin:0 auto; background:var(--brand-night); border:1px solid var(--brand-line); border-top:0; overflow:hidden; }
+.hero-img-wrap picture { display:block; width:100%; }
+.hero-img-wrap img { width:100%; height:auto; max-height:min(68vh, 620px); aspect-ratio:auto; object-fit:contain; object-position:center; display:block; margin:0 auto; }
+.hero-img-overlay { height:26%; }
+.hero-image-caption { position:absolute; z-index:2; bottom:12px; left:5%; right:5%; text-align:center; color:rgba(255,255,255,.82); font-size:11px; line-height:1.4; letter-spacing:.1px; }
+.hero-inner { max-width:860px; margin:0 auto; padding:28px 5% 42px; text-align:center; }
+h1.ht { font-size:clamp(26px,4vw,46px); line-height:1.14; }
+.hero-sub { max-width:620px; margin-left:auto; margin-right:auto; }
+.hero-sub-secondary { margin-top:-12px; color:rgba(255,255,255,0.52); }
 .hero-actions { display:flex; flex-direction:column; align-items:center; gap:5px; }
 .hero-secondary { color:#d8b361; font-size:12px; font-weight:700; text-decoration:none; padding:5px 12px; transition:color .2s ease; }
 .hero-secondary:hover { color:#f2db9b; }
-.hero-image-caption { position:absolute; z-index:2; bottom:14px; left:5%; right:5%; text-align:center; color:rgba(255,255,255,.78); font-size:11px; line-height:1.4; letter-spacing:.1px; }
 .hero-warn a { color:#f2db9b; text-decoration:underline; text-underline-offset:2px; }
-@media(min-width:900px){
-  #hero { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); align-items:center; min-height:650px; padding:76px 5% 0; gap:clamp(24px,5vw,72px); }
-  .hero-inner { max-width:590px; padding:48px 0 58px; text-align:left; margin:0; }
-  .hero-sub { margin-left:0; margin-right:0; }
-  .hero-actions { align-items:flex-start; }
-  .hero-img-wrap { border:1px solid var(--brand-line); border-bottom:0; border-radius:18px 18px 0 0; overflow:hidden; max-width:670px; width:100%; justify-self:end; }
-  .hero-img-wrap img { max-height:580px; min-height:480px; object-fit:cover; object-position:center 35%; }
-  .hero-img-overlay { height:36%; }
-  .hero-image-caption { text-align:left; left:20px; right:20px; }
-  .divider { margin-left:0; }
-  .stats { justify-content:flex-start; }
-  .stat:first-child { padding-left:0; }
+@media(max-width:768px){
+  #hero { padding-top:68px; }
+  .hero-img-wrap { border-left:0; border-right:0; }
+  .hero-img-wrap img { max-height:none; }
+  .hero-inner { padding:22px 5% 34px; }
 }
 
 /* Rubriques plus lisibles : hiérarchie renforcée sans alourdir la mise en page. */
@@ -127,25 +127,4 @@ footer,footer a { color:var(--brand-muted); }
 @media(max-width:1100px) and (min-width:701px){
   .nav-links { gap: 12px; }
   .nav-links a { font-size: 12.5px; }
-}
-
-/* Photo hero complète : aucun recadrage, tous les métiers restent visibles d’un seul coup d’œil. */
-.hero-img-wrap { background:var(--brand-night); }
-.hero-img-wrap img { width:100%; height:auto; max-height:none; aspect-ratio:auto; object-fit:contain; object-position:center; display:block; }
-@media(min-width:900px){
-  .hero-img-wrap { align-self:center; }
-  .hero-img-wrap img { min-height:0; }
-  .hero-img-overlay { height:30%; }
-}
-
-/* Visuel hero : plus présent sur ordinateur et immédiatement visible sur mobile/tablette. */
-@media(min-width:900px){
-  #hero { grid-template-columns:minmax(0, .78fr) minmax(0, 1.22fr); gap:clamp(18px, 3vw, 42px); padding-left:3%; padding-right:3%; }
-  .hero-img-wrap { max-width:none; width:100%; align-self:start; }
-  .hero-inner { max-width:560px; }
-}
-@media(max-width:899px){
-  #hero { display:flex; flex-direction:column; }
-  .hero-img-wrap { order:-1; width:100%; max-width:none; }
-  .hero-inner { order:1; }
 }
