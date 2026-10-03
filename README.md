@@ -48,6 +48,7 @@ Le site répond à **trois publics**, avec trois parcours distincts :
 ├── generer-images-logo.py            # Produit les 12 déclinaisons du logo (Pillow)
 ├── outils/verifier-site.js           # Vérifications avant mise en ligne (liens, ids, images…, langues)
 ├── outils/extraire-i18n.js           # Liste les chaînes à traduire + contrôle la couverture
+├── outils/reindexer-i18n.js          # Replace les traductions après une modification du HTML
 ├── outils/generer-i18n.js            # Compile contenu/i18n/traductions/*.json → assets/i18n/
 ├── outils/tester-i18n.js             # Teste les 4 affichages dans un DOM headless (jsdom)
 ├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage)
@@ -175,10 +176,13 @@ On peut aussi forcer une langue par l'adresse : `?langue=en`, `?langue=dar`,
 `?langue=fr` (l'ancien paramètre `ar` est accepté et donne la darija).
 
 **Pages couvertes aujourd'hui** : accueil, fiche de candidature, confirmation de
-candidature, hub entreprises, services par ville. Les six pages
-« service × ville » (Casablanca) restent en français pour l'instant : le
-moteur les laisse dans leur langue de base et n'y affiche pas le sélecteur.
-Pour les ajouter, voir « Ajouter des traductions » ci-dessous.
+candidature, hub entreprises, services par ville. Les dix pages
+« service × ville » (Casablanca, Rabat, Marrakech, Tanger) restent en français
+pour l'instant : le moteur les laisse dans leur langue de base et n'y affiche pas
+le sélecteur. Les six pages de Casablanca sont en plus **générées** par
+`outils/generer-pages-villes.js` : les traduire demande de passer par
+`contenu/pages/*.json`, sinon la prochaine génération effacerait le travail.
+Pour les autres, voir « Ajouter des traductions » ci-dessous.
 
 ### Comment ça marche
 
@@ -211,6 +215,21 @@ les textes écrits par le JavaScript. Le générateur refuse d'écrire un
 dictionnaire si le HTML de la page a changé depuis les traductions
 (empreinte enregistrée dans le fichier de traduction) : aucune traduction ne
 peut être décalée en silence.
+
+### Corriger une phrase du site (sans perdre les traductions)
+
+Modifier un texte dans le HTML décale les numéros : les traductions suivantes
+ne tombent plus sur la bonne phrase. L'extraction conserve donc la liste
+précédente et un outil replace chaque traduction sur sa clé :
+
+```bash
+node outils/extraire-i18n.js --json      # nouvelle cles.json + cles.prec.json (liste d'avant)
+node outils/reindexer-i18n.js            # contrôle : ce qui est replacé, ce qui reste à écrire
+node outils/reindexer-i18n.js --ecrire   # réécrit contenu/i18n/traductions/*.json
+#   → écrire les quelques chaînes nouvelles signalées (numéro + texte)
+node outils/generer-i18n.js              # compile
+node outils/extraire-i18n.js --verifier  # 0 manquante = tout est traduit
+```
 
 À la main, pour une page de plus : ajouter son nom (sans `.html`) dans
 `PAGES_TRADUITES` (`assets/js/i18n.js`), puis vérifier :

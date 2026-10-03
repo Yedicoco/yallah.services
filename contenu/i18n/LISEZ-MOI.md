@@ -24,16 +24,18 @@ mémorisé : il le retrouve sur la page suivante.
 
 | Page | Chaînes traduites |
 |---|---|
-| `index.html` (accueil) | 448 |
+| `index.html` (accueil) | 457 |
 | `candidature.html` (fiche candidat) | 94 en anglais · 79 en darija |
 | `candidature-confirmation.html` | 48 en anglais · 32 en darija |
 | `personnel-entreprises.html` (hub entreprises) | 93 |
 | `services-par-ville.html` (hub ville) | 89 |
 
-**Total : 2 254 traductions.** Les six pages « service × ville » de Casablanca
-(`nounou-casablanca.html`, `femme-menage-casablanca.html`…) restent en français :
-le site ne peut pas « casser », elles s'affichent simplement dans leur langue de
-base et sans sélecteur. Elles viendront avec le même outil.
+**Total : 2 281 traductions.** Les dix pages « service × ville »
+(`nounou-casablanca.html`, `femme-menage-marrakech.html`, `nounou-rabat.html`…)
+restent en français : le site ne peut pas « casser », elles s'affichent simplement
+dans leur langue de base et sans sélecteur. Elles viendront avec le même outil
+(les six pages de Casablanca sont générées par `outils/generer-pages-villes.js`,
+la traduction doit donc y passer par `contenu/pages/*.json`).
 
 ## Ce qui est traduit automatiquement
 
@@ -60,6 +62,21 @@ node outils/generer-i18n.js       # recompile les dictionnaires du site
 node outils/extraire-i18n.js --verifier   # 0 manquante = tout est traduit
 ```
 
+### Si le texte français du HTML a changé
+
+Les numéros sont des **positions** dans la liste des chaînes : corriger une
+phrase, ajouter un paragraphe ou supprimer une section décale les suivantes.
+L'extraction garde la liste précédente et l'outil de réindexation replace
+chaque traduction sur sa clé (le texte d'origine, qui ne bouge pas) :
+
+```bash
+node outils/extraire-i18n.js --json      # cles.json + cles.prec.json (liste d'avant)
+node outils/reindexer-i18n.js --ecrire   # replace les traductions, signale les nouvelles
+#   → écrire les chaînes signalées (elles sont listées avec leur numéro)
+node outils/generer-i18n.js
+node outils/extraire-i18n.js --verifier  # doit afficher 0
+```
+
 Les fichiers `assets/i18n/…` sont **générés** : ne pas les modifier à la main,
 tout changement serait écrasé à la prochaine compilation.
 
@@ -83,4 +100,4 @@ de `assets/js/i18n.js`.
   dictionnaires (aucun risque de traduction décalée en silence).
 * **Test automatique** (`node outils/tester-i18n.js`, avec `npm i jsdom`) :
   vérifie les 4 affichages sur les 5 pages — langue, sens d'écriture,
-  application des 2 254 clés, retour au français sans résidu.
+  application des 2 281 clés, retour au français sans résidu.

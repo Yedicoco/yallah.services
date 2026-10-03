@@ -139,7 +139,10 @@
       if (m.genre === 'texte') {
         if (m.el.textContent === m.apres) m.el.textContent = m.avant;
       } else if (m.genre === 'html') {
-        if (m.el.innerHTML === m.apres) m.el.innerHTML = m.avant;
+        if (m.el.innerHTML === m.apres) {
+          m.el.innerHTML = m.avant;
+          m.el.__ysHtml = null;
+        }
       } else if (m.genre === 'attr') {
         if (m.el.getAttribute(m.nom) === m.apres) m.el.setAttribute(m.nom, m.avant);
       } else if (m.genre === 'href') {
@@ -158,11 +161,20 @@
       if (el.textContent === valeur) return;
       noter(el, 'texte', '', el.textContent, valeur);
       el.textContent = valeur;
-    } else {
-      if (el.innerHTML === valeur) return;
-      noter(el, 'html', '', el.innerHTML, valeur);
-      el.innerHTML = valeur;
+      return;
     }
+    /* Le HTML relu après écriture n'est pas toujours identique au texte
+       reçu : le navigateur normalise (« & » → « &amp; », guillemets, …).
+       On mémorise la forme réellement produite (el.__ysHtml) : sans cela
+       la traduction se réécrit à chaque passage et, au retour au
+       français, l'original n'est plus restitué (valeur écrite ≠ valeur
+       relue). */
+    var avant = el.innerHTML;
+    if (avant === valeur || avant === el.__ysHtml) return;
+    el.innerHTML = valeur;
+    var rendu = el.innerHTML;
+    el.__ysHtml = rendu;
+    if (rendu !== avant) noter(el, 'html', '', avant, rendu);
   }
 
   function traduireAttribut(el, nom) {

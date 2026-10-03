@@ -111,12 +111,12 @@
         "langue": "fr"
       },
       {
-        "cle": "Une aide fiable pour votre maison",
+        "cle": "Femme de ménage, nounou et cuisinière au Maroc : une aide fiable pour votre maison",
         "occurrences": 1,
-        "exemple": "Une aide fiable pour votre maison",
+        "exemple": "Femme de ménage, nounou et cuisinière au Maroc : une aide fiable pour votre maison",
         "langue": "fr",
         "balisage": "em",
-        "html": "Une aide fiable pour <em>votre maison</em>"
+        "html": "Femme de ménage, nounou et cuisinière au Maroc : <em>une aide fiable pour votre maison</em>"
       },
       {
         "cle": "Ménage, nounou, cuisine ou garde-malade : nous vous aidons à trouver le bon profil, sélectionné avec sérieux.",
@@ -283,15 +283,15 @@
         "langue": "fr"
       },
       {
-        "cle": "Comment ça marche ?",
+        "cle": "Comment trouver une femme de ménage ou une nounou au Maroc ?",
         "occurrences": 1,
-        "exemple": "Comment ça marche ?",
+        "exemple": "Comment trouver une femme de ménage ou une nounou au Maroc ?",
         "langue": "fr"
       },
       {
-        "cle": "Trouvez votre aide idéale en 3 étapes simples",
+        "cle": "Trouvez votre aide idéale en 4 étapes simples",
         "occurrences": 1,
-        "exemple": "Trouvez votre aide idéale en 3 étapes simples",
+        "exemple": "Trouvez votre aide idéale en 4 étapes simples",
         "langue": "fr"
       },
       {
@@ -807,9 +807,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Nos Pack & Tarifs",
+        "cle": "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)",
         "occurrences": 1,
-        "exemple": "Nos Pack & Tarifs",
+        "exemple": "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)",
         "langue": "fr"
       },
       {
@@ -1973,12 +1973,12 @@
         "html": "Dans combien de temps je reçois un profil ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Vous recevez un profil qualifié en moins de 24 à 72 heures directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585.",
+        "cle": "Vous recevez un profil qualifié dans un délai de 24 à 72h directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585.",
         "occurrences": 1,
-        "exemple": "Vous recevez un profil qualifié en moins de 24 à 72 heures directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585.",
+        "exemple": "Vous recevez un profil qualifié dans un délai de 24 à 72h directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585.",
         "langue": "fr",
         "balisage": "strong",
-        "html": "Vous recevez un profil qualifié <strong>en moins de 24 à 72 heures</strong> directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585."
+        "html": "Vous recevez un profil qualifié <strong>dans un délai de 24 à 72h</strong> directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585."
       },
       {
         "cle": "Que se passe-t-il si je ne suis pas satisfait(e) ? ▾",
@@ -2277,15 +2277,15 @@
         "langue": "fr"
       },
       {
-        "cle": "Recevez votre profil en 24h",
+        "cle": "Recevez votre profil en 24 à 72h",
         "occurrences": 1,
-        "exemple": "Recevez votre profil en 24h",
+        "exemple": "Recevez votre profil en 24 à 72h",
         "langue": "fr"
       },
       {
-        "cle": "Remplissez le formulaire — profil qualifié sur WhatsApp en moins de 24h.",
+        "cle": "Remplissez le formulaire — profil qualifié sur WhatsApp dans un délai de 24 à 72h.",
         "occurrences": 1,
-        "exemple": "Remplissez le formulaire — profil qualifié sur WhatsApp en moins de 24h.",
+        "exemple": "Remplissez le formulaire — profil qualifié sur WhatsApp dans un délai de 24 à 72h.",
         "langue": "fr"
       },
       {
@@ -2403,17 +2403,17 @@
         "langue": "fr"
       },
       {
-        "cle": "💬 Recevez un profil sérieux sur WhatsApp en moins de 24h",
+        "cle": "💬 Recevez un profil sérieux sur WhatsApp dans un délai de 24 à 72h",
         "occurrences": 1,
-        "exemple": "💬 Recevez un profil sérieux sur WhatsApp en moins de 24h",
+        "exemple": "💬 Recevez un profil sérieux sur WhatsApp dans un délai de 24 à 72h",
         "langue": "fr",
         "balisage": "span",
-        "html": "💬 Recevez un profil sérieux <span class=\"wg\">sur WhatsApp en moins de 24h</span>"
+        "html": "💬 Recevez un profil sérieux <span class=\"wg\">sur WhatsApp dans un délai de 24 à 72h</span>"
       },
       {
-        "cle": "🔒 Gratuit · Sans engagement · Profil en 24h",
+        "cle": "🔒 Gratuit · Sans engagement · Profil en 24 à 72h",
         "occurrences": 1,
-        "exemple": "🔒 Gratuit · Sans engagement · Profil en 24h",
+        "exemple": "🔒 Gratuit · Sans engagement · Profil en 24 à 72h",
         "langue": "fr"
       },
       {
@@ -2423,9 +2423,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Profil qualifié envoyé dans les 24h sur WhatsApp.",
+        "cle": "Profil qualifié envoyé dans un délai de 24 à 72h sur WhatsApp.",
         "occurrences": 1,
-        "exemple": "Profil qualifié envoyé dans les 24h sur WhatsApp.",
+        "exemple": "Profil qualifié envoyé dans un délai de 24 à 72h sur WhatsApp.",
         "langue": "fr"
       },
       {
@@ -2451,6 +2451,66 @@
         "langue": "fr",
         "balisage": "a,a,a,a,a",
         "html": "<a href=\"services-par-ville.html\">Nos services par ville</a> ·\n    <a href=\"personnel-entreprises.html\">Personnel pour entreprises</a> ·\n    <a href=\"candidature.html\">Espace candidats</a> ·\n    <a href=\"https://wa.me/212691733585\" target=\"_blank\" rel=\"noopener\">WhatsApp +212 691 733 585</a> ·\n    <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a> ·\n    Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé"
+      },
+      {
+        "cle": "Femme de ménage à Casablanca",
+        "occurrences": 1,
+        "exemple": "Femme de ménage à Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nounou à Casablanca",
+        "occurrences": 1,
+        "exemple": "Nounou à Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Cuisinière à Casablanca",
+        "occurrences": 1,
+        "exemple": "Cuisinière à Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Garde-malade à Casablanca",
+        "occurrences": 1,
+        "exemple": "Garde-malade à Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Chauffeur à Casablanca",
+        "occurrences": 1,
+        "exemple": "Chauffeur à Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Vigile et gardien à Casablanca",
+        "occurrences": 1,
+        "exemple": "Vigile et gardien à Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Femme de ménage à Rabat",
+        "occurrences": 1,
+        "exemple": "Femme de ménage à Rabat",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nounou à Rabat",
+        "occurrences": 1,
+        "exemple": "Nounou à Rabat",
+        "langue": "fr"
+      },
+      {
+        "cle": "Femme de ménage à Tanger",
+        "occurrences": 1,
+        "exemple": "Femme de ménage à Tanger",
+        "langue": "fr"
+      },
+      {
+        "cle": "Femme de ménage à Marrakech",
+        "occurrences": 1,
+        "exemple": "Femme de ménage à Marrakech",
+        "langue": "fr"
       },
       {
         "cle": "@aria-label:Réseaux sociaux de Yallah Services",
@@ -2551,9 +2611,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Laissez vos coordonnées — notre équipe vous contacte sur WhatsApp dans les 24h avec un profil qualifié.",
+        "cle": "Laissez vos coordonnées — notre équipe vous contacte sur WhatsApp dans un délai de 24 à 72h avec un profil qualifié.",
         "occurrences": 1,
-        "exemple": "Laissez vos coordonnées — notre équipe vous contacte sur WhatsApp dans les 24h avec un profil qualifié.",
+        "exemple": "Laissez vos coordonnées — notre équipe vous contacte sur WhatsApp dans un délai de 24 à 72h avec un profil qualifié.",
         "langue": "fr"
       },
       {
@@ -2689,9 +2749,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Profil en 24–72h",
+        "cle": "Profil en 24 à 72h",
         "occurrences": 1,
-        "exemple": "Profil en 24–72h",
+        "exemple": "Profil en 24 à 72h",
         "langue": "fr"
       },
       {
@@ -2737,12 +2797,12 @@
         "langue": "fr"
       },
       {
-        "cle": "Vous recevez un profil qualifié sur WhatsApp dans les 24–72h.",
+        "cle": "Vous recevez un profil qualifié sur WhatsApp dans un délai de 24 à 72h.",
         "occurrences": 1,
-        "exemple": "Vous recevez un profil qualifié sur WhatsApp dans les 24–72h.",
+        "exemple": "Vous recevez un profil qualifié sur WhatsApp dans un délai de 24 à 72h.",
         "langue": "fr",
         "balisage": "strong",
-        "html": "Vous recevez un profil qualifié <strong>sur WhatsApp dans les 24–72h.</strong>"
+        "html": "Vous recevez un profil qualifié <strong>sur WhatsApp dans un délai de 24 à 72h.</strong>"
       },
       {
         "cle": "Vous validez le profil et le placement est confirmé. Frais réglés après validation.",
@@ -2793,31 +2853,13 @@
       {
         "cle": "@title",
         "occurrences": 1,
-        "exemple": "Yallah Services | Personnel de maison et services au Maroc",
+        "exemple": "Femme de ménage, nounou, cuisinière au Maroc | Yallah Services",
         "langue": "fr"
       },
       {
         "cle": "@meta:description",
         "occurrences": 1,
-        "exemple": "Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc : ménage, nounou, cuisine, garde-malade, chauffeurs et gardiennage.",
-        "langue": "fr"
-      },
-      {
-        "cle": "@meta:keywords",
-        "occurrences": 1,
-        "exemple": "femme de ménage Maroc, nounou Casablanca, cuisinière Rabat, personnel de maison, aide à domicile, personnel pour entreprises",
-        "langue": "fr"
-      },
-      {
-        "cle": "@meta:og:title",
-        "occurrences": 1,
-        "exemple": "Yallah Services | Personnel de maison et services au Maroc",
-        "langue": "fr"
-      },
-      {
-        "cle": "@meta:og:description",
-        "occurrences": 1,
-        "exemple": "Ménage, nounou, cuisine, garde-malade : des profils sélectionnés selon vos critères, pour les particuliers et les entreprises au Maroc.",
+        "exemple": "Femme de ménage, nounou et cuisinière au Maroc : profils sélectionnés reçus sur WhatsApp en 24 à 72h. Remplacement garanti, frais après validation.",
         "langue": "fr"
       },
       {
@@ -2827,15 +2869,27 @@
         "langue": "fr"
       },
       {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Femme de ménage, nounou, cuisinière au Maroc | Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Personnel de maison sélectionné au Maroc : profil sur WhatsApp en 24 à 72h, remplacement garanti.",
+        "langue": "fr"
+      },
+      {
         "cle": "@meta:twitter:title",
         "occurrences": 1,
-        "exemple": "Yallah Services — Personnel de maison fiable au Maroc",
+        "exemple": "Femme de ménage, nounou, cuisinière au Maroc | Yallah Services",
         "langue": "fr"
       },
       {
         "cle": "@meta:twitter:description",
         "occurrences": 1,
-        "exemple": "Ménage, nounou, cuisine et garde-malade : des profils sélectionnés et accompagnés au Maroc.",
+        "exemple": "Profils sélectionnés, reçus sur WhatsApp en 24 à 72h. Remplacement garanti.",
         "langue": "fr"
       }
     ],
@@ -5611,7 +5665,7 @@
       {
         "cle": "@meta:description",
         "occurrences": 1,
-        "exemple": "Ménage, nounou, cuisinière, garde-malade, chauffeur et gardiennage : retrouvez nos services ville par ville, à Casablanca et dans les grandes villes du Maroc.",
+        "exemple": "Ménage, nounou, cuisine, garde-malade, chauffeur et gardiennage : nos services à Casablanca et dans les grandes villes du Maroc.",
         "langue": "fr"
       },
       {
