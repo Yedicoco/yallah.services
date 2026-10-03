@@ -32,3 +32,6 @@ apercus/*.png
 # Python
 __pycache__/
 *.pyc
+
+# Pages locales générées depuis seo-pack/generate_pages.py
+/seo-pack/out/

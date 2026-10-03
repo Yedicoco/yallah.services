@@ -7,7 +7,7 @@ import json, html, os, pathlib
 BASE = os.environ.get("BASE_URL", "https://yallahservices-one.vercel.app").rstrip("/")
 WA = "212691733585"
 TODAY = "2026-10-02"
-OUT = pathlib.Path("out"); OUT.mkdir(exist_ok=True)
+OUT = pathlib.Path(__file__).resolve().parent / "out"; OUT.mkdir(exist_ok=True)
 
 EXISTING = [  # pages déjà en ligne
     ("femme-menage-casablanca.html", "Femme de ménage à Casablanca"),
@@ -58,7 +58,7 @@ PAGES = [
       quartiers=["Malabata", "Marshan", "Iberia", "Centre-ville", "Achakar"],
       intro="À Tanger, nous plaçons des femmes de ménage logées pour villas, mini-villas et appartements, avec remplacement garanti pendant la période choisie.",
       lq="Combien de temps pour recevoir un profil à Tanger ?",
-      la="Dans un délai de 24 à 72 heures sur WhatsApp ; l'urgence est traitée en priorité."),
+      la="Dans un délai de 24 à 72h sur WhatsApp ; l'urgence est traitée en priorité."),
  dict(slug="femme-menage-marrakech.html", svc="menage", city="Marrakech", nonlogee=False,
       quartiers=["Guéliz", "Hivernage", "Palmeraie", "Targa", "Semlalia"],
       intro="À Marrakech, villas de la Palmeraie, riads et appartements de Guéliz : nous adaptons le profil à la surface et au rythme de la maison.",
@@ -85,11 +85,13 @@ TPL = """<!doctype html>
 <meta property="og:title" content="{{TITLE}}"><meta property="og:description" content="{{DESC}}">
 <meta property="og:url" content="{{CANON}}"><meta property="og:image" content="{{BASE}}/assets/img/logo-og-1200x630.jpg">
 <meta name="theme-color" content="#0d2136">
-<!-- Réutiliser la feuille de style du site si elle existe, ex : <link rel="stylesheet" href="/assets/css/style.css"> -->
+<link rel="stylesheet" href="/assets/css/style.css">
+<!-- Le style inline minimal ci-dessous reste le repli si la feuille globale est indisponible. -->
 <style>
 :root{--bg:#fff;--fg:#14202e;--navy:#0d2136;--accent:#1e9e5a;--muted:#5b6b7b;--line:#e3e8ee}
 @media (prefers-color-scheme:dark){:root{--bg:#0b1622;--fg:#e8eef5;--muted:#9fb0c0;--line:#22344a}}
-*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+*{box-sizing:border-box}body{margin:0;padding-bottom:0;overflow-x:hidden;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+p{margin:1em 0}ol{margin:1em 0;padding-left:1.5em}li{margin:.35em 0}
 header{background:var(--navy);color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 header a{color:#fff;text-decoration:none;font-weight:600}
 main{max-width:860px;margin:0 auto;padding:24px 20px 56px}
@@ -98,6 +100,7 @@ h1{font-size:1.9rem;line-height:1.2;margin:.2em 0 .4em}h2{font-size:1.3rem;margi
 table{width:100%;border-collapse:collapse}td{padding:10px 8px;border-bottom:1px solid var(--line)}td:last-child{text-align:right;font-weight:700;white-space:nowrap}
 .tags span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:3px 12px;margin:3px 4px 3px 0;font-size:.9rem}
 details{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0}summary{cursor:pointer;font-weight:600}
+nav.rel,nav[aria-label="Fil d'Ariane"]{position:static!important;inset:auto;z-index:auto;padding:0;background:transparent;border:0;transition:none}
 nav.rel a{display:block;margin:4px 0}.small{color:var(--muted);font-size:.9rem}
 </style>
 <script type="application/ld+json">{{JSONLD}}</script>
@@ -119,7 +122,7 @@ nav.rel a{display:block;margin:4px 0}.small{color:var(--muted);font-size:.9rem}
 
 <h2>Comment ça marche en 4 étapes</h2>
 <ol><li>Vous nous écrivez votre besoin (service, quartier, logée ou non).</li>
-<li>Vous recevez un profil sélectionné sur WhatsApp dans un délai de 24 à 72 heures.</li>
+<li>Vous recevez un profil sélectionné sur WhatsApp dans un délai de 24 à 72h.</li>
 <li>Vous rencontrez la candidate et validez, puis les frais sont réglés.</li>
 <li>Suivi après placement et remplacement gratuit selon la formule.</li></ol>
 
@@ -137,8 +140,8 @@ def build(p):
     label, low, grid = GRIDS[p["svc"]]
     city = p["city"]
     h1 = f"{label} à {city}"
-    title = f"{h1} : profils vérifiés en 24 à 72h | Yallah Services"
-    desc = f"{label} à {city} : profils vérifiés reçus sur WhatsApp dans un délai de 24 à 72 heures, remplacement garanti. Grille de salaires indicatifs, frais après validation."
+    title = f"{h1} | Yallah Services"
+    desc = f"{label} à {city} : profils sélectionnés reçus sur WhatsApp en 24 à 72h. Remplacement garanti, frais après validation."
     canon = f"{BASE}/{p['slug']}"
     rows = list(grid) + (NONLOGEE if p["nonlogee"] and p["svc"] == "menage" else [])
     prices = "".join(f"<tr><td>{esc(a)}</td><td>{esc(b)}</td></tr>" for a, b in rows)
@@ -147,13 +150,14 @@ def build(p):
     faq_html = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in faqs)
     links = "".join(f'<a href="/{s}">{esc(t)}</a>' for s, t in EXISTING + [(x["slug"], f'{GRIDS[x["svc"]][0]} à {x["city"]}') for x in PAGES if x is not p])
     jsonld = json.dumps({"@context": "https://schema.org", "@graph": [
-        {"@type": "Service", "name": h1, "serviceType": label, "url": canon,
-         "provider": {"@type": "EmploymentAgency", "name": "Yallah Services", "url": BASE + "/", "telephone": "+212691733585"},
+        {"@type": "Service", "@id": canon + "#service", "name": h1, "serviceType": label, "url": canon,
+         "provider": {"@id": BASE + "/#business"},
          "areaServed": {"@type": "City", "name": city}, "inLanguage": "fr-MA"},
-        {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "BreadcrumbList", "@id": canon + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Accueil", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": h1, "item": canon}]},
-        {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]},
+        {"@type": "FAQPage", "@id": canon + "#faq", "isPartOf": {"@id": BASE + "/#website"},
+         "inLanguage": "fr-MA", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]},
     ]}, ensure_ascii=False)
     wa_text = f"Bonjour Yallah Services ! Je cherche une {low} à {city}.".replace(" ", "%20").replace("!", "%21")
     out = TPL
