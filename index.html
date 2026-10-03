@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-MA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yallah Services | Personnel de maison et services au Maroc</title>
-<meta name="description" content="Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc : ménage, nounou, cuisine, garde-malade, chauffeurs et gardiennage.">
-<meta name="keywords" content="femme de ménage Maroc, nounou Casablanca, cuisinière Rabat, personnel de maison, aide à domicile, personnel pour entreprises">
+<title>Femme de ménage, nounou, cuisinière au Maroc | Yallah Services</title>
+<meta name="description" content="Femme de ménage, nounou et cuisinière au Maroc : profils sélectionnés reçus sur WhatsApp en 24 à 72h. Remplacement garanti, frais après validation.">
 <meta name="author" content="Yallah Services">
 <meta name="theme-color" content="#0d2136">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -15,20 +14,23 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon-180.png">
 
-<!-- Open Graph -->
+<link rel="alternate" hreflang="fr-MA" href="https://yallahservices-one.vercel.app/">
+<link rel="alternate" hreflang="x-default" href="https://yallahservices-one.vercel.app/">
+<link rel="preload" as="image" href="/assets/img/hero-services-branded.webp" type="image/webp" fetchpriority="high">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Yallah Services">
+<meta property="og:locale" content="fr_MA">
 <meta property="og:url" content="https://yallahservices-one.vercel.app/">
-<meta property="og:title" content="Yallah Services | Personnel de maison et services au Maroc">
-<meta property="og:description" content="Ménage, nounou, cuisine, garde-malade : des profils sélectionnés selon vos critères, pour les particuliers et les entreprises au Maroc.">
+<meta property="og:title" content="Femme de ménage, nounou, cuisinière au Maroc | Yallah Services">
+<meta property="og:description" content="Personnel de maison sélectionné au Maroc : profil sur WhatsApp en 24 à 72h, remplacement garanti.">
 <meta property="og:image" content="https://yallahservices-one.vercel.app/assets/img/logo-og-1200x630.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Yallah Services — aides à domicile au Maroc">
-<meta property="og:locale" content="fr_MA">
+<meta property="og:image:alt" content="Yallah Services — femme de ménage, nounou, cuisinière au Maroc">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Yallah Services — Personnel de maison fiable au Maroc">
-<meta name="twitter:description" content="Ménage, nounou, cuisine et garde-malade : des profils sélectionnés et accompagnés au Maroc.">
+<meta name="twitter:title" content="Femme de ménage, nounou, cuisinière au Maroc | Yallah Services">
+<meta name="twitter:description" content="Profils sélectionnés, reçus sur WhatsApp en 24 à 72h. Remplacement garanti.">
 <meta name="twitter:image" content="https://yallahservices-one.vercel.app/assets/img/logo-og-1200x630.jpg">
 
 <!-- Fonts -->
@@ -43,31 +45,184 @@
 <!-- Multilingue : français · darija (arabe et latin) · anglais -->
 <script src="assets/js/i18n.js"></script>
 
-<!-- SEO LocalBusiness -->
+<!-- SEO fusionné : WebSite, EmploymentAgency et FAQ visible, sans entité en double -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://yallahservices-one.vercel.app/#business",
-  "name": "Yallah Services",
-  "url": "https://yallahservices-one.vercel.app/",
-  "description": "Yallah Services recherche et met en relation du personnel pour les particuliers et les entreprises au Maroc : ménage, garde d'enfants, cuisine, garde-malade, chauffeurs et gardiennage.",
-  "image": "https://yallahservices-one.vercel.app/assets/img/hero-services-branded.png",
-  "logo": "https://yallahservices-one.vercel.app/assets/img/logo-transparent-512.png",
-  "telephone": "+212691733585",
-  "email": "servicesyallah@gmail.com",
-  "currenciesAccepted": "MAD",
-  "priceRange": "500-4000 MAD",
-  "serviceType": ["Ménage à domicile", "Garde d’enfants", "Cuisine à domicile", "Garde-malade", "Gardiennage", "Chauffeurs"],
-  "knowsLanguage": ["fr", "ar-MA"],
-  "contactPoint": [{"@type": "ContactPoint", "telephone": "+212691733585", "contactType": "customer service", "availableLanguage": ["French", "Arabic"]}],
-  "address": {"@type": "PostalAddress", "addressCountry": "MA", "addressLocality": "Casablanca", "addressRegion": "Casablanca-Settat", "postalCode": "20220"},
-  "areaServed": ["Casablanca", "Bouskoura", "Rabat", "Marrakech", "Tanger", "Agadir", "Fès", "Kénitra", "Mohammedia", "Témara", "Salé"],
-  "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services Yallah Services", "itemListElement": [
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Personnel de maison"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Services à domicile"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Personnel pour entreprises"}}
-  ]}
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://yallahservices-one.vercel.app/#website",
+      "url": "https://yallahservices-one.vercel.app/",
+      "name": "Yallah Services",
+      "inLanguage": "fr-MA",
+      "publisher": {
+        "@id": "https://yallahservices-one.vercel.app/#business"
+      }
+    },
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://yallahservices-one.vercel.app/#business",
+      "name": "Yallah Services",
+      "url": "https://yallahservices-one.vercel.app/",
+      "description": "Agence de mise en relation entre familles et personnel de maison au Maroc : femme de ménage, nounou, cuisinière et garde-malade.",
+      "image": "https://yallahservices-one.vercel.app/assets/img/hero-services-branded.png",
+      "logo": "https://yallahservices-one.vercel.app/assets/img/logo-256.png",
+      "telephone": "+212691733585",
+      "email": "servicesyallah@gmail.com",
+      "currenciesAccepted": "MAD",
+      "priceRange": "Frais de mise en relation : 500 à 1 000 DH",
+      "serviceType": [
+        "Ménage à domicile",
+        "Garde d’enfants",
+        "Cuisine à domicile",
+        "Garde-malade",
+        "Gardiennage",
+        "Chauffeurs"
+      ],
+      "knowsLanguage": [
+        "fr",
+        "ar-MA"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+212691733585",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "fr",
+          "ar"
+        ],
+        "areaServed": "MA"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MA",
+        "addressLocality": "Casablanca",
+        "addressRegion": "Casablanca-Settat",
+        "postalCode": "20220"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Casablanca"
+        },
+        {
+          "@type": "City",
+          "name": "Bouskoura"
+        },
+        {
+          "@type": "City",
+          "name": "Dar Bouazza"
+        },
+        {
+          "@type": "City",
+          "name": "Bouznika"
+        },
+        {
+          "@type": "City",
+          "name": "Rabat"
+        },
+        {
+          "@type": "City",
+          "name": "Marrakech"
+        },
+        {
+          "@type": "City",
+          "name": "Tanger"
+        },
+        {
+          "@type": "City",
+          "name": "Agadir"
+        },
+        {
+          "@type": "City",
+          "name": "Fès"
+        },
+        {
+          "@type": "City",
+          "name": "Kénitra"
+        },
+        {
+          "@type": "City",
+          "name": "Mohammedia"
+        },
+        {
+          "@type": "City",
+          "name": "Témara"
+        },
+        {
+          "@type": "City",
+          "name": "Salé"
+        }
+      ],
+      "sameAs": [
+        "https://web.facebook.com/yallahservicesmaroc",
+        "https://www.instagram.com/yallahservice/",
+        "https://www.tiktok.com/@yallah.services.m",
+        "https://www.linkedin.com/in/yallah-services/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Frais de mise en relation",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Formule Sérénité — suivi personnalisé, remplacements gratuits pendant 2 mois",
+            "price": "500",
+            "priceCurrency": "MAD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Formule Premium — suivi prioritaire, remplacements gratuits pendant 6 mois",
+            "price": "1000",
+            "priceCurrency": "MAD"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yallahservices-one.vercel.app/#faq",
+      "isPartOf": {
+        "@id": "https://yallahservices-one.vercel.app/#website"
+      },
+      "inLanguage": "fr-MA",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Dans combien de temps je reçois un profil ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous recevez un profil qualifié dans un délai de 24 à 72h directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se passe le paiement des frais de Mise en relation ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les frais de Mise en relation sont réglés uniquement après validation du profil et mise en relation. Vous ne payez rien avant d'avoir trouvé votre candidate. Le salaire mensuel est versé directement à l'employée, séparément des frais de Mise en relation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence entre logée et non logée ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Logée : l'employée vit à votre domicile 24h/24, 7j/7. Elle bénéficie d'un jour de repos par semaine ou par quinzaine selon l'accord. Non logée : elle travaille du lundi au vendredi de 9h à 17h et rentre chez elle le soir. Idéale pour les familles qui n'ont pas de chambre disponible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je ne suis pas satisfait(e) ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les formules Sérénité et Premium prévoient des remplacements pendant respectivement 2 mois et 6 mois. Il vous suffit de nous contacter sur WhatsApp ; les conditions exactes sont expliquées avant la mise en relation."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -76,7 +231,7 @@
 <!-- ═══════════ NAVIGATION ═══════════ -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#hero" class="logo"><img src="assets/img/logo-256.png" alt="Logo Yallah Services – aides à domicile au Maroc"></a>
+    <a href="#hero" class="logo"><img src="assets/img/logo-256.png" alt="Logo Yallah Services – aides à domicile au Maroc" loading="lazy" decoding="async" width="256" height="256"></a>
     <ul class="nav-links">
       <li><a href="#hero">Accueil</a></li>
       <li><a href="#how">Comment ça marche</a></li>
@@ -107,7 +262,7 @@
 <section id="hero">
   <div class="hero-inner">
     <span class="hero-pill a1">🇲🇦 Yallah Services · Maroc</span>
-    <h1 class="ht a2">Une aide fiable pour <em>votre maison</em></h1>
+    <h1 class="ht a2">Femme de ménage, nounou et cuisinière au Maroc : <em>une aide fiable pour votre maison</em></h1>
     <p class="hero-sub a3">Ménage, nounou, cuisine ou garde-malade : nous vous aidons à trouver le <strong>bon profil, sélectionné avec sérieux</strong>.</p>
     <p class="hero-sub hero-sub-secondary a3">Vous nous expliquez votre besoin, nous vous présentons un profil adapté et nous vous accompagnons jusqu’à la mise en relation.</p>
     <div class="a4 hero-actions">
@@ -127,7 +282,7 @@
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="assets/img/hero-services-branded.png" alt="Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc" fetchpriority="high">
+    <picture><source type="image/webp" srcset="assets/img/hero-services-branded.webp"><img src="assets/img/hero-services-branded.png" alt="Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc" fetchpriority="high" width="1678" height="937" decoding="async"></picture>
     <div class="hero-img-overlay"></div>
     <p class="hero-image-caption">Des profils pour prendre soin de votre maison, avec sérieux et discrétion.</p>
   </div>
@@ -141,8 +296,8 @@
   <div class="ctr">
     <div class="sh c reveal">
       <span class="se">Simple &amp; rapide</span>
-      <h2 class="st">Comment ça marche ?</h2>
-      <p class="sd">Trouvez votre aide idéale en 3 étapes simples</p>
+      <h2 class="st">Comment trouver une femme de ménage ou une nounou au Maroc ?</h2>
+      <p class="sd">Trouvez votre aide idéale en 4 étapes simples</p>
     </div>
     <div class="how-steps reveal">
       <div class="how-step">
@@ -307,7 +462,7 @@
 
     <div class="temo-wa-wrap reveal">
       <div class="temo-wa-title">💬 Notre grille tarifaire &amp; les formules <span>✅ Officiel</span></div>
-      <img class="temo-flyer" src="assets/img/grille-tarifaire.jpg" alt="Grille tarifaire des services Yallah Services Maroc — +212 691 733 585">
+      <img class="temo-flyer" src="assets/img/grille-tarifaire.jpg" alt="Grille tarifaire des services Yallah Services Maroc — +212 691 733 585" loading="lazy" decoding="async">
       <p class="flyer-cap">📄 Grille tarifaire officielle Yallah Services — <strong>Simplifiez-vous la vie !</strong></p>
     </div>
   </div>
@@ -315,12 +470,12 @@
 
 <!-- ═══════════ PACKS & OFFRES (GRILLE TARIFAIRE OFFICIELLE) ═══════════ -->
 <section id="packs" class="sec"><div class="ctr">
-<div class="sh c reveal"><span class="se">Grille tarifaire des services</span><h2 class="st">Nos Pack &amp; Tarifs</h2><p class="sd">Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.</p></div>
+<div class="sh c reveal"><span class="se">Grille tarifaire des services</span><h2 class="st">Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)</h2><p class="sd">Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.</p></div>
 <div style="text-align:center"><div class="tabs reveal"><button class="tb on" data-tab="menage">🧹 Ménage</button><button class="tb" data-tab="nounou">🧸 Nounou</button><button class="tb" data-tab="cuisine">🍳 Cuisine</button><button class="tb" data-tab="malade">❤️ Garde malade</button><button class="tb" data-tab="jour">⏰ À la journée</button></div></div>
 <div class="tcc on" id="tab-menage"><div class="tab-hint">🏠 Personnel logé à votre domicile 24h/24</div><div class="pg">
 <article class="pc pc-has-img hot">
 <span class="htag">⭐ Top</span>
-<img class="pc-img" src="assets/img/pack-menage.jpg" alt="Ménage simple dans villa — Yallah Services">
+<img class="pc-img" src="assets/img/pack-menage.jpg" alt="Ménage simple dans villa — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
 <span class="pi">🏡</span><span class="ptyp">🧹 Ménage</span>
 <div class="clients-badge"><span class="clients-dot"></span>18 familles ce mois ont réservé</div>
 <h3 class="pn">Ménage simple dans villa</h3><div class="pfr">salaire mensuel</div><div class="pp">4 500</div><div class="pu">DH / mois</div>
@@ -328,7 +483,7 @@
 <button class="pwb" data-pack="Ménage simple dans villa" data-price="4 500 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-menage-villa.jpg" alt="Ménage simple dans mini villa — Yallah Services">
+<img class="pc-img" src="assets/img/pack-menage-villa.jpg" alt="Ménage simple dans mini villa — Yallah Services" loading="lazy" decoding="async">
 <span class="pi">🏘️</span><span class="ptyp">🧹 Ménage</span>
 <div class="clients-badge"><span class="clients-dot"></span>11 familles ce mois ont réservé</div>
 <h3 class="pn">Ménage simple dans mini villa</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -336,7 +491,7 @@
 <button class="pwb" data-pack="Ménage simple dans mini villa" data-price="4 000 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nonlogee-menage.jpg" alt="Ménage dans appartement — Yallah Services">
+<img class="pc-img" src="assets/img/pack-nonlogee-menage.jpg" alt="Ménage dans appartement — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
 <span class="pi">🏢</span><span class="ptyp">🧹 Ménage</span>
 <div class="clients-badge"><span class="clients-dot"></span>16 familles ce mois ont réservé</div>
 <h3 class="pn">Ménage dans appartement</h3><div class="pfr">salaire mensuel</div><div class="pp">3 500</div><div class="pu">DH / mois</div>
@@ -346,7 +501,7 @@
 <div class="tcc" id="tab-nounou"><div class="tab-hint">🧸 Garde d'enfants, jeux, activités éducatives et accompagnement</div><div class="pg">
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nounou.jpg" alt="Nounou d'un enfant — Yallah Services">
+<img class="pc-img" src="assets/img/pack-nounou.jpg" alt="Nounou d'un enfant — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
 <span class="pi">👶</span><span class="ptyp">🧸 Nounou</span>
 <div class="clients-badge"><span class="clients-dot"></span>12 familles ce mois ont réservé</div>
 <h3 class="pn">Nounou d'un enfant</h3><div class="pfr">salaire mensuel</div><div class="pp">3 500</div><div class="pu">DH / mois</div>
@@ -354,7 +509,7 @@
 <button class="pwb" data-pack="Nounou d'un enfant" data-price="3 500 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img hot">
 <span class="htag">⭐ Top</span>
-<img class="pc-img" src="assets/img/pack-menage-nounou.jpg" alt="Nounou d'un enfant + ménage — Yallah Services">
+<img class="pc-img" src="assets/img/pack-menage-nounou.jpg" alt="Nounou d'un enfant + ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
 <span class="pi">🧺</span><span class="ptyp">🧸 Nounou</span>
 <div class="clients-badge"><span class="clients-dot"></span>9 familles ce mois ont réservé</div>
 <h3 class="pn">Nounou d'un enfant + ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -362,7 +517,7 @@
 <button class="pwb" data-pack="Nounou d'un enfant + ménage" data-price="4 000 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nonlogee-nounou.jpg" alt="Nounou de 2 enfants avec ménage — Yallah Services">
+<img class="pc-img" src="assets/img/pack-nonlogee-nounou.jpg" alt="Nounou de 2 enfants avec ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
 <span class="pi">👨‍👩‍👧</span><span class="ptyp">🧸 Nounou</span>
 <div class="clients-badge"><span class="clients-dot"></span>8 familles ce mois ont réservé</div>
 <h3 class="pn">Nounou de 2 enfants avec ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">4 500 / 5 000</div><div class="pu">DH / mois</div>
@@ -370,7 +525,7 @@
 <button class="pwb" data-pack="Nounou de 2 enfants avec ménage" data-price="4 500 / 5 000 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nounou-multi.jpg" alt="Nounou de 3 enfants — Yallah Services">
+<img class="pc-img" src="assets/img/pack-nounou-multi.jpg" alt="Nounou de 3 enfants — Yallah Services" loading="lazy" decoding="async">
 <span class="pi">👨‍👩‍👧‍👦</span><span class="ptyp">🧸 Nounou</span>
 <div class="clients-badge"><span class="clients-dot"></span>6 familles ce mois ont réservé</div>
 <h3 class="pn">Nounou de 3 enfants</h3><div class="pfr">salaire mensuel</div><div class="pp">4 500</div><div class="pu">DH / mois</div>
@@ -378,7 +533,7 @@
 <button class="pwb" data-pack="Nounou de 3 enfants" data-price="4 500 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img hot">
 <span class="htag">⭐ Top</span>
-<img class="pc-img" src="assets/img/pack-nouvelle-fille.jpg" alt="Nounou de 3 enfants + ménage — Yallah Services">
+<img class="pc-img" src="assets/img/pack-nouvelle-fille.jpg" alt="Nounou de 3 enfants + ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
 <span class="pi">🏠</span><span class="ptyp">🧸 Nounou</span>
 <div class="clients-badge"><span class="clients-dot"></span>5 familles ce mois ont réservé</div>
 <h3 class="pn">Nounou de 3 enfants + ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">5 000</div><div class="pu">DH / mois</div>
@@ -388,7 +543,7 @@
 <div class="tcc" id="tab-cuisine"><div class="tab-hint">🍳 Cuisine marocaine &amp; européenne, gestion des courses sur demande</div><div class="pg">
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-cuisine-simple.jpg" alt="Cuisine simple — Yallah Services">
+<img class="pc-img" src="assets/img/pack-cuisine-simple.jpg" alt="Cuisine simple — Yallah Services" loading="lazy" decoding="async">
 <span class="pi">🍲</span><span class="ptyp">🍳 Cuisine</span>
 <div class="clients-badge"><span class="clients-dot"></span>7 familles ce mois ont réservé</div>
 <h3 class="pn">Cuisine simple</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -396,7 +551,7 @@
 <button class="pwb" data-pack="Cuisine simple" data-price="4 000 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img hot">
 <span class="htag">⭐ Top</span>
-<img class="pc-img" src="assets/img/pack-cuisine.jpg" alt="Cuisine / ménage — Yallah Services">
+<img class="pc-img" src="assets/img/pack-cuisine.jpg" alt="Cuisine / ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
 <span class="pi">🥘</span><span class="ptyp">🍳 Cuisine</span>
 <div class="clients-badge"><span class="clients-dot"></span>9 familles ce mois ont réservé</div>
 <h3 class="pn">Cuisine / ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">5 000</div><div class="pu">DH / mois</div>
@@ -404,7 +559,7 @@
 <button class="pwb" data-pack="Cuisine / ménage" data-price="5 000 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-aide-cuisine.jpg" alt="Aide cuisine — Yallah Services">
+<img class="pc-img" src="assets/img/pack-aide-cuisine.jpg" alt="Aide cuisine — Yallah Services" loading="lazy" decoding="async">
 <span class="pi">🔪</span><span class="ptyp">🍳 Cuisine</span>
 <div class="clients-badge"><span class="clients-dot"></span>6 familles ce mois ont réservé</div>
 <h3 class="pn">Aide cuisine</h3><div class="pfr">salaire mensuel</div><div class="pp">3 500</div><div class="pu">DH / mois</div>
@@ -412,7 +567,7 @@
 <button class="pwb" data-pack="Aide cuisine" data-price="3 500 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nonlogee-cuisine.jpg" alt="Aide cuisine / ménage — Yallah Services">
+<img class="pc-img" src="assets/img/pack-nonlogee-cuisine.jpg" alt="Aide cuisine / ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
 <span class="pi">🍽️</span><span class="ptyp">🍳 Cuisine</span>
 <div class="clients-badge"><span class="clients-dot"></span>5 familles ce mois ont réservé</div>
 <h3 class="pn">Aide cuisine / ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -422,7 +577,7 @@
 <div class="tcc" id="tab-malade"><div class="tab-hint">❤️ Accompagnement des personnes âgées ou malades à domicile</div><div class="pg">
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/garde-malade.jpg" alt="Garde malade simple — Yallah Services">
+<img class="pc-img" src="assets/img/garde-malade.jpg" alt="Garde malade simple — Yallah Services" loading="lazy" decoding="async">
 <span class="pi">🩺</span><span class="ptyp">❤️ Garde malade</span>
 <div class="clients-badge"><span class="clients-dot"></span>4 familles ce mois ont réservé</div>
 <h3 class="pn">Garde malade simple</h3><div class="pfr">salaire mensuel</div><div class="pp">3 500</div><div class="pu">DH / mois</div>
@@ -430,7 +585,7 @@
 <button class="pwb" data-pack="Garde malade simple" data-price="3 500 DH / mois">💬 Réserver</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/garde-malade-menage.jpg" alt="Garde malade et ménage — Yallah Services">
+<img class="pc-img" src="assets/img/garde-malade-menage.jpg" alt="Garde malade et ménage — Yallah Services" loading="lazy" decoding="async">
 <span class="pi">🤝</span><span class="ptyp">❤️ Garde malade</span>
 <div class="clients-badge"><span class="clients-dot"></span>3 familles ce mois ont réservé</div>
 <h3 class="pn">Garde malade et ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -440,7 +595,7 @@
 <div class="tcc" id="tab-jour"><div class="tab-hint">✨ 8h max · 📍 Casa &amp; Rabat uniquement</div><div class="pg">
 
         <article class="pc pc-has-img">
-          <img class="pc-img" src="assets/img/pack-nonlogee-menage.jpg" alt="Femme de ménage Yallah Services">
+          <img class="pc-img" src="assets/img/pack-nonlogee-menage.jpg" alt="Femme de ménage Yallah Services" loading="lazy" decoding="async" width="450" height="800">
           <span class="pi">🏠</span>
           <span class="ptyp">🌙 Non Logée</span>
           <div class="clients-badge"><span class="clients-dot"></span>15 familles ce mois ont réservé</div>
@@ -458,7 +613,7 @@
 
         <article class="pc hot pc-has-img">
           <span class="htag">⭐ Top</span>
-          <img class="pc-img" src="assets/img/pack-nonlogee-cuisine.jpg" alt="Ménage et cuisine Yallah Services">
+          <img class="pc-img" src="assets/img/pack-nonlogee-cuisine.jpg" alt="Ménage et cuisine Yallah Services" loading="lazy" decoding="async" width="450" height="800">
           <span class="pi">🍽️</span>
           <span class="ptyp">🌙 Non Logée</span>
           <div class="clients-badge"><span class="clients-dot"></span>15 familles ce mois ont réservé</div>
@@ -475,7 +630,7 @@
         </article>
 
         <article class="pc pc-has-img">
-          <img class="pc-img" src="assets/img/pack-nonlogee-nounou.jpg" alt="Ménage et nounou Yallah Services">
+          <img class="pc-img" src="assets/img/pack-nonlogee-nounou.jpg" alt="Ménage et nounou Yallah Services" loading="lazy" decoding="async" width="450" height="800">
           <span class="pi">🍼</span>
           <span class="ptyp">🌙 Non Logée</span>
           <div class="clients-badge"><span class="clients-dot"></span>6 familles cette semaine ont réservé</div>
@@ -591,7 +746,7 @@
 
       <div class="faq-item">
         <button class="faq-q">Dans combien de temps je reçois un profil ? <span class="arr">▾</span></button>
-        <div class="faq-a">Vous recevez un profil qualifié <strong>en moins de 24 à 72 heures</strong> directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585.</div>
+        <div class="faq-a">Vous recevez un profil qualifié <strong>dans un délai de 24 à 72h</strong> directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585.</div>
       </div>
 
       <div class="faq-item">
@@ -700,8 +855,8 @@
 <section id="contact">
   <div class="ct-inner">
     <span class="ct-lbl reveal">Réservez maintenant</span>
-    <h2 class="ct-title reveal">Recevez votre profil en 24h</h2>
-    <p class="ct-desc reveal">Remplissez le formulaire — profil qualifié sur WhatsApp en moins de 24h.</p>
+    <h2 class="ct-title reveal">Recevez votre profil en 24 à 72h</h2>
+    <p class="ct-desc reveal">Remplissez le formulaire — profil qualifié sur WhatsApp dans un délai de 24 à 72h.</p>
 
     <div class="fcard reveal">
       <h3>✍️ Formulaire de réservation</h3>
@@ -799,14 +954,14 @@
           <textarea class="ft" id="ctMsg" placeholder="Précisez vos besoins : âge des enfants, surface, jours, etc."></textarea>
         </div>
         <div class="fg" style="margin-bottom:0">
-          <button type="submit" class="cta-submit">💬 Recevez un profil sérieux <span class="wg">sur WhatsApp en moins de 24h</span></button>
-          <div class="fhint">🔒 Gratuit · Sans engagement · Profil en 24h</div>
+          <button type="submit" class="cta-submit">💬 Recevez un profil sérieux <span class="wg">sur WhatsApp dans un délai de 24 à 72h</span></button>
+          <div class="fhint">🔒 Gratuit · Sans engagement · Profil en 24 à 72h</div>
         </div>
       </form>
       <div class="okmsg" id="ctOk">
         <span class="ck">✅</span>
         <h4>Demande envoyée !</h4>
-        <p>Profil qualifié envoyé dans les 24h sur WhatsApp.</p>
+        <p>Profil qualifié envoyé dans un délai de 24 à 72h sur WhatsApp.</p>
       </div>
       <a class="ct-direct" href="https://wa.me/212691733585?text=Bonjour%20Yallah%20Services%20!" target="_blank" rel="noopener">📞 Ou appelez : <strong>+212 691 733 585</strong></a>
     </div>
@@ -823,6 +978,18 @@
     <a href="https://wa.me/212691733585" target="_blank" rel="noopener">WhatsApp +212 691 733 585</a> ·
     <a href="mailto:servicesyallah@gmail.com">servicesyallah@gmail.com</a> ·
     Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé
+  </p>
+  <p style="margin-top:6px">
+    <a href="femme-menage-casablanca.html">Femme de ménage à Casablanca</a> ·
+    <a href="nounou-casablanca.html">Nounou à Casablanca</a> ·
+    <a href="cuisiniere-casablanca.html">Cuisinière à Casablanca</a> ·
+    <a href="garde-malade-casablanca.html">Garde-malade à Casablanca</a> ·
+    <a href="chauffeur-casablanca.html">Chauffeur à Casablanca</a> ·
+    <a href="vigile-casablanca.html">Vigile et gardien à Casablanca</a> ·
+    <a href="femme-menage-rabat.html">Femme de ménage à Rabat</a> ·
+    <a href="nounou-rabat.html">Nounou à Rabat</a> ·
+    <a href="femme-menage-tanger.html">Femme de ménage à Tanger</a> ·
+    <a href="femme-menage-marrakech.html">Femme de ménage à Marrakech</a>
   </p>
   <div class="social-links" aria-label="Réseaux sociaux de Yallah Services">
     <span>Suivez-nous :</span>
@@ -853,7 +1020,7 @@
     <button class="popup-close" id="popupClose" aria-label="Fermer">✕</button>
     <div class="popup-title">Réserver ce pack</div>
     <span class="popup-pack" id="popPack">Pack sélectionné</span>
-    <p class="popup-sub">Laissez vos coordonnées — notre équipe vous contacte sur WhatsApp dans les 24h avec un profil qualifié.</p>
+    <p class="popup-sub">Laissez vos coordonnées — notre équipe vous contacte sur WhatsApp dans un délai de 24 à 72h avec un profil qualifié.</p>
     <div class="popup-warn">🚫 Réservé aux particuliers et entreprises — Demandes d'emploi non acceptées. Candidats : <a href="candidature.html">Espace candidats</a> · WhatsApp <a href="https://wa.me/212710359446" target="_blank" rel="noopener">+212 710 359 446</a></div>
     <form id="popForm" novalidate>
       <div class="popup-fg">
@@ -908,7 +1075,7 @@
     <div class="facture">
       <div class="facture-head">
         <div class="facture-logo">
-          <img src="assets/img/logo-256.png" alt="Logo Yallah Services">
+          <img src="assets/img/logo-256.png" alt="Logo Yallah Services" loading="lazy" decoding="async" width="256" height="256">
           <div class="fln"><span class="nm">YALLAH SERVICES</span><span class="sb">Aides à domicile — Maroc</span></div>
         </div>
         <div class="facture-num">
@@ -945,7 +1112,7 @@
           <div class="fsec-title">🛡️ Remplacements prévus par les formules</div>
           <div class="guarantees">
             <div class="gi-box"><span class="ic">🔄</span><div class="gt">Remplacement selon la formule</div><div class="gd">Jusqu'à satisfaction totale</div></div>
-            <div class="gi-box"><span class="ic">⚡</span><div class="gt">Profil en 24–72h</div><div class="gd">Sur votre WhatsApp</div></div>
+            <div class="gi-box"><span class="ic">⚡</span><div class="gt">Profil en 24 à 72h</div><div class="gd">Sur votre WhatsApp</div></div>
             <div class="gi-box"><span class="ic">✅</span><div class="gt">Personnel vérifié</div><div class="gd">Sélectionné &amp; formé</div></div>
             <div class="gi-box"><span class="ic">💬</span><div class="gt">Suivi WhatsApp</div><div class="gd">Disponible 7j/7</div></div>
           </div>
@@ -955,7 +1122,7 @@
           <div class="fsec-title">📋 Prochaines étapes</div>
           <ul class="steps-list">
             <li><span class="snm">1</span><span>Notre équipe analyse votre demande et sélectionne les meilleurs profils disponibles.</span></li>
-            <li><span class="snm">2</span><span>Vous recevez un profil qualifié <strong>sur WhatsApp dans les 24–72h.</strong></span></li>
+            <li><span class="snm">2</span><span>Vous recevez un profil qualifié <strong>sur WhatsApp dans un délai de 24 à 72h.</strong></span></li>
             <li><span class="snm">3</span><span>Vous validez le profil et le placement est confirmé. Frais réglés <strong>après validation.</strong></span></li>
             <li><span class="snm">4</span><span>Remplacement selon la formule gratuit si insatisfait — Yallah Services reste à vos côtés.</span></li>
           </ul>
