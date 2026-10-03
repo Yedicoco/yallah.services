@@ -16,7 +16,7 @@
        node build-site.js --sortie site-a-mettre-en-ligne
 
    Copie toutes les pages publiques (accueil, candidature, confirmation et
-   pages « service × ville »), puis régénère sitemap.xml à partir du domaine
+   pages « service × ville »), puis régénère les deux sitemaps à partir du domaine
    défini dans site.config.json.
 
    Variables d'environnement :
@@ -164,7 +164,8 @@ function ecrireLisezMoi() {
     '  candidature.html                  → fiche de candidature (FR / AR)',
     '  candidature-confirmation.html     → numéro de dossier + WhatsApp + e-mail',
     '  <service>-<ville>.html            → pages locales (ménage, nounou… par ville)',
-    '  sitemap.xml                       → régénéré automatiquement à chaque build',
+    '  sitemap.xml                       → pages publiques, régénéré à chaque build',
+    '  video-sitemap.xml                 → quatre vidéos, régénéré à chaque build',
     '',
     'Coordonnées configurées :',
     '  WhatsApp foyers    : ' + afficherNumero(WHATSAPP_FOYERS),
@@ -213,10 +214,11 @@ ecrireLisezMoi();
 const sitemap = require('./outils/generer-sitemap');
 const entrees = sitemap.ecrire(SITE_URL, SORTIE);
 console.log('  Sitemap                : ' + entrees.length + ' page(s) → sitemap.xml');
+console.log('  Sitemap vidéo          : ' + sitemap.enVideoXml(SITE_URL, SORTIE).match(/<video:video>/g).length + ' vidéo(s) → video-sitemap.xml');
 
 /* Vérifications rapides */
 const attendus = ['index.html', 'candidature.html', 'candidature-confirmation.html',
-  'sitemap.xml', 'assets/js/config.js', 'assets/js/fiche.js', 'assets/js/candidature.js',
+  'sitemap.xml', 'video-sitemap.xml', 'assets/js/config.js', 'assets/js/fiche.js', 'assets/js/candidature.js',
   'assets/js/candidature-confirmation.js', 'assets/css/recrutement.css'];
 const manquants = attendus.filter((f) => !fs.existsSync(path.join(SORTIE, f)));
 

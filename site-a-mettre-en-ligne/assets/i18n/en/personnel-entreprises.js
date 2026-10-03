@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · personnel-entreprises.html
-   99 chaînes, clés = textes d'origine de la page.
+   100 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/personnel-entreprises.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -10,6 +10,7 @@ YS_TRAD("en", "personnel-entreprises", {
   "@aria-label:Navigation principale": "Main navigation",
   "@aria-label:Yallah Services, accueil": "Yallah Services, home",
   "@alt:Yallah Services": "Yallah Services",
+  "Vidéo B2B": "B2B video",
   "Services par ville": "Services by city",
   "Packs & tarifs": "Packages & prices",
   "FAQ": "FAQ",

@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   468 chaînes, clés = textes d'origine de la page.
+   476 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -14,6 +14,7 @@ YS_TRAD("dar", "index", {
   "Packs": "الباكات",
   "Frais": "المصاريف",
   "FAQ": "أسئلة مكررة",
+  "Entreprises": "الشركات",
   "Contact": "التواصل",
   "Espace candidats": "فضاء المترشحين",
   "@wa:Bonjour Yallah Services !": "السلام Yallah Services!",
@@ -22,6 +23,7 @@ YS_TRAD("dar", "index", {
   "Avis clients": "آراء الكليان",
   "Packs & Tarifs": "الباكات والأثمنة",
   "Frais de Mise en relation": "مصاريف المطابقة",
+  "Entreprises — vidéo B2B": "الشركات — فيديو B2B",
   "🧑‍🍳 Espace candidats — je cherche un emploi": "🧑‍🍳 فضاء المترشحين — كنتقلب على خدمة",
   "💬 WhatsApp — +212 691 733 585": "💬 واتساب — +212 691 733 585",
   "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "فريق Yallah Services: خدامة الدار، طيّابة، حاضنة، رعاية المريض وشوفور فخدمة الأسر فالمغرب",
@@ -147,6 +149,12 @@ YS_TRAD("dar", "index", {
   "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Yallah Service ». Je souhaite échanger sur une aide à domicile. Ma ville et mon besoin :": "السلام عليكم يالله سيرفيس، شفت الفيديو « يالله سيرفيس ». بغيت نهضر معاكم على مساعدة فالدار. المدينة ديالي وشنو محتاج: ",
   "Les services à domicile": "الخدمات فالدار",
   "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :": "السلام عليكم يالله سيرفيس، شفت الفيديو « الخدمات فالدار ». بغيت نوضح شنو محتاج لدارنا. المدينة ديالي والخدمة اللي كنقلب عليها: ",
+  "@aria-label:Voir la vidéo dédiée aux entreprises": "تفرّج فالفيديو ديال الشركات",
+  "@alt:Aperçu de la vidéo Yallah Services pour les entreprises": "لمحة من فيديو Yallah Services للشركات",
+  "Vous recrutez pour une entreprise ?": "كتقلب على خدامين لشركتك؟",
+  "Notre vidéo dédiée aux entreprises": "الفيديو ديالنا الخاص بالشركات",
+  "Hôtels, riads, restaurants, chantiers, nettoyage et événements : découvrez notre service de recherche et de mise en relation de personnel.": "الفنادق والرياض والمطاعم والورشات والتنظيف والتظاهرات: اكتشفو خدمة البحث على المستخدمين والربط بينهم وبين الشركات.",
+  "Voir la vidéo B2B →": "تفرّج ففيديو الشركات →",
   "Grille tarifaire des services": "جدول أثمنة الخدمات",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "أثمنة خدامة الدار، الحضانة والطيابة فالمغرب (2026)",
   "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "أثمنة شهرية حسب الخدمة والمهام — أجور إشارية يمكن يتبدلو حسب الشروط والمسؤوليات.",

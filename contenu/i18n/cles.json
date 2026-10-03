@@ -45,6 +45,12 @@
         "langue": "fr"
       },
       {
+        "cle": "Entreprises",
+        "occurrences": 1,
+        "exemple": "Entreprises",
+        "langue": "fr"
+      },
+      {
         "cle": "Contact",
         "occurrences": 2,
         "exemple": "Contact",
@@ -90,6 +96,12 @@
         "cle": "Frais de Mise en relation",
         "occurrences": 1,
         "exemple": "Frais de Mise en relation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Entreprises — vidéo B2B",
+        "occurrences": 1,
+        "exemple": "Entreprises — vidéo B2B",
         "langue": "fr"
       },
       {
@@ -865,6 +877,44 @@
         "occurrences": 1,
         "exemple": "Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :",
         "langue": "fr"
+      },
+      {
+        "cle": "@aria-label:Voir la vidéo dédiée aux entreprises",
+        "occurrences": 1,
+        "exemple": "Voir la vidéo dédiée aux entreprises",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Aperçu de la vidéo Yallah Services pour les entreprises",
+        "occurrences": 1,
+        "exemple": "Aperçu de la vidéo Yallah Services pour les entreprises",
+        "langue": "fr"
+      },
+      {
+        "cle": "Vous recrutez pour une entreprise ?",
+        "occurrences": 1,
+        "exemple": "Vous recrutez pour une entreprise ?",
+        "langue": "fr"
+      },
+      {
+        "cle": "Notre vidéo dédiée aux entreprises",
+        "occurrences": 1,
+        "exemple": "Notre vidéo dédiée aux entreprises",
+        "langue": "fr"
+      },
+      {
+        "cle": "Hôtels, riads, restaurants, chantiers, nettoyage et événements : découvrez notre service de recherche et de mise en relation de personnel.",
+        "occurrences": 1,
+        "exemple": "Hôtels, riads, restaurants, chantiers, nettoyage et événements : découvrez notre service de recherche et de mise en relation de personnel.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Voir la vidéo B2B →",
+        "occurrences": 1,
+        "exemple": "Voir la vidéo B2B →",
+        "langue": "fr",
+        "balisage": "span",
+        "html": "Voir la vidéo B2B <span aria-hidden=\"true\">→</span>"
       },
       {
         "cle": "Grille tarifaire des services",
@@ -4654,6 +4704,12 @@
         "cle": "@alt:Yallah Services",
         "occurrences": 1,
         "exemple": "Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "Vidéo B2B",
+        "occurrences": 1,
+        "exemple": "Vidéo B2B",
         "langue": "fr"
       },
       {
