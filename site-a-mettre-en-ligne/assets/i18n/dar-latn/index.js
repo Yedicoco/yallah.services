@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   457 chaînes, clés = textes d'origine de la page.
+   468 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -24,6 +24,8 @@ YS_TRAD("dar-latn", "index", {
   "Frais de Mise en relation": "Maṣarif l matching",
   "🧑‍🍳 Espace candidats — je cherche un emploi": "🧑‍🍳 Fada2 l metrache7in — kanqleb 3la khedma",
   "💬 WhatsApp — +212 691 733 585": "💬 WhatsApp — +212 691 733 585",
+  "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "Ferqa Yallah Services: kheddama dar, tayyaba, 7adana, ri3ayat l mriḍ w chauffeur f khedmat l osar f Maghrib",
+  "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.": "Profils bach thammem f darek, b jiddiya w b sirriya.",
   "🇲🇦 Yallah Services · Maroc": "🇲🇦 Yallah Services · Maghrib",
   "Femme de ménage, nounou et cuisinière au Maroc : une aide fiable pour votre maison": "Kheddama dar, 7adana wla teyyaba f l Maghrib: <em>3awna mawthuqa l darek</em>",
   "Ménage, nounou, cuisine ou garde-malade : nous vous aidons à trouver le bon profil, sélectionné avec sérieux.": "T-tneqqiya, l 7adana, t-tiyab wla ri3ayat l mriḍ: kan3awnuk tlqa <strong>l profil l munasib, mkhtar b jiddiya</strong>.",
@@ -39,8 +41,6 @@ YS_TRAD("dar-latn", "index", {
   "7j/7": "7 iyam f l usbu3",
   "Équipe à votre écoute": "Ferqa katsma3 lik",
   "🚫 Réservé aux particuliers et aux entreprises qui recrutent. Vous cherchez un emploi ? Accéder à l’espace candidats →": "🚫 <strong>Makhassas l l osar w cherkat li kaywaddfu.</strong> Katqelleb 3la khedma? <a href=\"candidature.html\">Sir l fada2 l metrache7in →</a>",
-  "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "Ferqa Yallah Services: kheddama dar, tayyaba, 7adana, ri3ayat l mriḍ w chauffeur f khedmat l osar f Maghrib",
-  "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.": "Profils bach thammem f darek, b jiddiya w b sirriya.",
   "Profils sélectionnés": "Profils mkhtarin",
   "selon vos critères": "7sab l m3ayir dyalek",
   "Expérience": "Tajriba",
@@ -136,6 +136,17 @@ YS_TRAD("dar-latn", "index", {
   "💬 Notre grille tarifaire & les formules ✅ Officiel": "💬 L jadwal dyal l atmana w s-siyagh <span>✅ Rasmi</span>",
   "@alt:Grille tarifaire des services Yallah Services Maroc — +212 691 733 585": "Jadwal atmanat khadamat Yallah Services Maghrib — +212 691 733 585",
   "📄 Grille tarifaire officielle Yallah Services — Simplifiez-vous la vie !": "📄 Jadwal l atmana r-rasmi dyal Yallah Services — <strong>Bassaṭ 7ayatek!</strong>",
+  "Pour votre foyer": "Ldarkom",
+  "Yallah Services en vidéo": "Yallah Services b lvideo",
+  "Choisissez une vidéo et lancez la lecture à votre rythme.": "Khtaro video w bdaw lferja f weqtkom.",
+  "Ouvrir la vidéo MP4": "7ell lvideo MP4",
+  "Besoin d’aide à domicile": "Me7tajin mosa3ada f ddar",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Besoin d’aide à domicile ». Je cherche une aide pour mon foyer. Ma ville et mon besoin :": "Ssalam 3likom Yallah Services, cheft lvideo « Me7tajin mosa3ada f ddar ». Kanqelleb 3la mosa3ada l darna. Lmdina dyali w chno me7taj: ",
+  "Parler de mon besoin sur WhatsApp": "Nehder 3la l i7tiyaj dyali f WhatsApp",
+  "Yallah Service": "Yallah Service",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Yallah Service ». Je souhaite échanger sur une aide à domicile. Ma ville et mon besoin :": "Ssalam 3likom Yallah Services, cheft lvideo « Yallah Service ». Bghit nehder m3akom 3la mosa3ada f ddar. Lmdina dyali w chno me7taj: ",
+  "Les services à domicile": "Lkhadamat f ddar",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :": "Ssalam 3likom Yallah Services, cheft lvideo « Lkhadamat f ddar ». Bghit nwede7 chno me7taj l darna. Lmdina dyali w lkhedma lli kanqelleb 3liha: ",
   "Grille tarifaire des services": "Jadwal atmanat l khadamat",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "Atmanat kheddama dar, 7adana w teyyaba f l Maghrib (2026)",
   "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "Atmana chahriya 7sab l khedma w l miham — ojra ichariya ymken ttebdel 7sab ch-chorot w l mas2uliyat.",

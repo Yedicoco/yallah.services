@@ -1,0 +1,34 @@
+{
+  "repository": "Yedicoco/yallahservices",
+  "commit": "460986fbedef70194cb82fcaf4db88c364f421a0",
+  "files": [
+    {
+      "source": "public/videos/besoin-d-aide-a-domicile.mp4",
+      "destination": "assets/videos/besoin-d-aide-a-domicile.mp4",
+      "bytes": 1489409,
+      "gitBlob": "a250770c5b0e277ce430f223c9e4dada74a855db",
+      "sha256": "6fada9d939ebd496978b1da9021d94a70cb9d0e5999074296970b0e6a2836a09"
+    },
+    {
+      "source": "public/videos/yallah-service.mp4",
+      "destination": "assets/videos/yallah-service.mp4",
+      "bytes": 5026074,
+      "gitBlob": "d3629b6f8107f38b1a2c409f451bbe56cc7d7697",
+      "sha256": "ac7fa68a69d196201d0fb1d67f1b687817d11b1ce4a508f9952827233e50843d"
+    },
+    {
+      "source": "public/videos/2026-08-28-151819708.mp4",
+      "destination": "assets/videos/2026-08-28-151819708.mp4",
+      "bytes": 19513452,
+      "gitBlob": "684fbb3cdc5a5855b33724e6ae75602c27942cd6",
+      "sha256": "35a54243e94bdf8de11198d46c6eb2934eadfb83670816b3b1de671018602674"
+    },
+    {
+      "source": "public/videos/prospection-b2b.mp4",
+      "destination": "assets/videos/prospection-b2b.mp4",
+      "bytes": 1757847,
+      "gitBlob": "b6c91848e39efb8083045be4184d953c52253246",
+      "sha256": "7f452bce698112fb1ce5dd2b41ea1cd0d0dd7fd2a4ef29761c15cbf91daf0cdd"
+    }
+  ]
+}

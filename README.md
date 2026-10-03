@@ -21,6 +21,12 @@ Le site répond à **trois publics**, avec trois parcours distincts :
 > **WhatsApp +212 710 359 446** → Espace candidats »*. Les quatre variantes de cette mention (dont la
 > version stricte d'origine) sont dans **`modeles-messages.md`**.
 
+## Vidéos particuliers et entreprises
+
+Les quatre MP4 d'origine, leur provenance, les vignettes extraites et les contrôles
+sont documentés dans [`contenu/videos.md`](contenu/videos.md).
+Contrôle rapide : `node outils/verifier-videos.js`.
+
 ## 📞 Contacts officiels
 
 | Canal | Coordonnées |

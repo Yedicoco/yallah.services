@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · personnel-entreprises.html
-   93 chaînes, clés = textes d'origine de la page.
+   99 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/personnel-entreprises.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -27,6 +27,12 @@ YS_TRAD("dar-latn", "personnel-entreprises", {
   "Recherche et mise en relation uniquement — ni montage, ni pilotage de projet · Conditions précisées avant toute mise en relation.": "L ba7t w l matching ghir — bla montage w bla idarat l machrou3 · Chorot kaytweḍḍ7u qbel ay matching.",
   "@alt:Personnel opérationnel pour hôtels, restaurants et chantiers au Maroc": "Yed 3amla l fnadiq, mt3am w l wirach f Maghrib",
   "Hôtellerie, restauration, chantiers, nettoyage, événementiel : cinq familles de besoins.": "L fondouqa, mt3am, l wirach, tneqqiya w tanzim: khamsa 3a2ilat mn l 7ajat.",
+  "Votre recrutement en vidéo": "Ttawdif dyalkom b lvideo",
+  "Une vidéo dédiée aux entreprises. Lancez la lecture, puis présentez-nous votre besoin sur WhatsApp.": "Video khas b ch-charikat. Bdaw lferja, w men be3d qolo lina chno me7tajin f WhatsApp.",
+  "Ouvrir la vidéo MP4": "7ell lvideo MP4",
+  "Personnel pour les entreprises": "Mostakhdamin l ch-charikat",
+  "@wa:Bonjour Yallah Services, je viens de voir votre vidéo pour les entreprises. Je recherche du personnel. Secteur, poste, effectif, lieu et dates :": "Ssalam 3likom Yallah Services, cheft lvideo dyalkom l ch-charikat. Kanqelleb 3la mostakhdamin. Lqita3, lmansib, l3adad, lblassa w ttawarikh: ",
+  "Présenter notre besoin sur WhatsApp": "Ncher7o l i7tiyaj dyalna f WhatsApp",
   "Les secteurs que nous servons": "L qita3at li kankhdmu m3ahom",
   "Chaque secteur a son vocabulaire, ses contraintes horaires et ses profils rares. Nous adaptons la recherche à ces réalités plutôt que de proposer une liste générique de candidats.": "Kul qita3 3ando lougha dyalo, t-tawqit dyalo w l profils n-nadra. Kankayyfu l ba7t m3a had l waqi3 3iwad ma nqaddmu lista 3amma mn l metrache7in.",
   "Hôtels, riads et maisons d'hôtes": "Fnadiq, riads w dur d-diyafa",

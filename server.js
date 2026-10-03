@@ -242,6 +242,7 @@ const TYPES = {
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
   '.webp': 'image/webp',
+  '.mp4': 'video/mp4',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
   '.txt': 'text/plain; charset=utf-8',
@@ -632,6 +633,36 @@ function traiterRequete(requete, reponse) {
       const extension = path.extname(fichier).toLowerCase();
       const statistiquesFichier = fs.statSync(fichier);
       const immutable = chemin.indexOf('/assets/') === 0;
+      /* Lecture et navigation natives dans les MP4 (notamment sur mobile).
+         Vercel gère ces requêtes Range pour la version statique. */
+      if (extension === '.mp4') {
+        const taille = statistiquesFichier.size;
+        const entetes = entetesSecurite({
+          'Content-Type': TYPES[extension],
+          'Accept-Ranges': 'bytes',
+          'Cache-Control': 'public, max-age=86400'
+        });
+        const plage = requete.method === 'GET' && /^bytes=(\d*)-(\d*)$/.exec(requete.headers.range || '');
+        if (plage && (plage[1] || plage[2])) {
+          const debut = plage[1] ? Number(plage[1]) : Math.max(0, taille - Number(plage[2]));
+          const fin = plage[1] && plage[2] ? Math.min(Number(plage[2]), taille - 1) : taille - 1;
+          if (!Number.isSafeInteger(debut) || !Number.isSafeInteger(fin) || debut > fin || debut >= taille) {
+            reponse.writeHead(416, { ...entetes, 'Content-Range': 'bytes */' + taille });
+            reponse.end();
+            return;
+          }
+          reponse.writeHead(206, { ...entetes,
+            'Content-Range': 'bytes ' + debut + '-' + fin + '/' + taille,
+            'Content-Length': fin - debut + 1
+          });
+          fs.createReadStream(fichier, { start: debut, end: fin }).pipe(reponse);
+        } else {
+          reponse.writeHead(200, { ...entetes, 'Content-Length': taille });
+          if (requete.method === 'HEAD') reponse.end();
+          else fs.createReadStream(fichier).pipe(reponse);
+        }
+        return;
+      }
       reponse.writeHead(200, entetesSecurite({
         'Content-Type': TYPES[extension] || 'application/octet-stream',
         'Content-Length': statistiquesFichier.size,

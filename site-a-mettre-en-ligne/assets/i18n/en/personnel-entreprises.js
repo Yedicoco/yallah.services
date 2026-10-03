@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · personnel-entreprises.html
-   93 chaînes, clés = textes d'origine de la page.
+   99 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/personnel-entreprises.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -27,6 +27,12 @@ YS_TRAD("en", "personnel-entreprises", {
   "Recherche et mise en relation uniquement — ni montage, ni pilotage de projet · Conditions précisées avant toute mise en relation.": "Search and connection only — no project management or supervision · Terms set out before any connection.",
   "@alt:Personnel opérationnel pour hôtels, restaurants et chantiers au Maroc": "Operational staff for hotels, restaurants and building sites in Morocco",
   "Hôtellerie, restauration, chantiers, nettoyage, événementiel : cinq familles de besoins.": "Hotels, catering, building sites, cleaning, events: five families of needs.",
+  "Votre recrutement en vidéo": "Your recruitment on video",
+  "Une vidéo dédiée aux entreprises. Lancez la lecture, puis présentez-nous votre besoin sur WhatsApp.": "A video for businesses. Start watching, then tell us what you need on WhatsApp.",
+  "Ouvrir la vidéo MP4": "Open the MP4 video",
+  "Personnel pour les entreprises": "Staff for businesses",
+  "@wa:Bonjour Yallah Services, je viens de voir votre vidéo pour les entreprises. Je recherche du personnel. Secteur, poste, effectif, lieu et dates :": "Hello Yallah Services, I have just watched your video for businesses. I am looking for staff. Sector, role, headcount, location and dates: ",
+  "Présenter notre besoin sur WhatsApp": "Share our needs on WhatsApp",
   "Les secteurs que nous servons": "The sectors we serve",
   "Chaque secteur a son vocabulaire, ses contraintes horaires et ses profils rares. Nous adaptons la recherche à ces réalités plutôt que de proposer une liste générique de candidats.": "Each sector has its own vocabulary, its own working hours and its rare profiles. We adapt the search to those realities instead of offering a generic list of candidates.",
   "Hôtels, riads et maisons d'hôtes": "Hotels, riads and guest houses",

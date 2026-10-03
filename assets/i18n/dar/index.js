@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   457 chaînes, clés = textes d'origine de la page.
+   468 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -24,6 +24,8 @@ YS_TRAD("dar", "index", {
   "Frais de Mise en relation": "مصاريف المطابقة",
   "🧑‍🍳 Espace candidats — je cherche un emploi": "🧑‍🍳 فضاء المترشحين — كنتقلب على خدمة",
   "💬 WhatsApp — +212 691 733 585": "💬 واتساب — +212 691 733 585",
+  "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "فريق Yallah Services: خدامة الدار، طيّابة، حاضنة، رعاية المريض وشوفور فخدمة الأسر فالمغرب",
+  "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.": "بروفيلات باش تهتم بدارك، بجدية وسرّية.",
   "🇲🇦 Yallah Services · Maroc": "🇲🇦 Yallah Services · المغرب",
   "Femme de ménage, nounou et cuisinière au Maroc : une aide fiable pour votre maison": "خدامة الدار، حاضنة ولا طيّابة فالمغرب: <em>عاونة موثوقة لدارك</em>",
   "Ménage, nounou, cuisine ou garde-malade : nous vous aidons à trouver le bon profil, sélectionné avec sérieux.": "التنقية، الحضانة، الطياب ولا رعاية المريض: كنعاونوك تلقى <strong>البروفيل المناسب، مختار بجدية</strong>.",
@@ -39,8 +41,6 @@ YS_TRAD("dar", "index", {
   "7j/7": "7 أيام فالأسبوع",
   "Équipe à votre écoute": "فريق كيسمع ليك",
   "🚫 Réservé aux particuliers et aux entreprises qui recrutent. Vous cherchez un emploi ? Accéder à l’espace candidats →": "🚫 <strong>مخصّص للأسر والشركات اللي كيوظفو.</strong> كنتقلب على خدمة؟ <a href=\"candidature.html\">سير لفضاء المترشحين →</a>",
-  "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "فريق Yallah Services: خدامة الدار، طيّابة، حاضنة، رعاية المريض وشوفور فخدمة الأسر فالمغرب",
-  "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.": "بروفيلات باش تهتم بدارك، بجدية وسرّية.",
   "Profils sélectionnés": "بروفيلات مختارة",
   "selon vos critères": "حسب المعايير ديالك",
   "Expérience": "تجربة",
@@ -136,6 +136,17 @@ YS_TRAD("dar", "index", {
   "💬 Notre grille tarifaire & les formules ✅ Officiel": "💬 الجدول ديال الأثمنة والصيغ <span>✅ رسمي</span>",
   "@alt:Grille tarifaire des services Yallah Services Maroc — +212 691 733 585": "جدول أثمنة خدمات Yallah Services المغرب — +212 691 733 585",
   "📄 Grille tarifaire officielle Yallah Services — Simplifiez-vous la vie !": "📄 جدول الأثمنة الرسمي ديال Yallah Services — <strong>بسّط حياتك!</strong>",
+  "Pour votre foyer": "لداركم",
+  "Yallah Services en vidéo": "يالله سيرفيس بالفيديو",
+  "Choisissez une vidéo et lancez la lecture à votre rythme.": "ختارو فيديو وبداو الفرجة فوقتكم.",
+  "Ouvrir la vidéo MP4": "حلّ الفيديو MP4",
+  "Besoin d’aide à domicile": "محتاجين مساعدة فالدار",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Besoin d’aide à domicile ». Je cherche une aide pour mon foyer. Ma ville et mon besoin :": "السلام عليكم يالله سيرفيس، شفت الفيديو « محتاجين مساعدة فالدار ». كنقلب على مساعدة لدارنا. المدينة ديالي وشنو محتاج: ",
+  "Parler de mon besoin sur WhatsApp": "نهضر على الاحتياج ديالي فواتساب",
+  "Yallah Service": "يالله سيرفيس",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Yallah Service ». Je souhaite échanger sur une aide à domicile. Ma ville et mon besoin :": "السلام عليكم يالله سيرفيس، شفت الفيديو « يالله سيرفيس ». بغيت نهضر معاكم على مساعدة فالدار. المدينة ديالي وشنو محتاج: ",
+  "Les services à domicile": "الخدمات فالدار",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :": "السلام عليكم يالله سيرفيس، شفت الفيديو « الخدمات فالدار ». بغيت نوضح شنو محتاج لدارنا. المدينة ديالي والخدمة اللي كنقلب عليها: ",
   "Grille tarifaire des services": "جدول أثمنة الخدمات",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "أثمنة خدامة الدار، الحضانة والطيابة فالمغرب (2026)",
   "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "أثمنة شهرية حسب الخدمة والمهام — أجور إشارية يمكن يتبدلو حسب الشروط والمسؤوليات.",

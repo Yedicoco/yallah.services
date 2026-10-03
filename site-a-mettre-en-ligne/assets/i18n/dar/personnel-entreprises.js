@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · personnel-entreprises.html
-   93 chaînes, clés = textes d'origine de la page.
+   99 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/personnel-entreprises.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -27,6 +27,12 @@ YS_TRAD("dar", "personnel-entreprises", {
   "Recherche et mise en relation uniquement — ni montage, ni pilotage de projet · Conditions précisées avant toute mise en relation.": "البحث والمطابقة فقط — بلا مونتاج وبلا إدارة المشروع · الشروط كيتوضحو قبل أي مطابقة.",
   "@alt:Personnel opérationnel pour hôtels, restaurants et chantiers au Maroc": "يد عاملة للفنادق، المطاعم والأوراش فالمغرب",
   "Hôtellerie, restauration, chantiers, nettoyage, événementiel : cinq familles de besoins.": "الفندقة، المطاعم، الأوراش، التنقية والتنظيم: خمسة عائلات من الحاجات.",
+  "Votre recrutement en vidéo": "التوظيف ديالكم بالفيديو",
+  "Une vidéo dédiée aux entreprises. Lancez la lecture, puis présentez-nous votre besoin sur WhatsApp.": "فيديو خاص بالشركات. بداو الفرجة، ومن بعد قولولنا شنو محتاجين فواتساب.",
+  "Ouvrir la vidéo MP4": "حلّ الفيديو MP4",
+  "Personnel pour les entreprises": "مستخدمين للشركات",
+  "@wa:Bonjour Yallah Services, je viens de voir votre vidéo pour les entreprises. Je recherche du personnel. Secteur, poste, effectif, lieu et dates :": "السلام عليكم يالله سيرفيس، شفت الفيديو ديالكم للشركات. كنقلب على مستخدمين. القطاع، المنصب، العدد، البلاصة والتواريخ: ",
+  "Présenter notre besoin sur WhatsApp": "نشرحو الاحتياج ديالنا فواتساب",
   "Les secteurs que nous servons": "القطاعات اللي كنخدمو معاها",
   "Chaque secteur a son vocabulaire, ses contraintes horaires et ses profils rares. Nous adaptons la recherche à ces réalités plutôt que de proposer une liste générique de candidats.": "كل قطاع عندو اللغة ديالو، التوقيت ديالو والبروفيلات النادرة. كنكيّفو البحث مع هاد الواقع عوض ما نقدمو لائحة عامة من المترشحين.",
   "Hôtels, riads et maisons d'hôtes": "الفنادق، الرياضات ودور الضيافة",

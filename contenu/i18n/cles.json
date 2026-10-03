@@ -105,6 +105,18 @@
         "langue": "fr"
       },
       {
+        "cle": "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc",
+        "occurrences": 1,
+        "exemple": "Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc",
+        "langue": "fr"
+      },
+      {
+        "cle": "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.",
+        "occurrences": 1,
+        "exemple": "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.",
+        "langue": "fr"
+      },
+      {
         "cle": "🇲🇦 Yallah Services · Maroc",
         "occurrences": 1,
         "exemple": "🇲🇦 Yallah Services · Maroc",
@@ -203,18 +215,6 @@
         "langue": "fr",
         "balisage": "strong,a",
         "html": "🚫 <strong>Réservé aux particuliers et aux entreprises qui recrutent.</strong> Vous cherchez un emploi ? <a href=\"candidature.html\">Accéder à l’espace candidats →</a>"
-      },
-      {
-        "cle": "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc",
-        "occurrences": 1,
-        "exemple": "Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc",
-        "langue": "fr"
-      },
-      {
-        "cle": "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.",
-        "occurrences": 1,
-        "exemple": "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.",
-        "langue": "fr"
       },
       {
         "cle": "Profils sélectionnés",
@@ -799,6 +799,72 @@
         "langue": "fr",
         "balisage": "strong",
         "html": "📄 Grille tarifaire officielle Yallah Services — <strong>Simplifiez-vous la vie !</strong>"
+      },
+      {
+        "cle": "Pour votre foyer",
+        "occurrences": 1,
+        "exemple": "Pour votre foyer",
+        "langue": "fr"
+      },
+      {
+        "cle": "Yallah Services en vidéo",
+        "occurrences": 1,
+        "exemple": "Yallah Services en vidéo",
+        "langue": "fr"
+      },
+      {
+        "cle": "Choisissez une vidéo et lancez la lecture à votre rythme.",
+        "occurrences": 1,
+        "exemple": "Choisissez une vidéo et lancez la lecture à votre rythme.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ouvrir la vidéo MP4",
+        "occurrences": 3,
+        "exemple": "Ouvrir la vidéo MP4",
+        "langue": "fr"
+      },
+      {
+        "cle": "Besoin d’aide à domicile",
+        "occurrences": 1,
+        "exemple": "Besoin d’aide à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Besoin d’aide à domicile ». Je cherche une aide pour mon foyer. Ma ville et mon besoin :",
+        "occurrences": 1,
+        "exemple": "Bonjour Yallah Services, je viens de voir la vidéo « Besoin d’aide à domicile ». Je cherche une aide pour mon foyer. Ma ville et mon besoin :",
+        "langue": "fr"
+      },
+      {
+        "cle": "Parler de mon besoin sur WhatsApp",
+        "occurrences": 3,
+        "exemple": "Parler de mon besoin sur WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "Yallah Service",
+        "occurrences": 1,
+        "exemple": "Yallah Service",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Yallah Service ». Je souhaite échanger sur une aide à domicile. Ma ville et mon besoin :",
+        "occurrences": 1,
+        "exemple": "Bonjour Yallah Services, je viens de voir la vidéo « Yallah Service ». Je souhaite échanger sur une aide à domicile. Ma ville et mon besoin :",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les services à domicile",
+        "occurrences": 1,
+        "exemple": "Les services à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :",
+        "occurrences": 1,
+        "exemple": "Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :",
+        "langue": "fr"
       },
       {
         "cle": "Grille tarifaire des services",
@@ -4694,6 +4760,42 @@
         "cle": "Hôtellerie, restauration, chantiers, nettoyage, événementiel : cinq familles de besoins.",
         "occurrences": 1,
         "exemple": "Hôtellerie, restauration, chantiers, nettoyage, événementiel : cinq familles de besoins.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Votre recrutement en vidéo",
+        "occurrences": 1,
+        "exemple": "Votre recrutement en vidéo",
+        "langue": "fr"
+      },
+      {
+        "cle": "Une vidéo dédiée aux entreprises. Lancez la lecture, puis présentez-nous votre besoin sur WhatsApp.",
+        "occurrences": 1,
+        "exemple": "Une vidéo dédiée aux entreprises. Lancez la lecture, puis présentez-nous votre besoin sur WhatsApp.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ouvrir la vidéo MP4",
+        "occurrences": 1,
+        "exemple": "Ouvrir la vidéo MP4",
+        "langue": "fr"
+      },
+      {
+        "cle": "Personnel pour les entreprises",
+        "occurrences": 1,
+        "exemple": "Personnel pour les entreprises",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services, je viens de voir votre vidéo pour les entreprises. Je recherche du personnel. Secteur, poste, effectif, lieu et dates :",
+        "occurrences": 1,
+        "exemple": "Bonjour Yallah Services, je viens de voir votre vidéo pour les entreprises. Je recherche du personnel. Secteur, poste, effectif, lieu et dates :",
+        "langue": "fr"
+      },
+      {
+        "cle": "Présenter notre besoin sur WhatsApp",
+        "occurrences": 1,
+        "exemple": "Présenter notre besoin sur WhatsApp",
         "langue": "fr"
       },
       {

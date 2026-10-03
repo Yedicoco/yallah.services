@@ -1,0 +1,86 @@
+# Galerie vidéo — intégration du 3 octobre 2026
+
+## Sources et intégrité
+
+Les quatre MP4 proviennent exclusivement de `Yedicoco/yallahservices` (sans point),
+au commit `460986fbedef70194cb82fcaf4db88c364f421a0`, sous `public/videos/`.
+Ils sont conservés **octet pour octet**, sans transcodage ni remplacement.
+Les tailles, identifiants Git et empreintes SHA-256 sont consignés dans
+[`videos-sources.json`](videos-sources.json). Les identifiants Git ont été comparés
+aux métadonnées de l'API GitHub lors de la récupération.
+
+Le dépôt cible est un site HTML statique, pas une application utilisant `public/` :
+les médias sont donc publiés dans `assets/videos/`, automatiquement repris par
+`build-site.js` dans `site-a-mettre-en-ligne/assets/videos/`.
+
+| Fichier original | Placement |
+|---|---|
+| `besoin-d-aide-a-domicile.mp4` | Accueil, galerie `#videos` |
+| `yallah-service.mp4` | Accueil, galerie `#videos` |
+| `2026-08-28-151819708.mp4` | Accueil, galerie `#videos` |
+| `prospection-b2b.mp4` | `personnel-entreprises.html#video-entreprises` uniquement |
+
+La galerie de l'accueil suit `#temo` et précède `#packs`. La vidéo entreprises
+est présentée après l'introduction et avant les secteurs. Aucun tarif ni offre
+n'a été modifié. Les titres restent sobres, sans témoignage ou promesse ajouté.
+
+## Affichage et lecture
+
+- Charte existante : variables `--brand-*`, boutons `pwb` / `local-btn-main`.
+- Trois colonnes sur ordinateur, une colonne jusqu'à 760 px ; B2B en carte unique.
+- Format vertical 9:16 préservé, sans recadrage (`object-fit: contain`).
+- `<video controls playsinline preload="none">`, sans autoplay ni script de lecture.
+- Liens WhatsApp préremplis distincts vers le numéro clients existant `212691733585`.
+- Textes et messages ajoutés aux dictionnaires anglais, darija arabe et latine.
+- Le serveur Node connaît `video/mp4` et les requêtes HTTP Range ; Vercel sert
+  directement les fichiers statiques.
+
+Les quatre vignettes JPEG de `assets/img/videos/` sont de vraies images extraites
+à **00:00:01** dans chaque MP4, non des illustrations générées. Régénération :
+
+```bash
+for f in assets/videos/*.mp4; do
+  ffmpeg -y -ss 1 -i "$f" -frames:v 1 -vf 'scale=640:-2' -q:v 3 \
+    "assets/img/videos/$(basename "$f" .mp4).jpg"
+done
+node build-site.js
+```
+
+## Vérifications reproductibles
+
+```bash
+node outils/verifier-videos.js
+node build-site.js
+node outils/verifier-videos.js --dossier site-a-mettre-en-ligne
+node outils/verifier-site.js
+node outils/extraire-i18n.js --verifier
+node outils/generer-i18n.js --verifier
+# Outils de développement uniquement, non nécessaires au site publié :
+npm install --no-save --package-lock=false playwright jsdom
+npx playwright install chromium
+node outils/tester-i18n.js
+# Dans un autre terminal : node server.js
+node apercus/tester-videos.js http://localhost:3000
+```
+
+Résultats de l'intégration :
+
+- Intégrité des quatre MP4 et chemins des posters : validés à la racine et dans le build.
+- Test Chromium à 320, 390, 760 et 1280 px, sur les deux pages : aucun débordement,
+  aucun téléchargement MP4 avant clic (y compris après défilement et changement
+  de langue), lecture effective des quatre vidéos par les commandes natives.
+- Vérifications multilingues existantes : 77 contrôles réussis.
+- HTTP local : `HEAD` 200, plages initiales et finales 206, plages impossibles 416.
+- Sections `packs`, `grille` et `frais` : strictement identiques au commit de départ.
+- `verifier-site.js` : aucune erreur, un avertissement préexistant sur quatre pages
+  locales non traduites.
+- **Contrôles existants encore en échec, reproduits sur le commit de départ** :
+  `verifier-contenu.js` signale les mêmes 15 erreurs éditoriales (pages locales trop
+  courtes, duplication, FAQ/maillage) et deux avertissements ;
+  `tester-messages.js` s'arrête car son faux DOM ne fournit pas
+  `document.documentElement.setAttribute`. Ces problèmes ne sont pas modifiés
+  par ce travail vidéo.
+
+Les captures `apercus/videos-*.png` sont régénérables et ignorées par Git.
+Les vérifications navigateur sont locales ; elles ne constituent pas un contrôle
+sur appareil physique ni une vérification du déploiement Vercel en production.

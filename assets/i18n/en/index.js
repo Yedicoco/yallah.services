@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   457 chaînes, clés = textes d'origine de la page.
+   468 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -24,6 +24,8 @@ YS_TRAD("en", "index", {
   "Frais de Mise en relation": "Placement fees",
   "🧑‍🍳 Espace candidats — je cherche un emploi": "🧑‍🍳 Job seekers — I am looking for work",
   "💬 WhatsApp — +212 691 733 585": "💬 WhatsApp — +212 691 733 585",
+  "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "Yallah Services team: housekeeper, cook, nanny, caregiver and driver serving households in Morocco",
+  "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.": "Profiles to take care of your home, with care and discretion.",
   "🇲🇦 Yallah Services · Maroc": "🇲🇦 Yallah Services · Morocco",
   "Femme de ménage, nounou et cuisinière au Maroc : une aide fiable pour votre maison": "Housekeeper, nanny and cook in Morocco: <em>reliable help for your home</em>",
   "Ménage, nounou, cuisine ou garde-malade : nous vous aidons à trouver le bon profil, sélectionné avec sérieux.": "Cleaning, nanny, cooking or caregiving: we help you find the <strong>right profile, carefully selected</strong>.",
@@ -39,8 +41,6 @@ YS_TRAD("en", "index", {
   "7j/7": "7 days a week",
   "Équipe à votre écoute": "A team that listens to you",
   "🚫 Réservé aux particuliers et aux entreprises qui recrutent. Vous cherchez un emploi ? Accéder à l’espace candidats →": "🚫 <strong>For households and companies that hire.</strong> Looking for a job? <a href=\"candidature.html\">Go to the job seekers page →</a>",
-  "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc": "Yallah Services team: housekeeper, cook, nanny, caregiver and driver serving households in Morocco",
-  "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.": "Profiles to take care of your home, with care and discretion.",
   "Profils sélectionnés": "Selected profiles",
   "selon vos critères": "to your criteria",
   "Expérience": "Experience",
@@ -136,6 +136,17 @@ YS_TRAD("en", "index", {
   "💬 Notre grille tarifaire & les formules ✅ Officiel": "💬 Our price list & the packages <span>✅ Official</span>",
   "@alt:Grille tarifaire des services Yallah Services Maroc — +212 691 733 585": "Yallah Services Morocco price list — +212 691 733 585",
   "📄 Grille tarifaire officielle Yallah Services — Simplifiez-vous la vie !": "📄 Official Yallah Services price list — <strong>Simplify your life!</strong>",
+  "Pour votre foyer": "For your home",
+  "Yallah Services en vidéo": "Yallah Services on video",
+  "Choisissez une vidéo et lancez la lecture à votre rythme.": "Choose a video and start watching at your own pace.",
+  "Ouvrir la vidéo MP4": "Open the MP4 video",
+  "Besoin d’aide à domicile": "Need help at home",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Besoin d’aide à domicile ». Je cherche une aide pour mon foyer. Ma ville et mon besoin :": "Hello Yallah Services, I have just watched the “Need help at home” video. I am looking for help for my household. My city and needs: ",
+  "Parler de mon besoin sur WhatsApp": "Discuss my needs on WhatsApp",
+  "Yallah Service": "Yallah Service",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Yallah Service ». Je souhaite échanger sur une aide à domicile. Ma ville et mon besoin :": "Hello Yallah Services, I have just watched the “Yallah Service” video. I would like to discuss home help. My city and needs: ",
+  "Les services à domicile": "Home services",
+  "@wa:Bonjour Yallah Services, je viens de voir la vidéo « Les services à domicile ». Je souhaite préciser mon besoin pour mon foyer. Ma ville et le service recherché :": "Hello Yallah Services, I have just watched the “Home services” video. I would like to describe my household needs. My city and the service I need: ",
   "Grille tarifaire des services": "Service price list",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "Housekeeper, nanny and cook rates in Morocco (2026)",
   "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "Monthly rates depending on the service and the tasks — indicative salaries that may vary with conditions and responsibilities.",
