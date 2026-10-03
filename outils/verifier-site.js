@@ -73,7 +73,7 @@ PAGES.forEach((page) => {
   const ressources = [];
   const motifs = [
     /<img[^>]+src="([^"]+)"/g,
-    /<link[^>]+href="([^"]+\.(?:css|png|jpg|jpeg|webp|svg|ico))"/g,
+    /<link[^>]+href="([^"]+\.(?:css|png|jpg|jpeg|webp|svg|ico)(?:\?[^"]*)?)"/g,
     /<script[^>]+src="([^"]+)"/g,
     /<meta[^>]+content="([^"]+\.(?:jpg|jpeg|png))"/g
   ];
