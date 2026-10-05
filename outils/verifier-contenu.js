@@ -82,7 +82,15 @@ function section(t) { console.log('\n' + t); }
 
 function lire(chemin) { return fs.readFileSync(path.join(RACINE, chemin), 'utf8'); }
 function normaliser(texte) {
-  return texte.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  return String(texte).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+function normaliserComparaison(texte) {
+  return normaliser(String(texte)
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&apos;|&#0*39;|&#x0*27;|&#8217;|&rsquo;/gi, "'")
+    .replace(/<[^>]+>/g, ' '))
+    .replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 /* ── Inventaire des pages HTML publiques ── */
@@ -182,11 +190,13 @@ function analyser(fichier) {
   }
   const types = [];
   const questions = [];
+  const reponses = [];
   (function parcourir(noeud) {
     if (Array.isArray(noeud)) return noeud.forEach(parcourir);
     if (!noeud || typeof noeud !== 'object') return;
     if (noeud['@type']) types.push(String(noeud['@type']));
     if (noeud['@type'] === 'Question' && noeud.name) questions.push(String(noeud.name));
+    if (noeud['@type'] === 'Answer' && noeud.text) reponses.push(String(noeud.text));
     Object.keys(noeud).forEach((cle) => parcourir(noeud[cle]));
   })(blocs.map((b) => b.json).filter(Boolean));
 
@@ -201,7 +211,7 @@ function analyser(fichier) {
     mots: compterMots(textePrincipal),
     motsPage: compterMots(texteComplet),
     titre, description, canonical, h1s, noindex,
-    blocs, types, questions,
+    blocs, types, questions, reponses,
     liensLocaux: Array.from(new Set(liens)).filter((l) => {
       const m = l.replace(/\.html$/, '').split('-');
       return VILLES.includes(m[m.length - 1]);
@@ -213,19 +223,25 @@ function analyser(fichier) {
 /* ── Analyse de toutes les pages ── */
 const pages = listerPages().map(analyser);
 const locales = pages.filter((p) => p.service && p.ville);
+const localesIndexables = locales.filter((p) => !p.noindex);
+const localesNoindex = locales.filter((p) => p.noindex);
 const domaine = (() => {
   const url = (pages.find((p) => p.canonical) || {}).canonical || '';
   try { return new URL(url).origin; } catch (e) { return ''; }
 })();
 
 console.log('CONTENU SEO — ' + pages.length + ' page(s) analysée(s), dont ' +
-  locales.length + ' page(s) service × ville');
+  localesIndexables.length + ' page(s) service × ville indexable(s)' +
+  (localesNoindex.length ? ' · ' + localesNoindex.length + ' page(s) locale(s) en noindex (hors contrôles de publication)' : ''));
 console.log('Seuils : ' + MOTS_MIN + ' mots minimum · ' + DUP_MAX + '% de recopie maximum');
 
 /* ═══ 1. Volume de contenu ═══ */
 section('1. Volume de contenu (texte principal, hors navigation et pied de page)');
-if (locales.length === 0) avertir('Aucune page « service × ville » détectée.');
-locales.forEach((p) => {
+if (localesIndexables.length === 0) avertir('Aucune page indexable « service × ville » détectée.');
+localesNoindex.forEach((p) => {
+  console.log('  ℹ️  ' + p.fichier + ' : noindex, donc hors sitemap et hors seuils éditoriaux jusqu\'à validation du contenu local.');
+});
+localesIndexables.forEach((p) => {
   const nom = p.fichier.padEnd(34);
   const service = p.service ? p.service.libelle : 'service non reconnu';
   const ville = p.ville ? p.ville[0].toUpperCase() + p.ville.slice(1) : 'ville non reconnue';
@@ -240,16 +256,16 @@ locales.forEach((p) => {
 
 /* ═══ 2. Recopie entre pages locales ═══ */
 section('2. Recopie entre pages service × ville — seuil ' + DUP_MAX + ' %');
-if (locales.length < 2) {
-  avertir('Au moins deux pages locales sont nécessaires pour mesurer la recopie.');
+if (localesIndexables.length < 2) {
+  avertir('Au moins deux pages locales indexables sont nécessaires pour mesurer la recopie.');
 } else {
   const paires = [];
-  for (let i = 0; i < locales.length; i += 1) {
-    for (let j = i + 1; j < locales.length; j += 1) {
-      const taux = recopie(locales[i], locales[j]);
-      const memeservice = locales[i].service && locales[j].service &&
-        locales[i].service.slug === locales[j].service.slug;
-      paires.push({ a: locales[i], b: locales[j], taux, memeservice });
+  for (let i = 0; i < localesIndexables.length; i += 1) {
+    for (let j = i + 1; j < localesIndexables.length; j += 1) {
+      const taux = recopie(localesIndexables[i], localesIndexables[j]);
+      const memeservice = localesIndexables[i].service && localesIndexables[j].service &&
+        localesIndexables[i].service.slug === localesIndexables[j].service.slug;
+      paires.push({ a: localesIndexables[i], b: localesIndexables[j], taux, memeservice });
     }
   }
   paires.sort((x, y) => y.taux - x.taux);
@@ -263,16 +279,16 @@ if (locales.length < 2) {
   paires.filter((p) => p.taux >= DUP_MAX / 2 && p.taux < DUP_MAX).forEach((p) => {
     avertir('« ' + p.a.fichier + ' » ↔ « ' + p.b.fichier + ' » : ' + p.taux + ' % de recopie');
   });
-  if (bloquantes.length === 0) ok('Aucun couple de pages au-dessus du seuil de recopie.');
+  if (bloquantes.length === 0) ok('Aucun couple de pages indexables au-dessus du seuil de recopie.');
   if (lourdes.length) {
     console.log('     → Même service, plusieurs villes : c\'est le motif « porte d\'entrée » (doorway)\n' +
       '       que Google sanctionne. Chaque page doit être écrite à partir d\'informations\n' +
-      '       locales propres (quartiers réels, questions reçues dans cette ville, délais observés).');
+      '       locales propres (quartiers réels, questions reçues sur WhatsApp, faits vérifiés).');
   }
   if (DETAILS) {
     console.log('\n  Matrice complète (% du texte de la plus courte présent dans l\'autre) :');
-    locales.forEach((a) => {
-      const ligne = locales.map((b) => (a === b ? '  —' : String(recopie(a, b)).padStart(3) + ' %')).join(' | ');
+    localesIndexables.forEach((a) => {
+      const ligne = localesIndexables.map((b) => (a === b ? '  —' : String(recopie(a, b)).padStart(3) + ' %')).join(' | ');
       console.log('    ' + a.fichier.padEnd(32) + ligne);
     });
   }
@@ -325,19 +341,25 @@ pages.forEach((p) => {
     if (types.indexOf('BreadcrumbList') === -1) avertir(p.fichier + ' : pas de fil d\'Ariane structuré.');
     if (types.indexOf('FAQPage') === -1) avertir(p.fichier + ' : pas de FAQPage.');
   }
+  const texteVisibleSchema = normaliserComparaison(p.texteComplet);
   p.questions.forEach((q) => {
-    const recherche = normaliser(q).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
-    const cible = normaliser(p.texteComplet).replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ');
-    if (recherche && cible.indexOf(recherche) === -1) {
+    const recherche = normaliserComparaison(q);
+    if (recherche && texteVisibleSchema.indexOf(recherche) === -1) {
       erreur(p.fichier + ' : question déclarée en Schema.org mais absente du texte visible → « ' + q + ' »');
+    }
+  });
+  p.reponses.forEach((reponse) => {
+    const recherche = normaliserComparaison(reponse);
+    if (recherche && texteVisibleSchema.indexOf(recherche) === -1) {
+      erreur(p.fichier + ' : réponse déclarée en Schema.org mais absente ou différente du texte visible → « ' + reponse.slice(0, 120) + (reponse.length > 120 ? '…' : '') + ' »');
     }
   });
 });
 
 /* ═══ 5. Maillage interne ═══ */
 section('5. Maillage interne des pages locales');
-locales.forEach((p) => {
-  const liens = locales.filter((autre) => autre !== p && p.liensLocaux.indexOf(autre.fichier) !== -1);
+localesIndexables.forEach((p) => {
+  const liens = localesIndexables.filter((autre) => autre !== p && p.liensLocaux.indexOf(autre.fichier) !== -1);
   if (liens.length === 0) {
     erreur(p.fichier + ' : aucun lien vers une autre page locale (hub ou page voisine).');
   } else if (liens.length < 3) {

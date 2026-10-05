@@ -128,7 +128,7 @@ YS_TRAD("dar", "vigile-casablanca", {
   "Accueil": "الرئيسية",
   "servicesyallah@gmail.com": "servicesyallah@gmail.com",
   "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn": "تبعونا: <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>",
-  "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida": "كازا · بوسكورة · دار بوعزة · الرباط · مراكش · طنجة · أكادير · المحمدية · القنيطرة · فاس · تمارة · بوزنيقة · سلا · الجديدة",
+  "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé": "الدار البيضاء · بوسكورة · دار بوعزة · الرباط · مراكش · طنجة · أكادير · المحمدية · القنيطرة · فاس · تمارة · بوزنيقة · سلا",
   "@title": "الملفّ ديالك تصيفط — Yallah Services",
   "@meta:description": "الاستمارة ديالك مسجّلة: رقم الملفّ، تصيفيط الاستمارة فواتساب والمراجع بالبريد الإلكتروني.",
   "@meta:og:title": "Yallah Services | خدامين البيوت وخدمات فالمغرب",

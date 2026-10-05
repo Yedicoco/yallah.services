@@ -128,7 +128,7 @@ YS_TRAD("dar-latn", "vigile-casablanca", {
   "Accueil": "Ra2issiya",
   "servicesyallah@gmail.com": "servicesyallah@gmail.com",
   "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn": "Teb3una: <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>",
-  "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida": "Casa · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+  "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé": "Casa · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kenitra · Fes · Temara · Bouznika · Sale",
   "@title": "L milaf dyalek tsayfet — Yallah Services",
   "@meta:description": "L istimara dyalek msajjala: raqm l milaf, sayfet l istimara f WhatsApp w l maraji3 b l email.",
   "@meta:og:title": "Yallah Services | Kheddamin l biyut w khadamat f Maghrib",

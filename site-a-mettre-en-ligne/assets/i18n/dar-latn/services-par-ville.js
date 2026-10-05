@@ -48,7 +48,7 @@ YS_TRAD("dar-latn", "services-par-ville", {
   "Rabat et sa région": "Rabat w l jiha dyalha",
   "Rabat, Salé et Témara. Nous y traitons des demandes de foyers et d'entreprises, notamment pour le ménage, la garde d'enfants, la cuisine et le personnel hôtelier.": "Rabat, Salé w Témara. Kant3amlu temma m3a talabat l osar w cherkat, khosusan t-tneqqiya, ri3ayat d-drary, t-tiyab w kheddamin l fnadiq.",
   "Axe atlantique": "L ma7war l atlasi",
-  "Mohammedia, Bouznika, El Jadida (selon les demandes) : des foyers souvent situés en résidences ou en villas, avec des besoins d'entretien et de gardiennage.": "Mohammedia, Bouznika w El Jadida (7sab t-talabat): osar ghalban f iqamat wla villas, m3a 7aja l tneqqiya w 7arasa.",
+  "Mohammedia et Bouznika : des foyers souvent situés en résidences ou en villas, avec des besoins d'entretien et de gardiennage.": "Mohammedia w Bouznika: kaynin osar sakin f iqamat wla villas, w 3andhom 7wayj f t-tneqqiya w l7rasa.",
   "Marrakech et le Sud": "Marrakech w J-janub",
   "Marrakech et Agadir. Deux marchés spécifiques : les résidences et villas d'un côté, l'hôtellerie, les riads et les maisons d'hôtes de l'autre.": "Marrakech w Agadir. Juj swaq khassin: l iqamat w l villas mn ji7a, w l fnadiq, r-riads w dur d-diyafa mn ji7a khra.",
   "Nord et centre": "Ch-chamal w l wasat",

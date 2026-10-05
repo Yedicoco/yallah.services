@@ -246,8 +246,6 @@
   var thanks = $('#thanks');
 
   function openThanks(data) {
-    var num = 'YS-' + String(Math.floor(100000 + Math.random() * 899999));
-    $('#factNum').textContent = num;
     var now = new Date();
     $('#factDate').textContent = now.toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' }) +
       ' · ' + now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
@@ -259,12 +257,23 @@
     $('#factType').textContent = or(data.type, '—');
     $('#factDelay').textContent = or(data.delay, '—');
 
-    var msg = 'Bonjour Yallah Services ! Je confirme ma demande ' + num + '%0A' +
-      'Service : ' + or(data.service, 'À préciser') + '%0A' +
-      'Nom : ' + or(data.name, '—') + '%0A' +
-      'Ville : ' + or(data.city, '—') + '%0A' +
-      'Délai : ' + or(data.delay, '—');
-    $('#thanksWa').href = 'https://wa.me/' + WA_NUMBER + '?text=' + msg;
+    function traduireMessage(texte) {
+      var i18n = window.YSI18N;
+      if (!i18n || i18n.langue() === 'fr') return texte;
+      var dico = i18n.dictionnaire(i18n.langue(), 'index');
+      return dico[texte] || texte;
+    }
+    var msg = [
+      traduireMessage('Bonjour Yallah Services ! Je souhaite transmettre cette demande.'),
+      traduireMessage('Service :') + ' ' + or(data.service, traduireMessage('À préciser')),
+      traduireMessage('Nom :') + ' ' + or(data.name, '—'),
+      traduireMessage('Ville :') + ' ' + or(data.city, traduireMessage('À préciser')),
+      traduireMessage('Expérience souhaitée :') + ' ' + or(data.nat, traduireMessage('À préciser')),
+      traduireMessage('Type de poste :') + ' ' + or(data.type, traduireMessage('À préciser')),
+      traduireMessage('Délai souhaité :') + ' ' + or(data.delay, traduireMessage('À préciser'))
+    ];
+    if (data.msg) msg.push(traduireMessage('Précisions :') + ' ' + data.msg);
+    $('#thanksWa').href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg.join('\n'));
 
     if (thanks) {
       thanks.classList.add('open');

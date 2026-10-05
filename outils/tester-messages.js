@@ -126,14 +126,14 @@ verifier('métier absent → « — »', F.valeurAffichee('quartier', '', 'fr') 
 /* ── 6. Bascule de langue ── */
 section('6. Bascule de langue (moteur partagé)');
 fenetre.document = {
-  documentElement: { getAttribute: () => null, lang: '', dir: '' },
-  body: { classList: { toggle: () => {} } },
+  documentElement: { getAttribute: () => null, setAttribute: () => {}, lang: '', dir: '' },
+  body: { classList: { toggle: () => {} }, setAttribute: () => {} },
   querySelectorAll: () => [],
   getElementById: () => null
 };
 verifier('langue par défaut : français', F.bilingue.langue() === 'fr', F.bilingue.langue());
 F.bilingue.definir('ar');
-verifier('passage en arabe mémorisé', F.bilingue.langue() === 'ar' && fenetre.localStorage.getItem('ys_langue') === 'ar');
+verifier('passage en arabe mémorisé', F.bilingue.langue() === 'dar' && fenetre.localStorage.getItem('ys_langue') === 'dar');
 verifier('messages d\'erreur bilingues', F.bilingue.erreur('nom', 'Nom requis.', 'الاسم مطلوب.') === 'الاسم مطلوب.');
 F.bilingue.definir('fr');
 verifier('retour au français', F.bilingue.erreur('nom', 'Nom requis.', 'الاسم مطلوب.') === 'Nom requis.');

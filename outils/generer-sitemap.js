@@ -35,6 +35,17 @@ function argument(nom, defaut) {
 }
 
 /* ── Pages à publier ── */
+function estNoindex(fichier, dossier) {
+  const chemin = path.join(dossier, fichier);
+  const html = fs.readFileSync(chemin, 'utf8');
+  const balisesMeta = html.match(/<meta\b[^>]*>/gi) || [];
+  return balisesMeta.some((balise) => {
+    const nom = (balise.match(/\bname\s*=\s*(["'])(.*?)\1/i) || [])[2] || '';
+    const contenu = (balise.match(/\bcontent\s*=\s*(["'])(.*?)\1/i) || [])[2] || '';
+    return /^(robots|googlebot|bingbot)$/i.test(nom.trim()) && /(?:^|[\s,])noindex(?:$|[\s,])/i.test(contenu);
+  });
+}
+
 function listerPages(aDossier) {
   const dossier = aDossier || RACINE;
   const horsSitemap = new Set(CONFIG.pagesHorsSitemap || []);
@@ -42,7 +53,9 @@ function listerPages(aDossier) {
     .filter((f) => f.endsWith('.html'))
     .filter((f) => !horsSitemap.has(f))
     .filter((f) => !/^google.*\.html$/i.test(f))
-    .filter((f) => fs.existsSync(dossier === RACINE ? f : path.join(dossier, f)))
+    .filter((f) => fs.existsSync(path.join(dossier, f)))
+    // Une URL en noindex ne doit jamais être envoyée dans un sitemap.
+    .filter((f) => !estNoindex(f, dossier))
     .sort();
 }
 
@@ -59,13 +72,21 @@ function priorite(fichier) {
 }
 
 function dateGit(fichier, dossier) {
+  const cheminPublie = path.join(dossier || RACINE, fichier);
+  // Une page modifiée dans le worktree n'a pas encore de date Git à jour :
+  // utiliser sa date de modification pour éviter un <lastmod> antérieur au contenu.
+  try {
+    const etat = execFileSync('git', ['status', '--porcelain', '--', fichier],
+      { cwd: RACINE, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+    if (etat) return fs.statSync(cheminPublie).mtime.toISOString().slice(0, 10);
+  } catch (e) { /* dépôt absent, fichier non suivi ou stat impossible */ }
   try {
     const date = execFileSync('git', ['log', '-1', '--format=%cs', '--', fichier],
       { cwd: RACINE, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
     if (date) return date;
   } catch (e) { /* dépôt absent ou fichier non suivi */ }
   try {
-    const stat = fs.statSync(path.join(dossier || RACINE, fichier));
+    const stat = fs.statSync(cheminPublie);
     return stat.mtime.toISOString().slice(0, 10);
   } catch (e) {
     return new Date().toISOString().slice(0, 10);

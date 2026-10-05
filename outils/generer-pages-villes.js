@@ -176,7 +176,7 @@ function rendrePage(page) {
   const titre = esc(page.title);
   const waHero = waLien(page.messageWhatsApp || ('Bonjour Yallah Services, je cherche : ' + page.h1Texte + '.'));
   const waCta = waLien(page.messageWhatsAppCta || page.messageWhatsApp || ('Bonjour Yallah Services, je souhaite un renseignement : ' + page.h1Texte + '.'));
-  const villes = CONFIG.villes.map((v) => v.nom).join(' · ');
+  const villes = CONFIG.villes.filter((v) => v.statut !== 'candidate').map((v) => v.nom).join(' · ');
 
   return `<!doctype html>
 <html lang="fr-MA">
@@ -213,6 +213,7 @@ function rendrePage(page) {
   <link rel="stylesheet" href="assets/css/i18n.css">
   <!-- Multilingue : français · darija (arabe et latin) · anglais -->
   <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/seo-tracking.js" defer></script>
 
 ${rendreSchema(page)}
 </head>

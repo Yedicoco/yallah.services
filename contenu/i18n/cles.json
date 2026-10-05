@@ -117,15 +117,15 @@
         "langue": "fr"
       },
       {
-        "cle": "@alt:Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc",
+        "cle": "@alt:Illustration de services de ménage, cuisine, garde d’enfants, accompagnement et chauffeur au Maroc",
         "occurrences": 1,
-        "exemple": "Équipe Yallah Services : femme de ménage, cuisinière, nounou, garde-malade et chauffeur au service des foyers au Maroc",
+        "exemple": "Illustration de services de ménage, cuisine, garde d’enfants, accompagnement et chauffeur au Maroc",
         "langue": "fr"
       },
       {
-        "cle": "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.",
+        "cle": "Services de personnel pour les particuliers et les entreprises au Maroc.",
         "occurrences": 1,
-        "exemple": "Des profils pour prendre soin de votre maison, avec sérieux et discrétion.",
+        "exemple": "Services de personnel pour les particuliers et les entreprises au Maroc.",
         "langue": "fr"
       },
       {
@@ -135,34 +135,30 @@
         "langue": "fr"
       },
       {
-        "cle": "Femme de ménage, nounou et cuisinière au Maroc : une aide fiable pour votre maison",
+        "cle": "Femme de ménage, nounou et cuisinière au Maroc : des services selon vos besoins",
         "occurrences": 1,
-        "exemple": "Femme de ménage, nounou et cuisinière au Maroc : une aide fiable pour votre maison",
+        "exemple": "Femme de ménage, nounou et cuisinière au Maroc : des services selon vos besoins",
         "langue": "fr",
         "balisage": "em",
-        "html": "Femme de ménage, nounou et cuisinière au Maroc : <em>une aide fiable pour votre maison</em>"
+        "html": "Femme de ménage, nounou et cuisinière au Maroc : <em>des services selon vos besoins</em>"
       },
       {
-        "cle": "Ménage, nounou, cuisine ou garde-malade : nous vous aidons à trouver le bon profil, sélectionné avec sérieux.",
+        "cle": "Ménage, nounou, cuisine ou garde-malade : décrivez-nous votre besoin et les critères du poste recherché.",
         "occurrences": 1,
-        "exemple": "Ménage, nounou, cuisine ou garde-malade : nous vous aidons à trouver le bon profil, sélectionné avec sérieux.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "Ménage, nounou, cuisine ou garde-malade : nous vous aidons à trouver le <strong>bon profil, sélectionné avec sérieux</strong>."
-      },
-      {
-        "cle": "Vous nous expliquez votre besoin, nous vous présentons un profil adapté et nous vous accompagnons jusqu’à la mise en relation.",
-        "occurrences": 1,
-        "exemple": "Vous nous expliquez votre besoin, nous vous présentons un profil adapté et nous vous accompagnons jusqu’à la mise en relation.",
+        "exemple": "Ménage, nounou, cuisine ou garde-malade : décrivez-nous votre besoin et les critères du poste recherché.",
         "langue": "fr"
       },
       {
-        "cle": "💬 Parler à un conseiller sur WhatsApp",
+        "cle": "Les possibilités dépendent de vos critères et des profils disponibles au moment de la demande.",
         "occurrences": 1,
-        "exemple": "💬 Parler à un conseiller sur WhatsApp",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "💬 Parler à un conseiller <span class=\"wg\">sur WhatsApp</span>"
+        "exemple": "Les possibilités dépendent de vos critères et des profils disponibles au moment de la demande.",
+        "langue": "fr"
+      },
+      {
+        "cle": "💬 Présenter mon besoin",
+        "occurrences": 1,
+        "exemple": "💬 Présenter mon besoin",
+        "langue": "fr"
       },
       {
         "cle": "Découvrir nos services ↓",
@@ -173,9 +169,9 @@
         "html": "Découvrir nos services <span aria-hidden=\"true\">↓</span>"
       },
       {
-        "cle": "Profils sélectionnés selon vos critères · Particuliers et entreprises · Paiement des frais après validation",
+        "cle": "Recherche selon vos critères · Particuliers et entreprises · Frais après validation du profil",
         "occurrences": 1,
-        "exemple": "Profils sélectionnés selon vos critères · Particuliers et entreprises · Paiement des frais après validation",
+        "exemple": "Recherche selon vos critères · Particuliers et entreprises · Frais après validation du profil",
         "langue": "fr"
       },
       {
@@ -209,15 +205,15 @@
         "langue": "fr"
       },
       {
-        "cle": "7j/7",
+        "cle": "2 publics",
         "occurrences": 1,
-        "exemple": "7j/7",
+        "exemple": "2 publics",
         "langue": "fr"
       },
       {
-        "cle": "Équipe à votre écoute",
-        "occurrences": 1,
-        "exemple": "Équipe à votre écoute",
+        "cle": "Particuliers et entreprises",
+        "occurrences": 2,
+        "exemple": "Particuliers et entreprises",
         "langue": "fr"
       },
       {
@@ -229,9 +225,9 @@
         "html": "🚫 <strong>Réservé aux particuliers et aux entreprises qui recrutent.</strong> Vous cherchez un emploi ? <a href=\"candidature.html\">Accéder à l’espace candidats →</a>"
       },
       {
-        "cle": "Profils sélectionnés",
+        "cle": "Recherche ciblée",
         "occurrences": 1,
-        "exemple": "Profils sélectionnés",
+        "exemple": "Recherche ciblée",
         "langue": "fr"
       },
       {
@@ -241,57 +237,51 @@
         "langue": "fr"
       },
       {
-        "cle": "Expérience",
+        "cle": "Frais après validation",
         "occurrences": 1,
-        "exemple": "Expérience",
+        "exemple": "Frais après validation",
         "langue": "fr"
       },
       {
-        "cle": "et professionnalisme",
+        "cle": "et mise en relation",
         "occurrences": 1,
-        "exemple": "et professionnalisme",
+        "exemple": "et mise en relation",
         "langue": "fr"
       },
       {
-        "cle": "Accompagnement",
+        "cle": "besoins à domicile et B2B",
         "occurrences": 1,
-        "exemple": "Accompagnement",
+        "exemple": "besoins à domicile et B2B",
         "langue": "fr"
       },
       {
-        "cle": "personnalisé",
+        "cle": "Recherche cibléeselon vos critères",
         "occurrences": 1,
-        "exemple": "personnalisé",
-        "langue": "fr"
-      },
-      {
-        "cle": "Profils sélectionnésselon vos critères",
-        "occurrences": 1,
-        "exemple": "Profils sélectionnésselon vos critères",
+        "exemple": "Recherche cibléeselon vos critères",
         "langue": "fr",
         "balisage": "span",
-        "html": "Profils sélectionnés<span>selon vos critères</span>"
+        "html": "Recherche ciblée<span>selon vos critères</span>"
       },
       {
-        "cle": "Expérienceet professionnalisme",
+        "cle": "Frais après validationet mise en relation",
         "occurrences": 1,
-        "exemple": "Expérienceet professionnalisme",
+        "exemple": "Frais après validationet mise en relation",
         "langue": "fr",
         "balisage": "span",
-        "html": "Expérience<span>et professionnalisme</span>"
+        "html": "Frais après validation<span>et mise en relation</span>"
       },
       {
-        "cle": "Accompagnementpersonnalisé",
+        "cle": "Particuliers et entreprisesbesoins à domicile et B2B",
         "occurrences": 1,
-        "exemple": "Accompagnementpersonnalisé",
+        "exemple": "Particuliers et entreprisesbesoins à domicile et B2B",
         "langue": "fr",
         "balisage": "span",
-        "html": "Accompagnement<span>personnalisé</span>"
+        "html": "Particuliers et entreprises<span>besoins à domicile et B2B</span>"
       },
       {
-        "cle": "Simple & rapide",
+        "cle": "Un parcours en quatre étapes",
         "occurrences": 1,
-        "exemple": "Simple & rapide",
+        "exemple": "Un parcours en quatre étapes",
         "langue": "fr"
       },
       {
@@ -301,69 +291,69 @@
         "langue": "fr"
       },
       {
-        "cle": "Trouvez votre aide idéale en 4 étapes simples",
+        "cle": "Décrivez votre besoin et examinez les possibilités en quatre étapes.",
         "occurrences": 1,
-        "exemple": "Trouvez votre aide idéale en 4 étapes simples",
+        "exemple": "Décrivez votre besoin et examinez les possibilités en quatre étapes.",
         "langue": "fr"
       },
       {
-        "cle": "Remplissez le formulaire",
+        "cle": "Décrivez votre besoin",
         "occurrences": 1,
-        "exemple": "Remplissez le formulaire",
+        "exemple": "Décrivez votre besoin",
         "langue": "fr"
       },
       {
-        "cle": "Indiquez votre service, votre ville et vos préférences. 30 secondes suffisent.",
+        "cle": "Précisez le service, la ville et les critères souhaités.",
         "occurrences": 1,
-        "exemple": "Indiquez votre service, votre ville et vos préférences. 30 secondes suffisent.",
+        "exemple": "Précisez le service, la ville et les critères souhaités.",
         "langue": "fr"
       },
       {
-        "cle": "Recevez une sélection adaptée",
+        "cle": "Envoyez votre demande",
         "occurrences": 1,
-        "exemple": "Recevez une sélection adaptée",
+        "exemple": "Envoyez votre demande",
         "langue": "fr"
       },
       {
-        "cle": "Notre équipe sélectionne le profil idéal et vous l'envoie sur WhatsApp.",
+        "cle": "Le formulaire prépare un récapitulatif que vous pourrez transmettre sur WhatsApp.",
         "occurrences": 1,
-        "exemple": "Notre équipe sélectionne le profil idéal et vous l'envoie sur WhatsApp.",
+        "exemple": "Le formulaire prépare un récapitulatif que vous pourrez transmettre sur WhatsApp.",
         "langue": "fr"
       },
       {
-        "cle": "Rencontre & placement",
+        "cle": "Échangez sur les possibilités",
         "occurrences": 1,
-        "exemple": "Rencontre & placement",
+        "exemple": "Échangez sur les possibilités",
         "langue": "fr"
       },
       {
-        "cle": "Vous rencontrez la candidate, validez le profil. Remplacement selon la formule si besoin.",
+        "cle": "Discutez des profils disponibles et vérifiez les informations utiles avant votre décision.",
         "occurrences": 1,
-        "exemple": "Vous rencontrez la candidate, validez le profil. Remplacement selon la formule si besoin.",
+        "exemple": "Discutez des profils disponibles et vérifiez les informations utiles avant votre décision.",
         "langue": "fr"
       },
       {
-        "cle": "Suivi & accompagnement",
+        "cle": "Vérifiez les conditions",
         "occurrences": 1,
-        "exemple": "Suivi & accompagnement",
+        "exemple": "Vérifiez les conditions",
         "langue": "fr"
       },
       {
-        "cle": "Yallah Services assure le suivi après placement et le remplacement gratuit si insatisfait.",
+        "cle": "Demandez les frais et les modalités de remplacement prévus par la formule avant de valider le profil.",
         "occurrences": 1,
-        "exemple": "Yallah Services assure le suivi après placement et le remplacement gratuit si insatisfait.",
+        "exemple": "Demandez les frais et les modalités de remplacement prévus par la formule avant de valider le profil.",
         "langue": "fr"
       },
       {
-        "cle": "Recevez des profils adaptés sur WhatsApp",
-        "occurrences": 1,
-        "exemple": "Recevez des profils adaptés sur WhatsApp",
+        "cle": "Décrivez votre besoin en personnel",
+        "occurrences": 2,
+        "exemple": "Décrivez votre besoin en personnel",
         "langue": "fr"
       },
       {
-        "cle": "Remplissez en 30 secondes — notre équipe vous répond rapidement",
+        "cle": "Vos réponses servent à préparer un récapitulatif à transmettre sur WhatsApp.",
         "occurrences": 1,
-        "exemple": "Remplissez en 30 secondes — notre équipe vous répond rapidement",
+        "exemple": "Vos réponses servent à préparer un récapitulatif à transmettre sur WhatsApp.",
         "langue": "fr"
       },
       {
@@ -663,23 +653,21 @@
         "langue": "fr"
       },
       {
-        "cle": "💬 Recevoir un profil sur WhatsApp",
-        "occurrences": 2,
-        "exemple": "💬 Recevoir un profil sur WhatsApp",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "💬 Recevoir un profil <span class=\"wg\">sur WhatsApp</span>"
-      },
-      {
-        "cle": "🔒 Gratuit · Sans engagement · Réponse sur WhatsApp",
-        "occurrences": 1,
-        "exemple": "🔒 Gratuit · Sans engagement · Réponse sur WhatsApp",
+        "cle": "💬 Préparer ma demande",
+        "occurrences": 3,
+        "exemple": "💬 Préparer ma demande",
         "langue": "fr"
       },
       {
-        "cle": "Demande envoyée ! Nous revenons vers vous sur WhatsApp.",
+        "cle": "Frais de mise en relation après validation du profil et mise en relation.",
+        "occurrences": 2,
+        "exemple": "Frais de mise en relation après validation du profil et mise en relation.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Récapitulatif prêt. Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.",
         "occurrences": 1,
-        "exemple": "Demande envoyée ! Nous revenons vers vous sur WhatsApp.",
+        "exemple": "Récapitulatif prêt. Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.",
         "langue": "fr"
       },
       {
@@ -965,15 +953,9 @@
         "langue": "fr"
       },
       {
-        "cle": "🏠 Personnel logé à votre domicile 24h/24",
+        "cle": "🏠 Formule logée — horaires et repos à convenir",
         "occurrences": 1,
-        "exemple": "🏠 Personnel logé à votre domicile 24h/24",
-        "langue": "fr"
-      },
-      {
-        "cle": "⭐ Top",
-        "occurrences": 5,
-        "exemple": "⭐ Top",
+        "exemple": "🏠 Formule logée — horaires et repos à convenir",
         "langue": "fr"
       },
       {
@@ -981,14 +963,6 @@
         "occurrences": 1,
         "exemple": "Ménage simple dans villa — Yallah Services",
         "langue": "fr"
-      },
-      {
-        "cle": "18 familles ce mois ont réservé",
-        "occurrences": 1,
-        "exemple": "18 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>18 familles ce mois ont réservé"
       },
       {
         "cle": "Ménage simple dans villa",
@@ -1033,9 +1007,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Logée à votre domicile 24h/24",
+        "cle": "Logement au domicile selon les conditions convenues",
         "occurrences": 4,
-        "exemple": "Logée à votre domicile 24h/24",
+        "exemple": "Logement au domicile selon les conditions convenues",
         "langue": "fr"
       },
       {
@@ -1051,9 +1025,9 @@
         "langue": "fr"
       },
       {
-        "cle": "💬 Réserver",
+        "cle": "💬 Demander",
         "occurrences": 19,
-        "exemple": "💬 Réserver",
+        "exemple": "💬 Demander",
         "langue": "fr"
       },
       {
@@ -1061,14 +1035,6 @@
         "occurrences": 1,
         "exemple": "Ménage simple dans mini villa — Yallah Services",
         "langue": "fr"
-      },
-      {
-        "cle": "11 familles ce mois ont réservé",
-        "occurrences": 1,
-        "exemple": "11 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>11 familles ce mois ont réservé"
       },
       {
         "cle": "Ménage simple dans mini villa",
@@ -1095,9 +1061,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Produits d'entretien bien maîtrisés",
+        "cle": "Produits d'entretien définis avec la famille",
         "occurrences": 1,
-        "exemple": "Produits d'entretien bien maîtrisés",
+        "exemple": "Produits d'entretien définis avec la famille",
         "langue": "fr"
       },
       {
@@ -1111,14 +1077,6 @@
         "occurrences": 1,
         "exemple": "Ménage dans appartement — Yallah Services",
         "langue": "fr"
-      },
-      {
-        "cle": "16 familles ce mois ont réservé",
-        "occurrences": 1,
-        "exemple": "16 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>16 familles ce mois ont réservé"
       },
       {
         "cle": "Ménage dans appartement",
@@ -1157,14 +1115,6 @@
         "langue": "fr"
       },
       {
-        "cle": "12 familles ce mois ont réservé",
-        "occurrences": 1,
-        "exemple": "12 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>12 familles ce mois ont réservé"
-      },
-      {
         "cle": "Nounou d'un enfant",
         "occurrences": 2,
         "exemple": "Nounou d'un enfant",
@@ -1183,9 +1133,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Repas et sieste surveillés",
+        "cle": "Repas et horaires à convenir avec la famille",
         "occurrences": 1,
-        "exemple": "Repas et sieste surveillés",
+        "exemple": "Repas et horaires à convenir avec la famille",
         "langue": "fr"
       },
       {
@@ -1195,9 +1145,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Nounou douce et patiente",
+        "cle": "Tâches et horaires à convenir avec la famille",
         "occurrences": 1,
-        "exemple": "Nounou douce et patiente",
+        "exemple": "Tâches et horaires à convenir avec la famille",
         "langue": "fr"
       },
       {
@@ -1211,14 +1161,6 @@
         "occurrences": 1,
         "exemple": "Nounou d'un enfant + ménage — Yallah Services",
         "langue": "fr"
-      },
-      {
-        "cle": "9 familles ce mois ont réservé",
-        "occurrences": 2,
-        "exemple": "9 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>9 familles ce mois ont réservé"
       },
       {
         "cle": "Nounou d'un enfant + ménage",
@@ -1245,9 +1187,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Personnel polyvalent et formé",
-        "occurrences": 2,
-        "exemple": "Personnel polyvalent et formé",
+        "cle": "Tâches définies selon les besoins du foyer",
+        "occurrences": 4,
+        "exemple": "Tâches définies selon les besoins du foyer",
         "langue": "fr"
       },
       {
@@ -1261,14 +1203,6 @@
         "occurrences": 1,
         "exemple": "Nounou de 2 enfants avec ménage — Yallah Services",
         "langue": "fr"
-      },
-      {
-        "cle": "8 familles ce mois ont réservé",
-        "occurrences": 1,
-        "exemple": "8 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>8 familles ce mois ont réservé"
       },
       {
         "cle": "Nounou de 2 enfants avec ménage",
@@ -1301,9 +1235,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Organisation quotidienne assurée",
+        "cle": "Organisation quotidienne à préciser selon le besoin",
         "occurrences": 1,
-        "exemple": "Organisation quotidienne assurée",
+        "exemple": "Organisation quotidienne à préciser selon le besoin",
         "langue": "fr"
       },
       {
@@ -1325,14 +1259,6 @@
         "langue": "fr"
       },
       {
-        "cle": "6 familles ce mois ont réservé",
-        "occurrences": 2,
-        "exemple": "6 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>6 familles ce mois ont réservé"
-      },
-      {
         "cle": "Nounou de 3 enfants",
         "occurrences": 2,
         "exemple": "Nounou de 3 enfants",
@@ -1345,9 +1271,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Surveillance et sécurité permanentes",
+        "cle": "Horaires et responsabilités à convenir avec la famille",
         "occurrences": 1,
-        "exemple": "Surveillance et sécurité permanentes",
+        "exemple": "Horaires et responsabilités à convenir avec la famille",
         "langue": "fr"
       },
       {
@@ -1363,9 +1289,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Nounou expérimentée et patiente",
+        "cle": "Expérience déclarée à discuter avant la mise en relation",
         "occurrences": 1,
-        "exemple": "Nounou expérimentée et patiente",
+        "exemple": "Expérience déclarée à discuter avant la mise en relation",
         "langue": "fr"
       },
       {
@@ -1379,14 +1305,6 @@
         "occurrences": 1,
         "exemple": "Nounou de 3 enfants + ménage — Yallah Services",
         "langue": "fr"
-      },
-      {
-        "cle": "5 familles ce mois ont réservé",
-        "occurrences": 2,
-        "exemple": "5 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>5 familles ce mois ont réservé"
       },
       {
         "cle": "Nounou de 3 enfants + ménage",
@@ -1404,12 +1322,6 @@
         "cle": "Repas des enfants et de la famille",
         "occurrences": 1,
         "exemple": "Repas des enfants et de la famille",
-        "langue": "fr"
-      },
-      {
-        "cle": "Personnel polyvalent et sérieux",
-        "occurrences": 2,
-        "exemple": "Personnel polyvalent et sérieux",
         "langue": "fr"
       },
       {
@@ -1431,14 +1343,6 @@
         "langue": "fr"
       },
       {
-        "cle": "7 familles ce mois ont réservé",
-        "occurrences": 1,
-        "exemple": "7 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>7 familles ce mois ont réservé"
-      },
-      {
         "cle": "Cuisine simple",
         "occurrences": 2,
         "exemple": "Cuisine simple",
@@ -1451,15 +1355,15 @@
         "langue": "fr"
       },
       {
-        "cle": "Cuisine marocaine et européenne",
+        "cle": "Types de cuisine à préciser selon le besoin",
         "occurrences": 1,
-        "exemple": "Cuisine marocaine et européenne",
+        "exemple": "Types de cuisine à préciser selon le besoin",
         "langue": "fr"
       },
       {
-        "cle": "Hygiène et propreté irréprochables",
+        "cle": "Consignes d'hygiène à convenir avec la famille",
         "occurrences": 1,
-        "exemple": "Hygiène et propreté irréprochables",
+        "exemple": "Consignes d'hygiène à convenir avec la famille",
         "langue": "fr"
       },
       {
@@ -1541,9 +1445,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Hygiène irréprochable",
+        "cle": "Consignes d'hygiène à convenir",
         "occurrences": 1,
-        "exemple": "Hygiène irréprochable",
+        "exemple": "Consignes d'hygiène à convenir",
         "langue": "fr"
       },
       {
@@ -1595,14 +1499,6 @@
         "langue": "fr"
       },
       {
-        "cle": "4 familles ce mois ont réservé",
-        "occurrences": 1,
-        "exemple": "4 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>4 familles ce mois ont réservé"
-      },
-      {
         "cle": "Garde malade simple",
         "occurrences": 2,
         "exemple": "Garde malade simple",
@@ -1615,9 +1511,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Surveillance et présence bienveillante",
+        "cle": "Présence et accompagnement selon les tâches convenues",
         "occurrences": 1,
-        "exemple": "Surveillance et présence bienveillante",
+        "exemple": "Présence et accompagnement selon les tâches convenues",
         "langue": "fr"
       },
       {
@@ -1627,15 +1523,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Rappel des médicaments",
-        "occurrences": 1,
-        "exemple": "Rappel des médicaments",
-        "langue": "fr"
-      },
-      {
-        "cle": "Personnel formé et patient",
-        "occurrences": 1,
-        "exemple": "Personnel formé et patient",
+        "cle": "Tâches d’accompagnement à définir avec la famille",
+        "occurrences": 3,
+        "exemple": "Tâches d’accompagnement à définir avec la famille",
         "langue": "fr"
       },
       {
@@ -1649,14 +1539,6 @@
         "occurrences": 1,
         "exemple": "Garde malade et ménage — Yallah Services",
         "langue": "fr"
-      },
-      {
-        "cle": "3 familles ce mois ont réservé",
-        "occurrences": 1,
-        "exemple": "3 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>3 familles ce mois ont réservé"
       },
       {
         "cle": "Garde malade et ménage",
@@ -1680,12 +1562,6 @@
         "cle": "Préparation des repas légers",
         "occurrences": 1,
         "exemple": "Préparation des repas légers",
-        "langue": "fr"
-      },
-      {
-        "cle": "Personnel formé et attentionné",
-        "occurrences": 1,
-        "exemple": "Personnel formé et attentionné",
         "langue": "fr"
       },
       {
@@ -1713,14 +1589,6 @@
         "langue": "fr"
       },
       {
-        "cle": "15 familles ce mois ont réservé",
-        "occurrences": 2,
-        "exemple": "15 familles ce mois ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>15 familles ce mois ont réservé"
-      },
-      {
         "cle": "Pack Ménage",
         "occurrences": 1,
         "exemple": "Pack Ménage",
@@ -1745,9 +1613,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Personnel qualifié et discret",
+        "cle": "Tâches et conditions à définir avec la famille",
         "occurrences": 1,
-        "exemple": "Personnel qualifié et discret",
+        "exemple": "Tâches et conditions à définir avec la famille",
         "langue": "fr"
       },
       {
@@ -1797,14 +1665,6 @@
         "occurrences": 1,
         "exemple": "Ménage et nounou Yallah Services",
         "langue": "fr"
-      },
-      {
-        "cle": "6 familles cette semaine ont réservé",
-        "occurrences": 1,
-        "exemple": "6 familles cette semaine ont réservé",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "<span class=\"clients-dot\"></span>6 familles cette semaine ont réservé"
       },
       {
         "cle": "Ménage + Nounou",
@@ -1979,9 +1839,9 @@
         "html": "Yallah Services <span>♥</span>"
       },
       {
-        "cle": "Transparence totale",
+        "cle": "Conditions de mise en relation",
         "occurrences": 1,
-        "exemple": "Transparence totale",
+        "exemple": "Conditions de mise en relation",
         "langue": "fr"
       },
       {
@@ -2015,12 +1875,12 @@
         "langue": "fr"
       },
       {
-        "cle": "Remplacements gratuits pendant 6 mois jusqu'à votre satisfaction",
+        "cle": "Remplacements prévus par la formule pendant 6 mois",
         "occurrences": 1,
-        "exemple": "Remplacements gratuits pendant 6 mois jusqu'à votre satisfaction",
+        "exemple": "Remplacements prévus par la formule pendant 6 mois",
         "langue": "fr",
         "balisage": "strong",
-        "html": "Remplacements gratuits pendant <strong style=\"color:#fff\">6 mois</strong> jusqu'à votre satisfaction"
+        "html": "Remplacements prévus par la formule pendant <strong style=\"color:#fff\">6 mois</strong>"
       },
       {
         "cle": "Suivi prioritaire",
@@ -2029,9 +1889,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Assistance rapide WhatsApp",
+        "cle": "Échanges et assistance par WhatsApp",
         "occurrences": 1,
-        "exemple": "Assistance rapide WhatsApp",
+        "exemple": "Échanges et assistance par WhatsApp",
         "langue": "fr"
       },
       {
@@ -2047,17 +1907,17 @@
         "langue": "fr"
       },
       {
-        "cle": "Remplacements gratuits pendant 2 mois jusqu'à votre satisfaction",
+        "cle": "Remplacements prévus par la formule pendant 2 mois",
         "occurrences": 1,
-        "exemple": "Remplacements gratuits pendant 2 mois jusqu'à votre satisfaction",
+        "exemple": "Remplacements prévus par la formule pendant 2 mois",
         "langue": "fr",
         "balisage": "strong",
-        "html": "Remplacements gratuits pendant <strong style=\"color:#fff\">2 mois</strong> jusqu'à votre satisfaction"
+        "html": "Remplacements prévus par la formule pendant <strong style=\"color:#fff\">2 mois</strong>"
       },
       {
-        "cle": "Suivi après placement",
+        "cle": "Suivi après la mise en relation",
         "occurrences": 1,
-        "exemple": "Suivi après placement",
+        "exemple": "Suivi après la mise en relation",
         "langue": "fr"
       },
       {
@@ -2089,12 +1949,10 @@
         "html": "Dans combien de temps je reçois un profil ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Vous recevez un profil qualifié dans un délai de 24 à 72h directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585.",
+        "cle": "Le délai dépend du besoin, de la ville et des profils disponibles. Écrivez-nous sur WhatsApp pour nous expliquer votre demande ; nous vous indiquerons les possibilités.",
         "occurrences": 1,
-        "exemple": "Vous recevez un profil qualifié dans un délai de 24 à 72h directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "Vous recevez un profil qualifié <strong>dans un délai de 24 à 72h</strong> directement sur votre WhatsApp. En cas d'urgence, contactez-nous directement sur WhatsApp au +212 691 733 585."
+        "exemple": "Le délai dépend du besoin, de la ville et des profils disponibles. Écrivez-nous sur WhatsApp pour nous expliquer votre demande ; nous vous indiquerons les possibilités.",
+        "langue": "fr"
       },
       {
         "cle": "Que se passe-t-il si je ne suis pas satisfait(e) ? ▾",
@@ -2105,12 +1963,12 @@
         "html": "Que se passe-t-il si je ne suis pas satisfait(e) ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Les formules Sérénité et Premium prévoient des remplacements pendant respectivement 2 mois et 6 mois. Il vous suffit de nous contacter sur WhatsApp ; les conditions exactes sont expliquées avant la mise en relation.",
+        "cle": "En cas de besoin de remplacement, les formules Sérénité et Premium prévoient cette possibilité pendant 2 et 6 mois respectivement, selon leurs conditions. Demandez les détails applicables avant de confirmer la mise en relation.",
         "occurrences": 1,
-        "exemple": "Les formules Sérénité et Premium prévoient des remplacements pendant respectivement 2 mois et 6 mois. Il vous suffit de nous contacter sur WhatsApp ; les conditions exactes sont expliquées avant la mise en relation.",
+        "exemple": "En cas de besoin de remplacement, les formules Sérénité et Premium prévoient cette possibilité pendant 2 et 6 mois respectivement, selon leurs conditions. Demandez les détails applicables avant de confirmer la mise en relation.",
         "langue": "fr",
         "balisage": "strong,strong",
-        "html": "Les formules <strong>Sérénité</strong> et <strong>Premium</strong> prévoient des remplacements pendant respectivement 2 mois et 6 mois. Il vous suffit de nous contacter sur WhatsApp ; les conditions exactes sont expliquées avant la mise en relation."
+        "html": "En cas de besoin de remplacement, les formules <strong>Sérénité</strong> et <strong>Premium</strong> prévoient cette possibilité pendant 2 et 6 mois respectivement, selon leurs conditions. Demandez les détails applicables avant de confirmer la mise en relation."
       },
       {
         "cle": "Comment se passe le paiement des frais de Mise en relation ? ▾",
@@ -2137,12 +1995,12 @@
         "html": "Quelle différence entre logée et non logée ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Logée : l'employée vit à votre domicile 24h/24, 7j/7. Elle bénéficie d'un jour de repos par semaine ou par quinzaine selon l'accord.\nNon logée : elle travaille du lundi au vendredi de 9h à 17h et rentre chez elle le soir. Idéale pour les familles qui n'ont pas de chambre disponible.",
+        "cle": "Logée : l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.\nNon logée : les horaires et les modalités sont définis selon le poste et l'accord avec la famille.",
         "occurrences": 1,
-        "exemple": "Logée : l'employée vit à votre domicile 24h/24, 7j/7. Elle bénéficie d'un jour de repos par semaine ou par quinzaine selon l'accord.\nNon logée : elle travaille du lundi au vendredi de 9h à 17h et rentre chez elle le soir. Idéale pour les familles qui n'ont pas de chambre disponible.",
+        "exemple": "Logée : l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.\nNon logée : les horaires et les modalités sont définis selon le poste et l'accord avec la famille.",
         "langue": "fr",
         "balisage": "strong,br,br,strong",
-        "html": "<strong>Logée :</strong> l'employée vit à votre domicile 24h/24, 7j/7. Elle bénéficie d'un jour de repos par semaine ou par quinzaine selon l'accord.<br></br><br></br><strong>Non logée :</strong> elle travaille du lundi au vendredi de 9h à 17h et rentre chez elle le soir. Idéale pour les familles qui n'ont pas de chambre disponible."
+        "html": "<strong>Logée :</strong> l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.<br></br><br></br><strong>Non logée :</strong> les horaires et les modalités sont définis selon le poste et l'accord avec la famille."
       },
       {
         "cle": "Vous intervenez dans quelles villes ? ▾",
@@ -2153,28 +2011,26 @@
         "html": "Vous intervenez dans quelles villes ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Nous intervenons dans les grandes villes suivantes : Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé, et d'autres villes selon les demandes. Le service ménage à la journée est disponible uniquement à Casablanca et Rabat.",
+        "cle": "Nos principales zones de recherche sont Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé. La possibilité d’intervenir pour une mission et un quartier précis est à confirmer. Le ménage à la journée est proposé uniquement à Casablanca et Rabat.",
         "occurrences": 1,
-        "exemple": "Nous intervenons dans les grandes villes suivantes : Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé, et d'autres villes selon les demandes. Le service ménage à la journée est disponible uniquement à Casablanca et Rabat.",
+        "exemple": "Nos principales zones de recherche sont Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé. La possibilité d’intervenir pour une mission et un quartier précis est à confirmer. Le ménage à la journée est proposé uniquement à Casablanca et Rabat.",
         "langue": "fr",
         "balisage": "strong",
-        "html": "Nous intervenons dans les grandes villes suivantes : <strong>Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé</strong>, et d'autres villes selon les demandes. Le service ménage à la journée est disponible uniquement à Casablanca et Rabat."
+        "html": "Nos principales zones de recherche sont <strong>Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé</strong>. La possibilité d’intervenir pour une mission et un quartier précis est à confirmer. Le ménage à la journée est proposé uniquement à Casablanca et Rabat."
       },
       {
-        "cle": "Le personnel est-il vraiment vérifié et formé ? ▾",
+        "cle": "Le personnel est-il vérifié et formé ? ▾",
         "occurrences": 1,
-        "exemple": "Le personnel est-il vraiment vérifié et formé ? ▾",
+        "exemple": "Le personnel est-il vérifié et formé ? ▾",
         "langue": "fr",
         "balisage": "span",
-        "html": "Le personnel est-il vraiment vérifié et formé ? <span class=\"arr\">▾</span>"
+        "html": "Le personnel est-il vérifié et formé ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Oui, absolument. Chaque candidate passe par un processus de sélection rigoureux : entretien, vérification des antécédents, évaluation des compétences et formation aux standards Yallah Services. Nous ne proposons que des profils en lesquels nous avons confiance.",
+        "cle": "Nous ne publions pas de garantie de vérification d’antécédents ni de formation certifiée. Les informations communiquées dépendent du profil ; demandez-les et vérifiez les documents et compétences avant toute décision.",
         "occurrences": 1,
-        "exemple": "Oui, absolument. Chaque candidate passe par un processus de sélection rigoureux : entretien, vérification des antécédents, évaluation des compétences et formation aux standards Yallah Services. Nous ne proposons que des profils en lesquels nous avons confiance.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "Oui, absolument. Chaque candidate passe par un processus de <strong>sélection rigoureux</strong> : entretien, vérification des antécédents, évaluation des compétences et formation aux standards Yallah Services. Nous ne proposons que des profils en lesquels nous avons confiance."
+        "exemple": "Nous ne publions pas de garantie de vérification d’antécédents ni de formation certifiée. Les informations communiquées dépendent du profil ; demandez-les et vérifiez les documents et compétences avant toute décision.",
+        "langue": "fr"
       },
       {
         "cle": "Quel est le salaire mensuel de l'employée ? ▾",
@@ -2233,28 +2089,24 @@
         "html": "Comment se passe la première rencontre avec l'employée ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Après validation du profil sur WhatsApp, nous organisons une rencontre ou un entretien entre l'employée et la famille. Si tout convient, le placement est confirmé. Si ce n'est pas le cas, nous proposons un autre profil gratuitement.",
+        "cle": "Vous pouvez échanger avec la personne et vérifier les informations utiles avant votre décision. Si vous souhaitez un autre profil, les modalités de remplacement prévues par la formule choisie s’appliquent.",
         "occurrences": 1,
-        "exemple": "Après validation du profil sur WhatsApp, nous organisons une rencontre ou un entretien entre l'employée et la famille. Si tout convient, le placement est confirmé. Si ce n'est pas le cas, nous proposons un autre profil gratuitement.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "Après validation du profil sur WhatsApp, nous organisons une <strong>rencontre ou un entretien</strong> entre l'employée et la famille. Si tout convient, le placement est confirmé. Si ce n'est pas le cas, nous proposons un autre profil gratuitement."
+        "exemple": "Vous pouvez échanger avec la personne et vérifier les informations utiles avant votre décision. Si vous souhaitez un autre profil, les modalités de remplacement prévues par la formule choisie s’appliquent.",
+        "langue": "fr"
       },
       {
-        "cle": "L'employée parle-t-elle français et arabe ? ▾",
+        "cle": "Quelles langues parle l’employée ? ▾",
         "occurrences": 1,
-        "exemple": "L'employée parle-t-elle français et arabe ? ▾",
+        "exemple": "Quelles langues parle l’employée ? ▾",
         "langue": "fr",
         "balisage": "span",
-        "html": "L'employée parle-t-elle français et arabe ? <span class=\"arr\">▾</span>"
+        "html": "Quelles langues parle l’employée ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "La majorité de nos candidates parlent français et comprennent l'arabe marocain (darija) ou l'arabe standard. Nous adaptons le profil proposé selon vos préférences linguistiques mentionnées dans votre demande.",
+        "cle": "Les langues varient selon les profils. Indiquez celles qui sont nécessaires et demandez quelles informations sont disponibles pour la personne concernée avant la mise en relation.",
         "occurrences": 1,
-        "exemple": "La majorité de nos candidates parlent français et comprennent l'arabe marocain (darija) ou l'arabe standard. Nous adaptons le profil proposé selon vos préférences linguistiques mentionnées dans votre demande.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "La majorité de nos candidates parlent <strong>français</strong> et comprennent l'arabe marocain (darija) ou l'arabe standard. Nous adaptons le profil proposé selon vos préférences linguistiques mentionnées dans votre demande."
+        "exemple": "Les langues varient selon les profils. Indiquez celles qui sont nécessaires et demandez quelles informations sont disponibles pour la personne concernée avant la mise en relation.",
+        "langue": "fr"
       },
       {
         "cle": "Que se passe-t-il si l'employée tombe malade ou quitte ? ▾",
@@ -2265,44 +2117,38 @@
         "html": "Que se passe-t-il si l'employée tombe malade ou quitte ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "En cas d'absence prolongée, de départ ou de difficulté avec la personne présentée, Yallah Services suit la situation et applique le remplacement prévu par la formule choisie, pendant la période indiquée.",
+        "cle": "Les formules prévoient des modalités de remplacement pendant une période définie. Demandez les conditions applicables à la formule choisie avant la mise en relation.",
         "occurrences": 1,
-        "exemple": "En cas d'absence prolongée, de départ ou de difficulté avec la personne présentée, Yallah Services suit la situation et applique le remplacement prévu par la formule choisie, pendant la période indiquée.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "En cas d'absence prolongée, de départ ou de difficulté avec la personne présentée, <strong>Yallah Services suit la situation</strong> et applique le remplacement prévu par la formule choisie, pendant la période indiquée."
+        "exemple": "Les formules prévoient des modalités de remplacement pendant une période définie. Demandez les conditions applicables à la formule choisie avant la mise en relation.",
+        "langue": "fr"
       },
       {
-        "cle": "Puis-je recruter directement l'employée sans passer par l'agence ? ▾",
+        "cle": "Puis-je recruter directement une personne présentée par l’agence ? ▾",
         "occurrences": 1,
-        "exemple": "Puis-je recruter directement l'employée sans passer par l'agence ? ▾",
+        "exemple": "Puis-je recruter directement une personne présentée par l’agence ? ▾",
         "langue": "fr",
         "balisage": "span",
-        "html": "Puis-je recruter directement l'employée sans passer par l'agence ? <span class=\"arr\">▾</span>"
+        "html": "Puis-je recruter directement une personne présentée par l’agence ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Non. Conformément aux termes du contrat de placement, tout recrutement direct de la même employée sans accord préalable de Yallah Services constitue une violation du contrat. Nos candidates sont placées exclusivement via notre agence.",
+        "cle": "Les conditions applicables à un recrutement direct ne sont pas détaillées ici. Demandez-les par écrit à Yallah Services avant toute décision.",
         "occurrences": 1,
-        "exemple": "Non. Conformément aux termes du contrat de placement, tout recrutement direct de la même employée sans accord préalable de Yallah Services constitue une violation du contrat. Nos candidates sont placées exclusivement via notre agence.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "Non. Conformément aux termes du contrat de placement, <strong>tout recrutement direct</strong> de la même employée sans accord préalable de Yallah Services constitue une violation du contrat. Nos candidates sont placées exclusivement via notre agence."
+        "exemple": "Les conditions applicables à un recrutement direct ne sont pas détaillées ici. Demandez-les par écrit à Yallah Services avant toute décision.",
+        "langue": "fr"
       },
       {
-        "cle": "Y a-t-il un contrat signé entre l'agence et le client ? ▾",
+        "cle": "Où puis-je consulter les conditions de mise en relation ? ▾",
         "occurrences": 1,
-        "exemple": "Y a-t-il un contrat signé entre l'agence et le client ? ▾",
+        "exemple": "Où puis-je consulter les conditions de mise en relation ? ▾",
         "langue": "fr",
         "balisage": "span",
-        "html": "Y a-t-il un contrat signé entre l'agence et le client ? <span class=\"arr\">▾</span>"
+        "html": "Où puis-je consulter les conditions de mise en relation ? <span class=\"arr\">▾</span>"
       },
       {
-        "cle": "Oui. Yallah Services établit un contrat de placement officiel entre l'agence et le foyer client, précisant les engagements de chaque partie, les garanties, les frais de Mise en relation et les conditions de remplacement. Ce contrat vous protège.",
+        "cle": "Avant de valider un profil, demandez à Yallah Services de vous communiquer par écrit les frais et les modalités applicables à votre demande.",
         "occurrences": 1,
-        "exemple": "Oui. Yallah Services établit un contrat de placement officiel entre l'agence et le foyer client, précisant les engagements de chaque partie, les garanties, les frais de Mise en relation et les conditions de remplacement. Ce contrat vous protège.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "Oui. Yallah Services établit un <strong>contrat de placement officiel</strong> entre l'agence et le foyer client, précisant les engagements de chaque partie, les garanties, les frais de Mise en relation et les conditions de remplacement. Ce contrat vous protège."
+        "exemple": "Avant de valider un profil, demandez à Yallah Services de vous communiquer par écrit les frais et les modalités applicables à votre demande.",
+        "langue": "fr"
       },
       {
         "cle": "Personnel & candidats",
@@ -2387,27 +2233,21 @@
         "html": "⚠️ Sans deux références vérifiables, la candidature n'est ni validée ni présentée à un foyer. Service <strong>gratuit</strong> pour les candidats : nous ne demandons jamais d'argent."
       },
       {
-        "cle": "Réservez maintenant",
+        "cle": "Présentez votre besoin",
         "occurrences": 1,
-        "exemple": "Réservez maintenant",
+        "exemple": "Présentez votre besoin",
         "langue": "fr"
       },
       {
-        "cle": "Recevez votre profil en 24 à 72h",
+        "cle": "Indiquez le poste, la ville et vos critères. Le formulaire prépare un récapitulatif que vous pourrez transmettre sur WhatsApp.",
         "occurrences": 1,
-        "exemple": "Recevez votre profil en 24 à 72h",
+        "exemple": "Indiquez le poste, la ville et vos critères. Le formulaire prépare un récapitulatif que vous pourrez transmettre sur WhatsApp.",
         "langue": "fr"
       },
       {
-        "cle": "Remplissez le formulaire — profil qualifié sur WhatsApp dans un délai de 24 à 72h.",
+        "cle": "✍️ Formulaire de demande",
         "occurrences": 1,
-        "exemple": "Remplissez le formulaire — profil qualifié sur WhatsApp dans un délai de 24 à 72h.",
-        "langue": "fr"
-      },
-      {
-        "cle": "✍️ Formulaire de réservation",
-        "occurrences": 1,
-        "exemple": "✍️ Formulaire de réservation",
+        "exemple": "✍️ Formulaire de demande",
         "langue": "fr"
       },
       {
@@ -2466,7 +2306,7 @@
       },
       {
         "cle": "Préférence",
-        "occurrences": 2,
+        "occurrences": 1,
         "exemple": "Préférence",
         "langue": "fr"
       },
@@ -2519,29 +2359,15 @@
         "langue": "fr"
       },
       {
-        "cle": "💬 Recevez un profil sérieux sur WhatsApp dans un délai de 24 à 72h",
+        "cle": "Récapitulatif prêt",
         "occurrences": 1,
-        "exemple": "💬 Recevez un profil sérieux sur WhatsApp dans un délai de 24 à 72h",
-        "langue": "fr",
-        "balisage": "span",
-        "html": "💬 Recevez un profil sérieux <span class=\"wg\">sur WhatsApp dans un délai de 24 à 72h</span>"
-      },
-      {
-        "cle": "🔒 Gratuit · Sans engagement · Profil en 24 à 72h",
-        "occurrences": 1,
-        "exemple": "🔒 Gratuit · Sans engagement · Profil en 24 à 72h",
+        "exemple": "Récapitulatif prêt",
         "langue": "fr"
       },
       {
-        "cle": "Demande envoyée !",
+        "cle": "Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.",
         "occurrences": 1,
-        "exemple": "Demande envoyée !",
-        "langue": "fr"
-      },
-      {
-        "cle": "Profil qualifié envoyé dans un délai de 24 à 72h sur WhatsApp.",
-        "occurrences": 1,
-        "exemple": "Profil qualifié envoyé dans un délai de 24 à 72h sur WhatsApp.",
+        "exemple": "Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.",
         "langue": "fr"
       },
       {
@@ -2602,30 +2428,6 @@
         "cle": "Vigile et gardien à Casablanca",
         "occurrences": 1,
         "exemple": "Vigile et gardien à Casablanca",
-        "langue": "fr"
-      },
-      {
-        "cle": "Femme de ménage à Rabat",
-        "occurrences": 1,
-        "exemple": "Femme de ménage à Rabat",
-        "langue": "fr"
-      },
-      {
-        "cle": "Nounou à Rabat",
-        "occurrences": 1,
-        "exemple": "Nounou à Rabat",
-        "langue": "fr"
-      },
-      {
-        "cle": "Femme de ménage à Tanger",
-        "occurrences": 1,
-        "exemple": "Femme de ménage à Tanger",
-        "langue": "fr"
-      },
-      {
-        "cle": "Femme de ménage à Marrakech",
-        "occurrences": 1,
-        "exemple": "Femme de ménage à Marrakech",
         "langue": "fr"
       },
       {
@@ -2715,9 +2517,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Réserver ce pack",
+        "cle": "Demander ce pack",
         "occurrences": 1,
-        "exemple": "Réserver ce pack",
+        "exemple": "Demander ce pack",
         "langue": "fr"
       },
       {
@@ -2727,9 +2529,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Laissez vos coordonnées — notre équipe vous contacte sur WhatsApp dans un délai de 24 à 72h avec un profil qualifié.",
+        "cle": "Indiquez vos coordonnées et votre besoin. Un récapitulatif sera préparé ici ; vous pourrez ensuite l’envoyer à Yallah Services sur WhatsApp.",
         "occurrences": 1,
-        "exemple": "Laissez vos coordonnées — notre équipe vous contacte sur WhatsApp dans un délai de 24 à 72h avec un profil qualifié.",
+        "exemple": "Indiquez vos coordonnées et votre besoin. Un récapitulatif sera préparé ici ; vous pourrez ensuite l’envoyer à Yallah Services sur WhatsApp.",
         "langue": "fr"
       },
       {
@@ -2763,21 +2565,21 @@
         "langue": "fr"
       },
       {
-        "cle": "* Champs obligatoires — 🔒 Gratuit · Sans engagement · Réponse sur WhatsApp",
+        "cle": "* Champs obligatoires — frais de mise en relation après validation du profil et mise en relation.",
         "occurrences": 1,
-        "exemple": "* Champs obligatoires — 🔒 Gratuit · Sans engagement · Réponse sur WhatsApp",
+        "exemple": "* Champs obligatoires — frais de mise en relation après validation du profil et mise en relation.",
         "langue": "fr"
       },
       {
-        "cle": "Demande confirmée !",
+        "cle": "Récapitulatif de votre demande",
         "occurrences": 1,
-        "exemple": "Demande confirmée !",
+        "exemple": "Récapitulatif de votre demande",
         "langue": "fr"
       },
       {
-        "cle": "Votre demande a bien été enregistrée par Yallah Services",
+        "cle": "Ce récapitulatif est affiché dans votre navigateur ; la demande n’a pas encore été transmise.",
         "occurrences": 1,
-        "exemple": "Votre demande a bien été enregistrée par Yallah Services",
+        "exemple": "Ce récapitulatif est affiché dans votre navigateur ; la demande n’a pas encore été transmise.",
         "langue": "fr"
       },
       {
@@ -2799,21 +2601,15 @@
         "langue": "fr"
       },
       {
-        "cle": "Confirmation N°",
+        "cle": "Récapitulatif local",
         "occurrences": 1,
-        "exemple": "Confirmation N°",
+        "exemple": "Récapitulatif local",
         "langue": "fr"
       },
       {
-        "cle": "YS-000000",
+        "cle": "Récapitulatif prêt — envoi WhatsApp requis",
         "occurrences": 1,
-        "exemple": "YS-000000",
-        "langue": "fr"
-      },
-      {
-        "cle": "✅ Demande enregistrée avec succès",
-        "occurrences": 1,
-        "exemple": "✅ Demande enregistrée avec succès",
+        "exemple": "Récapitulatif prêt — envoi WhatsApp requis",
         "langue": "fr"
       },
       {
@@ -2823,9 +2619,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Personnel sélectionné selon vos besoins et accompagné par Yallah Services",
+        "cle": "Service et critères indiqués dans votre demande",
         "occurrences": 1,
-        "exemple": "Personnel sélectionné selon vos besoins et accompagné par Yallah Services",
+        "exemple": "Service et critères indiqués dans votre demande",
         "langue": "fr"
       },
       {
@@ -2847,57 +2643,63 @@
         "langue": "fr"
       },
       {
+        "cle": "Expérience souhaitée",
+        "occurrences": 1,
+        "exemple": "Expérience souhaitée",
+        "langue": "fr"
+      },
+      {
         "cle": "Délai souhaité",
         "occurrences": 1,
         "exemple": "Délai souhaité",
         "langue": "fr"
       },
       {
-        "cle": "🛡️ Remplacements prévus par les formules",
+        "cle": "ℹ️ Informations à vérifier avant validation",
         "occurrences": 1,
-        "exemple": "🛡️ Remplacements prévus par les formules",
+        "exemple": "ℹ️ Informations à vérifier avant validation",
         "langue": "fr"
       },
       {
-        "cle": "Jusqu'à satisfaction totale",
+        "cle": "Conditions à vérifier avant validation",
         "occurrences": 1,
-        "exemple": "Jusqu'à satisfaction totale",
+        "exemple": "Conditions à vérifier avant validation",
         "langue": "fr"
       },
       {
-        "cle": "Profil en 24 à 72h",
+        "cle": "Demande étudiée",
         "occurrences": 1,
-        "exemple": "Profil en 24 à 72h",
+        "exemple": "Demande étudiée",
         "langue": "fr"
       },
       {
-        "cle": "Sur votre WhatsApp",
+        "cle": "Selon les profils disponibles",
         "occurrences": 1,
-        "exemple": "Sur votre WhatsApp",
+        "exemple": "Selon les profils disponibles",
         "langue": "fr"
       },
       {
-        "cle": "Personnel vérifié",
+        "cle": "Informations sur le profil",
         "occurrences": 1,
-        "exemple": "Personnel vérifié",
+        "exemple": "Informations sur le profil",
         "langue": "fr"
       },
       {
-        "cle": "Sélectionné & formé",
+        "cle": "À demander et vérifier",
         "occurrences": 1,
-        "exemple": "Sélectionné & formé",
+        "exemple": "À demander et vérifier",
         "langue": "fr"
       },
       {
-        "cle": "Suivi WhatsApp",
+        "cle": "Échanges par WhatsApp",
         "occurrences": 1,
-        "exemple": "Suivi WhatsApp",
+        "exemple": "Échanges par WhatsApp",
         "langue": "fr"
       },
       {
-        "cle": "Disponible 7j/7",
+        "cle": "Après envoi de votre demande",
         "occurrences": 1,
-        "exemple": "Disponible 7j/7",
+        "exemple": "Après envoi de votre demande",
         "langue": "fr"
       },
       {
@@ -2907,37 +2709,33 @@
         "langue": "fr"
       },
       {
-        "cle": "Notre équipe analyse votre demande et sélectionne les meilleurs profils disponibles.",
+        "cle": "Notre équipe examine les critères et les profils disponibles pour votre demande.",
         "occurrences": 1,
-        "exemple": "Notre équipe analyse votre demande et sélectionne les meilleurs profils disponibles.",
+        "exemple": "Notre équipe examine les critères et les profils disponibles pour votre demande.",
         "langue": "fr"
       },
       {
-        "cle": "Vous recevez un profil qualifié sur WhatsApp dans un délai de 24 à 72h.",
+        "cle": "Les possibilités sont à discuter selon votre besoin et les profils disponibles.",
         "occurrences": 1,
-        "exemple": "Vous recevez un profil qualifié sur WhatsApp dans un délai de 24 à 72h.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "Vous recevez un profil qualifié <strong>sur WhatsApp dans un délai de 24 à 72h.</strong>"
-      },
-      {
-        "cle": "Vous validez le profil et le placement est confirmé. Frais réglés après validation.",
-        "occurrences": 1,
-        "exemple": "Vous validez le profil et le placement est confirmé. Frais réglés après validation.",
-        "langue": "fr",
-        "balisage": "strong",
-        "html": "Vous validez le profil et le placement est confirmé. Frais réglés <strong>après validation.</strong>"
-      },
-      {
-        "cle": "Remplacement selon la formule gratuit si insatisfait — Yallah Services reste à vos côtés.",
-        "occurrences": 1,
-        "exemple": "Remplacement selon la formule gratuit si insatisfait — Yallah Services reste à vos côtés.",
+        "exemple": "Les possibilités sont à discuter selon votre besoin et les profils disponibles.",
         "langue": "fr"
       },
       {
-        "cle": "Cette confirmation a été envoyée à notre équipe. Nous vous contacterons sur WhatsApp avec un profil qualifié correspondant à votre demande.",
+        "cle": "Vérifiez les informations sur le profil et les conditions applicables avant toute décision.",
         "occurrences": 1,
-        "exemple": "Cette confirmation a été envoyée à notre équipe. Nous vous contacterons sur WhatsApp avec un profil qualifié correspondant à votre demande.",
+        "exemple": "Vérifiez les informations sur le profil et les conditions applicables avant toute décision.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les remplacements éventuels suivent les conditions de la formule choisie.",
+        "occurrences": 1,
+        "exemple": "Les remplacements éventuels suivent les conditions de la formule choisie.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ce récapitulatif reste dans votre navigateur et n’est pas transmis automatiquement. Cliquez sur « Continuer sur WhatsApp », puis envoyez le message prérempli pour nous transmettre votre demande.",
+        "occurrences": 1,
+        "exemple": "Ce récapitulatif reste dans votre navigateur et n’est pas transmis automatiquement. Cliquez sur « Continuer sur WhatsApp », puis envoyez le message prérempli pour nous transmettre votre demande.",
         "langue": "fr"
       },
       {
@@ -2947,9 +2745,9 @@
         "langue": "fr"
       },
       {
-        "cle": "💬 Confirmer sur WhatsApp",
+        "cle": "💬 Continuer sur WhatsApp",
         "occurrences": 1,
-        "exemple": "💬 Confirmer sur WhatsApp",
+        "exemple": "💬 Continuer sur WhatsApp",
         "langue": "fr"
       },
       {
@@ -2969,13 +2767,13 @@
       {
         "cle": "@title",
         "occurrences": 1,
-        "exemple": "Femme de ménage, nounou, cuisinière au Maroc | Yallah Services",
+        "exemple": "Ménage, nounou et cuisinière au Maroc | Yallah Services",
         "langue": "fr"
       },
       {
         "cle": "@meta:description",
         "occurrences": 1,
-        "exemple": "Femme de ménage, nounou et cuisinière au Maroc : profils sélectionnés reçus sur WhatsApp en 24 à 72h. Remplacement garanti, frais après validation.",
+        "exemple": "Ménage, nounou, cuisine et aide à domicile au Maroc : Yallah Services met en relation particuliers et entreprises avec des profils adaptés à leurs besoins.",
         "langue": "fr"
       },
       {
@@ -2987,25 +2785,25 @@
       {
         "cle": "@meta:og:title",
         "occurrences": 1,
-        "exemple": "Femme de ménage, nounou, cuisinière au Maroc | Yallah Services",
+        "exemple": "Ménage, nounou et cuisinière au Maroc | Yallah Services",
         "langue": "fr"
       },
       {
         "cle": "@meta:og:description",
         "occurrences": 1,
-        "exemple": "Personnel de maison sélectionné au Maroc : profil sur WhatsApp en 24 à 72h, remplacement garanti.",
+        "exemple": "Ménage, nounou, cuisine et aide à domicile au Maroc : Yallah Services met en relation particuliers et entreprises avec des profils adaptés à leurs besoins.",
         "langue": "fr"
       },
       {
         "cle": "@meta:twitter:title",
         "occurrences": 1,
-        "exemple": "Femme de ménage, nounou, cuisinière au Maroc | Yallah Services",
+        "exemple": "Ménage, nounou et cuisinière au Maroc | Yallah Services",
         "langue": "fr"
       },
       {
         "cle": "@meta:twitter:description",
         "occurrences": 1,
-        "exemple": "Profils sélectionnés, reçus sur WhatsApp en 24 à 72h. Remplacement garanti.",
+        "exemple": "Ménage, nounou, cuisine et aide à domicile au Maroc : Yallah Services met en relation particuliers et entreprises avec des profils adaptés à leurs besoins.",
         "langue": "fr"
       }
     ],
@@ -5553,9 +5351,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Mohammedia, Bouznika, El Jadida (selon les demandes) : des foyers souvent situés en résidences ou en villas, avec des besoins d'entretien et de gardiennage.",
+        "cle": "Mohammedia et Bouznika : des foyers souvent situés en résidences ou en villas, avec des besoins d'entretien et de gardiennage.",
         "occurrences": 1,
-        "exemple": "Mohammedia, Bouznika, El Jadida (selon les demandes) : des foyers souvent situés en résidences ou en villas, avec des besoins d'entretien et de gardiennage.",
+        "exemple": "Mohammedia et Bouznika : des foyers souvent situés en résidences ou en villas, avec des besoins d'entretien et de gardiennage.",
         "langue": "fr"
       },
       {
@@ -6615,9 +6413,9 @@
         "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
       },
       {
-        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "occurrences": 1,
-        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "langue": "fr"
       },
       {
@@ -7451,9 +7249,9 @@
         "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
       },
       {
-        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "occurrences": 1,
-        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "langue": "fr"
       },
       {
@@ -8251,9 +8049,9 @@
         "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
       },
       {
-        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "occurrences": 1,
-        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "langue": "fr"
       },
       {
@@ -9021,9 +8819,9 @@
         "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
       },
       {
-        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "occurrences": 1,
-        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "langue": "fr"
       },
       {
@@ -9791,9 +9589,9 @@
         "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
       },
       {
-        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "occurrences": 1,
-        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "langue": "fr"
       },
       {
@@ -10579,9 +10377,9 @@
         "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
       },
       {
-        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "cle": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "occurrences": 1,
-        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé",
         "langue": "fr"
       },
       {
