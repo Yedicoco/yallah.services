@@ -125,7 +125,7 @@ YS_TRAD("en", "garde-malade-casablanca", {
   "Accueil": "Home",
   "servicesyallah@gmail.com": "servicesyallah@gmail.com",
   "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn": "Follow us: <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>",
-  "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tangier · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé · El Jadida",
+  "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tanger · Agadir · Mohammedia · Kénitra · Fès · Témara · Bouznika · Salé": "Casablanca · Bouskoura · Dar Bouazza · Rabat · Marrakech · Tangier · Agadir · Mohammedia · Kenitra · Fez · Temara · Bouznika · Sale",
   "@title": "Application received — Yallah Services",
   "@meta:description": "Your application form is saved: file number, sending the form on WhatsApp and the references by e-mail.",
   "@meta:og:title": "Yallah Services | Household staff and services in Morocco",

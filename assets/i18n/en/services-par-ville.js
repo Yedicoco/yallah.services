@@ -48,7 +48,7 @@ YS_TRAD("en", "services-par-ville", {
   "Rabat et sa région": "Rabat and its region",
   "Rabat, Salé et Témara. Nous y traitons des demandes de foyers et d'entreprises, notamment pour le ménage, la garde d'enfants, la cuisine et le personnel hôtelier.": "Rabat, Salé and Témara. We handle household and company requests there, especially for cleaning, childcare, cooking and hotel staff.",
   "Axe atlantique": "Atlantic coast",
-  "Mohammedia, Bouznika, El Jadida (selon les demandes) : des foyers souvent situés en résidences ou en villas, avec des besoins d'entretien et de gardiennage.": "Mohammedia, Bouznika, El Jadida (depending on requests): households often in residences or villas, needing cleaning and guarding.",
+  "Mohammedia et Bouznika : des foyers souvent situés en résidences ou en villas, avec des besoins d'entretien et de gardiennage.": "Mohammedia and Bouznika: some households are in residences or villas and need cleaning or guarding services.",
   "Marrakech et le Sud": "Marrakech and the South",
   "Marrakech et Agadir. Deux marchés spécifiques : les résidences et villas d'un côté, l'hôtellerie, les riads et les maisons d'hôtes de l'autre.": "Marrakech and Agadir. Two specific markets: residences and villas on one side, and hotels, riads and guest houses on the other.",
   "Nord et centre": "North and centre",

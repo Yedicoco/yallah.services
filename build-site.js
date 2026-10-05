@@ -29,6 +29,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const RACINE = __dirname;
 
@@ -57,7 +58,8 @@ const DOSSIERS = ['assets'];
 const FICHIERS = ['robots.txt', 'netlify.toml'];
 const EXCLUS = new Set(['admin.html', 'admin.js']);
 
-/* Adresse publique : variable d'environnement > site.config.json */
+/* Adresse publique : variable d'environnement > site.config.json.
+   Elle est répercutée dans les canonicals, les OG, le JSON-LD, les sitemaps et robots.txt. */
 const CONFIG = JSON.parse(fs.readFileSync(path.join(RACINE, 'site.config.json'), 'utf8'));
 const SITE_URL = (process.env.SITE_URL || CONFIG.url || '').replace(/\/+$/, '');
 
@@ -121,6 +123,11 @@ function adapterHtml() {
   }
   if (CONTACT_EMAIL !== 'servicesyallah@gmail.com') {
     remplacements.push([/servicesyallah@gmail\.com/g, CONTACT_EMAIL]);
+  }
+  const domaineSource = String(CONFIG.url || '').replace(/\/+$/, '');
+  if (domaineSource && SITE_URL && domaineSource !== SITE_URL) {
+    const domaineEchappe = domaineSource.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    remplacements.push([new RegExp(domaineEchappe, 'g'), SITE_URL]);
   }
   if (remplacements.length === 0) return 0;
 
@@ -218,7 +225,7 @@ console.log('  Sitemap vidéo          : ' + sitemap.enVideoXml(SITE_URL, SORTIE
 
 /* Vérifications rapides */
 const attendus = ['index.html', 'candidature.html', 'candidature-confirmation.html',
-  'sitemap.xml', 'video-sitemap.xml', 'assets/js/config.js', 'assets/js/fiche.js', 'assets/js/candidature.js',
+  'sitemap.xml', 'video-sitemap.xml', 'assets/js/config.js', 'assets/js/seo-tracking.js', 'assets/js/fiche.js', 'assets/js/candidature.js',
   'assets/js/candidature-confirmation.js', 'assets/css/recrutement.css'];
 const manquants = attendus.filter((f) => !fs.existsSync(path.join(SORTIE, f)));
 
@@ -240,6 +247,18 @@ console.log('  E-mail références      : ' + CONTACT_EMAIL);
 if (remplacements) console.log('  Remplacements HTML     : ' + remplacements);
 if (manquants.length) {
   console.error('  ⚠️  Fichiers manquants : ' + manquants.join(', '));
+  process.exit(1);
+}
+
+console.log('  Vérification SEO technique…');
+try {
+  execFileSync(process.execPath, [path.join(RACINE, 'outils', 'verifier-seo.js'), '--dossier', SORTIE], {
+    cwd: RACINE,
+    env: process.env,
+    stdio: 'inherit'
+  });
+} catch (e) {
+  console.error('  ❌ La vérification SEO a échoué : le site statique ne doit pas être publié en l\'état.');
   process.exit(1);
 }
 console.log('  ✅ Site statique prêt : ouvrez ' + path.relative(RACINE, SORTIE) + '/index.html');
