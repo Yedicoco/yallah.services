@@ -57,7 +57,8 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── outils/reindexer-i18n.js          # Replace les traductions après une modification du HTML
 ├── outils/generer-i18n.js            # Compile contenu/i18n/traductions/*.json → assets/i18n/
 ├── outils/tester-i18n.js             # Teste les 4 affichages dans un DOM headless (jsdom)
-├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage)
+├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage,
+│                                     #   affirmations commerciales et géographiques, domaine unique)
 ├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
 ├── outils/generer-sitemap.js         # Sitemaps pages + vidéos (lastmod = git), synchronisés dans robots.txt
 ├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
@@ -374,7 +375,8 @@ node outils/tester-i18n.js        # les 4 affichages (jsdom) — npm i jsdom
 
 ```bash
 node outils/verifier-site.js        # liens, ressources, identifiants JS, formulaires, CSS, coordonnées
-node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie, titles, balisage, maillage
+node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie, titles, balisage, maillage,
+                                    #   affirmations commerciales et géographiques, domaine unique
 node outils/generer-pages-villes.js --verifier   # valide les fiches de contenu sans rien écrire
 node outils/generer-pages-villes.js              # régénère les pages service × zone
 node outils/generer-sitemap.js                   # régénère sitemap.xml + video-sitemap.xml
@@ -387,6 +389,13 @@ node --check assets/js/*.js server.js build-site.js
 > C'est volontaire : c'est le garde-fou qui empêche la publication de pages-portes.
 > Les seuils sont réglables (`--mots 800 --dup 30`) ; le plan complet est dans
 > **`plan-seo-local.md`**.
+>
+> ⚠️ Il bloque aussi toute **affirmation hors référentiel** (`site.config.json` et
+> `contenu/fiche-entreprise.md`) : une ville retirée du périmètre ou non confirmée,
+> une promesse de délai, une garantie, une vérification d'antécédents, un critère
+> d'origine, ou une URL absolue publiée sur un autre hébergement que le domaine de `site.config.json`.
+> Les formulations négatives (« aucune garantie de résultat », « sans garantie de
+> desserte quartier par quartier ») sont conformes et ne déclenchent rien.
 
 Le vérificateur contrôle notamment que **chaque image/script/feuille de style existe**, que chaque
 identifiant utilisé par le JavaScript est bien présent dans la page, que les **messages d'erreur sont
@@ -432,7 +441,8 @@ Le dépôt contient les premières briques du référencement local :
 - **Audit de conformité** : `contenu/audit-promesses-site.md` — affirmations corrigées et points
   en attente de confirmation (tarifs, avis clients, formules de remplacement).
 - **Garde-fou** : `outils/verifier-contenu.js` bloque la publication tant qu'une page est
-  trop courte ou trop proche d'une autre (protection contre les pages-portes).
+  trop courte ou trop proche d'une autre (protection contre les pages-portes), ou tant qu'une
+  affirmation commerciale ou géographique sort du référentiel (`site.config.json`).
 
 Règles à ne pas contourner : un seul profil Google par établissement réellement exploité,
 aucune adresse inventée, aucune promesse de service à la journée hors Casablanca/Rabat,

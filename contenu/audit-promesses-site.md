@@ -65,3 +65,27 @@ corrigé, ce qui reste à confirmer par la direction, et ce qui manque au site.
 - Parcours candidat (fiche, références obligatoires, consentement loi 09-08).
 - Comptes officiels en pied de page : Facebook, Instagram, TikTok, LinkedIn — **identiques** à la fiche.
 - Mention « Demandes d'emploi non acceptées » sur le parcours client (séparation des deux publics).
+
+---
+
+## 5. Contrôle du 5 octobre 2026 (après la PR #17, fusionnée)
+
+**Contrôles exécutés — tous verts :** `outils/verifier-site.js` (0 erreur · 1 avertissement : les
+4 pages locales fines non traduites, déjà en `noindex`), `outils/verifier-contenu.js`,
+`outils/verifier-seo.js` (source **et** `site-a-mettre-en-ligne/`), `outils/generer-i18n.js --verifier`,
+`outils/extraire-i18n.js --verifier`, `outils/tester-messages.js`, `node build-site.js`, `node --check`.
+
+**Test DOM multilingue débloqué :** `jsdom` installé hors du dépôt (le dépôt n'a pas de `package.json`),
+`outils/tester-i18n.js` passe — 77 vérifications : chargement direct dans les 4 affichages et parcours
+réel par clic (français → darija → darija latine → anglais → retour français).
+
+| Point suivi | Résultat du contrôle | Décision / suite |
+|---|---|---|
+| **PDF de référence** | Introuvable : aucun `.pdf` dans le dépôt, l'espace de travail, l'historique Git (clone à 1 commit) ni les pièces jointes GitHub (aucune issue, aucune release). Le seul document source cité par le site est le **flyer officiel** de la grille tarifaire, attendu en `assets/img/grille-tarifaire.jpg` — toujours manquant, comme 6 autres visuels (liste dans `outils/verifier-site.js`). | Le PDF/flyer doit être renvoyé par la direction. Aucune modification ne s'en réclame ; sans l'image, l'emplacement du flyer reste vide sur l'accueil. |
+| **G — Domaine propre** | Résolution DNS vérifiée le 05/10/2026 : `yallah.services`, `www.yallah.services`, `yallahservices.ma`, `yallah-services.ma`, `yallah.ma` et `yallahservices.com` → **NXDOMAIN**. Seul `yallahservices-one.vercel.app` existe. | Rien à basculer : canonicals, OG, sitemaps, `robots.txt` et `llms.txt` restent sur le domaine Vercel. Quand le domaine répondra : `url` dans `site.config.json` → `node build-site.js` → contrôles. Le contrôle 7.4 de `verifier-contenu.js` signalera alors toute URL restée sur l'ancien hébergement. |
+| **Affirmations géographiques** | `llms.txt` (et sa copie `seo-pack/llms.txt`) listait encore **Meknès**, retirée du périmètre → corrigé : couverture réécrite depuis `site.config.json` (13 zones confirmées, autres demandes étudiées au cas par cas), marché B2B et numéro candidats ajoutés ; `build-site.js` copie désormais `llms.txt` dans le paquet statique. Statistique du hero « **10 villes** » en contradiction avec les 13 zones confirmées (README : « 13 zones », listes des formulaires) → « **13 villes** », dictionnaires dar / dar-latn / en régénérés. | Conforme. Contrôle automatique ajouté (§7.1 et §7.2 de `verifier-contenu.js`) : une ville retirée ou une ville non confirmée dans un formulaire bloque désormais la publication. |
+| **Affirmations commerciales** | Aucune promesse interdite sur les 53 surfaces publiées (pages, page de confirmation, `llms.txt`, `robots.txt`, sitemaps, dictionnaires de traduction) : ni délai de 24 h, ni garantie de remplacement ou de résultat, ni « profils vérifiés », ni « agence n°1 », ni « 500+ familles », ni critère d'origine. Les formulations négatives (« aucune garantie de résultat », « sans garantie de desserte quartier par quartier ») sont conformes et le contrôle les reconnaît comme telles. | Conforme. Contrôle automatique ajouté (§7.3 de `verifier-contenu.js`). |
+| **D — « logé 24h/24, 7j/7 »** | La formulation a disparu des pages : la formule logée est décrite avec « une chambre disponible et un jour de repos défini avec vous ». | Point à clore, sauf avis contraire de la direction. |
+| **Formulaires clients** | Doublon dans la liste de villes `#ctCity` de `index.html` (« Dar Bouazza » et « Bouznika » proposés deux fois — reste du remplacement des villes retirées) → supprimé, et `site-a-mettre-en-ligne/` régénéré. | Conforme. Contrôle des options en double ajouté à `verifier-site.js` (§5). |
+| **C — Consentements aux avis** | **Toujours 4 accords manquants** (`contenu/valider-avis.md`). Aucun écrit des clientes n'est présent dans l'espace de travail : l'archivage ne peut pas être produit par l'outillage, et cocher les cases sans preuve serait une fausse déclaration (loi 09-08). | Le dossier d'archivage `contenu/avis/` est désormais exclu de Git (`.gitignore`). Reste à envoyer les messages de `contenu/recueillir-avis.md`, archiver les captures dans `contenu/avis/`, cocher les 4 cases, puis publier les avis **dans les mots des clientes**. |
+| **A / B — Tarifs et frais de mise en relation** | Publiés comme repères, issus de la grille officielle (flyer) ; inchangés. | À revalider par la direction avant toute campagne. |

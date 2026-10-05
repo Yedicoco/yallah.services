@@ -15,6 +15,10 @@
      ❌  deux <title> ou deux <meta description> identiques
      ❌  une FAQ déclarée en Schema.org qui ne figure pas dans la page
      ❌  une page locale sans maillage interne vers ses voisines
+     ❌  une ville retirée du périmètre (site.config.json) encore publiée,
+         une promesse de délai, une garantie ou un critère d'origine
+     ❌  une URL absolue publiée sur un autre hébergement que le domaine
+         de site.config.json
 
    Ce qu'il signale (⚠️) sans bloquer :
        title > 60 caractères, description hors 120–165, H1 manquant
@@ -389,6 +393,135 @@ pages.forEach((p) => {
   });
 });
 if (!brouillons) ok('Aucun contenu inachevé détecté.');
+
+/* ═══ 7. Affirmations commerciales et géographiques ═══
+   Référentiel : site.config.json (zones confirmées, villes retirées) et
+   contenu/fiche-entreprise.md § « Informations à ne jamais inventer ».
+   Ce contrôle rend automatique l'audit manuel de contenu/audit-promesses-site.md :
+   une ville retirée, une promesse de délai, une garantie ou un critère d'origine
+   qui revient dans une page bloque la publication.                        ═══ */
+section('7. Affirmations commerciales et géographiques (référentiel : site.config.json)');
+{
+  /* Surfaces publiées : pages HTML, fichiers lus par les moteurs et les
+     assistants, page de confirmation (noindex mais publique) et dictionnaires
+     de traduction (ils contiennent le texte français source). */
+  const surfaces = pages.map((p) => ({ fichier: p.fichier, texte: p.html }));
+  ['candidature-confirmation.html', 'llms.txt', 'robots.txt', 'sitemap.xml',
+   'video-sitemap.xml', 'seo-pack/llms.txt'].forEach((fichier) => {
+    if (fs.existsSync(path.join(RACINE, fichier))) surfaces.push({ fichier, texte: lire(fichier) });
+  });
+  const DOSSIER_I18N = path.join('assets', 'i18n');
+  if (fs.existsSync(path.join(RACINE, DOSSIER_I18N))) {
+    fs.readdirSync(path.join(RACINE, DOSSIER_I18N)).forEach((langue) => {
+      const dossierLangue = path.join(RACINE, DOSSIER_I18N, langue);
+      if (!fs.statSync(dossierLangue).isDirectory()) return;
+      fs.readdirSync(dossierLangue).filter((f) => f.endsWith('.js')).forEach((f) => {
+        const relatif = path.join(DOSSIER_I18N, langue, f);
+        surfaces.push({ fichier: relatif, texte: lire(relatif) });
+      });
+    });
+  }
+
+  /* 7.1 — Villes retirées du périmètre : aucune ne doit réapparaître. */
+  const retirees = CONFIG.villesRetirees || [];
+  let retourRetirees = 0;
+  surfaces.forEach((s) => {
+    const texte = normaliser(s.texte);
+    retirees.forEach((ville) => {
+      if (texte.indexOf(normaliser(ville)) !== -1) {
+        retourRetirees += 1;
+        erreur(s.fichier + ' : ville retirée du périmètre encore publiée → « ' + ville + ' »');
+      }
+    });
+  });
+  if (!retourRetirees) ok('Aucune ville retirée (' + retirees.join(', ') + ') sur les ' +
+    surfaces.length + ' surfaces publiées.');
+
+  /* 7.2 — Listes de villes des formulaires : uniquement des zones confirmées
+           (« candidate » n'est pas affichée comme desservie). */
+  const villesPubliables = CONFIG.villes
+    .filter((v) => v.statut !== 'candidate')
+    .map((v) => normaliser(v.nom));
+  villesPubliables.push(normaliser('Autre ville'));
+  let horsPerimetre = 0;
+  let listesVilles = 0;
+  pages.forEach((p) => {
+    const motif = /<select[^>]*>[\s\S]*?<\/select>/g;
+    let select;
+    while ((select = motif.exec(p.html)) !== null) {
+      const entete = select[0].slice(0, select[0].indexOf('>') + 1);
+      const options = select[0].match(/<option\b[^>]*>[\s\S]*?<\/option>/g) || [];
+      if (options.length < 2) continue;
+      const premiere = normaliser(options[0].replace(/<[^>]+>/g, ' '));
+      if (!/city|ville/i.test(entete) && premiere.indexOf('ville') === -1) continue;
+      listesVilles += 1;
+      options.slice(1).forEach((option) => {
+        if (/value\s*=\s*""/i.test(option)) return;   /* saisie libre (« Autre ville ») */
+        const texte = normaliser(option.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim());
+        if (texte && villesPubliables.indexOf(texte) === -1) {
+          horsPerimetre += 1;
+          erreur(p.fichier + ' : ville proposée dans un formulaire hors du périmètre confirmé → « ' + texte + ' »');
+        }
+      });
+    }
+  });
+  if (!horsPerimetre) ok(listesVilles + ' liste(s) de villes contrôlée(s) : uniquement des zones confirmées.');
+
+  /* 7.3 — Promesses interdites par la fiche entreprise. Les formulations
+           négatives (« aucune garantie de résultat », « sans garantie de desserte
+           quartier par quartier ») sont conformes : la négation qui précède
+           dans la même phrase annule l'alerte. */
+  /* Les motifs sont en mode « u » : sans lui, « \b » ignore les lettres
+     accentuées et « profil vérifié » passerait au travers. */
+  const PROMESSES = [
+    [/(?<![\p{L}])subsaharien/iu, "critère d'origine (« subsaharien »)"],
+    [/500\s*\+\s*familles/iu, 'nombre de familles non mesuré (« 500+ familles »)'],
+    [/(?<![\p{L}])agence\s*n[o°0]\s*1(?![\p{L}\p{N}])/iu, 'affirmation de supériorité (« agence n°1 »)'],
+    [/(?<![\p{L}])(?:remplacement|profil|personnel|sélection|résultat|satisfaction)\s+garanti[es]?(?![\p{L}])/iu, 'garantie annoncée (remplacement, résultat, sélection)'],
+    [/(?<![\p{L}])(?:profils?|personnel|candidats?)\s+vérifiés?(?![\p{L}])/iu, "vérification d'antécédents annoncée"],
+    [/(?<![\p{L}])(?:sous|en|dans)\s+(?:les\s+)?(?:moins\s+de\s+)?24\s*(?:h|heures)(?![\p{L}])/iu, 'délai de 24 h annoncé'],
+    [/(?<![\p{L}])(?:réponse|profil|mise en relation)\s+(?:sous|dans|en)\s+\d+\s*(?:h|heures|jours?)(?![\p{L}])/iu, 'délai de mise en relation annoncé']
+  ];
+  const NEGATION = /\b(aucun|aucune|sans|ni|jamais|pas|non|ne|rien|personne)\b/i;
+  let promesses = 0;
+  surfaces.forEach((s) => {
+    PROMESSES.forEach(([motif, libelle]) => {
+      const global = new RegExp(motif.source, motif.flags.indexOf('g') === -1 ? motif.flags + 'g' : motif.flags);
+      let trouve;
+      while ((trouve = global.exec(s.texte)) !== null) {
+        const avant = s.texte.slice(Math.max(0, trouve.index - 90), trouve.index);
+        const coupe = Math.max(avant.lastIndexOf('.'), avant.lastIndexOf('>'), avant.lastIndexOf('\n'));
+        if (NEGATION.test(avant.slice(coupe + 1))) continue;
+        promesses += 1;
+        erreur(s.fichier + ' : ' + libelle + ' → « ' + trouve[0] + ' »');
+      }
+    });
+  });
+  if (!promesses) ok('Aucune promesse interdite (délai, garantie, vérification, supériorité, origine).');
+
+  /* 7.4 — Domaine unique : après la migration (lot 1 du plan SEO), aucun
+           fichier publié ne doit rester sur l'ancien hébergement. */
+  let hoteAttendu = '';
+  try { hoteAttendu = new URL(CONFIG.url).hostname; } catch (e) { hoteAttendu = ''; }
+  if (hoteAttendu) {
+    const HERBERGEMENTS = /(vercel\.app|netlify\.app|netlify\.com|github\.io|pages\.dev|herokuapp\.com)$/i;
+    const vus = new Set();
+    let domainesEtrangers = 0;
+    surfaces.forEach((s) => {
+      (s.texte.match(/https?:\/\/[a-z0-9.-]+/gi) || []).forEach((url) => {
+        let hote = '';
+        try { hote = new URL(url).hostname; } catch (e) { return; }
+        if (hote === hoteAttendu || !HERBERGEMENTS.test(hote)) return;
+        const clef = s.fichier + '|' + url;
+        if (vus.has(clef)) return;
+        vus.add(clef);
+        domainesEtrangers += 1;
+        erreur(s.fichier + ' : URL publiée sur un autre hébergement que ' + hoteAttendu + ' → ' + url);
+      });
+    });
+    if (!domainesEtrangers) ok('Domaine unique : les URL absolues pointent toutes sur ' + hoteAttendu + '.');
+  }
+}
 
 /* ═══ Rappels de conformité (informatifs, hors décompte) ═══ */
 section('Rappels de conformité (ne bloquent pas la publication)');

@@ -193,9 +193,9 @@
         "langue": "fr"
       },
       {
-        "cle": "10 villes",
+        "cle": "13 villes",
         "occurrences": 1,
-        "exemple": "10 villes",
+        "exemple": "13 villes",
         "langue": "fr"
       },
       {
@@ -516,13 +516,13 @@
       },
       {
         "cle": "Dar Bouazza",
-        "occurrences": 4,
+        "occurrences": 3,
         "exemple": "Dar Bouazza",
         "langue": "fr"
       },
       {
         "cle": "Bouznika",
-        "occurrences": 4,
+        "occurrences": 3,
         "exemple": "Bouznika",
         "langue": "fr"
       },

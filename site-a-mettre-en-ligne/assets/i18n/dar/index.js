@@ -38,7 +38,7 @@ YS_TRAD("dar", "index", {
   "Yallah Services — Votre besoin en personnel, notre priorité.": "Yallah Services — الحاجة ديالك فالخدامين، هي الأولوية ديالنا.",
   "2 ans": "عامين",
   "d'activité au Maroc": "من الخدمة فالمغرب",
-  "10 villes": "10 مدن",
+  "13 villes": "13 مدن",
   "desservies au Maroc": "مخدومة فالمغرب",
   "2 publics": "جوج فئات",
   "Particuliers et entreprises": "الأسر والشركات",

@@ -11,6 +11,7 @@ Pages :
   <service>-<ville>.html            → pages locales (ménage, nounou… par ville)
   sitemap.xml                       → pages publiques, régénéré à chaque build
   video-sitemap.xml                 → quatre vidéos, régénéré à chaque build
+  llms.txt                          → fiche du site pour les assistants IA
 
 Coordonnées configurées :
   WhatsApp foyers    : +212 691 733 585

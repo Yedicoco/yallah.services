@@ -14,8 +14,9 @@
         querySelector('#…')) existe bien dans la page concernée.
      4. Les balises HTML essentielles sont présentes et équilibrées.
      5. Chaque champ obligatoire du formulaire possède son message
-        d'erreur (data-err-fr / data-err-ar) et chaque champ texte ses
-        libellés bilingues (data-fr-ph / data-ar-ph).
+        d'erreur (data-err-fr / data-err-ar), chaque champ texte ses
+        libellés bilingues (data-fr-ph / data-ar-ph), et aucune liste
+        déroulante ne propose deux fois la même option.
      6. Aucun débordement susceptible d'être provoqué par une largeur
         fixe supérieure à 320 px dans le CSS.
      7. Les numéros de téléphone et l'e-mail affichés sont cohérents
@@ -186,6 +187,36 @@ if (existe('candidature.html')) {
       if (contenu.indexOf(motif) === -1) erreur('Élément attendu absent : ' + motif);
     });
   ok('Choix multiples, consentement et champ anti-robots présents');
+}
+
+/* Listes déroulantes : une option répétée se voit à l'œil, fausse le choix
+   proposé au visiteur et remonte deux fois la même valeur dans le récapitulatif. */
+{
+  let doublons = 0;
+  let listes = 0;
+  PAGES.forEach((page) => {
+    const contenu = lire(page);
+    const motif = /<select[^>]*>[\s\S]*?<\/select>/g;
+    let select;
+    while ((select = motif.exec(contenu)) !== null) {
+      listes += 1;
+      const identifiant = (select[0].match(/id="([^"]+)"/) || [])[1] || 'select sans id';
+      const options = (select[0].match(/<option\b[^>]*>[\s\S]*?<\/option>/g) || [])
+        .map((option) => option.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
+        .filter(Boolean);
+      const vus = new Set();
+      const doubles = new Set();
+      options.forEach((option) => {
+        if (vus.has(option)) doubles.add(option);
+        vus.add(option);
+      });
+      if (doubles.size) {
+        doublons += 1;
+        erreur(page + ' → #' + identifiant + ' : option(s) en double : ' + Array.from(doubles).join(' · '));
+      }
+    }
+  });
+  if (!doublons) ok(listes + ' listes déroulantes sans option en double');
 }
 
 /* ── 6. CSS : risques de débordement horizontal ── */
