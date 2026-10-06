@@ -139,9 +139,28 @@ function rendreSchema(page) {
     { name: 'Services par ville', item: SITE + '/services-par-ville.html' },
     { name: page.h1Texte, item: url }
   ];
+  /* Graphe conforme au guide de référence
+     (doc/guide-schema-corrige-yallah-services.pdf) :
+       WebPage → Service → areaServed, rattachés à l'organisation centrale
+       unique déclarée sur l'accueil (#business) et au site (#website).
+     Aucune adresse ni LocalBusiness ici : la page décrit une zone de demande
+     (« nous pouvons traiter une demande à X »), pas une agence physique. */
   const graphe = {
     '@context': 'https://schema.org',
     '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': url + '#page',
+        url: url,
+        name: page.title,
+        headline: page.h1Texte,
+        description: page.description,
+        inLanguage: 'fr-MA',
+        isPartOf: { '@id': SITE + '/#website' },
+        about: { '@id': url + '#service' },
+        publisher: { '@id': SITE + '/#business' },
+        breadcrumb: { '@id': url + '#breadcrumb' }
+      },
       {
         '@type': 'Service',
         '@id': url + '#service',
@@ -149,15 +168,16 @@ function rendreSchema(page) {
         serviceType: page.serviceType,
         description: page.description,
         provider: { '@id': SITE + '/#business' },
-        areaServed: { '@type': 'City', name: page.ville },
+        areaServed: { '@type': 'City', name: page.ville, containedInPlace: { '@type': 'Country', name: 'Maroc' } },
         availableChannel: {
           '@type': 'ServiceChannel',
           serviceUrl: url,
-          servicePhone: { '@type': 'ContactPoint', telephone: '+212691733585', contactType: 'customer service', availableLanguage: ['French', 'Arabic'] }
+          servicePhone: { '@type': 'ContactPoint', telephone: '+212691733585', contactType: 'customer service', availableLanguage: ['fr-MA', 'ar-MA'] }
         }
       },
       {
         '@type': 'BreadcrumbList',
+        '@id': url + '#breadcrumb',
         itemListElement: fil.map((f, i) => ({ '@type': 'ListItem', position: i + 1, name: f.name, item: f.item }))
       },
       {

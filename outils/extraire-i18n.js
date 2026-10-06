@@ -276,18 +276,40 @@ function collecter(noeud, cles, langueCourante, langueCherchee) {
   let langue = langueCourante;
   if (attributs['data-lang'] === 'ar') langue = 'ar';
   else if (attributs['data-lang'] === 'fr') langue = 'fr';
-  if (langue !== langueCherchee) {
-    (noeud.enfants || []).forEach((enfant) => collecter(enfant, cles, langue, langueCherchee));
-    return;
-  }
 
-  const ajouter = (cle, exemple) => {
+  const ajouter = (cle, exemple, langueCle) => {
     if (!cle) return;
-    const entree = cles.get(cle) || { cle, occurrences: 0, exemple: exemple || '', langue };
+    const entree = cles.get(cle) || { cle, occurrences: 0, exemple: exemple || '', langue: langueCle || langue };
     entree.occurrences += 1;
     if (!entree.exemple && exemple) entree.exemple = exemple;
     cles.set(cle, entree);
   };
+
+  /* Placeholder bilingue (data-fr-ph / data-ar-ph) : assets/js/fiche.js le
+     reporte sur l'attribut placeholder, que le moteur multilingue traduit
+     ensuite comme n'importe quel placeholder. */
+  const phBrut = langueCherchee === 'ar' ? attributs['data-ar-ph'] : attributs['data-fr-ph'];
+  if (phBrut !== undefined && contientLettres(phBrut)) {
+    ajouter('@placeholder:' + normaliser(phBrut), phBrut, langueCherchee);
+  }
+
+  /* Élément bilingue par attributs : data-fr / data-ar. C'est le cas des
+     <option> de la fiche candidat — un <option> ne peut pas contenir de
+     <span data-lang>. fiche.js écrit dans l'élément la version de la base
+     active : c'est donc cette version-là qui sert de clé, comme pour
+     data-lang. Le texte écrit en dur dans le HTML (repli sans JavaScript)
+     n'est pas collecté : il duplicaterait la clé française. */
+  if (attributs['data-fr'] !== undefined && attributs['data-ar'] !== undefined) {
+    const brut = langueCherchee === 'ar' ? attributs['data-ar'] : attributs['data-fr'];
+    const cle = normaliser(brut || '');
+    if (cle && contientLettres(cle)) ajouter(cle, cle, langueCherchee);
+    return;
+  }
+
+  if (langue !== langueCherchee) {
+    (noeud.enfants || []).forEach((enfant) => collecter(enfant, cles, langue, langueCherchee));
+    return;
+  }
 
   /* Attributs traduisibles */
   ATTRIBUTS.forEach((nomAttribut) => {

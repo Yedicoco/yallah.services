@@ -57,7 +57,8 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── outils/reindexer-i18n.js          # Replace les traductions après une modification du HTML
 ├── outils/generer-i18n.js            # Compile contenu/i18n/traductions/*.json → assets/i18n/
 ├── outils/tester-i18n.js             # Teste les 4 affichages dans un DOM headless (jsdom)
-├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage)
+├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage,
+│                                     #   affirmations commerciales et géographiques, domaine unique)
 ├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
 ├── outils/generer-sitemap.js         # Sitemaps pages + vidéos (lastmod = git), synchronisés dans robots.txt
 ├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
@@ -73,6 +74,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 │   ├── pages/*.json                  # Contenu rédigé, page par page
 │   └── i18n/                         # Multilingue : cles.json + traductions/<page>.<langue>.json
 ├── plan-seo-local.md                 # Plan SEO local : état, matrice, GBP, citations, mesure
+├── doc/guide-schema-corrige-yallah-services.pdf  # ★ Guide SEO / données structurées de référence
 ├── apercus/generer-apercus.js        # Captures d'écran (Playwright) + contrôle de débordement
 ├── assets/
 │   ├── css/style.css                 # Thème or/noir + grille + navy + vert WhatsApp
@@ -268,6 +270,18 @@ node outils/verifier-site.js            # section 8 : contrôle le branchement m
 4. Règle affichée au candidat : *sans références, la candidature n'est ni validée ni présentée à un foyer*.
 5. **Gratuit pour les candidats** : aucun frais n'est demandé, ni avant ni après le placement.
 
+> 🔧 **Branchement à ne pas casser.** Les libellés des 7 listes déroulantes (ville, métier,
+> expérience, logement, jours/semaine, lien des deux références) sont écrits **dans le HTML** —
+> la liste reste lisible sans JavaScript — et portés par `data-fr` / `data-ar`, que
+> `assets/js/fiche.js` applique selon la langue avant que le moteur multilingue ne traduise.
+> `fiche.js` doit donc être chargé **avant** `candidature.js` : sans `window.YSFiche`, ce dernier
+> s'arrête immédiatement — listes vides, aucune validation, aucun numéro de dossier, envoi brut
+> vers `/api/candidature` (404 sur le site statique). Deux garde-fous veillent :
+> `outils/verifier-site.js` contrôle le chargement et l'ordre des scripts ainsi que l'absence
+> d'`<option>` sans libellé, et `outils/tester-i18n.js` rejoue l'envoi complet du formulaire
+> (validation à vide, puis numéro de dossier) et la page de confirmation dans les 4 affichages.
+> JavaScript désactivé : un bandeau `<noscript>` propose le chemin de secours (WhatsApp).
+
 ## 🔐 Espace recruteur (`/admin`, version serveur)
 
 - **Statistiques** : candidatures reçues, poste le plus demandé, ville principale, contacts WhatsApp
@@ -365,16 +379,18 @@ Grand ménage : villa 700 DH · appartement 500 DH
 ## ✅ Vérifications avant mise en ligne
 
 ```bash
-node outils/verifier-site.js      # ressources, liens, ids, structure, multilingue
+node outils/verifier-site.js      # ressources, liens, ids, scripts chargés, structure, formulaires, multilingue
 node outils/verifier-contenu.js   # volume et conformité du contenu SEO local
 node outils/extraire-i18n.js --verifier   # toutes les chaînes sont-elles traduites ?
-node outils/tester-i18n.js        # les 4 affichages (jsdom) — npm i jsdom
+node outils/tester-i18n.js        # les 4 affichages (jsdom) + listes déroulantes, envoi du
+                                  # formulaire et page de confirmation — npm i jsdom
 ```
 
 
 ```bash
 node outils/verifier-site.js        # liens, ressources, identifiants JS, formulaires, CSS, coordonnées
-node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie, titles, balisage, maillage
+node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie, titles, balisage, maillage,
+                                    #   affirmations commerciales et géographiques, domaine unique
 node outils/generer-pages-villes.js --verifier   # valide les fiches de contenu sans rien écrire
 node outils/generer-pages-villes.js              # régénère les pages service × zone
 node outils/generer-sitemap.js                   # régénère sitemap.xml + video-sitemap.xml
@@ -387,15 +403,30 @@ node --check assets/js/*.js server.js build-site.js
 > C'est volontaire : c'est le garde-fou qui empêche la publication de pages-portes.
 > Les seuils sont réglables (`--mots 800 --dup 30`) ; le plan complet est dans
 > **`plan-seo-local.md`**.
+>
+> ⚠️ Il bloque aussi toute **affirmation hors référentiel** (`site.config.json` et
+> `contenu/fiche-entreprise.md`) : une ville retirée du périmètre ou non confirmée,
+> une promesse de délai, une garantie, une vérification d'antécédents, un critère
+> d'origine, ou une URL absolue publiée sur un autre hébergement que le domaine de `site.config.json`.
+> Les formulations négatives (« aucune garantie de résultat », « sans garantie de
+> desserte quartier par quartier ») sont conformes et ne déclenchent rien.
 
 Le vérificateur contrôle notamment que **chaque image/script/feuille de style existe**, que chaque
-identifiant utilisé par le JavaScript est bien présent dans la page, que les **messages d'erreur sont
-bilingues**, et qu'aucune largeur fixe ne peut provoquer un défilement horizontal.
+page charge **les scripts qui lui sont nécessaires, dans l'ordre** (`fiche.js` avant
+`candidature.js`), que chaque identifiant utilisé par le JavaScript est bien présent dans la page,
+que les **messages d'erreur sont bilingues**, qu'**aucune liste déroulante n'a d'option vide ni
+d'option en double**, et qu'aucune largeur fixe ne peut provoquer un défilement horizontal.
 
 Contrôles déjà effectués sur cette version :
 
 - [x] Accueil, fiche, confirmation, admin et assets répondent `200`
-- [x] Envoi réel testé → dossier `YS-2026-0001` enregistré, puis base nettoyée
+- [x] **Fiche de candidature en vrai DOM (jsdom)** : 58 libellés de listes déroulantes affichés
+      dans les 4 langues, 13 aides de saisie reportées sur `placeholder`
+- [x] **Envoi du formulaire rejoué** : envoi à vide bloqué (15 champs signalés, 16 messages),
+      fiche complète → numéro de dossier `YS-2026-0001` en mode statique
+- [x] **Page de confirmation rejouée** : numéro, 20 lignes de récapitulatif, liens WhatsApp et
+      e-mail pré-rédigés dans les 4 langues · repli affiché quand aucune fiche n'est enregistrée
+- [x] Envoi réel testé côté serveur → dossier `YS-2026-0001` enregistré, puis base nettoyée
 - [x] Validation serveur (champs manquants → `422` avec messages FR/AR)
 - [x] Clé d'admin invalide → `403` · suppression sans clé → `403`
 - [x] Anti-robots (champ piège) : aucun enregistrement, réponse neutre
@@ -423,7 +454,7 @@ Le dépôt contient les premières briques du référencement local :
 
 - **Pages service × zone** : 6 pages Casablanca en ligne (ménage, nounou, cuisinière, garde-malade,
   chauffeur, gardiennage), générées depuis `contenu/pages/*.json` — 869 à 1 514 mots, balisage
-  `Service` + fil d'Ariane + `FAQPage`, 4 à 5 liens internes chacune.
+  `WebPage` + `Service` + fil d'Ariane + `FAQPage`, 4 à 5 liens internes chacune.
 - **Hubs** : `services-par-ville.html` (13 zones, 6 métiers) et `personnel-entreprises.html` (B2B).
 - **Plan complet** : `plan-seo-local.md` — matrice services × villes par phases, gabarit de page,
   ligne B2B, Google Business Profile en mode « zone de service », citations locales et NAP
@@ -431,8 +462,14 @@ Le dépôt contient les premières briques du référencement local :
 - **Fiche entreprise** : `contenu/fiche-entreprise.md` — référence unique de tout contenu produit.
 - **Audit de conformité** : `contenu/audit-promesses-site.md` — affirmations corrigées et points
   en attente de confirmation (tarifs, avis clients, formules de remplacement).
+- **Guide schema de référence** : `doc/guide-schema-corrige-yallah-services.pdf` — modèle
+  `EmploymentAgency → Service → areaServed`, une seule organisation centrale référencée par `@id`,
+  aucune adresse ni établissement local inventé, aucune note structurée sans avis authentique.
+  `outils/verifier-seo.js` vérifie ce graphe sur chaque page ; conformité détaillée dans
+  `contenu/audit-promesses-site.md` §6.
 - **Garde-fou** : `outils/verifier-contenu.js` bloque la publication tant qu'une page est
-  trop courte ou trop proche d'une autre (protection contre les pages-portes).
+  trop courte ou trop proche d'une autre (protection contre les pages-portes), ou tant qu'une
+  affirmation commerciale ou géographique sort du référentiel (`site.config.json`).
 
 Règles à ne pas contourner : un seul profil Google par établissement réellement exploité,
 aucune adresse inventée, aucune promesse de service à la journée hors Casablanca/Rabat,

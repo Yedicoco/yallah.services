@@ -40,6 +40,27 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://yallahservices-one.vercel.app/femme-menage-casablanca.html#page",
+      "url": "https://yallahservices-one.vercel.app/femme-menage-casablanca.html",
+      "name": "Femme de ménage à Casablanca | Yallah Services",
+      "headline": "Femme de ménage à Casablanca",
+      "description": "Ménage, repassage et grand ménage à Casablanca : nous recherchons le profil adapté à votre logement et à vos horaires, puis nous assurons le suivi.",
+      "inLanguage": "fr-MA",
+      "isPartOf": {
+        "@id": "https://yallahservices-one.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://yallahservices-one.vercel.app/femme-menage-casablanca.html#service"
+      },
+      "publisher": {
+        "@id": "https://yallahservices-one.vercel.app/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://yallahservices-one.vercel.app/femme-menage-casablanca.html#breadcrumb"
+      }
+    },
+    {
       "@type": "Service",
       "@id": "https://yallahservices-one.vercel.app/femme-menage-casablanca.html#service",
       "name": "Femme de ménage à Casablanca",
@@ -50,7 +71,11 @@
       },
       "areaServed": {
         "@type": "City",
-        "name": "Casablanca"
+        "name": "Casablanca",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Maroc"
+        }
       },
       "availableChannel": {
         "@type": "ServiceChannel",
@@ -60,14 +85,15 @@
           "telephone": "+212691733585",
           "contactType": "customer service",
           "availableLanguage": [
-            "French",
-            "Arabic"
+            "fr-MA",
+            "ar-MA"
           ]
         }
       }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://yallahservices-one.vercel.app/femme-menage-casablanca.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",

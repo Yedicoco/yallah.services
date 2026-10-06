@@ -40,6 +40,27 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://yallahservices-one.vercel.app/chauffeur-casablanca.html#page",
+      "url": "https://yallahservices-one.vercel.app/chauffeur-casablanca.html",
+      "name": "Chauffeur à Casablanca | Yallah Services",
+      "headline": "Chauffeur à Casablanca",
+      "description": "Chauffeur à Casablanca pour une famille ou une entreprise : nous recherchons un profil selon vos trajets, vos horaires et le véhicule utilisé.",
+      "inLanguage": "fr-MA",
+      "isPartOf": {
+        "@id": "https://yallahservices-one.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://yallahservices-one.vercel.app/chauffeur-casablanca.html#service"
+      },
+      "publisher": {
+        "@id": "https://yallahservices-one.vercel.app/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://yallahservices-one.vercel.app/chauffeur-casablanca.html#breadcrumb"
+      }
+    },
+    {
       "@type": "Service",
       "@id": "https://yallahservices-one.vercel.app/chauffeur-casablanca.html#service",
       "name": "Chauffeur à Casablanca",
@@ -50,7 +71,11 @@
       },
       "areaServed": {
         "@type": "City",
-        "name": "Casablanca"
+        "name": "Casablanca",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Maroc"
+        }
       },
       "availableChannel": {
         "@type": "ServiceChannel",
@@ -60,14 +85,15 @@
           "telephone": "+212691733585",
           "contactType": "customer service",
           "availableLanguage": [
-            "French",
-            "Arabic"
+            "fr-MA",
+            "ar-MA"
           ]
         }
       }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://yallahservices-one.vercel.app/chauffeur-casablanca.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",

@@ -40,6 +40,27 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://yallahservices-one.vercel.app/vigile-casablanca.html#page",
+      "url": "https://yallahservices-one.vercel.app/vigile-casablanca.html",
+      "name": "Vigile et gardien à Casablanca | Yallah Services",
+      "headline": "Vigile et gardien à Casablanca",
+      "description": "Gardien ou vigile à Casablanca : nous recherchons une personne pour la présence et la surveillance d'une maison, d'une résidence ou d'un local selon vos horaires.",
+      "inLanguage": "fr-MA",
+      "isPartOf": {
+        "@id": "https://yallahservices-one.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://yallahservices-one.vercel.app/vigile-casablanca.html#service"
+      },
+      "publisher": {
+        "@id": "https://yallahservices-one.vercel.app/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://yallahservices-one.vercel.app/vigile-casablanca.html#breadcrumb"
+      }
+    },
+    {
       "@type": "Service",
       "@id": "https://yallahservices-one.vercel.app/vigile-casablanca.html#service",
       "name": "Vigile et gardien à Casablanca",
@@ -50,7 +71,11 @@
       },
       "areaServed": {
         "@type": "City",
-        "name": "Casablanca"
+        "name": "Casablanca",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Maroc"
+        }
       },
       "availableChannel": {
         "@type": "ServiceChannel",
@@ -60,14 +85,15 @@
           "telephone": "+212691733585",
           "contactType": "customer service",
           "availableLanguage": [
-            "French",
-            "Arabic"
+            "fr-MA",
+            "ar-MA"
           ]
         }
       }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://yallahservices-one.vercel.app/vigile-casablanca.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",

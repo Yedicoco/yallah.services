@@ -1,13 +1,21 @@
 # Yallah Services
-> Agence de mise en relation entre familles et personnel de maison au Maroc (femme de ménage, nounou, cuisinière, garde-malade). Villes : Casablanca, Rabat, Marrakech, Tanger, Agadir, Fès, Meknès.
+> Agence de mise en relation entre familles, entreprises et personnel de maison au Maroc (femme de ménage, nounou, cuisinière, garde-malade, chauffeur, gardien — et personnel pour les entreprises : hôtellerie, restauration, chantiers, nettoyage, événementiel). Agence basée à Casablanca (Hay Hassani 20220).
+
+## Zones d'intervention confirmées
+Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Salé, Témara, Mohammedia, Kénitra, Marrakech, Tanger, Agadir, Fès.
+Les demandes hors de ces zones sont étudiées au cas par cas : aucune autre ville n'est annoncée comme desservie.
 
 ## Pages clés
 - [Accueil, services et tarifs](https://yallahservices-one.vercel.app/)
+- [Services par ville](https://yallahservices-one.vercel.app/services-par-ville.html)
 - [Femme de ménage à Casablanca](https://yallahservices-one.vercel.app/femme-menage-casablanca.html)
 - [Nounou à Casablanca](https://yallahservices-one.vercel.app/nounou-casablanca.html)
+- [Personnel pour les entreprises](https://yallahservices-one.vercel.app/personnel-entreprises.html)
 - [Espace candidats](https://yallahservices-one.vercel.app/candidature.html)
 
 ## Faits
-- Frais de mise en relation : 500 MAD (Sérénité, remplacement 2 mois) ou 1 000 MAD (Premium, 6 mois), payés après validation du profil.
+- Frais de mise en relation : 500 MAD (formule Sérénité, remplacement 2 mois) ou 1 000 MAD (formule Premium, 6 mois), payés après validation du profil.
 - Salaire mensuel versé directement par le foyer à l'employée (grille sur la page d'accueil).
-- Contact : WhatsApp +212 691 733 585 · servicesyallah@gmail.com
+- Profils présentés selon les critères demandés : l'agence ne publie ni garantie de vérification d'antécédents, ni délai de mise en relation.
+- Deux publics, deux numéros : le site s'adresse aux particuliers et aux entreprises qui recrutent ; les candidats passent par l'espace candidats.
+- Contact : WhatsApp +212 691 733 585 (foyers et entreprises) · +212 710 359 446 (candidats) · servicesyallah@gmail.com

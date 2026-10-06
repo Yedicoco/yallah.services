@@ -28,6 +28,11 @@ node_modules/
 data/
 *.corrompu-*
 
+# ── Consentements aux avis clients — loi 09-08 (ne jamais committer) ──
+# Captures WhatsApp et notes datées archivant l'accord de chaque cliente
+# (voir contenu/valider-avis.md et contenu/recueillir-avis.md).
+/contenu/avis/
+
 # Sauvegardes locales de la base de candidatures
 data-*/
 

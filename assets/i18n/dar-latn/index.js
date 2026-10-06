@@ -38,7 +38,7 @@ YS_TRAD("dar-latn", "index", {
   "Yallah Services — Votre besoin en personnel, notre priorité.": "Yallah Services — L 7aja dyalek f l kheddamin, hiya l awlawiya dyalna.",
   "2 ans": "3amin",
   "d'activité au Maroc": "mn l khedma f Maghrib",
-  "10 villes": "10 mdun",
+  "13 villes": "13 mdun",
   "desservies au Maroc": "makhduma f Maghrib",
   "2 publics": "Juj f2at",
   "Particuliers et entreprises": "L osar w cherkat",

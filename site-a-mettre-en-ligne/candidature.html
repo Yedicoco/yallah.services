@@ -36,13 +36,18 @@
     {
       "@type": "WebPage",
       "@id": "https://yallahservices-one.vercel.app/candidature.html#page",
+      "url": "https://yallahservices-one.vercel.app/candidature.html",
       "name": "Espace candidats — fiche de candidature",
+      "headline": "Fiche de candidature",
       "description": "Fiche de candidature pour les métiers de services à domicile au Maroc : dépôt des références, numéro de dossier, suivi par WhatsApp.",
       "inLanguage": "fr-MA",
-      "isPartOf": { "@id": "https://yallahservices-one.vercel.app/#website" }
+      "isPartOf": { "@id": "https://yallahservices-one.vercel.app/#website" },
+      "publisher": { "@id": "https://yallahservices-one.vercel.app/#business" },
+      "breadcrumb": { "@id": "https://yallahservices-one.vercel.app/candidature.html#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://yallahservices-one.vercel.app/candidature.html#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://yallahservices-one.vercel.app/" },
         { "@type": "ListItem", "position": 2, "name": "Espace candidats", "item": "https://yallahservices-one.vercel.app/candidature.html" }
@@ -108,6 +113,17 @@
     <!-- Message d'état général -->
     <div class="ys-alerte ys-alerte-rouge" id="messageGeneral" hidden style="margin-bottom:18px"></div>
 
+    <!-- Sans JavaScript, le formulaire ne peut ni valider ni produire le numéro
+         de dossier (il partirait en POST brut vers /api/candidature). Les listes
+         restent lisibles — leurs libellés sont écrits dans le HTML — et on
+         propose le chemin de secours : WhatsApp. -->
+    <noscript>
+      <div class="ys-alerte ys-alerte-rouge" style="margin-bottom:18px">
+        <p data-lang="fr">⚠️ <strong>JavaScript est désactivé</strong> sur cet appareil : l'envoi du formulaire ne peut pas produire votre numéro de dossier. Activez JavaScript, ou écrivez-nous sur <a href="https://wa.me/212710359446">WhatsApp au +212 710 359 446</a> : nous remplissons la fiche avec vous.</p>
+        <p data-lang="ar">⚠️ <strong>جافاسكريبت موقوف</strong> فهاد الجهاز: الاستمارة ماغاديش تقدر تعطي رقم الملفّ. خدّم جافاسكريبت، ولا كاتبينا فـ <a href="https://wa.me/212710359446">واتساب على +212 710 359 446</a>: غادي نعمّرو الاستمارة معاك.</p>
+      </div>
+    </noscript>
+
     <!-- ═══════════ FORMULAIRE ═══════════ -->
     <form class="ys-questionnaire" id="formCandidature" action="/api/candidature" method="post" novalidate>
 
@@ -152,21 +168,21 @@
               <span data-lang="ar">المدينة <span class="req">*</span></span>
             </label>
             <select class="ys-select" id="ville" name="ville" data-fr-ph="Choisissez votre ville" data-ar-ph="اختاري مدينتك">
-              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —"></option>
-              <option value="Casablanca" data-fr="Casablanca" data-ar="الدار البيضاء"></option>
-              <option value="Rabat" data-fr="Rabat" data-ar="الرباط"></option>
-              <option value="Marrakech" data-fr="Marrakech" data-ar="مراكش"></option>
-              <option value="Fès" data-fr="Fès" data-ar="فاس"></option>
-              <option value="Tanger" data-fr="Tanger" data-ar="طنجة"></option>
-              <option value="Agadir" data-fr="Agadir" data-ar="أكادير"></option>
-              <option value="Mohammedia" data-fr="Mohammedia" data-ar="المحمدية"></option>
-              <option value="Témara" data-fr="Témara" data-ar="تمارة"></option>
-              <option value="Bouskoura" data-fr="Bouskoura" data-ar="بوسكورة"></option>
-              <option value="Dar Bouazza" data-fr="Dar Bouazza" data-ar="دار بوعزة"></option>
-              <option value="Bouznika" data-fr="Bouznika" data-ar="بوزنيقة"></option>
-              <option value="Kénitra" data-fr="Kénitra" data-ar="القنيطرة"></option>
-              <option value="Salé" data-fr="Salé" data-ar="سلا"></option>
-              <option value="Autre" data-fr="Autre ville" data-ar="مدينة أخرى"></option>
+              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —">— Choisissez —</option>
+              <option value="Casablanca" data-fr="Casablanca" data-ar="الدار البيضاء">Casablanca</option>
+              <option value="Rabat" data-fr="Rabat" data-ar="الرباط">Rabat</option>
+              <option value="Marrakech" data-fr="Marrakech" data-ar="مراكش">Marrakech</option>
+              <option value="Fès" data-fr="Fès" data-ar="فاس">Fès</option>
+              <option value="Tanger" data-fr="Tanger" data-ar="طنجة">Tanger</option>
+              <option value="Agadir" data-fr="Agadir" data-ar="أكادير">Agadir</option>
+              <option value="Mohammedia" data-fr="Mohammedia" data-ar="المحمدية">Mohammedia</option>
+              <option value="Témara" data-fr="Témara" data-ar="تمارة">Témara</option>
+              <option value="Bouskoura" data-fr="Bouskoura" data-ar="بوسكورة">Bouskoura</option>
+              <option value="Dar Bouazza" data-fr="Dar Bouazza" data-ar="دار بوعزة">Dar Bouazza</option>
+              <option value="Bouznika" data-fr="Bouznika" data-ar="بوزنيقة">Bouznika</option>
+              <option value="Kénitra" data-fr="Kénitra" data-ar="القنيطرة">Kénitra</option>
+              <option value="Salé" data-fr="Salé" data-ar="سلا">Salé</option>
+              <option value="Autre" data-fr="Autre ville" data-ar="مدينة أخرى">Autre ville</option>
             </select>
             <span class="ys-msg-erreur" data-err-fr="Choisissez votre ville." data-err-ar="اختاري مدينتك."></span>
           </div>
@@ -220,19 +236,19 @@
               <span data-lang="ar">المهنة المطلوبة <span class="req">*</span></span>
             </label>
             <select class="ys-select" id="poste" name="poste">
-              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —"></option>
-              <option value="Ménage" data-fr="Ménage / entretien de la maison" data-ar="التنظيف / العناية بالمنزل"></option>
-              <option value="Ménage + cuisine" data-fr="Ménage + cuisine" data-ar="التنظيف + الطبخ"></option>
-              <option value="Cuisine" data-fr="Cuisine (marocaine et/ou européenne)" data-ar="الطبخ (مغربي و/أو أوروبي)"></option>
-              <option value="Aide cuisine" data-fr="Aide cuisine" data-ar="مساعدة في المطبخ"></option>
-              <option value="Nounou" data-fr="Nounou / garde d'enfants" data-ar="جليسة أطفال"></option>
-              <option value="Nounou + ménage" data-fr="Nounou + ménage" data-ar="جليسة أطفال + تنظيف"></option>
-              <option value="Garde malade" data-fr="Garde malade" data-ar="رعاية مريض"></option>
-              <option value="Garde malade + ménage" data-fr="Garde malade + ménage" data-ar="رعاية مريض + تنظيف"></option>
-              <option value="Garde personnes âgées" data-fr="Accompagnement personnes âgées" data-ar="مرافقة كبار السن"></option>
-              <option value="Chauffeur" data-fr="Chauffeur" data-ar="سائق"></option>
-              <option value="Cuisinier(ère) à domicile" data-fr="Cuisinier(ère) à domicile" data-ar="طاهٍ/طاهية في المنزل"></option>
-              <option value="Autre" data-fr="Autre métier" data-ar="مهنة أخرى"></option>
+              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —">— Choisissez —</option>
+              <option value="Ménage" data-fr="Ménage / entretien de la maison" data-ar="التنظيف / العناية بالمنزل">Ménage / entretien de la maison</option>
+              <option value="Ménage + cuisine" data-fr="Ménage + cuisine" data-ar="التنظيف + الطبخ">Ménage + cuisine</option>
+              <option value="Cuisine" data-fr="Cuisine (marocaine et/ou européenne)" data-ar="الطبخ (مغربي و/أو أوروبي)">Cuisine (marocaine et/ou européenne)</option>
+              <option value="Aide cuisine" data-fr="Aide cuisine" data-ar="مساعدة في المطبخ">Aide cuisine</option>
+              <option value="Nounou" data-fr="Nounou / garde d'enfants" data-ar="جليسة أطفال">Nounou / garde d'enfants</option>
+              <option value="Nounou + ménage" data-fr="Nounou + ménage" data-ar="جليسة أطفال + تنظيف">Nounou + ménage</option>
+              <option value="Garde malade" data-fr="Garde malade" data-ar="رعاية مريض">Garde malade</option>
+              <option value="Garde malade + ménage" data-fr="Garde malade + ménage" data-ar="رعاية مريض + تنظيف">Garde malade + ménage</option>
+              <option value="Garde personnes âgées" data-fr="Accompagnement personnes âgées" data-ar="مرافقة كبار السن">Accompagnement personnes âgées</option>
+              <option value="Chauffeur" data-fr="Chauffeur" data-ar="سائق">Chauffeur</option>
+              <option value="Cuisinier(ère) à domicile" data-fr="Cuisinier(ère) à domicile" data-ar="طاهٍ/طاهية في المنزل">Cuisinier(ère) à domicile</option>
+              <option value="Autre" data-fr="Autre métier" data-ar="مهنة أخرى">Autre métier</option>
             </select>
             <span class="ys-msg-erreur" data-err-fr="Choisissez le métier souhaité." data-err-ar="اختاري المهنة المطلوبة."></span>
           </div>
@@ -243,12 +259,12 @@
               <span data-lang="ar">الخبرة <span class="req">*</span></span>
             </label>
             <select class="ys-select" id="experience" name="experience">
-              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —"></option>
-              <option value="Aucune expérience" data-fr="Aucune expérience" data-ar="بدون خبرة"></option>
-              <option value="Moins d'un an" data-fr="Moins d'un an" data-ar="أقل من سنة"></option>
-              <option value="1 à 2 ans" data-fr="1 à 2 ans" data-ar="من سنة إلى سنتين"></option>
-              <option value="3 à 5 ans" data-fr="3 à 5 ans" data-ar="من 3 إلى 5 سنوات"></option>
-              <option value="Plus de 5 ans" data-fr="Plus de 5 ans" data-ar="أكثر من 5 سنوات"></option>
+              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —">— Choisissez —</option>
+              <option value="Aucune expérience" data-fr="Aucune expérience" data-ar="بدون خبرة">Aucune expérience</option>
+              <option value="Moins d'un an" data-fr="Moins d'un an" data-ar="أقل من سنة">Moins d'un an</option>
+              <option value="1 à 2 ans" data-fr="1 à 2 ans" data-ar="من سنة إلى سنتين">1 à 2 ans</option>
+              <option value="3 à 5 ans" data-fr="3 à 5 ans" data-ar="من 3 إلى 5 سنوات">3 à 5 ans</option>
+              <option value="Plus de 5 ans" data-fr="Plus de 5 ans" data-ar="أكثر من 5 سنوات">Plus de 5 ans</option>
             </select>
             <span class="ys-msg-erreur" data-err-fr="Indiquez votre expérience." data-err-ar="حدّدي خبرتك."></span>
           </div>
@@ -269,10 +285,10 @@
               <span data-lang="ar">السكن <span class="req">*</span></span>
             </label>
             <select class="ys-select" id="logement" name="logement">
-              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —"></option>
-              <option value="Logée" data-fr="Logée (je vis chez l'employeur)" data-ar="مقيمة عند المشغّل"></option>
-              <option value="Non logée" data-fr="Non logée (je rentre le soir)" data-ar="غير مقيمة (أعود مساءً)"></option>
-              <option value="Peu importe" data-fr="Peu importe" data-ar="لا يهم"></option>
+              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —">— Choisissez —</option>
+              <option value="Logée" data-fr="Logée (je vis chez l'employeur)" data-ar="مقيمة عند المشغّل">Logée (je vis chez l'employeur)</option>
+              <option value="Non logée" data-fr="Non logée (je rentre le soir)" data-ar="غير مقيمة (أعود مساءً)">Non logée (je rentre le soir)</option>
+              <option value="Peu importe" data-fr="Peu importe" data-ar="لا يهم">Peu importe</option>
             </select>
             <span class="ys-msg-erreur" data-err-fr="Précisez logée ou non logée." data-err-ar="حدّدي إن كنت مقيمة أو غير مقيمة."></span>
           </div>
@@ -323,12 +339,12 @@
               <span data-lang="ar">عدد الأيام في الأسبوع <span class="ys-muted">(اختياري)</span></span>
             </label>
             <select class="ys-select" id="jours" name="jours">
-              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —"></option>
-              <option value="1 à 2 jours" data-fr="1 à 2 jours" data-ar="يوم إلى يومان"></option>
-              <option value="3 à 4 jours" data-fr="3 à 4 jours" data-ar="من 3 إلى 4 أيام"></option>
-              <option value="5 jours" data-fr="5 jours" data-ar="5 أيام"></option>
-              <option value="6 jours" data-fr="6 jours" data-ar="6 أيام"></option>
-              <option value="7 jours" data-fr="7 jours" data-ar="7 أيام"></option>
+              <option value="" data-fr="— Choisissez —" data-ar="— اختاري —">— Choisissez —</option>
+              <option value="1 à 2 jours" data-fr="1 à 2 jours" data-ar="يوم إلى يومان">1 à 2 jours</option>
+              <option value="3 à 4 jours" data-fr="3 à 4 jours" data-ar="من 3 إلى 4 أيام">3 à 4 jours</option>
+              <option value="5 jours" data-fr="5 jours" data-ar="5 أيام">5 jours</option>
+              <option value="6 jours" data-fr="6 jours" data-ar="6 أيام">6 jours</option>
+              <option value="7 jours" data-fr="7 jours" data-ar="7 أيام">7 jours</option>
             </select>
           </div>
 
@@ -434,13 +450,13 @@
                 <span data-lang="ar">صفة العلاقة <span class="req">*</span></span>
               </label>
               <select class="ys-select" id="ref1Lien" name="ref1Lien">
-                <option value="" data-fr="— Choisissez —" data-ar="— اختاري —"></option>
-                <option value="Ancien employeur" data-fr="Ancien employeur (foyer)" data-ar="مشغّل سابق (أسرة)"></option>
-                <option value="Employeur actuel" data-fr="Employeur actuel" data-ar="المشغّل الحالي"></option>
-                <option value="Responsable d'entreprise" data-fr="Responsable d'entreprise" data-ar="مسؤول في شركة"></option>
-                <option value="Collègue" data-fr="Collègue de travail" data-ar="زميل/زميلة في العمل"></option>
-                <option value="Famille recommandante" data-fr="Famille qui me recommande" data-ar="أسرة توصي بي"></option>
-                <option value="Autre" data-fr="Autre" data-ar="أخرى"></option>
+                <option value="" data-fr="— Choisissez —" data-ar="— اختاري —">— Choisissez —</option>
+                <option value="Ancien employeur" data-fr="Ancien employeur (foyer)" data-ar="مشغّل سابق (أسرة)">Ancien employeur (foyer)</option>
+                <option value="Employeur actuel" data-fr="Employeur actuel" data-ar="المشغّل الحالي">Employeur actuel</option>
+                <option value="Responsable d'entreprise" data-fr="Responsable d'entreprise" data-ar="مسؤول في شركة">Responsable d'entreprise</option>
+                <option value="Collègue" data-fr="Collègue de travail" data-ar="زميل/زميلة في العمل">Collègue de travail</option>
+                <option value="Famille recommandante" data-fr="Famille qui me recommande" data-ar="أسرة توصي بي">Famille qui me recommande</option>
+                <option value="Autre" data-fr="Autre" data-ar="أخرى">Autre</option>
               </select>
               <span class="ys-msg-erreur" data-err-fr="Précisez le lien avec la référence 1." data-err-ar="حدّدي صفة العلاقة بالمرجع الأول."></span>
             </div>
@@ -473,13 +489,13 @@
                 <span data-lang="ar">صفة العلاقة <span class="req">*</span></span>
               </label>
               <select class="ys-select" id="ref2Lien" name="ref2Lien">
-                <option value="" data-fr="— Choisissez —" data-ar="— اختاري —"></option>
-                <option value="Ancien employeur" data-fr="Ancien employeur (foyer)" data-ar="مشغّل سابق (أسرة)"></option>
-                <option value="Employeur actuel" data-fr="Employeur actuel" data-ar="المشغّل الحالي"></option>
-                <option value="Responsable d'entreprise" data-fr="Responsable d'entreprise" data-ar="مسؤول في شركة"></option>
-                <option value="Collègue" data-fr="Collègue de travail" data-ar="زميل/زميلة في العمل"></option>
-                <option value="Famille recommandante" data-fr="Famille qui me recommande" data-ar="أسرة توصي بي"></option>
-                <option value="Autre" data-fr="Autre" data-ar="أخرى"></option>
+                <option value="" data-fr="— Choisissez —" data-ar="— اختاري —">— Choisissez —</option>
+                <option value="Ancien employeur" data-fr="Ancien employeur (foyer)" data-ar="مشغّل سابق (أسرة)">Ancien employeur (foyer)</option>
+                <option value="Employeur actuel" data-fr="Employeur actuel" data-ar="المشغّل الحالي">Employeur actuel</option>
+                <option value="Responsable d'entreprise" data-fr="Responsable d'entreprise" data-ar="مسؤول في شركة">Responsable d'entreprise</option>
+                <option value="Collègue" data-fr="Collègue de travail" data-ar="زميل/زميلة في العمل">Collègue de travail</option>
+                <option value="Famille recommandante" data-fr="Famille qui me recommande" data-ar="أسرة توصي بي">Famille qui me recommande</option>
+                <option value="Autre" data-fr="Autre" data-ar="أخرى">Autre</option>
               </select>
               <span class="ys-msg-erreur" data-err-fr="Précisez le lien avec la référence 2." data-err-ar="حدّدي صفة العلاقة بالمرجع الثاني."></span>
             </div>
@@ -569,6 +585,10 @@
 </footer>
 
 <script src="assets/js/config.js"></script>
+<!-- Moteur bilingue FR/AR : il écrit les libellés des listes déroulantes
+     (data-fr / data-ar) et les messages WhatsApp/e-mail. À charger AVANT
+     candidature.js, qui s'arrête si window.YSFiche est absent. -->
+<script src="assets/js/fiche.js"></script>
 <script src="assets/js/candidature.js"></script>
 </body>
 </html>

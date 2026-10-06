@@ -55,7 +55,9 @@ const PAGES = fs.readdirSync(RACINE)
   .filter((f) => !PAGES_IGNOREES.has(f))
   .sort();
 const DOSSIERS = ['assets'];
-const FICHIERS = ['robots.txt', 'netlify.toml'];
+/* llms.txt décrit le site pour les assistants IA : il doit partir avec le
+   paquet statique, sinon la version hébergée ailleurs en est privée. */
+const FICHIERS = ['robots.txt', 'netlify.toml', 'llms.txt'];
 const EXCLUS = new Set(['admin.html', 'admin.js']);
 
 /* Adresse publique : variable d'environnement > site.config.json.
@@ -173,6 +175,7 @@ function ecrireLisezMoi() {
     '  <service>-<ville>.html            → pages locales (ménage, nounou… par ville)',
     '  sitemap.xml                       → pages publiques, régénéré à chaque build',
     '  video-sitemap.xml                 → quatre vidéos, régénéré à chaque build',
+    '  llms.txt                          → fiche du site pour les assistants IA',
     '',
     'Coordonnées configurées :',
     '  WhatsApp foyers    : ' + afficherNumero(WHATSAPP_FOYERS),

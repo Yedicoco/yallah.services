@@ -38,7 +38,7 @@ YS_TRAD("en", "index", {
   "Yallah Services — Votre besoin en personnel, notre priorité.": "Yallah Services — Your staffing need, our priority.",
   "2 ans": "2 years",
   "d'activité au Maroc": "operating in Morocco",
-  "10 villes": "10 cities",
+  "13 villes": "13 cities",
   "desservies au Maroc": "covered in Morocco",
   "2 publics": "2 client groups",
   "Particuliers et entreprises": "Households and businesses",

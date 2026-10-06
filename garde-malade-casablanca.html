@@ -40,6 +40,27 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://yallahservices-one.vercel.app/garde-malade-casablanca.html#page",
+      "url": "https://yallahservices-one.vercel.app/garde-malade-casablanca.html",
+      "name": "Garde-malade à Casablanca | Yallah Services",
+      "headline": "Garde-malade à Casablanca",
+      "description": "Garde-malade à Casablanca : nous recherchons une personne pour accompagner un parent âgé au quotidien, avec ou sans ménage. Parlons de votre situation.",
+      "inLanguage": "fr-MA",
+      "isPartOf": {
+        "@id": "https://yallahservices-one.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://yallahservices-one.vercel.app/garde-malade-casablanca.html#service"
+      },
+      "publisher": {
+        "@id": "https://yallahservices-one.vercel.app/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://yallahservices-one.vercel.app/garde-malade-casablanca.html#breadcrumb"
+      }
+    },
+    {
       "@type": "Service",
       "@id": "https://yallahservices-one.vercel.app/garde-malade-casablanca.html#service",
       "name": "Garde-malade à Casablanca",
@@ -50,7 +71,11 @@
       },
       "areaServed": {
         "@type": "City",
-        "name": "Casablanca"
+        "name": "Casablanca",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Maroc"
+        }
       },
       "availableChannel": {
         "@type": "ServiceChannel",
@@ -60,14 +85,15 @@
           "telephone": "+212691733585",
           "contactType": "customer service",
           "availableLanguage": [
-            "French",
-            "Arabic"
+            "fr-MA",
+            "ar-MA"
           ]
         }
       }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://yallahservices-one.vercel.app/garde-malade-casablanca.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",

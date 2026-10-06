@@ -40,6 +40,27 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://yallahservices-one.vercel.app/nounou-casablanca.html#page",
+      "url": "https://yallahservices-one.vercel.app/nounou-casablanca.html",
+      "name": "Nounou à Casablanca | Yallah Services",
+      "headline": "Nounou à Casablanca",
+      "description": "Nounou à Casablanca : nous recherchons le profil adapté à l'âge de vos enfants, à vos horaires et à votre organisation familiale, puis nous assurons le suivi.",
+      "inLanguage": "fr-MA",
+      "isPartOf": {
+        "@id": "https://yallahservices-one.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://yallahservices-one.vercel.app/nounou-casablanca.html#service"
+      },
+      "publisher": {
+        "@id": "https://yallahservices-one.vercel.app/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://yallahservices-one.vercel.app/nounou-casablanca.html#breadcrumb"
+      }
+    },
+    {
       "@type": "Service",
       "@id": "https://yallahservices-one.vercel.app/nounou-casablanca.html#service",
       "name": "Nounou à Casablanca",
@@ -50,7 +71,11 @@
       },
       "areaServed": {
         "@type": "City",
-        "name": "Casablanca"
+        "name": "Casablanca",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Maroc"
+        }
       },
       "availableChannel": {
         "@type": "ServiceChannel",
@@ -60,14 +85,15 @@
           "telephone": "+212691733585",
           "contactType": "customer service",
           "availableLanguage": [
-            "French",
-            "Arabic"
+            "fr-MA",
+            "ar-MA"
           ]
         }
       }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://yallahservices-one.vercel.app/nounou-casablanca.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
