@@ -2895,6 +2895,12 @@
         "html": "Nom complet <span class=\"req\">*</span>"
       },
       {
+        "cle": "@placeholder:Prénom et nom",
+        "occurrences": 1,
+        "exemple": "Prénom et nom",
+        "langue": "fr"
+      },
+      {
         "cle": "Téléphone WhatsApp *",
         "occurrences": 1,
         "exemple": "Téléphone WhatsApp *",
@@ -2917,12 +2923,114 @@
         "html": "Ville <span class=\"req\">*</span>"
       },
       {
+        "cle": "@placeholder:Choisissez votre ville",
+        "occurrences": 1,
+        "exemple": "Choisissez votre ville",
+        "langue": "fr"
+      },
+      {
+        "cle": "— Choisissez —",
+        "occurrences": 7,
+        "exemple": "— Choisissez —",
+        "langue": "fr"
+      },
+      {
+        "cle": "Casablanca",
+        "occurrences": 1,
+        "exemple": "Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Rabat",
+        "occurrences": 1,
+        "exemple": "Rabat",
+        "langue": "fr"
+      },
+      {
+        "cle": "Marrakech",
+        "occurrences": 1,
+        "exemple": "Marrakech",
+        "langue": "fr"
+      },
+      {
+        "cle": "Fès",
+        "occurrences": 1,
+        "exemple": "Fès",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tanger",
+        "occurrences": 1,
+        "exemple": "Tanger",
+        "langue": "fr"
+      },
+      {
+        "cle": "Agadir",
+        "occurrences": 1,
+        "exemple": "Agadir",
+        "langue": "fr"
+      },
+      {
+        "cle": "Mohammedia",
+        "occurrences": 1,
+        "exemple": "Mohammedia",
+        "langue": "fr"
+      },
+      {
+        "cle": "Témara",
+        "occurrences": 1,
+        "exemple": "Témara",
+        "langue": "fr"
+      },
+      {
+        "cle": "Bouskoura",
+        "occurrences": 1,
+        "exemple": "Bouskoura",
+        "langue": "fr"
+      },
+      {
+        "cle": "Dar Bouazza",
+        "occurrences": 1,
+        "exemple": "Dar Bouazza",
+        "langue": "fr"
+      },
+      {
+        "cle": "Bouznika",
+        "occurrences": 1,
+        "exemple": "Bouznika",
+        "langue": "fr"
+      },
+      {
+        "cle": "Kénitra",
+        "occurrences": 1,
+        "exemple": "Kénitra",
+        "langue": "fr"
+      },
+      {
+        "cle": "Salé",
+        "occurrences": 1,
+        "exemple": "Salé",
+        "langue": "fr"
+      },
+      {
+        "cle": "Autre ville",
+        "occurrences": 1,
+        "exemple": "Autre ville",
+        "langue": "fr"
+      },
+      {
         "cle": "Quartier (facultatif)",
         "occurrences": 1,
         "exemple": "Quartier (facultatif)",
         "langue": "fr",
         "balisage": "span",
         "html": "Quartier <span class=\"ys-muted\">(facultatif)</span>"
+      },
+      {
+        "cle": "@placeholder:Ex. Sidi Bernoussi",
+        "occurrences": 1,
+        "exemple": "Ex. Sidi Bernoussi",
+        "langue": "fr"
       },
       {
         "cle": "Âge *",
@@ -2933,12 +3041,24 @@
         "html": "Âge <span class=\"req\">*</span>"
       },
       {
+        "cle": "@placeholder:Ex. 32",
+        "occurrences": 1,
+        "exemple": "Ex. 32",
+        "langue": "fr"
+      },
+      {
         "cle": "Pays d'origine (facultatif)",
         "occurrences": 1,
         "exemple": "Pays d'origine (facultatif)",
         "langue": "fr",
         "balisage": "span",
         "html": "Pays d'origine <span class=\"ys-muted\">(facultatif)</span>"
+      },
+      {
+        "cle": "@placeholder:Ex. Côte d'Ivoire",
+        "occurrences": 1,
+        "exemple": "Ex. Côte d'Ivoire",
+        "langue": "fr"
       },
       {
         "cle": "Le poste que vous souhaitez",
@@ -2961,12 +3081,114 @@
         "html": "Métier souhaité <span class=\"req\">*</span>"
       },
       {
+        "cle": "Ménage / entretien de la maison",
+        "occurrences": 1,
+        "exemple": "Ménage / entretien de la maison",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ménage + cuisine",
+        "occurrences": 1,
+        "exemple": "Ménage + cuisine",
+        "langue": "fr"
+      },
+      {
+        "cle": "Cuisine (marocaine et/ou européenne)",
+        "occurrences": 1,
+        "exemple": "Cuisine (marocaine et/ou européenne)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Aide cuisine",
+        "occurrences": 1,
+        "exemple": "Aide cuisine",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nounou / garde d'enfants",
+        "occurrences": 1,
+        "exemple": "Nounou / garde d'enfants",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nounou + ménage",
+        "occurrences": 1,
+        "exemple": "Nounou + ménage",
+        "langue": "fr"
+      },
+      {
+        "cle": "Garde malade",
+        "occurrences": 1,
+        "exemple": "Garde malade",
+        "langue": "fr"
+      },
+      {
+        "cle": "Garde malade + ménage",
+        "occurrences": 1,
+        "exemple": "Garde malade + ménage",
+        "langue": "fr"
+      },
+      {
+        "cle": "Accompagnement personnes âgées",
+        "occurrences": 1,
+        "exemple": "Accompagnement personnes âgées",
+        "langue": "fr"
+      },
+      {
+        "cle": "Chauffeur",
+        "occurrences": 1,
+        "exemple": "Chauffeur",
+        "langue": "fr"
+      },
+      {
+        "cle": "Cuisinier(ère) à domicile",
+        "occurrences": 1,
+        "exemple": "Cuisinier(ère) à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "Autre métier",
+        "occurrences": 1,
+        "exemple": "Autre métier",
+        "langue": "fr"
+      },
+      {
         "cle": "Expérience *",
         "occurrences": 1,
         "exemple": "Expérience *",
         "langue": "fr",
         "balisage": "span",
         "html": "Expérience <span class=\"req\">*</span>"
+      },
+      {
+        "cle": "Aucune expérience",
+        "occurrences": 1,
+        "exemple": "Aucune expérience",
+        "langue": "fr"
+      },
+      {
+        "cle": "Moins d'un an",
+        "occurrences": 1,
+        "exemple": "Moins d'un an",
+        "langue": "fr"
+      },
+      {
+        "cle": "1 à 2 ans",
+        "occurrences": 1,
+        "exemple": "1 à 2 ans",
+        "langue": "fr"
+      },
+      {
+        "cle": "3 à 5 ans",
+        "occurrences": 1,
+        "exemple": "3 à 5 ans",
+        "langue": "fr"
+      },
+      {
+        "cle": "Plus de 5 ans",
+        "occurrences": 1,
+        "exemple": "Plus de 5 ans",
+        "langue": "fr"
       },
       {
         "cle": "Prétention salariale (DH/mois) (facultatif)",
@@ -2977,12 +3199,36 @@
         "html": "Prétention salariale (DH/mois) <span class=\"ys-muted\">(facultatif)</span>"
       },
       {
+        "cle": "@placeholder:Ex. 3500",
+        "occurrences": 1,
+        "exemple": "Ex. 3500",
+        "langue": "fr"
+      },
+      {
         "cle": "Logement *",
         "occurrences": 1,
         "exemple": "Logement *",
         "langue": "fr",
         "balisage": "span",
         "html": "Logement <span class=\"req\">*</span>"
+      },
+      {
+        "cle": "Logée (je vis chez l'employeur)",
+        "occurrences": 1,
+        "exemple": "Logée (je vis chez l'employeur)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Non logée (je rentre le soir)",
+        "occurrences": 1,
+        "exemple": "Non logée (je rentre le soir)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Peu importe",
+        "occurrences": 1,
+        "exemple": "Peu importe",
+        "langue": "fr"
       },
       {
         "cle": "Votre disponibilité",
@@ -3057,12 +3303,48 @@
         "html": "Jours par semaine <span class=\"ys-muted\">(facultatif)</span>"
       },
       {
+        "cle": "1 à 2 jours",
+        "occurrences": 1,
+        "exemple": "1 à 2 jours",
+        "langue": "fr"
+      },
+      {
+        "cle": "3 à 4 jours",
+        "occurrences": 1,
+        "exemple": "3 à 4 jours",
+        "langue": "fr"
+      },
+      {
+        "cle": "5 jours",
+        "occurrences": 1,
+        "exemple": "5 jours",
+        "langue": "fr"
+      },
+      {
+        "cle": "6 jours",
+        "occurrences": 1,
+        "exemple": "6 jours",
+        "langue": "fr"
+      },
+      {
+        "cle": "7 jours",
+        "occurrences": 1,
+        "exemple": "7 jours",
+        "langue": "fr"
+      },
+      {
         "cle": "Villes où vous acceptez de travailler (facultatif)",
         "occurrences": 1,
         "exemple": "Villes où vous acceptez de travailler (facultatif)",
         "langue": "fr",
         "balisage": "span",
         "html": "Villes où vous acceptez de travailler <span class=\"ys-muted\">(facultatif)</span>"
+      },
+      {
+        "cle": "@placeholder:Ex. Casablanca, Rabat, Mohammedia",
+        "occurrences": 1,
+        "exemple": "Ex. Casablanca, Rabat, Mohammedia",
+        "langue": "fr"
       },
       {
         "cle": "Langues, compétences et documents",
@@ -3245,12 +3527,54 @@
         "html": "Nom de la personne <span class=\"req\">*</span>"
       },
       {
+        "cle": "@placeholder:Ex. Mme Bennani",
+        "occurrences": 1,
+        "exemple": "Ex. Mme Bennani",
+        "langue": "fr"
+      },
+      {
         "cle": "Lien avec vous *",
         "occurrences": 2,
         "exemple": "Lien avec vous *",
         "langue": "fr",
         "balisage": "span",
         "html": "Lien avec vous <span class=\"req\">*</span>"
+      },
+      {
+        "cle": "Ancien employeur (foyer)",
+        "occurrences": 2,
+        "exemple": "Ancien employeur (foyer)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Employeur actuel",
+        "occurrences": 2,
+        "exemple": "Employeur actuel",
+        "langue": "fr"
+      },
+      {
+        "cle": "Responsable d'entreprise",
+        "occurrences": 2,
+        "exemple": "Responsable d'entreprise",
+        "langue": "fr"
+      },
+      {
+        "cle": "Collègue de travail",
+        "occurrences": 2,
+        "exemple": "Collègue de travail",
+        "langue": "fr"
+      },
+      {
+        "cle": "Famille qui me recommande",
+        "occurrences": 2,
+        "exemple": "Famille qui me recommande",
+        "langue": "fr"
+      },
+      {
+        "cle": "Autre",
+        "occurrences": 2,
+        "exemple": "Autre",
+        "langue": "fr"
       },
       {
         "cle": "Téléphone de la référence *",
@@ -3264,6 +3588,12 @@
         "cle": "Référence 2",
         "occurrences": 1,
         "exemple": "Référence 2",
+        "langue": "fr"
+      },
+      {
+        "cle": "@placeholder:Ex. M. Alaoui",
+        "occurrences": 1,
+        "exemple": "Ex. M. Alaoui",
         "langue": "fr"
       },
       {
@@ -3501,6 +3831,12 @@
         "html": "الاسم الكامل <span class=\"req\">*</span>"
       },
       {
+        "cle": "@placeholder:الاسم الشخصي والعائلي",
+        "occurrences": 1,
+        "exemple": "الاسم الشخصي والعائلي",
+        "langue": "ar"
+      },
+      {
         "cle": "هاتف واتساب *",
         "occurrences": 1,
         "exemple": "هاتف واتساب *",
@@ -3523,12 +3859,114 @@
         "html": "المدينة <span class=\"req\">*</span>"
       },
       {
+        "cle": "@placeholder:اختاري مدينتك",
+        "occurrences": 1,
+        "exemple": "اختاري مدينتك",
+        "langue": "ar"
+      },
+      {
+        "cle": "— اختاري —",
+        "occurrences": 7,
+        "exemple": "— اختاري —",
+        "langue": "ar"
+      },
+      {
+        "cle": "الدار البيضاء",
+        "occurrences": 1,
+        "exemple": "الدار البيضاء",
+        "langue": "ar"
+      },
+      {
+        "cle": "الرباط",
+        "occurrences": 1,
+        "exemple": "الرباط",
+        "langue": "ar"
+      },
+      {
+        "cle": "مراكش",
+        "occurrences": 1,
+        "exemple": "مراكش",
+        "langue": "ar"
+      },
+      {
+        "cle": "فاس",
+        "occurrences": 1,
+        "exemple": "فاس",
+        "langue": "ar"
+      },
+      {
+        "cle": "طنجة",
+        "occurrences": 1,
+        "exemple": "طنجة",
+        "langue": "ar"
+      },
+      {
+        "cle": "أكادير",
+        "occurrences": 1,
+        "exemple": "أكادير",
+        "langue": "ar"
+      },
+      {
+        "cle": "المحمدية",
+        "occurrences": 1,
+        "exemple": "المحمدية",
+        "langue": "ar"
+      },
+      {
+        "cle": "تمارة",
+        "occurrences": 1,
+        "exemple": "تمارة",
+        "langue": "ar"
+      },
+      {
+        "cle": "بوسكورة",
+        "occurrences": 1,
+        "exemple": "بوسكورة",
+        "langue": "ar"
+      },
+      {
+        "cle": "دار بوعزة",
+        "occurrences": 1,
+        "exemple": "دار بوعزة",
+        "langue": "ar"
+      },
+      {
+        "cle": "بوزنيقة",
+        "occurrences": 1,
+        "exemple": "بوزنيقة",
+        "langue": "ar"
+      },
+      {
+        "cle": "القنيطرة",
+        "occurrences": 1,
+        "exemple": "القنيطرة",
+        "langue": "ar"
+      },
+      {
+        "cle": "سلا",
+        "occurrences": 1,
+        "exemple": "سلا",
+        "langue": "ar"
+      },
+      {
+        "cle": "مدينة أخرى",
+        "occurrences": 1,
+        "exemple": "مدينة أخرى",
+        "langue": "ar"
+      },
+      {
         "cle": "الحي (اختياري)",
         "occurrences": 1,
         "exemple": "الحي (اختياري)",
         "langue": "ar",
         "balisage": "span",
         "html": "الحي <span class=\"ys-muted\">(اختياري)</span>"
+      },
+      {
+        "cle": "@placeholder:مثال: سيدي البرنوصي",
+        "occurrences": 1,
+        "exemple": "مثال: سيدي البرنوصي",
+        "langue": "ar"
       },
       {
         "cle": "العمر *",
@@ -3539,12 +3977,24 @@
         "html": "العمر <span class=\"req\">*</span>"
       },
       {
+        "cle": "@placeholder:مثال: 32",
+        "occurrences": 1,
+        "exemple": "مثال: 32",
+        "langue": "ar"
+      },
+      {
         "cle": "بلد الأصل (اختياري)",
         "occurrences": 1,
         "exemple": "بلد الأصل (اختياري)",
         "langue": "ar",
         "balisage": "span",
         "html": "بلد الأصل <span class=\"ys-muted\">(اختياري)</span>"
+      },
+      {
+        "cle": "@placeholder:مثال: ساحل العاج",
+        "occurrences": 1,
+        "exemple": "مثال: ساحل العاج",
+        "langue": "ar"
       },
       {
         "cle": "الوظيفة التي ترغبين فيها",
@@ -3567,12 +4017,114 @@
         "html": "المهنة المطلوبة <span class=\"req\">*</span>"
       },
       {
+        "cle": "التنظيف / العناية بالمنزل",
+        "occurrences": 1,
+        "exemple": "التنظيف / العناية بالمنزل",
+        "langue": "ar"
+      },
+      {
+        "cle": "التنظيف + الطبخ",
+        "occurrences": 1,
+        "exemple": "التنظيف + الطبخ",
+        "langue": "ar"
+      },
+      {
+        "cle": "الطبخ (مغربي و/أو أوروبي)",
+        "occurrences": 1,
+        "exemple": "الطبخ (مغربي و/أو أوروبي)",
+        "langue": "ar"
+      },
+      {
+        "cle": "مساعدة في المطبخ",
+        "occurrences": 1,
+        "exemple": "مساعدة في المطبخ",
+        "langue": "ar"
+      },
+      {
+        "cle": "جليسة أطفال",
+        "occurrences": 1,
+        "exemple": "جليسة أطفال",
+        "langue": "ar"
+      },
+      {
+        "cle": "جليسة أطفال + تنظيف",
+        "occurrences": 1,
+        "exemple": "جليسة أطفال + تنظيف",
+        "langue": "ar"
+      },
+      {
+        "cle": "رعاية مريض",
+        "occurrences": 1,
+        "exemple": "رعاية مريض",
+        "langue": "ar"
+      },
+      {
+        "cle": "رعاية مريض + تنظيف",
+        "occurrences": 1,
+        "exemple": "رعاية مريض + تنظيف",
+        "langue": "ar"
+      },
+      {
+        "cle": "مرافقة كبار السن",
+        "occurrences": 1,
+        "exemple": "مرافقة كبار السن",
+        "langue": "ar"
+      },
+      {
+        "cle": "سائق",
+        "occurrences": 1,
+        "exemple": "سائق",
+        "langue": "ar"
+      },
+      {
+        "cle": "طاهٍ/طاهية في المنزل",
+        "occurrences": 1,
+        "exemple": "طاهٍ/طاهية في المنزل",
+        "langue": "ar"
+      },
+      {
+        "cle": "مهنة أخرى",
+        "occurrences": 1,
+        "exemple": "مهنة أخرى",
+        "langue": "ar"
+      },
+      {
         "cle": "الخبرة *",
         "occurrences": 1,
         "exemple": "الخبرة *",
         "langue": "ar",
         "balisage": "span",
         "html": "الخبرة <span class=\"req\">*</span>"
+      },
+      {
+        "cle": "بدون خبرة",
+        "occurrences": 1,
+        "exemple": "بدون خبرة",
+        "langue": "ar"
+      },
+      {
+        "cle": "أقل من سنة",
+        "occurrences": 1,
+        "exemple": "أقل من سنة",
+        "langue": "ar"
+      },
+      {
+        "cle": "من سنة إلى سنتين",
+        "occurrences": 1,
+        "exemple": "من سنة إلى سنتين",
+        "langue": "ar"
+      },
+      {
+        "cle": "من 3 إلى 5 سنوات",
+        "occurrences": 1,
+        "exemple": "من 3 إلى 5 سنوات",
+        "langue": "ar"
+      },
+      {
+        "cle": "أكثر من 5 سنوات",
+        "occurrences": 1,
+        "exemple": "أكثر من 5 سنوات",
+        "langue": "ar"
       },
       {
         "cle": "الأجر المطلوب (درهم/شهر) (اختياري)",
@@ -3583,12 +4135,36 @@
         "html": "الأجر المطلوب (درهم/شهر) <span class=\"ys-muted\">(اختياري)</span>"
       },
       {
+        "cle": "@placeholder:مثال: 3500",
+        "occurrences": 1,
+        "exemple": "مثال: 3500",
+        "langue": "ar"
+      },
+      {
         "cle": "السكن *",
         "occurrences": 1,
         "exemple": "السكن *",
         "langue": "ar",
         "balisage": "span",
         "html": "السكن <span class=\"req\">*</span>"
+      },
+      {
+        "cle": "مقيمة عند المشغّل",
+        "occurrences": 1,
+        "exemple": "مقيمة عند المشغّل",
+        "langue": "ar"
+      },
+      {
+        "cle": "غير مقيمة (أعود مساءً)",
+        "occurrences": 1,
+        "exemple": "غير مقيمة (أعود مساءً)",
+        "langue": "ar"
+      },
+      {
+        "cle": "لا يهم",
+        "occurrences": 1,
+        "exemple": "لا يهم",
+        "langue": "ar"
       },
       {
         "cle": "مدى توفّرك",
@@ -3663,12 +4239,48 @@
         "html": "عدد الأيام في الأسبوع <span class=\"ys-muted\">(اختياري)</span>"
       },
       {
+        "cle": "يوم إلى يومان",
+        "occurrences": 1,
+        "exemple": "يوم إلى يومان",
+        "langue": "ar"
+      },
+      {
+        "cle": "من 3 إلى 4 أيام",
+        "occurrences": 1,
+        "exemple": "من 3 إلى 4 أيام",
+        "langue": "ar"
+      },
+      {
+        "cle": "5 أيام",
+        "occurrences": 1,
+        "exemple": "5 أيام",
+        "langue": "ar"
+      },
+      {
+        "cle": "6 أيام",
+        "occurrences": 1,
+        "exemple": "6 أيام",
+        "langue": "ar"
+      },
+      {
+        "cle": "7 أيام",
+        "occurrences": 1,
+        "exemple": "7 أيام",
+        "langue": "ar"
+      },
+      {
         "cle": "المدن التي تقبلين العمل فيها (اختياري)",
         "occurrences": 1,
         "exemple": "المدن التي تقبلين العمل فيها (اختياري)",
         "langue": "ar",
         "balisage": "span",
         "html": "المدن التي تقبلين العمل فيها <span class=\"ys-muted\">(اختياري)</span>"
+      },
+      {
+        "cle": "@placeholder:مثال: الدار البيضاء، الرباط، المحمدية",
+        "occurrences": 1,
+        "exemple": "مثال: الدار البيضاء، الرباط، المحمدية",
+        "langue": "ar"
       },
       {
         "cle": "اللغات والمهارات والوثائق",
@@ -3851,12 +4463,54 @@
         "html": "اسم الشخص <span class=\"req\">*</span>"
       },
       {
+        "cle": "@placeholder:مثال: السيدة بناني",
+        "occurrences": 1,
+        "exemple": "مثال: السيدة بناني",
+        "langue": "ar"
+      },
+      {
         "cle": "صفة العلاقة *",
         "occurrences": 2,
         "exemple": "صفة العلاقة *",
         "langue": "ar",
         "balisage": "span",
         "html": "صفة العلاقة <span class=\"req\">*</span>"
+      },
+      {
+        "cle": "مشغّل سابق (أسرة)",
+        "occurrences": 2,
+        "exemple": "مشغّل سابق (أسرة)",
+        "langue": "ar"
+      },
+      {
+        "cle": "المشغّل الحالي",
+        "occurrences": 2,
+        "exemple": "المشغّل الحالي",
+        "langue": "ar"
+      },
+      {
+        "cle": "مسؤول في شركة",
+        "occurrences": 2,
+        "exemple": "مسؤول في شركة",
+        "langue": "ar"
+      },
+      {
+        "cle": "زميل/زميلة في العمل",
+        "occurrences": 2,
+        "exemple": "زميل/زميلة في العمل",
+        "langue": "ar"
+      },
+      {
+        "cle": "أسرة توصي بي",
+        "occurrences": 2,
+        "exemple": "أسرة توصي بي",
+        "langue": "ar"
+      },
+      {
+        "cle": "أخرى",
+        "occurrences": 2,
+        "exemple": "أخرى",
+        "langue": "ar"
       },
       {
         "cle": "هاتف المرجع *",
@@ -3870,6 +4524,12 @@
         "cle": "المرجع الثاني",
         "occurrences": 1,
         "exemple": "المرجع الثاني",
+        "langue": "ar"
+      },
+      {
+        "cle": "@placeholder:مثال: السيد العلوي",
+        "occurrences": 1,
+        "exemple": "مثال: السيد العلوي",
         "langue": "ar"
       },
       {

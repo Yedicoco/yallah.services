@@ -142,6 +142,27 @@ Object.keys(SCRIPTS_PAR_PAGE).forEach((page) => {
   else ok(page + ' → ' + attendus.size + ' identifiants présents');
 });
 
+/* Une bibliothèque déclarée mais absente du HTML ne provoque aucune erreur
+   visible : le script suivant s'arrête silencieusement (sans window.YSFiche,
+   candidature.js ne remplit plus aucune liste déroulante et n'attache plus
+   l'envoi). On contrôle donc le chargement réel, et l'ordre. */
+Object.keys(SCRIPTS_PAR_PAGE).forEach((page) => {
+  if (!existe(page)) return;
+  const html = lire(page);
+  const charges = Array.from(html.matchAll(/<script[^>]+src="([^"]+)"/g)).map((m) => m[1]);
+  const manquants = SCRIPTS_PAR_PAGE[page].filter((script) => charges.indexOf(script) === -1);
+  if (manquants.length) {
+    erreur(page + ' → script(s) attendu(s) mais non chargé(s) : ' + manquants.join(', '));
+    return;
+  }
+  const positions = SCRIPTS_PAR_PAGE[page].map((script) => charges.indexOf(script));
+  if (positions.some((position, i) => i > 0 && position < positions[i - 1])) {
+    erreur(page + ' → scripts chargés dans le désordre : ' + SCRIPTS_PAR_PAGE[page].join(' puis '));
+  } else {
+    ok(page + ' → ' + SCRIPTS_PAR_PAGE[page].length + ' script(s) chargé(s) dans l\'ordre');
+  }
+});
+
 /* ── 4. Structure HTML ── */
 section('4. Structure des pages');
 PAGES.forEach((page) => {
@@ -193,6 +214,7 @@ if (existe('candidature.html')) {
    proposé au visiteur et remonte deux fois la même valeur dans le récapitulatif. */
 {
   let doublons = 0;
+  let vides = 0;
   let listes = 0;
   PAGES.forEach((page) => {
     const contenu = lire(page);
@@ -201,9 +223,17 @@ if (existe('candidature.html')) {
     while ((select = motif.exec(contenu)) !== null) {
       listes += 1;
       const identifiant = (select[0].match(/id="([^"]+)"/) || [])[1] || 'select sans id';
-      const options = (select[0].match(/<option\b[^>]*>[\s\S]*?<\/option>/g) || [])
-        .map((option) => option.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
-        .filter(Boolean);
+      const libelles = (select[0].match(/<option\b[^>]*>[\s\S]*?<\/option>/g) || [])
+        .map((option) => option.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
+      /* Un libellé doit être écrit dans le HTML : s'il ne vit que dans un
+         attribut (data-fr / data-ar), la liste est vide dès qu'un script
+         manque — et illisible sans JavaScript. */
+      const sansLibelle = libelles.filter((texte) => texte === '').length;
+      if (sansLibelle) {
+        vides += 1;
+        erreur(page + ' → #' + identifiant + ' : ' + sansLibelle + ' option(s) sans libellé dans le HTML');
+      }
+      const options = libelles.filter(Boolean);
       const vus = new Set();
       const doubles = new Set();
       options.forEach((option) => {
@@ -216,7 +246,7 @@ if (existe('candidature.html')) {
       }
     }
   });
-  if (!doublons) ok(listes + ' listes déroulantes sans option en double');
+  if (!doublons && !vides) ok(listes + ' listes déroulantes : aucune option en double, aucune option vide');
 }
 
 /* ── 6. CSS : risques de débordement horizontal ── */

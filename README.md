@@ -270,6 +270,18 @@ node outils/verifier-site.js            # section 8 : contrôle le branchement m
 4. Règle affichée au candidat : *sans références, la candidature n'est ni validée ni présentée à un foyer*.
 5. **Gratuit pour les candidats** : aucun frais n'est demandé, ni avant ni après le placement.
 
+> 🔧 **Branchement à ne pas casser.** Les libellés des 7 listes déroulantes (ville, métier,
+> expérience, logement, jours/semaine, lien des deux références) sont écrits **dans le HTML** —
+> la liste reste lisible sans JavaScript — et portés par `data-fr` / `data-ar`, que
+> `assets/js/fiche.js` applique selon la langue avant que le moteur multilingue ne traduise.
+> `fiche.js` doit donc être chargé **avant** `candidature.js` : sans `window.YSFiche`, ce dernier
+> s'arrête immédiatement — listes vides, aucune validation, aucun numéro de dossier, envoi brut
+> vers `/api/candidature` (404 sur le site statique). Deux garde-fous veillent :
+> `outils/verifier-site.js` contrôle le chargement et l'ordre des scripts ainsi que l'absence
+> d'`<option>` sans libellé, et `outils/tester-i18n.js` rejoue l'envoi complet du formulaire
+> (validation à vide, puis numéro de dossier) et la page de confirmation dans les 4 affichages.
+> JavaScript désactivé : un bandeau `<noscript>` propose le chemin de secours (WhatsApp).
+
 ## 🔐 Espace recruteur (`/admin`, version serveur)
 
 - **Statistiques** : candidatures reçues, poste le plus demandé, ville principale, contacts WhatsApp
@@ -367,10 +379,11 @@ Grand ménage : villa 700 DH · appartement 500 DH
 ## ✅ Vérifications avant mise en ligne
 
 ```bash
-node outils/verifier-site.js      # ressources, liens, ids, structure, multilingue
+node outils/verifier-site.js      # ressources, liens, ids, scripts chargés, structure, formulaires, multilingue
 node outils/verifier-contenu.js   # volume et conformité du contenu SEO local
 node outils/extraire-i18n.js --verifier   # toutes les chaînes sont-elles traduites ?
-node outils/tester-i18n.js        # les 4 affichages (jsdom) — npm i jsdom
+node outils/tester-i18n.js        # les 4 affichages (jsdom) + listes déroulantes, envoi du
+                                  # formulaire et page de confirmation — npm i jsdom
 ```
 
 
@@ -399,13 +412,21 @@ node --check assets/js/*.js server.js build-site.js
 > desserte quartier par quartier ») sont conformes et ne déclenchent rien.
 
 Le vérificateur contrôle notamment que **chaque image/script/feuille de style existe**, que chaque
-identifiant utilisé par le JavaScript est bien présent dans la page, que les **messages d'erreur sont
-bilingues**, et qu'aucune largeur fixe ne peut provoquer un défilement horizontal.
+page charge **les scripts qui lui sont nécessaires, dans l'ordre** (`fiche.js` avant
+`candidature.js`), que chaque identifiant utilisé par le JavaScript est bien présent dans la page,
+que les **messages d'erreur sont bilingues**, qu'**aucune liste déroulante n'a d'option vide ni
+d'option en double**, et qu'aucune largeur fixe ne peut provoquer un défilement horizontal.
 
 Contrôles déjà effectués sur cette version :
 
 - [x] Accueil, fiche, confirmation, admin et assets répondent `200`
-- [x] Envoi réel testé → dossier `YS-2026-0001` enregistré, puis base nettoyée
+- [x] **Fiche de candidature en vrai DOM (jsdom)** : 58 libellés de listes déroulantes affichés
+      dans les 4 langues, 13 aides de saisie reportées sur `placeholder`
+- [x] **Envoi du formulaire rejoué** : envoi à vide bloqué (15 champs signalés, 16 messages),
+      fiche complète → numéro de dossier `YS-2026-0001` en mode statique
+- [x] **Page de confirmation rejouée** : numéro, 20 lignes de récapitulatif, liens WhatsApp et
+      e-mail pré-rédigés dans les 4 langues · repli affiché quand aucune fiche n'est enregistrée
+- [x] Envoi réel testé côté serveur → dossier `YS-2026-0001` enregistré, puis base nettoyée
 - [x] Validation serveur (champs manquants → `422` avec messages FR/AR)
 - [x] Clé d'admin invalide → `403` · suppression sans clé → `403`
 - [x] Anti-robots (champ piège) : aucun enregistrement, réponse neutre
