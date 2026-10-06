@@ -74,6 +74,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 │   ├── pages/*.json                  # Contenu rédigé, page par page
 │   └── i18n/                         # Multilingue : cles.json + traductions/<page>.<langue>.json
 ├── plan-seo-local.md                 # Plan SEO local : état, matrice, GBP, citations, mesure
+├── doc/guide-schema-corrige-yallah-services.pdf  # ★ Guide SEO / données structurées de référence
 ├── apercus/generer-apercus.js        # Captures d'écran (Playwright) + contrôle de débordement
 ├── assets/
 │   ├── css/style.css                 # Thème or/noir + grille + navy + vert WhatsApp
@@ -432,7 +433,7 @@ Le dépôt contient les premières briques du référencement local :
 
 - **Pages service × zone** : 6 pages Casablanca en ligne (ménage, nounou, cuisinière, garde-malade,
   chauffeur, gardiennage), générées depuis `contenu/pages/*.json` — 869 à 1 514 mots, balisage
-  `Service` + fil d'Ariane + `FAQPage`, 4 à 5 liens internes chacune.
+  `WebPage` + `Service` + fil d'Ariane + `FAQPage`, 4 à 5 liens internes chacune.
 - **Hubs** : `services-par-ville.html` (13 zones, 6 métiers) et `personnel-entreprises.html` (B2B).
 - **Plan complet** : `plan-seo-local.md` — matrice services × villes par phases, gabarit de page,
   ligne B2B, Google Business Profile en mode « zone de service », citations locales et NAP
@@ -440,6 +441,11 @@ Le dépôt contient les premières briques du référencement local :
 - **Fiche entreprise** : `contenu/fiche-entreprise.md` — référence unique de tout contenu produit.
 - **Audit de conformité** : `contenu/audit-promesses-site.md` — affirmations corrigées et points
   en attente de confirmation (tarifs, avis clients, formules de remplacement).
+- **Guide schema de référence** : `doc/guide-schema-corrige-yallah-services.pdf` — modèle
+  `EmploymentAgency → Service → areaServed`, une seule organisation centrale référencée par `@id`,
+  aucune adresse ni établissement local inventé, aucune note structurée sans avis authentique.
+  `outils/verifier-seo.js` vérifie ce graphe sur chaque page ; conformité détaillée dans
+  `contenu/audit-promesses-site.md` §6.
 - **Garde-fou** : `outils/verifier-contenu.js` bloque la publication tant qu'une page est
   trop courte ou trop proche d'une autre (protection contre les pages-portes), ou tant qu'une
   affirmation commerciale ou géographique sort du référentiel (`site.config.json`).

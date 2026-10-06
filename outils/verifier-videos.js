@@ -87,4 +87,6 @@ for (const video of seo.videos) {
 const robots = fs.readFileSync(path.join(dossier, 'robots.txt'), 'utf8');
 assert.ok(robots.includes(base + '/sitemap.xml'));
 assert.ok(robots.includes(base + '/video-sitemap.xml'));
-console.log('✅ Quatre MP4, VideoObject, video-sitemap.xml, robots.txt, vignettes et contrôles de lecture validés (' + path.relative(racine, dossier) + ').');
+const cible = path.relative(racine, dossier);
+console.log('✅ Quatre MP4, VideoObject, video-sitemap.xml, robots.txt, vignettes et contrôles de lecture validés' +
+  (cible ? ' (' + cible + ')' : '') + '.');

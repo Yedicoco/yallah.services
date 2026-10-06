@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 /* Contrôle technique SEO statique, sans dépendance.
+   Graphe Schema.org vérifié contre le guide de référence du dépôt :
+   doc/guide-schema-corrige-yallah-services.pdf.
    Usage: node outils/verifier-seo.js [--dossier site-a-mettre-en-ligne]
    Vérifie canonicals, metas, Schema.org JSON-LD et cohérence du sitemap.
 */
@@ -82,6 +84,10 @@ function parcourir(noeud, visite) {
   visite(noeud);
   Object.values(noeud).forEach((valeur) => parcourir(valeur, visite));
 }
+function typesDe(noeud) {
+  const type = noeud['@type'];
+  return Array.isArray(type) ? type : [type];
+}
 
 console.log('AUDIT TECHNIQUE SEO — ' + path.relative(RACINE, DOSSIER) + '/');
 console.log('Domaine canonique attendu : ' + BASE);
@@ -100,6 +106,15 @@ pagesHtml.forEach((fichier) => {
     indexables.push({ fichier, html });
   }
 });
+
+/* Avis clients : le guide (§5) n'autorise review/aggregateRating qu'avec des
+   avis authentiques, attribuables et conservés. Tant que les consentements ne
+   sont pas archivés (contenu/valider-avis.md), aucune note structurée n'est
+   publiable — c'est aussi la règle interne loi 09-08 du dépôt. */
+const SUIVI_AVIS = path.join(RACINE, 'contenu', 'valider-avis.md');
+const CONSENTEMENTS_EN_ATTENTE = fs.existsSync(SUIVI_AVIS)
+  ? (fs.readFileSync(SUIVI_AVIS, 'utf8').match(/⬜/g) || []).length
+  : 0;
 
 const titres = new Map();
 const descriptions = new Map();
@@ -161,6 +176,94 @@ indexables.forEach(({ fichier, html }) => {
     });
   } else if (fichier !== 'personnel-entreprises.html') {
     if (!types.has('BreadcrumbList')) erreur(fichier + ' : fil d’Ariane Schema.org absent.');
+  }
+
+  /* ── Graphe d'entités (guide de référence :
+        doc/guide-schema-corrige-yallah-services.pdf) ──────────────────────
+     EmploymentAgency → Service → areaServed, avec une seule organisation
+     centrale référencée par @id depuis chaque page. Une page service × ville
+     décrit une zone de demande : ni adresse, ni établissement local.        */
+  const ORG_ID = BASE + '/#business';
+  const WEBSITE_ID = BASE + '/#website';
+  const urlPage = canoniqueAttendu(fichier);
+  const noeuds = [];
+  blocs.forEach((bloc) => parcourir(bloc, (noeud) => {
+    if (noeud && typeof noeud === 'object' && noeud['@type']) noeuds.push(noeud);
+  }));
+  const deType = (type) => noeuds.filter((noeud) => typesDe(noeud).indexOf(type) !== -1);
+  const ref = (noeud, cle) => (noeud[cle] && noeud[cle]['@id']) || null;
+
+  /* Une seule entité organisationnelle, déclarée sur l'accueil. */
+  const TYPES_ORGANISATION = ['EmploymentAgency', 'Organization', 'LocalBusiness', 'Corporation'];
+  const organisations = noeuds.filter((noeud) =>
+    typesDe(noeud).some((type) => TYPES_ORGANISATION.indexOf(type) !== -1));
+  if (fichier === 'index.html') {
+    if (organisations.length !== 1) erreur(fichier + ' : il faut exactement une entité organisationnelle déclarée (' + organisations.length + ' trouvée(s)).');
+    else {
+      const organisation = organisations[0];
+      if (organisation['@id'] !== ORG_ID) erreur(fichier + ' : @id de l’organisation attendu → ' + ORG_ID + ' (trouvé : ' + (organisation['@id'] || 'aucun') + ').');
+      /* Informations centralisées exigées par le guide §1. */
+      ['name', 'url', 'logo', 'telephone', 'email', 'sameAs', 'areaServed', 'knowsLanguage'].forEach((cle) => {
+        if (!organisation[cle] || (Array.isArray(organisation[cle]) && !organisation[cle].length)) {
+          erreur(fichier + ' : organisation sans « ' + cle + ' » (information à centraliser selon le guide §1).');
+        }
+      });
+      if (organisation.url !== BASE + '/') erreur(fichier + ' : organisation.url ' + organisation.url + ' ≠ domaine canonique ' + BASE + '/.');
+    }
+  } else if (organisations.length) {
+    erreur(fichier + ' : entité organisationnelle déclarée hors accueil (' + organisations.map((o) => typesDe(o).join('/')).join(', ') + ') → référencer ' + ORG_ID + ' par @id, sans la redéclarer.');
+  }
+
+  /* WebPage : la page elle-même, rattachée au site, à l'organisation,
+     au service décrit et à son fil d'Ariane. */
+  const pagesWeb = deType('WebPage');
+  if (!pagesWeb.length) erreur(fichier + ' : nœud WebPage absent du graphe (guide §2).');
+  else {
+    const pageWeb = pagesWeb[0];
+    if (pageWeb['@id'] !== urlPage + '#page') erreur(fichier + ' : WebPage.@id attendu → ' + urlPage + '#page (trouvé : ' + (pageWeb['@id'] || 'aucun') + ').');
+    if (pageWeb.url !== urlPage) erreur(fichier + ' : WebPage.url ' + (pageWeb.url || 'absent') + ' ≠ canonical ' + urlPage + '.');
+    if (!pageWeb.name) erreur(fichier + ' : WebPage sans name.');
+    if (!pageWeb.description) erreur(fichier + ' : WebPage sans description.');
+    if (!pageWeb.inLanguage) erreur(fichier + ' : WebPage sans inLanguage.');
+    if (ref(pageWeb, 'isPartOf') !== WEBSITE_ID) erreur(fichier + ' : WebPage.isPartOf doit pointer sur ' + WEBSITE_ID + '.');
+    if (ref(pageWeb, 'publisher') !== ORG_ID) erreur(fichier + ' : WebPage.publisher doit pointer sur ' + ORG_ID + '.');
+    if (deType('BreadcrumbList').length && ref(pageWeb, 'breadcrumb') !== urlPage + '#breadcrumb') {
+      erreur(fichier + ' : WebPage.breadcrumb doit pointer sur ' + urlPage + '#breadcrumb.');
+    }
+    if (deType('Service').length && ref(pageWeb, 'about') !== urlPage + '#service') {
+      erreur(fichier + ' : WebPage.about doit pointer sur ' + urlPage + '#service.');
+    }
+  }
+
+  /* Fil d'Ariane et service : identifiants stables, zone de la demande,
+     rattachement à l'organisation centrale. */
+  deType('BreadcrumbList').forEach((fil) => {
+    if (fil['@id'] !== urlPage + '#breadcrumb') erreur(fichier + ' : BreadcrumbList sans @id ' + urlPage + '#breadcrumb.');
+  });
+  deType('Service').forEach((service) => {
+    if (service['@id'] !== urlPage + '#service') erreur(fichier + ' : Service.@id attendu → ' + urlPage + '#service.');
+    if (ref(service, 'provider') !== ORG_ID) erreur(fichier + ' : Service.provider doit référencer ' + ORG_ID + ' (organisation centrale).');
+    if (!service.areaServed) erreur(fichier + ' : Service sans areaServed (zone de la demande).');
+    else {
+      (Array.isArray(service.areaServed) ? service.areaServed : [service.areaServed]).forEach((zone) => {
+        if (typesDe(zone).indexOf('City') !== -1 && (!zone.containedInPlace || zone.containedInPlace.name !== 'Maroc')) {
+          erreur(fichier + ' : areaServed « ' + (zone.name || '?') + ' » sans containedInPlace (Country : Maroc).');
+        }
+      });
+    }
+  });
+
+  /* Ni établissement local inventé, ni note structurée sans consentement. */
+  if (fichier !== 'index.html') {
+    noeuds.forEach((noeud) => {
+      if (noeud.address && typesDe(noeud).indexOf('PostalAddress') === -1) {
+        erreur(fichier + ' : adresse publiée sur une page qui n’est pas l’accueil → pas d’établissement local inventé (guide §1-2).');
+      }
+    });
+  }
+  if (CONSENTEMENTS_EN_ATTENTE && noeuds.some((noeud) => noeud.aggregateRating || noeud.review)) {
+    erreur(fichier + ' : review/aggregateRating publié alors que ' + CONSENTEMENTS_EN_ATTENTE +
+      ' consentement(s) d’avis ne sont pas archivés (guide §5 : avis authentiques et conservés uniquement).');
   }
 
   if (types.size) ok(fichier + ' : metas, canonical et JSON-LD (' + Array.from(types).join(', ') + ').');

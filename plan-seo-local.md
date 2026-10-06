@@ -54,10 +54,20 @@ On garde la FAQ pour les visiteurs et les réponses IA, on ne la vend plus comme
 
 ### 0.3 Les données structurées ne sont pas absentes — elles sont à compléter
 
-`index.html` porte déjà un `LocalBusiness` (désormais avec code postal 20220, région et villes
-confirmées) et les pages villes un `@graph` `Service` + `BreadcrumbList` + `FAQPage`.
+`index.html` porte déjà l'entité centrale `EmploymentAgency` (sous-type de `LocalBusiness`, avec
+code postal 20220, région et villes confirmées) et les pages villes un `@graph`
+`Service` + `BreadcrumbList` + `FAQPage`.
 Le travail : rendre le balisage **exact et complet sur toutes les pages**, et **ne jamais déclarer
 ce qui n'est pas visible dans la page** (un écart réel a été détecté et corrigé le 2 octobre).
+
+> **Fait le 6 octobre 2026** — le guide de référence `doc/guide-schema-corrige-yallah-services.pdf`
+> a été retrouvé et appliqué : une seule organisation centrale (`EmploymentAgency`, `@id …/#business`)
+> référencée par `@id` depuis chaque page ; graphe `WebPage → Service → areaServed` sur les pages
+> service × ville, les hubs et l'accueil ; `containedInPlace` (Country : Maroc) sur chaque ville ;
+> aucune adresse ni établissement local déclaré hors accueil. `outils/verifier-seo.js` contrôle ce
+> graphe page par page et refuse toute note structurée (`review`/`aggregateRating`) tant que les
+> consentements d'avis ne sont pas archivés. Détail point par point :
+> `contenu/audit-promesses-site.md` §6.
 
 ---
 

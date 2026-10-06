@@ -479,6 +479,7 @@ section('7. Affirmations commerciales et géographiques (référentiel : site.co
     [/(?<![\p{L}])agence\s*n[o°0]\s*1(?![\p{L}\p{N}])/iu, 'affirmation de supériorité (« agence n°1 »)'],
     [/(?<![\p{L}])(?:remplacement|profil|personnel|sélection|résultat|satisfaction)\s+garanti[es]?(?![\p{L}])/iu, 'garantie annoncée (remplacement, résultat, sélection)'],
     [/(?<![\p{L}])(?:profils?|personnel|candidats?)\s+vérifiés?(?![\p{L}])/iu, "vérification d'antécédents annoncée"],
+    [/(?<![\p{L}])remplacements?\s+gratuits?(?![\p{L}])/iu, 'remplacement annoncé comme gratuit (visuel et JSON-LD inclus)'],
     [/(?<![\p{L}])(?:sous|en|dans)\s+(?:les\s+)?(?:moins\s+de\s+)?24\s*(?:h|heures)(?![\p{L}])/iu, 'délai de 24 h annoncé'],
     [/(?<![\p{L}])(?:réponse|profil|mise en relation)\s+(?:sous|dans|en)\s+\d+\s*(?:h|heures|jours?)(?![\p{L}])/iu, 'délai de mise en relation annoncé']
   ];
