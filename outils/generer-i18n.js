@@ -102,6 +102,13 @@ function echapper(texte) {
   return JSON.stringify(String(texte));
 }
 
+/* Une clé « @attribut:texte » indique au moteur OÙ écrire la traduction
+   (attribut alt / placeholder / title, meta, message WhatsApp pré-rempli).
+   Le préfixe ne fait jamais partie du texte affiché : une traduction qui le
+   reprend écrit « @alt:… » dans la page, ou « @wa:… » en tête du message que
+   le visiteur envoie. */
+const PREFIXE_CLE = /^@(?:placeholder|title|alt|aria-label|meta:|wa:)/;
+
 
 /* Écrit un fichier lisible : une clé par ligne, dans l'ordre du document,
    puis les traductions libres de « _extra » (textes écrits par le
@@ -178,6 +185,18 @@ function traiter(page, langue) {
     if (utilisees.has(nombre)) problemes.push('indice écrit deux fois : ' + nombre);
     utilisees.add(nombre);
     if (String(traductions[indice]).trim() === '') problemes.push('traduction vide à l\'indice ' + nombre + ' (' + cles[nombre - 1].cle.slice(0, 45) + '…)');
+    const prefixe = PREFIXE_CLE.exec(cles[nombre - 1].cle);
+    if (prefixe && String(traductions[indice]).startsWith(prefixe[0])) {
+      problemes.push('indice ' + nombre + ' : la traduction reprend le préfixe de la clé « ' + prefixe[0] +
+        ' » — retirez-le, ce préfixe dit seulement où écrire le texte');
+    }
+  });
+
+  Object.keys(traductions._extra || {}).forEach((cle) => {
+    const prefixe = PREFIXE_CLE.exec(cle);
+    if (prefixe && String(traductions._extra[cle]).startsWith(prefixe[0])) {
+      problemes.push('clé libre « ' + cle.slice(0, 40) + ' » : la traduction reprend le préfixe « ' + prefixe[0] + ' »');
+    }
   });
 
   const resultat = rendreDictionnaire(page, langue, cles, traductions);
@@ -218,4 +237,7 @@ Object.keys(CLES).forEach((page) => {
 console.log('');
 if (restant === 0 && !VERIFIER) console.log('✅ Dictionnaires à jour.');
 else if (VERIFIER) console.log(restant === 0 ? '✅ Tout est traduit.' : '❌ ' + restant + ' chaîne(s) en attente de traduction.');
-process.exit(restant === 0 || VERIFIER ? 0 : 0);
+/* Un dictionnaire incomplet ou mal écrit n'est jamais publié : le fichier
+   reste dans son état précédent. Autant le dire franchement (code 1), sinon
+   la publication continue avec un dictionnaire périmé. */
+process.exit(restant === 0 ? 0 : 1);

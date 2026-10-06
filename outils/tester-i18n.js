@@ -278,6 +278,45 @@ function testerChamps(page, langue, dom) {
   }
 }
 
+/* Un préfixe de clé (« @alt: », « @placeholder: », « @wa: »…) dit au moteur où
+   écrire la traduction. S'il se retrouve dans la page, le visiteur lit
+   « @alt:… » dans un texte alternatif, « @placeholder:… » dans une aide de
+   saisie, ou envoie un message WhatsApp commençant par « @wa:… ». */
+function testerAttributs(page, langue, dom) {
+  const doc = dom.window.document;
+  const PREFIXE = /^@(?:placeholder|title|alt|aria-label|meta:|wa:)/;
+  const casses = [];
+  const attributs = ['placeholder', 'alt', 'aria-label', 'title'];
+  Array.prototype.forEach.call(doc.querySelectorAll(attributs.map((a) => '[' + a + ']').join(',')), (el) => {
+    attributs.forEach((nom) => {
+      const valeur = el.getAttribute(nom);
+      if (valeur && PREFIXE.test(valeur)) {
+        casses.push(nom + ' sur <' + el.tagName.toLowerCase() + '> : « ' + valeur.slice(0, 45) + ' »');
+      }
+    });
+  });
+  Array.prototype.forEach.call(doc.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]'), (el) => {
+    const m = /[?&]text=([^&]*)/.exec(el.getAttribute('href') || '');
+    if (!m) return;
+    let texte = m[1];
+    try { texte = decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch (e) { /* forme brute */ }
+    if (PREFIXE.test(texte)) casses.push('message WhatsApp : « ' + texte.slice(0, 45) + ' »');
+  });
+  Array.prototype.forEach.call(doc.querySelectorAll('meta[name], meta[property]'), (el) => {
+    const valeur = el.getAttribute('content');
+    if (valeur && PREFIXE.test(valeur)) {
+      casses.push('meta ' + (el.getAttribute('name') || el.getAttribute('property')) + ' : « ' + valeur.slice(0, 45) + ' »');
+    }
+  });
+  verifies += 1;
+  if (casses.length) {
+    casses.slice(0, 3).forEach((c) => erreur(page + ' · ' + langue + ' : préfixe de clé affiché — ' + c));
+    if (casses.length > 3) erreur(page + ' · ' + langue + ' : … et ' + (casses.length - 3) + ' autre(s) préfixe(s) affiché(s)');
+  } else {
+    ok('aucun préfixe de clé (@alt, @placeholder, @wa…) affiché');
+  }
+}
+
 async function tester(page, langue) {
   const { dom, erreursJs } = await ouvrir(page, langue);
   const doc = dom.window.document;
@@ -307,6 +346,7 @@ async function tester(page, langue) {
   }
 
   testerChamps(page, langue, dom);
+  testerAttributs(page, langue, dom);
 
   const dico = dictionnaire(page, langue);
   if (!dico) {
