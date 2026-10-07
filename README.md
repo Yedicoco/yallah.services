@@ -120,6 +120,24 @@ node build-site.js           # régénère le dossier
 - Test local : ouvrir `site-a-mettre-en-ligne/index.html` dans un navigateur, ou
   `cd site-a-mettre-en-ligne && python3 -m http.server 8000`.
 
+#### Déployer cette version sur Firebase Hosting
+
+Le dépôt contient `firebase.json`, déjà configuré pour publier uniquement
+`site-a-mettre-en-ligne/` (site multi-pages, sans réécriture SPA), et
+`.firebaserc` associe ce dépôt au projet `yallah-services-8f1ec`. Depuis la
+racine du dépôt, installe la CLI puis connecte-toi et déploie :
+
+```bash
+npm install -g firebase-tools
+firebase login
+firebase projects:list  # vérifier que le projet est accessible
+firebase deploy --only hosting
+```
+
+Les déploiements suivants se font avec `firebase deploy --only hosting` depuis
+la racine. Le déploiement nécessite une connexion Google autorisée dans
+Firebase CLI pour le même compte qui a accès à ce projet.
+
 Options du générateur :
 
 ```bash
