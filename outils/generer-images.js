@@ -3,24 +3,25 @@
    YALLAH SERVICES — Variantes responsives des images (srcset / sizes)
 
    Produit, à côté de chaque image source, les largeurs intermédiaires
-   en WebP et en JPEG que les pages déclarent dans leurs attributs
-   srcset / sizes : le navigateur ne télécharge que la largeur utile à
-   l'écran (un téléphone n'a pas besoin du hero de 1 678 px ; la
-   vignette vidéo affichée à 180 px n'a pas besoin de 640 px).
+   en AVIF, WebP et JPEG que les pages déclarent dans leurs attributs
+   srcset / sizes : le navigateur ne télécharge que le format et la
+   largeur utiles. Les logos restent en WebP pour préserver leur alpha.
 
        node outils/generer-images.js             (ne produit que ce qui manque)
        node outils/generer-images.js --force     (régénère toutes les variantes)
        node outils/generer-images.js --verifier  (n'écrit rien ; code 1 si une variante manque)
 
-   Prérequis : ImageMagick (commande `magick` ou `convert`)
-     Debian/Ubuntu : sudo apt install imagemagick
+   Prérequis : ImageMagick (commande `magick` ou `convert`) avec
+   encodeur AVIF (AV1/libheif) pour produire les variantes manquantes.
+     Debian/Ubuntu : sudo apt install imagemagick libheif1
      macOS         : brew install imagemagick
      Windows       : https://imagemagick.org/script/download.php
 
-   Convention de nommage : <nom>-<largeur>.<webp|jpg> ; la largeur
-   native garde le nom d'origine (pack-menage.webp à côté de
-   pack-menage.jpg). Les JPEG d'origine ne sont jamais réécrits : ce
-   sont aussi les images de partage (og:image, sitemap vidéo).
+   Convention de nommage : <nom>-<largeur>.<avif|webp|jpg> ; la largeur
+   native garde le nom d'origine (pack-menage.avif / .webp à côté du
+   JPEG source). Ce générateur ne réécrit pas les JPEG sources.
+   Les logos transparents restent en WebP ; les trois posters directs de
+   l'accueil sont optimisés séparément à 480 px.
 
    Les masters sans perte (PNG) vivent dans contenu/sources/ — dossier
    non copié par build-site.js — pour ne pas alourdir le site publié.
@@ -46,9 +47,10 @@ const DOSSIER_IMAGES = 'assets/img';
      vignette : aperçu vidéo B2B affiché à 180 px / 112 px → 240 / 360 + native 640
      logo     : affiché 54 à 82 px → WebP natif seulement (128 et 256 existent en PNG) */
 const ROLES = {
-  hero: { largeurs: [480, 768, 1080, 1360], formats: ['webp', 'jpg'], qualite: 80 },
-  carte: { largeurs: [480], formats: ['webp', 'jpg'], qualite: 80 },
-  vignette: { largeurs: [240, 360], formats: ['webp', 'jpg'], qualite: 80 },
+  hero: { largeurs: [480, 768, 1080, 1360], formats: ['avif', 'webp', 'jpg'], qualite: 80, qualiteAvif: 60 },
+  carte: { largeurs: [480], formats: ['avif', 'webp', 'jpg'], qualite: 80, qualiteAvif: 60 },
+  vignette: { largeurs: [240, 360], formats: ['avif', 'webp', 'jpg'], qualite: 80, qualiteAvif: 60 },
+  /* L'encodeur AVIF livré par ImageMagick/libheif aplatit l'alpha : garder WebP pour les logos. */
   logo: { largeurs: [], formats: ['webp'], qualite: 90 }
 };
 
@@ -58,6 +60,7 @@ function listerCartes() {
   if (!fs.existsSync(dossier)) return [];
   return fs.readdirSync(dossier)
     .filter((f) => /^(pack-|garde-malade).*\.jpe?g$/i.test(f))
+    .filter((f) => !/-\d{3,4}\.jpe?g$/i.test(f)) // ignorer les variantes responsives (-480.jpg)
     .sort()
     .map((f) => ({ role: 'carte', nom: f.replace(/\.jpe?g$/i, ''), source: DOSSIER_IMAGES + '/' + f }));
 }
@@ -123,7 +126,7 @@ function dimensions(cheminRelatif) {
 function nomDepuisChemin(chemin) {
   const relatif = String(chemin).replace(/^\.?\//, '');
   if (relatif.indexOf(DOSSIER_IMAGES + '/') !== 0) return null;
-  return relatif.slice(DOSSIER_IMAGES.length + 1).replace(/\.(?:jpe?g|png|webp)$/i, '');
+  return relatif.slice(DOSSIER_IMAGES.length + 1).replace(/\.(?:jpe?g|png|webp|avif)$/i, '');
 }
 
 function trouverImage(nom) {
@@ -169,7 +172,17 @@ function trouverImageMagick() {
   return null;
 }
 
+function ecritAvif(commande) {
+  const resultat = spawnSync(commande, ['-list', 'format'], { encoding: 'utf8' });
+  if (resultat.status !== 0) return false;
+  return resultat.stdout.split(/\r?\n/).some((ligne) => {
+    const colonnes = ligne.trim().split(/\s+/);
+    return /^AVIF\*?$/.test(colonnes[0] || '') && /w/i.test(colonnes[2] || '');
+  });
+}
+
 function argumentsFormat(format, qualite) {
+  if (format === 'avif') return ['-quality', String(qualite)];
   if (format === 'webp') {
     return ['-quality', String(qualite), '-define', 'webp:method=6', '-define', 'webp:use-sharp-yuv=1'];
   }
@@ -206,7 +219,7 @@ function taches() {
         liste.push({
           image, source, sortie, format,
           largeur: largeur === dims.largeur ? 0 : largeur,
-          qualite: role.qualite,
+          qualite: format === 'avif' ? role.qualiteAvif : role.qualite,
           replis: source !== image.source
         });
       });
@@ -228,6 +241,13 @@ function principal() {
   if (!verifierSeulement && !commande) {
     console.error('❌ ImageMagick introuvable (commande `magick` ou `convert`).');
     console.error('   Debian/Ubuntu : sudo apt install imagemagick · macOS : brew install imagemagick');
+    process.exit(1);
+  }
+  const avifATraiter = force || liste.some((tache) => tache.format === 'avif' &&
+    !fs.existsSync(path.join(RACINE, tache.sortie)));
+  if (!verifierSeulement && avifATraiter && !ecritAvif(commande)) {
+    console.error('❌ ImageMagick ne dispose pas d’un encodeur AVIF en écriture.');
+    console.error('   Installez une version liée à AV1/libheif ; les variantes AVIF déjà présentes peuvent être vérifiées sans cet encodeur.');
     process.exit(1);
   }
 

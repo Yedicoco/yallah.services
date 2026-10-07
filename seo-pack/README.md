@@ -14,7 +14,7 @@
 - Sous-titre « en 3 étapes » : la section en affiche 4 → corriger en « 4 étapes ». Les pages locales générées affichent maintenant « Comment ça marche en 4 étapes ».
 - Délai harmonisé partout : « dans un délai de 24 à 72h » (titres, CTA, texte et FAQ).
 - Images : `loading="lazy" decoding="async" width= height=` partout sauf le hero ; hero en `fetchpriority="high"`.
-- Convertir PNG/JPG en WebP (`cwebp -q 80 img.png -o img.webp`) : le hero PNG est le plus gros frein LCP.
+- Les images responsives sont servies en AVIF, WebP puis JPEG via `<picture>` ; le preload du hero doit annoncer le même AVIF `srcset`/`sizes` que la page pour éviter un double téléchargement.
 - Pied de page : ajouter les liens vers TOUTES les pages locales (aujourd'hui seulement 2).
 - Texte des liens : « Réserver » → « Réserver une nounou pour 1 enfant » (ancre descriptive).
 
