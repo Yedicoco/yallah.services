@@ -60,6 +60,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage,
 │                                     #   affirmations commerciales et géographiques, domaine unique)
 ├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
+├── outils/generer-images.js          # Variantes responsives (srcset) WebP/JPEG via ImageMagick
 ├── outils/generer-sitemap.js         # Sitemaps pages + vidéos (lastmod = git), synchronisés dans robots.txt
 ├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
 ├── services-par-ville.html           # Hub : tous les services, ville par ville
@@ -72,6 +73,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 │   ├── valider-avis.md · recueillir-avis.md
 │   ├── sources-editoriales.md        # Traçabilité de chaque fait publié
 │   ├── pages/*.json                  # Contenu rédigé, page par page
+│   ├── sources/                      # Masters d'images sans perte (non publiés) → generer-images.js
 │   └── i18n/                         # Multilingue : cles.json + traductions/<page>.<langue>.json
 ├── plan-seo-local.md                 # Plan SEO local : état, matrice, GBP, citations, mesure
 ├── doc/guide-schema-corrige-yallah-services.pdf  # ★ Guide SEO / données structurées de référence
@@ -90,7 +92,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 │   ├── js/candidature-confirmation.js# Page de confirmation (récapitulatif, liens préparés)
 │   ├── js/admin.js                   # Espace recruteur (statistiques, recherche, export, suppression)
 │   ├── logo-source.png               # Logo officiel d'origine (source des déclinaisons)
-│   └── img/                          # Logos, favicons, visuels des services, avatars…
+│   └── img/                          # Logos, favicons, visuels des services (+ variantes -480, -768… générées)
 ├── site-a-mettre-en-ligne/           # ★ Version statique générée, prête à déposer chez l'hébergeur
 ├── modeles-messages.md               # Textes FR/AR : mention, réponses WhatsApp, e-mails
 ├── plan-placement-du-formulaire.html # Plan de placement + maquettes (page de revue)
@@ -299,6 +301,7 @@ node outils/verifier-site.js            # section 8 : contrôle le branchement m
 
 ```bash
 python3 generer-images-logo.py          # nécessite Pillow : pip install pillow
+node outils/generer-images.js --force   # puis les WebP du logo (logo-128.webp, logo-256.webp)
 ```
 
 | Déclinaison | Usage |
@@ -393,6 +396,8 @@ node outils/verifier-contenu.js     # contenu des pages villes : volume, recopie
                                     #   affirmations commerciales et géographiques, domaine unique
 node outils/generer-pages-villes.js --verifier   # valide les fiches de contenu sans rien écrire
 node outils/generer-pages-villes.js              # régénère les pages service × zone
+node outils/generer-images.js --verifier         # toutes les variantes srcset existent-elles ?
+node outils/generer-images.js                    # produit les variantes manquantes (ImageMagick)
 node outils/generer-sitemap.js                   # régénère sitemap.xml + video-sitemap.xml
 node build-site.js                               # site statique complet + les deux sitemaps
 node --check assets/js/*.js server.js build-site.js
@@ -411,7 +416,9 @@ node --check assets/js/*.js server.js build-site.js
 > Les formulations négatives (« aucune garantie de résultat », « sans garantie de
 > desserte quartier par quartier ») sont conformes et ne déclenchent rien.
 
-Le vérificateur contrôle notamment que **chaque image/script/feuille de style existe**, que chaque
+Le vérificateur contrôle notamment que **chaque image/script/feuille de style existe** (y compris
+chaque candidat `srcset` et chaque `poster` vidéo), que les attributs `width`/`height` des images
+respectent les proportions réelles des fichiers (sinon décalage de mise en page), que chaque
 page charge **les scripts qui lui sont nécessaires, dans l'ordre** (`fiche.js` avant
 `candidature.js`), que chaque identifiant utilisé par le JavaScript est bien présent dans la page,
 que les **messages d'erreur sont bilingues**, qu'**aucune liste déroulante n'a d'option vide ni
@@ -497,20 +504,33 @@ aucun texte repris d'un concurrent.
 
 ### Images binaires encore à fournir
 
-Les fichiers suivants sont référencés par `index.html` mais ne sont pas encore dans le dépôt
-(leur référencement HTML est conservé, ils ne s'afficheront qu'après ajout) :
+Un seul fichier est encore référencé par `index.html` sans être dans le dépôt (son référencement
+HTML est conservé, il ne s'affichera qu'après ajout) :
 
-- `assets/img/grille-tarifaire.jpg`
-- `assets/img/pack-menage-villa.jpg`
-- `assets/img/pack-nounou-multi.jpg`
-- `assets/img/pack-cuisine-simple.jpg`
-- `assets/img/pack-aide-cuisine.jpg`
-- `assets/img/garde-malade.jpg`
-- `assets/img/garde-malade-menage.jpg`
+- `assets/img/grille-tarifaire.jpg` — la grille tarifaire officielle (photo ou export du flyer)
 
-### Visuel d'accueil
+### Visuel d'accueil et images responsives
 
-`assets/img/hero-services.jpg` est une illustration photoréaliste générée par IA, inspirée de la
-présentation de Yallah Services. Elle ne représente pas l'équipe réelle ni des candidats disponibles.
-L'image de partage (Open Graph) est désormais `assets/img/logo-og-1200x630.jpg`, générée à partir du
-logo officiel.
+`assets/img/hero-services-branded.jpg` (et son master sans perte `contenu/sources/hero-services-branded.png`)
+est une illustration photoréaliste générée par IA, inspirée de la présentation de Yallah Services.
+Elle ne représente pas l'équipe réelle ni des candidats disponibles. L'image de partage (Open Graph)
+de l'accueil est `assets/img/logo-og-1200x630.jpg`, générée à partir du logo officiel.
+
+Toutes les images de contenu sont servies en **WebP avec repli JPEG** et en **plusieurs largeurs**
+(`srcset` + `sizes`) : le navigateur ne télécharge que la taille utile à l'écran.
+
+| Image | Largeurs produites | Affichée à |
+|---|---|---|
+| Hero (`hero-services-branded`) | 480 · 768 · 1080 · 1360 · 1678 (native) | pleine largeur, 1 360 px max |
+| Cartes de packs (`pack-*`, `garde-malade*`) | 480 · 800 (native) | ≈ 270 px (ordinateur) à 90 vw (mobile) |
+| Vignette vidéo B2B (`videos/prospection-b2b`) | 240 · 360 · 640 (native) | 180 px (112 px sur mobile) |
+| Logo (`logo-128`, `logo-256`) | WebP natif | 54 à 82 px |
+
+Les variantes suivent la convention `<nom>-<largeur>.<webp|jpg>` et sont produites par
+`node outils/generer-images.js` (ImageMagick requis : `apt install imagemagick` / `brew install imagemagick`).
+Pour **ajouter ou remplacer une image** : déposer le JPEG natif dans `assets/img/` (800 × 450 pour un
+pack), lancer `node outils/generer-images.js`, puis reporter dans le HTML le même `srcset`/`sizes`
+que les images voisines ; `node outils/verifier-site.js` refuse tout candidat manquant, tout
+`srcset` sans `sizes` et tout `width`/`height` qui ne respecte pas les proportions du fichier.
+Les JPEG natifs ne sont jamais réécrits : ce sont aussi les images de partage (`og:image`) et les
+vignettes du sitemap vidéo.
