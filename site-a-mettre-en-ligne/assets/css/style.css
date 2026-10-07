@@ -223,6 +223,8 @@ h1.ht em{font-style:italic;background:linear-gradient(135deg,#d8b361,#f2db9b);-w
 /* ── PACK CARD IMAGES ── */
 .pc-img{width:calc(100% + 40px);height:auto;display:block;border-radius:10px 10px 0 0;margin:-20px -20px 14px -20px;object-fit:contain;background:#f0f2f8}
 .pc-has-img{padding-top:0;overflow:hidden}
+/* Les <picture> (WebP + srcset) ne créent pas de boîte : l'<img> garde ses marges négatives (cartes) et reste l'enfant direct des conteneurs flex (logos). */
+.pc-has-img picture,.logo picture,.facture-logo picture{display:contents}
 .pc-has-img .pi{display:none}
 
 /* ── MINI FORM (above fold) ── */

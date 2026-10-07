@@ -64,6 +64,7 @@ body.ys-page h1, body.ys-page h2, body.ys-page h3 { font-weight: 800; letter-spa
   gap: 16px; flex-wrap: wrap; padding-top: 16px; padding-bottom: 16px;
 }
 .ys-marque { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.ys-marque picture { display: contents; }
 .ys-marque img { width: 62px; height: 62px; border-radius: 50%; border: 1px solid var(--ys-ligne); background: var(--ys-marine); }
 .ys-marque-txt { display: flex; flex-direction: column; line-height: 1.15; }
 .ys-marque-nom {

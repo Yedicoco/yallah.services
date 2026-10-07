@@ -19,6 +19,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const images = require('./generer-images.js');
 
 const RACINE = path.resolve(__dirname, '..');
 const DOSSIER_CONTENU = path.join(RACINE, 'contenu', 'pages');
@@ -41,6 +42,45 @@ const mots = (t) => (String(t).match(/[\p{L}\p{N}][\p{L}\p{N}'’-]*/gu) || []).
 function liste(it, separateur, dernier) {
   if (it.length <= 1) return it.join('');
   return it.slice(0, -1).join(separateur) + dernier + it[it.length - 1];
+}
+
+/* ── Images responsives ───────────────────────────────────────────────
+   Les variantes (-480, -768…) sont produites par outils/generer-images.js ;
+   l'attribut sizes décrit la largeur réellement affichée (local.css) :
+     .local-visual = une colonne sur deux de .ctr (≈ 470 px) sur ordinateur,
+     pleine largeur moins les marges (90 vw) sous 760 px.
+   Le logo mesure 82 px (62 px sous 768 px, style.css). */
+const SIZES_VISUEL = '(max-width: 760px) 90vw, 470px';
+const SIZES_LOGO = '(max-width: 768px) 62px, 82px';
+
+function rendreVisuel(page) {
+  const nom = images.nomDepuisChemin(page.image);
+  const dims = images.dimensions(page.image) || { largeur: 1200, hauteur: 800 };
+  const attributsImg = ' width="' + dims.largeur + '" height="' + dims.hauteur + '"' +
+    ' alt="' + escAttr(page.imageAlt) + '" fetchpriority="high" decoding="async"';
+  const srcsetWebp = nom ? images.srcset(nom, 'webp') : '';
+  const srcsetJpg = nom ? images.srcset(nom, 'jpg') : '';
+
+  if (srcsetWebp && srcsetJpg) {
+    return '<picture>' +
+      '<source type="image/webp" srcset="' + escAttr(srcsetWebp) + '" sizes="' + SIZES_VISUEL + '">' +
+      '<img src="' + escAttr(page.image) + '" srcset="' + escAttr(srcsetJpg) + '" sizes="' + SIZES_VISUEL + '"' + attributsImg + '>' +
+      '</picture>';
+  }
+  /* Image hors manifeste : WebP natif si présent à côté, JPEG en repli. */
+  const cheminWebp = String(page.image).replace(/\.(?:jpe?g|png)$/i, '.webp');
+  const sourceWebp = fs.existsSync(path.join(RACINE, cheminWebp))
+    ? '<source type="image/webp" srcset="' + escAttr(cheminWebp) + '">'
+    : '';
+  return '<picture>' + sourceWebp + '<img src="' + escAttr(page.image) + '"' + attributsImg + '></picture>';
+}
+
+function rendreLogo() {
+  const webp = [images.srcset('logo-128', 'webp'), images.srcset('logo-256', 'webp')].filter(Boolean).join(', ');
+  const source = webp ? '<source type="image/webp" srcset="' + webp + '" sizes="' + SIZES_LOGO + '">' : '';
+  return '<picture>' + source +
+    '<img src="assets/img/logo-256.png" srcset="assets/img/logo-128.png 128w, assets/img/logo-256.png 256w" sizes="' + SIZES_LOGO + '"' +
+    ' width="256" height="256" alt="Yallah Services" decoding="async"></picture>';
 }
 
 /* ── Rendu ── */
@@ -198,13 +238,6 @@ function rendrePage(page) {
   const waCta = waLien(page.messageWhatsAppCta || page.messageWhatsApp || ('Bonjour Yallah Services, je souhaite un renseignement : ' + page.h1Texte + '.'));
   const villes = CONFIG.villes.filter((v) => v.statut !== 'candidate').map((v) => v.nom).join(' · ');
 
-  /* Variante WebP de l'illustration si elle existe à côté du JPEG/PNG :
-     servie en priorité par <picture>, le JPEG restant le repli universel. */
-  const cheminWebp = String(page.image).replace(/\.(?:jpe?g|png)$/i, '.webp');
-  const sourceWebp = fs.existsSync(path.join(RACINE, cheminWebp))
-    ? '<source type="image/webp" srcset="' + escAttr(cheminWebp) + '">'
-    : '';
-
   return `<!doctype html>
 <html lang="fr-MA">
 <head>
@@ -247,7 +280,7 @@ ${rendreSchema(page)}
 <body class="local-page">
   <nav class="local-nav" aria-label="Navigation principale">
     <div class="nav-inner local-wrap">
-      <a href="index.html" class="logo" aria-label="Yallah Services, accueil"><img src="assets/img/logo-256.png" alt="Yallah Services"></a>
+      <a href="index.html" class="logo" aria-label="Yallah Services, accueil">${rendreLogo()}</a>
       <div class="nav-links"><a href="services-par-ville.html">Services par ville</a><a href="personnel-entreprises.html">Entreprises</a><a href="index.html#packs">Packs &amp; tarifs</a><a href="candidature.html">Espace candidats</a></div>
       <a class="nav-wa" href="${waHero}" target="_blank" rel="noopener">WhatsApp</a>
     </div>
@@ -264,7 +297,7 @@ ${rendreSchema(page)}
           <div class="local-actions"><a class="local-btn local-btn-main" href="${waHero}" target="_blank" rel="noopener" data-src="${page.fichier}">${esc(page.ctaPrincipal || 'Demander un profil sur WhatsApp')}</a><a class="local-btn local-btn-secondary" href="index.html#packs">Voir les packs</a></div>
           <p class="local-note">${esc(page.noteHero)}</p>
         </div>
-        <figure class="local-visual"><picture>${sourceWebp}<img src="${page.image}" width="1200" height="800" alt="${escAttr(page.imageAlt)}" decoding="async"></picture><figcaption>${esc(page.legendeImage)}</figcaption></figure>
+        <figure class="local-visual">${rendreVisuel(page)}<figcaption>${esc(page.legendeImage)}</figcaption></figure>
       </section>
     </div>
 

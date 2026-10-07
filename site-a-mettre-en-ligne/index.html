@@ -16,7 +16,7 @@
 
 <link rel="alternate" hreflang="fr-MA" href="https://yallahservices-one.vercel.app/">
 <link rel="alternate" hreflang="x-default" href="https://yallahservices-one.vercel.app/">
-<link rel="preload" as="image" href="/assets/img/hero-services-branded.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/hero-services-branded-480.webp 480w, assets/img/hero-services-branded-768.webp 768w, assets/img/hero-services-branded-1080.webp 1080w, assets/img/hero-services-branded-1360.webp 1360w, assets/img/hero-services-branded.webp 1678w" imagesizes="(max-width: 1360px) 100vw, 1360px" fetchpriority="high">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Yallah Services">
@@ -39,10 +39,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <!-- Styles -->
-<link rel="stylesheet" href="assets/css/style.css?v=20261003">
-<link rel="stylesheet" href="assets/css/brand.css?v=20261003">
-<link rel="stylesheet" href="assets/css/videos.css?v=20261003">
-<link rel="stylesheet" href="assets/css/i18n.css?v=20261003">
+<link rel="stylesheet" href="assets/css/style.css?v=20261007">
+<link rel="stylesheet" href="assets/css/brand.css?v=20261007">
+<link rel="stylesheet" href="assets/css/videos.css?v=20261007">
+<link rel="stylesheet" href="assets/css/i18n.css?v=20261007">
 <!-- Multilingue : français · darija (arabe et latin) · anglais -->
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/seo-tracking.js" defer></script>
@@ -299,7 +299,7 @@
 <!-- ═══════════ NAVIGATION ═══════════ -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#hero" class="logo"><img src="assets/img/logo-256.png" alt="Logo Yallah Services – aides à domicile au Maroc" loading="lazy" decoding="async" width="256" height="256"></a>
+    <a href="#hero" class="logo"><picture><source type="image/webp" srcset="assets/img/logo-128.webp 128w, assets/img/logo-256.webp 256w" sizes="(max-width: 768px) 62px, 82px"><img src="assets/img/logo-256.png" srcset="assets/img/logo-128.png 128w, assets/img/logo-256.png 256w" sizes="(max-width: 768px) 62px, 82px" alt="Logo Yallah Services – aides à domicile au Maroc" decoding="async" width="256" height="256"></picture></a>
     <ul class="nav-links">
       <li><a href="#hero">Accueil</a></li>
       <li><a href="#how">Comment ça marche</a></li>
@@ -331,7 +331,7 @@
 <!-- ═══════════ HERO ═══════════ -->
 <section id="hero">
   <div class="hero-img-wrap">
-    <picture><source type="image/webp" srcset="assets/img/hero-services-branded.webp"><img src="assets/img/hero-services-branded.jpg" alt="Illustration de services de ménage, cuisine, garde d’enfants, accompagnement et chauffeur au Maroc" fetchpriority="high" width="1678" height="937" decoding="async"></picture>
+    <picture><source type="image/webp" srcset="assets/img/hero-services-branded-480.webp 480w, assets/img/hero-services-branded-768.webp 768w, assets/img/hero-services-branded-1080.webp 1080w, assets/img/hero-services-branded-1360.webp 1360w, assets/img/hero-services-branded.webp 1678w" sizes="(max-width: 1360px) 100vw, 1360px"><img src="assets/img/hero-services-branded.jpg" srcset="assets/img/hero-services-branded-480.jpg 480w, assets/img/hero-services-branded-768.jpg 768w, assets/img/hero-services-branded-1080.jpg 1080w, assets/img/hero-services-branded-1360.jpg 1360w, assets/img/hero-services-branded.jpg 1678w" sizes="(max-width: 1360px) 100vw, 1360px" alt="Illustration de services de ménage, cuisine, garde d’enfants, accompagnement et chauffeur au Maroc" fetchpriority="high" width="1678" height="937" decoding="async"></picture>
     <div class="hero-img-overlay"></div>
     <p class="hero-image-caption">Services de personnel pour les particuliers et les entreprises au Maroc.</p>
   </div>
@@ -586,7 +586,7 @@
   <div class="ctr">
     <div class="business-video-promo-card">
       <a class="business-video-promo-poster" href="personnel-entreprises.html#video-entreprises" aria-label="Voir la vidéo dédiée aux entreprises">
-        <img src="assets/img/videos/prospection-b2b.jpg" alt="Aperçu de la vidéo Yallah Services pour les entreprises" width="720" height="1280" loading="lazy" decoding="async">
+        <picture><source type="image/webp" srcset="assets/img/videos/prospection-b2b-240.webp 240w, assets/img/videos/prospection-b2b-360.webp 360w, assets/img/videos/prospection-b2b.webp 640w" sizes="(max-width: 760px) 112px, 180px"><img src="assets/img/videos/prospection-b2b.jpg" srcset="assets/img/videos/prospection-b2b-240.jpg 240w, assets/img/videos/prospection-b2b-360.jpg 360w, assets/img/videos/prospection-b2b.jpg 640w" sizes="(max-width: 760px) 112px, 180px" alt="Aperçu de la vidéo Yallah Services pour les entreprises" width="640" height="1138" loading="lazy" decoding="async"></picture>
         <span class="business-video-play" aria-hidden="true">▶</span>
       </a>
       <div class="business-video-promo-copy">
@@ -606,7 +606,7 @@
 <div class="tcc on" id="tab-menage"><div class="tab-hint">🏠 Formule logée — horaires et repos à convenir</div><div class="pg">
 <article class="pc pc-has-img hot">
 
-<img class="pc-img" src="assets/img/pack-menage.jpg" alt="Ménage simple dans villa — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+<picture><source type="image/webp" srcset="assets/img/pack-menage-480.webp 480w, assets/img/pack-menage.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-menage.jpg" srcset="assets/img/pack-menage-480.jpg 480w, assets/img/pack-menage.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Ménage simple dans villa — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🏡</span><span class="ptyp">🧹 Ménage</span>
 
 <h3 class="pn">Ménage simple dans villa</h3><div class="pfr">salaire mensuel</div><div class="pp">4 500</div><div class="pu">DH / mois</div>
@@ -614,7 +614,7 @@
 <button class="pwb" data-pack="Ménage simple dans villa" data-price="4 500 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-menage-villa.jpg" alt="Ménage simple dans mini villa — Yallah Services" loading="lazy" decoding="async">
+<picture><source type="image/webp" srcset="assets/img/pack-menage-villa-480.webp 480w, assets/img/pack-menage-villa.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-menage-villa.jpg" srcset="assets/img/pack-menage-villa-480.jpg 480w, assets/img/pack-menage-villa.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Ménage simple dans mini villa — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🏘️</span><span class="ptyp">🧹 Ménage</span>
 
 <h3 class="pn">Ménage simple dans mini villa</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -622,7 +622,7 @@
 <button class="pwb" data-pack="Ménage simple dans mini villa" data-price="4 000 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nonlogee-menage.jpg" alt="Ménage dans appartement — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+<picture><source type="image/webp" srcset="assets/img/pack-nonlogee-menage-480.webp 480w, assets/img/pack-nonlogee-menage.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nonlogee-menage.jpg" srcset="assets/img/pack-nonlogee-menage-480.jpg 480w, assets/img/pack-nonlogee-menage.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Ménage dans appartement — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🏢</span><span class="ptyp">🧹 Ménage</span>
 
 <h3 class="pn">Ménage dans appartement</h3><div class="pfr">salaire mensuel</div><div class="pp">3 500</div><div class="pu">DH / mois</div>
@@ -632,7 +632,7 @@
 <div class="tcc" id="tab-nounou"><div class="tab-hint">🧸 Garde d'enfants, jeux, activités éducatives et accompagnement</div><div class="pg">
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nounou.jpg" alt="Nounou d'un enfant — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+<picture><source type="image/webp" srcset="assets/img/pack-nounou-480.webp 480w, assets/img/pack-nounou.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nounou.jpg" srcset="assets/img/pack-nounou-480.jpg 480w, assets/img/pack-nounou.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Nounou d'un enfant — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">👶</span><span class="ptyp">🧸 Nounou</span>
 
 <h3 class="pn">Nounou d'un enfant</h3><div class="pfr">salaire mensuel</div><div class="pp">3 500</div><div class="pu">DH / mois</div>
@@ -640,7 +640,7 @@
 <button class="pwb" data-pack="Nounou d'un enfant" data-price="3 500 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img hot">
 
-<img class="pc-img" src="assets/img/pack-menage-nounou.jpg" alt="Nounou d'un enfant + ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+<picture><source type="image/webp" srcset="assets/img/pack-menage-nounou-480.webp 480w, assets/img/pack-menage-nounou.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-menage-nounou.jpg" srcset="assets/img/pack-menage-nounou-480.jpg 480w, assets/img/pack-menage-nounou.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Nounou d'un enfant + ménage — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🧺</span><span class="ptyp">🧸 Nounou</span>
 
 <h3 class="pn">Nounou d'un enfant + ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -648,7 +648,7 @@
 <button class="pwb" data-pack="Nounou d'un enfant + ménage" data-price="4 000 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nonlogee-nounou.jpg" alt="Nounou de 2 enfants avec ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+<picture><source type="image/webp" srcset="assets/img/pack-nonlogee-nounou-480.webp 480w, assets/img/pack-nonlogee-nounou.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nonlogee-nounou.jpg" srcset="assets/img/pack-nonlogee-nounou-480.jpg 480w, assets/img/pack-nonlogee-nounou.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Nounou de 2 enfants avec ménage — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">👨‍👩‍👧</span><span class="ptyp">🧸 Nounou</span>
 
 <h3 class="pn">Nounou de 2 enfants avec ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">4 500 / 5 000</div><div class="pu">DH / mois</div>
@@ -656,7 +656,7 @@
 <button class="pwb" data-pack="Nounou de 2 enfants avec ménage" data-price="4 500 / 5 000 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nounou-multi.jpg" alt="Nounou de 3 enfants — Yallah Services" loading="lazy" decoding="async">
+<picture><source type="image/webp" srcset="assets/img/pack-nounou-multi-480.webp 480w, assets/img/pack-nounou-multi.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nounou-multi.jpg" srcset="assets/img/pack-nounou-multi-480.jpg 480w, assets/img/pack-nounou-multi.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Nounou de 3 enfants — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">👨‍👩‍👧‍👦</span><span class="ptyp">🧸 Nounou</span>
 
 <h3 class="pn">Nounou de 3 enfants</h3><div class="pfr">salaire mensuel</div><div class="pp">4 500</div><div class="pu">DH / mois</div>
@@ -664,7 +664,7 @@
 <button class="pwb" data-pack="Nounou de 3 enfants" data-price="4 500 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img hot">
 
-<img class="pc-img" src="assets/img/pack-nouvelle-fille.jpg" alt="Nounou de 3 enfants + ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+<picture><source type="image/webp" srcset="assets/img/pack-nouvelle-fille-480.webp 480w, assets/img/pack-nouvelle-fille.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nouvelle-fille.jpg" srcset="assets/img/pack-nouvelle-fille-480.jpg 480w, assets/img/pack-nouvelle-fille.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Nounou de 3 enfants + ménage — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🏠</span><span class="ptyp">🧸 Nounou</span>
 
 <h3 class="pn">Nounou de 3 enfants + ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">5 000</div><div class="pu">DH / mois</div>
@@ -674,7 +674,7 @@
 <div class="tcc" id="tab-cuisine"><div class="tab-hint">🍳 Cuisine marocaine &amp; européenne, gestion des courses sur demande</div><div class="pg">
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-cuisine-simple.jpg" alt="Cuisine simple — Yallah Services" loading="lazy" decoding="async">
+<picture><source type="image/webp" srcset="assets/img/pack-cuisine-simple-480.webp 480w, assets/img/pack-cuisine-simple.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-cuisine-simple.jpg" srcset="assets/img/pack-cuisine-simple-480.jpg 480w, assets/img/pack-cuisine-simple.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Cuisine simple — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🍲</span><span class="ptyp">🍳 Cuisine</span>
 
 <h3 class="pn">Cuisine simple</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -682,7 +682,7 @@
 <button class="pwb" data-pack="Cuisine simple" data-price="4 000 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img hot">
 
-<img class="pc-img" src="assets/img/pack-cuisine.jpg" alt="Cuisine / ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+<picture><source type="image/webp" srcset="assets/img/pack-cuisine-480.webp 480w, assets/img/pack-cuisine.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-cuisine.jpg" srcset="assets/img/pack-cuisine-480.jpg 480w, assets/img/pack-cuisine.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Cuisine / ménage — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🥘</span><span class="ptyp">🍳 Cuisine</span>
 
 <h3 class="pn">Cuisine / ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">5 000</div><div class="pu">DH / mois</div>
@@ -690,7 +690,7 @@
 <button class="pwb" data-pack="Cuisine / ménage" data-price="5 000 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-aide-cuisine.jpg" alt="Aide cuisine — Yallah Services" loading="lazy" decoding="async">
+<picture><source type="image/webp" srcset="assets/img/pack-aide-cuisine-480.webp 480w, assets/img/pack-aide-cuisine.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-aide-cuisine.jpg" srcset="assets/img/pack-aide-cuisine-480.jpg 480w, assets/img/pack-aide-cuisine.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Aide cuisine — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🔪</span><span class="ptyp">🍳 Cuisine</span>
 
 <h3 class="pn">Aide cuisine</h3><div class="pfr">salaire mensuel</div><div class="pp">3 500</div><div class="pu">DH / mois</div>
@@ -698,7 +698,7 @@
 <button class="pwb" data-pack="Aide cuisine" data-price="3 500 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/pack-nonlogee-cuisine.jpg" alt="Aide cuisine / ménage — Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+<picture><source type="image/webp" srcset="assets/img/pack-nonlogee-cuisine-480.webp 480w, assets/img/pack-nonlogee-cuisine.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nonlogee-cuisine.jpg" srcset="assets/img/pack-nonlogee-cuisine-480.jpg 480w, assets/img/pack-nonlogee-cuisine.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Aide cuisine / ménage — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🍽️</span><span class="ptyp">🍳 Cuisine</span>
 
 <h3 class="pn">Aide cuisine / ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -708,7 +708,7 @@
 <div class="tcc" id="tab-malade"><div class="tab-hint">❤️ Accompagnement des personnes âgées ou malades à domicile</div><div class="pg">
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/garde-malade.jpg" alt="Garde malade simple — Yallah Services" loading="lazy" decoding="async">
+<picture><source type="image/webp" srcset="assets/img/garde-malade-480.webp 480w, assets/img/garde-malade.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/garde-malade.jpg" srcset="assets/img/garde-malade-480.jpg 480w, assets/img/garde-malade.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Garde malade simple — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🩺</span><span class="ptyp">❤️ Garde malade</span>
 
 <h3 class="pn">Garde malade simple</h3><div class="pfr">salaire mensuel</div><div class="pp">3 500</div><div class="pu">DH / mois</div>
@@ -716,7 +716,7 @@
 <button class="pwb" data-pack="Garde malade simple" data-price="3 500 DH / mois">💬 Demander</button></article>
 <article class="pc pc-has-img">
 
-<img class="pc-img" src="assets/img/garde-malade-menage.jpg" alt="Garde malade et ménage — Yallah Services" loading="lazy" decoding="async">
+<picture><source type="image/webp" srcset="assets/img/garde-malade-menage-480.webp 480w, assets/img/garde-malade-menage.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/garde-malade-menage.jpg" srcset="assets/img/garde-malade-menage-480.jpg 480w, assets/img/garde-malade-menage.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Garde malade et ménage — Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
 <span class="pi">🤝</span><span class="ptyp">❤️ Garde malade</span>
 
 <h3 class="pn">Garde malade et ménage</h3><div class="pfr">salaire mensuel</div><div class="pp">4 000</div><div class="pu">DH / mois</div>
@@ -726,7 +726,7 @@
 <div class="tcc" id="tab-jour"><div class="tab-hint">✨ 8h max · 📍 Casa &amp; Rabat uniquement</div><div class="pg">
 
         <article class="pc pc-has-img">
-          <img class="pc-img" src="assets/img/pack-nonlogee-menage.jpg" alt="Femme de ménage Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+          <picture><source type="image/webp" srcset="assets/img/pack-nonlogee-menage-480.webp 480w, assets/img/pack-nonlogee-menage.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nonlogee-menage.jpg" srcset="assets/img/pack-nonlogee-menage-480.jpg 480w, assets/img/pack-nonlogee-menage.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Femme de ménage Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
           <span class="pi">🏠</span>
           <span class="ptyp">🌙 Non Logée</span>
 
@@ -744,7 +744,7 @@
 
         <article class="pc hot pc-has-img">
 
-          <img class="pc-img" src="assets/img/pack-nonlogee-cuisine.jpg" alt="Ménage et cuisine Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+          <picture><source type="image/webp" srcset="assets/img/pack-nonlogee-cuisine-480.webp 480w, assets/img/pack-nonlogee-cuisine.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nonlogee-cuisine.jpg" srcset="assets/img/pack-nonlogee-cuisine-480.jpg 480w, assets/img/pack-nonlogee-cuisine.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Ménage et cuisine Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
           <span class="pi">🍽️</span>
           <span class="ptyp">🌙 Non Logée</span>
 
@@ -761,7 +761,7 @@
         </article>
 
         <article class="pc pc-has-img">
-          <img class="pc-img" src="assets/img/pack-nonlogee-nounou.jpg" alt="Ménage et nounou Yallah Services" loading="lazy" decoding="async" width="450" height="800">
+          <picture><source type="image/webp" srcset="assets/img/pack-nonlogee-nounou-480.webp 480w, assets/img/pack-nonlogee-nounou.webp 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px"><img class="pc-img" src="assets/img/pack-nonlogee-nounou.jpg" srcset="assets/img/pack-nonlogee-nounou-480.jpg 480w, assets/img/pack-nonlogee-nounou.jpg 800w" sizes="(max-width: 520px) 90vw, (max-width: 760px) 45vw, 280px" alt="Ménage et nounou Yallah Services" loading="lazy" decoding="async" width="800" height="450"></picture>
           <span class="pi">🍼</span>
           <span class="ptyp">🌙 Non Logée</span>
 
@@ -1203,7 +1203,7 @@
     <div class="facture">
       <div class="facture-head">
         <div class="facture-logo">
-          <img src="assets/img/logo-256.png" alt="Logo Yallah Services" loading="lazy" decoding="async" width="256" height="256">
+          <picture><source type="image/webp" srcset="assets/img/logo-128.webp 128w, assets/img/logo-256.webp 256w" sizes="54px"><img src="assets/img/logo-256.png" srcset="assets/img/logo-128.png 128w, assets/img/logo-256.png 256w" sizes="54px" alt="Logo Yallah Services" loading="lazy" decoding="async" width="256" height="256"></picture>
           <div class="fln"><span class="nm">YALLAH SERVICES</span><span class="sb">Aides à domicile — Maroc</span></div>
         </div>
         <div class="facture-num">

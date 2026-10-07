@@ -8,7 +8,11 @@
 
    Contrôles effectués :
      1. Chaque <img>, <link rel=stylesheet>, <script src> pointe vers un
-        fichier existant (aucune image en échec).
+        fichier existant (aucune image en échec), y compris chaque
+        candidat des srcset / imagesrcset et chaque poster de vidéo.
+        Les attributs width/height des <img> respectent les proportions
+        réelles du fichier (sinon décalage de mise en page, CLS), et tout
+        srcset à descripteurs « w » est accompagné d'un attribut sizes.
      2. Chaque lien interne (#ancre, page.html) existe.
      3. Chaque identifiant utilisé dans le JavaScript (getElementById,
         querySelector('#…')) existe bien dans la page concernée.
@@ -46,14 +50,11 @@ const SCRIPTS_PAR_PAGE = {
 
 /* Images attendues mais pas encore fournies par le client (voir README). */
 const IMAGES_A_FOURNIR = new Set([
-  'assets/img/garde-malade.jpg',
-  'assets/img/garde-malade-menage.jpg',
-  'assets/img/grille-tarifaire.jpg',
-  'assets/img/pack-aide-cuisine.jpg',
-  'assets/img/pack-cuisine-simple.jpg',
-  'assets/img/pack-menage-villa.jpg',
-  'assets/img/pack-nounou-multi.jpg'
+  'assets/img/grille-tarifaire.jpg'
 ]);
+
+/* Lecture des dimensions réelles (PNG, JPEG, WebP) sans dépendance. */
+const { dimensions } = require('./generer-images.js');
 
 let erreurs = 0;
 let avertissements = 0;
@@ -76,7 +77,8 @@ PAGES.forEach((page) => {
     /<img[^>]+src="([^"]+)"/g,
     /<link[^>]+href="([^"]+\.(?:css|png|jpg|jpeg|webp|svg|ico)(?:\?[^"]*)?)"/g,
     /<script[^>]+src="([^"]+)"/g,
-    /<meta[^>]+content="([^"]+\.(?:jpg|jpeg|png))"/g
+    /<meta[^>]+content="([^"]+\.(?:jpg|jpeg|png))"/g,
+    /<video[^>]+poster="([^"]+)"/g
   ];
   motifs.forEach((motif) => {
     let resultat;
@@ -86,6 +88,16 @@ PAGES.forEach((page) => {
       ressources.push(adresse.split('?')[0]);
     }
   });
+  /* Chaque candidat d'un srcset (« url 480w, url 800w ») ou d'un imagesrcset de preload */
+  const motifSrcset = /\s(?:srcset|imagesrcset)="([^"]+)"/g;
+  let listeSrcset;
+  while ((listeSrcset = motifSrcset.exec(contenu)) !== null) {
+    listeSrcset[1].split(',').forEach((candidat) => {
+      const adresse = candidat.trim().split(/\s+/)[0];
+      if (!adresse || /^(https?:)?\/\//.test(adresse) || adresse.indexOf('data:') === 0) return;
+      ressources.push(adresse.split('?')[0]);
+    });
+  }
   const manquantes = Array.from(new Set(ressources)).filter((adresse) => !existe(adresse));
   const aFournir = manquantes.filter((adresse) => IMAGES_A_FOURNIR.has(adresse));
   const introuvables = manquantes.filter((adresse) => !IMAGES_A_FOURNIR.has(adresse));
@@ -93,6 +105,32 @@ PAGES.forEach((page) => {
   if (aFournir.length) avertir(page + ' → ' + aFournir.length + ' image(s) encore à fournir par le client : ' + aFournir.join(', '));
   if (!manquantes.length) ok(page + ' → ' + new Set(ressources).size + ' ressources locales présentes');
   else if (!introuvables.length) ok(page + ' → toutes les ressources attendues sont présentes (hors ' + aFournir.length + ' image(s) à fournir)');
+
+  /* Images responsives : proportions width/height et attribut sizes */
+  const motifBalise = /<(img|source|link)\b[^>]*>/g;
+  const defauts = [];
+  let balise;
+  while ((balise = motifBalise.exec(contenu)) !== null) {
+    const attrs = balise[0];
+    const attribut = (nom) => { const m = attrs.match(new RegExp('\\s' + nom + '="([^"]*)"')); return m ? m[1] : null; };
+    const srcset = attribut('srcset') || attribut('imagesrcset');
+    if (srcset && /\s\d+w(?:,|$)/.test(srcset) && !(attribut('sizes') || attribut('imagesizes'))) {
+      defauts.push('srcset à descripteurs « w » sans sizes : ' + (attribut('src') || srcset.split(/\s+/)[0]));
+    }
+    if (balise[1] !== 'img') continue;
+    const src = attribut('src');
+    const largeur = Number(attribut('width'));
+    const hauteur = Number(attribut('height'));
+    if (!src || !largeur || !hauteur || /^(https?:)?\/\//.test(src) || src.indexOf('data:') === 0) continue;
+    const reel = dimensions(src.split('?')[0]);
+    if (!reel) continue;
+    const ecart = Math.abs(largeur / hauteur - reel.largeur / reel.hauteur) / (reel.largeur / reel.hauteur);
+    if (ecart > 0.02) {
+      defauts.push(src + ' : width/height ' + largeur + '×' + hauteur + ' ≠ fichier ' + reel.largeur + '×' + reel.hauteur + ' (risque de décalage, CLS)');
+    }
+  }
+  if (defauts.length) erreur(page + ' → ' + defauts.join(' ; '));
+  else if (/\ssrcset="/.test(contenu)) ok(page + ' → srcset/sizes et proportions width/height cohérents');
 });
 
 /* ── 2. Liens internes ── */
