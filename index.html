@@ -94,14 +94,6 @@
       "currenciesAccepted": "MAD",
       "paymentAccepted": "Espèces, virement bancaire, paiement mobile",
       "priceRange": "Frais de mise en relation : 500 à 1 000 DH",
-      "serviceType": [
-        "Ménage à domicile",
-        "Garde d’enfants",
-        "Cuisine à domicile",
-        "Garde-malade",
-        "Gardiennage",
-        "Chauffeurs"
-      ],
       "knowsLanguage": [
         "fr-MA",
         "ar-MA",
@@ -186,24 +178,80 @@
         "https://www.tiktok.com/@yallah.services.m",
         "https://www.linkedin.com/in/yallah-services/"
       ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Frais de mise en relation",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "Formule Sérénité — suivi personnalisé, remplacements prévus par la formule pendant 2 mois",
-            "price": "500",
-            "priceCurrency": "MAD"
-          },
-          {
-            "@type": "Offer",
-            "name": "Formule Premium — suivi prioritaire, remplacements prévus par la formule pendant 6 mois",
-            "price": "1000",
-            "priceCurrency": "MAD"
-          }
-        ]
-      }
+      "hasOfferCatalog": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Services de personnel — particuliers et entreprises",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Femme de ménage à domicile",
+                "serviceType": "Ménage et entretien du domicile"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Nounou et garde d'enfants",
+                "serviceType": "Garde d'enfants à domicile"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cuisinière à domicile",
+                "serviceType": "Cuisine à domicile"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Garde-malade et accompagnement",
+                "serviceType": "Aide aux personnes âgées et accompagnement"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Vigile et gardien",
+                "serviceType": "Gardiennage et surveillance"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Chauffeur particulier",
+                "serviceType": "Chauffeur à domicile"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Frais de mise en relation",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Formule Sérénité — suivi personnalisé, remplacements prévus par la formule pendant 2 mois",
+              "price": "500",
+              "priceCurrency": "MAD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Formule Premium — suivi prioritaire, remplacements prévus par la formule pendant 6 mois",
+              "price": "1000",
+              "priceCurrency": "MAD"
+            }
+          ]
+        }
+      ]
     },
     {
       "@type": "FAQPage",
