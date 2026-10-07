@@ -58,21 +58,29 @@ function rendreVisuel(page) {
   const dims = images.dimensions(page.image) || { largeur: 1200, hauteur: 800 };
   const attributsImg = ' width="' + dims.largeur + '" height="' + dims.hauteur + '"' +
     ' alt="' + escAttr(page.imageAlt) + '" fetchpriority="high" decoding="async"';
+  const srcsetAvif = nom ? images.srcset(nom, 'avif') : '';
   const srcsetWebp = nom ? images.srcset(nom, 'webp') : '';
   const srcsetJpg = nom ? images.srcset(nom, 'jpg') : '';
 
   if (srcsetWebp && srcsetJpg) {
-    return '<picture>' +
+    const sourceAvif = srcsetAvif
+      ? '<source type="image/avif" srcset="' + escAttr(srcsetAvif) + '" sizes="' + SIZES_VISUEL + '">'
+      : '';
+    return '<picture>' + sourceAvif +
       '<source type="image/webp" srcset="' + escAttr(srcsetWebp) + '" sizes="' + SIZES_VISUEL + '">' +
       '<img src="' + escAttr(page.image) + '" srcset="' + escAttr(srcsetJpg) + '" sizes="' + SIZES_VISUEL + '"' + attributsImg + '>' +
       '</picture>';
   }
-  /* Image hors manifeste : WebP natif si présent à côté, JPEG en repli. */
+  /* Image hors manifeste : AVIF/WebP natifs si présents, JPEG en repli. */
+  const cheminAvif = String(page.image).replace(/\.(?:jpe?g|png)$/i, '.avif');
   const cheminWebp = String(page.image).replace(/\.(?:jpe?g|png)$/i, '.webp');
+  const sourceAvif = fs.existsSync(path.join(RACINE, cheminAvif))
+    ? '<source type="image/avif" srcset="' + escAttr(cheminAvif) + '">'
+    : '';
   const sourceWebp = fs.existsSync(path.join(RACINE, cheminWebp))
     ? '<source type="image/webp" srcset="' + escAttr(cheminWebp) + '">'
     : '';
-  return '<picture>' + sourceWebp + '<img src="' + escAttr(page.image) + '"' + attributsImg + '></picture>';
+  return '<picture>' + sourceAvif + sourceWebp + '<img src="' + escAttr(page.image) + '"' + attributsImg + '></picture>';
 }
 
 function rendreLogo() {

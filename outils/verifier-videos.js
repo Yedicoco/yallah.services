@@ -6,11 +6,14 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const { dimensions } = require('./generer-images.js');
 const racine = path.resolve(__dirname, '..');
 const option = process.argv.indexOf('--dossier');
 const dossier = option < 0 ? racine : path.resolve(racine, process.argv[option + 1]);
 const manifeste = JSON.parse(fs.readFileSync(path.join(racine, 'contenu/videos-sources.json'), 'utf8'));
 const attendus = ['besoin-d-aide-a-domicile.mp4', 'yallah-service.mp4', '2026-08-28-151819708.mp4', 'prospection-b2b.mp4'];
+const LARGEUR_POSTER_ACCUEIL = 480;
+const TAILLE_MAX_POSTER_ACCUEIL = 90 * 1024;
 assert.deepEqual(manifeste.files.map(f => path.basename(f.source)), attendus);
 for (const f of manifeste.files) {
   const contenu = fs.readFileSync(path.join(dossier, f.destination));
@@ -32,7 +35,16 @@ for (const [page, noms] of [['index.html', attendus.slice(0, 3)], ['personnel-en
     assert.equal(attribut(contenu, 'src'), 'assets/videos/' + noms[i]);
     const poster = attribut(attrs, 'poster');
     assert.equal(poster, 'assets/img/videos/' + noms[i].replace('.mp4', '.jpg'));
-    assert.ok(fs.statSync(path.join(dossier, poster)).size > 0);
+    const cheminPoster = path.join(dossier, poster);
+    const taillePoster = fs.statSync(cheminPoster).size;
+    assert.ok(taillePoster > 0);
+    if (page === 'index.html') {
+      const taille = dimensions(cheminPoster);
+      assert.ok(taille, 'Dimensions du poster illisibles : ' + poster);
+      assert.equal(taille.largeur, LARGEUR_POSTER_ACCUEIL, poster);
+      assert.ok(Math.abs(taille.largeur / taille.hauteur - 9 / 16) < 0.002, poster);
+      assert.ok(taillePoster <= TAILLE_MAX_POSTER_ACCUEIL, poster + ' dépasse 90 Kio');
+    }
     assert.ok(html.includes('id="' + attribut(attrs, 'aria-labelledby') + '"'));
   });
   const cartes = [...html.matchAll(/<article class="video-card">([\s\S]*?)<\/article>/g)];
@@ -88,5 +100,5 @@ const robots = fs.readFileSync(path.join(dossier, 'robots.txt'), 'utf8');
 assert.ok(robots.includes(base + '/sitemap.xml'));
 assert.ok(robots.includes(base + '/video-sitemap.xml'));
 const cible = path.relative(racine, dossier);
-console.log('✅ Quatre MP4, VideoObject, video-sitemap.xml, robots.txt, vignettes et contrôles de lecture validés' +
+console.log('✅ Quatre MP4, posters accueil 480 px / <90 Kio, VideoObject, video-sitemap.xml, robots.txt et contrôles de lecture validés' +
   (cible ? ' (' + cible + ')' : '') + '.');

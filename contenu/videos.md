@@ -37,12 +37,24 @@ sur l'accueil). Aucun tarif ni offre n'a été modifié. Les titres restent sobr
   directement les fichiers statiques.
 
 Les quatre vignettes JPEG de `assets/img/videos/` sont de vraies images extraites
-à **00:00:01** dans chaque MP4, non des illustrations générées. Régénération :
+à **00:00:01** dans chaque MP4, non des illustrations générées. L'attribut natif
+`<video poster>` n'accepte ni `srcset` ni `<picture>` : les trois posters de
+l'accueil ont donc été ramenés de **640×1138 à 480×854** et recompressés en JPEG
+(qualité ImageMagick 70). Leur poids cumulé passe de **402 272 à 188 269 octets**,
+soit **−53,2 %**, sans changer les URLs référencées par le lecteur, `VideoObject`
+ou le sitemap. 480 px couvrent les cartes affichées jusqu'à 400 px CSS. Le poster
+B2B reste à 640 px : cette source alimente aussi son teaser responsive 240/360/640.
+
+Pour réextraire les images depuis les MP4, en gardant cette stratégie (qualité
+indicative ; les octets ne seront pas identiques à la recompression ImageMagick) :
 
 ```bash
 for f in assets/videos/*.mp4; do
-  ffmpeg -y -ss 1 -i "$f" -frames:v 1 -vf 'scale=640:-2' -q:v 3 \
-    "assets/img/videos/$(basename "$f" .mp4).jpg"
+  nom=$(basename "$f" .mp4)
+  largeur=480; qualite=5
+  if [ "$nom" = prospection-b2b ]; then largeur=640; qualite=3; fi
+  ffmpeg -y -ss 1 -i "$f" -frames:v 1 -vf "scale=${largeur}:-2" -q:v "$qualite" \
+    "assets/img/videos/$nom.jpg"
 done
 node build-site.js
 ```

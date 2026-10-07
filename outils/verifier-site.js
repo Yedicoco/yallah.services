@@ -48,11 +48,6 @@ const SCRIPTS_PAR_PAGE = {
   'admin.html': ['assets/js/fiche.js', 'assets/js/admin.js']
 };
 
-/* Images attendues mais pas encore fournies par le client (voir README). */
-const IMAGES_A_FOURNIR = new Set([
-  'assets/img/grille-tarifaire.jpg'
-]);
-
 /* Lecture des dimensions réelles (PNG, JPEG, WebP) sans dépendance. */
 const { dimensions } = require('./generer-images.js');
 
@@ -75,7 +70,7 @@ PAGES.forEach((page) => {
   const ressources = [];
   const motifs = [
     /<img[^>]+src="([^"]+)"/g,
-    /<link[^>]+href="([^"]+\.(?:css|png|jpg|jpeg|webp|svg|ico)(?:\?[^"]*)?)"/g,
+    /<link[^>]+href="([^"]+\.(?:css|png|jpg|jpeg|webp|avif|svg|ico)(?:\?[^"]*)?)"/g,
     /<script[^>]+src="([^"]+)"/g,
     /<meta[^>]+content="([^"]+\.(?:jpg|jpeg|png))"/g,
     /<video[^>]+poster="([^"]+)"/g
@@ -99,12 +94,8 @@ PAGES.forEach((page) => {
     });
   }
   const manquantes = Array.from(new Set(ressources)).filter((adresse) => !existe(adresse));
-  const aFournir = manquantes.filter((adresse) => IMAGES_A_FOURNIR.has(adresse));
-  const introuvables = manquantes.filter((adresse) => !IMAGES_A_FOURNIR.has(adresse));
-  if (introuvables.length) erreur(page + ' → fichiers introuvables : ' + introuvables.join(', '));
-  if (aFournir.length) avertir(page + ' → ' + aFournir.length + ' image(s) encore à fournir par le client : ' + aFournir.join(', '));
-  if (!manquantes.length) ok(page + ' → ' + new Set(ressources).size + ' ressources locales présentes');
-  else if (!introuvables.length) ok(page + ' → toutes les ressources attendues sont présentes (hors ' + aFournir.length + ' image(s) à fournir)');
+  if (manquantes.length) erreur(page + ' → fichiers introuvables : ' + manquantes.join(', '));
+  else ok(page + ' → ' + new Set(ressources).size + ' ressources locales présentes');
 
   /* Images responsives : proportions width/height et attribut sizes */
   const motifBalise = /<(img|source|link)\b[^>]*>/g;
@@ -132,6 +123,17 @@ PAGES.forEach((page) => {
   if (defauts.length) erreur(page + ' → ' + defauts.join(' ; '));
   else if (/\ssrcset="/.test(contenu)) ok(page + ' → srcset/sizes et proportions width/height cohérents');
 });
+
+/* Le preload du hero doit cibler exactement le srcset AVIF/sizes de son <picture>.
+   Un écart ferait précharger une variante pendant que le navigateur choisit l'autre. */
+if (existe('index.html')) {
+  const html = lire('index.html');
+  const preload = html.match(/<link\b[^>]*rel="preload"[^>]*as="image"[^>]*type="image\/avif"[^>]*imagesrcset="([^"]+)"[^>]*imagesizes="([^"]+)"/);
+  const hero = html.match(/<source\b[^>]*type="image\/avif"[^>]*srcset="([^"]+)"[^>]*sizes="([^"]+)"/);
+  if (!preload || !hero) erreur('index.html → preload AVIF ou <picture> AVIF du hero manquant');
+  else if (preload[1] !== hero[1] || preload[2] !== hero[2]) erreur('index.html → imagesrcset/imagesizes du preload AVIF différents du <picture> hero');
+  else ok('index.html → preload AVIF synchronisé au srcset/sizes du hero');
+}
 
 /* ── 2. Liens internes ── */
 section('2. Liens internes et ancres');

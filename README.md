@@ -60,7 +60,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── outils/verifier-contenu.js        # Contrôle du contenu SEO local (volume, recopie, balisage, maillage,
 │                                     #   affirmations commerciales et géographiques, domaine unique)
 ├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
-├── outils/generer-images.js          # Variantes responsives (srcset) WebP/JPEG via ImageMagick
+├── outils/generer-images.js          # Variantes responsives AVIF/WebP/JPEG via ImageMagick
 ├── outils/generer-sitemap.js         # Sitemaps pages + vidéos (lastmod = git), synchronisés dans robots.txt
 ├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
 ├── services-par-ville.html           # Hub : tous les services, ville par ville
@@ -502,12 +502,9 @@ aucun texte repris d'un concurrent.
 - **Villes** : listes `<select id="ville">` (candidature) et `#ctCity` (réservation foyers).
 - **Pixel Facebook / Google Analytics** : à ajouter avant toute campagne publicitaire.
 
-### Images binaires encore à fournir
+### Grille tarifaire officielle
 
-Un seul fichier est encore référencé par `index.html` sans être dans le dépôt (son référencement
-HTML est conservé, il ne s'affichera qu'après ajout) :
-
-- `assets/img/grille-tarifaire.jpg` — la grille tarifaire officielle (photo ou export du flyer)
+Le flyer officiel est intégré sous `assets/img/grille-tarifaire.jpg` et affiché dans l'accueil.
 
 ### Visuel d'accueil et images responsives
 
@@ -516,21 +513,32 @@ est une illustration photoréaliste générée par IA, inspirée de la présenta
 Elle ne représente pas l'équipe réelle ni des candidats disponibles. L'image de partage (Open Graph)
 de l'accueil est `assets/img/logo-og-1200x630.jpg`, générée à partir du logo officiel.
 
-Toutes les images de contenu sont servies en **WebP avec repli JPEG** et en **plusieurs largeurs**
-(`srcset` + `sizes`) : le navigateur ne télécharge que la taille utile à l'écran.
+Les images de contenu intégrées comme `<img>` (hero, packs et vignette-teaser B2B)
+sont servies en **AVIF → WebP → JPEG**, en plusieurs largeurs (`srcset` + `sizes`) :
+le navigateur choisit le premier format qu'il prend en charge et la taille adaptée à l'écran.
+Le lot AVIF comprend 38 variantes opaques : **1 678 618 octets en WebP** contre
+**1 369 047 en AVIF** (qualité 60), soit **−18,4 %**. Les logos gardent leur WebP avec alpha
+puis le PNG de repli, car l'encodeur ImageMagick utilisé aplatit la transparence AVIF.
+
+Les posters natifs `<video poster>` sont une exception : cet attribut ne prend ni `srcset`
+ni `<picture>`. Les trois posters de l'accueil sont donc des JPEG uniques de **480×854**,
+compressés à qualité 70 : leur poids cumulé est passé de **402 Ko à 188 Ko (−53 %)**.
 
 | Image | Largeurs produites | Affichée à |
 |---|---|---|
 | Hero (`hero-services-branded`) | 480 · 768 · 1080 · 1360 · 1678 (native) | pleine largeur, 1 360 px max |
 | Cartes de packs (`pack-*`, `garde-malade*`) | 480 · 800 (native) | ≈ 270 px (ordinateur) à 90 vw (mobile) |
-| Vignette vidéo B2B (`videos/prospection-b2b`) | 240 · 360 · 640 (native) | 180 px (112 px sur mobile) |
+| Posters vidéo accueil (`besoin-*`, `yallah-*`, `2026-*`) | 480 (JPEG unique, 56–77 Ko) | lecteur 9:16, jusqu'à 400 px |
+| Vignette-teaser vidéo B2B (`videos/prospection-b2b`) | 240 · 360 · 640 (native) | 180 px (112 px sur mobile) |
 | Logo (`logo-128`, `logo-256`) | WebP natif | 54 à 82 px |
 
-Les variantes suivent la convention `<nom>-<largeur>.<webp|jpg>` et sont produites par
-`node outils/generer-images.js` (ImageMagick requis : `apt install imagemagick` / `brew install imagemagick`).
+Les variantes suivent la convention `<nom>-<largeur>.<avif|webp|jpg>` et sont produites par
+`node outils/generer-images.js` (ImageMagick avec encodeur AVIF/AV1 : `apt install imagemagick libheif1` / `brew install imagemagick`).
 Pour **ajouter ou remplacer une image** : déposer le JPEG natif dans `assets/img/` (800 × 450 pour un
 pack), lancer `node outils/generer-images.js`, puis reporter dans le HTML le même `srcset`/`sizes`
-que les images voisines ; `node outils/verifier-site.js` refuse tout candidat manquant, tout
+que les images voisines — `<source type="image/avif">`, puis WebP, puis le JPEG de repli (le logo
+transparent reste WebP/PNG). `node outils/verifier-site.js` refuse tout candidat manquant, tout
 `srcset` sans `sizes` et tout `width`/`height` qui ne respecte pas les proportions du fichier.
-Les JPEG natifs ne sont jamais réécrits : ce sont aussi les images de partage (`og:image`) et les
-vignettes du sitemap vidéo.
+Le générateur ne réécrit pas les JPEG sources. Les trois posters accueil sont l'exception optimisée
+séparément et gardent leur URL, utilisée aussi comme vignette du `VideoObject` et du sitemap vidéo.
+Les images Open Graph et la source responsive B2B restent en pleine définition.
