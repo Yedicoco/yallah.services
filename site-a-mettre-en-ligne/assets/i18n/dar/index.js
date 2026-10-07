@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   451 chaînes, clés = textes d'origine de la page.
+   453 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -338,11 +338,13 @@ YS_TRAD("dar", "index", {
   "Le personnel est-il vérifié et formé ? ▾": "واش العاملين كيتحقق منهم وكيستافدو من تكوين؟ <span class=\"arr\">▾</span>",
   "Nous ne publions pas de garantie de vérification d’antécédents ni de formation certifiée. Les informations communiquées dépendent du profil ; demandez-les et vérifiez les documents et compétences avant toute décision.": "ما كنقدموش ضمانة على التحقق من السوابق ولا على تكوين معتمد. المعلومات اللي كتتعطى كتختلف حسب البروفيل؛ طلبها وتحقق من الوثائق والمهارات قبل أي قرار.",
   "Quel est le salaire mensuel de l'employée ? ▾": "شنو الأجر الشهري ديال الخدامة؟ <span class=\"arr\">▾</span>",
+  "Le salaire dépend du service et des tâches confiées. Notre grille officielle (salaire mensuel versé à l'employée) :": "الأجر كيعتامد على الخدمة والمهام المكلفة بيها. ها اللائحة الرسمية ديالنا (الأجر الشهري اللي كيتخلص للخدامة):",
   "• Ménage : villa 4 500 DH · mini villa 4 000 DH · appartement 3 500 DH": "• <strong>التنقية:</strong> فيلا 4 500 درهم · ميني فيلا 4 000 درهم · أبارتمان 3 500 درهم",
   "• Nounou : 1 enfant 3 500 DH (+ ménage 4 000 DH) · 2 enfants avec ménage 4 500/5 000 DH · 3 enfants 4 500 DH (+ ménage 5 000 DH)": "• <strong>الحضانة:</strong> درّي واحد 3 500 درهم (+ تنقية 4 000 درهم) · جوج دراري مع التنقية 4 500/5 000 درهم · 3 دراري 4 500 درهم (+ تنقية 5 000 درهم)",
   "• Cuisine : cuisine simple 4 000 DH · cuisine/ménage 5 000 DH · aide cuisine 3 500 DH · aide cuisine/ménage 4 000 DH": "• <strong>الطياب:</strong> طياب ساهل 4 000 درهم · طياب/تنقية 5 000 درهم · عاونة فالطياب 3 500 درهم · عاونة فالطياب/تنقية 4 000 درهم",
   "• Garde malade : simple 3 500 DH · avec ménage 4 000 DH": "• <strong>رعاية المريض:</strong> بسيطة 3 500 درهم · مع التنقية 4 000 درهم",
   "• À la journée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem": "• <strong>باليوم (كازا والرباط):</strong> تنقية 600 درهم/أسبوع · تنقية + طياب 800 درهم/أسبوع · تنقية + حضانة 800 درهم/أسبوع",
+  "Ces tarifs sont indicatifs et peuvent varier selon les conditions et responsabilités. À ces salaires s'ajoutent les frais de Mise en relation (500 ou 1 000 DH). Le salaire est versé directement à l'employée par le foyer.": "هاد الأثمنة تقريبية ويمكن تتبدل على حساب الظروف والمسؤوليات. كتزاد عليها مصاريف المطابقة (500 ولا 1 000 درهم). الأجر كيتخلص نيشان للخدامة من عند العائلة.",
   "Comment se passe la première rencontre avec l'employée ? ▾": "كيفاش كيتم أول لقاء مع الخدامة؟ <span class=\"arr\">▾</span>",
   "Vous pouvez échanger avec la personne et vérifier les informations utiles avant votre décision. Si vous souhaitez un autre profil, les modalités de remplacement prévues par la formule choisie s’appliquent.": "تقدر تهضر مع الشخص وتتحقق من المعلومات المهمة قبل القرار ديالك. إلا بغيتي بروفيل آخر، كيتطبقو شروط التبديل ديال الصيغة اللي اخترتي.",
   "Quelles langues parle l’employée ? ▾": "شنو اللغات اللي كتهضر بيهم الموظفة؟ <span class=\"arr\">▾</span>",

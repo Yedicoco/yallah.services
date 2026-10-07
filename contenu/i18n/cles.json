@@ -2041,6 +2041,12 @@
         "html": "Quel est le salaire mensuel de l'employée ? <span class=\"arr\">▾</span>"
       },
       {
+        "cle": "Le salaire dépend du service et des tâches confiées. Notre grille officielle (salaire mensuel versé à l'employée) :",
+        "occurrences": 1,
+        "exemple": "Le salaire dépend du service et des tâches confiées. Notre grille officielle (salaire mensuel versé à l'employée) :",
+        "langue": "fr"
+      },
+      {
         "cle": "• Ménage : villa 4 500 DH · mini villa 4 000 DH · appartement 3 500 DH",
         "occurrences": 1,
         "exemple": "• Ménage : villa 4 500 DH · mini villa 4 000 DH · appartement 3 500 DH",
@@ -2079,6 +2085,12 @@
         "langue": "fr",
         "balisage": "strong",
         "html": "• <strong>À la journée (Casa & Rabat) :</strong> ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem"
+      },
+      {
+        "cle": "Ces tarifs sont indicatifs et peuvent varier selon les conditions et responsabilités. À ces salaires s'ajoutent les frais de Mise en relation (500 ou 1 000 DH). Le salaire est versé directement à l'employée par le foyer.",
+        "occurrences": 1,
+        "exemple": "Ces tarifs sont indicatifs et peuvent varier selon les conditions et responsabilités. À ces salaires s'ajoutent les frais de Mise en relation (500 ou 1 000 DH). Le salaire est versé directement à l'employée par le foyer.",
+        "langue": "fr"
       },
       {
         "cle": "Comment se passe la première rencontre avec l'employée ? ▾",
