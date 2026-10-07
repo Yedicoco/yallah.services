@@ -16,6 +16,9 @@
      langue de base et le sélecteur n'est pas affiché.
    · Le choix du visiteur est mémorisé (localStorage « ys_langue ») et
      s'applique à toutes les pages du site.
+   · La langue par défaut est TOUJOURS le français : aucune détection de
+     la langue du navigateur (les robots rendent la page en locale en-US
+     et verraient un site anglais incohérent avec lang/hreflang/metas).
 
    API publique
        YSI18N.langue()             → 'fr' | 'dar' | 'dar-latn' | 'en'
@@ -402,11 +405,13 @@
     if (memoire === 'ar') memoire = 'dar';
     if (memoire && LANGUES[memoire]) return memoire;
 
-    var nav = (global.navigator.languages && global.navigator.languages[0]) ||
-      global.navigator.language || 'fr';
-    nav = String(nav).toLowerCase();
-    if (nav.indexOf('ar') === 0) return 'dar';
-    if (nav.indexOf('en') === 0) return 'en';
+    /* Pas de détection par navigator.language : les robots d'indexation
+       (Googlebot et la plupart des crawlers rendent la page en locale
+       en-US) verraient alors un site réécrit en anglais, en contradiction
+       avec lang="fr-MA", les balises hreflang, les metas et le JSON-LD —
+       un signal SEO incohérent. Le français (langue source) reste la
+       langue par défaut ; le visiteur change de langue via le sélecteur
+       (choix mémorisé) ou un lien « ?langue=… ». */
     return 'fr';
   }
 

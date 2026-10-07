@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   451 chaînes, clés = textes d'origine de la page.
+   453 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -338,11 +338,13 @@ YS_TRAD("en", "index", {
   "Le personnel est-il vérifié et formé ? ▾": "Are staff background-checked and trained? <span class=\"arr\">▾</span>",
   "Nous ne publions pas de garantie de vérification d’antécédents ni de formation certifiée. Les informations communiquées dépendent du profil ; demandez-les et vérifiez les documents et compétences avant toute décision.": "We do not claim to conduct background checks or provide certified training. Information shared varies by profile; ask for it and check documents and skills before making a decision.",
   "Quel est le salaire mensuel de l'employée ? ▾": "What is the employee's monthly salary? <span class=\"arr\">▾</span>",
+  "Le salaire dépend du service et des tâches confiées. Notre grille officielle (salaire mensuel versé à l'employée) :": "The salary depends on the service and the tasks entrusted. Our official price list (monthly salary paid to the employee):",
   "• Ménage : villa 4 500 DH · mini villa 4 000 DH · appartement 3 500 DH": "• <strong>Cleaning:</strong> villa 4,500 MAD · mini villa 4,000 MAD · apartment 3,500 MAD",
   "• Nounou : 1 enfant 3 500 DH (+ ménage 4 000 DH) · 2 enfants avec ménage 4 500/5 000 DH · 3 enfants 4 500 DH (+ ménage 5 000 DH)": "• <strong>Nanny:</strong> 1 child 3,500 MAD (+ cleaning 4,000 MAD) · 2 children with cleaning 4,500/5,000 MAD · 3 children 4,500 MAD (+ cleaning 5,000 MAD)",
   "• Cuisine : cuisine simple 4 000 DH · cuisine/ménage 5 000 DH · aide cuisine 3 500 DH · aide cuisine/ménage 4 000 DH": "• <strong>Cooking:</strong> simple cooking 4,000 MAD · cooking/cleaning 5,000 MAD · kitchen help 3,500 MAD · kitchen help/cleaning 4,000 MAD",
   "• Garde malade : simple 3 500 DH · avec ménage 4 000 DH": "• <strong>Caregiving:</strong> simple 3,500 MAD · with cleaning 4,000 MAD",
   "• À la journée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem": "• <strong>Daily (Casa & Rabat):</strong> cleaning 600 MAD/week · cleaning + cooking 800 MAD/week · cleaning + nanny 800 MAD/week",
+  "Ces tarifs sont indicatifs et peuvent varier selon les conditions et responsabilités. À ces salaires s'ajoutent les frais de Mise en relation (500 ou 1 000 DH). Le salaire est versé directement à l'employée par le foyer.": "These rates are indicative and may vary with the conditions and responsibilities. Placement fees (500 or 1,000 MAD) are added to these salaries. The salary is paid directly to the employee by the household.",
   "Comment se passe la première rencontre avec l'employée ? ▾": "How does the first meeting with the employee work? <span class=\"arr\">▾</span>",
   "Vous pouvez échanger avec la personne et vérifier les informations utiles avant votre décision. Si vous souhaitez un autre profil, les modalités de remplacement prévues par la formule choisie s’appliquent.": "You can speak with the person and check relevant information before deciding. If you want another profile, the replacement terms of your chosen package apply.",
   "Quelles langues parle l’employée ? ▾": "What languages does the employee speak? <span class=\"arr\">▾</span>",

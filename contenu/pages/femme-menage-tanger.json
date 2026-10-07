@@ -1,0 +1,189 @@
+{
+  "fichier": "femme-menage-tanger.html",
+  "ville": "Tanger",
+  "serviceType": "Ménage et entretien du domicile",
+  "title": "Femme de ménage à Tanger | Yallah Services",
+  "description": "Femme de ménage à Tanger : Malabata, Iberia, Jbel Kbir ou Cap Spartel. Poste mensuel logé ou non logé, maison à l'année ou maison d'été, avec suivi écrit.",
+  "h1": "Femme de ménage à <em>Tanger</em>",
+  "h1Texte": "Femme de ménage à Tanger",
+  "crumb": "Femme de ménage à Tanger",
+  "kicker": "Yallah Services · Tanger",
+  "ogDescription": "Recherche d'une femme de ménage à Tanger : baie de Malabata, Iberia, Jbel Kbir, Cap Spartel et Achakar. Maisons à l'année et maisons d'été.",
+  "lead": "Ville de bord de mer, Tanger use les maisons plus vite qu'ailleurs : embruns, humidité, vitres à refaire, linge qui ne sèche jamais tout à fait l'hiver. Un poste de ménage s'y pense en fonction de la maison et de la saison — c'est exactement ce que nous clarifions avec vous avant de chercher une candidate.",
+  "ctaPrincipal": "Décrire mon besoin sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche une femme de ménage à Tanger. Mon quartier et mon besoin : ",
+  "noteHero": "Maisons à l'année et maisons d'été · Secteurs listés plus bas · Frais expliqués avant toute mise en relation.",
+  "image": "assets/img/pack-nonlogee-menage.jpg",
+  "imageAlt": "Entretien d'une maison à Tanger avec une femme de ménage présentée par Yallah Services",
+  "legendeImage": "De notre base de Casablanca, chaque demande pour Tanger est cadrée par écrit sur WhatsApp, puis suivie après le placement.",
+  "sections": [
+    {
+      "titre": "Trois Tanger, trois façons de tenir une maison",
+      "intro": "La baie, la montagne et les quartiers résidentiels n'imposent pas les mêmes postes. Situer votre maison, c'est déjà définir la moitié du besoin.",
+      "cartes": [
+        {
+          "t": "La baie et Malabata",
+          "p": "Appartements et villas face à la mer, résidences avec services, location d'une partie de l'année pour certains : l'entretien y est régulier, avec un vrai sujet vitres, sols et textiles exposés à l'air marin."
+        },
+        {
+          "t": "Jbel Kbir, Cap Spartel et Achakar",
+          "p": "Maisons en hauteur, jardins, pièces nombreuses : ces propriétés demandent souvent un temps plein, parfois une présence logée, et une personne à l'aise avec une grande maison plutôt qu'un petit appartement."
+        },
+        {
+          "t": "Iberia et les quartiers d'année",
+          "p": "Familles installées, enfants scolarisés, horaires de travail classiques : le poste type est un mensuel non logé, quelques jours par semaine ou à temps plein, avec repassage et entretien courant."
+        }
+      ]
+    },
+    {
+      "titre": "Maison d'été : préparer, tenir, refermer",
+      "intro": "Beaucoup de maisons tangéroises vivent au rythme des étés, notamment celles de familles marocaines résidant à l'étranger. Ce rythme particulier se prépare.",
+      "cartes": [
+        {
+          "t": "Avant votre arrivée",
+          "p": "Remise en route de la maison après des mois de fermeture : aération, poussière accumulée, literie, cuisine. Dites-nous vos dates réelles et l'état de la maison, nous chercherons une organisation compatible."
+        },
+        {
+          "t": "Pendant la saison",
+          "p": "Maison pleine, repas nombreux, linge quotidien : l'été est la période la plus intense. Un périmètre écrit — tâches, horaires, jours de repos — évite que le poste déborde et que la personne s'épuise."
+        },
+        {
+          "t": "À la fermeture, et après",
+          "p": "Housses, volets, linge rangé, maison sécurisée : la fermeture fait partie du poste si vous le prévoyez d'avance. Pour une présence hors saison, parlez-nous-en : c'est un autre besoin, qui peut relever du gardiennage."
+        }
+      ]
+    },
+    {
+      "titre": "Comment nous travaillons avec les foyers de Tanger",
+      "intro": "Pas d'agence sur place, et pas de mystère non plus : une méthode écrite, les mêmes règles qu'ailleurs, et des réponses franches.",
+      "cartes": [
+        {
+          "t": "Un cadrage honnête",
+          "liste": [
+            "Votre quartier, votre type de maison, vos dates et vos tâches prioritaires",
+            "La formule : mensuel logé ou non logé, temps plein ou partiel",
+            "Ce qui n'entre pas dans le poste : jardin, piscine, travaux, soins"
+          ]
+        },
+        {
+          "t": "Des profils, pas des miracles",
+          "p": "Nous présentons des candidates disponibles dont l'expérience déclarée correspond à votre maison. S'il n'y a pas de profil adapté à vos dates, nous vous le disons plutôt que de forcer une mise en relation."
+        },
+        {
+          "t": "Un salaire posé d'avance",
+          "p": "La grille nationale sert de repère et le salaire se convient directement entre vous et la personne, avant la prise de poste. Les frais de mise en relation sont expliqués dès le premier échange, jamais découverts après."
+        }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Secteurs de Tanger où portent nos recherches",
+    "intro": "Les demandes que nous traitons à Tanger viennent principalement des secteurs suivants.",
+    "liste": [
+      "Malabata et la baie",
+      "Iberia",
+      "Jbel Kbir",
+      "Cap Spartel",
+      "Achakar"
+    ],
+    "note": "Comme dans toutes nos villes, un secteur listé oriente la recherche mais ne garantit pas une desserte mission par mission : la disponibilité des profils et les conditions convenues font la réponse finale. Écrivez-nous votre quartier, nous vous répondrons sans détour."
+  },
+  "tarifs": {
+    "titre": "Repères de salaire à Tanger",
+    "legende": "Salaires mensuels versés à l'employée (grille officielle Yallah Services)",
+    "intro": "Mêmes repères que dans nos autres villes d'intervention : la grille est nationale, le montant final se convient selon la maison et les tâches réelles.",
+    "lignes": [
+      [
+        "Ménage simple dans une villa",
+        "4 500 DH"
+      ],
+      [
+        "Ménage simple dans une mini villa",
+        "4 000 DH"
+      ],
+      [
+        "Ménage dans un appartement",
+        "3 500 DH"
+      ]
+    ],
+    "note": "À Tanger, les postes proposés sont mensuels : la prestation à la journée de notre grille ne couvre que Casablanca et Rabat. Frais de mise en relation : 500 DH (Sérénité) ou 1 000 DH (Premium), après validation du profil, toujours séparés du salaire."
+  },
+  "titreEtapes": "De votre message au placement",
+  "introEtapes": "Le parcours tient en quatre temps, entièrement par écrit, où que vous soyez — à Tanger ou à l'étranger.",
+  "etapes": [
+    {
+      "t": "Écrivez-nous d'où vous êtes",
+      "p": "Depuis Tanger ou depuis l'étranger si la maison est votre résidence d'été : quartier, type de maison, dates et attentes."
+    },
+    {
+      "t": "Cadrons le poste",
+      "p": "Périmètre des tâches, formule, salaire de repère selon la grille : tout est posé par écrit avant la recherche."
+    },
+    {
+      "t": "Rencontrez les candidates",
+      "p": "Sur place ou à distance d'abord, selon votre situation : nous transmettons l'expérience déclarée et les points à vérifier en entretien."
+    },
+    {
+      "t": "Démarrez, nous suivons",
+      "p": "Après la prise de poste, le fil WhatsApp reste ouvert pour le suivi et, si nécessaire, les remplacements prévus par votre formule."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Quel salaire pour une femme de ménage à Tanger ?",
+      "r": "Notre grille nationale donne les repères : 3 500 DH par mois en appartement, 4 000 DH en mini villa, 4 500 DH en villa, pour un ménage simple. Selon la taille de la maison et les tâches, le montant final se convient entre vous et la personne. Les frais de mise en relation (500 ou 1 000 DH) sont réglés une fois le profil validé."
+    },
+    {
+      "q": "Je vis à l'étranger et ma maison de Tanger sert l'été : pouvez-vous m'aider ?",
+      "r": "Oui, c'est une demande fréquente à Tanger. Donnez-nous vos dates réelles, l'état de la maison et un moyen d'accès (proche sur place, gardien, voisin de confiance) : nous cadrons le poste par écrit avec vous, à distance, et cherchons une candidate compatible avec ce calendrier."
+    },
+    {
+      "q": "Proposez-vous le ménage à la journée à Tanger ?",
+      "r": "Non : la prestation à la journée de notre grille est limitée à Casablanca et Rabat. À Tanger, nous recherchons des postes mensuels, logés ou non. Pour un besoin très ponctuel, écrivez-nous tout de même : nous vous dirons franchement si une solution existe."
+    },
+    {
+      "q": "Une personne logée est-elle possible à Tanger ?",
+      "r": "Oui, en particulier pour les grandes maisons de Jbel Kbir, du Cap Spartel ou d'Achakar. Il faut une chambre disponible et un cadre écrit : horaires réels, jours de repos, tâches. Ce cadrage, fait avant la mise en relation, protège la famille comme l'employée."
+    },
+    {
+      "q": "Quels quartiers de Tanger couvrez-vous ?",
+      "r": "Malabata et la baie, Iberia, Jbel Kbir, Cap Spartel et Achakar concentrent nos recherches ; les autres secteurs s'étudient selon les demandes. Aucun quartier listé ne vaut desserte garantie pour une mission donnée : indiquez votre adresse approximative et nous vous répondrons précisément."
+    },
+    {
+      "q": "Comment assurez-vous le suivi depuis Casablanca ?",
+      "r": "Par le fil WhatsApp de votre demande : point d'étape après la prise de poste, ajustements de périmètre si besoin, et application des remplacements prévus par votre formule — 2 mois en Sérénité, 6 mois en Premium, selon des conditions expliquées avant la mise en relation."
+    }
+  ],
+  "titreLiens": "Ces pages peuvent aussi vous servir",
+  "introLiens": "Selon votre situation à Tanger — résidence d'année, maison d'été ou activité professionnelle — voici les bonnes portes d'entrée.",
+  "liens": [
+    {
+      "fichier": "femme-menage-casablanca.html",
+      "titre": "Femme de ménage à Casablanca",
+      "texte": "Notre ville de base, avec postes mensuels et prestation à la journée."
+    },
+    {
+      "fichier": "femme-menage-marrakech.html",
+      "titre": "Femme de ménage à Marrakech",
+      "texte": "Résidences principales et secondaires : une problématique proche de Tanger."
+    },
+    {
+      "fichier": "femme-menage-rabat.html",
+      "titre": "Femme de ménage à Rabat",
+      "texte": "Souissi, Hay Riad, Agdal : nos recherches de ménage dans la capitale."
+    },
+    {
+      "fichier": "vigile-casablanca.html",
+      "titre": "Vigile et gardien à Casablanca",
+      "texte": "Pour une présence hors saison ou la surveillance d'une maison fermée."
+    },
+    {
+      "fichier": "services-par-ville.html",
+      "titre": "Tous nos services par ville",
+      "texte": "La carte complète de nos métiers et villes d'intervention."
+    }
+  ],
+  "titreCta": "Un besoin de ménage à Tanger ?",
+  "texteCta": "Maison d'année ou maison d'été, écrivez-nous votre quartier, vos dates et vos attentes : nous vous répondons sur WhatsApp, avec ce qui est possible et ce qui ne l'est pas.",
+  "ctaSecondaire": "Échanger avec Yallah Services"
+}

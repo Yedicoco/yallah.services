@@ -244,10 +244,6 @@
   "pagesHorsSitemap": [
     "admin.html",
     "candidature-confirmation.html",
-    "plan-placement-du-formulaire.html",
-    "femme-menage-marrakech.html",
-    "femme-menage-rabat.html",
-    "femme-menage-tanger.html",
-    "nounou-rabat.html"
+    "plan-placement-du-formulaire.html"
   ]
 }

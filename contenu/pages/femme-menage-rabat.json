@@ -1,0 +1,201 @@
+{
+  "fichier": "femme-menage-rabat.html",
+  "ville": "Rabat",
+  "serviceType": "Ménage et entretien du domicile",
+  "title": "Femme de ménage à Rabat | Yallah Services",
+  "description": "Femme de ménage à Rabat : Souissi, Hay Riad, Agdal ou Les Ambassadeurs. Nous précisons votre besoin, présentons des profils adaptés et suivons le placement.",
+  "h1": "Femme de ménage à <em>Rabat</em>",
+  "h1Texte": "Femme de ménage à Rabat",
+  "crumb": "Femme de ménage à Rabat",
+  "kicker": "Yallah Services · Rabat",
+  "ogDescription": "Recherche d'une femme de ménage à Rabat : villa de Souissi, appartement d'Agdal, poste logé ou non logé, prestation à la journée.",
+  "lead": "Une villa à Souissi, un appartement à Agdal ou une maison à Hay Riad n'appellent pas le même poste de ménage. Dites-nous où vous êtes et ce que vous attendez : nous précisons le besoin avec vous, puis nous recherchons des profils qui y correspondent vraiment.",
+  "ctaPrincipal": "Décrire mon besoin sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche une femme de ménage à Rabat. Voici mon besoin : ",
+  "noteHero": "Particuliers et entreprises · Secteurs de Rabat listés plus bas · Frais expliqués avant toute mise en relation.",
+  "image": "assets/img/pack-nonlogee-menage.jpg",
+  "imageAlt": "Entretien d'un domicile à Rabat avec une femme de ménage présentée par Yallah Services",
+  "legendeImage": "Notre base est à Casablanca, à Hay Hassani : les demandes pour Rabat y sont traitées par écrit, sur WhatsApp, du premier échange au suivi.",
+  "sections": [
+    {
+      "titre": "À Rabat, les postes se construisent sur la régularité",
+      "intro": "Capitale administrative, Rabat vit à horaires fixes. Les foyers y cherchent moins une intervention de dépannage qu'une personne stable, qui connaît la maison et revient aux mêmes heures.",
+      "cartes": [
+        {
+          "t": "Villas de Souissi et des Ambassadeurs",
+          "p": "Grandes surfaces, étages, linge de maison, parfois d'autres employés déjà en poste : le poste doit être cadré pour que chacun sache ce qui lui revient. La discrétion compte autant que le soin du travail, et nous en parlons ouvertement avec vous avant de chercher."
+        },
+        {
+          "t": "Maisons et appartements de Hay Riad",
+          "p": "Les familles de cadres et de fonctionnaires y attendent des horaires calés sur leurs journées de travail, souvent en formule non logée. L'entretien courant et le repassage forment l'essentiel du poste, avec des consignes stables d'une semaine à l'autre."
+        },
+        {
+          "t": "Agdal et Haut Agdal",
+          "p": "Appartements de taille moyenne, familles jeunes, emplois du temps chargés : la demande type porte sur quelques passages par semaine ou un mi-temps. C'est aussi le secteur où la prestation à la journée est la plus demandée."
+        }
+      ]
+    },
+    {
+      "titre": "Trois manières de travailler avec une femme de ménage à Rabat",
+      "intro": "Avant de parler profils, choisissez la formule. C'est elle qui détermine le salaire, le rythme et le type de candidate à rechercher.",
+      "cartes": [
+        {
+          "t": "Poste mensuel non logé",
+          "p": "La personne vient selon un planning convenu et rentre chez elle. Formule la plus courante à Rabat, bien adaptée aux quartiers desservis par le tramway et aux foyers sans chambre disponible."
+        },
+        {
+          "t": "Poste mensuel logé",
+          "p": "La personne vit à votre domicile, avec un ou deux jours de repos convenus. Cette formule demande une chambre et un cadre clair : horaires réels, tâches attendues, moments de repos. Nous mettons tout cela par écrit avec vous avant la mise en relation."
+        },
+        {
+          "t": "Prestation à la journée",
+          "p": "Rabat fait partie, avec Casablanca, des deux villes où notre grille prévoit le ménage à la journée : ménage normal ou grand ménage, dans la limite de 8 heures, matériel fourni par le foyer et réservation un jour à l'avance."
+        }
+      ]
+    },
+    {
+      "titre": "Ce que nous vous demanderons avant de chercher",
+      "intro": "Cinq réponses suffisent pour lancer une recherche sérieuse. Les voici, pour que vous puissiez les préparer.",
+      "cartes": [
+        {
+          "t": "Le logement et les tâches",
+          "liste": [
+            "Type de logement : villa, maison, appartement, et surface approximative",
+            "Tâches prioritaires : entretien courant, repassage, linge de maison",
+            "Ce qui est hors poste : bricolage, jardin, soins — d'autres métiers existent pour cela"
+          ]
+        },
+        {
+          "t": "Le rythme et la formule",
+          "liste": [
+            "Jours et horaires souhaités, ou formule logée",
+            "Date de démarrage envisagée",
+            "Présence d'enfants ou d'animaux à la maison"
+          ]
+        },
+        {
+          "t": "Ce que nous ne vous demandons pas",
+          "p": "Ni votre adresse exacte avant la mise en relation, ni d'engagement : l'échange WhatsApp sert à cadrer le besoin, et vous restez libre de votre décision à chaque étape."
+        }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Secteurs de Rabat où se concentrent nos recherches",
+    "intro": "Les demandes que nous traitons à Rabat viennent surtout des secteurs résidentiels suivants. D'autres quartiers restent possibles : posez-nous la question.",
+    "liste": [
+      "Souissi",
+      "Hay Riad",
+      "Les Ambassadeurs",
+      "Agdal",
+      "Haut Agdal",
+      "Témara et Harhoura — selon les demandes"
+    ],
+    "note": "Un secteur listé est une zone de recherche prioritaire, pas une promesse de desserte rue par rue : chaque mission dépend du profil disponible et des conditions convenues. Indiquez votre quartier, nous vous répondrons précisément."
+  },
+  "tarifs": {
+    "titre": "Repères de salaire à Rabat",
+    "legende": "Salaires mensuels versés à l'employée (grille officielle Yallah Services)",
+    "intro": "Notre grille est la même dans toutes nos villes d'intervention : elle donne un repère, le montant final se convient entre vous et la personne selon les tâches et les horaires.",
+    "lignes": [
+      [
+        "Ménage simple dans une villa",
+        "4 500 DH"
+      ],
+      [
+        "Ménage simple dans une mini villa",
+        "4 000 DH"
+      ],
+      [
+        "Ménage dans un appartement",
+        "3 500 DH"
+      ]
+    ],
+    "note": "À la journée (Rabat et Casablanca uniquement) : ménage normal 400 DH en villa / 300 DH en appartement ; grand ménage 700 DH en villa / 500 DH en appartement, 8 h maximum, paiement après le service. Frais de mise en relation : 500 DH (Sérénité) ou 1 000 DH (Premium), réglés après validation du profil, séparément du salaire."
+  },
+  "titreEtapes": "Une demande à Rabat, pas à pas",
+  "introEtapes": "Tout se passe par écrit sur WhatsApp : vous gardez la trace de ce qui a été convenu, nous aussi.",
+  "etapes": [
+    {
+      "t": "Vous nous écrivez",
+      "p": "Quartier, type de logement, tâches attendues, formule souhaitée et date de démarrage : un message suffit pour commencer."
+    },
+    {
+      "t": "Nous cadrons ensemble",
+      "p": "Nous reformulons le poste, posons les questions manquantes et vous disons franchement si la demande relève du ménage ou d'un autre métier."
+    },
+    {
+      "t": "Nous présentons des profils",
+      "p": "La recherche se fait parmi les candidates disponibles correspondant à votre besoin. Nous vous transmettons les informations utiles pour préparer votre entretien."
+    },
+    {
+      "t": "Vous choisissez, nous suivons",
+      "p": "La décision vous appartient. Après le placement, nous restons joignables et faisons le point avec vous sur la période prévue par votre formule."
+    }
+  ],
+  "missions": [
+    {
+      "nom": "Basma H.",
+      "lieu": "Rabat",
+      "texte": "Cliente accompagnée à Rabat, de l'écoute du besoin jusqu'au suivi après le placement. Ville confirmée par la cliente."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Quel est le salaire d'une femme de ménage à Rabat ?",
+      "r": "Notre grille donne les repères suivants, identiques à toutes nos villes : 3 500 DH par mois en appartement, 4 000 DH en mini villa, 4 500 DH en villa pour un ménage simple. Le montant final se convient selon les tâches, la surface et la formule logée ou non logée. Les frais de mise en relation (500 ou 1 000 DH) sont distincts du salaire."
+    },
+    {
+      "q": "Le ménage à la journée existe-t-il à Rabat ?",
+      "r": "Oui : Rabat et Casablanca sont les deux villes couvertes par cette prestation. Ménage normal à 300 DH en appartement et 400 DH en villa, grand ménage à 500 DH en appartement et 700 DH en villa, dans la limite de 8 heures, matériel fourni par le foyer, réservation un jour à l'avance et paiement après le service."
+    },
+    {
+      "q": "Avez-vous un bureau à Rabat ?",
+      "r": "Non, et nous préférons vous le dire clairement : notre base est à Casablanca, à Hay Hassani. Les demandes pour Rabat sont traitées par écrit sur WhatsApp, de la définition du besoin au suivi après placement, et les rencontres avec les candidates s'organisent selon les disponibilités de chacun."
+    },
+    {
+      "q": "Puis-je demander une personne logée à Rabat ?",
+      "r": "Oui, si vous disposez d'une chambre et acceptez de fixer par écrit les horaires réels, les tâches et les jours de repos. Ce cadrage, fait avant la mise en relation, est la meilleure protection des deux parties."
+    },
+    {
+      "q": "Couvrez-vous mon quartier de Rabat ?",
+      "r": "Nos recherches se concentrent sur Souissi, Hay Riad, Les Ambassadeurs, Agdal et Haut Agdal, et s'étendent à Témara et Harhoura selon les demandes. Un secteur listé ne vaut pas desserte automatique pour une mission donnée : donnez-nous votre quartier approximatif et nous vous répondrons précisément."
+    },
+    {
+      "q": "Et si la personne ne convient pas ?",
+      "r": "Les formules Sérénité et Premium prévoient des remplacements pendant respectivement 2 et 6 mois, selon des conditions expliquées avant la mise en relation. Nous restons joignables après le placement pour suivre la situation avec vous."
+    }
+  ],
+  "titreLiens": "À voir aussi pour votre foyer à Rabat",
+  "introLiens": "Le ménage est souvent la première demande, rarement la seule. Voici les pages voisines qui peuvent vous servir.",
+  "liens": [
+    {
+      "fichier": "nounou-rabat.html",
+      "titre": "Nounou à Rabat",
+      "texte": "Garde d'enfants à Rabat : horaires de bureau, sorties d'école, formule logée ou non."
+    },
+    {
+      "fichier": "femme-menage-casablanca.html",
+      "titre": "Femme de ménage à Casablanca",
+      "texte": "Notre ville de base : ménage en villa, appartement et prestation à la journée."
+    },
+    {
+      "fichier": "femme-menage-marrakech.html",
+      "titre": "Femme de ménage à Marrakech",
+      "texte": "Villas de la Palmeraie, Guéliz et résidences secondaires : le même service à Marrakech."
+    },
+    {
+      "fichier": "femme-menage-tanger.html",
+      "titre": "Femme de ménage à Tanger",
+      "texte": "Baie de Malabata, Iberia, maisons d'été : nos recherches de ménage à Tanger."
+    },
+    {
+      "fichier": "services-par-ville.html",
+      "titre": "Tous nos services par ville",
+      "texte": "La vue d'ensemble de nos métiers et de nos villes d'intervention au Maroc."
+    }
+  ],
+  "titreCta": "Un besoin de ménage à Rabat ?",
+  "texteCta": "Écrivez-nous votre quartier, votre type de logement et la formule souhaitée : nous vous répondons sur WhatsApp en vous disant ce qui est possible, et à quelles conditions.",
+  "ctaSecondaire": "Échanger avec Yallah Services"
+}

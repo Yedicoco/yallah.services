@@ -198,6 +198,13 @@ function rendrePage(page) {
   const waCta = waLien(page.messageWhatsAppCta || page.messageWhatsApp || ('Bonjour Yallah Services, je souhaite un renseignement : ' + page.h1Texte + '.'));
   const villes = CONFIG.villes.filter((v) => v.statut !== 'candidate').map((v) => v.nom).join(' · ');
 
+  /* Variante WebP de l'illustration si elle existe à côté du JPEG/PNG :
+     servie en priorité par <picture>, le JPEG restant le repli universel. */
+  const cheminWebp = String(page.image).replace(/\.(?:jpe?g|png)$/i, '.webp');
+  const sourceWebp = fs.existsSync(path.join(RACINE, cheminWebp))
+    ? '<source type="image/webp" srcset="' + escAttr(cheminWebp) + '">'
+    : '';
+
   return `<!doctype html>
 <html lang="fr-MA">
 <head>
@@ -257,7 +264,7 @@ ${rendreSchema(page)}
           <div class="local-actions"><a class="local-btn local-btn-main" href="${waHero}" target="_blank" rel="noopener" data-src="${page.fichier}">${esc(page.ctaPrincipal || 'Demander un profil sur WhatsApp')}</a><a class="local-btn local-btn-secondary" href="index.html#packs">Voir les packs</a></div>
           <p class="local-note">${esc(page.noteHero)}</p>
         </div>
-        <figure class="local-visual"><img src="${page.image}" width="1200" height="800" alt="${escAttr(page.imageAlt)}"><figcaption>${esc(page.legendeImage)}</figcaption></figure>
+        <figure class="local-visual"><picture>${sourceWebp}<img src="${page.image}" width="1200" height="800" alt="${escAttr(page.imageAlt)}" decoding="async"></picture><figcaption>${esc(page.legendeImage)}</figcaption></figure>
       </section>
     </div>
 
@@ -287,6 +294,7 @@ ${rendreMaillage(page)}
     <p><a href="index.html">Accueil</a> · <a href="services-par-ville.html">Services par ville</a> · <a href="personnel-entreprises.html">Entreprises</a> · <a href="candidature.html">Espace candidats</a> · <a href="mailto:${EMAIL}">${EMAIL}</a> · <a href="${WA}">+212 691 733 585</a></p>
     <p>Suivez-nous : <a href="https://web.facebook.com/yallahservicesmaroc" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://www.instagram.com/yallahservice/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.tiktok.com/@yallah.services.m" target="_blank" rel="noopener noreferrer">TikTok</a> · <a href="https://www.linkedin.com/in/yallah-services/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     <p>${villes}</p>
+    <p data-ys-notrad><a href="mentions-legales.html">Mentions légales</a></p>
   </div></footer>
 </body>
 </html>

@@ -351,6 +351,8 @@ h1.ht em{font-style:italic;background:linear-gradient(135deg,#d8b361,#f2db9b);-w
 .faq-a{display:none;padding:0 18px 14px;color:#6b7280;font-size:12px;line-height:1.7;border-top:1px solid #f3f4f6}
 .faq-a.open{display:block}
 .faq-a strong{color:#0b2035}
+.faq-a p{margin:0}
+.faq-a p+.faq-list-in,.faq-a .faq-list-in+p{margin-top:6px}
 .faq-a .faq-list-in{padding-left:16px;margin-top:6px}
 .faq-a .faq-list-in li{margin-bottom:3px}
 

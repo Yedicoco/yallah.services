@@ -1,0 +1,182 @@
+{
+  "fichier": "nounou-rabat.html",
+  "ville": "Rabat",
+  "serviceType": "Garde d'enfants à domicile",
+  "title": "Nounou à Rabat | Yallah Services",
+  "description": "Nounou à Rabat pour un, deux ou trois enfants : garde à domicile, sorties d'école, formule logée ou non, avec ou sans ménage. Repères de salaire inclus.",
+  "h1": "Nounou à <em>Rabat</em>",
+  "h1Texte": "Nounou à Rabat",
+  "crumb": "Nounou à Rabat",
+  "kicker": "Yallah Services · Rabat",
+  "ogDescription": "Recherche d'une nounou à Rabat : garde d'un ou plusieurs enfants, sorties d'école à Agdal ou Hay Riad, nounou logée ou non logée.",
+  "lead": "Deux parents qui travaillent, des écoles aux quatre coins de la ville et des journées qui ne finissent pas à 16 h : à Rabat, la garde d'enfants est d'abord une question d'organisation. Nous vous aidons à définir le poste, puis nous recherchons une nounou dont l'expérience correspond à l'âge de vos enfants et à vos horaires.",
+  "ctaPrincipal": "Décrire mon besoin sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche une nounou à Rabat. L'âge de mes enfants et mes horaires : ",
+  "noteHero": "Garde à votre domicile · Un à trois enfants · Conditions et frais expliqués avant la mise en relation.",
+  "image": "assets/img/pack-nonlogee-nounou.jpg",
+  "imageAlt": "Garde d'enfants à domicile à Rabat avec une nounou présentée par Yallah Services",
+  "legendeImage": "Les demandes pour Rabat sont traitées depuis notre base de Casablanca, par écrit sur WhatsApp, jusqu'au suivi après placement.",
+  "sections": [
+    {
+      "titre": "Une garde qui épouse les horaires de la capitale",
+      "intro": "Administrations, ambassades, universités : Rabat travaille à heures fixes, et c'est autour de ces heures que se dessine le poste de nounou.",
+      "cartes": [
+        {
+          "t": "Journées de bureau",
+          "p": "Le besoin le plus fréquent : une présence de la fin de matinée au retour des parents, avec repas des enfants, sieste des petits et relais à la sortie de l'école. Les horaires réels se posent par écrit avant la mise en relation."
+        },
+        {
+          "t": "Sorties d'école et trajets",
+          "p": "Récupérer les enfants à Agdal, les ramener à Hay Riad, enchaîner goûter et devoirs : précisez l'école, la distance et le moyen de transport envisagé. Ces détails changent le profil à rechercher, et nous vous les demanderons."
+        },
+        {
+          "t": "Soirées et semaines chargées",
+          "p": "Conseils, déplacements, permanences : si vos semaines débordent, la formule logée offre une présence continue avec des jours de repos convenus. Elle suppose une chambre disponible et un cadre clair, que nous posons avec vous."
+        }
+      ]
+    },
+    {
+      "titre": "Nounou seule, ou nounou et ménage : à décider avant, pas après",
+      "intro": "C'est le point qui crée le plus de malentendus dans les foyers. Notre grille distingue clairement les deux postes, et leurs salaires.",
+      "cartes": [
+        {
+          "t": "Garde d'enfants seule",
+          "p": "La personne s'occupe des enfants : repas, jeux, activités, accompagnements. Le logement reste à la charge du foyer ou d'un autre poste. C'est la formule qui garantit le plus de disponibilité pour les enfants eux-mêmes."
+        },
+        {
+          "t": "Garde avec participation au ménage",
+          "p": "La personne combine les deux rôles, avec un salaire plus élevé selon notre grille. Ce poste fonctionne quand les tâches ménagères sont bornées : dites-nous précisément ce que vous attendez, nous le transmettons tel quel aux candidates."
+        },
+        {
+          "t": "Ce que le poste de nounou n'est pas",
+          "p": "Une nounou n'est ni une infirmière ni une enseignante à domicile : les soins médicaux relèvent du garde-malade, le soutien scolaire d'un autre intervenant. Poser ces limites d'entrée évite les déceptions des deux côtés."
+        }
+      ]
+    },
+    {
+      "titre": "Choisir sur l'expérience déclarée, pas sur l'intuition",
+      "intro": "Nous ne publions pas de promesses de vérification que nous ne pouvons pas tenir. Voici ce que nous faisons réellement, et ce que nous vous conseillons de faire.",
+      "cartes": [
+        {
+          "t": "Ce que nous recueillons",
+          "liste": [
+            "La fiche de candidature remplie par chaque candidate",
+            "L'expérience déclarée : âges gardés, nombre d'enfants, durée des postes",
+            "Ses préférences : logée ou non, secteurs, horaires possibles"
+          ]
+        },
+        {
+          "t": "Ce que nous vous transmettons",
+          "liste": [
+            "Les informations utiles avant l'entretien",
+            "Les points à clarifier directement avec la candidate",
+            "Nos conseils de questions à poser, selon l'âge de vos enfants"
+          ]
+        },
+        {
+          "t": "Ce qui vous revient",
+          "p": "L'entretien, la rencontre avec les enfants et la décision finale vous appartiennent. Si vous souhaitez un essai ou un autre profil, les modalités prévues par votre formule s'appliquent, et nous restons dans la boucle."
+        }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Où cherchons-nous des nounous à Rabat ?",
+    "intro": "Les familles qui nous sollicitent à Rabat vivent surtout dans les secteurs suivants, où se concentrent donc nos recherches.",
+    "liste": [
+      "Hay Riad",
+      "Souissi",
+      "Agdal",
+      "Haut Agdal",
+      "Les Ambassadeurs",
+      "Témara et Harhoura — selon les demandes"
+    ],
+    "note": "Ces secteurs orientent nos recherches sans valoir promesse de desserte pour chaque mission : le quartier, les horaires et la formule font chaque fois l'objet d'une réponse au cas par cas."
+  },
+  "tarifs": {
+    "titre": "Repères de salaire d'une nounou",
+    "legende": "Salaires mensuels versés à l'employée (grille officielle Yallah Services)",
+    "intro": "Les montants dépendent du nombre d'enfants et de l'ajout ou non du ménage. Ils se conviennent entre vous et la personne, notre grille servant de repère.",
+    "lignes": [
+      ["Garde d'un enfant", "3 500 DH"],
+      ["Un enfant, avec ménage", "4 000 DH"],
+      ["Deux enfants, avec ménage", "4 500 à 5 000 DH"],
+      ["Trois enfants", "4 500 DH"],
+      ["Trois enfants, avec ménage", "5 000 DH"]
+    ],
+    "note": "Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil et distincts du salaire, qui est versé directement à l'employée par le foyer."
+  },
+  "titreEtapes": "Trouver une nounou à Rabat, étape par étape",
+  "introEtapes": "Un fil WhatsApp unique, du premier message au suivi : vous savez toujours où en est votre demande.",
+  "etapes": [
+    {
+      "t": "Parlez-nous de vos enfants",
+      "p": "Âges, école, rythme de la semaine, et ce qui compte pour vous : langue parlée, repas, sorties, devoirs."
+    },
+    {
+      "t": "Posons le poste ensemble",
+      "p": "Garde seule ou avec ménage, logée ou non, horaires réels : nous écrivons le périmètre noir sur blanc avant de chercher."
+    },
+    {
+      "t": "Rencontrez des candidates",
+      "p": "Nous présentons des profils dont l'expérience déclarée correspond à votre situation, avec les informations utiles pour l'entretien."
+    },
+    {
+      "t": "Décidez, puis gardons le lien",
+      "p": "Vous choisissez librement. Après le placement, le suivi et les éventuels remplacements suivent la formule retenue."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Combien coûte une nounou à Rabat ?",
+      "r": "Selon notre grille : 3 500 DH par mois pour un enfant, 4 000 DH avec participation au ménage, 4 500 à 5 000 DH pour deux enfants avec ménage, 4 500 DH pour trois enfants et 5 000 DH pour trois enfants avec ménage. Le salaire se convient directement avec la personne ; les frais de mise en relation (500 ou 1 000 DH) sont séparés."
+    },
+    {
+      "q": "Puis-je avoir une nounou logée à Rabat ?",
+      "r": "Oui, à condition de disposer d'une chambre et de convenir par écrit des horaires, des jours de repos et des tâches. La formule logée convient aux semaines chargées et aux horaires tardifs, mais elle demande un cadre posé dès le départ — c'est précisément ce que nous préparons avec vous."
+    },
+    {
+      "q": "La nounou peut-elle aussi faire le ménage ?",
+      "r": "Oui, c'est un poste prévu par notre grille, avec un salaire plus élevé. Notre conseil : bornez les tâches ménagères par écrit, pour que la garde des enfants reste la priorité du poste. Nous transmettons votre périmètre tel quel aux candidates, qui acceptent en connaissance de cause."
+    },
+    {
+      "q": "Vérifiez-vous les antécédents des candidates ?",
+      "r": "Nous ne publions aucune garantie de vérification d'antécédents ni de formation certifiée. Nous recueillons la fiche de candidature et l'expérience déclarée de chaque candidate, nous clarifions ses attentes, et nous vous transmettons de quoi mener un vrai entretien : c'est à ce moment-là que se vérifient les références, avec vous."
+    },
+    {
+      "q": "Dans quels quartiers de Rabat intervenez-vous ?",
+      "r": "Nos recherches se concentrent sur Hay Riad, Souissi, Agdal, Haut Agdal et Les Ambassadeurs, avec Témara et Harhoura selon les demandes. Pour toute autre adresse, posez-nous la question : nous répondons au cas par cas, sans promettre ce que nous ne pouvons pas tenir."
+    },
+    {
+      "q": "Que se passe-t-il si la nounou ne convient pas ?",
+      "r": "Les formules Sérénité et Premium prévoient des remplacements pendant 2 et 6 mois respectivement, selon des conditions détaillées avant la mise en relation. Dites-nous ce qui ne va pas : nous cherchons une solution avec vous, dans le cadre de la formule choisie."
+    }
+  ],
+  "titreLiens": "Compléter votre organisation à Rabat",
+  "introLiens": "La garde d'enfants s'accompagne souvent d'autres besoins. Ces pages peuvent vous aider à y voir clair.",
+  "liens": [
+    {
+      "fichier": "femme-menage-rabat.html",
+      "titre": "Femme de ménage à Rabat",
+      "texte": "Entretien du domicile à Souissi, Hay Riad ou Agdal, au mois ou à la journée."
+    },
+    {
+      "fichier": "nounou-casablanca.html",
+      "titre": "Nounou à Casablanca",
+      "texte": "La même recherche de garde d'enfants, dans notre ville de base."
+    },
+    {
+      "fichier": "garde-malade-casablanca.html",
+      "titre": "Garde-malade à Casablanca",
+      "texte": "Accompagnement d'une personne âgée ou dépendante : un autre métier, une autre page."
+    },
+    {
+      "fichier": "services-par-ville.html",
+      "titre": "Tous nos services par ville",
+      "texte": "Métiers et villes d'intervention de Yallah Services, en une page."
+    }
+  ],
+  "titreCta": "Besoin d'une nounou à Rabat ?",
+  "texteCta": "Écrivez-nous l'âge de vos enfants, votre quartier et vos horaires : nous vous disons sur WhatsApp ce que nous pouvons chercher pour vous, et dans quelles conditions.",
+  "ctaSecondaire": "Échanger avec Yallah Services"
+}
