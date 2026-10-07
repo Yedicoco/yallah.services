@@ -3,7 +3,8 @@
    Graphe Schema.org vérifié contre le guide de référence du dépôt :
    doc/guide-schema-corrige-yallah-services.pdf.
    Usage: node outils/verifier-seo.js [--dossier site-a-mettre-en-ligne]
-   Vérifie canonicals, metas, Schema.org JSON-LD et cohérence du sitemap.
+   Vérifie canonicals, metas, Schema.org JSON-LD (types, domaines des propriétés),
+   et cohérence du sitemap.
 */
 'use strict';
 
@@ -18,6 +19,8 @@ const DOSSIER = optionDossier < 0
   : path.resolve(RACINE, process.argv[optionDossier + 1]);
 const BASE = String(process.env.SITE_URL || CONFIG.url || '').replace(/\/+$/, '');
 const HORS_SITEMAP = new Set(CONFIG.pagesHorsSitemap || []);
+/* Pages service × ville, assemblées par outils/generer-pages-villes.js. */
+const PAGES_VILLES = /-(?:casablanca|rabat|marrakech|tanger|agadir|fes|kenitra|mohammedia|temara|sale|bouskoura|dar-bouazza|bouznika)\.html$/i;
 let erreurs = 0;
 
 function erreur(message) {
@@ -88,6 +91,82 @@ function typesDe(noeud) {
   const type = noeud['@type'];
   return Array.isArray(type) ? type : [type];
 }
+
+/* Domaines (domainIncludes) des propriétés employées sur le site et
+   hiérarchie de ses types — extrait de la release 30.1 de Schema.org
+   (data/releases/30.1/schemaorg-current-https.jsonld, schemaorg/schemaorg).
+   Sert à repérer « la propriété X n'est pas reconnue pour un objet de
+   type Y » : l'avertissement bloquant de validator.schema.org. */
+const DOMAINES_SCHEMA = {
+  about: ['Certification', 'CommunicateAction', 'CreativeWork', 'DefinedTerm', 'DefinedTermSet', 'Event'],
+  acceptedAnswer: ['Question'],
+  address: ['GeoCoordinates', 'GeoShape', 'Organization', 'Person', 'Place'],
+  addressCountry: ['DefinedRegion', 'GeoCoordinates', 'GeoShape', 'PostalAddress'],
+  addressLocality: ['PostalAddress'],
+  addressRegion: ['DefinedRegion', 'PostalAddress'],
+  alternateName: ['Thing'],
+  areaServed: ['ContactPoint', 'DeliveryChargeSpecification', 'Demand', 'FinancialIncentive', 'Offer', 'Organization', 'Service'],
+  availableChannel: ['Service'],
+  availableLanguage: ['ContactPoint', 'Course', 'LodgingBusiness', 'ServiceChannel', 'TouristAttraction'],
+  breadcrumb: ['WebPage'],
+  contactPoint: ['HealthInsurancePlan', 'Organization', 'Person'],
+  contactType: ['ContactPoint'],
+  containedInPlace: ['Place'],
+  contentUrl: ['MediaObject'],
+  currenciesAccepted: ['LocalBusiness'],
+  description: ['Thing'],
+  email: ['ContactPoint', 'Organization', 'Person'],
+  hasOfferCatalog: ['Organization', 'Person', 'Service'],
+  headline: ['CreativeWork'],
+  image: ['Thing'],
+  inLanguage: ['BroadcastService', 'CommunicateAction', 'CreativeWork', 'Event', 'LinkRole', 'PronounceableText', 'WriteAction'],
+  isPartOf: ['CreativeWork'],
+  item: ['DataFeedItem', 'ListItem'],
+  itemListElement: ['ItemList'],
+  itemOffered: ['Demand', 'Offer'],
+  knowsLanguage: ['Organization', 'Person'],
+  logo: ['Brand', 'Certification', 'Organization', 'Place', 'Product', 'Service'],
+  mainEntity: ['CreativeWork'],
+  name: ['Thing'],
+  paymentAccepted: ['LocalBusiness'],
+  position: ['CreativeWork', 'ListItem'],
+  postalCode: ['DefinedRegion', 'GeoCoordinates', 'GeoShape', 'PostalAddress'],
+  price: ['DonateAction', 'Offer', 'PriceSpecification', 'TradeAction'],
+  priceCurrency: ['DonateAction', 'Offer', 'PriceSpecification', 'Reservation', 'Ticket', 'TradeAction'],
+  priceRange: ['LocalBusiness'],
+  provider: ['Action', 'CreativeWork', 'EducationalOccupationalProgram', 'FinancialIncentive', 'Invoice', 'OfferShippingDetails', 'ParcelDelivery', 'Reservation', 'Service', 'Trip'],
+  publisher: ['CreativeWork', 'FinancialIncentive'],
+  sameAs: ['Thing'],
+  servicePhone: ['ServiceChannel'],
+  serviceType: ['Service'],
+  serviceUrl: ['ServiceChannel'],
+  streetAddress: ['PostalAddress'],
+  telephone: ['ContactPoint', 'Organization', 'Person', 'Place'],
+  text: ['CreativeWork'],
+  thumbnailUrl: ['CreativeWork'],
+  uploadDate: ['MediaObject'],
+  url: ['Thing'],
+};
+const PARENTS_SCHEMA = {
+  Answer: ['Comment', 'CreativeWork', 'Thing'],
+  BreadcrumbList: ['Intangible', 'ItemList', 'Thing'],
+  City: ['AdministrativeArea', 'Place', 'Thing'],
+  ContactPoint: ['Intangible', 'StructuredValue', 'Thing'],
+  Country: ['AdministrativeArea', 'Place', 'Thing', 'cmns-ge:GeopoliticalEntity'],
+  EmploymentAgency: ['LocalBusiness', 'Organization', 'Place', 'Thing'],
+  FAQPage: ['CreativeWork', 'Thing', 'WebPage'],
+  ItemList: ['Intangible', 'Thing'],
+  ListItem: ['Intangible', 'Thing'],
+  Offer: ['Intangible', 'Thing'],
+  OfferCatalog: ['Intangible', 'ItemList', 'Thing'],
+  PostalAddress: ['ContactPoint', 'Intangible', 'StructuredValue', 'Thing'],
+  Question: ['Comment', 'CreativeWork', 'Thing'],
+  Service: ['Intangible', 'Thing'],
+  ServiceChannel: ['Intangible', 'Thing'],
+  VideoObject: ['CreativeWork', 'MediaObject', 'Thing'],
+  WebPage: ['CreativeWork', 'Thing'],
+  WebSite: ['CreativeWork', 'Thing'],
+};
 
 console.log('AUDIT TECHNIQUE SEO — ' + path.relative(RACINE, DOSSIER) + '/');
 console.log('Domaine canonique attendu : ' + BASE);
@@ -170,7 +249,7 @@ indexables.forEach(({ fichier, html }) => {
     ['WebSite', 'EmploymentAgency'].forEach((type) => {
       if (!types.has(type)) erreur(fichier + ' : type Schema.org requis absent : ' + type + '.');
     });
-  } else if (/-(?:casablanca|rabat|marrakech|tanger|agadir|fes|kenitra|mohammedia|temara|sale|bouskoura|dar-bouazza|bouznika)\.html$/i.test(fichier)) {
+  } else if (PAGES_VILLES.test(fichier)) {
     ['Service', 'BreadcrumbList', 'FAQPage'].forEach((type) => {
       if (!types.has(type)) erreur(fichier + ' : type Schema.org requis absent : ' + type + '.');
     });
@@ -230,17 +309,23 @@ indexables.forEach(({ fichier, html }) => {
     if (deType('BreadcrumbList').length && ref(pageWeb, 'breadcrumb') !== urlPage + '#breadcrumb') {
       erreur(fichier + ' : WebPage.breadcrumb doit pointer sur ' + urlPage + '#breadcrumb.');
     }
-    if (deType('Service').length && ref(pageWeb, 'about') !== urlPage + '#service') {
+    if (deType('Service').some((service) => service['@id']) && ref(pageWeb, 'about') !== urlPage + '#service') {
       erreur(fichier + ' : WebPage.about doit pointer sur ' + urlPage + '#service.');
     }
   }
 
   /* Fil d'Ariane et service : identifiants stables, zone de la demande,
-     rattachement à l'organisation centrale. */
+     rattachement à l'organisation centrale.
+     Les services présentés en ligne dans le catalogue de l'accueil
+     (Offer.itemOffered) ne sont pas des entités locales : seul un Service
+     porteur d'un @id (une entité par page service × ville) est contrôlé ici. */
   deType('BreadcrumbList').forEach((fil) => {
     if (fil['@id'] !== urlPage + '#breadcrumb') erreur(fichier + ' : BreadcrumbList sans @id ' + urlPage + '#breadcrumb.');
   });
-  deType('Service').forEach((service) => {
+  if (PAGES_VILLES.test(fichier) && !deType('Service').some((service) => service['@id'])) {
+    erreur(fichier + ' : Service identifié absent (' + urlPage + '#service) sur une page service × ville.');
+  }
+  deType('Service').filter((service) => service['@id']).forEach((service) => {
     if (service['@id'] !== urlPage + '#service') erreur(fichier + ' : Service.@id attendu → ' + urlPage + '#service.');
     if (ref(service, 'provider') !== ORG_ID) erreur(fichier + ' : Service.provider doit référencer ' + ORG_ID + ' (organisation centrale).');
     if (!service.areaServed) erreur(fichier + ' : Service sans areaServed (zone de la demande).');
@@ -251,6 +336,29 @@ indexables.forEach(({ fichier, html }) => {
         }
       });
     }
+  });
+
+  /* Services du catalogue : le type de service est l'information utile. */
+  deType('Service').filter((service) => !service['@id']).forEach((service) => {
+    if (!service.serviceType) erreur(fichier + ' : service de catalogue sans serviceType.');
+  });
+
+  /* Domaine des propriétés : « la propriété X n'est pas reconnue pour un objet
+     de type Y » est l'avertissement bloquant de validator.schema.org. */
+  noeuds.forEach((noeud) => {
+    const typesSuivis = typesDe(noeud).filter((type) => PARENTS_SCHEMA[type]);
+    if (!typesSuivis.length) return;
+    Object.keys(noeud).forEach((cle) => {
+      if (cle.charAt(0) === '@') return;
+      const domaines = DOMAINES_SCHEMA[cle];
+      if (!domaines) return;
+      const reconnue = typesSuivis.some((type) =>
+        [type].concat(PARENTS_SCHEMA[type]).some((candidat) => domaines.indexOf(candidat) !== -1));
+      if (!reconnue) {
+        erreur(fichier + ' : « ' + cle + ' » n’est pas reconnue pour le type ' + typesSuivis.join('/') +
+          ' (domaine ' + domaines.join(', ') + ') → avertissement validator.schema.org.');
+      }
+    });
   });
 
   /* Ni établissement local inventé, ni note structurée sans consentement. */
