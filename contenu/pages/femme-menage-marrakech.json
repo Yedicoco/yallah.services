@@ -1,0 +1,186 @@
+{
+  "fichier": "femme-menage-marrakech.html",
+  "ville": "Marrakech",
+  "serviceType": "Ménage et entretien du domicile",
+  "title": "Femme de ménage à Marrakech | Yallah Services",
+  "description": "Femme de ménage à Marrakech : villa de la Palmeraie, appartement à Guéliz ou résidence secondaire. Nous cherchons le profil adapté et suivons le placement.",
+  "h1": "Femme de ménage à <em>Marrakech</em>",
+  "h1Texte": "Femme de ménage à Marrakech",
+  "crumb": "Femme de ménage à Marrakech",
+  "kicker": "Yallah Services · Marrakech",
+  "ogDescription": "Recherche d'une femme de ménage à Marrakech : Palmeraie, Hivernage, Targa, Amelkis, Guéliz. Résidences principales et secondaires.",
+  "lead": "Marrakech mélange des maisons habitées à l'année, des résidences secondaires ouvertes par périodes et des villas avec jardin qui demandent un entretien suivi. Le bon poste de ménage dépend d'abord de votre manière d'habiter la ville : c'est par là que nous commençons, avant toute recherche de profil.",
+  "ctaPrincipal": "Décrire mon besoin sur WhatsApp",
+  "messageWhatsApp": "Bonjour Yallah Services, je cherche une femme de ménage à Marrakech. Mon quartier et mon besoin : ",
+  "noteHero": "Résidences principales et secondaires · Secteurs listés plus bas · Frais expliqués avant toute mise en relation.",
+  "image": "assets/img/pack-menage.jpg",
+  "imageAlt": "Entretien d'une villa à Marrakech avec une femme de ménage présentée par Yallah Services",
+  "legendeImage": "Notre base est à Casablanca : les demandes pour Marrakech se traitent par écrit, sur WhatsApp, du cadrage du poste au suivi.",
+  "sections": [
+    {
+      "titre": "Habiter Marrakech ne veut pas dire la même chose pour tout le monde",
+      "intro": "Entre une famille installée à Targa, un couple retraité à Guéliz et des propriétaires présents trois mois par an à la Palmeraie, le poste de ménage change du tout au tout.",
+      "cartes": [
+        {
+          "t": "Villas de la Palmeraie et d'Amelkis",
+          "p": "Grandes superficies, dépendances, linge de maison abondant : ces propriétés appellent souvent un temps plein, parfois une présence logée. Le jardin et la piscine relèvent d'autres métiers — nous le précisons d'emblée pour que le poste reste tenable."
+        },
+        {
+          "t": "Appartements de Guéliz et de l'Hivernage",
+          "p": "Résidents à l'année, couples installés, pieds-à-terre : la demande porte sur l'entretien régulier, quelques passages par semaine ou un mi-temps, avec un soin particulier pour le repassage et les finitions."
+        },
+        {
+          "t": "Résidences secondaires",
+          "p": "Maison fermée une partie de l'année, arrivées à préparer, départs à organiser : dites-nous votre calendrier réel. Nous chercherons un profil et une organisation compatibles avec ce rythme, et nous vous dirons honnêtement ce qui est possible et ce qui ne l'est pas."
+        }
+      ]
+    },
+    {
+      "titre": "Un poste cadré à distance, mais cadré pour de vrai",
+      "intro": "Notre base est à Casablanca ; à Marrakech, tout le cadrage passe par écrit. C'est une contrainte que nous avons transformée en méthode.",
+      "cartes": [
+        {
+          "t": "Le périmètre, noir sur blanc",
+          "p": "Surface, pièces, tâches prioritaires, fréquence, matériel disponible : le poste est décrit par écrit avant la première rencontre. La candidate sait où elle met les pieds, vous savez ce que vous êtes en droit d'attendre."
+        },
+        {
+          "t": "La rencontre, chez vous",
+          "p": "L'entretien et la rencontre se font entre vous et la candidate, selon vos disponibilités respectives. Nous vous transmettons avant cela l'expérience déclarée et les informations utiles pour poser les bonnes questions."
+        },
+        {
+          "t": "Le suivi, sur le même fil",
+          "p": "Après le placement, le fil WhatsApp reste ouvert : point d'étape, ajustements du périmètre, et remplacements selon la formule choisie. Rien ne se perd, tout est écrit."
+        }
+      ]
+    },
+    {
+      "titre": "Vous gérez un riad ou une maison d'hôtes ?",
+      "intro": "La médina et les quartiers touristiques relèvent d'une autre logique : celle du personnel d'exploitation, pas du ménage familial.",
+      "cartes": [
+        {
+          "t": "Ménage familial : cette page",
+          "p": "Un domicile privé, une famille, un poste régulier au mois : vous êtes au bon endroit. Décrivez votre logement et vos attentes, nous cherchons dans ce cadre."
+        },
+        {
+          "t": "Riads, maisons d'hôtes, hôtels : notre offre entreprises",
+          "p": "Femmes de chambre, lingères, personnel de salle ou renfort saisonnier pour une structure qui reçoit des clients : ces recherches passent par notre offre dédiée aux entreprises, avec ses propres conditions."
+        },
+        {
+          "t": "Pourquoi nous séparons les deux",
+          "p": "Les rythmes, les compétences et les contrats ne sont pas les mêmes. Orienter chaque demande vers le bon cadre, c'est aussi ce qui évite de vous présenter des profils inadaptés."
+        }
+      ]
+    }
+  ],
+  "zones": {
+    "titre": "Secteurs de Marrakech où nous cherchons en priorité",
+    "intro": "Les demandes que nous recevons pour Marrakech concernent surtout les secteurs résidentiels suivants.",
+    "liste": [
+      "Hivernage",
+      "Palmeraie",
+      "Agdal",
+      "Targa",
+      "Amelkis",
+      "Guéliz"
+    ],
+    "note": "Secteur listé ne signifie pas desserte garantie pour chaque mission : la réponse dépend du profil disponible et des conditions convenues. Donnez-nous votre quartier, même hors de cette liste, et nous vous répondrons précisément."
+  },
+  "tarifs": {
+    "titre": "Repères de salaire à Marrakech",
+    "legende": "Salaires mensuels versés à l'employée (grille officielle Yallah Services)",
+    "intro": "La grille est nationale : les repères ci-dessous valent pour Marrakech comme pour nos autres villes d'intervention. Le montant final se convient selon le poste réel.",
+    "lignes": [
+      [
+        "Ménage simple dans une villa",
+        "4 500 DH"
+      ],
+      [
+        "Ménage simple dans une mini villa",
+        "4 000 DH"
+      ],
+      [
+        "Ménage dans un appartement",
+        "3 500 DH"
+      ]
+    ],
+    "note": "La prestation à la journée de notre grille concerne uniquement Casablanca et Rabat : à Marrakech, les postes proposés sont mensuels. Frais de mise en relation : 500 DH (Sérénité) ou 1 000 DH (Premium), réglés après validation du profil, séparément du salaire."
+  },
+  "titreEtapes": "Votre demande à Marrakech, concrètement",
+  "introEtapes": "Quatre temps, un seul fil WhatsApp, aucune information publiée sur vous ou votre logement.",
+  "etapes": [
+    {
+      "t": "Décrivez votre situation",
+      "p": "Résidence principale ou secondaire, type de logement, quartier, fréquence souhaitée : plus c'est précis, plus la recherche est juste."
+    },
+    {
+      "t": "Validons le périmètre",
+      "p": "Nous écrivons ensemble ce que couvre le poste, ce qu'il ne couvre pas, et la formule adaptée à votre calendrier."
+    },
+    {
+      "t": "Étudiez les profils",
+      "p": "Nous présentons les candidates disponibles correspondant au poste, avec leur expérience déclarée et nos conseils d'entretien."
+    },
+    {
+      "t": "Décidez et restons en contact",
+      "p": "Vous choisissez librement ; le suivi et les remplacements éventuels suivent la formule retenue, à distance mais sans silence."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Quel salaire prévoir pour une femme de ménage à Marrakech ?",
+      "r": "Les repères de notre grille nationale : 3 500 DH par mois en appartement, 4 000 DH en mini villa et 4 500 DH en villa pour un ménage simple. Le montant final dépend de la surface, des tâches et de la formule. Les frais de mise en relation (500 ou 1 000 DH selon la formule) s'ajoutent une seule fois, après validation du profil."
+    },
+    {
+      "q": "Proposez-vous le ménage à la journée à Marrakech ?",
+      "r": "Non : cette prestation de notre grille est limitée à Casablanca et Rabat. À Marrakech, nous recherchons des postes mensuels, logés ou non logés. Si votre besoin est ponctuel, écrivez-nous quand même : nous vous dirons franchement si nous pouvons y répondre."
+    },
+    {
+      "q": "Je ne vis pas à Marrakech toute l'année : est-ce un problème ?",
+      "r": "C'est une situation courante ici, et elle se prépare : calendrier de présence, accès au logement, interlocuteur sur place, consignes écrites. Décrivez-nous votre organisation réelle ; nous chercherons un profil compatible et vous dirons clairement ce qui est faisable dans ce cadre."
+    },
+    {
+      "q": "Pouvez-vous fournir du personnel pour mon riad ou ma maison d'hôtes ?",
+      "r": "Oui, mais pas par cette page : les structures d'accueil relèvent de notre offre entreprises, qui couvre l'hôtellerie, les riads et les maisons d'hôtes avec ses propres conditions. Consultez la page Personnel pour entreprises ou précisez-le dans votre message WhatsApp."
+    },
+    {
+      "q": "Quels quartiers de Marrakech couvrez-vous ?",
+      "r": "Nos recherches se concentrent sur l'Hivernage, la Palmeraie, l'Agdal, Targa, Amelkis et Guéliz. D'autres secteurs sont étudiés selon les demandes. Comme partout, un quartier listé n'est pas une promesse de desserte automatique : la réponse se fait au cas par cas."
+    },
+    {
+      "q": "Comment se passe le suivi si vous êtes basés à Casablanca ?",
+      "r": "Par le même fil WhatsApp que votre demande : point après l'arrivée de la personne, ajustements si besoin, et application des conditions de remplacement de votre formule (2 mois en Sérénité, 6 mois en Premium). Tout est écrit, rien ne repose sur la mémoire des uns et des autres."
+    }
+  ],
+  "titreLiens": "Pour aller plus loin",
+  "introLiens": "Selon votre situation à Marrakech, ces pages complètent utilement celle-ci.",
+  "liens": [
+    {
+      "fichier": "personnel-entreprises.html",
+      "titre": "Personnel pour entreprises",
+      "texte": "Riads, maisons d'hôtes, hôtels et restaurants : notre offre dédiée aux structures."
+    },
+    {
+      "fichier": "femme-menage-casablanca.html",
+      "titre": "Femme de ménage à Casablanca",
+      "texte": "Notre ville de base, avec la prestation à la journée en plus du poste mensuel."
+    },
+    {
+      "fichier": "femme-menage-rabat.html",
+      "titre": "Femme de ménage à Rabat",
+      "texte": "Souissi, Hay Riad, Agdal : le même service dans la capitale."
+    },
+    {
+      "fichier": "femme-menage-tanger.html",
+      "titre": "Femme de ménage à Tanger",
+      "texte": "Maisons d'été et résidences de la baie : une problématique proche de Marrakech."
+    },
+    {
+      "fichier": "cuisiniere-casablanca.html",
+      "titre": "Cuisinière à Casablanca",
+      "texte": "Cuisine du quotidien et aide en cuisine : un métier distinct du ménage."
+    }
+  ],
+  "titreCta": "Un besoin de ménage à Marrakech ?",
+  "texteCta": "Résidence principale ou secondaire, villa ou appartement : écrivez-nous votre situation sur WhatsApp, nous vous répondons avec ce qui est réellement possible.",
+  "ctaSecondaire": "Échanger avec Yallah Services"
+}

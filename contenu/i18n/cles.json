@@ -5987,9 +5987,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Nous recevons et traitons des demandes dans les zones suivantes. Les pages détaillées de ces villes sont en préparation : en attendant, écrivez-nous directement, nous vous répondrons sur ce qui est réellement possible chez vous.",
+        "cle": "Nous recevons et traitons des demandes dans les zones suivantes. Les villes principales ont désormais leur page détaillée : ouvrez-la pour les repères de salaire et notre méthode, ou écrivez-nous directement.",
         "occurrences": 1,
-        "exemple": "Nous recevons et traitons des demandes dans les zones suivantes. Les pages détaillées de ces villes sont en préparation : en attendant, écrivez-nous directement, nous vous répondrons sur ce qui est réellement possible chez vous.",
+        "exemple": "Nous recevons et traitons des demandes dans les zones suivantes. Les villes principales ont désormais leur page détaillée : ouvrez-la pour les repères de salaire et notre méthode, ou écrivez-nous directement.",
         "langue": "fr"
       },
       {
@@ -6011,10 +6011,12 @@
         "langue": "fr"
       },
       {
-        "cle": "Rabat, Salé et Témara. Nous y traitons des demandes de foyers et d'entreprises, notamment pour le ménage, la garde d'enfants, la cuisine et le personnel hôtelier.",
+        "cle": "Rabat, Salé et Témara. Nous y traitons des demandes de foyers et d'entreprises, notamment pour le ménage, la garde d'enfants, la cuisine et le personnel hôtelier. Femme de ménage à Rabat · Nounou à Rabat",
         "occurrences": 1,
-        "exemple": "Rabat, Salé et Témara. Nous y traitons des demandes de foyers et d'entreprises, notamment pour le ménage, la garde d'enfants, la cuisine et le personnel hôtelier.",
-        "langue": "fr"
+        "exemple": "Rabat, Salé et Témara. Nous y traitons des demandes de foyers et d'entreprises, notamment pour le ménage, la garde d'enfants, la cuisine et le personnel hôtelier. Femme de ménage à Rabat · Nounou à Rabat",
+        "langue": "fr",
+        "balisage": "a,a",
+        "html": "Rabat, Salé et Témara. Nous y traitons des demandes de foyers et d'entreprises, notamment pour le ménage, la garde d'enfants, la cuisine et le personnel hôtelier. <a href=\"femme-menage-rabat.html\">Femme de ménage à Rabat</a> · <a href=\"nounou-rabat.html\">Nounou à Rabat</a>"
       },
       {
         "cle": "Axe atlantique",
@@ -6035,10 +6037,12 @@
         "langue": "fr"
       },
       {
-        "cle": "Marrakech et Agadir. Deux marchés spécifiques : les résidences et villas d'un côté, l'hôtellerie, les riads et les maisons d'hôtes de l'autre.",
+        "cle": "Marrakech et Agadir. Deux marchés spécifiques : les résidences et villas d'un côté, l'hôtellerie, les riads et les maisons d'hôtes de l'autre. Femme de ménage à Marrakech",
         "occurrences": 1,
-        "exemple": "Marrakech et Agadir. Deux marchés spécifiques : les résidences et villas d'un côté, l'hôtellerie, les riads et les maisons d'hôtes de l'autre.",
-        "langue": "fr"
+        "exemple": "Marrakech et Agadir. Deux marchés spécifiques : les résidences et villas d'un côté, l'hôtellerie, les riads et les maisons d'hôtes de l'autre. Femme de ménage à Marrakech",
+        "langue": "fr",
+        "balisage": "a",
+        "html": "Marrakech et Agadir. Deux marchés spécifiques : les résidences et villas d'un côté, l'hôtellerie, les riads et les maisons d'hôtes de l'autre. <a href=\"femme-menage-marrakech.html\">Femme de ménage à Marrakech</a>"
       },
       {
         "cle": "Nord et centre",
@@ -6047,10 +6051,12 @@
         "langue": "fr"
       },
       {
-        "cle": "Tanger, Kénitra et Fès : des demandes de personnel de maison, de gardiennage et de renfort pour les entreprises locales.",
+        "cle": "Tanger, Kénitra et Fès : des demandes de personnel de maison, de gardiennage et de renfort pour les entreprises locales. Femme de ménage à Tanger",
         "occurrences": 1,
-        "exemple": "Tanger, Kénitra et Fès : des demandes de personnel de maison, de gardiennage et de renfort pour les entreprises locales.",
-        "langue": "fr"
+        "exemple": "Tanger, Kénitra et Fès : des demandes de personnel de maison, de gardiennage et de renfort pour les entreprises locales. Femme de ménage à Tanger",
+        "langue": "fr",
+        "balisage": "a",
+        "html": "Tanger, Kénitra et Fès : des demandes de personnel de maison, de gardiennage et de renfort pour les entreprises locales. <a href=\"femme-menage-tanger.html\">Femme de ménage à Tanger</a>"
       },
       {
         "cle": "Autres villes",
