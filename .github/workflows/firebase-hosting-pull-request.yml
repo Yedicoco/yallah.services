@@ -46,8 +46,6 @@ jobs:
           node outils/verifier-seo.js --dossier site-a-mettre-en-ligne
           node outils/extraire-i18n.js --verifier         # traductions complètes
           node outils/generer-pages-villes.js --verifier  # fiches de contenu valides
+          node outils/verifier-videos.js                  # MP4, posters, VideoObject, video-sitemap
+          node outils/verifier-videos.js --dossier site-a-mettre-en-ligne
           node --check assets/js/*.js server.js build-site.js
-          # verifier-videos.js n'est pas lancé ici : le manifeste
-          # contenu/videos-sources.json référence encore l'ancien fichier de
-          # 2026-08-28-151819708.mp4 (19,5 Mo attendus, 2,1 Mo dans le dépôt),
-          # ce qui fait échouer le contrôle indépendamment de toute modification.
