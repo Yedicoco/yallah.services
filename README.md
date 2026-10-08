@@ -138,6 +138,18 @@ Les déploiements suivants se font avec `firebase deploy --only hosting` depuis
 la racine. Le déploiement nécessite une connexion Google autorisée dans
 Firebase CLI pour le même compte qui a accès à ce projet.
 
+#### Sitemaps — Google Search Console
+
+`sitemap.xml` (15 pages publiques) et `video-sitemap.xml` (4 vidéos) sont
+régénérés à chaque build et référencés dans `robots.txt`. `firebase.json` les
+sert avec `Cache-Control: no-cache` : Google relit donc toujours la version à
+jour, jamais une copie périmée du CDN. Dans
+[Google Search Console](https://search.google.com/search-console) (propriété
+`https://yallah-services-8f1ec.web.app`), soumettre les deux sitemaps une fois ;
+après un changement de domaine ou une erreur « Impossible de récupérer le
+sitemap », les supprimer de la liste et les soumettre à nouveau — la lecture
+repart immédiatement sur la version en ligne.
+
 Options du générateur :
 
 ```bash
