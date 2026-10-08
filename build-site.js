@@ -112,8 +112,8 @@ function ecrireConfigStatique() {
   fs.writeFileSync(path.join(SORTIE, 'assets/js/config.js'), contenu, 'utf8');
 }
 
-/* Remplace les numéros/e-mail dans le HTML si l'on change les variables d'environnement */
-function adapterHtml() {
+/* Adapte pages, traductions et llms.txt au domaine/coordonnées de déploiement */
+function adapterContenus() {
   const remplacements = [];
   if (WHATSAPP_FOYERS !== NUMERO_FOYERS_DEFAUT) {
     remplacements.push([new RegExp(NUMERO_FOYERS_DEFAUT, 'g'), WHATSAPP_FOYERS]);
@@ -136,6 +136,7 @@ function adapterHtml() {
   /* Fichiers à adapter : les pages, puis les dictionnaires de traduction
      (les numéros y figurent aussi, en français comme en darija). */
   const fichiers = PAGES.slice();
+  if (fs.existsSync(path.join(SORTIE, 'llms.txt'))) fichiers.push('llms.txt');
   const dossierTrad = path.join(SORTIE, 'assets', 'i18n');
   if (fs.existsSync(dossierTrad)) {
     fs.readdirSync(dossierTrad).forEach((langue) => {
@@ -217,7 +218,7 @@ FICHIERS.forEach((fichier) => {
 });
 
 ecrireConfigStatique();
-const remplacements = adapterHtml();
+const remplacements = adapterContenus();
 ecrireLisezMoi();
 
 /* Sitemap régénéré depuis les pages réellement publiées (lastmod = git) */
@@ -247,7 +248,7 @@ console.log('  Fichiers copiés        : ' + nombre + ' (' + (poids / 1048576).t
 console.log('  WhatsApp foyers        : ' + afficherNumero(WHATSAPP_FOYERS));
 console.log('  WhatsApp candidats     : ' + afficherNumero(WHATSAPP_CANDIDATS));
 console.log('  E-mail références      : ' + CONTACT_EMAIL);
-if (remplacements) console.log('  Remplacements HTML     : ' + remplacements);
+if (remplacements) console.log('  Contenus adaptés       : ' + remplacements);
 if (manquants.length) {
   console.error('  ⚠️  Fichiers manquants : ' + manquants.join(', '));
   process.exit(1);
