@@ -27,6 +27,14 @@ Les quatre MP4 d'origine, leur provenance, les vignettes extraites et les contr�
 sont documentés dans [`contenu/videos.md`](contenu/videos.md).
 Contrôle rapide : `node outils/verifier-videos.js`.
 
+> ⚠️ **Contrôle vidéos actuellement en échec (constaté le 08/10/2026, antérieur aux
+> travaux de cette date)** : `contenu/videos-sources.json` attend
+> `2026-08-28-151819708.mp4` à 19 513 452 octets (empreintes d'origine), alors que
+> le fichier versionné en fait 2 129 690 (blob Git différent de celui du
+> manifeste). Les trois autres vidéos correspondent. Il faut soit remettre la
+> vidéo d'origine, soit mettre à jour le manifeste avec les empreintes du fichier
+> réellement publié — décision à prendre (voir `contenu/videos.md`).
+
 ## 📞 Contacts officiels
 
 | Canal | Coordonnées |
@@ -123,21 +131,61 @@ node build-site.js           # régénère le dossier
 
 #### Déployer cette version sur Firebase Hosting
 
-Le dépôt contient `firebase.json`, déjà configuré pour publier uniquement
-`site-a-mettre-en-ligne/` (site multi-pages, sans réécriture SPA), et
-`.firebaserc` associe ce dépôt au projet `yallah-services-8f1ec`. Depuis la
-racine du dépôt, installe la CLI puis connecte-toi et déploie :
+Le dépôt contient `firebase.json`, configuré pour publier uniquement
+`site-a-mettre-en-ligne/` (site multi-pages, sans réécriture SPA). `.firebaserc`
+associe le dépôt au projet **`menage-nounou`** → site
+**`https://menage-nounou.web.app`** (vérifié le 08/10/2026 : le domaine répond,
+le site Hosting existe et attend son premier déploiement).
+
+Deux façons de déployer :
+
+**A. Automatiquement (recommandé)** — `git push` sur `main` lance
+`.github/workflows/firebase-hosting-merge.yml` : build, déploiement sur le
+canal `live`, puis contrôle des sitemaps en ligne. Le workflow a besoin d'un
+secret de dépôt :
+
+1. Console Firebase → ⚙️ **Paramètres du projet** → **Comptes de service** →
+   **Générer une nouvelle clé privée** (projet `menage-nounou`) ;
+2. GitHub → **Settings → Secrets and variables → Actions → New repository
+   secret** : nom `FIREBASE_SERVICE_ACCOUNT_MENAGE_NOUNOU`, valeur = le contenu
+   complet du fichier JSON téléchargé ;
+3. pousser sur `main` : le déploiement et les contrôles se font seuls.
+
+Chaque **pull request** est contrôlée avant fusion par
+`.github/workflows/firebase-hosting-pull-request.yml` (« Vérification du
+site ») : construction du paquet statique puis tous les contrôles hors ligne
+(liens, ressources, contenu, SEO, traductions). Une coche verte = la fusion est
+sans risque. Le déploiement de prévisualisation Firebase a été retiré de ce
+workflow : il échouait sur chaque PR sans cause lisible dans les journaux.
+
+**B. À la main, depuis une machine connectée à Google** :
 
 ```bash
 npm install -g firebase-tools
 firebase login
-firebase projects:list  # vérifier que le projet est accessible
+firebase use menage-nounou      # vérifier le projet actif
 firebase deploy --only hosting
+node outils/verifier-sitemaps.js --projet menage-nounou
 ```
 
-Les déploiements suivants se font avec `firebase deploy --only hosting` depuis
-la racine. Le déploiement nécessite une connexion Google autorisée dans
-Firebase CLI pour le même compte qui a accès à ce projet.
+#### Basculer le site sur un autre projet Firebase ou un domaine
+
+Tout part de `site.config.json` (`url`) : canonicals, Open Graph, JSON-LD,
+`llms.txt`, sitemaps et `robots.txt` en sont dérivés. Pour un déménagement
+complet (fait le 08/10/2026 de `yallah-services-8f1ec` vers `menage-nounou`) :
+
+1. `site.config.json` → `url` (nouveau domaine) ;
+2. `.firebaserc` → `"default"` : identifiant du nouveau projet Firebase ;
+3. `.github/workflows/*.yml` → `projectId` **et** le nom du secret
+   `FIREBASE_SERVICE_ACCOUNT_…` (à recréer dans GitHub, voir ci-dessus) ;
+4. `grep -rn "ancien-domaine" --exclude-dir=.git .` → vérifier qu'il ne reste
+   aucune trace (le README, `contenu/`, `seo-pack/` et le pack Vercel en
+   contiennent parfois) ;
+5. `node build-site.js` → régénère `site-a-mettre-en-ligne/` et les sitemaps sur
+   la nouvelle adresse ;
+6. créer la propriété dans Search Console pour le nouveau domaine et y
+   soumettre `sitemap.xml` et `video-sitemap.xml` en URL complète ;
+7. après déploiement : `node outils/verifier-sitemaps.js` (contrôle en ligne).
 
 #### Sitemaps — Google Search Console
 
@@ -146,11 +194,22 @@ régénérés à chaque build et référencés dans `robots.txt`. `firebase.json
 sert avec `Cache-Control: no-cache` : Google relit donc toujours la version à
 jour, jamais une copie périmée du CDN.
 
+**Propriété à suivre :** `https://menage-nounou.web.app` (celle de l'ancien
+projet `yallah-services-8f1ec` peut être conservée pour l'historique, ou
+supprimée une fois la nouvelle validée). Pour créer/valider la nouvelle
+propriété : Search Console → **Ajouter une propriété** → *Préfixe d'URL* →
+`https://menage-nounou.web.app` → validation par **fichier HTML** (déposer le
+fichier fourni par Google à la racine du dépôt : `build-site.js` le publie, il
+est exclu du sitemap) ou par balise `<meta>` dans `index.html`. Le fichier
+`googlee184c103eb04f93a.html` déjà présent correspond à l'ancienne propriété :
+il ne gêne pas, il peut rester en ligne.
+
 **Vérifier la version en ligne** (depuis n'importe quelle machine extérieure au site) :
 
 ```bash
-node outils/verifier-sitemaps.js                  # domaine de site.config.json
-node outils/verifier-sitemaps.js --url https://yallah.services
+node outils/verifier-sitemaps.js                    # domaine de site.config.json
+node outils/verifier-sitemaps.js --projet menage-nounou   # https://menage-nounou.web.app
+node outils/verifier-sitemaps.js --url https://yallah.services   # domaine propre, le jour venu
 ```
 
 Le rapport reprend exactement ce que Google doit voir : `robots.txt` déclare les
@@ -167,12 +226,12 @@ fait échouer le job au lieu de passer inaperçu.
    cause** : le message vient de la lecture côté Google, pas du site (cas observé
    les 7 et 8 octobre 2026 : fichiers 200 en XML, sans redirection, et message
    d'erreur maintenu).
-2. Dans la propriété `https://yallah-services-8f1ec.web.app` : **Inspection d'URL**
+2. Dans la propriété `https://menage-nounou.web.app` : **Inspection d'URL**
    → coller l'URL du sitemap → **Tester l'URL en direct** → vérifier
    « Exploration autorisée ? = Oui » et « Récupération de page = Opération
    réussie ». C'est la procédure officielle de Google pour trancher.
 3. Supprimer les deux sitemaps du rapport et les **resoumettre en URL complète**
-   (`https://yallah-services-8f1ec.web.app/sitemap.xml`, jamais `/sitemap.xml`).
+   (`https://menage-nounou.web.app/sitemap.xml`, jamais `/sitemap.xml`).
 4. Ne pas conclure trop vite : l'aide de Google précise que le type « Inconnu »
    signifie « type de sitemap inconnu **ou sitemap pas encore traité** ». Laisser
    24 à 48 h après un envoi avant de réessayer (et éviter les allers-retours
@@ -188,13 +247,16 @@ fait échouer le job au lieu de passer inaperçu.
 > ce même message « Impossible de récupérer » pendant des mois alors que le
 > sitemap est lisible et que les pages s'indexent (discussions r/Firebase). En
 > complément de John Mueller, la cause est souvent l'exploration elle-même, pas le
-> fichier. La solution durable est le domaine propre : au 8 octobre 2026,
-> `yallah.services` n'était **enregistré par personne** (vérifié au registre RDAP
-> du `.services`). Le jour où le domaine est acheté puis ajouté comme domaine
-> personnalisé dans Firebase Hosting, il suffit de rebâtir avec
-> `SITE_URL=https://yallah.services node build-site.js` (canonicals, JSON-LD,
-> sitemaps et `robots.txt` suivent), puis de créer la propriété GSC correspondante
-> et d'y soumettre les sitemaps.
+> fichier. C'est pourquoi le site a été **rebâti sur le projet `menage-nounou`**
+> le 08/10/2026 (propriété GSC neuve, historique propre) plutôt que de s'acharner
+> sur l'ancienne propriété. La solution durable reste le domaine propre :
+> au 8 octobre 2026, `yallah.services` n'était **enregistré par personne**
+> (vérifié au registre RDAP du `.services`). Le jour où le domaine est acheté puis
+> ajouté comme domaine personnalisé dans Firebase Hosting, il suffit de rebâtir
+> avec `SITE_URL=https://yallah.services node build-site.js` (canonicals, JSON-LD,
+> sitemaps et `robots.txt` suivent, méthode détaillée en
+> « Basculer le site sur un autre projet Firebase ou un domaine »), puis de créer
+> la propriété GSC correspondante et d'y soumettre les sitemaps.
 
 Options du générateur :
 

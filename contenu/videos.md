@@ -112,5 +112,5 @@ rapport d'indexation des vidéos. L'indexation reste à la décision de Google :
 soumission ou un balisage valide ne garantit pas l'apparition d'un résultat vidéo.
 Vérifier aussi que les URL canoniques, le sitemap, les MP4 et les vignettes utilisent
 le même domaine public. Le domaine canonique configuré est actuellement
-`https://yallah-services-8f1ec.web.app` ; basculer vers `https://yallah.services`
+`https://menage-nounou.web.app` ; basculer vers `https://yallah.services`
 uniquement lorsque ce domaine sera réellement publié et choisi comme canonique.

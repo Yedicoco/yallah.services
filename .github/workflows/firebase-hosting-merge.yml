@@ -27,15 +27,26 @@ jobs:
       - name: Build static site
         run: node build-site.js
 
+      # Message clair si la clé du projet menage-nounou n'est pas encore dans les
+      # secrets GitHub (sinon l'échec du déploiement est illisible).
+      - name: Vérifier la clé de déploiement
+        env:
+          CLE: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MENAGE_NOUNOU }}
+        run: |
+          if [ -z "$CLE" ]; then
+            echo "::error::Secret FIREBASE_SERVICE_ACCOUNT_MENAGE_NOUNOU absent. Console Firebase (projet menage-nounou) → Paramètres du projet → Comptes de service → Générer une nouvelle clé privée ; puis GitHub → Settings → Secrets and variables → Actions → New repository secret. Procédure complète dans le README, section « Déployer cette version sur Firebase Hosting »."
+            exit 1
+          fi
+
       - name: Deploy to Firebase Hosting live channel
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_YALLAH_SERVICES_8F1EC }}
-          projectId: yallah-services-8f1ec
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MENAGE_NOUNOU }}
+          projectId: menage-nounou
           channelId: live
 
       # Preuve, depuis une machine extérieure, que Google peut lire les sitemaps :
       # 200, XML, sans redirection, no-cache, et toutes les pages/vidéos/vignettes en 200.
       # C'est la vérification qui manquait lors des erreurs « Impossible de récupérer le sitemap ».
       - name: Vérifier les sitemaps en ligne
-        run: node outils/verifier-sitemaps.js
+        run: node outils/verifier-sitemaps.js --projet menage-nounou

@@ -1,11 +1,18 @@
 # Pack SEO Yallah Services
 
+> ⚠️ **Pack historique (hébergement Vercel), conservé pour référence.** Il a été
+> remplacé par l'outillage actuel : `outils/generer-pages-villes.js` pour les
+> pages service × ville, `outils/generer-sitemap.js` pour les sitemaps et
+> `build-site.js` pour le paquet publié. Ses URL par défaut ont été alignées sur
+> le domaine en service (`menage-nounou.web.app`) le 08/10/2026, mais **ne pas
+> s'en servir pour un nouveau déploiement** : partir de la racine du dépôt.
+
 ## 1. Fichiers
 | Fichier | Où |
 |---|---|
 | head-snippet.html | remplace title/description/keywords/OG/Twitter dans `<head>` de index.html + `<html lang="fr-MA">` |
 | robots.txt, llms.txt, vercel.json | racine du projet (ou `public/`) |
-| generate_pages.py | Depuis la racine : `BASE_URL=https://yallahservices-one.vercel.app python3 seo-pack/generate_pages.py` → `seo-pack/out/` : 6 pages locales + sitemap.xml, à copier à la racine |
+| generate_pages.py | Depuis la racine : `BASE_URL=https://menage-nounou.web.app python3 seo-pack/generate_pages.py` → `seo-pack/out/` : 6 pages locales + sitemap.xml, à copier à la racine |
 
 ## 2. Retouches on-page (index.html)
 - H1 : `<h1>Femme de ménage, nounou et cuisinière au Maroc : <em>une aide fiable pour votre maison</em></h1>`
@@ -34,4 +41,4 @@
 - Les pages générées utilisent toutes le délai « 24 à 72h » et annoncent 4 étapes.
 - Le sitemap contient la page d'accueil, la page candidature, les 2 pages existantes et les 6 nouvelles pages.
 
-Le domaine par défaut reste `https://yallahservices-one.vercel.app`. Avant déploiement, remplacer cette valeur par le domaine canonique définitif via `BASE_URL`, puis régénérer le dossier `out/`.
+Le domaine par défaut reste `https://menage-nounou.web.app`. Avant déploiement, remplacer cette valeur par le domaine canonique définitif via `BASE_URL`, puis régénérer le dossier `out/`.

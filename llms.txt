@@ -6,17 +6,17 @@ Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Salé, Témara, Mohammedia,
 Les demandes hors de ces zones sont étudiées au cas par cas : aucune autre ville n'est annoncée comme desservie.
 
 ## Pages clés
-- [Accueil, services et tarifs](https://yallah-services-8f1ec.web.app/)
-- [Services par ville](https://yallah-services-8f1ec.web.app/services-par-ville.html)
-- [Femme de ménage à Casablanca](https://yallah-services-8f1ec.web.app/femme-menage-casablanca.html)
-- [Nounou à Casablanca](https://yallah-services-8f1ec.web.app/nounou-casablanca.html)
-- [Femme de ménage à Rabat](https://yallah-services-8f1ec.web.app/femme-menage-rabat.html)
-- [Nounou à Rabat](https://yallah-services-8f1ec.web.app/nounou-rabat.html)
-- [Femme de ménage à Marrakech](https://yallah-services-8f1ec.web.app/femme-menage-marrakech.html)
-- [Femme de ménage à Tanger](https://yallah-services-8f1ec.web.app/femme-menage-tanger.html)
-- [Personnel pour les entreprises](https://yallah-services-8f1ec.web.app/personnel-entreprises.html)
-- [Espace candidats](https://yallah-services-8f1ec.web.app/candidature.html)
-- [Mentions légales](https://yallah-services-8f1ec.web.app/mentions-legales.html)
+- [Accueil, services et tarifs](https://menage-nounou.web.app/)
+- [Services par ville](https://menage-nounou.web.app/services-par-ville.html)
+- [Femme de ménage à Casablanca](https://menage-nounou.web.app/femme-menage-casablanca.html)
+- [Nounou à Casablanca](https://menage-nounou.web.app/nounou-casablanca.html)
+- [Femme de ménage à Rabat](https://menage-nounou.web.app/femme-menage-rabat.html)
+- [Nounou à Rabat](https://menage-nounou.web.app/nounou-rabat.html)
+- [Femme de ménage à Marrakech](https://menage-nounou.web.app/femme-menage-marrakech.html)
+- [Femme de ménage à Tanger](https://menage-nounou.web.app/femme-menage-tanger.html)
+- [Personnel pour les entreprises](https://menage-nounou.web.app/personnel-entreprises.html)
+- [Espace candidats](https://menage-nounou.web.app/candidature.html)
+- [Mentions légales](https://menage-nounou.web.app/mentions-legales.html)
 
 ## Faits
 - Frais de mise en relation : 500 MAD (formule Sérénité, remplacement 2 mois) ou 1 000 MAD (formule Premium, 6 mois), payés après validation du profil.

@@ -25,6 +25,7 @@
 
    Options :
        --url <adresse>      domaine à tester (défaut : site.config.json / SITE_URL)
+       --projet <id>        projet Firebase Hosting à tester, ex. menage-nounou
        --tentatives <n>     nombre d'essais après échec (défaut 3, 5 s d'écart)
 ══════════════════════════════════════════════════════════════════ */
 'use strict';
@@ -40,7 +41,10 @@ function argument(nom, defaut) {
   return index !== -1 && process.argv[index + 1] ? process.argv[index + 1] : defaut;
 }
 
-const BASE = String(argument('--url', process.env.SITE_URL || CONFIG.url || '')).replace(/\/+$/, '');
+/* --projet menage-nounou → https://menage-nounou.web.app (site Hosting par défaut) */
+const PROJET = argument('--projet', process.env.FIREBASE_PROJECT_ID || '');
+const BASE = String(argument('--url', PROJET ? 'https://' + PROJET + '.web.app'
+  : (process.env.SITE_URL || CONFIG.url || ''))).replace(/\/+$/, '');
 const TENTATIVES = Math.max(1, Number(argument('--tentatives', '3')) || 1);
 const ATTENTE_MS = 5000;
 

@@ -1,7 +1,7 @@
 # Audit SEO page par page — Yallah Services
 
 **Date de l’audit : 8 octobre 2026**  
-**Périmètre :** les 15 URL du sitemap de `https://yallah-services-8f1ec.web.app`, contenus visibles, sitemap, `robots.txt`, sitemap vidéo et HTML publié dans le dépôt.
+**Périmètre :** les 15 URL du sitemap de `https://menage-nounou.web.app`, contenus visibles, sitemap, `robots.txt`, sitemap vidéo et HTML publié dans le dépôt.
 
 ## Synthèse exécutive
 
@@ -9,7 +9,7 @@
 
 Le socle éditorial et on-page est **bon à très bon** : les 15 pages demandées existent dans le sitemap et leur contenu est récupérable ; les pages principales ont une intention distincte, des titres et descriptions différenciés, un H1 unique, des liens internes et des appels à l’action. Les pages locales ne sont pas des pages creuses : elles détaillent les besoins, les quartiers, les conditions, les prix disponibles et les limites réelles du service.
 
-**Le constat prioritaire de l’audit initial a été corrigé dans le dépôt.** Le sitemap et `robots.txt` live utilisaient Firebase tandis que le HTML source et la configuration par défaut conservaient Vercel. La configuration, les balises canonical, Open Graph, les identifiants Schema.org, `llms.txt`, les sitemaps et les fichiers du dossier publié sont maintenant alignés sur `https://yallah-services-8f1ec.web.app`. Les workflows Firebase s’appuient maintenant sur cette URL unique dans `site.config.json` au lieu de répéter une variable `SITE_URL` séparée.
+**Le constat prioritaire de l’audit initial a été corrigé dans le dépôt.** Le sitemap et `robots.txt` live utilisaient Firebase tandis que le HTML source et la configuration par défaut conservaient Vercel. La configuration, les balises canonical, Open Graph, les identifiants Schema.org, `llms.txt`, les sitemaps et les fichiers du dossier publié sont maintenant alignés sur `https://menage-nounou.web.app`. Les workflows Firebase s’appuient maintenant sur cette URL unique dans `site.config.json` au lieu de répéter une variable `SITE_URL` séparée.
 
 Le domaine `https://yallah.services` reste noté comme domaine souhaité ultérieurement. Il ne faut basculer le canonique vers celui-ci qu’une fois ce domaine réellement configuré et choisi comme domaine de production. Le changement fait ici aligne le dépôt sur le domaine Firebase demandé ; il ne déploie pas le site à lui seul.
 
@@ -175,9 +175,9 @@ Pour le référencement local externe, non inclus dans cet audit faute d’accè
 
 ## Vérifications effectuées et limites
 
-- Consultation du sitemap, de `robots.txt`, du sitemap vidéo et du contenu des 15 URL sur `yallah-services-8f1ec.web.app`.
+- Consultation du sitemap, de `robots.txt`, du sitemap vidéo et du contenu des 15 URL sur `menage-nounou.web.app`.
 - Audit statique des 15 fichiers HTML présents dans le dossier publié indiqué par `firebase.json` (`site-a-mettre-en-ligne/`) : titres, descriptions, H1, canonicals, Open Graph, robots et JSON-LD.
 - `node outils/verifier-site.js` : contrôles du dépôt réussis (ressources, liens, ancres, structure et attributs d’images inclus).
-- Après le correctif : `node outils/verifier-seo.js` et `SITE_URL=https://yallah-services-8f1ec.web.app node outils/verifier-seo.js --dossier site-a-mettre-en-ligne` passent ; le sitemap contient 15 URL cohérentes.
+- Après le correctif : `node outils/verifier-seo.js` et `SITE_URL=https://menage-nounou.web.app node outils/verifier-seo.js --dossier site-a-mettre-en-ligne` passent ; le sitemap contient 15 URL cohérentes.
 - `node outils/verifier-site.js` passe également après le correctif.
 - La vue de page consultée ne donne pas les en-têtes HTTP ni le HTML brut de la version live. Le dépôt est maintenant aligné, mais les codes de statut exacts et les canonicals réellement servis ne seront confirmés côté production qu’après le prochain déploiement. Core Web Vitals/Lighthouse, Search Console, positions, backlinks, conversions et fiche Google Business Profile restent à vérifier avant de conclure sur l’indexation ou la performance réelle.
