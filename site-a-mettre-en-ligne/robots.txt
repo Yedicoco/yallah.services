@@ -6,5 +6,5 @@ Disallow: /admin
 Disallow: /admin.html
 Disallow: /api/
 
-Sitemap: https://yallah-services-8f1ec.web.app/sitemap.xml
-Sitemap: https://yallah-services-8f1ec.web.app/video-sitemap.xml
+Sitemap: https://yallahservices-one.vercel.app/sitemap.xml
+Sitemap: https://yallahservices-one.vercel.app/video-sitemap.xml

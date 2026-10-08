@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · femme-menage-casablanca.html
-   137 chaînes, clés = textes d'origine de la page.
+   146 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/femme-menage-casablanca.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -83,7 +83,16 @@ YS_TRAD("dar-latn", "femme-menage-casablanca", {
   "4 000 DH": "4 000 derham",
   "Ménage dans un appartement": "Tneqqiya f appartment",
   "3 500 DH": "3 500 derham",
-  "Prestation à la journée — Casablanca et Rabat uniquement : ménage normal, villa 400 DH / appartement 300 DH ; grand ménage, villa 700 DH / appartement 500 DH (8 h maximum). Paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.": "L khedma b n-nhar — Casa w Rabat ghir: tneqqiya 3adiya, villa 400 derham / appartment 300 derham; tneqqiya kbira, villa 700 derham / appartment 500 derham (8 swaye3 b l aqṣa). L khlass mn b3d l khedma, l adawat kayjibha l klian, w l 7ajz b nhar qbel. Maṣarif l matching: 500 derham (sigha Sérénité) wla 1 000 derham (sigha Premium), katkhallas mn b3d l mowafqa 3la l profil, monfaṣla 3la ch-chhriya.",
+  "Prestation à la journée — Casablanca et Rabat uniquement": "L khedma b n-nhar — Casa w Rabat ghir",
+  "Ménage normal dans une villa": "Tneqqiya 3adiya f villa",
+  "400 DH": "400 derham",
+  "Ménage normal dans un appartement": "Tneqqiya 3adiya f appartment",
+  "300 DH": "300 derham",
+  "Grand ménage dans une villa": "Tneqqiya kbira f villa",
+  "700 DH": "700 derham",
+  "Grand ménage dans un appartement": "Tneqqiya kbira f appartment",
+  "500 DH": "500 derham",
+  "Journée : 8 h maximum, paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.": "B n-nhar: 8 swaye3 b l aqṣa, l khlass mn b3d l khedma, l adawat kayjibha l klian, w l 7ajz b nhar qbel. Maṣarif l matching: 500 derham (sigha Sérénité) wla 1 000 derham (sigha Premium), katkhallas mn b3d l mowafqa 3la l profil, monfaṣla 3la ch-chhriya.",
   "Comment se passe une demande à Casablanca": "Kifach katmchi ṭ-ṭaleb f Casa",
   "Quatre étapes, sans engagement, avec un échange écrit sur WhatsApp que vous gardez.": "Arba3 khatwat, bla iltizam, m3a 7adit mektoub f WhatsApp kaybqa 3andek.",
   "Vous décrivez le besoin": "Katwsef l 7aja",
