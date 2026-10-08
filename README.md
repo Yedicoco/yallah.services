@@ -62,6 +62,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── outils/generer-pages-villes.js    # Assemble les pages service × zone depuis contenu/pages/*.json
 ├── outils/generer-images.js          # Variantes responsives AVIF/WebP/JPEG via ImageMagick
 ├── outils/generer-sitemap.js         # Sitemaps pages + vidéos (lastmod = git), synchronisés dans robots.txt
+├── outils/verifier-sitemaps.js       # Contrôle en ligne des sitemaps (200, XML, sans redirection, no-cache, liens 200)
 ├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
 ├── services-par-ville.html           # Hub : tous les services, ville par ville
 ├── personnel-entreprises.html        # Hub B2B : hôtels, riads, chantiers, nettoyage, événements
@@ -143,12 +144,57 @@ Firebase CLI pour le même compte qui a accès à ce projet.
 `sitemap.xml` (15 pages publiques) et `video-sitemap.xml` (4 vidéos) sont
 régénérés à chaque build et référencés dans `robots.txt`. `firebase.json` les
 sert avec `Cache-Control: no-cache` : Google relit donc toujours la version à
-jour, jamais une copie périmée du CDN. Dans
-[Google Search Console](https://search.google.com/search-console) (propriété
-`https://yallah-services-8f1ec.web.app`), soumettre les deux sitemaps une fois ;
-après un changement de domaine ou une erreur « Impossible de récupérer le
-sitemap », les supprimer de la liste et les soumettre à nouveau — la lecture
-repart immédiatement sur la version en ligne.
+jour, jamais une copie périmée du CDN.
+
+**Vérifier la version en ligne** (depuis n'importe quelle machine extérieure au site) :
+
+```bash
+node outils/verifier-sitemaps.js                  # domaine de site.config.json
+node outils/verifier-sitemaps.js --url https://yallah.services
+```
+
+Le rapport reprend exactement ce que Google doit voir : `robots.txt` déclare les
+deux sitemaps sous le bon domaine, les deux fichiers répondent 200 en XML **sans
+redirection** (Google ne suit pas les redirections de sitemap) avec `no-cache`,
+et chaque page, vidéo MP4 et vignette listée répond 200. Après chaque mise en
+ligne, le workflow `firebase-hosting-merge.yml` lance ce contrôle automatiquement :
+un sitemap cassé (ancien domaine resté dans les `<loc>`, fichier non déployé…)
+fait échouer le job au lieu de passer inaperçu.
+
+**Si Search Console affiche « Impossible de récupérer le sitemap » :**
+
+1. Lancer la vérification ci-dessus. Si elle est verte, **le fichier n'est pas en
+   cause** : le message vient de la lecture côté Google, pas du site (cas observé
+   les 7 et 8 octobre 2026 : fichiers 200 en XML, sans redirection, et message
+   d'erreur maintenu).
+2. Dans la propriété `https://yallah-services-8f1ec.web.app` : **Inspection d'URL**
+   → coller l'URL du sitemap → **Tester l'URL en direct** → vérifier
+   « Exploration autorisée ? = Oui » et « Récupération de page = Opération
+   réussie ». C'est la procédure officielle de Google pour trancher.
+3. Supprimer les deux sitemaps du rapport et les **resoumettre en URL complète**
+   (`https://yallah-services-8f1ec.web.app/sitemap.xml`, jamais `/sitemap.xml`).
+4. Ne pas conclure trop vite : l'aide de Google précise que le type « Inconnu »
+   signifie « type de sitemap inconnu **ou sitemap pas encore traité** ». Laisser
+   24 à 48 h après un envoi avant de réessayer (et éviter les allers-retours
+   répétés dans le rapport).
+5. Dernier recours, sans rien changer au site : resoumettre sous une URL
+   paramétrée (`…/sitemap.xml?maj=2026-10-08`) ou sous un autre nom de fichier.
+   Plusieurs webmestres ont vu le statut passer à « Réussi » immédiatement.
+6. Les sitemaps étant déclarés dans `robots.txt`, Google les découvre même si le
+   rapport reste bloqué : suivre l'indexation réelle dans **« Indexation des
+   pages »**, et demander l'indexation des pages clés via l'inspection d'URL.
+
+> **Adresses `*.web.app`** : plusieurs utilisateurs de Firebase Hosting signalent
+> ce même message « Impossible de récupérer » pendant des mois alors que le
+> sitemap est lisible et que les pages s'indexent (discussions r/Firebase). En
+> complément de John Mueller, la cause est souvent l'exploration elle-même, pas le
+> fichier. La solution durable est le domaine propre : au 8 octobre 2026,
+> `yallah.services` n'était **enregistré par personne** (vérifié au registre RDAP
+> du `.services`). Le jour où le domaine est acheté puis ajouté comme domaine
+> personnalisé dans Firebase Hosting, il suffit de rebâtir avec
+> `SITE_URL=https://yallah.services node build-site.js` (canonicals, JSON-LD,
+> sitemaps et `robots.txt` suivent), puis de créer la propriété GSC correspondante
+> et d'y soumettre les sitemaps.
 
 Options du générateur :
 
@@ -429,6 +475,7 @@ node outils/generer-pages-villes.js              # régénère les pages service
 node outils/generer-images.js --verifier         # toutes les variantes srcset existent-elles ?
 node outils/generer-images.js                    # produit les variantes manquantes (ImageMagick)
 node outils/generer-sitemap.js                   # régénère sitemap.xml + video-sitemap.xml
+node outils/verifier-sitemaps.js                 # sitemaps en ligne : 200, XML, sans redirection, liens 200
 node build-site.js                               # site statique complet + les deux sitemaps
 node --check assets/js/*.js server.js build-site.js
 ```
