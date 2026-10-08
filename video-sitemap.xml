@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://yallahservices-one.vercel.app/</loc>
+    <loc>https://yallah-services-8f1ec.web.app/</loc>
     <video:video>
-      <video:thumbnail_loc>https://yallahservices-one.vercel.app/assets/img/videos/besoin-d-aide-a-domicile.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://yallah-services-8f1ec.web.app/assets/img/videos/besoin-d-aide-a-domicile.jpg</video:thumbnail_loc>
       <video:title>Besoin d’aide à domicile</video:title>
       <video:description>Présentation vidéo de Yallah Services pour les familles qui recherchent une aide à domicile au Maroc.</video:description>
-      <video:content_loc>https://yallahservices-one.vercel.app/assets/videos/besoin-d-aide-a-domicile.mp4</video:content_loc>
-      <video:publication_date>2026-10-03</video:publication_date>
+      <video:content_loc>https://yallah-services-8f1ec.web.app/assets/videos/besoin-d-aide-a-domicile.mp4</video:content_loc>
+      <video:publication_date>2026-10-03T04:29:12+01:00</video:publication_date>
     </video:video>
     <video:video>
-      <video:thumbnail_loc>https://yallahservices-one.vercel.app/assets/img/videos/yallah-service.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://yallah-services-8f1ec.web.app/assets/img/videos/yallah-service.jpg</video:thumbnail_loc>
       <video:title>Yallah Service</video:title>
       <video:description>Présentation vidéo de Yallah Services et de ses services d’aide à domicile au Maroc.</video:description>
-      <video:content_loc>https://yallahservices-one.vercel.app/assets/videos/yallah-service.mp4</video:content_loc>
-      <video:publication_date>2026-10-03</video:publication_date>
+      <video:content_loc>https://yallah-services-8f1ec.web.app/assets/videos/yallah-service.mp4</video:content_loc>
+      <video:publication_date>2026-10-03T04:29:12+01:00</video:publication_date>
     </video:video>
     <video:video>
-      <video:thumbnail_loc>https://yallahservices-one.vercel.app/assets/img/videos/2026-08-28-151819708.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://yallah-services-8f1ec.web.app/assets/img/videos/2026-08-28-151819708.jpg</video:thumbnail_loc>
       <video:title>Les services à domicile</video:title>
       <video:description>Présentation en vidéo des services d’aide à domicile proposés par Yallah Services au Maroc.</video:description>
-      <video:content_loc>https://yallahservices-one.vercel.app/assets/videos/2026-08-28-151819708.mp4</video:content_loc>
-      <video:publication_date>2026-10-03</video:publication_date>
+      <video:content_loc>https://yallah-services-8f1ec.web.app/assets/videos/2026-08-28-151819708.mp4</video:content_loc>
+      <video:publication_date>2026-10-03T04:29:12+01:00</video:publication_date>
     </video:video>
   </url>
   <url>
-    <loc>https://yallahservices-one.vercel.app/personnel-entreprises.html</loc>
+    <loc>https://yallah-services-8f1ec.web.app/personnel-entreprises.html</loc>
     <video:video>
-      <video:thumbnail_loc>https://yallahservices-one.vercel.app/assets/img/videos/prospection-b2b.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://yallah-services-8f1ec.web.app/assets/img/videos/prospection-b2b.jpg</video:thumbnail_loc>
       <video:title>Personnel pour les entreprises</video:title>
       <video:description>Présentation vidéo de la recherche et de la mise en relation de personnel opérationnel pour les entreprises au Maroc.</video:description>
-      <video:content_loc>https://yallahservices-one.vercel.app/assets/videos/prospection-b2b.mp4</video:content_loc>
-      <video:publication_date>2026-10-03</video:publication_date>
+      <video:content_loc>https://yallah-services-8f1ec.web.app/assets/videos/prospection-b2b.mp4</video:content_loc>
+      <video:publication_date>2026-10-03T04:29:12+01:00</video:publication_date>
     </video:video>
   </url>
 </urlset>

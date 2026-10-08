@@ -111,6 +111,6 @@ Google Search Console (Sitemaps), puis contrôler les URL de page concernées et
 rapport d'indexation des vidéos. L'indexation reste à la décision de Google : une
 soumission ou un balisage valide ne garantit pas l'apparition d'un résultat vidéo.
 Vérifier aussi que les URL canoniques, le sitemap, les MP4 et les vignettes utilisent
-le même domaine public. À la date de ce build, le domaine configuré est
-`https://yallahservices-one.vercel.app` ; basculer vers `https://yallah.services`
-uniquement lorsque ce domaine est réellement publié et choisi comme canonique.
+le même domaine public. Le domaine canonique configuré est actuellement
+`https://yallah-services-8f1ec.web.app` ; basculer vers `https://yallah.services`
+uniquement lorsque ce domaine sera réellement publié et choisi comme canonique.

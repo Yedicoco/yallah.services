@@ -26,8 +26,6 @@ jobs:
 
       - name: Build static site
         run: node build-site.js
-        env:
-          SITE_URL: https://yallah-services-8f1ec.web.app
 
       - name: Deploy to Firebase Hosting live channel
         uses: FirebaseExtended/action-hosting-deploy@v0
