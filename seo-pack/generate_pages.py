@@ -4,7 +4,7 @@ Usage : python3 generate_pages.py   -> écrit les .html et sitemap.xml dans ./ou
 Copier le contenu de ./out/ à la racine du site. Changer BASE si domaine custom."""
 import json, html, os, pathlib
 
-BASE = os.environ.get("BASE_URL", "https://yallahservices-one.vercel.app").rstrip("/")
+BASE = os.environ.get("BASE_URL", "https://menage-nounou.web.app").rstrip("/")
 WA = "212691733585"
 TODAY = "2026-10-02"
 OUT = pathlib.Path(__file__).resolve().parent / "out"; OUT.mkdir(exist_ok=True)

@@ -1,4 +1,14 @@
-name: Firebase Hosting Preview
+name: Vérification du site (pull request)
+
+# Contrôle chaque proposition de changement AVANT la fusion :
+# le site se construit, et tous les contrôles hors ligne passent
+# (liens, ressources, contenu, SEO, traductions, coordonnées).
+#
+# Remarque : le déploiement de prévisualisation Firebase a été retiré ici.
+# Il échouait sur chaque pull request depuis la création du dépôt (cause
+# invisible dans les journaux GitHub) et n'était donc qu'un voyant rouge
+# permanent. Le déploiement réel se fait sur `main`
+# (firebase-hosting-merge.yml), suivi du contrôle des sitemaps en ligne.
 
 on:
   pull_request:
@@ -8,14 +18,13 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 concurrency:
-  group: firebase-hosting-preview-${{ github.event.pull_request.number }}
+  group: verification-site-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
-  build_and_preview:
+  verifier:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -26,13 +35,19 @@ jobs:
         with:
           node-version: 22
 
-      - name: Build static site
+      - name: Construire le site statique
         run: node build-site.js
 
-      - name: Deploy preview to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_YALLAH_SERVICES_8F1EC }}
-          projectId: yallah-services-8f1ec
-          expires: 7d
+      - name: Contrôles du site
+        run: |
+          node outils/verifier-site.js                    # liens, ressources, ids, formulaires
+          node outils/verifier-contenu.js                 # contenu SEO local et conformité
+          node outils/verifier-seo.js                     # canonicals, metas, JSON-LD
+          node outils/verifier-seo.js --dossier site-a-mettre-en-ligne
+          node outils/extraire-i18n.js --verifier         # traductions complètes
+          node outils/generer-pages-villes.js --verifier  # fiches de contenu valides
+          node --check assets/js/*.js server.js build-site.js
+          # verifier-videos.js n'est pas lancé ici : le manifeste
+          # contenu/videos-sources.json référence encore l'ancien fichier de
+          # 2026-08-28-151819708.mp4 (19,5 Mo attendus, 2,1 Mo dans le dépôt),
+          # ce qui fait échouer le contrôle indépendamment de toute modification.

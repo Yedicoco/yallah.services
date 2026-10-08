@@ -82,7 +82,7 @@ ce qui n'est pas visible dans la page** (un écart réel a été détecté et co
 | 5 | `sitemap.xml` | ✅ désormais généré automatiquement | `outils/generer-sitemap.js` |
 | 6 | Robots / indexation | ✅ correct | `robots.txt`, `noindex` sur la confirmation |
 | 7 | Search Console | ⚠️ propriété créée, aucun suivi | `googlee184c103eb04f93a.html` |
-| 8 | Domaine propre | ❌ absent | tout pointe sur `yallahservices-one.vercel.app` |
+| 8 | Domaine propre | ⚠️ étape intermédiaire | tout pointe sur `https://menage-nounou.web.app` (projet Firebase `menage-nounou`, rebâtissage du 08/10/2026) ; domaine propre `yallah.services` toujours non enregistré |
 | 9 | Contenu des pages villes | ❌ **bloquant** | 364 et 418 mots, structure calquée, 23 % de texte identique |
 | 10 | Maillage interne | ❌ insuffisant | aucune page ville ne lie une voisine |
 | 11 | **Conformité des affirmations** | ⚠️ corrigée le 2 octobre | voir `contenu/audit-promesses-site.md` |
@@ -156,10 +156,15 @@ Passage en dossiers à envisager seulement au-delà de ~150 pages.
 
 ### 3.3 Domaine propre (à faire avant les citations)
 
-Tout pointe sur `yallahservices-one.vercel.app` : canonicals, OG, `@id` Schema, sitemap, robots.
-Sous-domaine partagé = mauvais signal pour les annuaires et la fiche Google, et migration impossible
-sans tout casser. **Lot 1 :** acheter le domaine, brancher, rediriger en 301, centraliser dans
-`site.config.json` (`url`), puis `node outils/generer-sitemap.js`. Un seul point de vérité.
+Tout pointe désormais sur `https://menage-nounou.web.app` (projet Firebase `menage-nounou`) :
+canonicals, OG, `@id` Schema, sitemap, robots — la bascule du 08/10/2026 a remplacé l'ancien
+hébergement Vercel puis le premier projet Firebase `yallah-services-8f1ec`, dont la propriété
+Search Console restait bloquée sur « Impossible de récupérer le sitemap ».
+Sous-domaine partagé = mauvais signal pour les annuaires et la fiche Google. **Lot 1 :**
+acheter le domaine propre (`yallah.services`, libre au 08/10/2026), le brancher comme domaine
+personnalisé Firebase, centraliser l'adresse dans `site.config.json` (`url`) puis
+`node build-site.js` — procédure pas à pas dans le README (« Basculer le site sur un autre
+projet Firebase ou un domaine »). Un seul point de vérité.
 
 > **État au 5 octobre 2026 :** `yallah.services` (l'`urlSouhaitee` de `site.config.json`),
 > `yallahservices.ma`, `yallah-services.ma`, `yallah.ma` et `yallahservices.com` ne résolvent
