@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · femme-menage-casablanca.html
-   137 chaînes, clés = textes d'origine de la page.
+   146 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/femme-menage-casablanca.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -83,7 +83,16 @@ YS_TRAD("dar", "femme-menage-casablanca", {
   "4 000 DH": "4 000 درهم",
   "Ménage dans un appartement": "تنقية فأبارتمان",
   "3 500 DH": "3 500 درهم",
-  "Prestation à la journée — Casablanca et Rabat uniquement : ménage normal, villa 400 DH / appartement 300 DH ; grand ménage, villa 700 DH / appartement 500 DH (8 h maximum). Paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.": "الخدمة بالنهار — كازا والرباط فقط: تنقية عادية، فيلا 400 درهم / أبارتمان 300 درهم؛ تنقية كبيرة، فيلا 700 درهم / أبارتمان 500 درهم (8 ساعات كحد أقصى). الخلاص من بعد الخدمة، الأدوات كيجيبها الكليان، والحجز بنهار قبل. مصاريف المطابقة: 500 درهم (صيغة Sérénité) ولا 1 000 درهم (صيغة Premium)، كتخلص من بعد الموافقة على البروفيل، منفصلة على الشهرية.",
+  "Prestation à la journée — Casablanca et Rabat uniquement": "الخدمة بالنهار — كازا والرباط فقط",
+  "Ménage normal dans une villa": "تنقية عادية فالفيلا",
+  "400 DH": "400 درهم",
+  "Ménage normal dans un appartement": "تنقية عادية فالأبارتمان",
+  "300 DH": "300 درهم",
+  "Grand ménage dans une villa": "تنقية كبيرة فالفيلا",
+  "700 DH": "700 درهم",
+  "Grand ménage dans un appartement": "تنقية كبيرة فالأبارتمان",
+  "500 DH": "500 درهم",
+  "Journée : 8 h maximum, paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.": "بالنهار: 8 ساعات كحد أقصى، الخلاص من بعد الخدمة، الأدوات كيجيبها الكليان، والحجز بنهار قبل. مصاريف المطابقة: 500 درهم (صيغة Sérénité) ولا 1 000 درهم (صيغة Premium)، كتخلص من بعد الموافقة على البروفيل، منفصلة على الشهرية.",
   "Comment se passe une demande à Casablanca": "كيفاش كتمشي الطلب فكازا",
   "Quatre étapes, sans engagement, avec un échange écrit sur WhatsApp que vous gardez.": "أربع خطوات، بلا التزام، مع حديث مكتوب فواتساب كتبقى عندك.",
   "Vous décrivez le besoin": "كتوصف الحاجة",

@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · femme-menage-casablanca.html
-   137 chaînes, clés = textes d'origine de la page.
+   146 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/femme-menage-casablanca.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -83,7 +83,16 @@ YS_TRAD("en", "femme-menage-casablanca", {
   "4 000 DH": "4,000 MAD",
   "Ménage dans un appartement": "Cleaning in a flat",
   "3 500 DH": "3,500 MAD",
-  "Prestation à la journée — Casablanca et Rabat uniquement : ménage normal, villa 400 DH / appartement 300 DH ; grand ménage, villa 700 DH / appartement 500 DH (8 h maximum). Paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.": "Day service — Casablanca and Rabat only: standard cleaning, 400 MAD for a villa / 300 MAD for a flat; deep cleaning, 700 MAD for a villa / 500 MAD for a flat (8 hours maximum). Payment after the service, materials provided by the client, booking one day in advance. Introduction fee: 500 MAD (Sérénité package) or 1,000 MAD (Premium package), paid after the profile is approved, separately from the salary.",
+  "Prestation à la journée — Casablanca et Rabat uniquement": "Day service — Casablanca and Rabat only",
+  "Ménage normal dans une villa": "Standard cleaning in a villa",
+  "400 DH": "400 MAD",
+  "Ménage normal dans un appartement": "Standard cleaning in a flat",
+  "300 DH": "300 MAD",
+  "Grand ménage dans une villa": "Deep cleaning in a villa",
+  "700 DH": "700 MAD",
+  "Grand ménage dans un appartement": "Deep cleaning in a flat",
+  "500 DH": "500 MAD",
+  "Journée : 8 h maximum, paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.": "Day service: 8 hours maximum, payment after the service, materials provided by the client, booking one day in advance. Introduction fee: 500 MAD (Sérénité package) or 1,000 MAD (Premium package), paid after the profile is approved, separately from the salary.",
   "Comment se passe une demande à Casablanca": "How a request works in Casablanca",
   "Quatre étapes, sans engagement, avec un échange écrit sur WhatsApp que vous gardez.": "Four steps, no commitment, with a written WhatsApp exchange you keep.",
   "Vous décrivez le besoin": "You describe what you need",

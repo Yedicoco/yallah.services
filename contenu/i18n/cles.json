@@ -7605,9 +7605,63 @@
         "langue": "fr"
       },
       {
-        "cle": "Prestation à la journée — Casablanca et Rabat uniquement : ménage normal, villa 400 DH / appartement 300 DH ; grand ménage, villa 700 DH / appartement 500 DH (8 h maximum). Paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.",
+        "cle": "Prestation à la journée — Casablanca et Rabat uniquement",
         "occurrences": 1,
-        "exemple": "Prestation à la journée — Casablanca et Rabat uniquement : ménage normal, villa 400 DH / appartement 300 DH ; grand ménage, villa 700 DH / appartement 500 DH (8 h maximum). Paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.",
+        "exemple": "Prestation à la journée — Casablanca et Rabat uniquement",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ménage normal dans une villa",
+        "occurrences": 1,
+        "exemple": "Ménage normal dans une villa",
+        "langue": "fr"
+      },
+      {
+        "cle": "400 DH",
+        "occurrences": 1,
+        "exemple": "400 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ménage normal dans un appartement",
+        "occurrences": 1,
+        "exemple": "Ménage normal dans un appartement",
+        "langue": "fr"
+      },
+      {
+        "cle": "300 DH",
+        "occurrences": 1,
+        "exemple": "300 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Grand ménage dans une villa",
+        "occurrences": 1,
+        "exemple": "Grand ménage dans une villa",
+        "langue": "fr"
+      },
+      {
+        "cle": "700 DH",
+        "occurrences": 1,
+        "exemple": "700 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Grand ménage dans un appartement",
+        "occurrences": 1,
+        "exemple": "Grand ménage dans un appartement",
+        "langue": "fr"
+      },
+      {
+        "cle": "500 DH",
+        "occurrences": 1,
+        "exemple": "500 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Journée : 8 h maximum, paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.",
+        "occurrences": 1,
+        "exemple": "Journée : 8 h maximum, paiement après le service, matériel fourni par le client, réservation 1 jour à l'avance. Frais de mise en relation : 500 DH (formule Sérénité) ou 1 000 DH (formule Premium), réglés après validation du profil, séparément du salaire.",
         "langue": "fr"
       },
       {
