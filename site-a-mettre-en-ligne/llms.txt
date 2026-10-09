@@ -6,17 +6,17 @@ Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Salé, Témara, Mohammedia,
 Les demandes hors de ces zones sont étudiées au cas par cas : aucune autre ville n'est annoncée comme desservie.
 
 ## Pages clés
-- [Accueil, services et tarifs](https://menage-nounou.web.app/)
-- [Services par ville](https://menage-nounou.web.app/services-par-ville.html)
-- [Femme de ménage à Casablanca](https://menage-nounou.web.app/femme-menage-casablanca.html)
-- [Nounou à Casablanca](https://menage-nounou.web.app/nounou-casablanca.html)
-- [Femme de ménage à Rabat](https://menage-nounou.web.app/femme-menage-rabat.html)
-- [Nounou à Rabat](https://menage-nounou.web.app/nounou-rabat.html)
-- [Femme de ménage à Marrakech](https://menage-nounou.web.app/femme-menage-marrakech.html)
-- [Femme de ménage à Tanger](https://menage-nounou.web.app/femme-menage-tanger.html)
-- [Personnel pour les entreprises](https://menage-nounou.web.app/personnel-entreprises.html)
-- [Espace candidats](https://menage-nounou.web.app/candidature.html)
-- [Mentions légales](https://menage-nounou.web.app/mentions-legales.html)
+- [Accueil, services et tarifs](https://yallahservices-one.vercel.app/)
+- [Services par ville](https://yallahservices-one.vercel.app/services-par-ville.html)
+- [Femme de ménage à Casablanca](https://yallahservices-one.vercel.app/femme-menage-casablanca.html)
+- [Nounou à Casablanca](https://yallahservices-one.vercel.app/nounou-casablanca.html)
+- [Femme de ménage à Rabat](https://yallahservices-one.vercel.app/femme-menage-rabat.html)
+- [Nounou à Rabat](https://yallahservices-one.vercel.app/nounou-rabat.html)
+- [Femme de ménage à Marrakech](https://yallahservices-one.vercel.app/femme-menage-marrakech.html)
+- [Femme de ménage à Tanger](https://yallahservices-one.vercel.app/femme-menage-tanger.html)
+- [Personnel pour les entreprises](https://yallahservices-one.vercel.app/personnel-entreprises.html)
+- [Espace candidats](https://yallahservices-one.vercel.app/candidature.html)
+- [Mentions légales](https://yallahservices-one.vercel.app/mentions-legales.html)
 
 ## Faits
 - Frais de mise en relation : 500 MAD (formule Sérénité, remplacement 2 mois) ou 1 000 MAD (formule Premium, 6 mois), payés après validation du profil.

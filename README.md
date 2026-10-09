@@ -113,6 +113,35 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 
 ---
 
+## 🔗 Aperçu de partage (accueil)
+
+Le site est statique : **la racine du dépôt est la racine publique sur Vercel** ;
+`assets/img/` est aussi servi publiquement par la version serveur et copié dans
+`site-a-mettre-en-ligne/` lors du build Firebase. L'image officielle est
+`assets/img/yallah-services-partage-1200x630.jpg` (JPEG 1200 × 630) ; son URL
+publique est `https://yallahservices-one.vercel.app/assets/img/yallah-services-partage-1200x630.jpg`.
+Les balises Open Graph et Twitter figurent directement dans le `<head>` de
+`index.html`, sans injection JavaScript. Le domaine canonique dans
+`site.config.json` correspond maintenant au site Vercel partagé ; les
+canonicals, le JSON-LD et les sitemaps sont alignés sur ce domaine.
+
+```bash
+node build-site.js                  # régénérer la version statique si l'accueil change
+node outils/verifier-partage.js     # image + métadonnées uniques dans les deux versions
+# Pour régénérer l'image : installer Pillow, puis python outils/generer-image-partage.py
+```
+
+**Après la mise en production sur Vercel**, ouvrir l'URL de l'image en navigation
+privée (200, JPEG, sans connexion), puis afficher le code source de la page
+(`view-source:https://yallahservices-one.vercel.app/`) pour vérifier les metas
+avant tout JavaScript. Pour tester/rafraîchir l'aperçu : utiliser le
+[Sharing Debugger Facebook](https://developers.facebook.com/tools/debug/)
+(« Scrape Again ») et le [Post Inspector LinkedIn](https://www.linkedin.com/post-inspector/).
+WhatsApp n'offre pas de purge de cache garantie : essayer un nouveau message
+avec l'URL exacte ; si un ancien aperçu persiste, tester avec un paramètre
+provisoire (`https://yallahservices-one.vercel.app/?partage=2`) et attendre
+la mise à jour du cache. Ne pas changer le numéro WhatsApp des candidats.
+
 ## 🚀 Les deux versions du site
 
 ### 1. Version statique — `site-a-mettre-en-ligne/` (aucune installation)
