@@ -8,7 +8,7 @@ const { dimensions } = require('./generer-images');
 
 const racine = path.resolve(__dirname, '..');
 const site = 'https://yallahservices-one.vercel.app/';
-const image = 'assets/img/yallah-services-partage-1200x630.jpg';
+const image = 'assets/img/yallah-services-partage-v2-1200x630.jpg';
 const titre = 'Yallah Services | Aide à domicile au Maroc';
 const description = 'Femmes de ménage, cuisinières, nounous, garde-malades, grand ménage et services aux entreprises. Contactez-nous sur WhatsApp au +212 691 733 585.';
 const attendus = {
@@ -18,9 +18,10 @@ const attendus = {
   'property:og:type': 'website',
   'property:og:url': site,
   'property:og:image': site + image,
+  'property:og:image:type': 'image/jpeg',
   'property:og:image:width': '1200',
   'property:og:image:height': '630',
-  'property:og:image:alt': 'Yallah Services, aide à domicile au Maroc et contact WhatsApp',
+  'property:og:image:alt': 'Flyer Yallah Services, aide à domicile au Maroc et contact WhatsApp +212 691 733 585',
   'name:twitter:card': 'summary_large_image',
   'name:twitter:title': titre,
   'name:twitter:description': description,
@@ -41,10 +42,14 @@ function verifier(dossier) {
   }
   assert.equal((head[1].match(/<link rel="canonical"/g) || []).length, 1);
   assert.ok(head[1].includes(`<link rel="canonical" href="${site}">`));
+  assert.ok(!head[1].includes(site + 'assets/img/yallah-services-partage-1200x630.jpg'),
+    `${dossier}: l'ancienne URL d'image ne doit plus être utilisée dans les métadonnées`);
   const fichier = path.join(dossier, image);
   assert.ok(fs.existsSync(fichier), `Image publique absente : ${fichier}`);
   assert.deepEqual(dimensions(fichier), { largeur: 1200, hauteur: 630 });
-  assert.ok(fs.statSync(fichier).size < 5 * 1024 * 1024, 'Image trop lourde pour les robots sociaux');
+  const contenuImage = fs.readFileSync(fichier);
+  assert.deepEqual([...contenuImage.subarray(0, 2)], [0xff, 0xd8], 'Image publique au format JPEG');
+  assert.ok(contenuImage.length < 5 * 1024 * 1024, 'Image trop lourde pour les robots sociaux');
   console.log(`✅ ${path.relative(racine, dossier) || '.'}/ : métadonnées uniques dans le HTML initial et image JPEG 1200 × 630`);
 }
 

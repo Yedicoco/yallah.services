@@ -117,19 +117,30 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 
 Le site est statique : **la racine du dépôt est la racine publique sur Vercel** ;
 `assets/img/` est aussi servi publiquement par la version serveur et copié dans
-`site-a-mettre-en-ligne/` lors du build Firebase. L'image officielle est
-`assets/img/yallah-services-partage-1200x630.jpg` (JPEG 1200 × 630) ; son URL
-publique est `https://yallahservices-one.vercel.app/assets/img/yallah-services-partage-1200x630.jpg`.
-Les balises Open Graph et Twitter figurent directement dans le `<head>` de
-`index.html`, sans injection JavaScript. Le domaine canonique dans
-`site.config.json` correspond maintenant au site Vercel partagé ; les
-canonicals, le JSON-LD et les sitemaps sont alignés sur ce domaine.
+`site-a-mettre-en-ligne/` lors du build Firebase. Le PNG fourni est conservé tel
+quel dans `assets/img/yallah-services-partage-original.png` (1730 × 909). Le visuel
+de partage dérivé de ce fichier — redimensionné, sans recréation — est
+`assets/img/yallah-services-partage-v2-1200x630.jpg` (JPEG 1200 × 630), à l'URL
+publique `https://yallahservices-one.vercel.app/assets/img/yallah-services-partage-v2-1200x630.jpg`.
+Le nom `v2` donne une nouvelle URL aux robots de partage au lieu de réutiliser
+celle qui peut être en cache. Les balises Open Graph et Twitter figurent
+directement dans le `<head>` de `index.html`, sans injection JavaScript. Le
+domaine canonique dans `site.config.json` correspond au site Vercel partagé ;
+les canonicals, le JSON-LD et les sitemaps sont alignés sur ce domaine.
 
 ```bash
-node build-site.js                  # régénérer la version statique si l'accueil change
-node outils/verifier-partage.js     # image + métadonnées uniques dans les deux versions
-# Pour régénérer l'image : installer Pillow, puis python outils/generer-image-partage.py
+# Facultatif : refaire le JPEG à partir du PNG fourni (Pillow dans un venv)
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install Pillow
+python outils/generer-image-partage.py
+
+node build-site.js
+node outils/verifier-partage.js
 ```
+
+Lors d'un prochain changement de visuel, augmentez le numéro de version du
+fichier de sortie et des métadonnées plutôt que d'écraser une URL déjà partagée.
 
 **Après la mise en production sur Vercel**, ouvrir l'URL de l'image en navigation
 privée (200, JPEG, sans connexion), puis afficher le code source de la page
