@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   453 chaînes, clés = textes d'origine de la page.
+   455 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -156,12 +156,13 @@ YS_TRAD("dar-latn", "index", {
   "Voir la vidéo B2B →": "Chouf video B2B →",
   "Grille tarifaire des services": "Jadwal atmanat l khadamat",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "Atmanat kheddama dar, 7adana w teyyaba f l Maghrib (2026)",
-  "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "Atmana chahriya 7sab l khedma w l miham — ojra ichariya ymken ttebdel 7sab ch-chorot w l mas2uliyat.",
+  "Tarifs mensuels, hebdomadaires ou à la journée selon la formule — tarifs indicatifs pouvant varier selon les conditions et responsabilités.": "Atmana chahriya, usbu3iya wla b n-nhar 7sab ṣ-ṣigha — atmana irchadiya momkin tetbeddel 7sab ẓ-ẓuruf w l mas2uliyat.",
   "🧹 Ménage": "🧹 Tneqqiya",
   "🧸 Nounou": "🧸 7adana",
   "🍳 Cuisine": "🍳 Tiyab",
   "❤️ Garde malade": "❤️ Ri3ayat l mriḍ",
-  "⏰ À la journée": "⏰ B n-nhar",
+  "🌙 Non Logée": "🌙 Ghir mqima",
+  "⏰ Service ponctuel à la journée": "⏰ Khedma ẓarfiyya b n-nhar",
   "🏠 Formule logée — horaires et repos à convenir": "🏠 Sighat l iqama — lwa9t w r-ra7a kayt7eddedo b l itifaq",
   "@alt:Ménage simple dans villa — Yallah Services": "Tneqqiya sahla f villa — Yallah Services",
   "Ménage simple dans villa": "Tneqqiya sahla f villa",
@@ -265,9 +266,8 @@ YS_TRAD("dar-latn", "index", {
   "Surveillance et aide quotidienne": "Muraqaba w 3awna yawmiya",
   "Préparation des repas légers": "T7ḍir makla khfifa",
   "@data-pack:Garde malade et ménage": "Ri3ayat mriḍ m3a t-tneqqiya",
-  "✨ 8h max · 📍 Casa & Rabat uniquement": "✨ 8 swaya3 k ḥadd aqṣa · 📍 Casa w Rabat ghir",
+  "🌙 Formule non logée — Casa & Rabat · tarif à la semaine": "🌙 Ṣigha ghir mqima — Casa w Rabat · taman usbu3i",
   "@alt:Femme de ménage Yallah Services": "Kheddama dar Yallah Services",
-  "🌙 Non Logée": "🌙 Ghir mqima",
   "Pack Ménage": "Pack t-tneqqiya",
   "DH / semaine": "Derham / usbu3",
   "Lun–Ven, 9h à 17h — Du lundi au vendredi": "L tnin–J-jm3a, mn 9 ṣba7 7ta 5 m3a — mn l tnin l j-jm3a",
@@ -286,6 +286,7 @@ YS_TRAD("dar-latn", "index", {
   "Activités éducatives pour les enfants": "Anchtat ta3limiya l d-drayri",
   "Solution complète et économique": "7all kamel w iqtiṣadi",
   "@data-pack:Ménage + Nounou Non Logée": "Tneqqiya + 7adana ghir mqima",
+  "✨ Prestation ponctuelle à la journée — 8h max · 📍 Casa & Rabat uniquement": "✨ Khedma ẓarfiyya b n-nhar — 8 swaya3 k ḥadd aqṣa · 📍 Casa w Rabat ghir",
   "Ménage Normal": "Tneqqiya 3adiya",
   "1 femme · Cuisine, sols, SDB, chambres, draps": "Kheddama wahda · L kouzina, l arḍiyat, l 7emmat, l biyut, ch-chrachf",
   "Villa": "Villa",
@@ -343,7 +344,8 @@ YS_TRAD("dar-latn", "index", {
   "• Nounou : 1 enfant 3 500 DH (+ ménage 4 000 DH) · 2 enfants avec ménage 4 500/5 000 DH · 3 enfants 4 500 DH (+ ménage 5 000 DH)": "• <strong>7adana:</strong> derri wa7ed 3 500 derham (+ tneqqiya 4 000 derham) · juj drayri m3a t-tneqqiya 4 500/5 000 derham · 3 drayri 4 500 derham (+ tneqqiya 5 000 derham)",
   "• Cuisine : cuisine simple 4 000 DH · cuisine/ménage 5 000 DH · aide cuisine 3 500 DH · aide cuisine/ménage 4 000 DH": "• <strong>Tiyab:</strong> tiyab sahel 4 000 derham · tiyab/tneqqiya 5 000 derham · 3awna f t-tiyab 3 500 derham · 3awna f t-tiyab/tneqqiya 4 000 derham",
   "• Garde malade : simple 3 500 DH · avec ménage 4 000 DH": "• <strong>Ri3ayat l mriḍ:</strong> basita 3 500 derham · m3a t-tneqqiya 4 000 derham",
-  "• À la journée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem": "• <strong>B n-nhar (Casa w Rabat):</strong> tneqqiya 600 derham/usbu3 · tneqqiya + tiyab 800 derham/usbu3 · tneqqiya + 7adana 800 derham/usbu3",
+  "• Non logée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem": "• <strong>Ghir mqima (Casa w Rabat):</strong> tneqqiya 600 derham/usbu3 · tneqqiya + tiyab 800 derham/usbu3 · tneqqiya + 7adana 800 derham/usbu3",
+  "• Service ponctuel à la journée (Casa & Rabat) : ménage normal 300/400 DH · grand ménage 500/700 DH": "• <strong>Khedma ẓarfiyya b n-nhar (Casa w Rabat):</strong> tneqqiya 3adiya 300/400 derham · tneqqiya kbira 500/700 derham",
   "Ces tarifs sont indicatifs et peuvent varier selon les conditions et responsabilités. À ces salaires s'ajoutent les frais de Mise en relation (500 ou 1 000 DH). Le salaire est versé directement à l'employée par le foyer.": "Had l atmina taqribiya w yemken tbeddel 3la 7sab ẓ-ẓuruf w l mas2uliyat. Katzad 3liha maṣarif l matching (500 wla 1 000 derham). L ajr kaytkhlles nichan l l kheddama mn 3nd l 3a2ila.",
   "Comment se passe la première rencontre avec l'employée ? ▾": "Kifach kaytmm l awwal liqa2 m3a l kheddama? <span class=\"arr\">▾</span>",
   "Vous pouvez échanger avec la personne et vérifier les informations utiles avant votre décision. Si vous souhaitez un autre profil, les modalités de remplacement prévues par la formule choisie s’appliquent.": "T9der thder m3a chakhṣ w t2eked mn lma3lumat lmohemma qbel l9rar dyalek. Ila bghiti profil akhor, kayetṭebqo chourout t-tabdil dyal s-sigha li khtarti.",

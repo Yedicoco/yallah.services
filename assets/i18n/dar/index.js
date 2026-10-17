@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   453 chaînes, clés = textes d'origine de la page.
+   455 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -156,12 +156,13 @@ YS_TRAD("dar", "index", {
   "Voir la vidéo B2B →": "تفرّج ففيديو الشركات →",
   "Grille tarifaire des services": "جدول أثمنة الخدمات",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "أثمنة خدامة الدار، الحضانة والطيابة فالمغرب (2026)",
-  "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "أثمنة شهرية حسب الخدمة والمهام — أجور إشارية يمكن يتبدلو حسب الشروط والمسؤوليات.",
+  "Tarifs mensuels, hebdomadaires ou à la journée selon la formule — tarifs indicatifs pouvant varier selon les conditions et responsabilités.": "أثمنة شهرية، أسبوعية ولا بالنهار حسب الصيغة — أثمنة إرشادية ممكن تتبدل حسب الظروف والمسؤوليات.",
   "🧹 Ménage": "🧹 التنقية",
   "🧸 Nounou": "🧸 الحضانة",
   "🍳 Cuisine": "🍳 الطياب",
   "❤️ Garde malade": "❤️ رعاية المريض",
-  "⏰ À la journée": "⏰ باليوم",
+  "🌙 Non Logée": "🌙 غير مقيمة",
+  "⏰ Service ponctuel à la journée": "⏰ خدمة ظرفية بالنهار",
   "🏠 Formule logée — horaires et repos à convenir": "🏠 صيغة الإقامة — أوقات العمل والراحة كيتحددو بالاتفاق",
   "@alt:Ménage simple dans villa — Yallah Services": "تنقية ساهلة فالفيلا — Yallah Services",
   "Ménage simple dans villa": "تنقية ساهلة فالفيلا",
@@ -265,9 +266,8 @@ YS_TRAD("dar", "index", {
   "Surveillance et aide quotidienne": "مراقبة وعاونة يومية",
   "Préparation des repas légers": "تحضير ماكلة خفيفة",
   "@data-pack:Garde malade et ménage": "رعاية مريض مع التنقية",
-  "✨ 8h max · 📍 Casa & Rabat uniquement": "✨ 8 ساعات كحد أقصى · 📍 كازا والرباط فقط",
+  "🌙 Formule non logée — Casa & Rabat · tarif à la semaine": "🌙 صيغة غير مقيمة — كازا والرباط · تمن أسبوعي",
   "@alt:Femme de ménage Yallah Services": "خدامة دار Yallah Services",
-  "🌙 Non Logée": "🌙 غير مقيمة",
   "Pack Ménage": "باك التنقية",
   "DH / semaine": "درهم / أسبوع",
   "Lun–Ven, 9h à 17h — Du lundi au vendredi": "الاثنين–الجمعة، من 9ص حتى 5م — من الاثنين للجمعة",
@@ -286,6 +286,7 @@ YS_TRAD("dar", "index", {
   "Activités éducatives pour les enfants": "أنشطة تعليمية للدراري",
   "Solution complète et économique": "حل كامل واقتصادي",
   "@data-pack:Ménage + Nounou Non Logée": "تنقية + حضانة غير مقيمة",
+  "✨ Prestation ponctuelle à la journée — 8h max · 📍 Casa & Rabat uniquement": "✨ خدمة ظرفية بالنهار — 8 ساعات كحد أقصى · 📍 كازا والرباط فقط",
   "Ménage Normal": "تنقية عادية",
   "1 femme · Cuisine, sols, SDB, chambres, draps": "خدامة وحدة · الكوزينة، الأرضيات، الحمامات، البيوط، الشراشف",
   "Villa": "فيلا",
@@ -343,7 +344,8 @@ YS_TRAD("dar", "index", {
   "• Nounou : 1 enfant 3 500 DH (+ ménage 4 000 DH) · 2 enfants avec ménage 4 500/5 000 DH · 3 enfants 4 500 DH (+ ménage 5 000 DH)": "• <strong>الحضانة:</strong> درّي واحد 3 500 درهم (+ تنقية 4 000 درهم) · جوج دراري مع التنقية 4 500/5 000 درهم · 3 دراري 4 500 درهم (+ تنقية 5 000 درهم)",
   "• Cuisine : cuisine simple 4 000 DH · cuisine/ménage 5 000 DH · aide cuisine 3 500 DH · aide cuisine/ménage 4 000 DH": "• <strong>الطياب:</strong> طياب ساهل 4 000 درهم · طياب/تنقية 5 000 درهم · عاونة فالطياب 3 500 درهم · عاونة فالطياب/تنقية 4 000 درهم",
   "• Garde malade : simple 3 500 DH · avec ménage 4 000 DH": "• <strong>رعاية المريض:</strong> بسيطة 3 500 درهم · مع التنقية 4 000 درهم",
-  "• À la journée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem": "• <strong>باليوم (كازا والرباط):</strong> تنقية 600 درهم/أسبوع · تنقية + طياب 800 درهم/أسبوع · تنقية + حضانة 800 درهم/أسبوع",
+  "• Non logée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem": "• <strong>غير مقيمة (كازا والرباط):</strong> تنقية 600 درهم/أسبوع · تنقية + طياب 800 درهم/أسبوع · تنقية + حضانة 800 درهم/أسبوع",
+  "• Service ponctuel à la journée (Casa & Rabat) : ménage normal 300/400 DH · grand ménage 500/700 DH": "• <strong>خدمة ظرفية بالنهار (كازا والرباط):</strong> تنقية عادية 300/400 درهم · تنقية كبيرة 500/700 درهم",
   "Ces tarifs sont indicatifs et peuvent varier selon les conditions et responsabilités. À ces salaires s'ajoutent les frais de Mise en relation (500 ou 1 000 DH). Le salaire est versé directement à l'employée par le foyer.": "هاد الأثمنة تقريبية ويمكن تتبدل على حساب الظروف والمسؤوليات. كتزاد عليها مصاريف المطابقة (500 ولا 1 000 درهم). الأجر كيتخلص نيشان للخدامة من عند العائلة.",
   "Comment se passe la première rencontre avec l'employée ? ▾": "كيفاش كيتم أول لقاء مع الخدامة؟ <span class=\"arr\">▾</span>",
   "Vous pouvez échanger avec la personne et vérifier les informations utiles avant votre décision. Si vous souhaitez un autre profil, les modalités de remplacement prévues par la formule choisie s’appliquent.": "تقدر تهضر مع الشخص وتتحقق من المعلومات المهمة قبل القرار ديالك. إلا بغيتي بروفيل آخر، كيتطبقو شروط التبديل ديال الصيغة اللي اخترتي.",
