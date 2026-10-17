@@ -244,6 +244,7 @@
   "pagesHorsSitemap": [
     "admin.html",
     "candidature-confirmation.html",
+    "liens-partage.html",
     "plan-placement-du-formulaire.html"
   ]
 }

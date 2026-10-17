@@ -1,0 +1,323 @@
+/* ══════════════════════════════════════════════════════════════════
+   YALLAH SERVICES — Liens de rubriques partageables
+
+   Deux besoins distincts :
+
+   · .ys-partage          le petit bouton « 🔗 Copier le lien » posé sur
+                         chaque rubrique de l'accueil ;
+   · .ys-liens-*          la page « Liens à partager », où l'agence
+                         consulte et copie tous les liens du site.
+
+   Les couleurs reprennent celles du site (or #d8b361, nuit #030f20,
+   vert WhatsApp #25D366) pour que ces éléments se fondent dans les
+   rubriques claires comme dans les rubriques sombres.
+══════════════════════════════════════════════════════════════════ */
+
+/* ── Bouton « copier le lien » d'une rubrique ──
+   Il se place dans le bloc de titre (.sh) des rubriques. Discret, il
+   n'apparaît qu'au survol / au focus : la page reste lisible, et
+   l'agence le trouve dès qu'elle en a besoin. */
+.ys-partage {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 2px;
+  padding: 5px 12px;
+  border: 1px solid rgba(216, 179, 97, .45);
+  border-radius: 999px;
+  background: rgba(216, 179, 97, .07);
+  color: var(--brand-gold, #d8b361);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.ys-partage:hover,
+.ys-partage:focus-visible {
+  background: rgba(216, 179, 97, .18);
+  border-color: var(--brand-gold, #d8b361);
+  color: #f2db9b;
+}
+.ys-partage:active { transform: scale(.97); }
+
+/* ── Confirmation « lien copié » ── */
+.ys-partage-message {
+  position: fixed;
+  left: 50%;
+  bottom: 92px;
+  z-index: 10001;
+  max-width: min(92vw, 520px);
+  padding: 12px 18px;
+  border: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  border-radius: 14px;
+  background: rgba(3, 15, 32, .97);
+  color: #faf9f5;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: anywhere;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 12px);
+  transition: opacity .22s, transform .22s, visibility .22s;
+}
+.ys-partage-message.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PAGE « LIENS À PARTAGER »
+══════════════════════════════════════════════════════════════════ */
+
+.ys-liens {
+  background: var(--brand-night, #030f20);
+  min-height: 100vh;
+  color: var(--brand-white, #faf9f5);
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.ys-liens-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(3, 15, 32, .97);
+  border-bottom: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+}
+.ys-liens-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.ys-liens-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--brand-gold, #d8b361);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ys-liens-back:hover { text-decoration: underline; }
+.ys-liens-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-left: auto;
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 11px;
+  font-weight: 600;
+}
+.ys-liens-brand img { width: 30px; height: 30px; border-radius: 7px; }
+
+.ys-liens-wrap { max-width: 1100px; margin: 0 auto; padding: 34px 5% 70px; }
+
+.ys-liens-hero { margin-bottom: 34px; }
+.ys-liens-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--brand-gold, #d8b361);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+.ys-liens-title {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 4.6vw, 46px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+}
+.ys-liens-lead {
+  max-width: 760px;
+  margin: 0;
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.ys-liens-lead strong { color: var(--brand-white, #faf9f5); }
+
+/* Rappel du geste, une fois pour toutes, en tête de page. */
+.ys-liens-rappel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 22px 0 34px;
+  padding: 16px 18px;
+  border: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  border-left: 4px solid var(--brand-gold, #d8b361);
+  border-radius: 14px;
+  background: var(--brand-panel, #0b2035);
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.ys-liens-rappel strong { color: var(--brand-white, #faf9f5); }
+.ys-liens-rappel-ico { font-size: 18px; line-height: 1.2; }
+
+/* ── Un groupe de liens ── */
+.ys-liens-groupe { margin-bottom: 34px; }
+.ys-liens-groupe-titre {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 4px;
+  font-size: clamp(19px, 2.4vw, 24px);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+}
+.ys-liens-groupe-titre span {
+  color: var(--brand-gold, #d8b361);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.ys-liens-groupe-note {
+  margin: 0 0 16px;
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ── Une ligne de lien ── */
+.ys-lien {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 16px 18px;
+  border: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  border-radius: 16px;
+  background: var(--brand-panel, #0b2035);
+  transition: border-color .2s, background .2s;
+}
+.ys-lien:hover {
+  border-color: var(--brand-gold, #d8b361);
+  background: #0d2740;
+}
+.ys-lien-titre {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.ys-lien-titre a { color: inherit; text-decoration: none; }
+.ys-lien-titre a:hover { color: var(--brand-gold, #d8b361); }
+.ys-lien-usage {
+  margin: 0 0 8px;
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 13px;
+  line-height: 1.6;
+}
+/* L'adresse est affichée en entier : l'agence peut la lire, la dicter
+   ou la copier à la main si le bouton n'a pas fonctionné. */
+.ys-lien-url {
+  display: block;
+  color: rgba(216, 179, 97, .82);
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+.ys-lien-url:hover { text-decoration: underline; }
+
+.ys-lien-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.ys-lien-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  border-radius: 999px;
+  background: transparent;
+  color: var(--brand-gold, #d8b361);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.ys-lien-btn:hover,
+.ys-lien-btn:focus-visible {
+  background: rgba(216, 179, 97, .16);
+  border-color: var(--brand-gold, #d8b361);
+  color: #f2db9b;
+}
+.ys-lien-btn--wa {
+  border-color: rgba(37, 211, 102, .5);
+  color: #25D366;
+}
+.ys-lien-btn--wa:hover,
+.ys-lien-btn--wa:focus-visible {
+  background: rgba(37, 211, 102, .16);
+  border-color: #25D366;
+  color: #7ff0ac;
+}
+
+/* ── Aide en bas de page ── */
+.ys-liens-aide {
+  margin-top: 40px;
+  padding: 20px 22px;
+  border: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  border-radius: 18px;
+  background: linear-gradient(145deg, var(--brand-panel, #0b2035), #06182a);
+}
+.ys-liens-aide h2 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.ys-liens-aide p,
+.ys-liens-aide li {
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.ys-liens-aide ul { margin: 10px 0 0; padding-left: 20px; }
+.ys-liens-aide strong { color: var(--brand-white, #faf9f5); }
+.ys-liens-aide .ys-lien-btn { margin-top: 16px; }
+
+.ys-liens-pied {
+  margin-top: 40px;
+  padding-top: 18px;
+  border-top: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ── Téléphone : les actions passent sous le texte, en pleine largeur ── */
+@media (max-width: 720px) {
+  .ys-lien { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .ys-lien-actions { justify-content: flex-start; }
+  .ys-lien-btn { flex: 1 1 auto; }
+  .ys-liens-brand { display: none; }
+  .ys-partage-message { bottom: 84px; font-size: 12px; }
+}

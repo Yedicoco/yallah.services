@@ -44,6 +44,7 @@
 <link rel="stylesheet" href="assets/css/brand.css?v=20261007">
 <link rel="stylesheet" href="assets/css/videos.css?v=20261007">
 <link rel="stylesheet" href="assets/css/i18n.css?v=20261007">
+<link rel="stylesheet" href="assets/css/partage.css?v=20261017">
 <!-- Multilingue : français · darija (arabe et latin) · anglais -->
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/seo-tracking.js" defer></script>
@@ -417,6 +418,7 @@
       <span class="se">Un parcours en quatre étapes</span>
       <h2 class="st">Comment trouver une femme de ménage ou une nounou au Maroc ?</h2>
       <p class="sd">Décrivez votre besoin et examinez les possibilités en quatre étapes.</p>
+      <button type="button" class="ys-partage" data-partage="how">🔗 Copier le lien</button>
     </div>
     <div class="how-steps reveal">
       <div class="how-step">
@@ -451,6 +453,7 @@
 <section class="mini-form-sec" id="miniForm">
   <div class="mini-form-inner">
     <h2 class="mini-form-title reveal">Décrivez votre besoin en personnel</h2>
+        <button type="button" class="ys-partage" data-partage="miniForm">🔗 Copier le lien</button>
     <p class="mini-form-sub reveal">Vos réponses servent à préparer un récapitulatif à transmettre sur WhatsApp.</p>
     <div class="mini-form-card reveal" id="mfCard">
       <form id="miniFormEl" novalidate>
@@ -532,6 +535,7 @@
     <div class="sh c reveal">
       <span class="se">Missions réalisées</span>
       <h2 class="st">Ils nous font confiance</h2>
+      <button type="button" class="ys-partage" data-partage="temo">🔗 Copier le lien</button>
     </div>
     <!-- Avis clients : 4 clientes réelles (Fatima Zahra, Mme Wafae, Basma H., Mme Najiba).
          Textes = synthèses de mission rédigées par l'agence, sans citation ni note inventée.
@@ -594,6 +598,7 @@
       <span class="se">Pour votre foyer</span>
       <h2 id="videos-title" class="st">Yallah Services en vidéo</h2>
       <p class="sd">Choisissez une vidéo et lancez la lecture à votre rythme.</p>
+      <button type="button" class="ys-partage" data-partage="videos">🔗 Copier le lien</button>
     </div>
     <div class="video-grid">
         <article class="video-card">
@@ -631,7 +636,7 @@
 </section>
 
 <!-- ═══════════ ACCÈS VIDÉO ENTREPRISES ═══════════ -->
-<section class="sec video-business-promo" aria-labelledby="video-business-promo-title">
+<section id="videos-entreprises" class="sec video-business-promo" aria-labelledby="video-business-promo-title">
   <div class="ctr">
     <div class="business-video-promo-card">
       <a class="business-video-promo-poster" href="personnel-entreprises.html#video-entreprises" aria-label="Voir la vidéo dédiée aux entreprises">
@@ -642,6 +647,7 @@
         <span class="se">Vous recrutez pour une entreprise ?</span>
         <h2 id="video-business-promo-title" class="st">Notre vidéo dédiée aux entreprises</h2>
         <p class="sd">Hôtels, riads, restaurants, chantiers, nettoyage et événements : découvrez notre service de recherche et de mise en relation de personnel.</p>
+        <button type="button" class="ys-partage" data-partage="videos-entreprises">🔗 Copier le lien</button>
         <a class="pwb" href="personnel-entreprises.html#video-entreprises">Voir la vidéo B2B <span aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -650,7 +656,7 @@
 
 <!-- ═══════════ PACKS & OFFRES (GRILLE TARIFAIRE OFFICIELLE) ═══════════ -->
 <section id="packs" class="sec"><div class="ctr">
-<div class="sh c reveal"><span class="se">Grille tarifaire des services</span><h2 class="st">Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)</h2><p class="sd">Tarifs mensuels, hebdomadaires ou à la journée selon la formule — tarifs indicatifs pouvant varier selon les conditions et responsabilités.</p></div>
+<div class="sh c reveal"><span class="se">Grille tarifaire des services</span><h2 class="st">Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)</h2><p class="sd">Tarifs mensuels, hebdomadaires ou à la journée selon la formule — tarifs indicatifs pouvant varier selon les conditions et responsabilités.</p><button type="button" class="ys-partage" data-partage="packs">🔗 Copier le lien</button></div>
 <div style="text-align:center"><div class="tabs reveal"><button class="tb on" data-tab="menage">🧹 Ménage</button><button class="tb" data-tab="nounou">🧸 Nounou</button><button class="tb" data-tab="cuisine">🍳 Cuisine</button><button class="tb" data-tab="malade">❤️ Garde malade</button><button class="tb" data-tab="nonlogee">🌙 Non Logée</button><button class="tb" data-tab="jour">⏰ Service ponctuel à la journée</button></div></div>
 <div class="tcc on" id="tab-menage"><div class="tab-hint">🏠 Formule logée — horaires et repos à convenir</div><div class="pg">
 <article class="pc pc-has-img hot">
@@ -863,7 +869,7 @@
   </div>
 </section>
 
-<section id="grille" class="sec"><div class="ctr"><div class="sh c reveal"><span class="se">Yallah Services Maroc</span><h2 class="st">Grille tarifaire des services</h2><p class="sd">Tous nos services et leurs salaires mensuels — Simplifiez-vous la vie !</p></div>
+<section id="grille" class="sec"><div class="ctr"><div class="sh c reveal"><span class="se">Yallah Services Maroc</span><h2 class="st">Grille tarifaire des services</h2><p class="sd">Tous nos services et leurs salaires mensuels — Simplifiez-vous la vie !</p><button type="button" class="ys-partage" data-partage="grille">🔗 Copier le lien</button></div>
 <div class="grille-wrap reveal"><div class="grille-head"><span class="gh-l">📋 Nos services</span><span class="gh-r">🪙 Tarif (DH)</span></div><div class="gr-row" data-pack="Ménage simple dans villa" data-price="4 500 DH / mois" role="button" tabindex="0"><span class="gr-ico">🏡</span><span class="gr-name">Ménage simple dans villa</span><span class="gr-price">4 500 DH</span></div>
 <div class="gr-row" data-pack="Ménage simple dans mini villa" data-price="4 000 DH / mois" role="button" tabindex="0"><span class="gr-ico">🏘️</span><span class="gr-name">Ménage simple dans mini villa</span><span class="gr-price">4 000 DH</span></div>
 <div class="gr-row" data-pack="Ménage dans appartement" data-price="3 500 DH / mois" role="button" tabindex="0"><span class="gr-ico">🏢</span><span class="gr-name">Ménage dans appartement</span><span class="gr-price">3 500 DH</span></div>
@@ -886,6 +892,7 @@
       <span class="se">Conditions de mise en relation</span>
       <h2 class="st w">Nos Frais de Mise en relation</h2>
       <p class="sd w" style="margin:0 auto">Frais payés uniquement après validation du profil.</p>
+      <button type="button" class="ys-partage" data-partage="frais">🔗 Copier le lien</button>
     </div>
     <div class="reveal"><div class="frais-badge">✅ Aucun paiement avant d'avoir trouvé votre candidate</div></div>
 
@@ -922,6 +929,7 @@
     <div class="sh c reveal">
       <span class="se">Questions fréquentes</span>
       <h2 class="st">FAQ</h2>
+      <button type="button" class="ys-partage" data-partage="faq">🔗 Copier le lien</button>
     </div>
     <div class="faq-list reveal">
 
@@ -1003,6 +1011,7 @@
     <div class="sh c reveal">
       <span class="se">Personnel &amp; candidats</span>
       <h2 class="st">Vous cherchez un travail ?</h2>
+      <button type="button" class="ys-partage" data-partage="candidats">🔗 Copier le lien</button>
       <p class="sd">Ce site est réservé aux particuliers et aux entreprises qui recrutent — mais nous recrutons aussi du personnel. Remplissez la fiche de candidature : elle arrive directement à notre équipe.</p>
     </div>
     <div class="how-steps reveal">
@@ -1039,6 +1048,7 @@
     <span class="ct-lbl reveal">Présentez votre besoin</span>
     <h2 class="ct-title reveal">Décrivez votre besoin en personnel</h2>
     <p class="ct-desc reveal">Indiquez le poste, la ville et vos critères. Le formulaire prépare un récapitulatif que vous pourrez transmettre sur WhatsApp.</p>
+    <button type="button" class="ys-partage" data-partage="contact">🔗 Copier le lien</button>
 
     <div class="fcard reveal">
       <h3>✍️ Formulaire de demande</h3>
@@ -1166,6 +1176,9 @@
     <a href="garde-malade-casablanca.html">Garde-malade à Casablanca</a> ·
     <a href="chauffeur-casablanca.html">Chauffeur à Casablanca</a> ·
     <a href="vigile-casablanca.html">Vigile et gardien à Casablanca</a>
+  </p>
+  <p style="margin-top:6px">
+    <a href="liens-partage.html">🔗 Liens à partager</a> — l'adresse de chaque rubrique, prête à être envoyée sur WhatsApp
   </p>
   <p style="margin-top:6px" data-ys-notrad>
     <a href="mentions-legales.html">Mentions légales</a> · Base : Casablanca — Hay Hassani 20220, Maroc
@@ -1325,6 +1338,7 @@
 </div>
 
 <script src="assets/js/config.js"></script>
+<script src="assets/js/liens.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

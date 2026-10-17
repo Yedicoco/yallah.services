@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   455 chaînes, clés = textes d'origine de la page.
+   457 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -54,6 +54,7 @@ YS_TRAD("dar-latn", "index", {
   "Un parcours en quatre étapes": "Lmarahil f rb3a khotwat",
   "Comment trouver une femme de ménage ou une nounou au Maroc ?": "Kifach tlqa kheddama dar wla 7adana f l Maghrib?",
   "Décrivez votre besoin et examinez les possibilités en quatre étapes.": "Chra7 l 7aja dyalek w chouf l imkanat f rb3a khotwat.",
+  "🔗 Copier le lien": "🔗 Nsakh l lien",
   "Décrivez votre besoin": "Chra7 lina l 7aja dyalek",
   "Précisez le service, la ville et les critères souhaités.": "7edded l khedma, l mdina w l m3ayir li bghiti.",
   "Envoyez votre demande": "Sift t-talab dyalek",
@@ -401,6 +402,7 @@ YS_TRAD("dar-latn", "index", {
   "Garde-malade à Casablanca": "Ri3ayat l mriḍ f Casa",
   "Chauffeur à Casablanca": "Chauffeur f Casa",
   "Vigile et gardien à Casablanca": "7arras f Casa",
+  "🔗 Liens à partager — l'adresse de chaque rubrique, prête à être envoyée sur WhatsApp": "🔗 Lla9at bach tcharqo — l-adress d koll 9ism, wajda bach tb3t f WhatsApp",
   "@aria-label:Réseaux sociaux de Yallah Services": "Chabakat t-tawasul l ijtima3i dyal Yallah Services",
   "Suivez-nous :": "Teb3una:",
   "@aria-label:Yallah Services sur Facebook": "Yallah Services 3la Facebook",
@@ -470,5 +472,7 @@ YS_TRAD("dar-latn", "index", {
   "Type de poste :": "No3 l poste:",
   "Délai souhaité :": "Lmodda l matluba:",
   "Précisions :": "T-tafaṣil:",
-  "À préciser": "Khas twḍe7"
+  "À préciser": "Khas twḍe7",
+  "Lien copié": "Tsekh l lien",
+  "Copie impossible. Lien :": "Ma qdrnach nsakh. L lien :"
 });

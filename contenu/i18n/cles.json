@@ -297,6 +297,12 @@
         "langue": "fr"
       },
       {
+        "cle": "🔗 Copier le lien",
+        "occurrences": 11,
+        "exemple": "🔗 Copier le lien",
+        "langue": "fr"
+      },
+      {
         "cle": "Décrivez votre besoin",
         "occurrences": 1,
         "exemple": "Décrivez votre besoin",
@@ -2455,6 +2461,14 @@
         "occurrences": 1,
         "exemple": "Vigile et gardien à Casablanca",
         "langue": "fr"
+      },
+      {
+        "cle": "🔗 Liens à partager — l'adresse de chaque rubrique, prête à être envoyée sur WhatsApp",
+        "occurrences": 1,
+        "exemple": "🔗 Liens à partager — l'adresse de chaque rubrique, prête à être envoyée sur WhatsApp",
+        "langue": "fr",
+        "balisage": "a",
+        "html": "<a href=\"liens-partage.html\">🔗 Liens à partager</a> — l'adresse de chaque rubrique, prête à être envoyée sur WhatsApp"
       },
       {
         "cle": "@aria-label:Réseaux sociaux de Yallah Services",
