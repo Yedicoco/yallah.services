@@ -917,9 +917,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.",
+        "cle": "Tarifs mensuels, hebdomadaires ou à la journée selon la formule — tarifs indicatifs pouvant varier selon les conditions et responsabilités.",
         "occurrences": 1,
-        "exemple": "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.",
+        "exemple": "Tarifs mensuels, hebdomadaires ou à la journée selon la formule — tarifs indicatifs pouvant varier selon les conditions et responsabilités.",
         "langue": "fr"
       },
       {
@@ -947,9 +947,15 @@
         "langue": "fr"
       },
       {
-        "cle": "⏰ À la journée",
+        "cle": "🌙 Non Logée",
+        "occurrences": 4,
+        "exemple": "🌙 Non Logée",
+        "langue": "fr"
+      },
+      {
+        "cle": "⏰ Service ponctuel à la journée",
         "occurrences": 1,
-        "exemple": "⏰ À la journée",
+        "exemple": "⏰ Service ponctuel à la journée",
         "langue": "fr"
       },
       {
@@ -1571,21 +1577,15 @@
         "langue": "fr"
       },
       {
-        "cle": "✨ 8h max · 📍 Casa & Rabat uniquement",
+        "cle": "🌙 Formule non logée — Casa & Rabat · tarif à la semaine",
         "occurrences": 1,
-        "exemple": "✨ 8h max · 📍 Casa & Rabat uniquement",
+        "exemple": "🌙 Formule non logée — Casa & Rabat · tarif à la semaine",
         "langue": "fr"
       },
       {
         "cle": "@alt:Femme de ménage Yallah Services",
         "occurrences": 1,
         "exemple": "Femme de ménage Yallah Services",
-        "langue": "fr"
-      },
-      {
-        "cle": "🌙 Non Logée",
-        "occurrences": 3,
-        "exemple": "🌙 Non Logée",
         "langue": "fr"
       },
       {
@@ -1694,6 +1694,12 @@
         "cle": "@data-pack:Ménage + Nounou Non Logée",
         "occurrences": 1,
         "exemple": "Ménage + Nounou Non Logée",
+        "langue": "fr"
+      },
+      {
+        "cle": "✨ Prestation ponctuelle à la journée — 8h max · 📍 Casa & Rabat uniquement",
+        "occurrences": 1,
+        "exemple": "✨ Prestation ponctuelle à la journée — 8h max · 📍 Casa & Rabat uniquement",
         "langue": "fr"
       },
       {
@@ -2079,12 +2085,20 @@
         "html": "• <strong>Garde malade :</strong> simple 3 500 DH · avec ménage 4 000 DH"
       },
       {
-        "cle": "• À la journée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem",
+        "cle": "• Non logée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem",
         "occurrences": 1,
-        "exemple": "• À la journée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem",
+        "exemple": "• Non logée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem",
         "langue": "fr",
         "balisage": "strong",
-        "html": "• <strong>À la journée (Casa & Rabat) :</strong> ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem"
+        "html": "• <strong>Non logée (Casa & Rabat) :</strong> ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem"
+      },
+      {
+        "cle": "• Service ponctuel à la journée (Casa & Rabat) : ménage normal 300/400 DH · grand ménage 500/700 DH",
+        "occurrences": 1,
+        "exemple": "• Service ponctuel à la journée (Casa & Rabat) : ménage normal 300/400 DH · grand ménage 500/700 DH",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "• <strong>Service ponctuel à la journée (Casa & Rabat) :</strong> ménage normal 300/400 DH · grand ménage 500/700 DH"
       },
       {
         "cle": "Ces tarifs sont indicatifs et peuvent varier selon les conditions et responsabilités. À ces salaires s'ajoutent les frais de Mise en relation (500 ou 1 000 DH). Le salaire est versé directement à l'employée par le foyer.",
@@ -2779,13 +2793,13 @@
       {
         "cle": "@title",
         "occurrences": 1,
-        "exemple": "Ménage, nounou et cuisinière au Maroc | Yallah Services",
+        "exemple": "Yallah Services | Aide à domicile au Maroc",
         "langue": "fr"
       },
       {
         "cle": "@meta:description",
         "occurrences": 1,
-        "exemple": "Ménage, nounou, cuisine et aide à domicile au Maroc : Yallah Services met en relation particuliers et entreprises avec des profils adaptés à leurs besoins.",
+        "exemple": "Femmes de ménage, cuisinières, nounous, garde-malades, grand ménage et services aux entreprises. Contactez-nous sur WhatsApp au +212 691 733 585.",
         "langue": "fr"
       },
       {
@@ -2797,25 +2811,25 @@
       {
         "cle": "@meta:og:title",
         "occurrences": 1,
-        "exemple": "Ménage, nounou et cuisinière au Maroc | Yallah Services",
+        "exemple": "Yallah Services | Aide à domicile au Maroc",
         "langue": "fr"
       },
       {
         "cle": "@meta:og:description",
         "occurrences": 1,
-        "exemple": "Ménage, nounou, cuisine et aide à domicile au Maroc : Yallah Services met en relation particuliers et entreprises avec des profils adaptés à leurs besoins.",
+        "exemple": "Femmes de ménage, cuisinières, nounous, garde-malades, grand ménage et services aux entreprises. Contactez-nous sur WhatsApp au +212 691 733 585.",
         "langue": "fr"
       },
       {
         "cle": "@meta:twitter:title",
         "occurrences": 1,
-        "exemple": "Ménage, nounou et cuisinière au Maroc | Yallah Services",
+        "exemple": "Yallah Services | Aide à domicile au Maroc",
         "langue": "fr"
       },
       {
         "cle": "@meta:twitter:description",
         "occurrences": 1,
-        "exemple": "Ménage, nounou, cuisine et aide à domicile au Maroc : Yallah Services met en relation particuliers et entreprises avec des profils adaptés à leurs besoins.",
+        "exemple": "Femmes de ménage, cuisinières, nounous, garde-malades, grand ménage et services aux entreprises. Contactez-nous sur WhatsApp au +212 691 733 585.",
         "langue": "fr"
       }
     ],

@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   453 chaînes, clés = textes d'origine de la page.
+   455 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -156,12 +156,13 @@ YS_TRAD("en", "index", {
   "Voir la vidéo B2B →": "Watch the B2B video →",
   "Grille tarifaire des services": "Service price list",
   "Tarifs femme de ménage, nounou, cuisinière au Maroc (2026)": "Housekeeper, nanny and cook rates in Morocco (2026)",
-  "Tarifs mensuels selon le service et les tâches — salaires indicatifs pouvant varier selon les conditions et responsabilités.": "Monthly rates depending on the service and the tasks — indicative salaries that may vary with conditions and responsibilities.",
+  "Tarifs mensuels, hebdomadaires ou à la journée selon la formule — tarifs indicatifs pouvant varier selon les conditions et responsabilités.": "Monthly, weekly or daily rates depending on the option — indicative prices that may vary according to the conditions and responsibilities.",
   "🧹 Ménage": "🧹 Cleaning",
   "🧸 Nounou": "🧸 Nanny",
   "🍳 Cuisine": "🍳 Cooking",
   "❤️ Garde malade": "❤️ Caregiving",
-  "⏰ À la journée": "⏰ Daily",
+  "🌙 Non Logée": "🌙 Live-out",
+  "⏰ Service ponctuel à la journée": "⏰ One-off day service",
   "🏠 Formule logée — horaires et repos à convenir": "🏠 Live-in option — agree on working hours and rest days",
   "@alt:Ménage simple dans villa — Yallah Services": "Simple villa cleaning — Yallah Services",
   "Ménage simple dans villa": "Simple villa cleaning",
@@ -265,9 +266,8 @@ YS_TRAD("en", "index", {
   "Surveillance et aide quotidienne": "Daily supervision and help",
   "Préparation des repas légers": "Preparing light meals",
   "@data-pack:Garde malade et ménage": "Caregiving and cleaning",
-  "✨ 8h max · 📍 Casa & Rabat uniquement": "✨ 8 hours max · 📍 Casa & Rabat only",
+  "🌙 Formule non logée — Casa & Rabat · tarif à la semaine": "🌙 Live-out option — Casa & Rabat · weekly rate",
   "@alt:Femme de ménage Yallah Services": "Housekeeper Yallah Services",
-  "🌙 Non Logée": "🌙 Live-out",
   "Pack Ménage": "Cleaning package",
   "DH / semaine": "MAD / week",
   "Lun–Ven, 9h à 17h — Du lundi au vendredi": "Mon–Fri, 9am to 5pm — Monday to Friday",
@@ -286,6 +286,7 @@ YS_TRAD("en", "index", {
   "Activités éducatives pour les enfants": "Educational activities for the children",
   "Solution complète et économique": "A complete and economical solution",
   "@data-pack:Ménage + Nounou Non Logée": "Cleaning + nanny, live-out",
+  "✨ Prestation ponctuelle à la journée — 8h max · 📍 Casa & Rabat uniquement": "✨ One-off day service — 8 hours max · 📍 Casa & Rabat only",
   "Ménage Normal": "Standard cleaning",
   "1 femme · Cuisine, sols, SDB, chambres, draps": "1 woman · Kitchen, floors, bathrooms, bedrooms, linen",
   "Villa": "Villa",
@@ -343,7 +344,8 @@ YS_TRAD("en", "index", {
   "• Nounou : 1 enfant 3 500 DH (+ ménage 4 000 DH) · 2 enfants avec ménage 4 500/5 000 DH · 3 enfants 4 500 DH (+ ménage 5 000 DH)": "• <strong>Nanny:</strong> 1 child 3,500 MAD (+ cleaning 4,000 MAD) · 2 children with cleaning 4,500/5,000 MAD · 3 children 4,500 MAD (+ cleaning 5,000 MAD)",
   "• Cuisine : cuisine simple 4 000 DH · cuisine/ménage 5 000 DH · aide cuisine 3 500 DH · aide cuisine/ménage 4 000 DH": "• <strong>Cooking:</strong> simple cooking 4,000 MAD · cooking/cleaning 5,000 MAD · kitchen help 3,500 MAD · kitchen help/cleaning 4,000 MAD",
   "• Garde malade : simple 3 500 DH · avec ménage 4 000 DH": "• <strong>Caregiving:</strong> simple 3,500 MAD · with cleaning 4,000 MAD",
-  "• À la journée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem": "• <strong>Daily (Casa & Rabat):</strong> cleaning 600 MAD/week · cleaning + cooking 800 MAD/week · cleaning + nanny 800 MAD/week",
+  "• Non logée (Casa & Rabat) : ménage 600 DH/sem · ménage + cuisine 800 DH/sem · ménage + nounou 800 DH/sem": "• <strong>Live-out (Casa & Rabat):</strong> cleaning 600 MAD/week · cleaning + cooking 800 MAD/week · cleaning + nanny 800 MAD/week",
+  "• Service ponctuel à la journée (Casa & Rabat) : ménage normal 300/400 DH · grand ménage 500/700 DH": "• <strong>One-off day service (Casa & Rabat):</strong> standard cleaning 300/400 MAD · deep cleaning 500/700 MAD",
   "Ces tarifs sont indicatifs et peuvent varier selon les conditions et responsabilités. À ces salaires s'ajoutent les frais de Mise en relation (500 ou 1 000 DH). Le salaire est versé directement à l'employée par le foyer.": "These rates are indicative and may vary with the conditions and responsibilities. Placement fees (500 or 1,000 MAD) are added to these salaries. The salary is paid directly to the employee by the household.",
   "Comment se passe la première rencontre avec l'employée ? ▾": "How does the first meeting with the employee work? <span class=\"arr\">▾</span>",
   "Vous pouvez échanger avec la personne et vérifier les informations utiles avant votre décision. Si vous souhaitez un autre profil, les modalités de remplacement prévues par la formule choisie s’appliquent.": "You can speak with the person and check relevant information before deciding. If you want another profile, the replacement terms of your chosen package apply.",
