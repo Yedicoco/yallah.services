@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   455 chaînes, clés = textes d'origine de la page.
+   457 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -54,6 +54,7 @@ YS_TRAD("dar", "index", {
   "Un parcours en quatre étapes": "المراحل فربعة خطوات",
   "Comment trouver une femme de ménage ou une nounou au Maroc ?": "كيفاش تلقى خدامة الدار ولا حاضنة فالمغرب؟",
   "Décrivez votre besoin et examinez les possibilités en quatre étapes.": "شرح الاحتياج ديالك وشوف الإمكانيات فربعة خطوات.",
+  "🔗 Copier le lien": "🔗 نسخ الرابط",
   "Décrivez votre besoin": "شرح لينا الاحتياج ديالك",
   "Précisez le service, la ville et les critères souhaités.": "حدد الخدمة والمدينة والمعايير اللي بغيتي.",
   "Envoyez votre demande": "صيفط الطلب ديالك",
@@ -401,6 +402,7 @@ YS_TRAD("dar", "index", {
   "Garde-malade à Casablanca": "خدام/خدامة رعاية المريض فكازا",
   "Chauffeur à Casablanca": "شوفور فكازا",
   "Vigile et gardien à Casablanca": "حرّاس فكازا",
+  "🔗 Liens à partager — l'adresse de chaque rubrique, prête à être envoyée sur WhatsApp": "🔗 لينكات بزاف نشارو — عنوان كل قسم، محضّر باش يتبعت فواتساب",
   "@aria-label:Réseaux sociaux de Yallah Services": "شبكات التواصل الاجتماعي ديال Yallah Services",
   "Suivez-nous :": "تبعونا:",
   "@aria-label:Yallah Services sur Facebook": "Yallah Services على فيسبوك",
@@ -470,5 +472,7 @@ YS_TRAD("dar", "index", {
   "Type de poste :": "نوع المنصب:",
   "Délai souhaité :": "المدة المطلوبة:",
   "Précisions :": "تفاصيل:",
-  "À préciser": "خاص التوضيح"
+  "À préciser": "خاص التوضيح",
+  "Lien copié": "تسخ الرابط",
+  "Copie impossible. Lien :": "ما قدرناش ننسخ. الرابط :"
 });

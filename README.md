@@ -72,6 +72,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── outils/generer-sitemap.js         # Sitemaps pages + vidéos (lastmod = git), synchronisés dans robots.txt
 ├── outils/verifier-sitemaps.js       # Contrôle en ligne des sitemaps (200, XML, sans redirection, no-cache, liens 200)
 ├── outils/appliquer-fiche-entreprise.py # Application tracée des règles de la fiche entreprise
+├── liens-partage.html                # Outil de l'agence : le lien de chaque rubrique, à copier
 ├── services-par-ville.html           # Hub : tous les services, ville par ville
 ├── personnel-entreprises.html        # Hub B2B : hôtels, riads, chantiers, nettoyage, événements
 ├── <service>-<ville>.html            # Pages locales générées (6 pages Casablanca en ligne)
@@ -88,6 +89,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── doc/guide-schema-corrige-yallah-services.pdf  # ★ Guide SEO / données structurées de référence
 ├── apercus/generer-apercus.js        # Captures d'écran (Playwright) + contrôle de débordement
 ├── assets/
+│   ├── css/partage.css               # Bouton « copier le lien » + page « Liens à partager »
 │   ├── css/style.css                 # Thème or/noir + grille + navy + vert WhatsApp
 │   ├── css/brand.css                 # Déclinaison « affiche » (bleu nuit, or satiné, vert profond)
 │   ├── css/recrutement.css           # Charte des pages candidat et de l'espace recruteur
@@ -96,6 +98,7 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 │   ├── i18n/<langue>/<page>.js       # Dictionnaires publiés (générés, ne pas éditer à la main)
 │   ├── js/config.js                  # Coordonnées centralisées (foyers, candidats, e-mail)
 │   ├── js/app.js                     # Interactions de l'accueil foyers (onglets, FAQ, facture…)
+│   ├── js/liens.js                  # Liens des rubriques : copie presse-papiers + partage WhatsApp
 │   ├── js/fiche.js                   # Moteur bilingue FR/AR + messages WhatsApp/e-mail
 │   ├── js/candidature.js             # Formulaire : validation, envoi, numéro de dossier
 │   ├── js/candidature-confirmation.js# Page de confirmation (récapitulatif, liens préparés)
@@ -110,6 +113,48 @@ Contrôle rapide : `node outils/verifier-videos.js`.
 ├── netlify.toml · robots.txt · sitemap.xml · video-sitemap.xml
 └── README.md
 ```
+
+---
+
+## 🔗 Lien par rubrique (à partager au cas par cas)
+
+Chaque rubrique du site a une adresse stable, pour envoyer au client **la seule partie
+du site qui le concerne** : les tarifs d'un service, la grille complète, les frais, la FAQ,
+sa ville, la page entreprises…
+
+**Où les trouver**
+
+| Où | Quoi |
+|---|---|
+| `liens-partage.html` | La page de l'agence : les 31 liens du site, groupés par cas d'usage, chacun avec **Copier** et **WhatsApp**. Un lien vers cette page est en bas de la page d'accueil. |
+| Bouton 🔗 sur l'accueil | Chaque titre de rubrique porte un bouton « Copier le lien » : l'adresse de la rubrique est copiée sans quitter la page. |
+| Barre d'adresse | Les onglets de tarifs ont eux aussi une adresse (`…/#tab-nounou`) : le lien renvoie sur le bon onglet, ouvert. |
+
+**Les six onglets de tarifs** ont chacun leur lien : `#tab-menage`, `#tab-nounou`,
+`#tab-cuisine`, `#tab-malade`, `#tab-nonlogee`, `#tab-jour`. Le bouton « Copier le lien »
+de la rubrique *Tarifs* suit l'onglet affiché : on choisit l'onglet, puis on copie.
+
+**Fonctionnement**
+
+- `assets/js/liens.js` reconstruit l'adresse sur le **domaine canonique** de la page
+  (`<link rel="canonical">`), jamais sur l'adresse du visiteur : un lien collé sur
+  WhatsApp reste valable même s'il a été ouvert depuis un autre hébergeur ou depuis un
+  fichier local.
+- Copie via `navigator.clipboard`, avec repli `execCommand` (anciens téléphones, page
+  ouverte sans HTTPS). L'adresse reste affichée en clair dans `liens-partage.html` : si le
+  bouton échoue, elle peut être recopiée ou dictée.
+- Le bouton WhatsApp utilise `wa.me` **sans numéro** : l'agence choisit le contact.
+- Les messages (« Lien copié ») sont traduits comme tous les autres textes du site, via
+  les clés libres (`_extra`) de `contenu/i18n/traductions/index.*.json`.
+
+**Choixolvers**
+
+- `liens-partage.html` est en `noindex` et hors sitemap (`site.config.json` →
+  `pagesHorsSitemap`) : c'est un outil de travail, sans contenu propre à faire indexer.
+- Elle reste en français, comme `mentions-legales.html` : une page absente de la liste
+  `PAGES` de `outils/extraire-i18n.js` n'est simplement pas traduite.
+- Les liens sont écrits en absolu dans le HTML et mis à jour par `build-site.js` quand le
+  domaine de déploiement change.
 
 ---
 

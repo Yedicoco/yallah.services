@@ -172,6 +172,7 @@ function ecrireLisezMoi() {
     'Pages :',
     '  index.html                        → accueil foyers',
     '  candidature.html                  → fiche de candidature (FR / AR)',
+    '  liens-partage.html                → liens des rubriques, prêts à copier / WhatsApp',
     '  candidature-confirmation.html     → numéro de dossier + WhatsApp + e-mail',
     '  <service>-<ville>.html            → pages locales (ménage, nounou… par ville)',
     '  sitemap.xml                       → pages publiques, régénéré à chaque build',

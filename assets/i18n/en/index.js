@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   455 chaînes, clés = textes d'origine de la page.
+   457 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -54,6 +54,7 @@ YS_TRAD("en", "index", {
   "Un parcours en quatre étapes": "A four-step process",
   "Comment trouver une femme de ménage ou une nounou au Maroc ?": "How to find a housekeeper or a nanny in Morocco?",
   "Décrivez votre besoin et examinez les possibilités en quatre étapes.": "Describe your need and review the options in four steps.",
+  "🔗 Copier le lien": "🔗 Copy link",
   "Décrivez votre besoin": "Describe your needs",
   "Précisez le service, la ville et les critères souhaités.": "Specify the service, city and criteria you want.",
   "Envoyez votre demande": "Send your request",
@@ -401,6 +402,7 @@ YS_TRAD("en", "index", {
   "Garde-malade à Casablanca": "Caregiver in Casablanca",
   "Chauffeur à Casablanca": "Driver in Casablanca",
   "Vigile et gardien à Casablanca": "Guard and watchman in Casablanca",
+  "🔗 Liens à partager — l'adresse de chaque rubrique, prête à être envoyée sur WhatsApp": "🔗 Shareable links — the address of each section, ready to send on WhatsApp",
   "@aria-label:Réseaux sociaux de Yallah Services": "Social networks of Yallah Services",
   "Suivez-nous :": "Follow us:",
   "@aria-label:Yallah Services sur Facebook": "Yallah Services on Facebook",
@@ -470,5 +472,7 @@ YS_TRAD("en", "index", {
   "Type de poste :": "Position type:",
   "Délai souhaité :": "Desired timeframe:",
   "Précisions :": "Details:",
-  "À préciser": "To be specified"
+  "À préciser": "To be specified",
+  "Lien copié": "Link copied",
+  "Copie impossible. Lien :": "Could not copy. Link:"
 });

@@ -54,16 +54,55 @@
     reveals.forEach(function (el) { el.classList.add('on'); });
   }
 
-  /* ─────────── ONGLETS PACKS ─────────── */
+  /* ─────────── ONGLETS PACKS ───────────
+     Chaque onglet a sa propre adresse (#tab-nounou) : l'agence peut
+     envoyer au client le seul onglet qui le concerne, sans lui faire
+     chercher dans la grille. Le bouton « Copier le lien » de la
+     rubrique suit l'onglet affiché. */
+  function ouvrirOnglet(nom, defiler) {
+    var btn = $('.tb[data-tab="' + nom + '"]');
+    if (!btn) return false;
+    $$('.tb').forEach(function (b) { b.classList.remove('on'); });
+    $$('.tcc').forEach(function (c) { c.classList.remove('on'); });
+    btn.classList.add('on');
+    var pane = $('#tab-' + nom);
+    if (pane) pane.classList.add('on');
+
+    /* Le lien de la rubrique #packs devient celui de l'onglet ouvert. */
+    var lienPacks = $('[data-partage="packs"]');
+    if (lienPacks) lienPacks.setAttribute('data-partage', 'tab-' + nom);
+
+    if (defiler) {
+      var section = $('#packs');
+      if (section) window.scrollTo({ top: section.offsetTop - 60, behavior: 'smooth' });
+    }
+    return true;
+  }
+
   $$('.tb').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      $$('.tb').forEach(function (b) { b.classList.remove('on'); });
-      $$('.tcc').forEach(function (c) { c.classList.remove('on'); });
-      btn.classList.add('on');
-      var pane = $('#tab-' + btn.getAttribute('data-tab'));
-      if (pane) pane.classList.add('on');
+      var nom = btn.getAttribute('data-tab');
+      ouvrirOnglet(nom, false);
+      /* L'adresse suit l'onglet : copier la barre d'adresse donne
+         alors le bon lien, sans passer par le bouton. */
+      if (window.history && history.replaceState) {
+        history.replaceState(null, '', '#tab-' + nom);
+      }
     });
   });
+
+  /* Ouverture directe d'un onglet partagé : /#tab-nounou. Sans ancre,
+     le bouton « Copier le lien » de la rubrique renvoie d'emblée vers
+     l'onglet affiché (Ménage par défaut), jamais vers la section
+     entière : c'est le lien le plus précis que l'on puisse partager. */
+  var onglet = /^#tab-([\w-]+)$/.exec(window.location.hash || '');
+  if (onglet) {
+    ouvrirOnglet(onglet[1], true);
+  } else {
+    var actif = $('.tb.on');
+    var boutonPacks = $('[data-partage="packs"]');
+    if (actif && boutonPacks) boutonPacks.setAttribute('data-partage', 'tab-' + actif.getAttribute('data-tab'));
+  }
 
   /* ─────────── FAQ ACCORDÉON ─────────── */
   $$('.faq-q').forEach(function (q) {
