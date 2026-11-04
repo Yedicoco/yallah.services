@@ -41,7 +41,6 @@
       : 'client';
     var source = link.getAttribute('data-src') || pageSource();
 
-    // Do not include the phone number, prefilled message, form values, or full outbound URL.
     dataLayer.push({
       event: 'whatsapp_click',
       event_category: 'conversion',
@@ -53,3 +52,18 @@
     });
   }, true);
 })(window, document);
+
+/* Le module UX est séparé de config.js afin que build-site.js puisse
+   régénérer les coordonnées sans l’écraser. */
+(function (document) {
+  function charger() {
+    if (document.getElementById('ys-conversion-ux-script')) return;
+    var script = document.createElement('script');
+    script.id = 'ys-conversion-ux-script';
+    script.src = 'assets/js/conversion-ux.js?v=20261104';
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', charger);
+  else charger();
+})(document);
