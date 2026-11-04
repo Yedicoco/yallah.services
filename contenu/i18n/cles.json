@@ -155,28 +155,18 @@
         "langue": "fr"
       },
       {
-        "cle": "@wa:Bonjour Yallah Services, je suis un particulier et je cherche une aide pour mon foyer. Ma ville et mon besoin :",
+        "cle": "💬 Présenter mon besoin",
         "occurrences": 1,
-        "exemple": "Bonjour Yallah Services, je suis un particulier et je cherche une aide pour mon foyer. Ma ville et mon besoin :",
+        "exemple": "💬 Présenter mon besoin",
         "langue": "fr"
       },
       {
-        "cle": "💬 Je suis un particulier",
+        "cle": "Découvrir nos services ↓",
         "occurrences": 1,
-        "exemple": "💬 Je suis un particulier",
-        "langue": "fr"
-      },
-      {
-        "cle": "@wa:Bonjour Yallah Services, je représente une entreprise et je recherche du personnel. Secteur, effectif et dates :",
-        "occurrences": 1,
-        "exemple": "Bonjour Yallah Services, je représente une entreprise et je recherche du personnel. Secteur, effectif et dates :",
-        "langue": "fr"
-      },
-      {
-        "cle": "🏢 Je représente une entreprise",
-        "occurrences": 1,
-        "exemple": "🏢 Je représente une entreprise",
-        "langue": "fr"
+        "exemple": "Découvrir nos services ↓",
+        "langue": "fr",
+        "balisage": "span",
+        "html": "Découvrir nos services <span aria-hidden=\"true\">↓</span>"
       },
       {
         "cle": "Recherche selon vos critères · Particuliers et entreprises · Frais après validation du profil",

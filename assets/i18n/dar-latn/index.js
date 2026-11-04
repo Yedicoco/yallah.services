@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   459 chaînes, clés = textes d'origine de la page.
+   457 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -32,10 +32,8 @@ YS_TRAD("dar-latn", "index", {
   "Femme de ménage, nounou et cuisinière au Maroc : des services selon vos besoins": "Kheddama dar, 7adana w teyyaba f l Maghrib: <em>khadamat 7sab l 7wayej dyalek</em>",
   "Ménage, nounou, cuisine ou garde-malade : décrivez-nous votre besoin et les critères du poste recherché.": "Tneqqiya, 7adana, tiyab wla ri3ayat l mriḍ: chra7 lina l 7aja dyalek w m3ayir l poste li katqelleb 3lih.",
   "Les possibilités dépendent de vos critères et des profils disponibles au moment de la demande.": "L imkanat katsla b l m3ayir dyalek w b profils li kaynin waqt t-talab.",
-  "@wa:Bonjour Yallah Services, je suis un particulier et je cherche une aide pour mon foyer. Ma ville et mon besoin :": "Salam Yallah Services, ana particulier w kanqleb 3la mosa3ada l dar dyali. Mdina dyali w chno mehtaj: ",
-  "💬 Je suis un particulier": "💬 Ana particulier",
-  "@wa:Bonjour Yallah Services, je représente une entreprise et je recherche du personnel. Secteur, effectif et dates :": "Salam Yallah Services, kanmettel charika w kanqleb 3la kheddama. Qita3, l3adad w twarikh: ",
-  "🏢 Je représente une entreprise": "🏢 Kanmettel charika",
+  "💬 Présenter mon besoin": "💬 Nchra7 l 7aja dyali",
+  "Découvrir nos services ↓": "Chouf l khadamat dyalna <span aria-hidden=\"true\">↓</span>",
   "Recherche selon vos critères · Particuliers et entreprises · Frais après validation du profil": "Lba7t 7sab l m3ayir dyalek · l osar w cherkat · lmaṣarif mn b3d lmuṣadaqa 3la l profil",
   "Yallah Services — Votre besoin en personnel, notre priorité.": "Yallah Services — L 7aja dyalek f l kheddamin, hiya l awlawiya dyalna.",
   "2 ans": "3amin",

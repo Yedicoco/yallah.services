@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   459 chaînes, clés = textes d'origine de la page.
+   457 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -32,10 +32,8 @@ YS_TRAD("dar", "index", {
   "Femme de ménage, nounou et cuisinière au Maroc : des services selon vos besoins": "خدامة الدار والحاضنة والطيّابة فالمغرب: <em>خدمات حسب الاحتياجات ديالك</em>",
   "Ménage, nounou, cuisine ou garde-malade : décrivez-nous votre besoin et les critères du poste recherché.": "التنقية، الحضانة، الطياب ولا رعاية المريض: شرح لينا الحاجة ديالك ومعايير المنصب اللي كتقلب عليه.",
   "Les possibilités dépendent de vos critères et des profils disponibles au moment de la demande.": "الإمكانيات كتعلق بالمعايير ديالك وبالبروفيلات المتوفرة وقت الطلب.",
-  "@wa:Bonjour Yallah Services, je suis un particulier et je cherche une aide pour mon foyer. Ma ville et mon besoin :": "السلام عليكم Yallah Services، أنا من الخواص وكنقلب على مساعدة للدار ديالي. المدينة ديالي وشنو محتاج: ",
-  "💬 Je suis un particulier": "💬 أنا من الخواص",
-  "@wa:Bonjour Yallah Services, je représente une entreprise et je recherche du personnel. Secteur, effectif et dates :": "السلام عليكم Yallah Services، كنمثل شركة وكنقلب على مستخدمين. القطاع، العدد والتواريخ: ",
-  "🏢 Je représente une entreprise": "🏢 كنمثل شركة",
+  "💬 Présenter mon besoin": "💬 نشرح الاحتياج ديالي",
+  "Découvrir nos services ↓": "شوف الخدمات ديالنا <span aria-hidden=\"true\">↓</span>",
   "Recherche selon vos critères · Particuliers et entreprises · Frais après validation du profil": "البحث حسب المعايير ديالك · للأسر والشركات · المصاريف من بعد المصادقة على البروفيل",
   "Yallah Services — Votre besoin en personnel, notre priorité.": "Yallah Services — الحاجة ديالك فالخدامين، هي الأولوية ديالنا.",
   "2 ans": "عامين",
