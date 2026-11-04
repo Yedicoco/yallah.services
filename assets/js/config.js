@@ -29,3 +29,12 @@ window.YS_CONFIG = {
      build-site.js force 'statique' dans le site prêt à publier. */
   mode: 'auto'
 };
+
+/* Chargement séparé pour que build-site.js puisse régénérer les coordonnées
+   sans écraser le module UX. */
+(function () {
+  var s = document.createElement('script');
+  s.src = 'assets/js/conversion-ux.js?v=20261104';
+  s.defer = true;
+  document.head.appendChild(s);
+}());

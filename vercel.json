@@ -13,6 +13,10 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }]
     },
     {
+      "source": "/(.*)\\.html",
+      "headers": [{ "key": "Cache-Control", "value": "public, s-maxage=0, max-age=0, must-revalidate, stale-while-revalidate=0" }]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
