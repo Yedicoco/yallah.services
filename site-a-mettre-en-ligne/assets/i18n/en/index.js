@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   457 chaînes, clés = textes d'origine de la page.
+   459 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -32,8 +32,10 @@ YS_TRAD("en", "index", {
   "Femme de ménage, nounou et cuisinière au Maroc : des services selon vos besoins": "Housekeeper, nanny and cook in Morocco: <em>services tailored to your needs</em>",
   "Ménage, nounou, cuisine ou garde-malade : décrivez-nous votre besoin et les critères du poste recherché.": "Cleaning, childcare, cooking or caregiving: tell us what you need and the criteria for the position you are looking for.",
   "Les possibilités dépendent de vos critères et des profils disponibles au moment de la demande.": "Options depend on your criteria and on the profiles available when you make your request.",
-  "💬 Présenter mon besoin": "💬 Describe my need",
-  "Découvrir nos services ↓": "Discover our services <span aria-hidden=\"true\">↓</span>",
+  "@wa:Bonjour Yallah Services, je suis un particulier et je cherche une aide pour mon foyer. Ma ville et mon besoin :": "Hello Yallah Services, I am a private individual looking for help for my home. My city and my need: ",
+  "💬 Je suis un particulier": "💬 I am an individual",
+  "@wa:Bonjour Yallah Services, je représente une entreprise et je recherche du personnel. Secteur, effectif et dates :": "Hello Yallah Services, I represent a company and I am looking for personnel. Sector, headcount and dates: ",
+  "🏢 Je représente une entreprise": "🏢 I represent a business",
   "Recherche selon vos critères · Particuliers et entreprises · Frais après validation du profil": "Search based on your criteria · Households and businesses · Fees after profile validation",
   "Yallah Services — Votre besoin en personnel, notre priorité.": "Yallah Services — Your staffing need, our priority.",
   "2 ans": "2 years",

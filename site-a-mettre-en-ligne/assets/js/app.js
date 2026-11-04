@@ -91,12 +91,17 @@
     });
   });
 
-  /* Ouverture directe d'un onglet partagé : /#tab-nounou. Sans ancre,
+  /* Ouverture directe d'un onglet partagé : /#tab-nounou ou ancre /#services-journee. Sans ancre,
      le bouton « Copier le lien » de la rubrique renvoie d'emblée vers
      l'onglet affiché (Ménage par défaut), jamais vers la section
      entière : c'est le lien le plus précis que l'on puisse partager. */
-  var onglet = /^#tab-([\w-]+)$/.exec(window.location.hash || '');
-  if (onglet) {
+  var hash = window.location.hash || '';
+  var onglet = /^#tab-([\w-]+)$/.exec(hash);
+  if (hash === '#services-journee') {
+    ouvrirOnglet('jour', true);
+  } else if (hash === '#services-mensuels-particuliers') {
+    ouvrirOnglet('menage', true);
+  } else if (onglet) {
     ouvrirOnglet(onglet[1], true);
   } else {
     var actif = $('.tb.on');
