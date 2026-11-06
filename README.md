@@ -21,6 +21,13 @@ Le site répond à **trois publics**, avec trois parcours distincts :
 > **WhatsApp +212 710 359 446** → Espace candidats »*. Les quatre variantes de cette mention (dont la
 > version stricte d'origine) sont dans **`modeles-messages.md`**.
 
+## Prospection LinkedIn B2C
+
+Un outil de recherche de profils publics via Brave Search API, de simulation et de suivi
+manuel est disponible dans [`outils/linkedin/README.md`](outils/linkedin/README.md).
+Il ne se connecte pas à LinkedIn et n’envoie aucun message. Les données de prospects
+doivent rester hors du dépôt.
+
 ## Vidéos particuliers et entreprises
 
 Les quatre MP4 d'origine, leur provenance, les vignettes extraites et les contrôles
