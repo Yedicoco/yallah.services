@@ -79,6 +79,63 @@ class RechercheTests(unittest.TestCase):
             self.assertEqual(len(c.plan(c.load(base), NOW)), 1)
             self.assertEqual(json.loads(queue.read_text())['candidates']['https://www.linkedin.com/in/exemple/']['statut'], 'valide')
 
+    def test_provider_request_and_response_formats(self):
+        examples = {
+            'brave': {'web': {'results': [{'url': 'https://linkedin.com/in/x', 'title': 'X'}]}},
+            'tavily': {'results': [{'url': 'https://linkedin.com/in/x', 'title': 'X'}]},
+            'firecrawl': {'success': True, 'data': {'web': [{'url': 'https://linkedin.com/in/x', 'title': 'X'}]}},
+            'exa': {'results': [{'url': 'https://linkedin.com/in/x', 'title': 'X'}]},
+            'serper': {'organic': [{'link': 'https://linkedin.com/in/x', 'title': 'X'}]},
+            'serpapi': {'organic_results': [{'link': 'https://linkedin.com/in/x', 'title': 'X'}]},
+        }
+        for provider, response in examples.items():
+            with self.subTest(provider=provider):
+                request = r.make_request(provider, 'test casablanca', 'secret')
+                self.assertTrue(request.full_url.startswith('https://'))
+                self.assertEqual(r.parse_results(provider, response)[0]['url'], 'https://linkedin.com/in/x')
+                with self.assertRaises(ValueError):
+                    r.parse_results(provider, {'error': 'invalid'})
+        self.assertEqual(r.make_request('tavily', 'x', '').get_header('X-tavily-access-mode'), 'keyless')
+        self.assertEqual(r.make_request('tavily', 'x', 'key').get_header('Authorization'), 'Bearer key')
+        self.assertIsNone(r.make_request('firecrawl', 'x', '').get_header('Authorization'))
+        self.assertEqual(json.loads(r.make_request('tavily', 'x', '').data)['search_depth'], 'basic')
+        self.assertEqual(json.loads(r.make_request('firecrawl', 'x', '').data)['sources'], ['web'])
+        self.assertNotIn('scrapeOptions', json.loads(r.make_request('firecrawl', 'x', '').data))
+        self.assertEqual(r.parse_results('brave', {}), [])
+        with self.assertRaises(ValueError):
+            r.parse_results('firecrawl', {'success': True, 'data': []})
+
+    def test_multiple_keyless_providers_and_request_budget(self):
+        with tempfile.TemporaryDirectory() as d:
+            args = ['--file', str(Path(d) / 'queue'), '--base', str(Path(d) / 'base')]
+            seen = []
+            def fake_search(query, key, provider):
+                seen.append((query, key, provider))
+                return [{'url': 'https://fr.linkedin.com/in/exemple', 'title': 'Exemple'}]
+            with patch.dict(os.environ, {'TAVILY_API_KEY': 'paid-secret', 'FIRECRAWL_API_KEY': 'paid-secret'}), \
+                 patch.object(r, 'search', side_effect=fake_search), contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(r.main(args + ['chercher', '--moteur', 'tavily', '--moteur', 'firecrawl', '--limite', '2', '--executer']), 0)
+            self.assertEqual([p for _, _, p in seen], ['tavily', 'tavily', 'firecrawl', 'firecrawl'])
+            self.assertTrue(all(key == '' for _, key, _ in seen))
+            queue = r.load_queue(Path(d) / 'queue')
+            self.assertEqual(len(queue['candidates']), 1)
+            self.assertEqual(queue['candidates']['https://www.linkedin.com/in/exemple/']['moteur'], 'tavily')
+
+    def test_missing_key_preflight_before_any_network_call(self):
+        with tempfile.TemporaryDirectory() as d, \
+             patch.dict(os.environ, {}, clear=True), patch.object(r, 'search') as search, \
+             contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            args = ['--file', str(Path(d) / 'queue'), '--base', str(Path(d) / 'base')]
+            self.assertEqual(r.main(args + ['chercher', '--moteur', 'tavily', '--moteur', 'serper', '--executer']), 1)
+            search.assert_not_called()
+
+    def test_explicit_keyed_mode(self):
+        with tempfile.TemporaryDirectory() as d, patch.dict(os.environ, {'TAVILY_API_KEY': 'secret'}), \
+             patch.object(r, 'search', return_value=[]) as search, contextlib.redirect_stdout(io.StringIO()):
+            args = ['--file', str(Path(d) / 'queue'), '--base', str(Path(d) / 'base')]
+            self.assertEqual(r.main(args + ['chercher', '--avec-cle', '--limite', '1', '--executer']), 0)
+            self.assertEqual(search.call_args.args[1:], ('secret', 'tavily'))
+
     def test_reject_same_file(self):
         with tempfile.TemporaryDirectory() as d, contextlib.redirect_stderr(io.StringIO()):
             path = str(Path(d) / 'same.json')

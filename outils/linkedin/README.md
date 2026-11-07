@@ -1,52 +1,79 @@
 # Prospection LinkedIn B2C — préparation locale
 
-La recherche peut découvrir automatiquement des profils publics indexés via l’API de recherche Brave, sans connexion au compte LinkedIn ni exploration automatisée de LinkedIn. Le suivi de campagne reste local : aucun clic ni envoi automatique. La simulation est à faire avant toute recherche réelle, toute campagne et chaque série d’actions. L'opérateur vérifie ensuite chaque profil et chaque conversation, envoie manuellement sur LinkedIn si c'est approprié, puis enregistre immédiatement l'action. Une intégration d'envoi effectif nécessiterait un moyen autorisé par LinkedIn, ses permissions et une validation séparée. Ne pas utiliser de scripts de navigation imitant l'humain pour contourner les contrôles de la plateforme.
+La recherche peut découvrir automatiquement des profils publics indexés via plusieurs API de recherche, sans connexion au compte LinkedIn ni exploration automatisée de LinkedIn. Le suivi de campagne reste local : aucun clic ni envoi automatique. La simulation est à faire avant toute recherche réelle, toute campagne et chaque série d’actions. L'opérateur vérifie ensuite chaque profil et chaque conversation, envoie manuellement sur LinkedIn si c'est approprié, puis enregistre immédiatement l'action. Une intégration d'envoi effectif nécessiterait un moyen autorisé par LinkedIn, ses permissions et une validation séparée. Ne pas utiliser de scripts de navigation imitant l'humain pour contourner les contrôles de la plateforme.
 
 **Promesses à valider :** le brief évoque conciergerie, démarches, maintenance et gestion immobilière ; la [fiche entreprise](../../contenu/fiche-entreprise.md) décrit la recherche et la mise en relation de personnel. Les textes opérationnels restent dans ce périmètre. Ne réintroduire les autres prestations qu'après validation de l'offre réelle et des zones. Les termes « de confiance », « en toute sécurité », « prise en charge complète » et les garanties de réactivité doivent aussi être vérifiés, pas présumés. L'URL fournie est un profil `/in/`, pas nécessairement une page entreprise.
 
 ## 0. Recherche autonome de profils publics
 
-`recherche.py` interroge l’index de recherche Brave, **pas l’API LinkedIn**. Il soumet huit requêtes prédéfinies (quatre villes marocaines et quatre zones MRE), collecte les URL publiques `/in/` en supprimant les doublons déjà connus et les place dans une file privée. Aucune invitation n’est envoyée. Les résultats dépendent de l’indexation et de la syntaxe du moteur : certains profils seront absents, hors cible, en double sous un autre slug ou obsolètes ; seule la première page de résultats est utilisée. Le segment associé est celui de la recherche, **pas une caractéristique vérifiée** du profil. Ne pas déduire l’origine d’une personne de son nom, de son apparence ou d’un résultat de recherche.
+`recherche.py` interroge des moteurs de recherche web, **pas l’API LinkedIn**. Il effectue jusqu'à huit requêtes prédéfinies (quatre villes marocaines et quatre zones MRE), puis place les URL `/in/` des résultats dans une file privée. Il ne visite pas les profils LinkedIn et n’envoie aucun message. Les moteurs ont leurs propres conditions, limites et prix ; aucune liste des outils gratuits ne peut être exhaustive ou garantie dans le temps.
 
-### Installation et premier lancement
+| Moteur | Accès intégré | Conditions à vérifier |
+|---|---|---|
+| [Tavily](https://docs.tavily.com/documentation/keyless) | **Sans clé par défaut** ; clé facultative | Mode sans clé limité ; offre gratuite avec clé selon le fournisseur. |
+| [Firecrawl](https://docs.firecrawl.dev/features/search) | **Sans clé par défaut** ; clé facultative | Accès sans clé limité ; vérifier les conditions et le quota. |
+| [Serper](https://serper.dev/) | Clé `SERPER_API_KEY` | Essai/crédits gratuits possibles, selon l’offre ; non nécessairement renouvelables. |
+| [SerpApi](https://serpapi.com/) | Clé `SERPAPI_API_KEY` | Formule gratuite limitée, vérifier l’éligibilité et les quotas. |
+| [Exa](https://exa.ai/pricing) | Clé `EXA_API_KEY` | Crédits gratuits possibles, vérifier conditions et facturation. |
+| [Brave Search](https://brave.com/search/api/) | Clé `BRAVE_SEARCH_API_KEY` | Accès soumis aux conditions du compte ; peut être payant. |
 
-Il faut un compte [Brave Search API](https://brave.com/search/api/) et une clé avec accès à Web Search. Les requêtes peuvent être facturées : consultez les tarifs et les conditions du fournisseur avant activation. La clé reste dans votre environnement privé, jamais dans le dépôt ou la conversation. Depuis la racine du projet :
+**Attention :** l'application ne sait pas consulter le solde des fournisseurs, ni garantir un coût nul. Désactivez les dépassements facturables sur vos comptes quand c'est possible. Une simulation ne fait aucun appel ; `--executer` déclenche de vrais appels, même si aucun profil n'est trouvé. Aucune bascule automatique vers un autre moteur ou compte payant. Pour Tavily et Firecrawl, les éventuelles clés présentes dans l’environnement sont **ignorées**, sauf avec `--avec-cle`. Les autres moteurs exigent leur clé. Un appel externe envoie la requête de recherche au fournisseur, pas vos cookies LinkedIn.
 
-```sh
-# Simulation : affiche les 8 requêtes, sans connexion ni écriture.
-python3 outils/linkedin/recherche.py chercher
+Les résultats dépendent de l’index et de la compréhension des requêtes du moteur : certains profils seront absents, hors cible, associés à d’autres URL ou obsolètes ; seule la première page est utilisée. Le segment associé est celui de la recherche, **pas une caractéristique vérifiée**. Ne pas déduire l’origine d’une personne de son nom ou apparence.
 
-# Définir la clé sans l'afficher : elle est demandée dans le terminal local.
-read -rs BRAVE_SEARCH_API_KEY; export BRAVE_SEARCH_API_KEY; echo
+### Lancer sous Windows sans clé
 
-# Recherche réelle : jusqu'à 8 appels API, sans invitation ni message.
-python3 outils/linkedin/recherche.py chercher --executer
-python3 outils/linkedin/recherche.py lister
+Depuis le dossier extrait du projet, dans PowerShell :
+
+```powershell
+# Windows : installer une fois les données de fuseau horaire requises par Python.
+py -m pip install tzdata
+
+# Simulation : un seul moteur (Tavily), une requête, aucun accès réseau.
+py outils/linkedin/recherche.py chercher --moteur tavily --limite 1
+
+# Recherche réelle gratuite sans clé, dans les limites du service.
+py outils/linkedin/recherche.py chercher --moteur tavily --limite 1 --executer
+py outils/linkedin/recherche.py lister
 ```
 
-La ligne `read` attend votre saisie puis Entrée, sans afficher la clé (Bash). Elle ne la conserve que dans le terminal courant. Sur une nouvelle session, il faudra la redéfinir. En cas d'erreur API, le programme s'arrête sans enregistrer de résultats partiels ; les appels déjà effectués peuvent néanmoins être facturés.
+Vous pouvez remplacer `tavily` par `firecrawl`. Pour utiliser **les deux** après simulation :
 
-Vérifiez manuellement chaque profil sur LinkedIn, son adéquation B2C, son prénom, son segment, le contexte et les contacts antérieurs. Ajouter un profil pertinent à la campagne :
-
-```sh
-python3 outils/linkedin/recherche.py valider 'https://www.linkedin.com/in/profil-reel/' --prenom Amal --segment actif
-# Ou, pour exclure un résultat inapproprié de la file :
-python3 outils/linkedin/recherche.py ecarter 'https://www.linkedin.com/in/profil-reel/'
-# Ensuite, prévisualiser la campagne :
-python3 outils/linkedin/campagne.py simuler
+```powershell
+py outils/linkedin/recherche.py chercher --moteur tavily --moteur firecrawl --limite 2
+py outils/linkedin/recherche.py chercher --moteur tavily --moteur firecrawl --limite 2 --executer
 ```
 
-Un profil découvert ne devient jamais automatiquement une invitation : il faut le valider. Les URL déjà présentes, validées ou écartées ne sont pas reproposées, sous réserve des changements de slug. Le fichier des découvertes est `~/yallah-linkedin-data/decouvertes.json` ; il contient l’URL, le titre indexé, la catégorie de recherche, la date et le statut. Gardez-le privé et appliquez les mêmes règles de conservation que pour la base. La validation enregistre le prénom et le segment vérifiés dans la base de campagne. Un seul opérateur/processus à la fois : aucune synchronisation entre machines, copies ou campagnes extérieures.
+Cela lance au maximum 2 requêtes **par moteur** (4 au total). Par défaut, 8 requêtes par moteur. `--segment mre` recherche uniquement la diaspora ; `--segment actif` uniquement les actifs. `--limite 1` ne couvre qu’une seule requête/ville du segment sélectionné. Les appels peuvent être limités, bloqués ou modifiés par les fournisseurs ; une erreur arrête la recherche sans sauvegarder les résultats partiels, mais les appels déjà effectués peuvent être comptabilisés ou facturés. Aucun mécanisme de nouvelle tentative ou de contournement des restrictions n’est installé.
 
-### Recherche quotidienne sans intervention (facultatif)
+Pour un moteur à clé, créez votre compte directement chez le fournisseur et configurez la variable d'environnement correspondante sur votre PC. Ne collez jamais la clé dans le dépôt ou une conversation. Exemples d'exécution :
 
-Après avoir testé la simulation et un lancement réel, configurez sur une machine ou un serveur **toujours allumé** une tâche planifiée. Sous Linux, créer `~/yallah-linkedin-data/brave.env` avec une ligne `BRAVE_SEARCH_API_KEY=...` dans un éditeur privé, puis `chmod 600 ~/yallah-linkedin-data/brave.env`. Ne partagez pas ce fichier. Dans `crontab -e`, ajoutez par exemple :
-
-```cron
-0 9 * * * /bin/sh -c 'set -a; . "$HOME/yallah-linkedin-data/brave.env"; set +a; cd /home/user/yallah.services && python3 outils/linkedin/recherche.py chercher --executer >> "$HOME/yallah-linkedin-data/recherche.log" 2>&1'
+```powershell
+py outils/linkedin/recherche.py chercher --moteur serper --limite 1
+py outils/linkedin/recherche.py chercher --moteur serper --limite 1 --executer
+# Pour Tavily/Firecrawl avec un compte configuré explicitement :
+py outils/linkedin/recherche.py chercher --moteur tavily --avec-cle --limite 1 --executer
 ```
 
-Adapter le chemin du projet à la machine. L'heure suit le fuseau du serveur ; huit appels au maximum sont prévus par exécution, avec facturation possible. La tâche ne démarre pas toute seule sans cette configuration, ne tourne pas lorsque la machine est éteinte et ne valide ni ne contacte les personnes. Surveiller le journal, les coûts et les quotas fournisseur ; retirer la ligne du crontab pour arrêter. Ne pas lancer plusieurs tâches simultanées. L’environnement Arena peut ne pas avoir accès à l’API externe ou ne pas rester actif : utiliser une machine ayant accès à Brave pour l’exécution planifiée.
+SerpApi impose sa clé dans l’URL de requête HTTPS ; les journaux de votre réseau ou proxy peuvent donc l’exposer. Aucun fournisseur ne demande ni ne doit recevoir votre cookie LinkedIn. **Modification par rapport à l’ancienne version :** le moteur par défaut est désormais Tavily sans clé, pas Brave. Pour conserver Brave, spécifier `--moteur brave`.
+
+### Validation avant contact
+
+Vérifiez chaque profil, son adéquation B2C, son prénom, son segment et les contacts antérieurs. Ajouter un profil pertinent à la campagne :
+
+```powershell
+py outils/linkedin/recherche.py valider 'https://www.linkedin.com/in/profil-reel/' --prenom Amal --segment actif
+# Ou écarter un résultat inapproprié :
+py outils/linkedin/recherche.py ecarter 'https://www.linkedin.com/in/profil-reel/'
+# Ensuite prévisualiser les messages, sans envoi :
+py outils/linkedin/campagne.py simuler
+```
+
+Un profil découvert ne devient jamais automatiquement une invitation : il faut le valider. Les URL déjà présentes, validées ou écartées ne sont pas reproposées, sous réserve des changements de slug. Le fichier `~/yallah-linkedin-data/decouvertes.json` contient l’URL, le titre indexé, la catégorie de recherche, la date, le statut et le moteur. Gardez-le privé et appliquez les mêmes règles de conservation que pour la base. La validation enregistre le prénom et le segment vérifiés dans la base de campagne. Un seul opérateur/processus à la fois : aucune synchronisation entre machines, copies ou campagnes extérieures.
+
+### Recherche quotidienne (facultatif)
+
+Après test, configurez le Planificateur de tâches Windows ou cron sur une machine toujours allumée. Le programme à planifier est l’interpréteur Python ; ses arguments incluent le chemin complet vers `outils/linkedin/recherche.py`, puis `chercher --moteur tavily --executer`. Choisissez une heure, contrôlez le fuseau et les quotas du fournisseur, et commencez par `--limite 1`. Ne configurez pas plusieurs exécutions simultanées. La tâche ne fonctionne pas si la machine est éteinte et ne valide ni ne contacte les personnes. Les modifications de conditions ou restrictions réseau peuvent interrompre la recherche. L’environnement Arena ne permet pas nécessairement l’accès aux API ou l’exécution continue.
 
 ## 1. Sélection manuelle des particuliers
 
@@ -67,7 +94,7 @@ Utiliser les URL de profils individuels `/in/`, pas les URL de recherche ou d'en
 
 ## 2. Simuler, puis suivre manuellement
 
-Prérequis : Python 3.9+ et la base de fuseaux horaires système (ou le paquet `tzdata` si nécessaire). Depuis la racine du dépôt :
+Prérequis : Python 3.9+ et la base de fuseaux horaires système (sous Windows : `py -m pip install tzdata`). Depuis la racine du dépôt :
 
 ```sh
 python3 outils/linkedin/campagne.py importer ~/prospects.csv

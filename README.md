@@ -23,7 +23,7 @@ Le site répond à **trois publics**, avec trois parcours distincts :
 
 ## Prospection LinkedIn B2C
 
-Un outil de recherche de profils publics via Brave Search API, de simulation et de suivi
+Un outil de recherche de profils publics via plusieurs moteurs, de simulation et de suivi
 manuel est disponible dans [`outils/linkedin/README.md`](outils/linkedin/README.md).
 Il ne se connecte pas à LinkedIn et n’envoie aucun message. Les données de prospects
 doivent rester hors du dépôt.
