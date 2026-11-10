@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#10243a">
+  <title>CRM — Yallah Services</title>
+  <link rel="stylesheet" href="/crm/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="/crm/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">YALLAH <span>SERVICES</span></a>
+    <span class="private-label">ESPACE PRIVÉ · CRM</span>
+  </header>
+  <main class="shell">
+    <section id="loginPanel" class="panel login-panel">
+      <p class="eyebrow">GESTION COMMERCIALE</p>
+      <h1>Connexion au CRM</h1>
+      <p class="muted">Accès réservé aux administrateurs autorisés.</p>
+      <form id="loginForm">
+        <label for="loginEmail">Adresse e-mail</label>
+        <input id="loginEmail" type="email" autocomplete="username" required>
+        <label for="loginPassword">Mot de passe</label>
+        <input id="loginPassword" type="password" autocomplete="current-password" required>
+        <button class="primary" type="submit">Se connecter</button>
+      </form>
+      <p id="loginMessage" class="message" role="status"></p>
+    </section>
+
+    <section id="crmPanel" hidden>
+      <div class="heading-row">
+        <div><p class="eyebrow">YALLAH SERVICES</p><h1>Prospection & relations</h1><p class="muted">Suivez vos contacts et leurs prochaines étapes.</p></div>
+        <button id="logoutButton" class="secondary" type="button">Déconnexion</button>
+      </div>
+      <div class="stats">
+        <article class="stat"><span>Prospects affichés</span><strong id="totalCount">0</strong></article>
+        <article class="stat"><span>Nouveaux</span><strong id="newCount">0</strong></article>
+        <article class="stat"><span>Qualifiés</span><strong id="qualifiedCount">0</strong></article>
+      </div>
+      <section class="panel">
+        <div class="section-heading"><h2>Ajouter un prospect</h2><span class="muted small">Saisie manuelle</span></div>
+        <form id="prospectForm" class="form-grid">
+          <div><label for="nom">Nom / établissement *</label><input id="nom" maxlength="120" required placeholder="Ex. Résidence Al..." ></div>
+          <div><label for="organisation">Organisation</label><input id="organisation" maxlength="160" placeholder="Entreprise, résidence…"></div>
+          <div><label for="segment">Type de prospect *</label><select id="segment"><option>Particulier</option><option>Entreprise</option><option>Partenaire</option></select></div>
+          <div><label for="ville">Ville</label><input id="ville" maxlength="100" placeholder="Casablanca"></div>
+          <div><label for="telephone">Téléphone</label><input id="telephone" maxlength="40" type="tel"></div>
+          <div><label for="email">E-mail</label><input id="email" maxlength="254" type="email"></div>
+          <div><label for="source">Source</label><select id="source"><option>Saisie manuelle</option><option>LinkedIn (repéré manuellement)</option><option>Recommandation</option><option>Site web</option><option>Réseaux sociaux</option><option>Autre</option></select></div>
+          <div class="wide"><label for="notes">Notes commerciales</label><textarea id="notes" maxlength="4000" rows="3" placeholder="Besoin identifié, contexte, prochaine étape…"></textarea></div>
+          <div class="wide form-actions"><button class="primary" type="submit">Enregistrer le prospect</button><span id="formMessage" class="message" role="status"></span></div>
+        </form>
+      </section>
+      <section class="panel">
+        <div class="section-heading"><h2>Base de prospects</h2><input id="searchInput" class="search" type="search" placeholder="Rechercher un nom, une ville…"></div>
+        <div class="table-wrap"><table><thead><tr><th>Prospect</th><th>Segment</th><th>Ville</th><th>Contact</th><th>Statut</th><th>Créé le</th></tr></thead><tbody id="prospectRows"><tr><td colspan="6">Chargement…</td></tr></tbody></table></div>
+        <p id="listMessage" class="message" role="status"></p>
+      </section>
+      <p class="footnote">Cette première version n'envoie aucun message automatiquement. Les coordonnées et notes doivent être collectées et utilisées conformément aux règles applicables.</p>
+    </section>
+  </main>
+</body>
+</html>
