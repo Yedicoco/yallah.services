@@ -408,8 +408,8 @@ navigateur décide (`ar…` → darija, `en…` → anglais, sinon français).
 On peut aussi forcer une langue par l'adresse : `?langue=en`, `?langue=dar`,
 `?langue=fr` (l'ancien paramètre `ar` est accepté et donne la darija).
 
-**Pages couvertes aujourd'hui (11)** : accueil, fiche de candidature,
-confirmation de candidature, hub entreprises, services par ville, et les six
+**Pages couvertes aujourd'hui (12)** : accueil, fiche de candidature,
+confirmation de candidature, hub entreprises, services par ville, mentions légales et les six
 pages « service × ville » de Casablanca (ménage, nounou, cuisinière,
 garde-malade, chauffeur, vigile). Les quatre pages
 « service × ville » restantes (femme de ménage à Rabat, Marrakech et Tanger,

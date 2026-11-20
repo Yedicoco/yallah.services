@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   459 chaînes, clés = textes d'origine de la page.
+   470 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -337,6 +337,17 @@ YS_TRAD("dar", "index", {
   "Les frais de Mise en relation sont réglés uniquement après validation du profil et mise en relation. Vous ne payez rien avant d'avoir trouvé votre candidate. Le salaire mensuel est versé directement à l'employée, séparément des frais de Mise en relation.": "مصاريف المطابقة كيتخلصو <strong>غير من بعد ما تصادق على البروفيل وتتصادق المطابقة</strong>. ماكتخلص حتا حاجة قبل ما تلقى الخدامة ديالك. الأجر الشهري كيتعطى ديريكت للخدامة، بوحدو على مصاريف المطابقة.",
   "Quelle différence entre logée et non logée ? ▾": "شنو الفرق بين مقيمة وغير مقيمة؟ <span class=\"arr\">▾</span>",
   "Logée : l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.\nNon logée : les horaires et les modalités sont définis selon le poste et l'accord avec la famille.": "<strong>مقيمة:</strong> كتسكن فدار العائلة حسب الشروط المتفق عليها. كيتحددو أوقات العمل وأيام الراحة مع العائلة.<br><br><strong>غير مقيمة:</strong> الأوقات وكيفاش كتخدم كيتحددو حسب المنصب والاتفاق مع العائلة.",
+  "Conditions d'accueil pour une aide logée": "شروط استقبال المساعدة اللي غادي تسكن مع العائلة",
+  "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté": "3 وجبات فالنهار بكمية كافية وجودة مقبولة، والما الصالح للشرب متوفر بلا حدود",
+  "Chambre individuelle décente avec intimité": "بيت بوحدها يكون لائق ويحترم الخصوصية ديالها",
+  "Temps de repos quotidien respecté": "احترام وقت الراحة ديالها كل نهار",
+  "Conditions équitables pour les 3 parties : famille, aide, Yallah Services": "شروط منصفة للأطراف الثلاثة: العائلة، المساعدة ويلاه سيرفيس",
+  "En cas de non-respect, Yallah Services peut retirer l'aide": "إلا ما تحترموش هاد الشروط، يلاه سيرفيس تقدر تسحب المساعدة",
+  "Comment s'organise une employée cuisine + ménage + garde d'enfants ?": "كيفاش كتنظّم خدمتها المساعدة اللي كتطيب وكتنقّي وكتردّ البال للدراري؟",
+  "Priorité absolue à l'enfant": "الطفل هو الأولوية قبل كلشي",
+  "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome": "الطياب والتنقية كيتنظّمو مع أوقات نعاس الطفل وملي كيلعب بوحدو",
+  "Tâches définies à l'avance avec la famille": "المهام كيتّافقو عليها مع العائلة من قبل",
+  "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus": "يلاه سيرفيس كتوضّح لكل زبون اختار هاد الصيغة كيفاش كتخدم، باش ما يكون حتى سوء تفاهم",
   "Vous intervenez dans quelles villes ? ▾": "فين كتخدمو؟ <span class=\"arr\">▾</span>",
   "Nos principales zones de recherche sont Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé. La possibilité d’intervenir pour une mission et un quartier précis est à confirmer. Le ménage à la journée est proposé uniquement à Casablanca et Rabat.": "مناطق البحث الرئيسية ديالنا هي <strong>الدار البيضاء، بوسكورة، دار بوعزة، بوزنيقة، الرباط، مراكش، طنجة، أكادير، فاس، القنيطرة، المحمدية، تمارة وسلا</strong>. خاصنا نأكدو واش ممكن نخدمو فمهمة وحي محدد. التنظيف بالنهار متوفر غير فالدار البيضاء والرباط.",
   "Le personnel est-il vérifié et formé ? ▾": "واش العاملين كيتحقق منهم وكيستافدو من تكوين؟ <span class=\"arr\">▾</span>",

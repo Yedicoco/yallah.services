@@ -1,0 +1,62 @@
+/* ══════════════════════════════════════════════════════════════════
+   YALLAH SERVICES — Dictionnaire EN · mentions-legales.html
+   52 chaînes, clés = textes d'origine de la page.
+   Généré par outils/generer-i18n.js depuis
+   contenu/i18n/traductions/mentions-legales.en.json — ne pas
+   modifier ce fichier à la main : modifier la traduction puis relancer
+       node outils/generer-i18n.js
+══════════════════════════════════════════════════════════════════ */
+YS_TRAD("en", "mentions-legales", {
+  "@aria-label:Navigation principale": "Main navigation",
+  "@aria-label:Yallah Services, accueil": "Yallah Services, home",
+  "@alt:Yallah Services": "Yallah Services",
+  "Services par ville": "Services by city",
+  "Entreprises": "Companies",
+  "FAQ": "FAQ",
+  "Espace candidats": "Job seekers",
+  "@wa:Bonjour Yallah Services !": "Hello Yallah Services!",
+  "WhatsApp": "WhatsApp",
+  "@aria-label:Fil d’Ariane": "Breadcrumb",
+  "Accueil › Mentions légales": "<a href=\"index.html\">Home</a> <span aria-hidden=\"true\">›</span> Legal notice",
+  "Yallah Services · Maroc": "Yallah Services · Morocco",
+  "Mentions": "Legal",
+  "légales": "notice",
+  "Les informations légales du site Yallah Services : qui édite le site, comment nous contacter, où le site est hébergé et comment vos données personnelles sont traitées.": "Legal information about the Yallah Services website: who publishes it, how to contact us, where the site is hosted and how your personal data is handled.",
+  "Éditeur du site": "Website publisher",
+  "Yallah Services — activité de recherche, d'intermédiation et de mise en relation de personnel pour les particuliers et les entreprises au Royaume du Maroc.": "<strong>Yallah Services</strong> — staff search, intermediary and referral services for individuals and businesses in the Kingdom of Morocco.",
+  "Base : Casablanca — Hay Hassani, 20220, Maroc": "<strong>Based in:</strong> Casablanca — Hay Hassani, 20220, Morocco",
+  "E-mail :": "Email:",
+  "servicesyallah@gmail.com": "servicesyallah@gmail.com",
+  "Téléphone / WhatsApp (particuliers et entreprises) :": "Phone / WhatsApp (individuals and businesses):",
+  "Téléphone / WhatsApp (candidats) :": "Phone / WhatsApp (candidates):",
+  "Directeur de la publication : la direction de Yallah Services.": "<strong>Publication director:</strong> Yallah Services management.",
+  "Hébergement": "Hosting",
+  "Le site est hébergé par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis — vercel.com.": "The website is hosted by <strong>Vercel Inc.</strong>, 440 N Barranca Avenue #4133, Covina, CA 91723, United States — <a href=\"https://vercel.com\" target=\"_blank\" rel=\"noopener noreferrer\">vercel.com</a>.",
+  "Nature du service": "Nature of the service",
+  "Yallah Services recherche et met en relation du personnel selon les besoins exprimés par les particuliers et les entreprises. Yallah Services n'est pas l'employeur des profils présentés : la relation de travail (contrat, salaire, horaires, conditions) est établie directement entre le foyer ou l'entreprise et la personne retenue. Les frais de mise en relation sont expliqués avant toute décision et réglés uniquement après validation du profil et mise en relation. Aucun frais n'est demandé aux candidats.": "Yallah Services finds staff and connects them with individuals and businesses according to their stated needs. Yallah Services does not employ the candidates it introduces: the employment relationship (contract, pay, hours and conditions) is established directly between the household or business and the person selected. Referral fees are explained before any decision and are payable only after the candidate has been approved and the parties introduced. Candidates are not charged any fees.",
+  "Les tarifs affichés sur le site sont indicatifs et peuvent varier selon les conditions et responsabilités convenues entre les parties.": "Prices shown on the website are indicative and may vary according to the conditions and responsibilities agreed by the parties.",
+  "Conditions d'accueil pour une aide logée": "Requirements for hosting a live-in domestic helper",
+  "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté": "Three meals a day of adequate quantity and quality, plus unlimited access to safe drinking water",
+  "Chambre individuelle décente avec intimité": "A decent room for her sole use, with privacy",
+  "Temps de repos quotidien respecté": "Daily rest time must be respected",
+  "Conditions équitables pour les 3 parties : famille, aide, Yallah Services": "Fair conditions for all three parties: the family, the helper and Yallah Services",
+  "En cas de non-respect, Yallah Services peut retirer l'aide": "If these conditions are not met, Yallah Services may withdraw the helper",
+  "Protection des données personnelles (loi 09-08)": "Personal data protection (Law 09-08)",
+  "Les informations transmises via les formulaires du site ou par WhatsApp (nom, téléphone, ville, besoin exprimé, et pour les candidats les informations de candidature) sont utilisées uniquement pour traiter votre demande de mise en relation ou votre candidature. Elles ne sont ni vendues ni communiquées à des tiers en dehors de ce traitement.": "Information submitted through website forms or WhatsApp (name, phone number, city, stated needs and, for candidates, application details) is used only to process your referral request or application. It is not sold or shared with third parties outside that process.",
+  "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition sur vos données. Pour l'exercer, écrivez-nous à servicesyallah@gmail.com.": "Under Moroccan Law No. 09-08 on the protection of individuals regarding the processing of personal data, you have the right to access and correct your data and to object to its processing. To exercise these rights, email us at <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a>.",
+  "Le site n'utilise pas de cookies publicitaires ni de traceurs tiers. Le navigateur mémorise uniquement, en stockage local, votre préférence de langue d'affichage (français, darija ou anglais).": "The website does not use advertising cookies or third-party trackers. Your browser only saves your display language preference (French, Darija or English) in local storage.",
+  "Propriété intellectuelle": "Intellectual property",
+  "L'ensemble des contenus du site (textes, logo, visuels, vidéos, structure) est la propriété de Yallah Services, sauf mention contraire. Toute reproduction ou réutilisation sans autorisation écrite préalable est interdite.": "Unless otherwise stated, all website content (text, logo, images, videos and structure) is the property of Yallah Services. Reproduction or reuse without prior written permission is prohibited.",
+  "Nous contacter": "Contact us",
+  "Pour toute question au sujet du site ou de ces mentions : servicesyallah@gmail.com ou WhatsApp +212 691 733 585.": "For any questions about the website or this notice, contact us at <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a> or <a href=\"https://wa.me/212691733585?text=Bonjour%20Yallah%20Services%2C%20j%27ai%20une%20question%20au%20sujet%20du%20site.\" target=\"_blank\" rel=\"noopener\">WhatsApp +212 691 733 585</a>.",
+  "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.": "<strong>Yallah Services</strong> — Staff search and referrals for individuals and businesses in Morocco. Based in Casablanca, Hay Hassani 20220.",
+  "Accueil": "Home",
+  "Mentions légales": "Legal notice",
+  "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn": "Follow us: <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>",
+  "Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé": "Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé",
+  "@title": "Legal notice | Yallah Services",
+  "@meta:description": "Yallah Services legal notice: website publisher, contact details, hosting, intellectual property and personal data protection (Law 09-08).",
+  "@meta:og:title": "Legal notice | Yallah Services",
+  "@meta:og:description": "Website publisher, contact details, hosting and personal data protection for Yallah Services.",
+  "@meta:og:locale": "en_US"
+});

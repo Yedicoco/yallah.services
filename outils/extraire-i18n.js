@@ -46,6 +46,7 @@ const PAGES = [
   'candidature-confirmation.html',
   'personnel-entreprises.html',
   'services-par-ville.html',
+  'mentions-legales.html',
   /* Pages « service × ville » de Casablanca : générées par
      outils/generer-pages-villes.js. Toute régénération décale les chaînes :
      relancer extraire-i18n.js --json puis reindexer-i18n.js. */

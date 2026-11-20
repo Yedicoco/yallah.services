@@ -2025,6 +2025,72 @@
         "html": "<strong>Logée :</strong> l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.<br></br><br></br><strong>Non logée :</strong> les horaires et les modalités sont définis selon le poste et l'accord avec la famille."
       },
       {
+        "cle": "Conditions d'accueil pour une aide logée",
+        "occurrences": 1,
+        "exemple": "Conditions d'accueil pour une aide logée",
+        "langue": "fr"
+      },
+      {
+        "cle": "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté",
+        "occurrences": 1,
+        "exemple": "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté",
+        "langue": "fr"
+      },
+      {
+        "cle": "Chambre individuelle décente avec intimité",
+        "occurrences": 1,
+        "exemple": "Chambre individuelle décente avec intimité",
+        "langue": "fr"
+      },
+      {
+        "cle": "Temps de repos quotidien respecté",
+        "occurrences": 1,
+        "exemple": "Temps de repos quotidien respecté",
+        "langue": "fr"
+      },
+      {
+        "cle": "Conditions équitables pour les 3 parties : famille, aide, Yallah Services",
+        "occurrences": 1,
+        "exemple": "Conditions équitables pour les 3 parties : famille, aide, Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "En cas de non-respect, Yallah Services peut retirer l'aide",
+        "occurrences": 1,
+        "exemple": "En cas de non-respect, Yallah Services peut retirer l'aide",
+        "langue": "fr"
+      },
+      {
+        "cle": "Comment s'organise une employée cuisine + ménage + garde d'enfants ?",
+        "occurrences": 1,
+        "exemple": "Comment s'organise une employée cuisine + ménage + garde d'enfants ?",
+        "langue": "fr"
+      },
+      {
+        "cle": "Priorité absolue à l'enfant",
+        "occurrences": 1,
+        "exemple": "Priorité absolue à l'enfant",
+        "langue": "fr"
+      },
+      {
+        "cle": "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome",
+        "occurrences": 1,
+        "exemple": "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tâches définies à l'avance avec la famille",
+        "occurrences": 1,
+        "exemple": "Tâches définies à l'avance avec la famille",
+        "langue": "fr"
+      },
+      {
+        "cle": "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus",
+        "occurrences": 1,
+        "exemple": "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus",
+        "langue": "fr"
+      },
+      {
         "cle": "Vous intervenez dans quelles villes ? ▾",
         "occurrences": 1,
         "exemple": "Vous intervenez dans quelles villes ? ▾",
@@ -6229,6 +6295,36 @@
         "langue": "fr"
       },
       {
+        "cle": "Comment s'organise une employée cuisine + ménage + garde d'enfants ?",
+        "occurrences": 1,
+        "exemple": "Comment s'organise une employée cuisine + ménage + garde d'enfants ?",
+        "langue": "fr"
+      },
+      {
+        "cle": "Priorité absolue à l'enfant",
+        "occurrences": 1,
+        "exemple": "Priorité absolue à l'enfant",
+        "langue": "fr"
+      },
+      {
+        "cle": "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome",
+        "occurrences": 1,
+        "exemple": "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tâches définies à l'avance avec la famille",
+        "occurrences": 1,
+        "exemple": "Tâches définies à l'avance avec la famille",
+        "langue": "fr"
+      },
+      {
+        "cle": "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus",
+        "occurrences": 1,
+        "exemple": "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus",
+        "langue": "fr"
+      },
+      {
         "cle": "Comment se passe une demande",
         "occurrences": 1,
         "exemple": "Comment se passe une demande",
@@ -6350,6 +6446,342 @@
         "cle": "@meta:og:description",
         "occurrences": 1,
         "exemple": "Trouvez le bon profil pour votre maison ou votre entreprise : les services Yallah Services, ville par ville.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:locale",
+        "occurrences": 1,
+        "exemple": "fr_MA",
+        "langue": "fr"
+      }
+    ],
+    "clesArabe": []
+  },
+  "mentions-legales.html": {
+    "bilingue": false,
+    "clesFrancais": [
+      {
+        "cle": "@aria-label:Navigation principale",
+        "occurrences": 1,
+        "exemple": "Navigation principale",
+        "langue": "fr"
+      },
+      {
+        "cle": "@aria-label:Yallah Services, accueil",
+        "occurrences": 1,
+        "exemple": "Yallah Services, accueil",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Yallah Services",
+        "occurrences": 1,
+        "exemple": "Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "Services par ville",
+        "occurrences": 2,
+        "exemple": "Services par ville",
+        "langue": "fr"
+      },
+      {
+        "cle": "Entreprises",
+        "occurrences": 2,
+        "exemple": "Entreprises",
+        "langue": "fr"
+      },
+      {
+        "cle": "FAQ",
+        "occurrences": 1,
+        "exemple": "FAQ",
+        "langue": "fr"
+      },
+      {
+        "cle": "Espace candidats",
+        "occurrences": 2,
+        "exemple": "Espace candidats",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services !",
+        "occurrences": 1,
+        "exemple": "Bonjour Yallah Services !",
+        "langue": "fr"
+      },
+      {
+        "cle": "WhatsApp",
+        "occurrences": 1,
+        "exemple": "WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "@aria-label:Fil d’Ariane",
+        "occurrences": 1,
+        "exemple": "Fil d’Ariane",
+        "langue": "fr"
+      },
+      {
+        "cle": "Accueil › Mentions légales",
+        "occurrences": 1,
+        "exemple": "Accueil › Mentions légales",
+        "langue": "fr",
+        "balisage": "a,span",
+        "html": "<a href=\"index.html\">Accueil</a> <span aria-hidden=\"true\">›</span> Mentions légales"
+      },
+      {
+        "cle": "Yallah Services · Maroc",
+        "occurrences": 1,
+        "exemple": "Yallah Services · Maroc",
+        "langue": "fr"
+      },
+      {
+        "cle": "Mentions",
+        "occurrences": 1,
+        "exemple": "Mentions",
+        "langue": "fr"
+      },
+      {
+        "cle": "légales",
+        "occurrences": 1,
+        "exemple": "légales",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les informations légales du site Yallah Services : qui édite le site, comment nous contacter, où le site est hébergé et comment vos données personnelles sont traitées.",
+        "occurrences": 1,
+        "exemple": "Les informations légales du site Yallah Services : qui édite le site, comment nous contacter, où le site est hébergé et comment vos données personnelles sont traitées.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Éditeur du site",
+        "occurrences": 1,
+        "exemple": "Éditeur du site",
+        "langue": "fr"
+      },
+      {
+        "cle": "Yallah Services — activité de recherche, d'intermédiation et de mise en relation de personnel pour les particuliers et les entreprises au Royaume du Maroc.",
+        "occurrences": 1,
+        "exemple": "Yallah Services — activité de recherche, d'intermédiation et de mise en relation de personnel pour les particuliers et les entreprises au Royaume du Maroc.",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "<strong>Yallah Services</strong> — activité de recherche, d'intermédiation et de mise en relation de personnel pour les particuliers et les entreprises au Royaume du Maroc."
+      },
+      {
+        "cle": "Base : Casablanca — Hay Hassani, 20220, Maroc",
+        "occurrences": 1,
+        "exemple": "Base : Casablanca — Hay Hassani, 20220, Maroc",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "<strong>Base :</strong> Casablanca — Hay Hassani, 20220, Maroc"
+      },
+      {
+        "cle": "E-mail :",
+        "occurrences": 1,
+        "exemple": "E-mail :",
+        "langue": "fr"
+      },
+      {
+        "cle": "servicesyallah@gmail.com",
+        "occurrences": 2,
+        "exemple": "servicesyallah@gmail.com",
+        "langue": "fr"
+      },
+      {
+        "cle": "Téléphone / WhatsApp (particuliers et entreprises) :",
+        "occurrences": 1,
+        "exemple": "Téléphone / WhatsApp (particuliers et entreprises) :",
+        "langue": "fr"
+      },
+      {
+        "cle": "Téléphone / WhatsApp (candidats) :",
+        "occurrences": 1,
+        "exemple": "Téléphone / WhatsApp (candidats) :",
+        "langue": "fr"
+      },
+      {
+        "cle": "Directeur de la publication : la direction de Yallah Services.",
+        "occurrences": 1,
+        "exemple": "Directeur de la publication : la direction de Yallah Services.",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "<strong>Directeur de la publication :</strong> la direction de Yallah Services."
+      },
+      {
+        "cle": "Hébergement",
+        "occurrences": 1,
+        "exemple": "Hébergement",
+        "langue": "fr"
+      },
+      {
+        "cle": "Le site est hébergé par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis — vercel.com.",
+        "occurrences": 1,
+        "exemple": "Le site est hébergé par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis — vercel.com.",
+        "langue": "fr",
+        "balisage": "strong,a",
+        "html": "Le site est hébergé par <strong>Vercel Inc.</strong>, 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis — <a href=\"https://vercel.com\" target=\"_blank\" rel=\"noopener noreferrer\">vercel.com</a>."
+      },
+      {
+        "cle": "Nature du service",
+        "occurrences": 1,
+        "exemple": "Nature du service",
+        "langue": "fr"
+      },
+      {
+        "cle": "Yallah Services recherche et met en relation du personnel selon les besoins exprimés par les particuliers et les entreprises. Yallah Services n'est pas l'employeur des profils présentés : la relation de travail (contrat, salaire, horaires, conditions) est établie directement entre le foyer ou l'entreprise et la personne retenue. Les frais de mise en relation sont expliqués avant toute décision et réglés uniquement après validation du profil et mise en relation. Aucun frais n'est demandé aux candidats.",
+        "occurrences": 1,
+        "exemple": "Yallah Services recherche et met en relation du personnel selon les besoins exprimés par les particuliers et les entreprises. Yallah Services n'est pas l'employeur des profils présentés : la relation de travail (contrat, salaire, horaires, conditions) est établie directement entre le foyer ou l'entreprise et la personne retenue. Les frais de mise en relation sont expliqués avant toute décision et réglés uniquement après validation du profil et mise en relation. Aucun frais n'est demandé aux candidats.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les tarifs affichés sur le site sont indicatifs et peuvent varier selon les conditions et responsabilités convenues entre les parties.",
+        "occurrences": 1,
+        "exemple": "Les tarifs affichés sur le site sont indicatifs et peuvent varier selon les conditions et responsabilités convenues entre les parties.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Conditions d'accueil pour une aide logée",
+        "occurrences": 1,
+        "exemple": "Conditions d'accueil pour une aide logée",
+        "langue": "fr"
+      },
+      {
+        "cle": "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté",
+        "occurrences": 1,
+        "exemple": "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté",
+        "langue": "fr"
+      },
+      {
+        "cle": "Chambre individuelle décente avec intimité",
+        "occurrences": 1,
+        "exemple": "Chambre individuelle décente avec intimité",
+        "langue": "fr"
+      },
+      {
+        "cle": "Temps de repos quotidien respecté",
+        "occurrences": 1,
+        "exemple": "Temps de repos quotidien respecté",
+        "langue": "fr"
+      },
+      {
+        "cle": "Conditions équitables pour les 3 parties : famille, aide, Yallah Services",
+        "occurrences": 1,
+        "exemple": "Conditions équitables pour les 3 parties : famille, aide, Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "En cas de non-respect, Yallah Services peut retirer l'aide",
+        "occurrences": 1,
+        "exemple": "En cas de non-respect, Yallah Services peut retirer l'aide",
+        "langue": "fr"
+      },
+      {
+        "cle": "Protection des données personnelles (loi 09-08)",
+        "occurrences": 1,
+        "exemple": "Protection des données personnelles (loi 09-08)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les informations transmises via les formulaires du site ou par WhatsApp (nom, téléphone, ville, besoin exprimé, et pour les candidats les informations de candidature) sont utilisées uniquement pour traiter votre demande de mise en relation ou votre candidature. Elles ne sont ni vendues ni communiquées à des tiers en dehors de ce traitement.",
+        "occurrences": 1,
+        "exemple": "Les informations transmises via les formulaires du site ou par WhatsApp (nom, téléphone, ville, besoin exprimé, et pour les candidats les informations de candidature) sont utilisées uniquement pour traiter votre demande de mise en relation ou votre candidature. Elles ne sont ni vendues ni communiquées à des tiers en dehors de ce traitement.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition sur vos données. Pour l'exercer, écrivez-nous à servicesyallah@gmail.com.",
+        "occurrences": 1,
+        "exemple": "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition sur vos données. Pour l'exercer, écrivez-nous à servicesyallah@gmail.com.",
+        "langue": "fr",
+        "balisage": "a",
+        "html": "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition sur vos données. Pour l'exercer, écrivez-nous à <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a>."
+      },
+      {
+        "cle": "Le site n'utilise pas de cookies publicitaires ni de traceurs tiers. Le navigateur mémorise uniquement, en stockage local, votre préférence de langue d'affichage (français, darija ou anglais).",
+        "occurrences": 1,
+        "exemple": "Le site n'utilise pas de cookies publicitaires ni de traceurs tiers. Le navigateur mémorise uniquement, en stockage local, votre préférence de langue d'affichage (français, darija ou anglais).",
+        "langue": "fr"
+      },
+      {
+        "cle": "Propriété intellectuelle",
+        "occurrences": 1,
+        "exemple": "Propriété intellectuelle",
+        "langue": "fr"
+      },
+      {
+        "cle": "L'ensemble des contenus du site (textes, logo, visuels, vidéos, structure) est la propriété de Yallah Services, sauf mention contraire. Toute reproduction ou réutilisation sans autorisation écrite préalable est interdite.",
+        "occurrences": 1,
+        "exemple": "L'ensemble des contenus du site (textes, logo, visuels, vidéos, structure) est la propriété de Yallah Services, sauf mention contraire. Toute reproduction ou réutilisation sans autorisation écrite préalable est interdite.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nous contacter",
+        "occurrences": 1,
+        "exemple": "Nous contacter",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pour toute question au sujet du site ou de ces mentions : servicesyallah@gmail.com ou WhatsApp +212 691 733 585.",
+        "occurrences": 1,
+        "exemple": "Pour toute question au sujet du site ou de ces mentions : servicesyallah@gmail.com ou WhatsApp +212 691 733 585.",
+        "langue": "fr",
+        "balisage": "a,a",
+        "html": "Pour toute question au sujet du site ou de ces mentions : <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a> ou <a href=\"https://wa.me/212691733585?text=Bonjour%20Yallah%20Services%2C%20j%27ai%20une%20question%20au%20sujet%20du%20site.\" target=\"_blank\" rel=\"noopener\">WhatsApp +212 691 733 585</a>."
+      },
+      {
+        "cle": "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.",
+        "occurrences": 1,
+        "exemple": "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "<strong>Yallah Services</strong> — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220."
+      },
+      {
+        "cle": "Accueil",
+        "occurrences": 1,
+        "exemple": "Accueil",
+        "langue": "fr"
+      },
+      {
+        "cle": "Mentions légales",
+        "occurrences": 1,
+        "exemple": "Mentions légales",
+        "langue": "fr"
+      },
+      {
+        "cle": "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn",
+        "occurrences": 1,
+        "exemple": "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn",
+        "langue": "fr",
+        "balisage": "a,a,a,a",
+        "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
+      },
+      {
+        "cle": "Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé",
+        "occurrences": 1,
+        "exemple": "Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé",
+        "langue": "fr"
+      },
+      {
+        "cle": "@title",
+        "occurrences": 1,
+        "exemple": "Mentions légales | Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:description",
+        "occurrences": 1,
+        "exemple": "Mentions légales de Yallah Services : éditeur du site, coordonnées, hébergement, propriété intellectuelle et protection des données personnelles (loi 09-08).",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Mentions légales | Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Éditeur, coordonnées, hébergement et protection des données personnelles du site Yallah Services.",
         "langue": "fr"
       },
       {

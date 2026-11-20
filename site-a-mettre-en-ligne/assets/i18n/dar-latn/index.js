@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   459 chaînes, clés = textes d'origine de la page.
+   470 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -337,6 +337,17 @@ YS_TRAD("dar-latn", "index", {
   "Les frais de Mise en relation sont réglés uniquement après validation du profil et mise en relation. Vous ne payez rien avant d'avoir trouvé votre candidate. Le salaire mensuel est versé directement à l'employée, séparément des frais de Mise en relation.": "Maṣarif l matching kaytkhalṣu <strong>ghir mn b3d ma tṣadaq 3la l profil w ttsadaq l matching</strong>. Ma katkhalliṣ 7ta 7aja qbel ma tlqa l kheddama dyalek. L ajr ch-chahri kayt3ata direct l l kheddama, b wa7do 3la maṣarif l matching.",
   "Quelle différence entre logée et non logée ? ▾": "Chnu l farq bin mqima w ghir mqima? <span class=\"arr\">▾</span>",
   "Logée : l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.\nNon logée : les horaires et les modalités sont définis selon le poste et l'accord avec la famille.": "<strong>Mqima:</strong> katsken f ddar l 3a2ila 7sab chourout l itifaq. Kayet7edded lwa9t w iyam r-ra7a m3a l 3a2ila.<br><br><strong>Ghir mqima:</strong> lwa9t w kifach katkhdem kayet7edded 7sab l poste w l itifaq m3a l 3a2ila.",
+  "Conditions d'accueil pour une aide logée": "Chorot istiqbal l msa3da lli ghadi tskon m3a l 3a2ila",
+  "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté": "3 wajbat f n-nhar b kammiya kafiya w jawda maqbula, w l-ma s-sali7 l chrob motwaffer bla 7dod",
+  "Chambre individuelle décente avec intimité": "Bit bo7dha, ykon la2iq w y7tarem l khososiya dyalha",
+  "Temps de repos quotidien respecté": "I7tiram waqt r-ra7a dyalha kol nhar",
+  "Conditions équitables pour les 3 parties : famille, aide, Yallah Services": "Chorot monsifa l tlata d l atraf: l 3a2ila, l msa3da w Yallah Services",
+  "En cas de non-respect, Yallah Services peut retirer l'aide": "Ila ma t7tarmoch had chorot, Yallah Services tqder ts7eb l msa3da",
+  "Comment s'organise une employée cuisine + ménage + garde d'enfants ?": "Kifach katneddem khedmtha l msa3da lli kattiyeb, katneqqi w katredd l bal l drari?",
+  "Priorité absolue à l'enfant": "T-tefl howa l awlawiya qbel kolchi",
+  "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome": "T-tiyab w t-tneqqiya kaytneddmo m3a awqat n3as d t-tefl w mlli kayl3eb bo7do",
+  "Tâches définies à l'avance avec la famille": "L maham kayttafqo 3lihom m3a l 3a2ila men qbel",
+  "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus": "Yallah Services katwedde7 l kol zbon khtar had s-sigha kifach katkhdem, bach ma ykon 7tta so2 tafahom",
   "Vous intervenez dans quelles villes ? ▾": "Fin khadamin? <span class=\"arr\">▾</span>",
   "Nos principales zones de recherche sont Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé. La possibilité d’intervenir pour une mission et un quartier précis est à confirmer. Le ménage à la journée est proposé uniquement à Casablanca et Rabat.": "Mnaṭe9 lba7t r-ra2issiya dyalna hiya <strong>Casa, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kenitra, Mohammedia, Temara w Sale</strong>. Khasna n2ekdo wach momkin nkhdmo f mission w 7ay mo3ayyen. T-tneqqiya b n-nhar kayna ghir f Casa w Rabat.",
   "Le personnel est-il vérifié et formé ? ▾": "Wach lkhddama kayet7eqqeq menhom w kayakhdo takwin? <span class=\"arr\">▾</span>",

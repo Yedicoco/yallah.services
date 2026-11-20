@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · services-par-ville.html
-   89 chaînes, clés = textes d'origine de la page.
+   94 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/services-par-ville.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -75,6 +75,11 @@ YS_TRAD("dar-latn", "services-par-ville", {
   "Renfort ponctuel, temporaire ou journalier": "Da3m ẓarfi, mu2aqqat wla b n-nhar",
   "Ce que nous ne faisons pas": "Li ma kan3mluhch",
   "Nous recherchons des personnes et mettons en relation. Nous ne réalisons pas de montage ni de pilotage de projet, nous ne fournissons pas de soins médicaux, et nous ne proposons pas de service de sécurité privée avec intervention. Si votre besoin relève de ces domaines, nous préférons vous le dire tout de suite.": "Kanqelbu 3la n-nas w kanjjm3u binathom. Ma kanqumuch b l montage wla b idarat l machari3, ma kanqaddmuch 3ilaj tibbi, w ma kanqaddmuch khedmat l 7arasa l khassa b t-tadakhkhul. Ila kan talabek mn had l majalat, kanfeḍḍlu nqulu lik direct.",
+  "Comment s'organise une employée cuisine + ménage + garde d'enfants ?": "Kifach katneddem khedmtha l msa3da lli kattiyeb, katneqqi w katredd l bal l drari?",
+  "Priorité absolue à l'enfant": "T-tefl howa l awlawiya qbel kolchi",
+  "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome": "T-tiyab w t-tneqqiya kaytneddmo m3a awqat n3as d t-tefl w mlli kayl3eb bo7do",
+  "Tâches définies à l'avance avec la famille": "L maham kayttafqo 3lihom m3a l 3a2ila men qbel",
+  "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus": "Yallah Services katwedde7 l kol zbon khtar had s-sigha kifach katkhdem, bach ma ykon 7tta so2 tafahom",
   "Comment se passe une demande": "Kifach katmchi t-talabiya",
   "Vous décrivez le besoin": "Katwsef l 7aja",
   "Ville, quartier, type de logement ou d'établissement, horaires, missions attendues et date souhaitée.": "L mdina, l 7ay, naw3 dar wla mu2assasa, t-tawqit, l khadamat l mutawaqq3a w t-tarikh l matlub.",

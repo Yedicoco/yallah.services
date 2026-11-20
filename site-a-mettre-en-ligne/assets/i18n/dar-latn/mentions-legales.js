@@ -1,0 +1,62 @@
+/* ══════════════════════════════════════════════════════════════════
+   YALLAH SERVICES — Dictionnaire DAR-LATN · mentions-legales.html
+   52 chaînes, clés = textes d'origine de la page.
+   Généré par outils/generer-i18n.js depuis
+   contenu/i18n/traductions/mentions-legales.dar-latn.json — ne pas
+   modifier ce fichier à la main : modifier la traduction puis relancer
+       node outils/generer-i18n.js
+══════════════════════════════════════════════════════════════════ */
+YS_TRAD("dar-latn", "mentions-legales", {
+  "@aria-label:Navigation principale": "Tanqol ra2issi",
+  "@aria-label:Yallah Services, accueil": "Yallah Services, safha ra2issiya",
+  "@alt:Yallah Services": "Yallah Services",
+  "Services par ville": "Khadamat 7sab l mdina",
+  "Entreprises": "Cherkat",
+  "FAQ": "As2ila mkerra",
+  "Espace candidats": "Fada2 l metrache7in",
+  "@wa:Bonjour Yallah Services !": "Salam Yallah Services!",
+  "WhatsApp": "WhatsApp",
+  "@aria-label:Fil d’Ariane": "Masar tanqol",
+  "Accueil › Mentions légales": "<a href=\"index.html\">Ra2issiya</a> <span aria-hidden=\"true\">›</span> L ma3lomat l qanoniya",
+  "Yallah Services · Maroc": "Yallah Services · Maghrib",
+  "Mentions": "L ma3lomat",
+  "légales": "l qanoniya",
+  "Les informations légales du site Yallah Services : qui édite le site, comment nous contacter, où le site est hébergé et comment vos données personnelles sont traitées.": "L ma3lomat l qanoniya dyal site Yallah Services: chkon kayncher site, kifach twaslo m3ana, fin mostadaf site w kifach kanta3amlo m3a l mo3tayat ch-chakhsiya dyalkom.",
+  "Éditeur du site": "J-jiha lli katncher site",
+  "Yallah Services — activité de recherche, d'intermédiation et de mise en relation de personnel pour les particuliers et les entreprises au Royaume du Maroc.": "<strong>Yallah Services</strong> — kanqelbo 3la l kheddamin, kanwessṭo w kanrbto l ittissal binathom w bin l afrad w ch-charkat f l mamlaka l maghribiya.",
+  "Base : Casablanca — Hay Hassani, 20220, Maroc": "<strong>L maqarr:</strong> Casablanca — Hay Hassani, 20220, Maghrib",
+  "E-mail :": "Email:",
+  "servicesyallah@gmail.com": "servicesyallah@gmail.com",
+  "Téléphone / WhatsApp (particuliers et entreprises) :": "Tilifon / WhatsApp (l afrad w ch-charkat):",
+  "Téléphone / WhatsApp (candidats) :": "Tilifon / WhatsApp (l metrache7in):",
+  "Directeur de la publication : la direction de Yallah Services.": "<strong>L mas2ol 3la n-nachr:</strong> idarat Yallah Services.",
+  "Hébergement": "Istidafat site",
+  "Le site est hébergé par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis — vercel.com.": "Site mostadaf 3nd <strong>Vercel Inc.</strong>, 440 N Barranca Avenue #4133, Covina, CA 91723, L Wilayat L Mota7ida — <a href=\"https://vercel.com\" target=\"_blank\" rel=\"noopener noreferrer\">vercel.com</a>.",
+  "Nature du service": "Tabi3at l khadma",
+  "Yallah Services recherche et met en relation du personnel selon les besoins exprimés par les particuliers et les entreprises. Yallah Services n'est pas l'employeur des profils présentés : la relation de travail (contrat, salaire, horaires, conditions) est établie directement entre le foyer ou l'entreprise et la personne retenue. Les frais de mise en relation sont expliqués avant toute décision et réglés uniquement après validation du profil et mise en relation. Aucun frais n'est demandé aux candidats.": "Yallah Services katqelleb 3la l kheddamin w katrbet l ittissal binathom w bin l afrad w ch-charkat, 3la 7sab l 7ajiyat lli kay3ebbro 3liha. Yallah Services machi hiya l mochaghghil dyal n-nas lli katqeddem: 3alaqat ch-choghl (l 3aqd, l khelssa, s-swaye3 w ch-chorot) katkon mobachara bin d-dar wla ch-cherka w ch-chakhs lli tkhtar. Kanweddo7o massarif r-rabt qbel ay qarar, w kattkhelles ghir mn b3d l mowafaqa 3la ch-chakhs w rabt l ittissal. Ma kantelbo 7tta massarif mn l metrache7in.",
+  "Les tarifs affichés sur le site sont indicatifs et peuvent varier selon les conditions et responsabilités convenues entre les parties.": "L atmana lli f site taqribiya, w tqder tbeddel 3la 7sab ch-chorot w l mas2oliyat lli tfahmo 3liha l atraf.",
+  "Conditions d'accueil pour une aide logée": "Chorot istiqbal l msa3da lli ghadi tskon m3a l 3a2ila",
+  "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté": "3 wajbat f n-nhar b kammiya kafiya w jawda maqbula, w l-ma s-sali7 l chrob motwaffer bla 7dod",
+  "Chambre individuelle décente avec intimité": "Bit bo7dha, ykon la2iq w y7tarem l khososiya dyalha",
+  "Temps de repos quotidien respecté": "I7tiram waqt r-ra7a dyalha kol nhar",
+  "Conditions équitables pour les 3 parties : famille, aide, Yallah Services": "Chorot monsifa l tlata d l atraf: l 3a2ila, l msa3da w Yallah Services",
+  "En cas de non-respect, Yallah Services peut retirer l'aide": "Ila ma t7tarmoch had chorot, Yallah Services tqder ts7eb l msa3da",
+  "Protection des données personnelles (loi 09-08)": "7imayat l mo3tayat ch-chakhsiya (l qanoun 09-08)",
+  "Les informations transmises via les formulaires du site ou par WhatsApp (nom, téléphone, ville, besoin exprimé, et pour les candidats les informations de candidature) sont utilisées uniquement pour traiter votre demande de mise en relation ou votre candidature. Elles ne sont ni vendues ni communiquées à des tiers en dehors de ce traitement.": "L ma3lomat lli katwselna mn istimarat site wla b WhatsApp (s-smiya, t-tilifon, l mdina, l 7aja lli tlbto, w ma3lomat t-tarchi7 l l metrache7in) kansta3mloha ghir bach n3aljo taleb r-rabt wla t-tarchi7 dyalkom. Ma kanbi3ohach w ma kan3tiwhach l chi taraf akhor kharej had l mo3alaja.",
+  "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition sur vos données. Pour l'exercer, écrivez-nous à servicesyallah@gmail.com.": "7sab l qanoun l maghribi rqem 09-08 lli kayt3elleq b 7imayat n-nas f mo3alajat l mo3tayat ch-chakhsiya, 3ndkom l 7aqq tchoufo l mo3tayat dyalkom, tsse77o7oha w t3tardo 3la mo3alajtha. Bach tsta3mlo had l 7oqoq, raslona 3la <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a>.",
+  "Le site n'utilise pas de cookies publicitaires ni de traceurs tiers. Le navigateur mémorise uniquement, en stockage local, votre préférence de langue d'affichage (français, darija ou anglais).": "Site ma kaysta3mel la cookies dyal l ichhar la adawat t-tatabbo3 dyal atraf okhra. L motassaffi7 kay7fed ghir l logha lli feddelto l l 3ard (fransawiya, darija wla ingliziya) f stockage local.",
+  "Propriété intellectuelle": "L milkiya l fikriya",
+  "L'ensemble des contenus du site (textes, logo, visuels, vidéos, structure) est la propriété de Yallah Services, sauf mention contraire. Toute reproduction ou réutilisation sans autorisation écrite préalable est interdite.": "L mo7tawa kamel dyal site (n-nossoss, logo, tsawer, videos w l binya) melk dyal Yallah Services, illa ila tdker l 3eks. Memno3 n-naskh wla i3adat l isti3mal bla idn kitabi mosbaq.",
+  "Nous contacter": "Twaslo m3ana",
+  "Pour toute question au sujet du site ou de ces mentions : servicesyallah@gmail.com ou WhatsApp +212 691 733 585.": "Ila 3ndkom chi so2al 3la site wla 3la had l ma3lomat l qanoniya, twaslo m3ana 3la <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a> wla <a href=\"https://wa.me/212691733585?text=Bonjour%20Yallah%20Services%2C%20j%27ai%20une%20question%20au%20sujet%20du%20site.\" target=\"_blank\" rel=\"noopener\">WhatsApp +212 691 733 585</a>.",
+  "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.": "<strong>Yallah Services</strong> — L ba7t 3la l kheddamin w rabt l ittissal binathom w bin l afrad w ch-charkat f l Maghrib. L maqarr: Casablanca, Hay Hassani 20220.",
+  "Accueil": "Ra2issiya",
+  "Mentions légales": "L ma3lomat l qanoniya",
+  "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn": "Tab3ona: <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>",
+  "Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé": "Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé",
+  "@title": "L ma3lomat l qanoniya | Yallah Services",
+  "@meta:description": "L ma3lomat l qanoniya dyal Yallah Services: j-jiha lli katncher site, ma3lomat t-twassol, l istidafa, l milkiya l fikriya w 7imayat l mo3tayat ch-chakhsiya (l qanoun 09-08).",
+  "@meta:og:title": "L ma3lomat l qanoniya | Yallah Services",
+  "@meta:og:description": "J-jiha lli katncher site Yallah Services, ma3lomat t-twassol, l istidafa w 7imayat l mo3tayat ch-chakhsiya.",
+  "@meta:og:locale": "ar_MA"
+});

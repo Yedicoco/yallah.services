@@ -53,6 +53,7 @@
     'candidature-confirmation',
     'personnel-entreprises',
     'services-par-ville',
+    'mentions-legales',
     'nounou-casablanca',
     'femme-menage-casablanca',
     'cuisiniere-casablanca',

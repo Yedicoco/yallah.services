@@ -1,0 +1,62 @@
+/* ══════════════════════════════════════════════════════════════════
+   YALLAH SERVICES — Dictionnaire DAR · mentions-legales.html
+   52 chaînes, clés = textes d'origine de la page.
+   Généré par outils/generer-i18n.js depuis
+   contenu/i18n/traductions/mentions-legales.dar.json — ne pas
+   modifier ce fichier à la main : modifier la traduction puis relancer
+       node outils/generer-i18n.js
+══════════════════════════════════════════════════════════════════ */
+YS_TRAD("dar", "mentions-legales", {
+  "@aria-label:Navigation principale": "التنقّل الرئيسي",
+  "@aria-label:Yallah Services, accueil": "Yallah Services، الصفحة الرئيسية",
+  "@alt:Yallah Services": "Yallah Services",
+  "Services par ville": "الخدمات حسب المدينة",
+  "Entreprises": "الشركات",
+  "FAQ": "أسئلة مكررة",
+  "Espace candidats": "فضاء المترشحين",
+  "@wa:Bonjour Yallah Services !": "سلام يلاه سيرفيس!",
+  "WhatsApp": "واتساب",
+  "@aria-label:Fil d’Ariane": "مسار التنقّل",
+  "Accueil › Mentions légales": "<a href=\"index.html\">الرئيسية</a> <span aria-hidden=\"true\">›</span> المعلومات القانونية",
+  "Yallah Services · Maroc": "Yallah Services · المغرب",
+  "Mentions": "المعلومات",
+  "légales": "القانونية",
+  "Les informations légales du site Yallah Services : qui édite le site, comment nous contacter, où le site est hébergé et comment vos données personnelles sont traitées.": "المعلومات القانونية ديال موقع يلاه سيرفيس: شكون كينشر الموقع، كيفاش تتواصلو معانا، فين مستاضف الموقع وكيفاش كنتعاملو مع المعطيات الشخصية ديالكم.",
+  "Éditeur du site": "الجهة اللي كتنشر الموقع",
+  "Yallah Services — activité de recherche, d'intermédiation et de mise en relation de personnel pour les particuliers et les entreprises au Royaume du Maroc.": "<strong>يلاه سيرفيس</strong> — كنقلبو على العاملين وكنوسّطو وكنربطو الاتصال بينهم وبين الأفراد والشركات فالمملكة المغربية.",
+  "Base : Casablanca — Hay Hassani, 20220, Maroc": "<strong>المقرّ:</strong> الدار البيضاء — الحي الحسني، 20220، المغرب",
+  "E-mail :": "الإيميل:",
+  "servicesyallah@gmail.com": "servicesyallah@gmail.com",
+  "Téléphone / WhatsApp (particuliers et entreprises) :": "التليفون / واتساب (للأفراد والشركات):",
+  "Téléphone / WhatsApp (candidats) :": "التليفون / واتساب (للمترشحين):",
+  "Directeur de la publication : la direction de Yallah Services.": "<strong>المسؤول على النشر:</strong> إدارة يلاه سيرفيس.",
+  "Hébergement": "استضافة الموقع",
+  "Le site est hébergé par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis — vercel.com.": "الموقع مستاضف عند <strong>Vercel Inc.</strong>، 440 N Barranca Avenue #4133، Covina، CA 91723، الولايات المتحدة — <a href=\"https://vercel.com\" target=\"_blank\" rel=\"noopener noreferrer\">vercel.com</a>.",
+  "Nature du service": "طبيعة الخدمة",
+  "Yallah Services recherche et met en relation du personnel selon les besoins exprimés par les particuliers et les entreprises. Yallah Services n'est pas l'employeur des profils présentés : la relation de travail (contrat, salaire, horaires, conditions) est établie directement entre le foyer ou l'entreprise et la personne retenue. Les frais de mise en relation sont expliqués avant toute décision et réglés uniquement après validation du profil et mise en relation. Aucun frais n'est demandé aux candidats.": "يلاه سيرفيس كتقلب على العاملين وكتربط الاتصال بينهم وبين الأفراد والشركات، على حساب الحاجيات اللي كيعبّرو عليها. يلاه سيرفيس ماشي هي المشغّل ديال الناس اللي كتقدّمهم: علاقة الشغل (العقد، الخلصة، السوايع والشروط) كتكون مباشرة بين الدار ولا الشركة والشخص اللي تختار. كنوضّحو مصاريف الربط قبل أي قرار، وكتتخلّص غير من بعد الموافقة على الشخص وربط الاتصال. ما كنطلبو حتى مصاريف من المترشحين.",
+  "Les tarifs affichés sur le site sont indicatifs et peuvent varier selon les conditions et responsabilités convenues entre les parties.": "الأثمان اللي فالموقع تقريبية، وتقدر تبدّل على حساب الشروط والمسؤوليات اللي تفاهمو عليها الأطراف.",
+  "Conditions d'accueil pour une aide logée": "شروط استقبال المساعدة اللي غادي تسكن مع العائلة",
+  "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté": "3 وجبات فالنهار بكمية كافية وجودة مقبولة، والما الصالح للشرب متوفر بلا حدود",
+  "Chambre individuelle décente avec intimité": "بيت بوحدها يكون لائق ويحترم الخصوصية ديالها",
+  "Temps de repos quotidien respecté": "احترام وقت الراحة ديالها كل نهار",
+  "Conditions équitables pour les 3 parties : famille, aide, Yallah Services": "شروط منصفة للأطراف الثلاثة: العائلة، المساعدة ويلاه سيرفيس",
+  "En cas de non-respect, Yallah Services peut retirer l'aide": "إلا ما تحترموش هاد الشروط، يلاه سيرفيس تقدر تسحب المساعدة",
+  "Protection des données personnelles (loi 09-08)": "حماية المعطيات الشخصية (القانون 09-08)",
+  "Les informations transmises via les formulaires du site ou par WhatsApp (nom, téléphone, ville, besoin exprimé, et pour les candidats les informations de candidature) sont utilisées uniquement pour traiter votre demande de mise en relation ou votre candidature. Elles ne sont ni vendues ni communiquées à des tiers en dehors de ce traitement.": "المعلومات اللي كتوصلنا من استمارات الموقع ولا بالواتساب (الاسم، التليفون، المدينة، الحاجة اللي طلبتو، ومعلومات الترشيح بالنسبة للمترشحين) كنستعملوها غير باش نعالجو طلب الربط ولا الترشيح ديالكم. ما كنبيعوهاش وما كنعطيوهاش لشي طرف آخر خارج هاد المعالجة.",
+  "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition sur vos données. Pour l'exercer, écrivez-nous à servicesyallah@gmail.com.": "حسب القانون المغربي رقم 09-08 المتعلّق بحماية الأشخاص فمعالجة المعطيات ذات الطابع الشخصي، عندكم الحق تشوفو المعطيات ديالكم، تصحّحوها وتعترضو على معالجتها. باش تستعملو هاد الحقوق، راسلونا على <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a>.",
+  "Le site n'utilise pas de cookies publicitaires ni de traceurs tiers. Le navigateur mémorise uniquement, en stockage local, votre préférence de langue d'affichage (français, darija ou anglais).": "الموقع ما كيستعمل لا كوكيز الإشهار لا أدوات تتبّع ديال أطراف أخرى. المتصفح كيحفظ غير اللغة اللي فضّلتو للعرض (الفرنسية، الدارجة ولا الإنجليزية) فالتخزين المحلي.",
+  "Propriété intellectuelle": "الملكية الفكرية",
+  "L'ensemble des contenus du site (textes, logo, visuels, vidéos, structure) est la propriété de Yallah Services, sauf mention contraire. Toute reproduction ou réutilisation sans autorisation écrite préalable est interdite.": "المحتوى كامل ديال الموقع (النصوص، اللوغو، الصور، الفيديوهات والبنية) ملك ليلاه سيرفيس، إلا إلى تذكر العكس. ممنوع النسخ ولا إعادة الاستعمال بلا إذن كتابي مسبق.",
+  "Nous contacter": "تواصلو معانا",
+  "Pour toute question au sujet du site ou de ces mentions : servicesyallah@gmail.com ou WhatsApp +212 691 733 585.": "إلا عندكم شي سؤال على الموقع ولا على هاد المعلومات القانونية، تواصلو معانا على <a href=\"mailto:servicesyallah@gmail.com\">servicesyallah@gmail.com</a> ولا <a href=\"https://wa.me/212691733585?text=Bonjour%20Yallah%20Services%2C%20j%27ai%20une%20question%20au%20sujet%20du%20site.\" target=\"_blank\" rel=\"noopener\">WhatsApp +212 691 733 585</a>.",
+  "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.": "<strong>يلاه سيرفيس</strong> — البحث على العاملين وربط الاتصال بينهم وبين الأفراد والشركات فالمغرب. المقرّ: الدار البيضاء، الحي الحسني 20220.",
+  "Accueil": "الرئيسية",
+  "Mentions légales": "المعلومات القانونية",
+  "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn": "تابعونا: <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>",
+  "Casablanca · Bouskoura · Dar Bouazza · Bouznika · Rabat · Marrakech · Tanger · Agadir · Fès · Kénitra · Mohammedia · Témara · Salé": "الدار البيضاء · بوسكورة · دار بوعزة · بوزنيقة · الرباط · مراكش · طنجة · أكادير · فاس · القنيطرة · المحمدية · تمارة · سلا",
+  "@title": "المعلومات القانونية | يلاه سيرفيس",
+  "@meta:description": "المعلومات القانونية ديال يلاه سيرفيس: الجهة اللي كتنشر الموقع، معلومات التواصل، الاستضافة، الملكية الفكرية وحماية المعطيات الشخصية (القانون 09-08).",
+  "@meta:og:title": "المعلومات القانونية | يلاه سيرفيس",
+  "@meta:og:description": "الجهة اللي كتنشر موقع يلاه سيرفيس، معلومات التواصل، الاستضافة وحماية المعطيات الشخصية.",
+  "@meta:og:locale": "ar_MA"
+});
