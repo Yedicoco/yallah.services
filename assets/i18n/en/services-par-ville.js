@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · services-par-ville.html
-   89 chaînes, clés = textes d'origine de la page.
+   94 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/services-par-ville.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -75,6 +75,11 @@ YS_TRAD("en", "services-par-ville", {
   "Renfort ponctuel, temporaire ou journalier": "One-off, temporary or daily reinforcement",
   "Ce que nous ne faisons pas": "What we do not do",
   "Nous recherchons des personnes et mettons en relation. Nous ne réalisons pas de montage ni de pilotage de projet, nous ne fournissons pas de soins médicaux, et nous ne proposons pas de service de sécurité privée avec intervention. Si votre besoin relève de ces domaines, nous préférons vous le dire tout de suite.": "We look for people and connect you with them. We do not manage or run projects, we do not provide medical care, and we do not offer private security services with intervention. If your need falls in those areas, we prefer to tell you straight away.",
+  "Comment s'organise une employée cuisine + ménage + garde d'enfants ?": "How does a worker organise cooking, cleaning and childcare?",
+  "Priorité absolue à l'enfant": "The child always comes first",
+  "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome": "Cooking and cleaning are scheduled around naps and times when the child plays independently",
+  "Tâches définies à l'avance avec la famille": "Duties are agreed in advance with the family",
+  "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus": "Yallah Services explains how this arrangement works to every client who chooses it, to avoid misunderstandings",
   "Comment se passe une demande": "How a request works",
   "Vous décrivez le besoin": "You describe what you need",
   "Ville, quartier, type de logement ou d'établissement, horaires, missions attendues et date souhaitée.": "City, neighbourhood, type of home or establishment, working hours, expected tasks and the date you want.",

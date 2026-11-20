@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   459 chaînes, clés = textes d'origine de la page.
+   470 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -337,6 +337,17 @@ YS_TRAD("en", "index", {
   "Les frais de Mise en relation sont réglés uniquement après validation du profil et mise en relation. Vous ne payez rien avant d'avoir trouvé votre candidate. Le salaire mensuel est versé directement à l'employée, séparément des frais de Mise en relation.": "The placement fees are paid only after the profile is approved and the placement is made. You pay nothing before you have found your candidate. The monthly salary is paid directly to the employee, separately from the placement fees.",
   "Quelle différence entre logée et non logée ? ▾": "What is the difference between live-in and live-out? <span class=\"arr\">▾</span>",
   "Logée : l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.\nNon logée : les horaires et les modalités sont définis selon le poste et l'accord avec la famille.": "<strong>Live-in:</strong> the employee stays in the home under the agreed conditions. Working hours and rest days are agreed with the family.<br><br><strong>Live-out:</strong> hours and arrangements are set according to the role and the agreement with the family.",
+  "Conditions d'accueil pour une aide logée": "Requirements for hosting a live-in domestic helper",
+  "3 repas/jour en quantité suffisante et qualité correcte + eau potable à volonté": "Three meals a day of adequate quantity and quality, plus unlimited access to safe drinking water",
+  "Chambre individuelle décente avec intimité": "A decent room for her sole use, with privacy",
+  "Temps de repos quotidien respecté": "Daily rest time must be respected",
+  "Conditions équitables pour les 3 parties : famille, aide, Yallah Services": "Fair conditions for all three parties: the family, the helper and Yallah Services",
+  "En cas de non-respect, Yallah Services peut retirer l'aide": "If these conditions are not met, Yallah Services may withdraw the helper",
+  "Comment s'organise une employée cuisine + ménage + garde d'enfants ?": "How does a worker organise cooking, cleaning and childcare?",
+  "Priorité absolue à l'enfant": "The child always comes first",
+  "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome": "Cooking and cleaning are scheduled around naps and times when the child plays independently",
+  "Tâches définies à l'avance avec la famille": "Duties are agreed in advance with the family",
+  "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus": "Yallah Services explains how this arrangement works to every client who chooses it, to avoid misunderstandings",
   "Vous intervenez dans quelles villes ? ▾": "Which cities do you cover? <span class=\"arr\">▾</span>",
   "Nos principales zones de recherche sont Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tanger, Agadir, Fès, Kénitra, Mohammedia, Témara et Salé. La possibilité d’intervenir pour une mission et un quartier précis est à confirmer. Le ménage à la journée est proposé uniquement à Casablanca et Rabat.": "Our main search areas are <strong>Casablanca, Bouskoura, Dar Bouazza, Bouznika, Rabat, Marrakech, Tangier, Agadir, Fez, Kenitra, Mohammedia, Temara and Sale</strong>. Availability for a specific job and neighbourhood must be confirmed. Day cleaning is offered only in Casablanca and Rabat.",
   "Le personnel est-il vérifié et formé ? ▾": "Are staff background-checked and trained? <span class=\"arr\">▾</span>",

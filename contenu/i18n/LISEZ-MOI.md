@@ -24,19 +24,20 @@ mémorisé : il le retrouve sur la page suivante.
 
 | Page | Chaînes traduites |
 |---|---|
-| `index.html` (accueil) | 457 |
-| `candidature.html` (fiche candidat) | 94 en anglais · 79 en darija |
+| `index.html` (accueil) | 470 |
+| `candidature.html` (fiche candidat) | 149 en anglais · 134 en darija |
 | `candidature-confirmation.html` | 48 en anglais · 32 en darija |
-| `personnel-entreprises.html` (hub entreprises) | 93 |
-| `services-par-ville.html` (hub ville) | 89 |
+| `personnel-entreprises.html` (hub entreprises) | 100 |
+| `services-par-ville.html` (hub ville) | 94 |
+| `mentions-legales.html` | 52 |
 | `nounou-casablanca.html` | 134 |
-| `femme-menage-casablanca.html` | 137 |
+| `femme-menage-casablanca.html` | 146 |
 | `cuisiniere-casablanca.html` | 131 |
 | `garde-malade-casablanca.html` | 126 |
 | `chauffeur-casablanca.html` | 126 |
 | `vigile-casablanca.html` | 129 |
 
-**Total : 4 630 traductions publiées sur 11 pages (33 dictionnaires).** Les
+**Total : 5 053 traductions publiées sur 12 pages (36 dictionnaires).** Les
 quatre pages « service × ville » restantes (`femme-menage-rabat.html`,
 `femme-menage-marrakech.html`, `femme-menage-tanger.html`, `nounou-rabat.html`)
 restent en français : le site ne peut pas « casser », elles s'affichent
@@ -114,8 +115,8 @@ de `assets/js/i18n.js`.
   dictionnaires (aucun risque de traduction décalée en silence).
 * **Test automatique** (`node outils/tester-i18n.js`, avec `npm i jsdom`) :
   vérifie les 4 affichages sur **toutes les pages déclarées dans
-  `PAGES_TRADUITES`** (11 aujourd'hui, lues dans le moteur : aucune liste à
-  tenir à jour ici) — langue, sens d'écriture, application des 4 630
+  `PAGES_TRADUITES`** (12 aujourd'hui, lues dans le moteur : aucune liste à
+  tenir à jour ici) — langue, sens d'écriture, application des 5 053
   traductions publiées, retour au français sans résidu.
 * **Contrôle du site** (`node outils/verifier-site.js`) : compte les
   dictionnaires réellement publiés à partir de la même liste, et signale les

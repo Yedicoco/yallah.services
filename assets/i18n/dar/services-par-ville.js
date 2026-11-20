@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · services-par-ville.html
-   89 chaînes, clés = textes d'origine de la page.
+   94 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/services-par-ville.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -75,6 +75,11 @@ YS_TRAD("dar", "services-par-ville", {
   "Renfort ponctuel, temporaire ou journalier": "دعم ظرفي، مؤقت ولا بالنهار",
   "Ce que nous ne faisons pas": "اللي ماكنعملوهش",
   "Nous recherchons des personnes et mettons en relation. Nous ne réalisons pas de montage ni de pilotage de projet, nous ne fournissons pas de soins médicaux, et nous ne proposons pas de service de sécurité privée avec intervention. Si votre besoin relève de ces domaines, nous préférons vous le dire tout de suite.": "كنقلبو على الناس وكنجمعو بيناتهم. ماكنقوموش بالمونتاج ولا بإدارة المشاريع، ماكنقدموش علاج طبي، وماكنقدموش خدمة الحراسة الخاصة بالتدخل. إلا كان طلبك من هاد المجالات، كنفضّلو نقولو ليك ديريكت.",
+  "Comment s'organise une employée cuisine + ménage + garde d'enfants ?": "كيفاش كتنظّم خدمتها المساعدة اللي كتطيب وكتنقّي وكتردّ البال للدراري؟",
+  "Priorité absolue à l'enfant": "الطفل هو الأولوية قبل كلشي",
+  "Cuisine et ménage s'organisent autour des siestes et moments de jeu autonome": "الطياب والتنقية كيتنظّمو مع أوقات نعاس الطفل وملي كيلعب بوحدو",
+  "Tâches définies à l'avance avec la famille": "المهام كيتّافقو عليها مع العائلة من قبل",
+  "Yallah Services sensibilise chaque client ayant choisi cette formule pour éviter les malentendus": "يلاه سيرفيس كتوضّح لكل زبون اختار هاد الصيغة كيفاش كتخدم، باش ما يكون حتى سوء تفاهم",
   "Comment se passe une demande": "كيفاش كتمشي الطلبية",
   "Vous décrivez le besoin": "كتوصف الحاجة",
   "Ville, quartier, type de logement ou d'établissement, horaires, missions attendues et date souhaitée.": "المدينة، الحي، نوع الدار ولا المؤسسة، التوقيت، الخدمات المتوقّعة والتاريخ المطلوب.",

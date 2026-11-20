@@ -116,9 +116,14 @@
       var isOpen = q.classList.contains('open');
       $$('.faq-q').forEach(function (o) {
         o.classList.remove('open');
+        if (o.hasAttribute('aria-expanded')) o.setAttribute('aria-expanded', 'false');
         if (o.nextElementSibling) o.nextElementSibling.classList.remove('open');
       });
-      if (!isOpen) { q.classList.add('open'); if (a) a.classList.add('open'); }
+      if (!isOpen) {
+        q.classList.add('open');
+        if (q.hasAttribute('aria-expanded')) q.setAttribute('aria-expanded', 'true');
+        if (a) a.classList.add('open');
+      }
     });
   });
 
