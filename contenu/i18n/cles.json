@@ -15,39 +15,27 @@
         "langue": "fr"
       },
       {
-        "cle": "Comment ça marche",
-        "occurrences": 2,
-        "exemple": "Comment ça marche",
+        "cle": "Aide à domicile",
+        "occurrences": 3,
+        "exemple": "Aide à domicile",
         "langue": "fr"
       },
       {
-        "cle": "Avis",
-        "occurrences": 1,
-        "exemple": "Avis",
+        "cle": "Services aux entreprises",
+        "occurrences": 3,
+        "exemple": "Services aux entreprises",
         "langue": "fr"
       },
       {
-        "cle": "Packs",
+        "cle": "Tarifs",
         "occurrences": 1,
-        "exemple": "Packs",
-        "langue": "fr"
-      },
-      {
-        "cle": "Frais",
-        "occurrences": 1,
-        "exemple": "Frais",
+        "exemple": "Tarifs",
         "langue": "fr"
       },
       {
         "cle": "FAQ",
         "occurrences": 3,
         "exemple": "FAQ",
-        "langue": "fr"
-      },
-      {
-        "cle": "Entreprises",
-        "occurrences": 1,
-        "exemple": "Entreprises",
         "langue": "fr"
       },
       {
@@ -63,21 +51,27 @@
         "langue": "fr"
       },
       {
-        "cle": "@wa:Bonjour Yallah Services !",
-        "occurrences": 5,
-        "exemple": "Bonjour Yallah Services !",
+        "cle": "@wa:Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :",
+        "occurrences": 2,
+        "exemple": "Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :",
         "langue": "fr"
       },
       {
-        "cle": "💬 WhatsApp",
+        "cle": "💬 Demander un service",
         "occurrences": 1,
-        "exemple": "💬 WhatsApp",
+        "exemple": "💬 Demander un service",
         "langue": "fr"
       },
       {
         "cle": "@aria-label:Menu",
         "occurrences": 1,
         "exemple": "Menu",
+        "langue": "fr"
+      },
+      {
+        "cle": "Comment ça marche",
+        "occurrences": 1,
+        "exemple": "Comment ça marche",
         "langue": "fr"
       },
       {
@@ -99,15 +93,15 @@
         "langue": "fr"
       },
       {
-        "cle": "Entreprises — vidéo B2B",
-        "occurrences": 1,
-        "exemple": "Entreprises — vidéo B2B",
-        "langue": "fr"
-      },
-      {
         "cle": "🧑‍🍳 Espace candidats — je cherche un emploi",
         "occurrences": 1,
         "exemple": "🧑‍🍳 Espace candidats — je cherche un emploi",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services !",
+        "occurrences": 4,
+        "exemple": "Bonjour Yallah Services !",
         "langue": "fr"
       },
       {
@@ -287,6 +281,62 @@
         "langue": "fr",
         "balisage": "span",
         "html": "Particuliers et entreprises<span>besoins à domicile et B2B</span>"
+      },
+      {
+        "cle": "Yallah Services",
+        "occurrences": 1,
+        "exemple": "Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nos univers",
+        "occurrences": 1,
+        "exemple": "Nos univers",
+        "langue": "fr"
+      },
+      {
+        "cle": "Yallah Services simplifie votre quotidien : ménage, aide à la personne, services techniques, bien-être et solutions pour les entreprises. Un seul contact pour vos besoins.",
+        "occurrences": 1,
+        "exemple": "Yallah Services simplifie votre quotidien : ménage, aide à la personne, services techniques, bien-être et solutions pour les entreprises. Un seul contact pour vos besoins.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Femme de ménage, cuisinière, nounou, garde-malade, grand ménage, chauffeur, gardien. Un profil recherché selon vos critères.",
+        "occurrences": 1,
+        "exemple": "Femme de ménage, cuisinière, nounou, garde-malade, grand ménage, chauffeur, gardien. Un profil recherché selon vos critères.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Découvrir l’aide à domicile →",
+        "occurrences": 1,
+        "exemple": "Découvrir l’aide à domicile →",
+        "langue": "fr"
+      },
+      {
+        "cle": "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.",
+        "occurrences": 1,
+        "exemple": "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Voir les services aux entreprises →",
+        "occurrences": 1,
+        "exemple": "Voir les services aux entreprises →",
+        "langue": "fr"
+      },
+      {
+        "cle": "💬 Demander un service sur WhatsApp",
+        "occurrences": 1,
+        "exemple": "💬 Demander un service sur WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ou écrivez-nous au +212 691 733 585",
+        "occurrences": 1,
+        "exemple": "Ou écrivez-nous au +212 691 733 585",
+        "langue": "fr",
+        "balisage": "a",
+        "html": "Ou écrivez-nous au <a href=\"https://wa.me/212691733585\" target=\"_blank\" rel=\"noopener\">+212 691 733 585</a>"
       },
       {
         "cle": "Un parcours en quatre étapes",

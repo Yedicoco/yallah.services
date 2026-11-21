@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   470 chaînes, clés = textes d'origine de la page.
+   478 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -9,22 +9,21 @@
 YS_TRAD("en", "index", {
   "@alt:Logo Yallah Services – aides à domicile au Maroc": "Yallah Services logo – home help in Morocco",
   "Accueil": "Home",
-  "Comment ça marche": "How it works",
-  "Avis": "Reviews",
-  "Packs": "Packages",
-  "Frais": "Fees",
+  "Aide à domicile": "Home help",
+  "Services aux entreprises": "Business services",
+  "Tarifs": "Prices",
   "FAQ": "FAQ",
-  "Entreprises": "Businesses",
   "Contact": "Contact",
   "Espace candidats": "Job seekers",
-  "@wa:Bonjour Yallah Services !": "Hello Yallah Services!",
-  "💬 WhatsApp": "💬 WhatsApp",
+  "@wa:Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :": "Hello Yallah Services, I would like to request a service. My need, my city and my preferred date:",
+  "💬 Demander un service": "💬 Request a service",
   "@aria-label:Menu": "Menu",
+  "Comment ça marche": "How it works",
   "Avis clients": "Customer reviews",
   "Packs & Tarifs": "Packages & prices",
   "Frais de Mise en relation": "Placement fees",
-  "Entreprises — vidéo B2B": "Businesses — B2B video",
   "🧑‍🍳 Espace candidats — je cherche un emploi": "🧑‍🍳 Job seekers — I am looking for work",
+  "@wa:Bonjour Yallah Services !": "Hello Yallah Services!",
   "💬 WhatsApp — +212 691 733 585": "💬 WhatsApp — +212 691 733 585",
   "@alt:Illustration de services de ménage, cuisine, garde d’enfants, accompagnement et chauffeur au Maroc": "Illustration of cleaning, cooking, childcare, caregiving and driver services in Morocco",
   "Services de personnel pour les particuliers et les entreprises au Maroc.": "Staffing services for households and businesses in Morocco.",
@@ -53,6 +52,15 @@ YS_TRAD("en", "index", {
   "Recherche cibléeselon vos critères": "Targeted search<span>based on your criteria</span>",
   "Frais après validationet mise en relation": "Fees after validation<span>and placement</span>",
   "Particuliers et entreprisesbesoins à domicile et B2B": "Households and businesses<span>home and company staffing needs</span>",
+  "Yallah Services": "Yallah Services",
+  "Nos univers": "Our services",
+  "Yallah Services simplifie votre quotidien : ménage, aide à la personne, services techniques, bien-être et solutions pour les entreprises. Un seul contact pour vos besoins.": "Yallah Services makes your daily life easier: housekeeping, personal care, technical services, well-being and solutions for businesses. One contact for all your needs.",
+  "Femme de ménage, cuisinière, nounou, garde-malade, grand ménage, chauffeur, gardien. Un profil recherché selon vos critères.": "Housekeeper, cook, nanny, caregiver, deep cleaning, driver, guard. A profile selected according to your criteria.",
+  "Découvrir l’aide à domicile →": "Discover home help →",
+  "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.": "Staff for hotels, riads, restaurants, building sites, cleaning companies and events. Permanent, temporary or daily, depending on your needs.",
+  "Voir les services aux entreprises →": "See business services →",
+  "💬 Demander un service sur WhatsApp": "💬 Request a service on WhatsApp",
+  "Ou écrivez-nous au +212 691 733 585": "Or write to us at +212 691 733 585",
   "Un parcours en quatre étapes": "A four-step process",
   "Comment trouver une femme de ménage ou une nounou au Maroc ?": "How to find a housekeeper or a nanny in Morocco?",
   "Décrivez votre besoin et examinez les possibilités en quatre étapes.": "Describe your need and review the options in four steps.",
