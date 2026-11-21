@@ -61,7 +61,7 @@ YS_TRAD("dar", "index", {
   "Découvrir l’aide à domicile →": "اكتشف عاونة فالدار →",
   "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation, à Casablanca.": "صيانة، تنظيف، تشخيص، إصلاح وعقود صيانة للتكييف، فالدار البيضاء.",
   "Découvrir le froid & la climatisation →": "شوف التبريد والتكييف →",
-  "Coiffure, maquillage, manucure, pédicure et épilation à domicile, à Casablanca, avec des professionnelles partenaires sélectionnées.": "تصفيف الشعر، المكياج، تزيين الأظافر والإزالة بالشمع فالدار البيضاء، مع مهنيات شريكات مختارات.",
+  "Maquillage, manucure, pédicure et épilation à domicile, à Casablanca, avec des professionnelles partenaires sélectionnées.": "المكياج، تزيين الأظافر، تزيين الرجلين والإزالة بالشمع فالدار البيضاء، مع مهنيات شريكات مختارات.",
   "Découvrir l’esthétique & le bien-être →": "شوف التجميل والراحة →",
   "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.": "أفراد للفنادق والرياضات والمطاعم والأوراش وشركات التنظيف والتظاهرات. دائمين ولا مؤقتين ولا بالنهار، حسب الحاجة ديالك.",
   "Voir les services aux entreprises →": "شوف خدمات الشركات →",

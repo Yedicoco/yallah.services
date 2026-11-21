@@ -61,7 +61,7 @@ YS_TRAD("dar-latn", "index", {
   "Découvrir l’aide à domicile →": "Chouf 3awna f dar →",
   "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation, à Casablanca.": "Entretien, tandif, diagnostic, tasleh w contrats d'entretien dyal climatisation, f Casablanca.",
   "Découvrir le froid & la climatisation →": "Chouf tabrid & climatisation →",
-  "Coiffure, maquillage, manucure, pédicure et épilation à domicile, à Casablanca, avec des professionnelles partenaires sélectionnées.": "Coiffure, maquillage, manucure, pédicure w epilation f Casablanca, m3a professionnelles partenaires mkhtarin.",
+  "Maquillage, manucure, pédicure et épilation à domicile, à Casablanca, avec des professionnelles partenaires sélectionnées.": "Maquillage, manucure, pédicure w epilation f Casablanca, m3a professionnelles partenaires mkhtarin.",
   "Découvrir l’esthétique & le bien-être →": "Chouf tajmil & rahaa →",
   "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.": "Ndem l lfnadeq, riads, restos, chantiers, sociétés dyal nettoyage w événements. Daim, mouaqqat wla b-nhar, 3la hsab lhaja dyalek.",
   "Voir les services aux entreprises →": "Chouf services sherikat →",

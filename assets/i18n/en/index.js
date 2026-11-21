@@ -61,7 +61,7 @@ YS_TRAD("en", "index", {
   "Découvrir l’aide à domicile →": "Discover home help →",
   "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation, à Casablanca.": "Maintenance, cleaning, diagnosis, repair and maintenance contracts for air conditioning, in Casablanca.",
   "Découvrir le froid & la climatisation →": "Discover cooling & air conditioning →",
-  "Coiffure, maquillage, manucure, pédicure et épilation à domicile, à Casablanca, avec des professionnelles partenaires sélectionnées.": "Hair, makeup, manicure, pedicure and waxing at home in Casablanca, with selected partner professionals.",
+  "Maquillage, manucure, pédicure et épilation à domicile, à Casablanca, avec des professionnelles partenaires sélectionnées.": "Makeup, manicure, pedicure and waxing at home in Casablanca, with selected partner professionals.",
   "Découvrir l’esthétique & le bien-être →": "Discover beauty & wellbeing →",
   "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.": "Staff for hotels, riads, restaurants, building sites, cleaning companies and events. Permanent, temporary or daily, depending on your needs.",
   "Voir les services aux entreprises →": "See business services →",
