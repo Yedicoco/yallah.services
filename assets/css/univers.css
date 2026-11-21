@@ -1,0 +1,75 @@
+/* ══════════════════════════════════════════════════════
+   YALLAH SERVICES — Univers (accueil et page Aide à domicile)
+   Reprend la charte de brand.css : or, bleu nuit, vert WhatsApp.
+══════════════════════════════════════════════════════ */
+
+.univers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.univers-card {
+  background: var(--brand-panel, #0b2035);
+  border: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  border-radius: 18px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.univers-ico {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.univers-card h3 {
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+}
+
+.univers-card p {
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.univers-link {
+  margin-top: auto;
+  padding-top: 6px;
+  color: var(--brand-gold, #d8b361);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.univers-link:hover {
+  color: #f2db9b;
+}
+
+.univers-cta {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.univers-cta .hero-cta {
+  display: inline-flex;
+}
+
+.univers-num {
+  margin: 14px 0 0;
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 14px;
+}
+
+.univers-num a {
+  color: var(--brand-gold, #d8b361);
+  font-weight: 700;
+  text-decoration: none;
+}
