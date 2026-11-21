@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   478 chaînes, clés = textes d'origine de la page.
+   484 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -10,6 +10,8 @@ YS_TRAD("dar", "index", {
   "@alt:Logo Yallah Services – aides à domicile au Maroc": "لوغو Yallah Services – عاونة فالدار فالمغرب",
   "Accueil": "الرئيسية",
   "Aide à domicile": "عاونة فالدار",
+  "Froid & climatisation": "التبريد والتكييف",
+  "Esthétique & bien-être": "التجميل والراحة",
   "Services aux entreprises": "خدمات للشركات",
   "Tarifs": "الأثمنة",
   "FAQ": "أسئلة مكررة",
@@ -57,6 +59,10 @@ YS_TRAD("dar", "index", {
   "Yallah Services simplifie votre quotidien : ménage, aide à la personne, services techniques, bien-être et solutions pour les entreprises. Un seul contact pour vos besoins.": "Yallah Services كتسهّل عليك الحياة اليومية: التنظيف، المساعدة فالدار، الخدمات التقنية، العناية والراحة، والحلول للشركات. كاين contact واحد لكل الحاجيات ديالك.",
   "Femme de ménage, cuisinière, nounou, garde-malade, grand ménage, chauffeur, gardien. Un profil recherché selon vos critères.": "خدامة، طباخة، نانية، مرافقة مريض، تنظيف كبير، شوفير، حارس. بروفيل كيتختار حسب المعايير ديالك.",
   "Découvrir l’aide à domicile →": "اكتشف عاونة فالدار →",
+  "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation.": "صيانة، تنظيف، تشخيص، إصلاح وعقود صيانة للتكييف.",
+  "Découvrir le froid & la climatisation →": "شوف التبريد والتكييف →",
+  "Coiffure, maquillage, manucure, pédicure et épilation à domicile, avec des professionnelles partenaires sélectionnées.": "تصفيف الشعر، المكياج، تزيين الأظافر، والإزالة بالشمع فالدار، مع مهنيات شريكات مختارات.",
+  "Découvrir l’esthétique & le bien-être →": "شوف التجميل والراحة →",
   "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.": "أفراد للفنادق والرياضات والمطاعم والأوراش وشركات التنظيف والتظاهرات. دائمين ولا مؤقتين ولا بالنهار، حسب الحاجة ديالك.",
   "Voir les services aux entreprises →": "شوف خدمات الشركات →",
   "💬 Demander un service sur WhatsApp": "💬 اطلب خدمة على واتساب",

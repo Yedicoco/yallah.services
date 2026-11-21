@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   478 chaînes, clés = textes d'origine de la page.
+   484 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -10,6 +10,8 @@ YS_TRAD("dar-latn", "index", {
   "@alt:Logo Yallah Services – aides à domicile au Maroc": "Logo Yallah Services – 3awna f dar f Maghrib",
   "Accueil": "Ra2issiya",
   "Aide à domicile": "3awna f dar",
+  "Froid & climatisation": "Tabrid & climatisation",
+  "Esthétique & bien-être": "Tajmil & rahaa",
   "Services aux entreprises": "Services l sherikat",
   "Tarifs": "Taman",
   "FAQ": "As2ila mkerra",
@@ -57,6 +59,10 @@ YS_TRAD("dar-latn", "index", {
   "Yallah Services simplifie votre quotidien : ménage, aide à la personne, services techniques, bien-être et solutions pour les entreprises. Un seul contact pour vos besoins.": "Yallah Services kay-sahhel 3lik lHayat dyal kul nhar: tandif, 3awna f dar, khdamat technik, la3ya w rahaa, w solutions l sherikat. Kayn contact wahed l kolchi lhwaij dyalek.",
   "Femme de ménage, cuisinière, nounou, garde-malade, grand ménage, chauffeur, gardien. Un profil recherché selon vos critères.": "Khaddama, tabbakha, nanya, mourafiqa l mrid, tandif kbir, chauffeur, hares. Profil li kaydaouz 3la hsab criteres dyalek.",
   "Découvrir l’aide à domicile →": "Chouf 3awna f dar →",
+  "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation.": "Entretien, tandif, diagnostic, tasleh w contrats d'entretien dyal climatisation.",
+  "Découvrir le froid & la climatisation →": "Chouf tabrid & climatisation →",
+  "Coiffure, maquillage, manucure, pédicure et épilation à domicile, avec des professionnelles partenaires sélectionnées.": "Coiffure, maquillage, manucure, pédicure w epilation f dar, m3a professionnelles partenaires mkhtarin.",
+  "Découvrir l’esthétique & le bien-être →": "Chouf tajmil & rahaa →",
   "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.": "Ndem l lfnadeq, riads, restos, chantiers, sociétés dyal nettoyage w événements. Daim, mouaqqat wla b-nhar, 3la hsab lhaja dyalek.",
   "Voir les services aux entreprises →": "Chouf services sherikat →",
   "💬 Demander un service sur WhatsApp": "💬 Demandi service 3la WhatsApp",

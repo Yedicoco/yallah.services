@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   478 chaînes, clés = textes d'origine de la page.
+   484 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -10,6 +10,8 @@ YS_TRAD("en", "index", {
   "@alt:Logo Yallah Services – aides à domicile au Maroc": "Yallah Services logo – home help in Morocco",
   "Accueil": "Home",
   "Aide à domicile": "Home help",
+  "Froid & climatisation": "Cooling & air conditioning",
+  "Esthétique & bien-être": "Beauty & wellbeing",
   "Services aux entreprises": "Business services",
   "Tarifs": "Prices",
   "FAQ": "FAQ",
@@ -57,6 +59,10 @@ YS_TRAD("en", "index", {
   "Yallah Services simplifie votre quotidien : ménage, aide à la personne, services techniques, bien-être et solutions pour les entreprises. Un seul contact pour vos besoins.": "Yallah Services makes your daily life easier: housekeeping, personal care, technical services, well-being and solutions for businesses. One contact for all your needs.",
   "Femme de ménage, cuisinière, nounou, garde-malade, grand ménage, chauffeur, gardien. Un profil recherché selon vos critères.": "Housekeeper, cook, nanny, caregiver, deep cleaning, driver, guard. A profile selected according to your criteria.",
   "Découvrir l’aide à domicile →": "Discover home help →",
+  "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation.": "Maintenance, cleaning, diagnosis, repair and maintenance contracts for air conditioning.",
+  "Découvrir le froid & la climatisation →": "Discover cooling & air conditioning →",
+  "Coiffure, maquillage, manucure, pédicure et épilation à domicile, avec des professionnelles partenaires sélectionnées.": "Hair, makeup, manicure, pedicure and waxing at home, with selected partner professionals.",
+  "Découvrir l’esthétique & le bien-être →": "Discover beauty & wellbeing →",
   "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.": "Staff for hotels, riads, restaurants, building sites, cleaning companies and events. Permanent, temporary or daily, depending on your needs.",
   "Voir les services aux entreprises →": "See business services →",
   "💬 Demander un service sur WhatsApp": "💬 Request a service on WhatsApp",

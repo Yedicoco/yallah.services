@@ -21,6 +21,18 @@
         "langue": "fr"
       },
       {
+        "cle": "Froid & climatisation",
+        "occurrences": 3,
+        "exemple": "Froid & climatisation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Esthétique & bien-être",
+        "occurrences": 3,
+        "exemple": "Esthétique & bien-être",
+        "langue": "fr"
+      },
+      {
         "cle": "Services aux entreprises",
         "occurrences": 3,
         "exemple": "Services aux entreprises",
@@ -310,6 +322,30 @@
         "cle": "Découvrir l’aide à domicile →",
         "occurrences": 1,
         "exemple": "Découvrir l’aide à domicile →",
+        "langue": "fr"
+      },
+      {
+        "cle": "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation.",
+        "occurrences": 1,
+        "exemple": "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Découvrir le froid & la climatisation →",
+        "occurrences": 1,
+        "exemple": "Découvrir le froid & la climatisation →",
+        "langue": "fr"
+      },
+      {
+        "cle": "Coiffure, maquillage, manucure, pédicure et épilation à domicile, avec des professionnelles partenaires sélectionnées.",
+        "occurrences": 1,
+        "exemple": "Coiffure, maquillage, manucure, pédicure et épilation à domicile, avec des professionnelles partenaires sélectionnées.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Découvrir l’esthétique & le bien-être →",
+        "occurrences": 1,
+        "exemple": "Découvrir l’esthétique & le bien-être →",
         "langue": "fr"
       },
       {
