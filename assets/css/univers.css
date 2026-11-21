@@ -73,3 +73,40 @@
   font-weight: 700;
   text-decoration: none;
 }
+
+/* Boutons dans les cartes de services (page Aide à domicile) */
+.univers-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto !important;
+}
+
+.univers-actions .local-btn {
+  flex: 1 1 180px;
+  min-height: 44px;
+  font-size: 13px;
+}
+
+/* Navigation : libellés sur une seule ligne sur bureau (7 entrées) */
+@media (min-width: 1025px) {
+  .nav-links { gap: 14px; }
+  .nav-links a { white-space: nowrap; }
+}
+
+/* Pages locales : le fil d'Ariane est une <nav>, qui style.css fixe en haut de page.
+   On le remet dans le flux normal. */
+nav.local-crumbs { position: static; }
+
+/* Pages locales : sur mobile, le gabarit n'a pas de menu hamburger.
+   On garde les liens principaux visibles sous le logo. */
+@media (max-width: 1024px) {
+  .local-nav .nav-inner { flex-wrap: wrap; row-gap: 8px; }
+  .local-nav .nav-links { display: flex !important; flex-wrap: wrap; gap: 6px 14px; order: 3; width: 100%; }
+  .local-nav .nav-links a { font-size: 12px; white-space: nowrap; }
+  .local-nav .nav-wa { display: inline-flex !important; font-size: 12px; padding: 7px 14px; }
+}
+
+@media (max-width: 1024px) {
+  .local-nav .nav-inner { height: auto; padding-top: 10px; padding-bottom: 10px; }
+}
