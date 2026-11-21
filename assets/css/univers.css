@@ -1,0 +1,164 @@
+/* ══════════════════════════════════════════════════════
+   YALLAH SERVICES — Univers (accueil et page Aide à domicile)
+   Reprend la charte de brand.css : or, bleu nuit, vert WhatsApp.
+══════════════════════════════════════════════════════ */
+
+.univers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.univers-card {
+  background: var(--brand-panel, #0b2035);
+  border: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  border-radius: 18px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.univers-ico {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.univers-card h3 {
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+}
+
+.univers-card p {
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.univers-link {
+  margin-top: auto;
+  padding-top: 6px;
+  color: var(--brand-gold, #d8b361);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.univers-link:hover {
+  color: #f2db9b;
+}
+
+.univers-cta {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.univers-cta .hero-cta {
+  display: inline-flex;
+}
+
+.univers-num {
+  margin: 14px 0 0;
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 14px;
+}
+
+.univers-num a {
+  color: var(--brand-gold, #d8b361);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Boutons dans les cartes de services (page Aide à domicile) */
+.univers-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto !important;
+}
+
+.univers-actions .local-btn {
+  flex: 1 1 180px;
+  min-height: 44px;
+  font-size: 13px;
+}
+
+/* Navigation : libellés sur une seule ligne sur bureau (7 entrées) */
+@media (min-width: 1025px) {
+  .nav-links { gap: 14px; }
+  .nav-links a { white-space: nowrap; }
+}
+
+/* Pages locales : le fil d'Ariane est une <nav>, qui style.css fixe en haut de page.
+   On le remet dans le flux normal. */
+nav.local-crumbs { position: static; }
+
+/* Pages locales : sur mobile, le gabarit n'a pas de menu hamburger.
+   On garde les liens principaux visibles sous le logo. */
+@media (max-width: 1024px) {
+  .local-nav .nav-inner { flex-wrap: wrap; row-gap: 8px; }
+  .local-nav .nav-links { display: flex !important; flex-wrap: wrap; gap: 6px 14px; order: 3; width: 100%; }
+  .local-nav .nav-links a { font-size: 12px; white-space: nowrap; }
+  .local-nav .nav-wa { display: inline-flex !important; font-size: 12px; padding: 7px 14px; }
+}
+
+@media (max-width: 1024px) {
+  .local-nav .nav-inner { height: auto; padding-top: 10px; padding-bottom: 10px; }
+}
+
+/* Tarifs indicatifs : fourchettes du minimum au maximum (pages Froid et Esthétique) */
+.univers-prix {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.univers-prix-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  background: var(--brand-panel, #0b2035);
+  border: 1px solid var(--brand-line, rgba(216, 179, 97, .38));
+  border-radius: 16px;
+  padding: 18px 22px;
+}
+
+.univers-prix-row h3 {
+  font-size: 17px;
+  color: #fff;
+  margin: 0 0 4px;
+}
+
+.univers-prix-row p {
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.univers-prix-tarif strong {
+  display: block;
+  white-space: nowrap;
+  color: var(--brand-gold, #d8b361);
+  font-size: 17px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.univers-note {
+  margin: 16px 0 0;
+  color: var(--brand-muted, #c0c8d1);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .univers-prix-row { flex-direction: column; align-items: flex-start; }
+  .univers-prix-tarif strong { text-align: left; }
+}

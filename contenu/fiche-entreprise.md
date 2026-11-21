@@ -58,6 +58,29 @@ main-d'œuvre, manœuvres et employés · personnel opérationnel selon les beso
 > de projet. Elle recherche les personnes et met en relation. Ne jamais rédiger une promesse
 > d'accompagnement de projet, d'étude ou de conseil.
 
+## Pôles en préparation (validés par la direction le 21/11/2026)
+
+Référence interne. **Ces informations ne sont pas publiées** tant que les pages
+« Froid & climatisation » et « Esthétique & bien-être » ne sont pas autorisées.
+
+**Froid & climatisation** — prestations confirmées :
+entretien et nettoyage de climatisation · diagnostic et dépannage · maintenance préventive ·
+contrats de maintenance. Interventions assurées par des **techniciens partenaires sélectionnés**.
+- **Non confirmées, à ne pas publier :** recharge de gaz, installation, remplacement.
+
+**Esthétique & bien-être** — prestations confirmées (à domicile) :
+coiffure · maquillage · manucure · pédicure · épilation · préparation beauté pour mariages,
+fêtes et séances photo. Prestations assurées par des **professionnelles partenaires sélectionnées**.
+- **Non confirmés, à ne pas publier :** soins du visage, soins du corps, tout autre soin.
+- Aucune promesse médicale ni de résultat garanti.
+
+**Règles communes aux deux pôles :**
+- Tarification **sur devis** uniquement : aucun prix fixe affiché.
+- Zone principale : **Casablanca**. Les autres zones ne sont affichées que si elles figurent
+  déjà dans cette fiche (section « Couverture réelle ») ou sur les pages publiées.
+- Aucune photo de personnes ou de prestations non fournies par l'agence.
+- Pas de promesse de délai, de disponibilité immédiate, de certification ou d'agrément.
+
 ## Cibles
 
 - **B2C :** classes moyennes et aisées — familles actives, parents recherchant nounou ou femme de
