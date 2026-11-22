@@ -59,7 +59,9 @@
     'cuisiniere-casablanca',
     'garde-malade-casablanca',
     'chauffeur-casablanca',
-    'vigile-casablanca'
+    'vigile-casablanca',
+    'froid-climatisation',
+    'esthetique-bien-etre'
   ];
 
   /* ─────────── Règles de parcours (identiques à outils/extraire-i18n.js) ─────────── */

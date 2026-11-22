@@ -55,7 +55,10 @@ const PAGES = [
   'cuisiniere-casablanca.html',
   'garde-malade-casablanca.html',
   'chauffeur-casablanca.html',
-  'vigile-casablanca.html'
+  'vigile-casablanca.html',
+  /* Pages « univers » (service par catégorie) */
+  'froid-climatisation.html',
+  'esthetique-bien-etre.html'
 ];
 
 const DOSSIER_I18N = path.join(RACINE, 'contenu', 'i18n');
