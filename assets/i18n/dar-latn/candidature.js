@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · candidature.html
-   134 chaînes, clés = textes d'origine de la page.
+   136 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/candidature.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -139,6 +139,8 @@ YS_TRAD("dar-latn", "candidature", {
   "صفحة الأسر": "Saf7at l osar",
   "@title": "Fada2 t-taracho7 — Istimarat t-taracho7 | Yallah Services",
   "@meta:description": "Katqelleb 3la khedma b7al kheddama dar, 7adana, tayyaba wla ri3ayat mriḍ f Maghrib? 7aṭṭ l maraji3 dyalek 3and Yallah Services, hadchi fabor.",
+  "@meta:og:title": "Fada2 t-taracho7 — Yallah Services",
+  "@meta:og:description": "Qaddem t-taracho7 dyalek l mihan l biyut w l khadamat f Maghrib.",
   "@meta:twitter:title": "Fada2 t-taracho7 — Yallah Services",
   "@meta:twitter:description": "Qaddem t-taracho7 dyalek l mihan l biyut w l khadamat f Maghrib.",
   "اكتبي اسمك الكامل (3 أحرف على الأقل).": "Kteb smiytek kamla (3 7rof 3la l aqal).",

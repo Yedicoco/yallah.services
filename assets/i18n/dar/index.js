@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   484 chaînes, clés = textes d'origine de la page.
+   491 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -104,6 +104,8 @@ YS_TRAD("dar", "index", {
   "Ménage + Nounou Non Logée — 800 DH/semaine": "تنقية + حضانة غير مقيمة — 800 درهم/أسبوع",
   "Ménage Normal à la journée — 300/400 DH": "تنقية عادية باليوم — 300/400 درهم",
   "Grand Ménage à la journée — 500/700 DH": "التنقية الكبيرة باليوم — 500/700 درهم",
+  "Froid et climatisation": "التبريد والتكييف",
+  "Esthétique et bien-être": "الجمال والرفاهية",
   "📍 Votre ville...": "📍 المدينة ديالك...",
   "Casablanca": "كازا",
   "Bouskoura": "بوسكورة",
@@ -417,6 +419,8 @@ YS_TRAD("dar", "index", {
   "Type...": "النوع...",
   "🏠 Logée": "🏠 مقيمة",
   "🌙 Non logée": "🌙 غير مقيمة",
+  "Quartier (optionnel)": "الحي (اختياري)",
+  "Date souhaitée (optionnelle)": "التاريخ المطلوب (اختياري)",
   "Message (optionnel)": "رسالة (اختياري)",
   "Récapitulatif prêt": "الملخص واجد",
   "Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.": "حل واتساب وصيفط الطلب ديالك ليالله سيرفيس.",
@@ -464,6 +468,9 @@ YS_TRAD("dar", "index", {
   "👤 Vos informations": "👤 المعلومات ديالك",
   "Nom": "السمية",
   "WhatsApp / Tél": "واتساب / التيليفون",
+  "Quartier": "الحي",
+  "Date souhaitée": "التاريخ المطلوب",
+  "Précisions": "التفاصيل",
   "Expérience souhaitée": "التجربة المطلوبة",
   "Délai souhaité": "المدة المطلوبة",
   "ℹ️ Informations à vérifier avant validation": "ℹ️ معلومات خاصك تتحقق منها قبل المصادقة",
@@ -501,5 +508,8 @@ YS_TRAD("dar", "index", {
   "Précisions :": "تفاصيل:",
   "À préciser": "خاص التوضيح",
   "Lien copié": "تسخ الرابط",
-  "Copie impossible. Lien :": "ما قدرناش ننسخ. الرابط :"
+  "Copie impossible. Lien :": "ما قدرناش ننسخ. الرابط :",
+  "Téléphone :": "الهاتف:",
+  "Quartier :": "الحي:",
+  "Date souhaitée :": "التاريخ المطلوب:"
 });

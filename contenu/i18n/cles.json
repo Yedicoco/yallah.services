@@ -599,6 +599,18 @@
         "langue": "fr"
       },
       {
+        "cle": "Froid et climatisation",
+        "occurrences": 2,
+        "exemple": "Froid et climatisation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Esthétique et bien-être",
+        "occurrences": 2,
+        "exemple": "Esthétique et bien-être",
+        "langue": "fr"
+      },
+      {
         "cle": "📍 Votre ville...",
         "occurrences": 1,
         "exemple": "📍 Votre ville...",
@@ -2547,6 +2559,18 @@
         "langue": "fr"
       },
       {
+        "cle": "Quartier (optionnel)",
+        "occurrences": 1,
+        "exemple": "Quartier (optionnel)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Date souhaitée (optionnelle)",
+        "occurrences": 1,
+        "exemple": "Date souhaitée (optionnelle)",
+        "langue": "fr"
+      },
+      {
         "cle": "Message (optionnel)",
         "occurrences": 1,
         "exemple": "Message (optionnel)",
@@ -2842,6 +2866,24 @@
         "cle": "WhatsApp / Tél",
         "occurrences": 1,
         "exemple": "WhatsApp / Tél",
+        "langue": "fr"
+      },
+      {
+        "cle": "Quartier",
+        "occurrences": 1,
+        "exemple": "Quartier",
+        "langue": "fr"
+      },
+      {
+        "cle": "Date souhaitée",
+        "occurrences": 1,
+        "exemple": "Date souhaitée",
+        "langue": "fr"
+      },
+      {
+        "cle": "Précisions",
+        "occurrences": 1,
+        "exemple": "Précisions",
         "langue": "fr"
       },
       {
@@ -3949,6 +3991,18 @@
         "langue": "fr"
       },
       {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Espace candidats — Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Déposez votre candidature pour les métiers de maison et de services au Maroc.",
+        "langue": "fr"
+      },
+      {
         "cle": "@meta:twitter:title",
         "occurrences": 1,
         "exemple": "Espace candidats — Yallah Services",
@@ -4804,6 +4858,18 @@
         "cle": "@meta:description",
         "occurrences": 1,
         "exemple": "Vous cherchez du travail comme femme de ménage, nounou, cuisinière ou garde-malade au Maroc ? Déposez vos références chez Yallah Services, c",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Espace candidats — Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Déposez votre candidature pour les métiers de maison et de services au Maroc.",
         "langue": "fr"
       },
       {

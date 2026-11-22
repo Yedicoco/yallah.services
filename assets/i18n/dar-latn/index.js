@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   484 chaînes, clés = textes d'origine de la page.
+   491 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -104,6 +104,8 @@ YS_TRAD("dar-latn", "index", {
   "Ménage + Nounou Non Logée — 800 DH/semaine": "Tneqqiya + 7adana ghir mqima — 800 derham/usbu3",
   "Ménage Normal à la journée — 300/400 DH": "Tneqqiya 3adiya b n-nhar — 300/400 derham",
   "Grand Ménage à la journée — 500/700 DH": "T-tneqqiya l kbira b n-nhar — 500/700 derham",
+  "Froid et climatisation": "Tabrid w taklif",
+  "Esthétique et bien-être": "Jamal w raha",
   "📍 Votre ville...": "📍 L mdina dyalek...",
   "Casablanca": "Casa",
   "Bouskoura": "Bouskoura",
@@ -417,6 +419,8 @@ YS_TRAD("dar-latn", "index", {
   "Type...": "N-Naw3...",
   "🏠 Logée": "🏠 Mqima",
   "🌙 Non logée": "🌙 Ghir mqima",
+  "Quartier (optionnel)": "L7ay (ikhtiyari)",
+  "Date souhaitée (optionnelle)": "Tarikh lmataloub (ikhtiyari)",
   "Message (optionnel)": "Risala (ikhtiyari)",
   "Récapitulatif prêt": "Lmolakhkhas wajed",
   "Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.": "7ell WhatsApp w sift t-talab dyalek l Yallah Services.",
@@ -464,6 +468,9 @@ YS_TRAD("dar-latn", "index", {
   "👤 Vos informations": "👤 L ma3lumat dyalek",
   "Nom": "S-smiya",
   "WhatsApp / Tél": "WhatsApp / Tilifoun",
+  "Quartier": "L7ay",
+  "Date souhaitée": "Tarikh lmataloub",
+  "Précisions": "Tafasil",
   "Expérience souhaitée": "T-tajriba l matluba",
   "Délai souhaité": "L mudda l matluba",
   "ℹ️ Informations à vérifier avant validation": "ℹ️ Ma3lumat khassek t2eked menha qbel lmuṣadaqa",
@@ -501,5 +508,8 @@ YS_TRAD("dar-latn", "index", {
   "Précisions :": "T-tafaṣil:",
   "À préciser": "Khas twḍe7",
   "Lien copié": "Tsekh l lien",
-  "Copie impossible. Lien :": "Ma qdrnach nsakh. L lien :"
+  "Copie impossible. Lien :": "Ma qdrnach nsakh. L lien :",
+  "Téléphone :": "Tilifoun:",
+  "Quartier :": "L7ay:",
+  "Date souhaitée :": "Tarikh lmataloub:"
 });

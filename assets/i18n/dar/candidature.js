@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · candidature.html
-   134 chaînes, clés = textes d'origine de la page.
+   136 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/candidature.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -139,6 +139,8 @@ YS_TRAD("dar", "candidature", {
   "صفحة الأسر": "صفحة الأسر",
   "@title": "فضاء الترشّح — استمارة الترشّح | Yallah Services",
   "@meta:description": "كتقلب على خدمة بحال خدامة دار، حاضنة، طيّابة ولا رعاية مريض فالمغرب؟ حط المراجع ديالك عند Yallah Services، هادشي فابور.",
+  "@meta:og:title": "فضاء الترشّح — Yallah Services",
+  "@meta:og:description": "قدّم الترشّح ديالك لمهن البيوت والخدمات فالمغرب.",
   "@meta:twitter:title": "فضاء الترشّح — Yallah Services",
   "@meta:twitter:description": "قدّم الترشّح ديالك لمهن البيوت والخدمات فالمغرب.",
   "اكتبي اسمك الكامل (3 أحرف على الأقل).": "كتب السميّة الكاملة ديالك (3 حروف على الأقل).",
