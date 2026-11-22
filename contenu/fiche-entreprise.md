@@ -76,7 +76,7 @@ fêtes et séances photo. Prestations assurées par des **professionnelles parte
 - Aucune promesse médicale ni de résultat garanti.
 
 **Règles communes aux deux pôles :**
-- Tarification **sur devis** uniquement : aucun prix fixe affiché.
+- Les tarifs actuellement affichés pour les deux pôles, y compris les massages, sont à **conserver**, conformément à la confirmation du propriétaire du 22/11/2026. Tout changement futur de prix ou de conditions nécessite une validation explicite.
 - Zone principale : **Casablanca**. Les autres zones ne sont affichées que si elles figurent
   déjà dans cette fiche (section « Couverture réelle ») ou sur les pages publiées.
 - Aucune photo de personnes ou de prestations non fournies par l'agence.
