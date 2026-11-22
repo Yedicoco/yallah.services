@@ -544,6 +544,8 @@
           <option>Ménage + Nounou Non Logée — 800 DH/semaine</option>
           <option>Ménage Normal à la journée — 300/400 DH</option>
           <option>Grand Ménage à la journée — 500/700 DH</option>
+          <option value="froid-climatisation">Froid et climatisation</option>
+          <option value="esthetique-bien-etre">Esthétique et bien-être</option>
 </select>
         <select class="mf-select" id="mfCity">
                     <option value="">📍 Votre ville...</option>
@@ -1175,6 +1177,8 @@
           <option>Ménage + Nounou Non Logée — 800 DH/semaine</option>
           <option>Ménage Normal à la journée — 300/400 DH</option>
           <option>Grand Ménage à la journée — 500/700 DH</option>
+          <option value="froid-climatisation">Froid et climatisation</option>
+          <option value="esthetique-bien-etre">Esthétique et bien-être</option>
 </select>
         </div>
         <div class="fgrid">
@@ -1226,6 +1230,10 @@
               <option>🌙 Non logée</option>
             </select>
           </div>
+        </div>
+        <div class="fgrid">
+          <div class="fg"><label class="fl" for="ctQuartier">Quartier (optionnel)</label><input class="fi" type="text" id="ctQuartier" autocomplete="address-level3"></div>
+          <div class="fg"><label class="fl" for="ctDate">Date souhaitée (optionnelle)</label><input class="fi" type="date" id="ctDate"></div>
         </div>
         <div class="fg">
           <label class="fl" for="ctMsg">Message (optionnel)</label>
@@ -1382,12 +1390,15 @@
           <div class="frow"><span class="fk">Nom</span><span class="fv" id="factName">—</span></div>
           <div class="frow"><span class="fk">WhatsApp / Tél</span><span class="fv" id="factPhone">—</span></div>
           <div class="frow"><span class="fk">Ville</span><span class="fv" id="factCity">—</span></div>
-          <div class="frow"><span class="fk">Expérience souhaitée</span><span class="fv" id="factNat">—</span></div>
-          <div class="frow"><span class="fk">Type de poste</span><span class="fv" id="factType">—</span></div>
-          <div class="frow"><span class="fk">Délai souhaité</span><span class="fv" id="factDelay">—</span></div>
+          <div class="frow"><span class="fk">Quartier</span><span class="fv" id="factQuartier">—</span></div>
+          <div class="frow"><span class="fk">Date souhaitée</span><span class="fv" id="factRequestedDate">—</span></div>
+          <div class="frow"><span class="fk">Précisions</span><span class="fv" id="factMsg">—</span></div>
+          <div class="frow recap-personnel"><span class="fk">Expérience souhaitée</span><span class="fv" id="factNat">—</span></div>
+          <div class="frow recap-personnel"><span class="fk">Type de poste</span><span class="fv" id="factType">—</span></div>
+          <div class="frow recap-personnel"><span class="fk">Délai souhaité</span><span class="fv" id="factDelay">—</span></div>
         </div>
 
-        <div class="fsec">
+        <div class="fsec recap-personnel">
           <div class="fsec-title">ℹ️ Informations à vérifier avant validation</div>
           <div class="guarantees">
             <div class="gi-box"><span class="ic">🔄</span><div class="gt">Remplacement selon la formule</div><div class="gd">Conditions à vérifier avant validation</div></div>
@@ -1397,7 +1408,7 @@
           </div>
         </div>
 
-        <div class="fsec" style="margin-bottom:0">
+        <div class="fsec recap-personnel" style="margin-bottom:0">
           <div class="fsec-title">📋 Prochaines étapes</div>
           <ul class="steps-list">
             <li><span class="snm">1</span><span>Notre équipe examine les critères et les profils disponibles pour votre demande.</span></li>

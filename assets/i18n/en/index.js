@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   484 chaînes, clés = textes d'origine de la page.
+   491 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -104,6 +104,8 @@ YS_TRAD("en", "index", {
   "Ménage + Nounou Non Logée — 800 DH/semaine": "Cleaning + nanny, live-out — 800 MAD/week",
   "Ménage Normal à la journée — 300/400 DH": "Standard cleaning, daily — 300/400 MAD",
   "Grand Ménage à la journée — 500/700 DH": "Deep cleaning, daily — 500/700 MAD",
+  "Froid et climatisation": "Cooling and air conditioning",
+  "Esthétique et bien-être": "Beauty and wellbeing",
   "📍 Votre ville...": "📍 Your city...",
   "Casablanca": "Casablanca",
   "Bouskoura": "Bouskoura",
@@ -417,6 +419,8 @@ YS_TRAD("en", "index", {
   "Type...": "Type...",
   "🏠 Logée": "🏠 Live-in",
   "🌙 Non logée": "🌙 Live-out",
+  "Quartier (optionnel)": "Neighbourhood (optional)",
+  "Date souhaitée (optionnelle)": "Preferred date (optional)",
   "Message (optionnel)": "Message (optional)",
   "Récapitulatif prêt": "Summary ready",
   "Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.": "Open WhatsApp to send your request to Yallah Services.",
@@ -464,6 +468,9 @@ YS_TRAD("en", "index", {
   "👤 Vos informations": "👤 Your information",
   "Nom": "Name",
   "WhatsApp / Tél": "WhatsApp / Phone",
+  "Quartier": "Neighbourhood",
+  "Date souhaitée": "Preferred date",
+  "Précisions": "Details",
   "Expérience souhaitée": "Experience preference",
   "Délai souhaité": "Preferred timeframe",
   "ℹ️ Informations à vérifier avant validation": "ℹ️ Information to check before approval",
@@ -501,5 +508,8 @@ YS_TRAD("en", "index", {
   "Précisions :": "Details:",
   "À préciser": "To be specified",
   "Lien copié": "Link copied",
-  "Copie impossible. Lien :": "Could not copy. Link:"
+  "Copie impossible. Lien :": "Could not copy. Link:",
+  "Téléphone :": "Phone:",
+  "Quartier :": "Neighbourhood:",
+  "Date souhaitée :": "Preferred date:"
 });

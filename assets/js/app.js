@@ -302,9 +302,13 @@
     $('#factName').textContent = or(data.name, '—');
     $('#factPhone').textContent = or(data.phone, '—');
     $('#factCity').textContent = or(data.city, '—');
+    $('#factQuartier').textContent = or(data.quartier, '—');
+    $('#factRequestedDate').textContent = or(data.requestedDate, '—');
+    $('#factMsg').textContent = or(data.msg, '—');
     $('#factNat').textContent = or(data.nat, '—');
     $('#factType').textContent = or(data.type, '—');
     $('#factDelay').textContent = or(data.delay, '—');
+    $$('.recap-personnel', thanks).forEach(function (el) { el.hidden = !!data.autreService; });
 
     function traduireMessage(texte) {
       var i18n = window.YSI18N;
@@ -316,11 +320,16 @@
       traduireMessage('Bonjour Yallah Services ! Je souhaite transmettre cette demande.'),
       traduireMessage('Service :') + ' ' + or(data.service, traduireMessage('À préciser')),
       traduireMessage('Nom :') + ' ' + or(data.name, '—'),
-      traduireMessage('Ville :') + ' ' + or(data.city, traduireMessage('À préciser')),
-      traduireMessage('Expérience souhaitée :') + ' ' + or(data.nat, traduireMessage('À préciser')),
-      traduireMessage('Type de poste :') + ' ' + or(data.type, traduireMessage('À préciser')),
-      traduireMessage('Délai souhaité :') + ' ' + or(data.delay, traduireMessage('À préciser'))
+      traduireMessage('Téléphone :') + ' ' + or(data.phone, '—'),
+      traduireMessage('Ville :') + ' ' + or(data.city, traduireMessage('À préciser'))
     ];
+    if (!data.autreService) {
+      msg.push(traduireMessage('Expérience souhaitée :') + ' ' + or(data.nat, traduireMessage('À préciser')));
+      msg.push(traduireMessage('Type de poste :') + ' ' + or(data.type, traduireMessage('À préciser')));
+      msg.push(traduireMessage('Délai souhaité :') + ' ' + or(data.delay, traduireMessage('À préciser')));
+    }
+    if (data.quartier) msg.push(traduireMessage('Quartier :') + ' ' + data.quartier);
+    if (data.requestedDate) msg.push(traduireMessage('Date souhaitée :') + ' ' + data.requestedDate);
     if (data.msg) msg.push(traduireMessage('Précisions :') + ' ' + data.msg);
     $('#thanksWa').href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg.join('\n'));
 
@@ -337,6 +346,34 @@
   var back = $('#thanksBack');
   if (back) back.addEventListener('click', closeThanks);
 
+  function selectedService(selector) {
+    var select = $(selector);
+    return select && select.value ? select.options[select.selectedIndex].text : '';
+  }
+
+  function autreService(selector) {
+    return ['froid-climatisation', 'esthetique-bien-etre'].indexOf(val(selector)) !== -1;
+  }
+  function adapterFormulaire(service, fields, hint) {
+    var select = $(service);
+    if (!select) return;
+    function adapter() {
+      var autre = autreService(service);
+      fields.forEach(function (field) {
+        var input = $(field);
+        var group = input.closest('.fg') || input;
+        group.hidden = autre;
+        if (autre) input.value = '';
+      });
+      var message = $(hint);
+      if (message) message.hidden = autre;
+    }
+    select.addEventListener('change', adapter);
+    adapter();
+  }
+  adapterFormulaire('#mfService', ['#mfNat', '#mfType', '#mfDelay'], '.mf-hint');
+  adapterFormulaire('#ctService', ['#ctNat', '#ctType', '#ctDelay'], '.fhint');
+
   /* ─────────── MINI FORMULAIRE ─────────── */
   var miniForm = $('#miniFormEl');
   if (miniForm) {
@@ -351,7 +388,7 @@
         return;
       }
       var data = {
-        service: val('#mfService'), name: name.value.trim(), phone: phone.value.trim(),
+        autreService: autreService('#mfService'), service: selectedService('#mfService'), name: name.value.trim(), phone: phone.value.trim(),
         city: val('#mfCity'), nat: val('#mfNat'), type: val('#mfType'), delay: val('#mfDelay')
       };
       miniForm.style.display = 'none';
@@ -374,9 +411,9 @@
         return;
       }
       var data = {
-        service: val('#ctService'), name: name.value.trim(), phone: phone.value.trim(),
+        autreService: autreService('#ctService'), service: selectedService('#ctService'), name: name.value.trim(), phone: phone.value.trim(),
         city: val('#ctCity'), nat: val('#ctNat'), type: val('#ctType'), delay: val('#ctDelay'),
-        msg: val('#ctMsg')
+        quartier: val('#ctQuartier'), requestedDate: val('#ctDate'), msg: val('#ctMsg')
       };
       ctForm.style.display = 'none';
       $('.fwarn').style.display = 'none';
