@@ -46,7 +46,7 @@ const fenetre = {
   location: { search: '' }
 };
 fenetre.window = fenetre;
-fenetre.document = { documentElement: {}, body: {}, querySelectorAll: () => [], querySelector: () => null };
+fenetre.document = { documentElement: {}, body: {}, head: { appendChild: () => {} }, createElement: () => ({}), querySelectorAll: () => [], querySelector: () => null };
 fenetre.navigator = {};
 
 const contexte = vm.createContext(fenetre);
