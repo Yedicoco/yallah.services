@@ -45,7 +45,7 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "Du sourcil au forfait complet.": "From eyebrows to a full package.",
   "@alt:Femme recevant un massage du dos dans une pièce lumineuse": "Woman receiving a back massage in a bright room",
   "Massage": "Massage",
-  "Réservé aux femmes. Sur devis.": "For women only. On quote.",
+  "Réservé aux femmes. Voir les tarifs ci-dessous.": "For women only. See prices below.",
   "@alt:Soin du visage à domicile avec application de crème": "Facial care at home with cream being applied",
   "Soins du visage": "Facial care",
   "Sur devis.": "On quote.",
