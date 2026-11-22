@@ -71,7 +71,8 @@ contrats de maintenance. Interventions assurées par des **techniciens partenair
 **Esthétique & bien-être** — prestations confirmées (à domicile) :
 coiffure · maquillage · manucure · pédicure · épilation · préparation beauté pour mariages,
 fêtes et séances photo. Prestations assurées par des **professionnelles partenaires sélectionnées**.
-- **Non confirmés, à ne pas publier :** soins du visage, soins du corps, tout autre soin.
+- **Massages communiqués par la direction le 22/11/2026 :** berbère, ayurvédique, réflexologie, facial et tête, suédois, médical, dos et épaules, oriental chaud. Prix et durées figurent sur la page esthétique ; disponibilité et qualifications pour le massage médical à confirmer.
+- **Non confirmés, à ne pas publier :** autres soins du visage ou du corps non expressément validés.
 - Aucune promesse médicale ni de résultat garanti.
 
 **Règles communes aux deux pôles :**

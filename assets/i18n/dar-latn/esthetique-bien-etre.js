@@ -45,7 +45,7 @@ YS_TRAD("dar-latn", "esthetique-bien-etre", {
   "Du sourcil au forfait complet.": "Mn l-sourcil hta l-forfait kamel.",
   "@alt:Femme recevant un massage du dos dans une pièce lumineuse": "Mra kat-tdallek dhrha f bit mdwi",
   "Massage": "Massage",
-  "Réservé aux femmes. Sur devis.": "Ghir lnsa. B devis.",
+  "Réservé aux femmes. Voir les tarifs ci-dessous.": "Ghir l3yalat. Choufo l2atmina lte7t.",
   "@alt:Soin du visage à domicile avec application de crème": "Soin dyal wajh f dar b crème",
   "Soins du visage": "Soins dyal wajh",
   "Sur devis.": "B devis.",

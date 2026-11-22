@@ -45,7 +45,7 @@ YS_TRAD("dar", "esthetique-bien-etre", {
   "Du sourcil au forfait complet.": "من الحواجب حتى الباقة الكاملة.",
   "@alt:Femme recevant un massage du dos dans une pièce lumineuse": "امرأة كتتدلك ظهرها فبيت مضوي",
   "Massage": "التدليك",
-  "Réservé aux femmes. Sur devis.": "للنساء غير. بعرض ثمن.",
+  "Réservé aux femmes. Voir les tarifs ci-dessous.": "للعيالات فقط. شوفو الأثمنة لتحت.",
   "@alt:Soin du visage à domicile avec application de crème": "عناية بالوجه فالدار بوضع كريم",
   "Soins du visage": "العناية بالوجه",
   "Sur devis.": "بعرض ثمن.",
