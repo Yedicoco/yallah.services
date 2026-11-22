@@ -230,3 +230,21 @@ nav.local-crumbs { position: static; }
   font-size: 13.5px;
   line-height: 1.5;
 }
+
+/* Images des soins : disposition lisible sur ordinateur comme sur mobile. */
+.massage-row .massage-image {
+  display: block;
+  flex: 0 0 200px;
+  width: 200px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.massage-description { flex: 1; min-width: 0; }
+@media (max-width: 560px) {
+  .massage-row .massage-image {
+    width: 100%;
+    flex: auto;
+  }
+}
