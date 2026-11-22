@@ -3991,6 +3991,18 @@
         "langue": "fr"
       },
       {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Espace candidats — Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Déposez votre candidature pour les métiers de maison et de services au Maroc.",
+        "langue": "fr"
+      },
+      {
         "cle": "@meta:twitter:title",
         "occurrences": 1,
         "exemple": "Espace candidats — Yallah Services",
@@ -4846,6 +4858,18 @@
         "cle": "@meta:description",
         "occurrences": 1,
         "exemple": "Vous cherchez du travail comme femme de ménage, nounou, cuisinière ou garde-malade au Maroc ? Déposez vos références chez Yallah Services, c",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Espace candidats — Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Déposez votre candidature pour les métiers de maison et de services au Maroc.",
         "langue": "fr"
       },
       {

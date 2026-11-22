@@ -148,6 +148,8 @@
   "147": "Looking for work as a housekeeper, nanny, cook or caregiver in Morocco? Send your references to Yallah Services, it is free.",
   "148": "Job seekers — Yallah Services",
   "149": "Submit your application for household and service jobs in Morocco.",
+  "150": "Job seekers — Yallah Services",
+  "151": "Submit your application for household and service jobs in Morocco.",
   "_extra": {
     "Envoi de la fiche…": "Sending the form…",
     "L'envoi a échoué. Vérifiez votre connexion puis réessayez, ou envoyez votre fiche directement sur WhatsApp.": "Sending failed. Check your connection and try again, or send your form directly on WhatsApp.",
@@ -172,5 +174,5 @@
     "Numéro de la référence 2 invalide.": "Reference 2 phone number is invalid.",
     "Le consentement est obligatoire pour envoyer la fiche.": "Consent is required to send the form."
   },
-  "_empreinte": "a0286b2ad5a816d0"
+  "_empreinte": "3e2f83ae3b00882c"
 }
