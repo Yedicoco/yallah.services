@@ -299,3 +299,7 @@ body.ys-ar .ys-puce-liste li::before { left: auto; right: 0; }
   body.ys-page { background: #fff; color: #000; }
   .ys-btn, .ys-topbar { display: none; }
 }
+
+/* Mise à l'échelle des pages candidat sans débordement sur petits écrans. */
+body.ys-page, body.ys-page *, body.ys-page *::before, body.ys-page *::after { box-sizing: border-box; }
+body.ys-page { margin: 0; }
