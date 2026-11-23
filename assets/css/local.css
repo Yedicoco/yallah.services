@@ -24,6 +24,8 @@
 
 .local-section{padding:66px 0;border-top:1px solid var(--brand-line)}
 .local-section h2{font-family:Montserrat,Arial,sans-serif;text-transform:uppercase;font-size:clamp(26px,4vw,42px);line-height:1.1;margin:0 0 12px}
+/* Clause « frais de mise en relation » : un alinéa respirant entre paragraphes */
+[aria-labelledby="frais-mise-en-relation"] p+p{margin-top:14px}
 .local-section-intro{color:var(--brand-muted);font-size:16px;line-height:1.7;max-width:760px}
 .local-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
 .local-card{background:var(--brand-panel);border:1px solid var(--brand-line);border-radius:18px;padding:22px}

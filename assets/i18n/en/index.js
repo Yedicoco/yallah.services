@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · index.html
-   491 chaînes, clés = textes d'origine de la page.
+   495 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -351,6 +351,10 @@ YS_TRAD("en", "index", {
   "En cas de besoin de remplacement, les formules Sérénité et Premium prévoient cette possibilité pendant 2 et 6 mois respectivement, selon leurs conditions. Demandez les détails applicables avant de confirmer la mise en relation.": "If a replacement is needed, the Sérénité and Premium packages provide for this possibility for 2 and 6 months respectively, subject to their terms. Ask for the applicable details before confirming the introduction.",
   "Comment se passe le paiement des frais de Mise en relation ? ▾": "How are the placement fees paid? <span class=\"arr\">▾</span>",
   "Les frais de Mise en relation sont réglés uniquement après validation du profil et mise en relation. Vous ne payez rien avant d'avoir trouvé votre candidate. Le salaire mensuel est versé directement à l'employée, séparément des frais de Mise en relation.": "The placement fees are paid only after the profile is approved and the placement is made. You pay nothing before you have found your candidate. The monthly salary is paid directly to the employee, separately from the placement fees.",
+  "Les frais de mise en relation sont-ils remboursables ?": "Are referral fees refundable?",
+  "Non. Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils : ils ne sont pas remboursables, y compris si le profil proposé ne vous convient pas.": "<strong>No.</strong> The referral fee covers the search, selection and presentation of profiles: it is non-refundable, including where the proposed profile does not suit you.",
+  "En revanche, vous n'êtes pas seul(e) : signalez-le nous par écrit (WhatsApp ou e-mail) et vous bénéficiez d'un délai de remplacement de 7 à 15 jours pour recevoir un profil adapté, sans nouveaux frais de mise en relation.": "That said, you are not on your own: tell us in writing (WhatsApp or email) and you benefit from a replacement period of 7 to 15 days to receive a suitable profile, with no additional referral fee.",
+  "Les formules Sérénité et Premium prévoient des durées de remplacement plus longues (2 et 6 mois), selon leurs conditions. Le détail figure dans les mentions légales.": "The <strong>Sérénité</strong> and <strong>Premium</strong> packages provide longer replacement periods (2 and 6 months), subject to their terms. Details are set out in the <a href=\"mentions-legales.html#frais-mise-en-relation\">legal notice</a>.",
   "Quelle différence entre logée et non logée ? ▾": "What is the difference between live-in and live-out? <span class=\"arr\">▾</span>",
   "Logée : l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.\nNon logée : les horaires et les modalités sont définis selon le poste et l'accord avec la famille.": "<strong>Live-in:</strong> the employee stays in the home under the agreed conditions. Working hours and rest days are agreed with the family.<br><br><strong>Live-out:</strong> hours and arrangements are set according to the role and the agreement with the family.",
   "Conditions d'accueil pour une aide logée": "Requirements for hosting a live-in domestic helper",
