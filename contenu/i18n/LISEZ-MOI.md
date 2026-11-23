@@ -29,7 +29,7 @@ mémorisé : il le retrouve sur la page suivante.
 | `candidature-confirmation.html` | 48 en anglais · 32 en darija |
 | `personnel-entreprises.html` (hub entreprises) | 100 |
 | `services-par-ville.html` (hub ville) | 94 |
-| `mentions-legales.html` | 52 |
+| `mentions-legales.html` | 56 |
 | `nounou-casablanca.html` | 134 |
 | `femme-menage-casablanca.html` | 146 |
 | `cuisiniere-casablanca.html` | 131 |
@@ -37,7 +37,7 @@ mémorisé : il le retrouve sur la page suivante.
 | `chauffeur-casablanca.html` | 126 |
 | `vigile-casablanca.html` | 129 |
 
-**Total : 5 053 traductions publiées sur 12 pages (36 dictionnaires).** Les
+**Total : 5 065 traductions publiées sur 12 pages (36 dictionnaires).** Les
 quatre pages « service × ville » restantes (`femme-menage-rabat.html`,
 `femme-menage-marrakech.html`, `femme-menage-tanger.html`, `nounou-rabat.html`)
 restent en français : le site ne peut pas « casser », elles s'affichent
@@ -116,7 +116,7 @@ de `assets/js/i18n.js`.
 * **Test automatique** (`node outils/tester-i18n.js`, avec `npm i jsdom`) :
   vérifie les 4 affichages sur **toutes les pages déclarées dans
   `PAGES_TRADUITES`** (12 aujourd'hui, lues dans le moteur : aucune liste à
-  tenir à jour ici) — langue, sens d'écriture, application des 5 053
+  tenir à jour ici) — langue, sens d'écriture, application des 5 065
   traductions publiées, retour au français sans résidu.
 * **Contrôle du site** (`node outils/verifier-site.js`) : compte les
   dictionnaires réellement publiés à partir de la même liste, et signale les
