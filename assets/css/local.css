@@ -88,3 +88,46 @@
   .local-tarifs table{font-size:13px}
   .local-tarifs th,.local-tarifs td{padding:10px 12px}
 }
+
+/* Pages de service : continuité visuelle avec l'accueil. */
+.local-wrap { max-width: 1240px; }
+.local-nav { box-shadow: 0 8px 24px rgba(0,0,0,.13); }
+.local-nav .logo img { max-height: 64px; }
+.local-hero { gap: clamp(28px, 5vw, 64px); padding-block: clamp(36px, 5vw, 64px) clamp(52px, 6vw, 80px); }
+.local-title { text-transform: none; font-size: clamp(34px, 4.5vw, 58px); line-height: 1.1; }
+.local-lead { font-size: clamp(16px, 1.4vw, 18px); line-height: 1.75; }
+.local-section { padding-block: clamp(50px, 6vw, 78px); }
+.local-section h2 { text-transform: none; line-height: 1.2; }
+.local-grid,.local-steps { gap: 18px; }
+.local-card,.local-step,.local-link-card { box-shadow: 0 12px 28px rgba(0,0,0,.12); transition: border-color .18s ease, box-shadow .18s ease; }
+.local-card:hover,.local-step:hover,.local-link-card:hover { box-shadow: 0 16px 34px rgba(0,0,0,.2); }
+.local-card p,.local-card li,.local-step p { line-height: 1.75; }
+.local-btn { min-height: 48px; text-align: center; line-height: 1.4; }
+.local-btn:focus-visible,.local-faq summary:focus-visible { outline: 3px solid var(--brand-gold); outline-offset: 3px; }
+.local-faq details { padding: 18px; border: 1px solid var(--brand-line); border-radius: 14px; margin-bottom: 10px; }
+.local-faq summary { line-height: 1.5; }
+.local-faq p { line-height: 1.75; }
+.local-footer { padding-block: 36px; }
+.local-footer a { text-underline-offset: 3px; }
+@media (max-width: 760px) {
+  .local-hero { grid-template-columns: minmax(0, 1fr); }
+  .local-grid,.local-steps { grid-template-columns: minmax(0, 1fr); }
+  .local-section { padding-block: 48px; }
+  .local-links { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) { .local-card,.local-step,.local-link-card,.local-btn { transition: none; } }
+
+/* Ces pages n'ont pas de menu mobile déroulant : garder leurs liens existants accessibles. */
+@media (max-width: 1024px) {
+  .local-nav .nav-inner { height: auto; min-height: 68px; padding-block: 10px; flex-wrap: wrap; gap: 8px 14px; }
+  .local-nav .nav-links { display: flex; flex-wrap: wrap; order: 3; width: 100%; gap: 2px 16px; }
+  .local-nav .nav-links a { display: inline-flex; align-items: center; min-height: 40px; font-size: 12px; line-height: 1.4; }
+  .local-nav .nav-wa { display: inline-flex; min-height: 44px; }
+}
+.local-tarifs td[colspan] { white-space: normal; }
+@media (min-width: 1025px) {
+  .local-nav .nav-inner { height: auto; min-height: 76px; padding-block: 6px; flex-wrap: wrap; gap: 2px 18px; }
+  .local-nav .nav-links { display: flex; order: 3; width: 100%; justify-content: center; flex-wrap: wrap; gap: 4px 18px; }
+  .local-nav .nav-links a { display: inline-flex; align-items: center; min-height: 30px; }
+}
+.local-tarifs td:last-child { white-space: normal; }

@@ -29,15 +29,17 @@ mémorisé : il le retrouve sur la page suivante.
 | `candidature-confirmation.html` | 48 en anglais · 32 en darija |
 | `personnel-entreprises.html` (hub entreprises) | 100 |
 | `services-par-ville.html` (hub ville) | 94 |
-| `mentions-legales.html` | 56 |
+| `mentions-legales.html` | 52 |
 | `nounou-casablanca.html` | 134 |
 | `femme-menage-casablanca.html` | 146 |
 | `cuisiniere-casablanca.html` | 131 |
 | `garde-malade-casablanca.html` | 126 |
 | `chauffeur-casablanca.html` | 126 |
 | `vigile-casablanca.html` | 129 |
+| `froid-climatisation.html` (froid & climatisation) | 127 |
+| `esthetique-bien-etre.html` (esthétique & bien-être) | 92 |
 
-**Total : 5 065 traductions publiées sur 12 pages (36 dictionnaires).** Les
+**Total : 5 710 traductions publiées sur 14 pages (42 dictionnaires).** Les
 quatre pages « service × ville » restantes (`femme-menage-rabat.html`,
 `femme-menage-marrakech.html`, `femme-menage-tanger.html`, `nounou-rabat.html`)
 restent en français : le site ne peut pas « casser », elles s'affichent
@@ -115,8 +117,8 @@ de `assets/js/i18n.js`.
   dictionnaires (aucun risque de traduction décalée en silence).
 * **Test automatique** (`node outils/tester-i18n.js`, avec `npm i jsdom`) :
   vérifie les 4 affichages sur **toutes les pages déclarées dans
-  `PAGES_TRADUITES`** (12 aujourd'hui, lues dans le moteur : aucune liste à
-  tenir à jour ici) — langue, sens d'écriture, application des 5 065
+  `PAGES_TRADUITES`** (14 aujourd'hui, lues dans le moteur : aucune liste à
+  tenir à jour ici) — langue, sens d'écriture, application des 5 710
   traductions publiées, retour au français sans résidu.
 * **Contrôle du site** (`node outils/verifier-site.js`) : compte les
   dictionnaires réellement publiés à partir de la même liste, et signale les

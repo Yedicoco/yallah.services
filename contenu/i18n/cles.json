@@ -15,39 +15,39 @@
         "langue": "fr"
       },
       {
-        "cle": "Comment ça marche",
-        "occurrences": 2,
-        "exemple": "Comment ça marche",
+        "cle": "Aide à domicile",
+        "occurrences": 3,
+        "exemple": "Aide à domicile",
         "langue": "fr"
       },
       {
-        "cle": "Avis",
-        "occurrences": 1,
-        "exemple": "Avis",
+        "cle": "Froid & climatisation",
+        "occurrences": 3,
+        "exemple": "Froid & climatisation",
         "langue": "fr"
       },
       {
-        "cle": "Packs",
-        "occurrences": 1,
-        "exemple": "Packs",
+        "cle": "Esthétique & bien-être",
+        "occurrences": 3,
+        "exemple": "Esthétique & bien-être",
         "langue": "fr"
       },
       {
-        "cle": "Frais",
+        "cle": "Services aux entreprises",
+        "occurrences": 3,
+        "exemple": "Services aux entreprises",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tarifs",
         "occurrences": 1,
-        "exemple": "Frais",
+        "exemple": "Tarifs",
         "langue": "fr"
       },
       {
         "cle": "FAQ",
         "occurrences": 3,
         "exemple": "FAQ",
-        "langue": "fr"
-      },
-      {
-        "cle": "Entreprises",
-        "occurrences": 1,
-        "exemple": "Entreprises",
         "langue": "fr"
       },
       {
@@ -63,21 +63,27 @@
         "langue": "fr"
       },
       {
-        "cle": "@wa:Bonjour Yallah Services !",
-        "occurrences": 5,
-        "exemple": "Bonjour Yallah Services !",
+        "cle": "@wa:Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :",
+        "occurrences": 2,
+        "exemple": "Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :",
         "langue": "fr"
       },
       {
-        "cle": "💬 WhatsApp",
+        "cle": "💬 Demander un service",
         "occurrences": 1,
-        "exemple": "💬 WhatsApp",
+        "exemple": "💬 Demander un service",
         "langue": "fr"
       },
       {
         "cle": "@aria-label:Menu",
         "occurrences": 1,
         "exemple": "Menu",
+        "langue": "fr"
+      },
+      {
+        "cle": "Comment ça marche",
+        "occurrences": 1,
+        "exemple": "Comment ça marche",
         "langue": "fr"
       },
       {
@@ -99,15 +105,15 @@
         "langue": "fr"
       },
       {
-        "cle": "Entreprises — vidéo B2B",
-        "occurrences": 1,
-        "exemple": "Entreprises — vidéo B2B",
-        "langue": "fr"
-      },
-      {
         "cle": "🧑‍🍳 Espace candidats — je cherche un emploi",
         "occurrences": 1,
         "exemple": "🧑‍🍳 Espace candidats — je cherche un emploi",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services !",
+        "occurrences": 4,
+        "exemple": "Bonjour Yallah Services !",
         "langue": "fr"
       },
       {
@@ -287,6 +293,86 @@
         "langue": "fr",
         "balisage": "span",
         "html": "Particuliers et entreprises<span>besoins à domicile et B2B</span>"
+      },
+      {
+        "cle": "Yallah Services",
+        "occurrences": 1,
+        "exemple": "Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nos univers",
+        "occurrences": 1,
+        "exemple": "Nos univers",
+        "langue": "fr"
+      },
+      {
+        "cle": "Yallah Services simplifie votre quotidien : ménage, aide à la personne, services techniques, bien-être et solutions pour les entreprises. Un seul contact pour vos besoins.",
+        "occurrences": 1,
+        "exemple": "Yallah Services simplifie votre quotidien : ménage, aide à la personne, services techniques, bien-être et solutions pour les entreprises. Un seul contact pour vos besoins.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Femme de ménage, cuisinière, nounou, garde-malade, grand ménage, chauffeur, gardien. Un profil recherché selon vos critères.",
+        "occurrences": 1,
+        "exemple": "Femme de ménage, cuisinière, nounou, garde-malade, grand ménage, chauffeur, gardien. Un profil recherché selon vos critères.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Découvrir l’aide à domicile →",
+        "occurrences": 1,
+        "exemple": "Découvrir l’aide à domicile →",
+        "langue": "fr"
+      },
+      {
+        "cle": "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation, à Casablanca.",
+        "occurrences": 1,
+        "exemple": "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance de climatisation, à Casablanca.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Découvrir le froid & la climatisation →",
+        "occurrences": 1,
+        "exemple": "Découvrir le froid & la climatisation →",
+        "langue": "fr"
+      },
+      {
+        "cle": "Maquillage, manucure, pédicure et épilation à domicile, à Casablanca, avec des professionnelles partenaires sélectionnées.",
+        "occurrences": 1,
+        "exemple": "Maquillage, manucure, pédicure et épilation à domicile, à Casablanca, avec des professionnelles partenaires sélectionnées.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Découvrir l’esthétique & le bien-être →",
+        "occurrences": 1,
+        "exemple": "Découvrir l’esthétique & le bien-être →",
+        "langue": "fr"
+      },
+      {
+        "cle": "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.",
+        "occurrences": 1,
+        "exemple": "Personnel pour hôtels, riads, restauration, chantiers, sociétés de nettoyage et événements. Permanent, temporaire ou journalier, selon vos besoins.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Voir les services aux entreprises →",
+        "occurrences": 1,
+        "exemple": "Voir les services aux entreprises →",
+        "langue": "fr"
+      },
+      {
+        "cle": "💬 Demander un service sur WhatsApp",
+        "occurrences": 1,
+        "exemple": "💬 Demander un service sur WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ou écrivez-nous au +212 691 733 585",
+        "occurrences": 1,
+        "exemple": "Ou écrivez-nous au +212 691 733 585",
+        "langue": "fr",
+        "balisage": "a",
+        "html": "Ou écrivez-nous au <a href=\"https://wa.me/212691733585\" target=\"_blank\" rel=\"noopener\">+212 691 733 585</a>"
       },
       {
         "cle": "Un parcours en quatre étapes",
@@ -510,6 +596,18 @@
         "cle": "Grand Ménage à la journée — 500/700 DH",
         "occurrences": 2,
         "exemple": "Grand Ménage à la journée — 500/700 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Froid et climatisation",
+        "occurrences": 2,
+        "exemple": "Froid et climatisation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Esthétique et bien-être",
+        "occurrences": 2,
+        "exemple": "Esthétique et bien-être",
         "langue": "fr"
       },
       {
@@ -2461,6 +2559,18 @@
         "langue": "fr"
       },
       {
+        "cle": "Quartier (optionnel)",
+        "occurrences": 1,
+        "exemple": "Quartier (optionnel)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Date souhaitée (optionnelle)",
+        "occurrences": 1,
+        "exemple": "Date souhaitée (optionnelle)",
+        "langue": "fr"
+      },
+      {
         "cle": "Message (optionnel)",
         "occurrences": 1,
         "exemple": "Message (optionnel)",
@@ -2756,6 +2866,24 @@
         "cle": "WhatsApp / Tél",
         "occurrences": 1,
         "exemple": "WhatsApp / Tél",
+        "langue": "fr"
+      },
+      {
+        "cle": "Quartier",
+        "occurrences": 1,
+        "exemple": "Quartier",
+        "langue": "fr"
+      },
+      {
+        "cle": "Date souhaitée",
+        "occurrences": 1,
+        "exemple": "Date souhaitée",
+        "langue": "fr"
+      },
+      {
+        "cle": "Précisions",
+        "occurrences": 1,
+        "exemple": "Précisions",
         "langue": "fr"
       },
       {
@@ -3863,6 +3991,18 @@
         "langue": "fr"
       },
       {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Espace candidats — Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Déposez votre candidature pour les métiers de maison et de services au Maroc.",
+        "langue": "fr"
+      },
+      {
         "cle": "@meta:twitter:title",
         "occurrences": 1,
         "exemple": "Espace candidats — Yallah Services",
@@ -4718,6 +4858,18 @@
         "cle": "@meta:description",
         "occurrences": 1,
         "exemple": "Vous cherchez du travail comme femme de ménage, nounou, cuisinière ou garde-malade au Maroc ? Déposez vos références chez Yallah Services, c",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Espace candidats — Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Déposez votre candidature pour les métiers de maison et de services au Maroc.",
         "langue": "fr"
       },
       {
@@ -11652,6 +11804,1352 @@
         "cle": "@meta:twitter:description",
         "occurrences": 1,
         "exemple": "Recherche d",
+        "langue": "fr"
+      }
+    ],
+    "clesArabe": []
+  },
+  "froid-climatisation.html": {
+    "bilingue": false,
+    "clesFrancais": [
+      {
+        "cle": "@aria-label:Navigation principale",
+        "occurrences": 1,
+        "exemple": "Navigation principale",
+        "langue": "fr"
+      },
+      {
+        "cle": "@aria-label:Yallah Services, accueil",
+        "occurrences": 1,
+        "exemple": "Yallah Services, accueil",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Logo Yallah Services – aides à domicile au Maroc",
+        "occurrences": 1,
+        "exemple": "Logo Yallah Services – aides à domicile au Maroc",
+        "langue": "fr"
+      },
+      {
+        "cle": "Aide à domicile",
+        "occurrences": 3,
+        "exemple": "Aide à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "Froid & climatisation",
+        "occurrences": 2,
+        "exemple": "Froid & climatisation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Esthétique & bien-être",
+        "occurrences": 3,
+        "exemple": "Esthétique & bien-être",
+        "langue": "fr"
+      },
+      {
+        "cle": "Services aux entreprises",
+        "occurrences": 3,
+        "exemple": "Services aux entreprises",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tarifs",
+        "occurrences": 1,
+        "exemple": "Tarifs",
+        "langue": "fr"
+      },
+      {
+        "cle": "Espace candidats",
+        "occurrences": 2,
+        "exemple": "Espace candidats",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :",
+        "occurrences": 1,
+        "exemple": "Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :",
+        "langue": "fr"
+      },
+      {
+        "cle": "💬 Demander un service",
+        "occurrences": 1,
+        "exemple": "💬 Demander un service",
+        "langue": "fr"
+      },
+      {
+        "cle": "@aria-label:Fil d’Ariane",
+        "occurrences": 1,
+        "exemple": "Fil d’Ariane",
+        "langue": "fr"
+      },
+      {
+        "cle": "Accueil › Entretien et dépannage de votre climatisation",
+        "occurrences": 1,
+        "exemple": "Accueil › Entretien et dépannage de votre climatisation",
+        "langue": "fr",
+        "balisage": "a,span",
+        "html": "<a href=\"index.html\">Accueil</a> <span aria-hidden=\"true\">›</span> Entretien et dépannage de votre climatisation"
+      },
+      {
+        "cle": "Yallah Services · Froid & climatisation · Casablanca",
+        "occurrences": 1,
+        "exemple": "Yallah Services · Froid & climatisation · Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Entretien et dépannage de votre climatisation",
+        "occurrences": 1,
+        "exemple": "Entretien et dépannage de votre climatisation",
+        "langue": "fr",
+        "balisage": "em",
+        "html": "Entretien et dépannage de votre <em>climatisation</em>"
+      },
+      {
+        "cle": "Un appareil bien entretenu fonctionne mieux : confort, air plus sain et prévention des pannes. Nous vous mettons en relation avec des techniciens partenaires sélectionnés. Service disponible à Casablanca pour le moment.",
+        "occurrences": 1,
+        "exemple": "Un appareil bien entretenu fonctionne mieux : confort, air plus sain et prévention des pannes. Nous vous mettons en relation avec des techniciens partenaires sélectionnés. Service disponible à Casablanca pour le moment.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services, je souhaite une intervention ou un devis pour ma climatisation. Mon quartier à Casablanca, le type d’appareil et le besoin :",
+        "occurrences": 3,
+        "exemple": "Bonjour Yallah Services, je souhaite une intervention ou un devis pour ma climatisation. Mon quartier à Casablanca, le type d’appareil et le besoin :",
+        "langue": "fr"
+      },
+      {
+        "cle": "💬 Demander une intervention ou un devis",
+        "occurrences": 2,
+        "exemple": "💬 Demander une intervention ou un devis",
+        "langue": "fr"
+      },
+      {
+        "cle": "Voir la grille tarifaire",
+        "occurrences": 1,
+        "exemple": "Voir la grille tarifaire",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis.",
+        "occurrences": 2,
+        "exemple": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien climatisation en intervention dans un salon marocain à Casablanca",
+        "occurrences": 1,
+        "exemple": "Technicien climatisation en intervention dans un salon marocain à Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Illustration.",
+        "occurrences": 1,
+        "exemple": "Illustration.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nos prestations en images",
+        "occurrences": 1,
+        "exemple": "Nos prestations en images",
+        "langue": "fr"
+      },
+      {
+        "cle": "Toutes nos prestations, de l’entretien à la réparation. Tarifs indicatifs ci-dessous.",
+        "occurrences": 1,
+        "exemple": "Toutes nos prestations, de l’entretien à la réparation. Tarifs indicatifs ci-dessous.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien examinant un climatiseur mural avec une tablette",
+        "occurrences": 1,
+        "exemple": "Technicien examinant un climatiseur mural avec une tablette",
+        "langue": "fr"
+      },
+      {
+        "cle": "Diagnostic à domicile",
+        "occurrences": 2,
+        "exemple": "Diagnostic à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "Visite pour identifier la panne. Déductible de la réparation.",
+        "occurrences": 2,
+        "exemple": "Visite pour identifier la panne. Déductible de la réparation.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien nettoyant l’unité intérieure d’un climatiseur split",
+        "occurrences": 1,
+        "exemple": "Technicien nettoyant l’unité intérieure d’un climatiseur split",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nettoyage complet split",
+        "occurrences": 1,
+        "exemple": "Nettoyage complet split",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nettoyage de l’appareil, unité intérieure.",
+        "occurrences": 1,
+        "exemple": "Nettoyage de l’appareil, unité intérieure.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien nettoyant le condenseur d’une unité extérieure sur un balcon",
+        "occurrences": 1,
+        "exemple": "Technicien nettoyant le condenseur d’une unité extérieure sur un balcon",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nettoyage du condenseur",
+        "occurrences": 2,
+        "exemple": "Nettoyage du condenseur",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nettoyage et traitement anti-bactérien de l’unité extérieure.",
+        "occurrences": 1,
+        "exemple": "Nettoyage et traitement anti-bactérien de l’unité extérieure.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien contrôlant les tuyauteries d’un climatiseur avec un détecteur de fuite",
+        "occurrences": 1,
+        "exemple": "Technicien contrôlant les tuyauteries d’un climatiseur avec un détecteur de fuite",
+        "langue": "fr"
+      },
+      {
+        "cle": "Recherche et réparation de fuite",
+        "occurrences": 2,
+        "exemple": "Recherche et réparation de fuite",
+        "langue": "fr"
+      },
+      {
+        "cle": "Recherche de fuite et réparation.",
+        "occurrences": 1,
+        "exemple": "Recherche de fuite et réparation.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien branchant un manifold sur une unité extérieure",
+        "occurrences": 1,
+        "exemple": "Technicien branchant un manifold sur une unité extérieure",
+        "langue": "fr"
+      },
+      {
+        "cle": "Recharge de gaz",
+        "occurrences": 2,
+        "exemple": "Recharge de gaz",
+        "langue": "fr"
+      },
+      {
+        "cle": "Recharge R410A ou R32, selon l’appareil.",
+        "occurrences": 1,
+        "exemple": "Recharge R410A ou R32, selon l’appareil.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Intérieur avec climatiseur, check-list et planning d’entretien",
+        "occurrences": 1,
+        "exemple": "Intérieur avec climatiseur, check-list et planning d’entretien",
+        "langue": "fr"
+      },
+      {
+        "cle": "Contrat d’entretien annuel",
+        "occurrences": 2,
+        "exemple": "Contrat d’entretien annuel",
+        "langue": "fr"
+      },
+      {
+        "cle": "Maintenance préventive, par équipement.",
+        "occurrences": 2,
+        "exemple": "Maintenance préventive, par équipement.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien réparant un réfrigérateur dans une cuisine",
+        "occurrences": 1,
+        "exemple": "Technicien réparant un réfrigérateur dans une cuisine",
+        "langue": "fr"
+      },
+      {
+        "cle": "Réparation réfrigérateur ou congélateur",
+        "occurrences": 2,
+        "exemple": "Réparation réfrigérateur ou congélateur",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pièces hors forfait.",
+        "occurrences": 2,
+        "exemple": "Pièces hors forfait.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien remplaçant le thermostat d’un climatiseur",
+        "occurrences": 1,
+        "exemple": "Technicien remplaçant le thermostat d’un climatiseur",
+        "langue": "fr"
+      },
+      {
+        "cle": "Remplacement du thermostat",
+        "occurrences": 2,
+        "exemple": "Remplacement du thermostat",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pièce en sus.",
+        "occurrences": 4,
+        "exemple": "Pièce en sus.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien travaillant sur le compresseur d’une unité extérieure",
+        "occurrences": 1,
+        "exemple": "Technicien travaillant sur le compresseur d’une unité extérieure",
+        "langue": "fr"
+      },
+      {
+        "cle": "Remplacement du compresseur",
+        "occurrences": 2,
+        "exemple": "Remplacement du compresseur",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien fixant le support mural d’un climatiseur split",
+        "occurrences": 1,
+        "exemple": "Technicien fixant le support mural d’un climatiseur split",
+        "langue": "fr"
+      },
+      {
+        "cle": "Installation ou dépose-repose",
+        "occurrences": 1,
+        "exemple": "Installation ou dépose-repose",
+        "langue": "fr"
+      },
+      {
+        "cle": "Installation, ou dépose et repose de l’appareil.",
+        "occurrences": 2,
+        "exemple": "Installation, ou dépose et repose de l’appareil.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien en intervention d’urgence le soir devant un immeuble",
+        "occurrences": 1,
+        "exemple": "Technicien en intervention d’urgence le soir devant un immeuble",
+        "langue": "fr"
+      },
+      {
+        "cle": "Dépannage d’urgence",
+        "occurrences": 2,
+        "exemple": "Dépannage d’urgence",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nuit, week-end et Ramadan.",
+        "occurrences": 2,
+        "exemple": "Nuit, week-end et Ramadan.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien réparant une machine à laver",
+        "occurrences": 1,
+        "exemple": "Technicien réparant une machine à laver",
+        "langue": "fr"
+      },
+      {
+        "cle": "Machine à laver",
+        "occurrences": 2,
+        "exemple": "Machine à laver",
+        "langue": "fr"
+      },
+      {
+        "cle": "Dépannage et réparation.",
+        "occurrences": 5,
+        "exemple": "Dépannage et réparation.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Technicien contrôlant un chauffe-eau",
+        "occurrences": 1,
+        "exemple": "Technicien contrôlant un chauffe-eau",
+        "langue": "fr"
+      },
+      {
+        "cle": "Chauffe-eau",
+        "occurrences": 2,
+        "exemple": "Chauffe-eau",
+        "langue": "fr"
+      },
+      {
+        "cle": "Illustrations.",
+        "occurrences": 1,
+        "exemple": "Illustrations.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nos prestations de climatisation",
+        "occurrences": 1,
+        "exemple": "Nos prestations de climatisation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de votre appareil et du diagnostic.",
+        "occurrences": 1,
+        "exemple": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de votre appareil et du diagnostic.",
+        "langue": "fr"
+      },
+      {
+        "cle": "100 à 200 DH",
+        "occurrences": 1,
+        "exemple": "100 à 200 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nettoyage complet climatiseur split",
+        "occurrences": 1,
+        "exemple": "Nettoyage complet climatiseur split",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nettoyage complet de l’appareil split.",
+        "occurrences": 1,
+        "exemple": "Nettoyage complet de l’appareil split.",
+        "langue": "fr"
+      },
+      {
+        "cle": "200 à 400 DH",
+        "occurrences": 1,
+        "exemple": "200 à 400 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nettoyage et traitement anti-bactérien.",
+        "occurrences": 1,
+        "exemple": "Nettoyage et traitement anti-bactérien.",
+        "langue": "fr"
+      },
+      {
+        "cle": "150 à 250 DH",
+        "occurrences": 1,
+        "exemple": "150 à 250 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Recherche de la fuite, puis réparation.",
+        "occurrences": 1,
+        "exemple": "Recherche de la fuite, puis réparation.",
+        "langue": "fr"
+      },
+      {
+        "cle": "400 à 900 DH",
+        "occurrences": 1,
+        "exemple": "400 à 900 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "2 500 à 4 500 DH par équipement",
+        "occurrences": 1,
+        "exemple": "2 500 à 4 500 DH par équipement",
+        "langue": "fr"
+      },
+      {
+        "cle": "Recharge de gaz R410A ou R32, selon l’appareil.",
+        "occurrences": 1,
+        "exemple": "Recharge de gaz R410A ou R32, selon l’appareil.",
+        "langue": "fr"
+      },
+      {
+        "cle": "300 à 700 DH",
+        "occurrences": 1,
+        "exemple": "300 à 700 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "250 à 600 DH + pièces",
+        "occurrences": 1,
+        "exemple": "250 à 600 DH + pièces",
+        "langue": "fr"
+      },
+      {
+        "cle": "150 à 300 DH + pièce",
+        "occurrences": 1,
+        "exemple": "150 à 300 DH + pièce",
+        "langue": "fr"
+      },
+      {
+        "cle": "800 à 2 000 DH + pièce",
+        "occurrences": 1,
+        "exemple": "800 à 2 000 DH + pièce",
+        "langue": "fr"
+      },
+      {
+        "cle": "Installation ou dépose-repose d’appareil",
+        "occurrences": 1,
+        "exemple": "Installation ou dépose-repose d’appareil",
+        "langue": "fr"
+      },
+      {
+        "cle": "300 à 800 DH",
+        "occurrences": 1,
+        "exemple": "300 à 800 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "+50 % du tarif normal",
+        "occurrences": 1,
+        "exemple": "+50 % du tarif normal",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les pièces de rechange, si elles sont nécessaires, sont à valider avant intervention.",
+        "occurrences": 1,
+        "exemple": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les pièces de rechange, si elles sont nécessaires, sont à valider avant intervention.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Électroménager",
+        "occurrences": 1,
+        "exemple": "Électroménager",
+        "langue": "fr"
+      },
+      {
+        "cle": "Prestations disponibles à Casablanca pour le moment, sur devis.",
+        "occurrences": 1,
+        "exemple": "Prestations disponibles à Casablanca pour le moment, sur devis.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Réfrigérateur et frigo",
+        "occurrences": 1,
+        "exemple": "Réfrigérateur et frigo",
+        "langue": "fr"
+      },
+      {
+        "cle": "Sur devis",
+        "occurrences": 3,
+        "exemple": "Sur devis",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pourquoi entretenir votre climatisation",
+        "occurrences": 1,
+        "exemple": "Pourquoi entretenir votre climatisation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Un entretien régulier, c’est surtout prévenir les pannes et garder un air sain.",
+        "occurrences": 1,
+        "exemple": "Un entretien régulier, c’est surtout prévenir les pannes et garder un air sain.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Confort",
+        "occurrences": 1,
+        "exemple": "Confort",
+        "langue": "fr"
+      },
+      {
+        "cle": "Un appareil qui refroidit correctement et fonctionne de façon régulière.",
+        "occurrences": 1,
+        "exemple": "Un appareil qui refroidit correctement et fonctionne de façon régulière.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Air plus sain",
+        "occurrences": 1,
+        "exemple": "Air plus sain",
+        "langue": "fr"
+      },
+      {
+        "cle": "Un nettoyage régulier réduit la poussière accumulée dans l’appareil.",
+        "occurrences": 1,
+        "exemple": "Un nettoyage régulier réduit la poussière accumulée dans l’appareil.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Prévention des pannes",
+        "occurrences": 1,
+        "exemple": "Prévention des pannes",
+        "langue": "fr"
+      },
+      {
+        "cle": "Un diagnostic avant la panne permet d’anticiper les réparations.",
+        "occurrences": 1,
+        "exemple": "Un diagnostic avant la panne permet d’anticiper les réparations.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Suivi régulier",
+        "occurrences": 1,
+        "exemple": "Suivi régulier",
+        "langue": "fr"
+      },
+      {
+        "cle": "Un entretien planifié permet de vérifier l’appareil avant qu’une panne n’apparaisse.",
+        "occurrences": 1,
+        "exemple": "Un entretien planifié permet de vérifier l’appareil avant qu’une panne n’apparaisse.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Comment ça marche",
+        "occurrences": 1,
+        "exemple": "Comment ça marche",
+        "langue": "fr"
+      },
+      {
+        "cle": "Cinq étapes, du premier message à l’intervention.",
+        "occurrences": 1,
+        "exemple": "Cinq étapes, du premier message à l’intervention.",
+        "langue": "fr"
+      },
+      {
+        "cle": "1. Décrivez votre besoin",
+        "occurrences": 1,
+        "exemple": "1. Décrivez votre besoin",
+        "langue": "fr"
+      },
+      {
+        "cle": "Type d’appareil, symptôme ou entretien souhaité, quartier à Casablanca et disponibilité.",
+        "occurrences": 1,
+        "exemple": "Type d’appareil, symptôme ou entretien souhaité, quartier à Casablanca et disponibilité.",
+        "langue": "fr"
+      },
+      {
+        "cle": "2. Qualification",
+        "occurrences": 1,
+        "exemple": "2. Qualification",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nous précisons le besoin avec vous avant toute mise en relation.",
+        "occurrences": 1,
+        "exemple": "Nous précisons le besoin avec vous avant toute mise en relation.",
+        "langue": "fr"
+      },
+      {
+        "cle": "3. Mise en relation",
+        "occurrences": 1,
+        "exemple": "3. Mise en relation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Un technicien partenaire sélectionné est proposé pour votre demande.",
+        "occurrences": 1,
+        "exemple": "Un technicien partenaire sélectionné est proposé pour votre demande.",
+        "langue": "fr"
+      },
+      {
+        "cle": "4. Devis si nécessaire",
+        "occurrences": 1,
+        "exemple": "4. Devis si nécessaire",
+        "langue": "fr"
+      },
+      {
+        "cle": "Le devis est présenté avant la réparation, s’il est nécessaire.",
+        "occurrences": 1,
+        "exemple": "Le devis est présenté avant la réparation, s’il est nécessaire.",
+        "langue": "fr"
+      },
+      {
+        "cle": "5. Intervention à domicile",
+        "occurrences": 1,
+        "exemple": "5. Intervention à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "Le technicien partenaire intervient chez vous, selon le besoin validé.",
+        "occurrences": 1,
+        "exemple": "Le technicien partenaire intervient chez vous, selon le besoin validé.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Autres univers",
+        "occurrences": 1,
+        "exemple": "Autres univers",
+        "langue": "fr"
+      },
+      {
+        "cle": "Maquillage, manucure, pédicure et épilation à domicile.",
+        "occurrences": 1,
+        "exemple": "Maquillage, manucure, pédicure et épilation à domicile.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ménage, cuisine, nounou, garde-malade, chauffeur et gardiennage.",
+        "occurrences": 1,
+        "exemple": "Ménage, cuisine, nounou, garde-malade, chauffeur et gardiennage.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Personnel pour hôtels, riads, restauration, chantiers et événements.",
+        "occurrences": 1,
+        "exemple": "Personnel pour hôtels, riads, restauration, chantiers et événements.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Une climatisation à entretenir ?",
+        "occurrences": 1,
+        "exemple": "Une climatisation à entretenir ?",
+        "langue": "fr"
+      },
+      {
+        "cle": "Décrivez-nous l’appareil, la panne ou l’entretien souhaité, et votre quartier à Casablanca : nous vous répondons sur WhatsApp.",
+        "occurrences": 1,
+        "exemple": "Décrivez-nous l’appareil, la panne ou l’entretien souhaité, et votre quartier à Casablanca : nous vous répondons sur WhatsApp.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ou écrivez-nous au +212 691 733 585",
+        "occurrences": 1,
+        "exemple": "Ou écrivez-nous au +212 691 733 585",
+        "langue": "fr",
+        "balisage": "a",
+        "html": "Ou écrivez-nous au <a href=\"https://wa.me/212691733585\" target=\"_blank\" rel=\"noopener\">+212 691 733 585</a>"
+      },
+      {
+        "cle": "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.",
+        "occurrences": 1,
+        "exemple": "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "<strong>Yallah Services</strong> — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220."
+      },
+      {
+        "cle": "Accueil",
+        "occurrences": 1,
+        "exemple": "Accueil",
+        "langue": "fr"
+      },
+      {
+        "cle": "servicesyallah@gmail.com",
+        "occurrences": 1,
+        "exemple": "servicesyallah@gmail.com",
+        "langue": "fr"
+      },
+      {
+        "cle": "WhatsApp +212 691 733 585",
+        "occurrences": 1,
+        "exemple": "WhatsApp +212 691 733 585",
+        "langue": "fr"
+      },
+      {
+        "cle": "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn",
+        "occurrences": 1,
+        "exemple": "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn",
+        "langue": "fr",
+        "balisage": "a,a,a,a",
+        "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
+      },
+      {
+        "cle": "@aria-label:Demander sur WhatsApp",
+        "occurrences": 1,
+        "exemple": "Demander sur WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "WhatsApp",
+        "occurrences": 1,
+        "exemple": "WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "@title",
+        "occurrences": 1,
+        "exemple": "Entretien climatisation Casablanca | Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:description",
+        "occurrences": 1,
+        "exemple": "Entretien, nettoyage, diagnostic et dépannage de climatisation, à Casablanca pour le moment. Tarifs indicatifs et devis sur WhatsApp.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:locale",
+        "occurrences": 1,
+        "exemple": "fr_MA",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Entretien climatisation Casablanca | Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Entretien, nettoyage, diagnostic et dépannage de climatisation, à Casablanca pour le moment. Tarifs indicatifs et devis sur WhatsApp.",
+        "langue": "fr"
+      }
+    ],
+    "clesArabe": []
+  },
+  "esthetique-bien-etre.html": {
+    "bilingue": false,
+    "clesFrancais": [
+      {
+        "cle": "@aria-label:Navigation principale",
+        "occurrences": 1,
+        "exemple": "Navigation principale",
+        "langue": "fr"
+      },
+      {
+        "cle": "@aria-label:Yallah Services, accueil",
+        "occurrences": 1,
+        "exemple": "Yallah Services, accueil",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Logo Yallah Services – aides à domicile au Maroc",
+        "occurrences": 1,
+        "exemple": "Logo Yallah Services – aides à domicile au Maroc",
+        "langue": "fr"
+      },
+      {
+        "cle": "Aide à domicile",
+        "occurrences": 3,
+        "exemple": "Aide à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "Froid & climatisation",
+        "occurrences": 3,
+        "exemple": "Froid & climatisation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Esthétique & bien-être",
+        "occurrences": 2,
+        "exemple": "Esthétique & bien-être",
+        "langue": "fr"
+      },
+      {
+        "cle": "Services aux entreprises",
+        "occurrences": 3,
+        "exemple": "Services aux entreprises",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tarifs",
+        "occurrences": 1,
+        "exemple": "Tarifs",
+        "langue": "fr"
+      },
+      {
+        "cle": "Espace candidats",
+        "occurrences": 2,
+        "exemple": "Espace candidats",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :",
+        "occurrences": 1,
+        "exemple": "Bonjour Yallah Services, je souhaite demander un service. Mon besoin, ma ville et ma date souhaitée :",
+        "langue": "fr"
+      },
+      {
+        "cle": "💬 Demander un service",
+        "occurrences": 1,
+        "exemple": "💬 Demander un service",
+        "langue": "fr"
+      },
+      {
+        "cle": "@aria-label:Fil d’Ariane",
+        "occurrences": 1,
+        "exemple": "Fil d’Ariane",
+        "langue": "fr"
+      },
+      {
+        "cle": "Accueil › Esthétique & bien-être à domicile",
+        "occurrences": 1,
+        "exemple": "Accueil › Esthétique & bien-être à domicile",
+        "langue": "fr",
+        "balisage": "a,span",
+        "html": "<a href=\"index.html\">Accueil</a> <span aria-hidden=\"true\">›</span> Esthétique & bien-être à domicile"
+      },
+      {
+        "cle": "Yallah Services · Esthétique & bien-être · Casablanca",
+        "occurrences": 1,
+        "exemple": "Yallah Services · Esthétique & bien-être · Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Esthétique & bien-être à domicile",
+        "occurrences": 1,
+        "exemple": "Esthétique & bien-être à domicile",
+        "langue": "fr",
+        "balisage": "em",
+        "html": "Esthétique & <em>bien-être</em> à domicile"
+      },
+      {
+        "cle": "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
+        "occurrences": 1,
+        "exemple": "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@wa:Bonjour Yallah Services, je souhaite réserver une prestation beauté à domicile. Mon quartier à Casablanca, la prestation et la date souhaitée :",
+        "occurrences": 3,
+        "exemple": "Bonjour Yallah Services, je souhaite réserver une prestation beauté à domicile. Mon quartier à Casablanca, la prestation et la date souhaitée :",
+        "langue": "fr"
+      },
+      {
+        "cle": "💬 Réserver une prestation sur WhatsApp",
+        "occurrences": 2,
+        "exemple": "💬 Réserver une prestation sur WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "Voir la grille tarifaire",
+        "occurrences": 1,
+        "exemple": "Voir la grille tarifaire",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Préparation beauté pour événement : sur devis.",
+        "occurrences": 1,
+        "exemple": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Préparation beauté pour événement : sur devis.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Prestations beauté à domicile dans un salon marocain à Casablanca",
+        "occurrences": 1,
+        "exemple": "Prestations beauté à domicile dans un salon marocain à Casablanca",
+        "langue": "fr"
+      },
+      {
+        "cle": "Illustration.",
+        "occurrences": 1,
+        "exemple": "Illustration.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nos prestations en images",
+        "occurrences": 1,
+        "exemple": "Nos prestations en images",
+        "langue": "fr"
+      },
+      {
+        "cle": "Des prestations à domicile, par des professionnelles partenaires sélectionnées. Tarifs indicatifs ci-dessous.",
+        "occurrences": 1,
+        "exemple": "Des prestations à domicile, par des professionnelles partenaires sélectionnées. Tarifs indicatifs ci-dessous.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Maquilleuse appliquant du maquillage à une cliente",
+        "occurrences": 1,
+        "exemple": "Maquilleuse appliquant du maquillage à une cliente",
+        "langue": "fr"
+      },
+      {
+        "cle": "Maquillage",
+        "occurrences": 2,
+        "exemple": "Maquillage",
+        "langue": "fr"
+      },
+      {
+        "cle": "Maquillage jour ou soirée.",
+        "occurrences": 2,
+        "exemple": "Maquillage jour ou soirée.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Mains recevant une manucure avec vernis nude",
+        "occurrences": 1,
+        "exemple": "Mains recevant une manucure avec vernis nude",
+        "langue": "fr"
+      },
+      {
+        "cle": "Manucure",
+        "occurrences": 1,
+        "exemple": "Manucure",
+        "langue": "fr"
+      },
+      {
+        "cle": "De la dépose au gel.",
+        "occurrences": 2,
+        "exemple": "De la dépose au gel.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Pédicure à domicile avec bassin d’eau fleurie et vernis",
+        "occurrences": 1,
+        "exemple": "Pédicure à domicile avec bassin d’eau fleurie et vernis",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pédicure",
+        "occurrences": 1,
+        "exemple": "Pédicure",
+        "langue": "fr"
+      },
+      {
+        "cle": "Soin des pieds, selon la grille tarifaire.",
+        "occurrences": 1,
+        "exemple": "Soin des pieds, selon la grille tarifaire.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Matériel d’épilation à la cire sur un plateau en bois",
+        "occurrences": 1,
+        "exemple": "Matériel d’épilation à la cire sur un plateau en bois",
+        "langue": "fr"
+      },
+      {
+        "cle": "Épilation (cire)",
+        "occurrences": 2,
+        "exemple": "Épilation (cire)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Du sourcil au forfait complet.",
+        "occurrences": 2,
+        "exemple": "Du sourcil au forfait complet.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Femme recevant un massage du dos dans une pièce lumineuse",
+        "occurrences": 1,
+        "exemple": "Femme recevant un massage du dos dans une pièce lumineuse",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage",
+        "occurrences": 1,
+        "exemple": "Massage",
+        "langue": "fr"
+      },
+      {
+        "cle": "Réservé aux femmes. Voir les tarifs ci-dessous.",
+        "occurrences": 1,
+        "exemple": "Réservé aux femmes. Voir les tarifs ci-dessous.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Soin du visage à domicile avec application de crème",
+        "occurrences": 1,
+        "exemple": "Soin du visage à domicile avec application de crème",
+        "langue": "fr"
+      },
+      {
+        "cle": "Soins du visage",
+        "occurrences": 1,
+        "exemple": "Soins du visage",
+        "langue": "fr"
+      },
+      {
+        "cle": "Sur devis.",
+        "occurrences": 1,
+        "exemple": "Sur devis.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@alt:Préparation beauté pour un événement à domicile",
+        "occurrences": 1,
+        "exemple": "Préparation beauté pour un événement à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "Préparation beauté événement",
+        "occurrences": 1,
+        "exemple": "Préparation beauté événement",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pour un événement, sur devis.",
+        "occurrences": 2,
+        "exemple": "Pour un événement, sur devis.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Illustrations.",
+        "occurrences": 1,
+        "exemple": "Illustrations.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nos prestations à domicile",
+        "occurrences": 1,
+        "exemple": "Nos prestations à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.",
+        "occurrences": 1,
+        "exemple": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.",
+        "langue": "fr"
+      },
+      {
+        "cle": "400 DH",
+        "occurrences": 1,
+        "exemple": "400 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Manucure et pédicure",
+        "occurrences": 1,
+        "exemple": "Manucure et pédicure",
+        "langue": "fr"
+      },
+      {
+        "cle": "50 à 350 DH",
+        "occurrences": 1,
+        "exemple": "50 à 350 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "40 à 320 DH",
+        "occurrences": 1,
+        "exemple": "40 à 320 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Préparation beauté pour événements",
+        "occurrences": 1,
+        "exemple": "Préparation beauté pour événements",
+        "langue": "fr"
+      },
+      {
+        "cle": "Sur devis",
+        "occurrences": 1,
+        "exemple": "Sur devis",
+        "langue": "fr"
+      },
+      {
+        "cle": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les prestations sont assurées par des professionnelles partenaires sélectionnées.",
+        "occurrences": 1,
+        "exemple": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les prestations sont assurées par des professionnelles partenaires sélectionnées.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Comment réserver",
+        "occurrences": 1,
+        "exemple": "Comment réserver",
+        "langue": "fr"
+      },
+      {
+        "cle": "Quatre étapes, de la prestation choisie à l’intervention.",
+        "occurrences": 1,
+        "exemple": "Quatre étapes, de la prestation choisie à l’intervention.",
+        "langue": "fr"
+      },
+      {
+        "cle": "1. Choisissez la prestation",
+        "occurrences": 1,
+        "exemple": "1. Choisissez la prestation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Maquillage, manucure, pédicure, épilation ou préparation beauté.",
+        "occurrences": 1,
+        "exemple": "Maquillage, manucure, pédicure, épilation ou préparation beauté.",
+        "langue": "fr"
+      },
+      {
+        "cle": "2. Réservez sur WhatsApp",
+        "occurrences": 1,
+        "exemple": "2. Réservez sur WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "Indiquez la prestation, votre quartier à Casablanca et la date souhaitée.",
+        "occurrences": 1,
+        "exemple": "Indiquez la prestation, votre quartier à Casablanca et la date souhaitée.",
+        "langue": "fr"
+      },
+      {
+        "cle": "3. Vérification",
+        "occurrences": 1,
+        "exemple": "3. Vérification",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nous échangeons avec vous pour vérifier la disponibilité avant toute intervention.",
+        "occurrences": 1,
+        "exemple": "Nous échangeons avec vous pour vérifier la disponibilité avant toute intervention.",
+        "langue": "fr"
+      },
+      {
+        "cle": "4. Intervention à domicile",
+        "occurrences": 1,
+        "exemple": "4. Intervention à domicile",
+        "langue": "fr"
+      },
+      {
+        "cle": "La professionnelle partenaire se déplace chez vous.",
+        "occurrences": 1,
+        "exemple": "La professionnelle partenaire se déplace chez vous.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nos engagements, et leurs limites",
+        "occurrences": 1,
+        "exemple": "Nos engagements, et leurs limites",
+        "langue": "fr"
+      },
+      {
+        "cle": "Une approche simple et prudente.",
+        "occurrences": 1,
+        "exemple": "Une approche simple et prudente.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Professionnelles sélectionnées",
+        "occurrences": 1,
+        "exemple": "Professionnelles sélectionnées",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les prestations sont assurées par des professionnelles partenaires sélectionnées par Yallah Services.",
+        "occurrences": 1,
+        "exemple": "Les prestations sont assurées par des professionnelles partenaires sélectionnées par Yallah Services.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pas de promesse de résultat",
+        "occurrences": 1,
+        "exemple": "Pas de promesse de résultat",
+        "langue": "fr"
+      },
+      {
+        "cle": "Nous ne garantissons aucun résultat esthétique.",
+        "occurrences": 1,
+        "exemple": "Nous ne garantissons aucun résultat esthétique.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pas de promesse médicale",
+        "occurrences": 1,
+        "exemple": "Pas de promesse médicale",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les soins esthétiques ne remplacent pas un avis médical.",
+        "occurrences": 1,
+        "exemple": "Les soins esthétiques ne remplacent pas un avis médical.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Autres univers",
+        "occurrences": 1,
+        "exemple": "Autres univers",
+        "langue": "fr"
+      },
+      {
+        "cle": "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance.",
+        "occurrences": 1,
+        "exemple": "Entretien, nettoyage, diagnostic, dépannage et contrats de maintenance.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ménage, cuisine, nounou, garde-malade, chauffeur et gardiennage.",
+        "occurrences": 1,
+        "exemple": "Ménage, cuisine, nounou, garde-malade, chauffeur et gardiennage.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Personnel pour hôtels, riads, restauration, chantiers et événements.",
+        "occurrences": 1,
+        "exemple": "Personnel pour hôtels, riads, restauration, chantiers et événements.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Une prestation beauté à domicile ?",
+        "occurrences": 1,
+        "exemple": "Une prestation beauté à domicile ?",
+        "langue": "fr"
+      },
+      {
+        "cle": "Dites-nous la prestation, votre quartier à Casablanca et la date souhaitée : nous vous répondons sur WhatsApp.",
+        "occurrences": 1,
+        "exemple": "Dites-nous la prestation, votre quartier à Casablanca et la date souhaitée : nous vous répondons sur WhatsApp.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Ou écrivez-nous au +212 691 733 585",
+        "occurrences": 1,
+        "exemple": "Ou écrivez-nous au +212 691 733 585",
+        "langue": "fr",
+        "balisage": "a",
+        "html": "Ou écrivez-nous au <a href=\"https://wa.me/212691733585\" target=\"_blank\" rel=\"noopener\">+212 691 733 585</a>"
+      },
+      {
+        "cle": "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.",
+        "occurrences": 1,
+        "exemple": "Yallah Services — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220.",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "<strong>Yallah Services</strong> — Recherche et mise en relation de personnel pour les particuliers et les entreprises au Maroc. Base : Casablanca, Hay Hassani 20220."
+      },
+      {
+        "cle": "Accueil",
+        "occurrences": 1,
+        "exemple": "Accueil",
+        "langue": "fr"
+      },
+      {
+        "cle": "servicesyallah@gmail.com",
+        "occurrences": 1,
+        "exemple": "servicesyallah@gmail.com",
+        "langue": "fr"
+      },
+      {
+        "cle": "WhatsApp +212 691 733 585",
+        "occurrences": 1,
+        "exemple": "WhatsApp +212 691 733 585",
+        "langue": "fr"
+      },
+      {
+        "cle": "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn",
+        "occurrences": 1,
+        "exemple": "Suivez-nous : Facebook · Instagram · TikTok · LinkedIn",
+        "langue": "fr",
+        "balisage": "a,a,a,a",
+        "html": "Suivez-nous : <a href=\"https://web.facebook.com/yallahservicesmaroc\" target=\"_blank\" rel=\"noopener noreferrer\">Facebook</a> · <a href=\"https://www.instagram.com/yallahservice/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a> · <a href=\"https://www.tiktok.com/@yallah.services.m\" target=\"_blank\" rel=\"noopener noreferrer\">TikTok</a> · <a href=\"https://www.linkedin.com/in/yallah-services/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>"
+      },
+      {
+        "cle": "@aria-label:Demander sur WhatsApp",
+        "occurrences": 1,
+        "exemple": "Demander sur WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "WhatsApp",
+        "occurrences": 1,
+        "exemple": "WhatsApp",
+        "langue": "fr"
+      },
+      {
+        "cle": "@title",
+        "occurrences": 1,
+        "exemple": "Esthétique à domicile Casablanca | Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:description",
+        "occurrences": 1,
+        "exemple": "Maquillage, maquillage, manucure, pédicure et épilation à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:locale",
+        "occurrences": 1,
+        "exemple": "fr_MA",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Esthétique à domicile Casablanca | Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Maquillage, maquillage, manucure, pédicure et épilation à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
         "langue": "fr"
       }
     ],
