@@ -22,7 +22,7 @@ YS_TRAD("dar-latn", "esthetique-bien-etre", {
   "Accueil › Esthétique & bien-être à domicile": "Ra2issiya › Beauté w bien-être f dar",
   "Yallah Services · Esthétique & bien-être · Casablanca": "Yallah Services · Beauté & bien-être · Casa",
   "Esthétique & bien-être à domicile": "Beauté & bien-être f dar",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "Maquillage, manucure, pédicure, épilation wla préparation beauté: professionnelle sharika mkhtara kat-jik l-dar dyalkom. Had lkhidma kayna Casa daba bass.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "Maquillage, manucure, pédicure, épilation, massage wla préparation beauté: professionnelle sharika mkhtara kat-jik l-dar dyalkom. Had lkhidma kayna Casa daba bass.",
   "@wa:Bonjour Yallah Services, je souhaite réserver une prestation beauté à domicile. Mon quartier à Casablanca, la prestation et la date souhaitée :": "Salam Yallah Services, bghit n7jez khidma dyal beauté f dar. Lhay dyali f Casa, lkhidma w date li bghit:",
   "💬 Réserver une prestation sur WhatsApp": "💬 7jez khidma 3la WhatsApp",
   "Voir la grille tarifaire": "Shouf l-grille dyal taman",
@@ -65,7 +65,7 @@ YS_TRAD("dar-latn", "esthetique-bien-etre", {
   "Comment réserver": "Kifach t7jez",
   "Quatre étapes, de la prestation choisie à l’intervention.": "Arba3 marahel, mn lkhidma li ktartiha hta l-intervention.",
   "1. Choisissez la prestation": "1. Khtar lkhidma",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté.": "Maquillage, manucure, pédicure, épilation wla préparation beauté.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.": "Maquillage, manucure, pédicure, épilation, massage wla préparation beauté.",
   "2. Réservez sur WhatsApp": "2. 7jez 3la WhatsApp",
   "Indiquez la prestation, votre quartier à Casablanca et la date souhaitée.": "Goul lna lkhidma, lhay dyalek f Casa w date li bghiti.",
   "3. Vérification": "3. Tahakkok",
@@ -95,8 +95,8 @@ YS_TRAD("dar-latn", "esthetique-bien-etre", {
   "@aria-label:Demander sur WhatsApp": "Demandi 3la WhatsApp",
   "WhatsApp": "WhatsApp",
   "@title": "Beauté & bien-être f dar | Yallah Services",
-  "@meta:description": "Maquillage, manucure, pédicure, épilation w préparation beauté f dar f Casa: taman indicatif, devis 3la ba3d lkhdmat, professionnelat mkhtarat.",
+  "@meta:description": "Maquillage, manucure, pédicure, épilation w massages f dar f Casa daba. Réservation 3la WhatsApp w taman indicatif.",
   "@meta:og:locale": "ar_MA",
   "@meta:og:title": "Beauté & bien-être f dar | Yallah Services",
-  "@meta:og:description": "Maquillage, manucure, pédicure, épilation w préparation beauté f dar f Casa: taman indicatif, devis 3la ba3d lkhdmat, professionnelat mkhtarat."
+  "@meta:og:description": "Maquillage, manucure, pédicure, épilation w massages f dar f Casa daba. Réservation 3la WhatsApp w taman indicatif."
 });

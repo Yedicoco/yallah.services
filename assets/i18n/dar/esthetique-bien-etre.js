@@ -22,7 +22,7 @@ YS_TRAD("dar", "esthetique-bien-etre", {
   "Accueil › Esthétique & bien-être à domicile": "الرئيسية › التجميل والراحة فالدار",
   "Yallah Services · Esthétique & bien-être · Casablanca": "Yallah Services · التجميل والراحة · كازا",
   "Esthétique & bien-être à domicile": "التجميل والراحة فالدار",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع أو تحضير التجميل للمناسبات: مهنية شريكة مختارة كتجي لدارك. الخدمة متوفرة فكازا دابا غير.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع، مساج أو تحضير التجميل للمناسبات: مهنية شريكة مختارة كتجي لدارك. الخدمة متوفرة فكازا دابا غير.",
   "@wa:Bonjour Yallah Services, je souhaite réserver une prestation beauté à domicile. Mon quartier à Casablanca, la prestation et la date souhaitée :": "السلام عليكم Yallah Services، بغيت نحجز خدمة تجميل فالدار. الحي ديالي فكازا، الخدمة والتاريخ لي بغيت:",
   "💬 Réserver une prestation sur WhatsApp": "💬 احجز خدمة على واتساب",
   "Voir la grille tarifaire": "شوف لائحة الأثمنة",
@@ -65,7 +65,7 @@ YS_TRAD("dar", "esthetique-bien-etre", {
   "Comment réserver": "كيفاش تحجز",
   "Quatre étapes, de la prestation choisie à l’intervention.": "أربع مراحل، من الخدمة لي ختار حتى التدخل.",
   "1. Choisissez la prestation": "1. ختار الخدمة",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté.": "الماكياج، المانيكير، البيديكير، إزالة الشعر بالشمع أو تحضير التجميل للمناسبات.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع، مساج أو تحضير التجميل للمناسبات.",
   "2. Réservez sur WhatsApp": "2. احجز على واتساب",
   "Indiquez la prestation, votre quartier à Casablanca et la date souhaitée.": "قولنا الخدمة، الحي ديالك فكازا والتاريخ لي بغيتي.",
   "3. Vérification": "3. التأكد",
@@ -95,8 +95,8 @@ YS_TRAD("dar", "esthetique-bien-etre", {
   "@aria-label:Demander sur WhatsApp": "اطلب على واتساب",
   "WhatsApp": "واتساب",
   "@title": "التجميل والراحة فالدار | Yallah Services",
-  "@meta:description": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع وتجميل المناسبات فالدار فكازا: أثمنة تقريبية، عرض ثمن لبعض الخدمات، مهنيات مختارات.",
+  "@meta:description": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع والمساج فالدار فكازا دابا. الحجز على واتساب والأثمنة تقريبية.",
   "@meta:og:locale": "ar_MA",
   "@meta:og:title": "التجميل والراحة فالدار | Yallah Services",
-  "@meta:og:description": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع وتجميل المناسبات فالدار فكازا: أثمنة تقريبية، عرض ثمن لبعض الخدمات، مهنيات مختارات."
+  "@meta:og:description": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع والمساج فالدار فكازا دابا. الحجز على واتساب والأثمنة تقريبية."
 });

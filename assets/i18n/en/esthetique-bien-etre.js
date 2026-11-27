@@ -22,7 +22,7 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "Accueil › Esthétique & bien-être à domicile": "Home › Beauty & wellbeing at home",
   "Yallah Services · Esthétique & bien-être · Casablanca": "Yallah Services · Beauty & wellbeing · Casablanca",
   "Esthétique & bien-être à domicile": "Beauty & wellbeing at home",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "Makeup, manicure, pedicure, waxing or event beauty preparation: a selected partner professional comes to your home. Currently available in Casablanca only.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "Makeup, manicure, pedicure, waxing, massage or event beauty preparation: a selected partner professional comes to your home. Currently available in Casablanca only.",
   "@wa:Bonjour Yallah Services, je souhaite réserver une prestation beauté à domicile. Mon quartier à Casablanca, la prestation et la date souhaitée :": "Hello Yallah Services, I would like to book a beauty service at home. My neighbourhood in Casablanca, the service and the date I want:",
   "💬 Réserver une prestation sur WhatsApp": "💬 Book a service on WhatsApp",
   "Voir la grille tarifaire": "See the price list",
@@ -65,7 +65,7 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "Comment réserver": "How to book",
   "Quatre étapes, de la prestation choisie à l’intervention.": "Four steps, from the service you choose to the visit.",
   "1. Choisissez la prestation": "1. Choose the service",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté.": "Makeup, manicure, pedicure, waxing or event beauty preparation.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.": "Makeup, manicure, pedicure, waxing, massage or event beauty preparation.",
   "2. Réservez sur WhatsApp": "2. Book on WhatsApp",
   "Indiquez la prestation, votre quartier à Casablanca et la date souhaitée.": "Tell us the service, your neighbourhood in Casablanca and the date you want.",
   "3. Vérification": "3. Check",
@@ -95,8 +95,8 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "@aria-label:Demander sur WhatsApp": "Request on WhatsApp",
   "WhatsApp": "WhatsApp",
   "@title": "Beauty & wellbeing at home | Yallah Services",
-  "@meta:description": "Makeup, manicure, pedicure, waxing and event beauty at home in Casablanca: indicative prices, quotes for some services, selected professionals.",
+  "@meta:description": "Makeup, manicure, pedicure, waxing and massages at home in Casablanca for the moment. Booking on WhatsApp and indicative prices.",
   "@meta:og:locale": "en_US",
   "@meta:og:title": "Beauty & wellbeing at home | Yallah Services",
-  "@meta:og:description": "Makeup, manicure, pedicure, waxing and event beauty at home in Casablanca: indicative prices, quotes for some services, selected professionals."
+  "@meta:og:description": "Makeup, manicure, pedicure, waxing and massages at home in Casablanca for the moment. Booking on WhatsApp and indicative prices."
 });

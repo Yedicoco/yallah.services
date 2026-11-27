@@ -12713,9 +12713,9 @@
         "html": "Esthétique & <em>bien-être</em> à domicile"
       },
       {
-        "cle": "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
+        "cle": "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
         "occurrences": 1,
-        "exemple": "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
+        "exemple": "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
         "langue": "fr"
       },
       {
@@ -12971,9 +12971,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Maquillage, manucure, pédicure, épilation ou préparation beauté.",
+        "cle": "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.",
         "occurrences": 1,
-        "exemple": "Maquillage, manucure, pédicure, épilation ou préparation beauté.",
+        "exemple": "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.",
         "langue": "fr"
       },
       {
@@ -13159,7 +13159,7 @@
       {
         "cle": "@meta:description",
         "occurrences": 1,
-        "exemple": "Maquillage, maquillage, manucure, pédicure et épilation à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
+        "exemple": "Maquillage, manucure, pédicure, épilation et massages à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
         "langue": "fr"
       },
       {
@@ -13177,7 +13177,7 @@
       {
         "cle": "@meta:og:description",
         "occurrences": 1,
-        "exemple": "Maquillage, maquillage, manucure, pédicure et épilation à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
+        "exemple": "Maquillage, manucure, pédicure, épilation et massages à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
         "langue": "fr"
       }
     ],
