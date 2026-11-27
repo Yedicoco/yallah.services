@@ -105,3 +105,9 @@
   .business-video-promo-card { grid-template-columns: minmax(0, 112px) minmax(0, 1fr); gap: 16px; padding: 16px; }
   .business-video-play { width: 46px; height: 46px; font-size: 20px; }
 }
+
+/* Cadres vidéo cohérents, sans recadrer ni modifier les médias. */
+.video-card { border-radius: 20px; box-shadow: 0 16px 36px rgba(0,0,0,.18); }
+.video-card-body { padding: 22px; }
+.video-card h3 { font-size: 17px; line-height: 1.5; }
+.video-card video:focus-visible,.business-video-promo-poster:focus-visible { outline: 3px solid var(--brand-gold); outline-offset: -4px; }

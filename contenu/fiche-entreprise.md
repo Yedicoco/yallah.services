@@ -71,11 +71,12 @@ contrats de maintenance. Interventions assurées par des **techniciens partenair
 **Esthétique & bien-être** — prestations confirmées (à domicile) :
 coiffure · maquillage · manucure · pédicure · épilation · préparation beauté pour mariages,
 fêtes et séances photo. Prestations assurées par des **professionnelles partenaires sélectionnées**.
-- **Non confirmés, à ne pas publier :** soins du visage, soins du corps, tout autre soin.
+- **Massages communiqués par la direction le 22/11/2026 :** berbère, ayurvédique, réflexologie, facial et tête, suédois, médical, dos et épaules, oriental chaud. Prix et durées figurent sur la page esthétique ; disponibilité et qualifications pour le massage médical à confirmer.
+- **Non confirmés, à ne pas publier :** autres soins du visage ou du corps non expressément validés.
 - Aucune promesse médicale ni de résultat garanti.
 
 **Règles communes aux deux pôles :**
-- Tarification **sur devis** uniquement : aucun prix fixe affiché.
+- Les tarifs actuellement affichés pour les deux pôles, y compris les massages, sont à **conserver**, conformément à la confirmation du propriétaire du 22/11/2026. Tout changement futur de prix ou de conditions nécessite une validation explicite.
 - Zone principale : **Casablanca**. Les autres zones ne sont affichées que si elles figurent
   déjà dans cette fiche (section « Couverture réelle ») ou sur les pages publiées.
 - Aucune photo de personnes ou de prestations non fournies par l'agence.

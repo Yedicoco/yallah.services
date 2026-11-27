@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · candidature.html
-   149 chaînes, clés = textes d'origine de la page.
+   151 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/candidature.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -154,6 +154,8 @@ YS_TRAD("en", "candidature", {
   "LinkedIn": "LinkedIn",
   "@title": "Job seekers — Application form | Yallah Services",
   "@meta:description": "Looking for work as a housekeeper, nanny, cook or caregiver in Morocco? Send your references to Yallah Services, it is free.",
+  "@meta:og:title": "Job seekers — Yallah Services",
+  "@meta:og:description": "Submit your application for household and service jobs in Morocco.",
   "@meta:twitter:title": "Job seekers — Yallah Services",
   "@meta:twitter:description": "Submit your application for household and service jobs in Morocco.",
   "Envoi de la fiche…": "Sending the form…",

@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · esthetique-bien-etre.html
-   112 chaînes, clés = textes d'origine de la page.
+   92 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/esthetique-bien-etre.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -45,7 +45,7 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "Du sourcil au forfait complet.": "From eyebrows to a full package.",
   "@alt:Femme recevant un massage du dos dans une pièce lumineuse": "Woman receiving a back massage in a bright room",
   "Massage": "Massage",
-  "Réservé aux femmes. À partir de 300 DH.": "For women only. From 300 MAD.",
+  "Réservé aux femmes. Voir les tarifs ci-dessous.": "For women only. See prices below.",
   "@alt:Soin du visage à domicile avec application de crème": "Facial care at home with cream being applied",
   "Soins du visage": "Facial care",
   "Sur devis.": "On quote.",
@@ -54,33 +54,13 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "Pour un événement, sur devis.": "For an event, on quote.",
   "Illustrations.": "Illustrations.",
   "Nos prestations à domicile": "Our services at home",
-  "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie. Massages réservés aux femmes : prix fixe, frais de transport en sus.": "Services available in Casablanca for the moment. Price ranges, from minimum to maximum, in MAD. The exact price depends on the service chosen. Massages for women only: fixed price, transport fee extra.",
+  "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.": "Services available in Casablanca for the moment. Price ranges, from minimum to maximum, in MAD. The exact price depends on the service chosen.",
   "400 DH": "400 MAD",
   "Manucure et pédicure": "Manicure and pedicure",
   "50 à 350 DH": "50 to 350 MAD",
   "40 à 320 DH": "40 to 320 MAD",
   "Préparation beauté pour événements": "Beauty preparation for events",
   "Sur devis": "On quote",
-  "Massage berbère": "Berber massage",
-  "Soin traditionnel marocain, centré sur les jambes et les pieds. 45 min.": "Traditional Moroccan care, focused on the legs and feet. 45 min.",
-  "300 DH": "300 MAD",
-  "+ 100 DH de frais de transport": "+ 100 MAD transport fee",
-  "Massage ayurvédique": "Ayurvedic massage",
-  "Massage aux huiles chaudes, inspiré de la tradition ayurvédique. 45 min.": "Warm-oil massage, inspired by Ayurvedic tradition. 45 min.",
-  "Réflexologie": "Reflexology",
-  "Pressions ciblées sur les zones réflexes des pieds, des mains ou du visage. 45 min.": "Targeted pressure on reflex zones of the feet, hands or face. 45 min.",
-  "350 DH": "350 MAD",
-  "Massage facial et de la tête": "Facial and head massage",
-  "Détente du visage, du front, de la mâchoire et du cuir chevelu. 30 min.": "Relaxation of the face, forehead, jaw and scalp. 30 min.",
-  "200 DH": "200 MAD",
-  "Massage suédois": "Swedish massage",
-  "Massage profond à l’huile sur peau nue, pour la détente musculaire. 1 h.": "Deep oil massage on bare skin, for muscle relaxation. 1 h.",
-  "Massage médical": "Medical massage",
-  "Massage ciblé, réalisé par un praticien spécialisé. 45 min.": "Targeted massage, performed by a specialised practitioner. 45 min.",
-  "Massage du dos et des épaules": "Back and shoulder massage",
-  "Dénouer les tensions du dos, des épaules et des trapèzes. 35 min.": "Easing tension in the back, shoulders and neck. 35 min.",
-  "Massage oriental chaud": "Warm oriental massage",
-  "Massage aux huiles végétales chaudes, inspiré des traditions du Maghreb et du Moyen-Orient. 1 h.": "Massage with warm plant oils, inspired by Maghreb and Middle Eastern traditions. 1 h.",
   "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les prestations sont assurées par des professionnelles partenaires sélectionnées.": "Indicative price. Final price confirmed after diagnosis or on quote. Services are provided by selected partner professionals.",
   "Comment réserver": "How to book",
   "Quatre étapes, de la prestation choisie à l’intervention.": "Four steps, from the service you choose to the visit.",

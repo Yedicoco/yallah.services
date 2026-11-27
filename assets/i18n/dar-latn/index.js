@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · index.html
-   484 chaînes, clés = textes d'origine de la page.
+   495 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -104,6 +104,8 @@ YS_TRAD("dar-latn", "index", {
   "Ménage + Nounou Non Logée — 800 DH/semaine": "Tneqqiya + 7adana ghir mqima — 800 derham/usbu3",
   "Ménage Normal à la journée — 300/400 DH": "Tneqqiya 3adiya b n-nhar — 300/400 derham",
   "Grand Ménage à la journée — 500/700 DH": "T-tneqqiya l kbira b n-nhar — 500/700 derham",
+  "Froid et climatisation": "Tabrid w taklif",
+  "Esthétique et bien-être": "Jamal w raha",
   "📍 Votre ville...": "📍 L mdina dyalek...",
   "Casablanca": "Casa",
   "Bouskoura": "Bouskoura",
@@ -349,6 +351,10 @@ YS_TRAD("dar-latn", "index", {
   "En cas de besoin de remplacement, les formules Sérénité et Premium prévoient cette possibilité pendant 2 et 6 mois respectivement, selon leurs conditions. Demandez les détails applicables avant de confirmer la mise en relation.": "Ila 7tejti t-tabdil, Sighat Sérénité w Premium kaynṣṣo 3la had l imkan lmoddat chhrin w 6 chhor, 3la t-twali, 7sab chourout-hom. Swel 3la t-tafaṣil qbel ma t2eked l matching.",
   "Comment se passe le paiement des frais de Mise en relation ? ▾": "Kifach kaytkhalṣu maṣarif l matching? <span class=\"arr\">▾</span>",
   "Les frais de Mise en relation sont réglés uniquement après validation du profil et mise en relation. Vous ne payez rien avant d'avoir trouvé votre candidate. Le salaire mensuel est versé directement à l'employée, séparément des frais de Mise en relation.": "Maṣarif l matching kaytkhalṣu <strong>ghir mn b3d ma tṣadaq 3la l profil w ttsadaq l matching</strong>. Ma katkhalliṣ 7ta 7aja qbel ma tlqa l kheddama dyalek. L ajr ch-chahri kayt3ata direct l l kheddama, b wa7do 3la maṣarif l matching.",
+  "Les frais de mise en relation sont-ils remboursables ?": "Wach massarif r-rabt katrje3?",
+  "Non. Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils : ils ne sont pas remboursables, y compris si le profil proposé ne vous convient pas.": "<strong>La.</strong> Massarif r-rabt kattkhelles 3la l b7t w l ikhtiyar w tqdim dyal l afrad: ma katrje3ch, 7tta ila ch-chakhs lli tqeddem ma 3jebkch.",
+  "En revanche, vous n'êtes pas seul(e) : signalez-le nous par écrit (WhatsApp ou e-mail) et vous bénéficiez d'un délai de remplacement de 7 à 15 jours pour recevoir un profil adapté, sans nouveaux frais de mise en relation.": "Walakin rak machi bo7dek: khebbarna b l kitaba (WhatsApp wla email) w 3ndek moddat tbeddil mn 7 l 15 yom bach twsslek chakhsiya mnasba, bla massarif rabt jdida.",
+  "Les formules Sérénité et Premium prévoient des durées de remplacement plus longues (2 et 6 mois), selon leurs conditions. Le détail figure dans les mentions légales.": "Sighat <strong>Sérénité</strong> w <strong>Premium</strong> kaynṣṣo 3la moddat t-tabdil twelel (chhrin w 6 chhor), 7sab chourout-hom. T-tafaṣil kayna f <a href=\"mentions-legales.html#frais-mise-en-relation\">l ma3lomat l qanuniya</a>.",
   "Quelle différence entre logée et non logée ? ▾": "Chnu l farq bin mqima w ghir mqima? <span class=\"arr\">▾</span>",
   "Logée : l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.\nNon logée : les horaires et les modalités sont définis selon le poste et l'accord avec la famille.": "<strong>Mqima:</strong> katsken f ddar l 3a2ila 7sab chourout l itifaq. Kayet7edded lwa9t w iyam r-ra7a m3a l 3a2ila.<br><br><strong>Ghir mqima:</strong> lwa9t w kifach katkhdem kayet7edded 7sab l poste w l itifaq m3a l 3a2ila.",
   "Conditions d'accueil pour une aide logée": "Chorot istiqbal l msa3da lli ghadi tskon m3a l 3a2ila",
@@ -417,6 +423,8 @@ YS_TRAD("dar-latn", "index", {
   "Type...": "N-Naw3...",
   "🏠 Logée": "🏠 Mqima",
   "🌙 Non logée": "🌙 Ghir mqima",
+  "Quartier (optionnel)": "L7ay (ikhtiyari)",
+  "Date souhaitée (optionnelle)": "Tarikh lmataloub (ikhtiyari)",
   "Message (optionnel)": "Risala (ikhtiyari)",
   "Récapitulatif prêt": "Lmolakhkhas wajed",
   "Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.": "7ell WhatsApp w sift t-talab dyalek l Yallah Services.",
@@ -464,6 +472,9 @@ YS_TRAD("dar-latn", "index", {
   "👤 Vos informations": "👤 L ma3lumat dyalek",
   "Nom": "S-smiya",
   "WhatsApp / Tél": "WhatsApp / Tilifoun",
+  "Quartier": "L7ay",
+  "Date souhaitée": "Tarikh lmataloub",
+  "Précisions": "Tafasil",
   "Expérience souhaitée": "T-tajriba l matluba",
   "Délai souhaité": "L mudda l matluba",
   "ℹ️ Informations à vérifier avant validation": "ℹ️ Ma3lumat khassek t2eked menha qbel lmuṣadaqa",
@@ -501,5 +512,8 @@ YS_TRAD("dar-latn", "index", {
   "Précisions :": "T-tafaṣil:",
   "À préciser": "Khas twḍe7",
   "Lien copié": "Tsekh l lien",
-  "Copie impossible. Lien :": "Ma qdrnach nsakh. L lien :"
+  "Copie impossible. Lien :": "Ma qdrnach nsakh. L lien :",
+  "Téléphone :": "Tilifoun:",
+  "Quartier :": "L7ay:",
+  "Date souhaitée :": "Tarikh lmataloub:"
 });

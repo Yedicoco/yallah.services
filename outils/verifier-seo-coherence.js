@@ -45,7 +45,7 @@ function links(html, rel) {
   return [...html.matchAll(pattern)].map((match) => match[1]);
 }
 function urls(text) {
-  return [...text.matchAll(/<loc>([^<]+)<\\/loc>/g)].map((match) => match[1]);
+  return [...text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 }
 function sameOrigin(value, label) {
   if (!value) return;
@@ -65,7 +65,7 @@ for (const file of htmlFiles()) {
   if (canonical.length !== 1) fail(`${file}: attendu exactement un canonical, trouvé ${canonical.length}.`);
   canonical.forEach((value) => sameOrigin(value, `${file} canonical`));
 
-  if (!/<title>[^<\\S][^<]*<\\/title>/i.test(html) && !/<title>[^<]+<\\/title>/i.test(html)) fail(`${file}: title absent ou vide.`);
+  if (!/<title>\s*[^<\s][^<]*<\/title>/i.test(html)) fail(`${file}: title absent ou vide.`);
   if (!meta(html, 'description').trim()) fail(`${file}: meta description absente ou vide.`);
   if (!property(html, 'og:title') || !property(html, 'og:description') || !property(html, 'og:image')) {
     fail(`${file}: balises Open Graph title/description/image incomplètes.`);

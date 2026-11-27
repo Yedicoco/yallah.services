@@ -311,6 +311,14 @@
             "@type": "Answer",
             "text": "En cas de besoin de remplacement, les formules Sérénité et Premium prévoient cette possibilité pendant 2 et 6 mois respectivement, selon leurs conditions. Demandez les détails applicables avant de confirmer la mise en relation."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Les frais de mise en relation sont-ils remboursables ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<ul><li><strong>Non.</strong> Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils : ils ne sont pas remboursables, y compris si le profil proposé ne vous convient pas.</li><li>En revanche, vous n'êtes pas seul(e) : signalez-le nous par écrit (WhatsApp ou e-mail) et vous bénéficiez d'un délai de remplacement de 7 à 15 jours pour recevoir un profil adapté, sans nouveaux frais de mise en relation.</li><li>Les formules <strong>Sérénité</strong> et <strong>Premium</strong> prévoient des durées de remplacement plus longues (2 et 6 mois), selon leurs conditions. Le détail figure dans les mentions légales.</li></ul>"
+          }
         }
       ]
     }
@@ -544,6 +552,8 @@
           <option>Ménage + Nounou Non Logée — 800 DH/semaine</option>
           <option>Ménage Normal à la journée — 300/400 DH</option>
           <option>Grand Ménage à la journée — 500/700 DH</option>
+          <option value="froid-climatisation">Froid et climatisation</option>
+          <option value="esthetique-bien-etre">Esthétique et bien-être</option>
 </select>
         <select class="mf-select" id="mfCity">
                     <option value="">📍 Votre ville...</option>
@@ -1012,6 +1022,17 @@
       </div>
 
       <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-frais-mise-en-relation"><span>Les frais de mise en relation sont-ils remboursables ?</span> <span class="arr" aria-hidden="true">▾</span></button>
+        <div class="faq-a" id="faq-frais-mise-en-relation">
+          <ul class="faq-list-in">
+            <li><strong>Non.</strong> Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils : ils ne sont pas remboursables, y compris si le profil proposé ne vous convient pas.</li>
+            <li>En revanche, vous n'êtes pas seul(e) : signalez-le nous par écrit (WhatsApp ou e-mail) et vous bénéficiez d'un délai de remplacement de 7 à 15 jours pour recevoir un profil adapté, sans nouveaux frais de mise en relation.</li>
+            <li>Les formules <strong>Sérénité</strong> et <strong>Premium</strong> prévoient des durées de remplacement plus longues (2 et 6 mois), selon leurs conditions. Le détail figure dans les <a href="mentions-legales.html#frais-mise-en-relation">mentions légales</a>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
         <button class="faq-q">Quelle différence entre logée et non logée ? <span class="arr">▾</span></button>
         <div class="faq-a"><strong>Logée :</strong> l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.<br><br><strong>Non logée :</strong> les horaires et les modalités sont définis selon le poste et l'accord avec la famille.</div>
       </div>
@@ -1144,16 +1165,16 @@
       <form id="ctForm" novalidate>
         <div class="fgrid">
           <div class="fg">
-            <label class="fl">Nom <span class="req">*</span></label>
+            <label class="fl" for="ctName">Nom <span class="req">*</span></label>
             <input class="fi" type="text" id="ctName" placeholder="Votre nom complet" autocomplete="name">
           </div>
           <div class="fg">
-            <label class="fl">WhatsApp / Téléphone <span class="req">*</span></label>
+            <label class="fl" for="ctPhone">WhatsApp / Téléphone <span class="req">*</span></label>
             <input class="fi" type="tel" id="ctPhone" placeholder="+212 6 __ __ __ __" autocomplete="tel" inputmode="tel">
           </div>
         </div>
         <div class="fg">
-          <label class="fl">Service souhaité</label>
+          <label class="fl" for="ctService">Service souhaité</label>
           <select class="fs" id="ctService">
             <option value="">Choisissez...</option>
           <option>Ménage simple dans villa — 4 500 DH/mois</option>
@@ -1175,11 +1196,13 @@
           <option>Ménage + Nounou Non Logée — 800 DH/semaine</option>
           <option>Ménage Normal à la journée — 300/400 DH</option>
           <option>Grand Ménage à la journée — 500/700 DH</option>
+          <option value="froid-climatisation">Froid et climatisation</option>
+          <option value="esthetique-bien-etre">Esthétique et bien-être</option>
 </select>
         </div>
         <div class="fgrid">
           <div class="fg">
-            <label class="fl">Ville</label>
+            <label class="fl" for="ctCity">Ville</label>
             <select class="fs" id="ctCity">
                             <option value="">Votre ville...</option>
               <option>Casablanca</option>
@@ -1199,7 +1222,7 @@
 </select>
           </div>
           <div class="fg">
-            <label class="fl">Préférence</label>
+            <label class="fl" for="ctNat">Préférence</label>
             <select class="fs" id="ctNat">
               <option value="">Expérience souhaitée...</option>
               <option>Déjà expérimentée</option>
@@ -1209,7 +1232,7 @@
         </div>
         <div class="fgrid">
           <div class="fg">
-            <label class="fl">Quand recruter ?</label>
+            <label class="fl" for="ctDelay">Quand recruter ?</label>
             <select class="fs" id="ctDelay">
               <option value="">Période...</option>
               <option>🔴 Urgent</option>
@@ -1219,7 +1242,7 @@
             </select>
           </div>
           <div class="fg">
-            <label class="fl">Type de poste</label>
+            <label class="fl" for="ctType">Type de poste</label>
             <select class="fs" id="ctType">
               <option value="">Type...</option>
               <option>🏠 Logée</option>
@@ -1227,8 +1250,12 @@
             </select>
           </div>
         </div>
+        <div class="fgrid">
+          <div class="fg"><label class="fl" for="ctQuartier">Quartier (optionnel)</label><input class="fi" type="text" id="ctQuartier" autocomplete="address-level3"></div>
+          <div class="fg"><label class="fl" for="ctDate">Date souhaitée (optionnelle)</label><input class="fi" type="date" id="ctDate"></div>
+        </div>
         <div class="fg">
-          <label class="fl">Message (optionnel)</label>
+          <label class="fl" for="ctMsg">Message (optionnel)</label>
           <textarea class="ft" id="ctMsg" placeholder="Précisez vos besoins : âge des enfants, surface, jours, etc."></textarea>
         </div>
         <div class="fg" style="margin-bottom:0">
@@ -1382,12 +1409,15 @@
           <div class="frow"><span class="fk">Nom</span><span class="fv" id="factName">—</span></div>
           <div class="frow"><span class="fk">WhatsApp / Tél</span><span class="fv" id="factPhone">—</span></div>
           <div class="frow"><span class="fk">Ville</span><span class="fv" id="factCity">—</span></div>
-          <div class="frow"><span class="fk">Expérience souhaitée</span><span class="fv" id="factNat">—</span></div>
-          <div class="frow"><span class="fk">Type de poste</span><span class="fv" id="factType">—</span></div>
-          <div class="frow"><span class="fk">Délai souhaité</span><span class="fv" id="factDelay">—</span></div>
+          <div class="frow"><span class="fk">Quartier</span><span class="fv" id="factQuartier">—</span></div>
+          <div class="frow"><span class="fk">Date souhaitée</span><span class="fv" id="factRequestedDate">—</span></div>
+          <div class="frow"><span class="fk">Précisions</span><span class="fv" id="factMsg">—</span></div>
+          <div class="frow recap-personnel"><span class="fk">Expérience souhaitée</span><span class="fv" id="factNat">—</span></div>
+          <div class="frow recap-personnel"><span class="fk">Type de poste</span><span class="fv" id="factType">—</span></div>
+          <div class="frow recap-personnel"><span class="fk">Délai souhaité</span><span class="fv" id="factDelay">—</span></div>
         </div>
 
-        <div class="fsec">
+        <div class="fsec recap-personnel">
           <div class="fsec-title">ℹ️ Informations à vérifier avant validation</div>
           <div class="guarantees">
             <div class="gi-box"><span class="ic">🔄</span><div class="gt">Remplacement selon la formule</div><div class="gd">Conditions à vérifier avant validation</div></div>
@@ -1397,7 +1427,7 @@
           </div>
         </div>
 
-        <div class="fsec" style="margin-bottom:0">
+        <div class="fsec recap-personnel" style="margin-bottom:0">
           <div class="fsec-title">📋 Prochaines étapes</div>
           <ul class="steps-list">
             <li><span class="snm">1</span><span>Notre équipe examine les critères et les profils disponibles pour votre demande.</span></li>

@@ -599,6 +599,18 @@
         "langue": "fr"
       },
       {
+        "cle": "Froid et climatisation",
+        "occurrences": 2,
+        "exemple": "Froid et climatisation",
+        "langue": "fr"
+      },
+      {
+        "cle": "Esthétique et bien-être",
+        "occurrences": 2,
+        "exemple": "Esthétique et bien-être",
+        "langue": "fr"
+      },
+      {
         "cle": "📍 Votre ville...",
         "occurrences": 1,
         "exemple": "📍 Votre ville...",
@@ -2095,6 +2107,34 @@
         "html": "Les frais de Mise en relation sont réglés <strong>uniquement après validation du profil et mise en relation</strong>. Vous ne payez rien avant d'avoir trouvé votre candidate. Le salaire mensuel est versé directement à l'employée, séparément des frais de Mise en relation."
       },
       {
+        "cle": "Les frais de mise en relation sont-ils remboursables ?",
+        "occurrences": 1,
+        "exemple": "Les frais de mise en relation sont-ils remboursables ?",
+        "langue": "fr"
+      },
+      {
+        "cle": "Non. Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils : ils ne sont pas remboursables, y compris si le profil proposé ne vous convient pas.",
+        "occurrences": 1,
+        "exemple": "Non. Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils : ils ne sont pas remboursables, y compris si le profil proposé ne vous convient pas.",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "<strong>Non.</strong> Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils : ils ne sont pas remboursables, y compris si le profil proposé ne vous convient pas."
+      },
+      {
+        "cle": "En revanche, vous n'êtes pas seul(e) : signalez-le nous par écrit (WhatsApp ou e-mail) et vous bénéficiez d'un délai de remplacement de 7 à 15 jours pour recevoir un profil adapté, sans nouveaux frais de mise en relation.",
+        "occurrences": 1,
+        "exemple": "En revanche, vous n'êtes pas seul(e) : signalez-le nous par écrit (WhatsApp ou e-mail) et vous bénéficiez d'un délai de remplacement de 7 à 15 jours pour recevoir un profil adapté, sans nouveaux frais de mise en relation.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les formules Sérénité et Premium prévoient des durées de remplacement plus longues (2 et 6 mois), selon leurs conditions. Le détail figure dans les mentions légales.",
+        "occurrences": 1,
+        "exemple": "Les formules Sérénité et Premium prévoient des durées de remplacement plus longues (2 et 6 mois), selon leurs conditions. Le détail figure dans les mentions légales.",
+        "langue": "fr",
+        "balisage": "strong,strong,a",
+        "html": "Les formules <strong>Sérénité</strong> et <strong>Premium</strong> prévoient des durées de remplacement plus longues (2 et 6 mois), selon leurs conditions. Le détail figure dans les <a href=\"mentions-legales.html#frais-mise-en-relation\">mentions légales</a>."
+      },
+      {
         "cle": "Quelle différence entre logée et non logée ? ▾",
         "occurrences": 1,
         "exemple": "Quelle différence entre logée et non logée ? ▾",
@@ -2547,6 +2587,18 @@
         "langue": "fr"
       },
       {
+        "cle": "Quartier (optionnel)",
+        "occurrences": 1,
+        "exemple": "Quartier (optionnel)",
+        "langue": "fr"
+      },
+      {
+        "cle": "Date souhaitée (optionnelle)",
+        "occurrences": 1,
+        "exemple": "Date souhaitée (optionnelle)",
+        "langue": "fr"
+      },
+      {
         "cle": "Message (optionnel)",
         "occurrences": 1,
         "exemple": "Message (optionnel)",
@@ -2842,6 +2894,24 @@
         "cle": "WhatsApp / Tél",
         "occurrences": 1,
         "exemple": "WhatsApp / Tél",
+        "langue": "fr"
+      },
+      {
+        "cle": "Quartier",
+        "occurrences": 1,
+        "exemple": "Quartier",
+        "langue": "fr"
+      },
+      {
+        "cle": "Date souhaitée",
+        "occurrences": 1,
+        "exemple": "Date souhaitée",
+        "langue": "fr"
+      },
+      {
+        "cle": "Précisions",
+        "occurrences": 1,
+        "exemple": "Précisions",
         "langue": "fr"
       },
       {
@@ -3949,6 +4019,18 @@
         "langue": "fr"
       },
       {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Espace candidats — Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Déposez votre candidature pour les métiers de maison et de services au Maroc.",
+        "langue": "fr"
+      },
+      {
         "cle": "@meta:twitter:title",
         "occurrences": 1,
         "exemple": "Espace candidats — Yallah Services",
@@ -4804,6 +4886,18 @@
         "cle": "@meta:description",
         "occurrences": 1,
         "exemple": "Vous cherchez du travail comme femme de ménage, nounou, cuisinière ou garde-malade au Maroc ? Déposez vos références chez Yallah Services, c",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:title",
+        "occurrences": 1,
+        "exemple": "Espace candidats — Yallah Services",
+        "langue": "fr"
+      },
+      {
+        "cle": "@meta:og:description",
+        "occurrences": 1,
+        "exemple": "Déposez votre candidature pour les métiers de maison et de services au Maroc.",
         "langue": "fr"
       },
       {
@@ -6722,6 +6816,34 @@
         "cle": "Les tarifs affichés sur le site sont indicatifs et peuvent varier selon les conditions et responsabilités convenues entre les parties.",
         "occurrences": 1,
         "exemple": "Les tarifs affichés sur le site sont indicatifs et peuvent varier selon les conditions et responsabilités convenues entre les parties.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Frais de mise en relation et délai de remplacement",
+        "occurrences": 1,
+        "exemple": "Frais de mise en relation et délai de remplacement",
+        "langue": "fr"
+      },
+      {
+        "cle": "Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils, ainsi que l'accompagnement de la mise en relation. Ils sont réglés une seule fois, après validation du profil et réalisation de la mise en relation, par le client qui souscrit à la mise en relation (ci-après « le souscripteur »). Ces frais ne sont pas remboursables, y compris lorsque le profil proposé ne donne pas satisfaction : ils ne constituent ni des arrhes, ni un acompte sur salaire, ni une garantie d'embauche.",
+        "occurrences": 1,
+        "exemple": "Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils, ainsi que l'accompagnement de la mise en relation. Ils sont réglés une seule fois, après validation du profil et réalisation de la mise en relation, par le client qui souscrit à la mise en relation (ci-après « le souscripteur »). Ces frais ne sont pas remboursables, y compris lorsque le profil proposé ne donne pas satisfaction : ils ne constituent ni des arrhes, ni un acompte sur salaire, ni une garantie d'embauche.",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils, ainsi que l'accompagnement de la mise en relation. Ils sont réglés une seule fois, après validation du profil et réalisation de la mise en relation, par le client qui souscrit à la mise en relation (ci-après « le souscripteur »). <strong>Ces frais ne sont pas remboursables</strong>, y compris lorsque le profil proposé ne donne pas satisfaction : ils ne constituent ni des arrhes, ni un acompte sur salaire, ni une garantie d'embauche."
+      },
+      {
+        "cle": "Si le profil proposé ne correspond pas au besoin exprimé ou ne donne pas satisfaction, le souscripteur en informe Yallah Services par écrit (WhatsApp ou e-mail) dans les meilleurs délais. Il bénéficie alors d'un délai de remplacement de sept (7) à quinze (15) jours à compter de cette information, pendant lequel Yallah Services s'engage à lui présenter un ou plusieurs profils adaptés et conformes au besoin initialement décrit, sans nouveau frais de mise en relation.",
+        "occurrences": 1,
+        "exemple": "Si le profil proposé ne correspond pas au besoin exprimé ou ne donne pas satisfaction, le souscripteur en informe Yallah Services par écrit (WhatsApp ou e-mail) dans les meilleurs délais. Il bénéficie alors d'un délai de remplacement de sept (7) à quinze (15) jours à compter de cette information, pendant lequel Yallah Services s'engage à lui présenter un ou plusieurs profils adaptés et conformes au besoin initialement décrit, sans nouveau frais de mise en relation.",
+        "langue": "fr",
+        "balisage": "strong",
+        "html": "Si le profil proposé ne correspond pas au besoin exprimé ou ne donne pas satisfaction, le souscripteur en informe Yallah Services par écrit (WhatsApp ou e-mail) dans les meilleurs délais. Il bénéficie alors d'un <strong>délai de remplacement de sept (7) à quinze (15) jours</strong> à compter de cette information, pendant lequel Yallah Services s'engage à lui présenter un ou plusieurs profils adaptés et conformes au besoin initialement décrit, sans nouveau frais de mise en relation."
+      },
+      {
+        "cle": "Ce délai de remplacement suppose que le besoin initial reste inchangé, que le motif soit explicite et vérifiable, et que les conditions d'accueil ou de travail convenues soient respectées. À l'issue de ce délai, si aucun profil adapté n'a pu être proposé, Yallah Services et le souscripteur examinent ensemble la suite à donner à la demande.",
+        "occurrences": 1,
+        "exemple": "Ce délai de remplacement suppose que le besoin initial reste inchangé, que le motif soit explicite et vérifiable, et que les conditions d'accueil ou de travail convenues soient respectées. À l'issue de ce délai, si aucun profil adapté n'a pu être proposé, Yallah Services et le souscripteur examinent ensemble la suite à donner à la demande.",
         "langue": "fr"
       },
       {
@@ -12729,9 +12851,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Réservé aux femmes. À partir de 300 DH.",
+        "cle": "Réservé aux femmes. Voir les tarifs ci-dessous.",
         "occurrences": 1,
-        "exemple": "Réservé aux femmes. À partir de 300 DH.",
+        "exemple": "Réservé aux femmes. Voir les tarifs ci-dessous.",
         "langue": "fr"
       },
       {
@@ -12783,14 +12905,14 @@
         "langue": "fr"
       },
       {
-        "cle": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie. Massages réservés aux femmes : prix fixe, frais de transport en sus.",
+        "cle": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.",
         "occurrences": 1,
-        "exemple": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie. Massages réservés aux femmes : prix fixe, frais de transport en sus.",
+        "exemple": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.",
         "langue": "fr"
       },
       {
         "cle": "400 DH",
-        "occurrences": 2,
+        "occurrences": 1,
         "exemple": "400 DH",
         "langue": "fr"
       },
@@ -12822,126 +12944,6 @@
         "cle": "Sur devis",
         "occurrences": 1,
         "exemple": "Sur devis",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage berbère",
-        "occurrences": 1,
-        "exemple": "Massage berbère",
-        "langue": "fr"
-      },
-      {
-        "cle": "Soin traditionnel marocain, centré sur les jambes et les pieds. 45 min.",
-        "occurrences": 1,
-        "exemple": "Soin traditionnel marocain, centré sur les jambes et les pieds. 45 min.",
-        "langue": "fr"
-      },
-      {
-        "cle": "300 DH",
-        "occurrences": 2,
-        "exemple": "300 DH",
-        "langue": "fr"
-      },
-      {
-        "cle": "+ 100 DH de frais de transport",
-        "occurrences": 8,
-        "exemple": "+ 100 DH de frais de transport",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage ayurvédique",
-        "occurrences": 1,
-        "exemple": "Massage ayurvédique",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage aux huiles chaudes, inspiré de la tradition ayurvédique. 45 min.",
-        "occurrences": 1,
-        "exemple": "Massage aux huiles chaudes, inspiré de la tradition ayurvédique. 45 min.",
-        "langue": "fr"
-      },
-      {
-        "cle": "Réflexologie",
-        "occurrences": 1,
-        "exemple": "Réflexologie",
-        "langue": "fr"
-      },
-      {
-        "cle": "Pressions ciblées sur les zones réflexes des pieds, des mains ou du visage. 45 min.",
-        "occurrences": 1,
-        "exemple": "Pressions ciblées sur les zones réflexes des pieds, des mains ou du visage. 45 min.",
-        "langue": "fr"
-      },
-      {
-        "cle": "350 DH",
-        "occurrences": 3,
-        "exemple": "350 DH",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage facial et de la tête",
-        "occurrences": 1,
-        "exemple": "Massage facial et de la tête",
-        "langue": "fr"
-      },
-      {
-        "cle": "Détente du visage, du front, de la mâchoire et du cuir chevelu. 30 min.",
-        "occurrences": 1,
-        "exemple": "Détente du visage, du front, de la mâchoire et du cuir chevelu. 30 min.",
-        "langue": "fr"
-      },
-      {
-        "cle": "200 DH",
-        "occurrences": 2,
-        "exemple": "200 DH",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage suédois",
-        "occurrences": 1,
-        "exemple": "Massage suédois",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage profond à l’huile sur peau nue, pour la détente musculaire. 1 h.",
-        "occurrences": 1,
-        "exemple": "Massage profond à l’huile sur peau nue, pour la détente musculaire. 1 h.",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage médical",
-        "occurrences": 1,
-        "exemple": "Massage médical",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage ciblé, réalisé par un praticien spécialisé. 45 min.",
-        "occurrences": 1,
-        "exemple": "Massage ciblé, réalisé par un praticien spécialisé. 45 min.",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage du dos et des épaules",
-        "occurrences": 1,
-        "exemple": "Massage du dos et des épaules",
-        "langue": "fr"
-      },
-      {
-        "cle": "Dénouer les tensions du dos, des épaules et des trapèzes. 35 min.",
-        "occurrences": 1,
-        "exemple": "Dénouer les tensions du dos, des épaules et des trapèzes. 35 min.",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage oriental chaud",
-        "occurrences": 1,
-        "exemple": "Massage oriental chaud",
-        "langue": "fr"
-      },
-      {
-        "cle": "Massage aux huiles végétales chaudes, inspiré des traditions du Maghreb et du Moyen-Orient. 1 h.",
-        "occurrences": 1,
-        "exemple": "Massage aux huiles végétales chaudes, inspiré des traditions du Maghreb et du Moyen-Orient. 1 h.",
         "langue": "fr"
       },
       {

@@ -457,3 +457,6 @@ footer a:hover{color:#d8b361}
   .gr-price{font-size:13px;padding:5px 11px;min-width:82px}
   .gr-row{padding:9px 10px;gap:8px}
 }
+
+/* Les champs et récapitulatifs masqués ne doivent pas être réaffichés par les règles de mise en page. */
+#miniFormEl [hidden], #ctForm [hidden], #thanks [hidden] { display: none !important; }

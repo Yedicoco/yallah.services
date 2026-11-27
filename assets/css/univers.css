@@ -230,3 +230,43 @@ nav.local-crumbs { position: static; }
   font-size: 13.5px;
   line-height: 1.5;
 }
+
+/* Images des soins : disposition lisible sur ordinateur comme sur mobile. */
+.massage-row .massage-image {
+  display: block;
+  flex: 0 0 200px;
+  width: 200px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.massage-description { flex: 1; min-width: 0; }
+@media (max-width: 560px) {
+  .massage-row .massage-image {
+    width: 100%;
+    flex: auto;
+  }
+}
+
+/* Univers : cartes homogènes et confort de lecture. */
+.univers-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 18px; }
+.univers-card { padding: clamp(22px, 2.5vw, 30px); border-radius: 20px; box-shadow: 0 14px 30px rgba(0,0,0,.13); transition: border-color .18s ease, box-shadow .18s ease; }
+.univers-card:hover { box-shadow: 0 18px 36px rgba(0,0,0,.22); }
+.univers-ico { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; font-size: 27px; }
+.univers-card h3 { font-family: Montserrat, Arial, sans-serif; font-size: 19px; line-height: 1.35; }
+.univers-card p { font-size: 14px; line-height: 1.75; }
+.univers-link { display: inline-flex; align-items: center; min-height: 44px; padding-top: 8px; line-height: 1.5; }
+.univers-gallery { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.univers-gal-item,.univers-prix-row { border-radius: 18px; box-shadow: 0 12px 28px rgba(0,0,0,.12); }
+.univers-gal-item figcaption span,.univers-prix-row p { font-size: 14px; line-height: 1.7; }
+.univers-prix-row { padding: 20px 24px; }
+.univers-hero-img img { border-radius: 22px; }
+@media (max-width: 560px) {
+  .univers-prix-row { padding: 18px; }
+  .univers-actions .local-btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .univers-card { transition: none; } }
+.univers-prix { grid-template-columns: minmax(0, 1fr); }
+.univers-prix-row { min-width: 0; }
+.univers-prix-tarif strong { white-space: normal; }

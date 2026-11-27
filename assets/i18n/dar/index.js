@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · index.html
-   484 chaînes, clés = textes d'origine de la page.
+   495 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/index.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -104,6 +104,8 @@ YS_TRAD("dar", "index", {
   "Ménage + Nounou Non Logée — 800 DH/semaine": "تنقية + حضانة غير مقيمة — 800 درهم/أسبوع",
   "Ménage Normal à la journée — 300/400 DH": "تنقية عادية باليوم — 300/400 درهم",
   "Grand Ménage à la journée — 500/700 DH": "التنقية الكبيرة باليوم — 500/700 درهم",
+  "Froid et climatisation": "التبريد والتكييف",
+  "Esthétique et bien-être": "الجمال والرفاهية",
   "📍 Votre ville...": "📍 المدينة ديالك...",
   "Casablanca": "كازا",
   "Bouskoura": "بوسكورة",
@@ -349,6 +351,10 @@ YS_TRAD("dar", "index", {
   "En cas de besoin de remplacement, les formules Sérénité et Premium prévoient cette possibilité pendant 2 et 6 mois respectivement, selon leurs conditions. Demandez les détails applicables avant de confirmer la mise en relation.": "إلا احتجتي للتبديل، صيغتا Sérénité وPremium كينصّو على هاد الإمكانية لمدة شهرين و6 شهور على التوالي، حسب الشروط ديالهم. سول على التفاصيل قبل ما تأكد المطابقة.",
   "Comment se passe le paiement des frais de Mise en relation ? ▾": "كيفاش كيتخلصو مصاريف المطابقة؟ <span class=\"arr\">▾</span>",
   "Les frais de Mise en relation sont réglés uniquement après validation du profil et mise en relation. Vous ne payez rien avant d'avoir trouvé votre candidate. Le salaire mensuel est versé directement à l'employée, séparément des frais de Mise en relation.": "مصاريف المطابقة كيتخلصو <strong>غير من بعد ما تصادق على البروفيل وتتصادق المطابقة</strong>. ماكتخلص حتا حاجة قبل ما تلقى الخدامة ديالك. الأجر الشهري كيتعطى ديريكت للخدامة، بوحدو على مصاريف المطابقة.",
+  "Les frais de mise en relation sont-ils remboursables ?": "واش مصاريف الربط كترجع؟",
+  "Non. Les frais de mise en relation rémunèrent la recherche, la sélection et la présentation des profils : ils ne sont pas remboursables, y compris si le profil proposé ne vous convient pas.": "<strong>لا.</strong> مصاريف الربط كتخلّص على البحث والاختيار وتقديم الأشخاص: ما كترجعش، حتى إلى الشخص اللي تقدّم ما عجبكش.",
+  "En revanche, vous n'êtes pas seul(e) : signalez-le nous par écrit (WhatsApp ou e-mail) et vous bénéficiez d'un délai de remplacement de 7 à 15 jours pour recevoir un profil adapté, sans nouveaux frais de mise en relation.": "ولكن راك ماشي بوحدك: خبّرنا بالكتابة (واتساب ولا إيميل) وعندك مدة تبديل من 7 ل 15 يوم باش توصلك شخصية مناسبة، بلا مصاريف ربط جديدة.",
+  "Les formules Sérénité et Premium prévoient des durées de remplacement plus longues (2 et 6 mois), selon leurs conditions. Le détail figure dans les mentions légales.": "صيغتا <strong>Sérénité</strong> و<strong>Premium</strong> كينصّو على مدة تبديل أطول (شهرين و6 شهور)، حسب الشروط ديالهم. التفاصيل كاينة ف<a href=\"mentions-legales.html#frais-mise-en-relation\">المعلومات القانونية</a>.",
   "Quelle différence entre logée et non logée ? ▾": "شنو الفرق بين مقيمة وغير مقيمة؟ <span class=\"arr\">▾</span>",
   "Logée : l'employée est hébergée au domicile selon les conditions convenues. Les horaires et les jours de repos sont précisés avec la famille.\nNon logée : les horaires et les modalités sont définis selon le poste et l'accord avec la famille.": "<strong>مقيمة:</strong> كتسكن فدار العائلة حسب الشروط المتفق عليها. كيتحددو أوقات العمل وأيام الراحة مع العائلة.<br><br><strong>غير مقيمة:</strong> الأوقات وكيفاش كتخدم كيتحددو حسب المنصب والاتفاق مع العائلة.",
   "Conditions d'accueil pour une aide logée": "شروط استقبال المساعدة اللي غادي تسكن مع العائلة",
@@ -417,6 +423,8 @@ YS_TRAD("dar", "index", {
   "Type...": "النوع...",
   "🏠 Logée": "🏠 مقيمة",
   "🌙 Non logée": "🌙 غير مقيمة",
+  "Quartier (optionnel)": "الحي (اختياري)",
+  "Date souhaitée (optionnelle)": "التاريخ المطلوب (اختياري)",
   "Message (optionnel)": "رسالة (اختياري)",
   "Récapitulatif prêt": "الملخص واجد",
   "Ouvrez WhatsApp pour transmettre votre demande à Yallah Services.": "حل واتساب وصيفط الطلب ديالك ليالله سيرفيس.",
@@ -464,6 +472,9 @@ YS_TRAD("dar", "index", {
   "👤 Vos informations": "👤 المعلومات ديالك",
   "Nom": "السمية",
   "WhatsApp / Tél": "واتساب / التيليفون",
+  "Quartier": "الحي",
+  "Date souhaitée": "التاريخ المطلوب",
+  "Précisions": "التفاصيل",
   "Expérience souhaitée": "التجربة المطلوبة",
   "Délai souhaité": "المدة المطلوبة",
   "ℹ️ Informations à vérifier avant validation": "ℹ️ معلومات خاصك تتحقق منها قبل المصادقة",
@@ -501,5 +512,8 @@ YS_TRAD("dar", "index", {
   "Précisions :": "تفاصيل:",
   "À préciser": "خاص التوضيح",
   "Lien copié": "تسخ الرابط",
-  "Copie impossible. Lien :": "ما قدرناش ننسخ. الرابط :"
+  "Copie impossible. Lien :": "ما قدرناش ننسخ. الرابط :",
+  "Téléphone :": "الهاتف:",
+  "Quartier :": "الحي:",
+  "Date souhaitée :": "التاريخ المطلوب:"
 });
