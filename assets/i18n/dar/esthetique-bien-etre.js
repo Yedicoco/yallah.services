@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR · esthetique-bien-etre.html
-   92 chaînes, clés = textes d'origine de la page.
+   112 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/esthetique-bien-etre.dar.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -22,7 +22,7 @@ YS_TRAD("dar", "esthetique-bien-etre", {
   "Accueil › Esthétique & bien-être à domicile": "الرئيسية › التجميل والراحة فالدار",
   "Yallah Services · Esthétique & bien-être · Casablanca": "Yallah Services · التجميل والراحة · كازا",
   "Esthétique & bien-être à domicile": "التجميل والراحة فالدار",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع أو تحضير التجميل للمناسبات: مهنية شريكة مختارة كتجي لدارك. الخدمة متوفرة فكازا دابا غير.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع، مساج أو تحضير التجميل للمناسبات: مهنية شريكة مختارة كتجي لدارك. الخدمة متوفرة فكازا دابا غير.",
   "@wa:Bonjour Yallah Services, je souhaite réserver une prestation beauté à domicile. Mon quartier à Casablanca, la prestation et la date souhaitée :": "السلام عليكم Yallah Services، بغيت نحجز خدمة تجميل فالدار. الحي ديالي فكازا، الخدمة والتاريخ لي بغيت:",
   "💬 Réserver une prestation sur WhatsApp": "💬 احجز خدمة على واتساب",
   "Voir la grille tarifaire": "شوف لائحة الأثمنة",
@@ -45,7 +45,7 @@ YS_TRAD("dar", "esthetique-bien-etre", {
   "Du sourcil au forfait complet.": "من الحواجب حتى الباقة الكاملة.",
   "@alt:Femme recevant un massage du dos dans une pièce lumineuse": "امرأة كتتدلك ظهرها فبيت مضوي",
   "Massage": "التدليك",
-  "Réservé aux femmes. Sur devis.": "للنساء غير. بعرض ثمن.",
+  "Réservé aux femmes. À partir de 300 DH.": "للنساء غير. من 300 درهم.",
   "@alt:Soin du visage à domicile avec application de crème": "عناية بالوجه فالدار بوضع كريم",
   "Soins du visage": "العناية بالوجه",
   "Sur devis.": "بعرض ثمن.",
@@ -54,18 +54,38 @@ YS_TRAD("dar", "esthetique-bien-etre", {
   "Pour un événement, sur devis.": "للمناسبة، بعرض ثمن.",
   "Illustrations.": "صور توضيحية.",
   "Nos prestations à domicile": "خدماتنا فالدار",
-  "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.": "خدمات متوفرة فكازا دابا. الأثمنة، من الأدنى حتى الأقصى، بالدرهم. الثمن الدقيق كيتوقف على الخدمة لي ختارتي.",
+  "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie. Massages réservés aux femmes : prix fixe, frais de transport en sus.": "خدمات متوفرة فكازا دابا. الأثمنة، من الأدنى حتى الأقصى، بالدرهم. الثمن الدقيق كيتوقف على الخدمة لي ختارتي. المساج للنساء غير: ثمن ثابت، ومصاريف التنقل زيادة.",
   "400 DH": "400 درهم",
   "Manucure et pédicure": "المانيكير والبيديكير",
   "50 à 350 DH": "من 50 حتى 350 درهم",
   "40 à 320 DH": "من 40 حتى 320 درهم",
   "Préparation beauté pour événements": "تحضير التجميل للمناسبات",
   "Sur devis": "بعرض ثمن",
+  "Massage berbère": "المساج البربري",
+  "Soin traditionnel marocain, centré sur les jambes et les pieds. 45 min.": "علاج تقليدي مغربي، كيركز على الساقين والقدمين. 45 دقيقة.",
+  "300 DH": "300 درهم",
+  "+ 100 DH de frais de transport": "+ 100 درهم مصاريف التنقل",
+  "Massage ayurvédique": "المساج الأيورفيدي",
+  "Massage aux huiles chaudes, inspiré de la tradition ayurvédique. 45 min.": "مساج بالزيوت الدافية، مستوحى من التقاليد الأيورفيدية. 45 دقيقة.",
+  "Réflexologie": "الريفلكسولوجي",
+  "Pressions ciblées sur les zones réflexes des pieds, des mains ou du visage. 45 min.": "ضغط موجّه على نقاط الانعكاس فالرجلين واليدين والوجه. 45 دقيقة.",
+  "350 DH": "350 درهم",
+  "Massage facial et de la tête": "مساج الوجه والراس",
+  "Détente du visage, du front, de la mâchoire et du cuir chevelu. 30 min.": "استرخاء الوجه والجبين والفك وفروة الراس. 30 دقيقة.",
+  "200 DH": "200 درهم",
+  "Massage suédois": "المساج السويدي",
+  "Massage profond à l’huile sur peau nue, pour la détente musculaire. 1 h.": "مساج عميق بالزيت على البشرة، للاسترخاء العضلي. ساعة.",
+  "Massage médical": "المساج الطبي",
+  "Massage ciblé, réalisé par un praticien spécialisé. 45 min.": "مساج موجّه، كيدير ممارس متخصص. 45 دقيقة.",
+  "Massage du dos et des épaules": "مساج الظهر والكتفين",
+  "Dénouer les tensions du dos, des épaules et des trapèzes. 35 min.": "تخفيف التوتر فالظهر والكتفين والرقبة. 35 دقيقة.",
+  "Massage oriental chaud": "المساج الشرقي الدافي",
+  "Massage aux huiles végétales chaudes, inspiré des traditions du Maghreb et du Moyen-Orient. 1 h.": "مساج بالزيوت النباتية الدافية، مستوحى من تقاليد المغرب العربي والشرق الأوسط. ساعة.",
   "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les prestations sont assurées par des professionnelles partenaires sélectionnées.": "ثمن تقريبي. الثمن النهائي كيتأكد بعد التشخيص أو بعرض الثمن. الخدمات كتديرها مهنيات شريكات مختارات.",
   "Comment réserver": "كيفاش تحجز",
   "Quatre étapes, de la prestation choisie à l’intervention.": "أربع مراحل، من الخدمة لي ختار حتى التدخل.",
   "1. Choisissez la prestation": "1. ختار الخدمة",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté.": "الماكياج، المانيكير، البيديكير، إزالة الشعر بالشمع أو تحضير التجميل للمناسبات.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع، مساج أو تحضير التجميل للمناسبات.",
   "2. Réservez sur WhatsApp": "2. احجز على واتساب",
   "Indiquez la prestation, votre quartier à Casablanca et la date souhaitée.": "قولنا الخدمة، الحي ديالك فكازا والتاريخ لي بغيتي.",
   "3. Vérification": "3. التأكد",
@@ -95,8 +115,8 @@ YS_TRAD("dar", "esthetique-bien-etre", {
   "@aria-label:Demander sur WhatsApp": "اطلب على واتساب",
   "WhatsApp": "واتساب",
   "@title": "التجميل والراحة فالدار | Yallah Services",
-  "@meta:description": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع وتجميل المناسبات فالدار فكازا: أثمنة تقريبية، عرض ثمن لبعض الخدمات، مهنيات مختارات.",
+  "@meta:description": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع والمساج فالدار فكازا دابا. الحجز على واتساب والأثمنة تقريبية.",
   "@meta:og:locale": "ar_MA",
   "@meta:og:title": "التجميل والراحة فالدار | Yallah Services",
-  "@meta:og:description": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع وتجميل المناسبات فالدار فكازا: أثمنة تقريبية، عرض ثمن لبعض الخدمات، مهنيات مختارات."
+  "@meta:og:description": "ماكياج، مانيكير، بيديكير، إزالة الشعر بالشمع والمساج فالدار فكازا دابا. الحجز على واتساب والأثمنة تقريبية."
 });

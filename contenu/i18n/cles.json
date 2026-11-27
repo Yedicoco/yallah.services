@@ -12591,9 +12591,9 @@
         "html": "Esthétique & <em>bien-être</em> à domicile"
       },
       {
-        "cle": "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
+        "cle": "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
         "occurrences": 1,
-        "exemple": "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
+        "exemple": "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.",
         "langue": "fr"
       },
       {
@@ -12729,9 +12729,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Réservé aux femmes. Sur devis.",
+        "cle": "Réservé aux femmes. À partir de 300 DH.",
         "occurrences": 1,
-        "exemple": "Réservé aux femmes. Sur devis.",
+        "exemple": "Réservé aux femmes. À partir de 300 DH.",
         "langue": "fr"
       },
       {
@@ -12783,14 +12783,14 @@
         "langue": "fr"
       },
       {
-        "cle": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.",
+        "cle": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie. Massages réservés aux femmes : prix fixe, frais de transport en sus.",
         "occurrences": 1,
-        "exemple": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.",
+        "exemple": "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie. Massages réservés aux femmes : prix fixe, frais de transport en sus.",
         "langue": "fr"
       },
       {
         "cle": "400 DH",
-        "occurrences": 1,
+        "occurrences": 2,
         "exemple": "400 DH",
         "langue": "fr"
       },
@@ -12825,6 +12825,126 @@
         "langue": "fr"
       },
       {
+        "cle": "Massage berbère",
+        "occurrences": 1,
+        "exemple": "Massage berbère",
+        "langue": "fr"
+      },
+      {
+        "cle": "Soin traditionnel marocain, centré sur les jambes et les pieds. 45 min.",
+        "occurrences": 1,
+        "exemple": "Soin traditionnel marocain, centré sur les jambes et les pieds. 45 min.",
+        "langue": "fr"
+      },
+      {
+        "cle": "300 DH",
+        "occurrences": 2,
+        "exemple": "300 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "+ 100 DH de frais de transport",
+        "occurrences": 8,
+        "exemple": "+ 100 DH de frais de transport",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage ayurvédique",
+        "occurrences": 1,
+        "exemple": "Massage ayurvédique",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage aux huiles chaudes, inspiré de la tradition ayurvédique. 45 min.",
+        "occurrences": 1,
+        "exemple": "Massage aux huiles chaudes, inspiré de la tradition ayurvédique. 45 min.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Réflexologie",
+        "occurrences": 1,
+        "exemple": "Réflexologie",
+        "langue": "fr"
+      },
+      {
+        "cle": "Pressions ciblées sur les zones réflexes des pieds, des mains ou du visage. 45 min.",
+        "occurrences": 1,
+        "exemple": "Pressions ciblées sur les zones réflexes des pieds, des mains ou du visage. 45 min.",
+        "langue": "fr"
+      },
+      {
+        "cle": "350 DH",
+        "occurrences": 3,
+        "exemple": "350 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage facial et de la tête",
+        "occurrences": 1,
+        "exemple": "Massage facial et de la tête",
+        "langue": "fr"
+      },
+      {
+        "cle": "Détente du visage, du front, de la mâchoire et du cuir chevelu. 30 min.",
+        "occurrences": 1,
+        "exemple": "Détente du visage, du front, de la mâchoire et du cuir chevelu. 30 min.",
+        "langue": "fr"
+      },
+      {
+        "cle": "200 DH",
+        "occurrences": 2,
+        "exemple": "200 DH",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage suédois",
+        "occurrences": 1,
+        "exemple": "Massage suédois",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage profond à l’huile sur peau nue, pour la détente musculaire. 1 h.",
+        "occurrences": 1,
+        "exemple": "Massage profond à l’huile sur peau nue, pour la détente musculaire. 1 h.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage médical",
+        "occurrences": 1,
+        "exemple": "Massage médical",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage ciblé, réalisé par un praticien spécialisé. 45 min.",
+        "occurrences": 1,
+        "exemple": "Massage ciblé, réalisé par un praticien spécialisé. 45 min.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage du dos et des épaules",
+        "occurrences": 1,
+        "exemple": "Massage du dos et des épaules",
+        "langue": "fr"
+      },
+      {
+        "cle": "Dénouer les tensions du dos, des épaules et des trapèzes. 35 min.",
+        "occurrences": 1,
+        "exemple": "Dénouer les tensions du dos, des épaules et des trapèzes. 35 min.",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage oriental chaud",
+        "occurrences": 1,
+        "exemple": "Massage oriental chaud",
+        "langue": "fr"
+      },
+      {
+        "cle": "Massage aux huiles végétales chaudes, inspiré des traditions du Maghreb et du Moyen-Orient. 1 h.",
+        "occurrences": 1,
+        "exemple": "Massage aux huiles végétales chaudes, inspiré des traditions du Maghreb et du Moyen-Orient. 1 h.",
+        "langue": "fr"
+      },
+      {
         "cle": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les prestations sont assurées par des professionnelles partenaires sélectionnées.",
         "occurrences": 1,
         "exemple": "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les prestations sont assurées par des professionnelles partenaires sélectionnées.",
@@ -12849,9 +12969,9 @@
         "langue": "fr"
       },
       {
-        "cle": "Maquillage, manucure, pédicure, épilation ou préparation beauté.",
+        "cle": "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.",
         "occurrences": 1,
-        "exemple": "Maquillage, manucure, pédicure, épilation ou préparation beauté.",
+        "exemple": "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.",
         "langue": "fr"
       },
       {
@@ -13037,7 +13157,7 @@
       {
         "cle": "@meta:description",
         "occurrences": 1,
-        "exemple": "Maquillage, maquillage, manucure, pédicure et épilation à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
+        "exemple": "Maquillage, manucure, pédicure, épilation et massages à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
         "langue": "fr"
       },
       {
@@ -13055,7 +13175,7 @@
       {
         "cle": "@meta:og:description",
         "occurrences": 1,
-        "exemple": "Maquillage, maquillage, manucure, pédicure et épilation à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
+        "exemple": "Maquillage, manucure, pédicure, épilation et massages à domicile à Casablanca pour le moment. Réservation sur WhatsApp et tarifs indicatifs.",
         "langue": "fr"
       }
     ],

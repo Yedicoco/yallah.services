@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire EN · esthetique-bien-etre.html
-   92 chaînes, clés = textes d'origine de la page.
+   112 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/esthetique-bien-etre.en.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -22,7 +22,7 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "Accueil › Esthétique & bien-être à domicile": "Home › Beauty & wellbeing at home",
   "Yallah Services · Esthétique & bien-être · Casablanca": "Yallah Services · Beauty & wellbeing · Casablanca",
   "Esthétique & bien-être à domicile": "Beauty & wellbeing at home",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "Makeup, manicure, pedicure, waxing or event beauty preparation: a selected partner professional comes to your home. Currently available in Casablanca only.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "Makeup, manicure, pedicure, waxing, massage or event beauty preparation: a selected partner professional comes to your home. Currently available in Casablanca only.",
   "@wa:Bonjour Yallah Services, je souhaite réserver une prestation beauté à domicile. Mon quartier à Casablanca, la prestation et la date souhaitée :": "Hello Yallah Services, I would like to book a beauty service at home. My neighbourhood in Casablanca, the service and the date I want:",
   "💬 Réserver une prestation sur WhatsApp": "💬 Book a service on WhatsApp",
   "Voir la grille tarifaire": "See the price list",
@@ -45,7 +45,7 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "Du sourcil au forfait complet.": "From eyebrows to a full package.",
   "@alt:Femme recevant un massage du dos dans une pièce lumineuse": "Woman receiving a back massage in a bright room",
   "Massage": "Massage",
-  "Réservé aux femmes. Sur devis.": "For women only. On quote.",
+  "Réservé aux femmes. À partir de 300 DH.": "For women only. From 300 MAD.",
   "@alt:Soin du visage à domicile avec application de crème": "Facial care at home with cream being applied",
   "Soins du visage": "Facial care",
   "Sur devis.": "On quote.",
@@ -54,18 +54,38 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "Pour un événement, sur devis.": "For an event, on quote.",
   "Illustrations.": "Illustrations.",
   "Nos prestations à domicile": "Our services at home",
-  "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.": "Services available in Casablanca for the moment. Price ranges, from minimum to maximum, in MAD. The exact price depends on the service chosen.",
+  "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie. Massages réservés aux femmes : prix fixe, frais de transport en sus.": "Services available in Casablanca for the moment. Price ranges, from minimum to maximum, in MAD. The exact price depends on the service chosen. Massages for women only: fixed price, transport fee extra.",
   "400 DH": "400 MAD",
   "Manucure et pédicure": "Manicure and pedicure",
   "50 à 350 DH": "50 to 350 MAD",
   "40 à 320 DH": "40 to 320 MAD",
   "Préparation beauté pour événements": "Beauty preparation for events",
   "Sur devis": "On quote",
+  "Massage berbère": "Berber massage",
+  "Soin traditionnel marocain, centré sur les jambes et les pieds. 45 min.": "Traditional Moroccan care, focused on the legs and feet. 45 min.",
+  "300 DH": "300 MAD",
+  "+ 100 DH de frais de transport": "+ 100 MAD transport fee",
+  "Massage ayurvédique": "Ayurvedic massage",
+  "Massage aux huiles chaudes, inspiré de la tradition ayurvédique. 45 min.": "Warm-oil massage, inspired by Ayurvedic tradition. 45 min.",
+  "Réflexologie": "Reflexology",
+  "Pressions ciblées sur les zones réflexes des pieds, des mains ou du visage. 45 min.": "Targeted pressure on reflex zones of the feet, hands or face. 45 min.",
+  "350 DH": "350 MAD",
+  "Massage facial et de la tête": "Facial and head massage",
+  "Détente du visage, du front, de la mâchoire et du cuir chevelu. 30 min.": "Relaxation of the face, forehead, jaw and scalp. 30 min.",
+  "200 DH": "200 MAD",
+  "Massage suédois": "Swedish massage",
+  "Massage profond à l’huile sur peau nue, pour la détente musculaire. 1 h.": "Deep oil massage on bare skin, for muscle relaxation. 1 h.",
+  "Massage médical": "Medical massage",
+  "Massage ciblé, réalisé par un praticien spécialisé. 45 min.": "Targeted massage, performed by a specialised practitioner. 45 min.",
+  "Massage du dos et des épaules": "Back and shoulder massage",
+  "Dénouer les tensions du dos, des épaules et des trapèzes. 35 min.": "Easing tension in the back, shoulders and neck. 35 min.",
+  "Massage oriental chaud": "Warm oriental massage",
+  "Massage aux huiles végétales chaudes, inspiré des traditions du Maghreb et du Moyen-Orient. 1 h.": "Massage with warm plant oils, inspired by Maghreb and Middle Eastern traditions. 1 h.",
   "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les prestations sont assurées par des professionnelles partenaires sélectionnées.": "Indicative price. Final price confirmed after diagnosis or on quote. Services are provided by selected partner professionals.",
   "Comment réserver": "How to book",
   "Quatre étapes, de la prestation choisie à l’intervention.": "Four steps, from the service you choose to the visit.",
   "1. Choisissez la prestation": "1. Choose the service",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté.": "Makeup, manicure, pedicure, waxing or event beauty preparation.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.": "Makeup, manicure, pedicure, waxing, massage or event beauty preparation.",
   "2. Réservez sur WhatsApp": "2. Book on WhatsApp",
   "Indiquez la prestation, votre quartier à Casablanca et la date souhaitée.": "Tell us the service, your neighbourhood in Casablanca and the date you want.",
   "3. Vérification": "3. Check",
@@ -95,8 +115,8 @@ YS_TRAD("en", "esthetique-bien-etre", {
   "@aria-label:Demander sur WhatsApp": "Request on WhatsApp",
   "WhatsApp": "WhatsApp",
   "@title": "Beauty & wellbeing at home | Yallah Services",
-  "@meta:description": "Makeup, manicure, pedicure, waxing and event beauty at home in Casablanca: indicative prices, quotes for some services, selected professionals.",
+  "@meta:description": "Makeup, manicure, pedicure, waxing and massages at home in Casablanca for the moment. Booking on WhatsApp and indicative prices.",
   "@meta:og:locale": "en_US",
   "@meta:og:title": "Beauty & wellbeing at home | Yallah Services",
-  "@meta:og:description": "Makeup, manicure, pedicure, waxing and event beauty at home in Casablanca: indicative prices, quotes for some services, selected professionals."
+  "@meta:og:description": "Makeup, manicure, pedicure, waxing and massages at home in Casablanca for the moment. Booking on WhatsApp and indicative prices."
 });

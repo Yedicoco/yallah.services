@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════
    YALLAH SERVICES — Dictionnaire DAR-LATN · esthetique-bien-etre.html
-   92 chaînes, clés = textes d'origine de la page.
+   112 chaînes, clés = textes d'origine de la page.
    Généré par outils/generer-i18n.js depuis
    contenu/i18n/traductions/esthetique-bien-etre.dar-latn.json — ne pas
    modifier ce fichier à la main : modifier la traduction puis relancer
@@ -22,7 +22,7 @@ YS_TRAD("dar-latn", "esthetique-bien-etre", {
   "Accueil › Esthétique & bien-être à domicile": "Ra2issiya › Beauté w bien-être f dar",
   "Yallah Services · Esthétique & bien-être · Casablanca": "Yallah Services · Beauté & bien-être · Casa",
   "Esthétique & bien-être à domicile": "Beauté & bien-être f dar",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "Maquillage, manucure, pédicure, épilation wla préparation beauté: professionnelle sharika mkhtara kat-jik l-dar dyalkom. Had lkhidma kayna Casa daba bass.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté : une professionnelle partenaire sélectionnée se déplace chez vous. Service disponible à Casablanca pour le moment.": "Maquillage, manucure, pédicure, épilation, massage wla préparation beauté: professionnelle sharika mkhtara kat-jik l-dar dyalkom. Had lkhidma kayna Casa daba bass.",
   "@wa:Bonjour Yallah Services, je souhaite réserver une prestation beauté à domicile. Mon quartier à Casablanca, la prestation et la date souhaitée :": "Salam Yallah Services, bghit n7jez khidma dyal beauté f dar. Lhay dyali f Casa, lkhidma w date li bghit:",
   "💬 Réserver une prestation sur WhatsApp": "💬 7jez khidma 3la WhatsApp",
   "Voir la grille tarifaire": "Shouf l-grille dyal taman",
@@ -45,7 +45,7 @@ YS_TRAD("dar-latn", "esthetique-bien-etre", {
   "Du sourcil au forfait complet.": "Mn l-sourcil hta l-forfait kamel.",
   "@alt:Femme recevant un massage du dos dans une pièce lumineuse": "Mra kat-tdallek dhrha f bit mdwi",
   "Massage": "Massage",
-  "Réservé aux femmes. Sur devis.": "Ghir lnsa. B devis.",
+  "Réservé aux femmes. À partir de 300 DH.": "Ghir lnsa. Mn 300 derham.",
   "@alt:Soin du visage à domicile avec application de crème": "Soin dyal wajh f dar b crème",
   "Soins du visage": "Soins dyal wajh",
   "Sur devis.": "B devis.",
@@ -54,18 +54,38 @@ YS_TRAD("dar-latn", "esthetique-bien-etre", {
   "Pour un événement, sur devis.": "L-événement, b devis.",
   "Illustrations.": "Taswirat tawdihiya.",
   "Nos prestations à domicile": "Khdamatna f dar",
-  "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie.": "Khdamat mtawra f Casa daba. Taman mn l-adna hta l-a3la, b derham. Taman dyal khidma li mkhtara kay7ded.",
+  "Prestations disponibles à Casablanca pour le moment. Fourchettes de prix, du minimum au maximum, en DH. Le prix exact dépend de la prestation choisie. Massages réservés aux femmes : prix fixe, frais de transport en sus.": "Khdamat mtawra f Casa daba. Taman mn l-adna hta l-a3la, b derham. Taman dyal khidma li mkhtara kay7ded. Massages l-nsa ghir: taman tabet, w transport zayd.",
   "400 DH": "400 derham",
   "Manucure et pédicure": "Manucure w pédicure",
   "50 à 350 DH": "Mn 50 hta 350 derham",
   "40 à 320 DH": "Mn 40 hta 320 derham",
   "Préparation beauté pour événements": "Préparation beauté l-événements",
   "Sur devis": "B devis",
+  "Massage berbère": "Massage berbère",
+  "Soin traditionnel marocain, centré sur les jambes et les pieds. 45 min.": "Soin traditionnel marocain, kay7ded 3la lkrou3 w rjlin. 45 min.",
+  "300 DH": "300 derham",
+  "+ 100 DH de frais de transport": "+ 100 derham frais dyal transport",
+  "Massage ayurvédique": "Massage ayurvédique",
+  "Massage aux huiles chaudes, inspiré de la tradition ayurvédique. 45 min.": "Massage b zjout dafiya, mstouhay mn tradition ayurvédique. 45 min.",
+  "Réflexologie": "Réflexologie",
+  "Pressions ciblées sur les zones réflexes des pieds, des mains ou du visage. 45 min.": "Dghet mwajjahin 3la nqat reflexes f rjlin, yeddin wla wajh. 45 min.",
+  "350 DH": "350 derham",
+  "Massage facial et de la tête": "Massage dyal wajh w rass",
+  "Détente du visage, du front, de la mâchoire et du cuir chevelu. 30 min.": "Détente dyal wajh, jbin, lfakk w cuir chevelu. 30 min.",
+  "200 DH": "200 derham",
+  "Massage suédois": "Massage suédois",
+  "Massage profond à l’huile sur peau nue, pour la détente musculaire. 1 h.": "Massage 3amiq b zit 3la lbachra, l-detente dyal l-3adalat. 1 h.",
+  "Massage médical": "Massage médical",
+  "Massage ciblé, réalisé par un praticien spécialisé. 45 min.": "Massage mwajjah, kay-dirouh praticien mtakhassess. 45 min.",
+  "Massage du dos et des épaules": "Massage dyal dhar w ktaf",
+  "Dénouer les tensions du dos, des épaules et des trapèzes. 35 min.": "Tkhfif t-tawattor f dhar, ktaf w rqba. 35 min.",
+  "Massage oriental chaud": "Massage charqi dafi",
+  "Massage aux huiles végétales chaudes, inspiré des traditions du Maghreb et du Moyen-Orient. 1 h.": "Massage b zjout nabatiya dafiya, mstouhay mn traditions dyal Maghreb w Chark lawsat. 1 h.",
   "Tarif indicatif. Prix final confirmé après diagnostic ou sur devis. Les prestations sont assurées par des professionnelles partenaires sélectionnées.": "Taman indicatif. Taman nihai kayt2aked ba3d diagnostic wla b devis. Khdamat kayt-dirha professionnelat sharkat mkhtarat.",
   "Comment réserver": "Kifach t7jez",
   "Quatre étapes, de la prestation choisie à l’intervention.": "Arba3 marahel, mn lkhidma li ktartiha hta l-intervention.",
   "1. Choisissez la prestation": "1. Khtar lkhidma",
-  "Maquillage, manucure, pédicure, épilation ou préparation beauté.": "Maquillage, manucure, pédicure, épilation wla préparation beauté.",
+  "Maquillage, manucure, pédicure, épilation, massage ou préparation beauté.": "Maquillage, manucure, pédicure, épilation, massage wla préparation beauté.",
   "2. Réservez sur WhatsApp": "2. 7jez 3la WhatsApp",
   "Indiquez la prestation, votre quartier à Casablanca et la date souhaitée.": "Goul lna lkhidma, lhay dyalek f Casa w date li bghiti.",
   "3. Vérification": "3. Tahakkok",
@@ -95,8 +115,8 @@ YS_TRAD("dar-latn", "esthetique-bien-etre", {
   "@aria-label:Demander sur WhatsApp": "Demandi 3la WhatsApp",
   "WhatsApp": "WhatsApp",
   "@title": "Beauté & bien-être f dar | Yallah Services",
-  "@meta:description": "Maquillage, manucure, pédicure, épilation w préparation beauté f dar f Casa: taman indicatif, devis 3la ba3d lkhdmat, professionnelat mkhtarat.",
+  "@meta:description": "Maquillage, manucure, pédicure, épilation w massages f dar f Casa daba. Réservation 3la WhatsApp w taman indicatif.",
   "@meta:og:locale": "ar_MA",
   "@meta:og:title": "Beauté & bien-être f dar | Yallah Services",
-  "@meta:og:description": "Maquillage, manucure, pédicure, épilation w préparation beauté f dar f Casa: taman indicatif, devis 3la ba3d lkhdmat, professionnelat mkhtarat."
+  "@meta:og:description": "Maquillage, manucure, pédicure, épilation w massages f dar f Casa daba. Réservation 3la WhatsApp w taman indicatif."
 });
